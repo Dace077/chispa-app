@@ -4,8 +4,418 @@
   "category": "core",
   "icon": "spark",
   "unlockXp": 0,
-  "description": "Lo primero de todo: saludar, presentarte, contar, describir y hablar de tu día.",
+  "description": "Desde el alfabeto: leer, saludar, presentarte, contar y hablar de tu día.",
   "units": [
+    {
+      "id": "a1_u0",
+      "level": "A1",
+      "title": "Antes de empezar",
+      "subtitle": "El alfabeto, cómo se lee el inglés y las frases que salvan una conversación",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a1_u0_l1",
+          "title": "El alfabeto",
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Las letras no se llaman igual que en español",
+              "body": "Esto es lo primero de todo, y casi nadie lo enseña primero. Si deletreas tu nombre con los nombres españoles de las letras, no te va a entender nadie. La trampa más gorda es la 'e' y la 'i': la E inglesa suena como nuestra 'i', y la I inglesa suena 'ai'. Toca cada letra para oírla.",
+              "examples": [
+                { "en": "A", "es": "se dice 'ei'", "ipa": "/eɪ/" },
+                { "en": "B", "es": "se dice 'bi'", "ipa": "/biː/" },
+                { "en": "C", "es": "se dice 'si'", "ipa": "/siː/" },
+                { "en": "D", "es": "se dice 'di'", "ipa": "/diː/" },
+                { "en": "E", "es": "se dice 'i' — ojo, no 'e'", "ipa": "/iː/" },
+                { "en": "F", "es": "se dice 'ef'", "ipa": "/ef/" },
+                { "en": "G", "es": "se dice 'yi'", "ipa": "/dʒiː/" },
+                { "en": "H", "es": "se dice 'eich'", "ipa": "/eɪtʃ/" },
+                { "en": "I", "es": "se dice 'ai' — no 'i'", "ipa": "/aɪ/" }
+              ]
+            },
+            {
+              "type": "tip",
+              "title": "De la J a la R",
+              "body": "Sigue tocando para oírlas. Fíjate en la J ('yei') y en la R: la R inglesa no vibra como la nuestra, se pronuncia con la lengua recogida hacia atrás sin tocar el paladar.",
+              "examples": [
+                { "en": "J", "es": "se dice 'yei'", "ipa": "/dʒeɪ/" },
+                { "en": "K", "es": "se dice 'kei'", "ipa": "/keɪ/" },
+                { "en": "L", "es": "se dice 'el'", "ipa": "/el/" },
+                { "en": "M", "es": "se dice 'em'", "ipa": "/em/" },
+                { "en": "N", "es": "se dice 'en'", "ipa": "/en/" },
+                { "en": "O", "es": "se dice 'ou'", "ipa": "/oʊ/" },
+                { "en": "P", "es": "se dice 'pi'", "ipa": "/piː/" },
+                { "en": "Q", "es": "se dice 'kiu'", "ipa": "/kjuː/" },
+                { "en": "R", "es": "se dice 'ar', sin vibrar", "ipa": "/ɑːr/" }
+              ]
+            },
+            {
+              "type": "tip",
+              "title": "Y las últimas",
+              "body": "La W se llama 'doble u' y es la letra con el nombre más largo del alfabeto. Y la Z tiene dos nombres: 'zi' en Estados Unidos y 'zed' en Reino Unido, Irlanda y Australia. Las dos son correctas.",
+              "examples": [
+                { "en": "S", "es": "se dice 'es'", "ipa": "/es/" },
+                { "en": "T", "es": "se dice 'ti'", "ipa": "/tiː/" },
+                { "en": "U", "es": "se dice 'iu'", "ipa": "/juː/" },
+                { "en": "V", "es": "se dice 'vi', con los dientes", "ipa": "/viː/" },
+                { "en": "W", "es": "se dice 'dábliu'", "ipa": "/ˈdʌbəljuː/" },
+                { "en": "X", "es": "se dice 'eks'", "ipa": "/eks/" },
+                { "en": "Y", "es": "se dice 'uai'", "ipa": "/waɪ/" },
+                { "en": "Z", "es": "'zi' (EE.UU.) o 'zed' (R.Unido)", "ipa": "/ziː/" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo se pronuncia la letra E en inglés?",
+              "options": ["Como una 'i'", "Como una 'e'", "Como 'ei'", "Como 'ai'"],
+              "answer": "Como una 'i'"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo se pronuncia la letra I en inglés?",
+              "options": ["Como 'ai'", "Como una 'i'", "Como 'ei'", "Como 'e'"],
+              "answer": "Como 'ai'"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Y la letra G?",
+              "options": ["Como 'yi'", "Como 'ge'", "Como 'gui'", "Como 'ji'"],
+              "answer": "Como 'yi'"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une cada letra con cómo suena",
+              "pairs": [
+                ["A", "ei"],
+                ["E", "i"],
+                ["I", "ai"],
+                ["U", "iu"]
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une estas otras",
+              "pairs": [
+                ["G", "yi"],
+                ["J", "yei"],
+                ["W", "dábliu"],
+                ["Y", "uai"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "A B C D E F G",
+              "translation": "Las siete primeras letras. Despacio."
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "How do you spell it?",
+              "translation": "¿Cómo se escribe?"
+            }
+          ]
+        },
+        {
+          "id": "a1_u0_l2",
+          "title": "Cómo se lee el inglés",
+          "vocab": [
+            { "en": "hat", "es": "sombrero", "ipa": "/hæt/" },
+            { "en": "hate", "es": "odiar", "ipa": "/heɪt/", "note": "La -e final cambia la vocal" },
+            { "en": "not", "es": "no", "ipa": "/nɑːt/" },
+            { "en": "note", "es": "nota", "ipa": "/noʊt/" },
+            { "en": "bit", "es": "trozo", "ipa": "/bɪt/" },
+            { "en": "bite", "es": "morder", "ipa": "/baɪt/" },
+            { "en": "house", "es": "casa", "ipa": "/haʊs/", "note": "La 'h' sí se pronuncia" },
+            { "en": "chair", "es": "silla", "ipa": "/tʃer/" },
+            { "en": "shop", "es": "tienda", "ipa": "/ʃɑːp/" },
+            { "en": "station", "es": "estación", "ipa": "/ˈsteɪʃn/", "note": "'-tion' suena 'shon'" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "En inglés no se lee como se escribe",
+              "body": "Esta es la diferencia más grande con el español y hay que asumirla desde el principio: la misma letra suena distinto según la palabra. Pero hay reglas que funcionan casi siempre, y con tres o cuatro ya lees mucho mejor. La más útil: una 'e' muda al final hace que la vocal anterior diga su propio nombre. 'hat' suena 'hat', pero 'hate' suena 'heit'.",
+              "examples": [
+                { "en": "hat → hate", "es": "sombrero → odiar", "ipa": "/hæt/ → /heɪt/" },
+                { "en": "not → note", "es": "no → nota", "ipa": "/nɑːt/ → /noʊt/" },
+                { "en": "bit → bite", "es": "trozo → morder", "ipa": "/bɪt/ → /baɪt/" }
+              ]
+            },
+            {
+              "type": "tip",
+              "title": "Tres reglas más que te ahorran muchos errores",
+              "body": "Primera: la 'h' al principio SÍ se pronuncia, soplando. 'House' no es 'aus', es 'jaus' suave. Segunda: 'sh' suena como mandar callar, y 'ch' como la 'ch' española. Tercera: la terminación '-tion' siempre suena 'shon', nunca 'tion'.",
+              "examples": [
+                { "en": "house", "es": "casa (la h se oye)", "ipa": "/haʊs/" },
+                { "en": "shop / chair", "es": "tienda / silla", "ipa": "/ʃɑːp/ /tʃer/" },
+                { "en": "station", "es": "estación (suena 'steishon')", "ipa": "/ˈsteɪʃn/" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Por qué 'hate' no suena como 'hat'?",
+              "options": [
+                "Por la 'e' muda del final, que alarga la vocal",
+                "Porque lleva más letras",
+                "Porque es un verbo",
+                "Porque la 'a' siempre suena 'ei'"
+              ],
+              "answer": "Por la 'e' muda del final, que alarga la vocal"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo suena la terminación de 'station'?",
+              "options": ["'shon'", "'tion'", "'sion'", "'ton'"],
+              "answer": "'shon'"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "En 'house', la 'h' del principio…",
+              "options": ["se pronuncia soplando", "es muda", "suena como una 'j' fuerte", "suena como una 'g'"],
+              "answer": "se pronuncia soplando"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une cada palabra con su significado",
+              "pairs": [
+                ["hat", "sombrero"],
+                ["house", "casa"],
+                ["chair", "silla"],
+                ["shop", "tienda"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I live in a ___.",
+              "answer": "house",
+              "options": ["house", "hat", "shop", "chair"],
+              "translation": "Vivo en una casa."
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "hat, hate",
+              "translation": "Nota cómo cambia la vocal con la 'e' final."
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "This is my house",
+              "translation": "Esta es mi casa."
+            }
+          ]
+        },
+        {
+          "id": "a1_u0_l3",
+          "title": "Frases que te salvan",
+          "vocab": [
+            { "en": "yes", "es": "sí", "ipa": "/jes/" },
+            { "en": "no", "es": "no", "ipa": "/noʊ/" },
+            { "en": "please", "es": "por favor", "ipa": "/pliːz/" },
+            { "en": "thank you", "es": "gracias" },
+            { "en": "sorry", "es": "perdón", "ipa": "/ˈsɑːri/" },
+            { "en": "excuse me", "es": "disculpe (para llamar la atención)" },
+            { "en": "I don't understand", "es": "no entiendo" },
+            { "en": "I don't know", "es": "no sé" },
+            { "en": "can you repeat, please?", "es": "¿puede repetir, por favor?" },
+            { "en": "more slowly, please", "es": "más despacio, por favor" },
+            { "en": "how do you say...?", "es": "¿cómo se dice...?" },
+            { "en": "help", "es": "ayuda", "ipa": "/help/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Con estas doce frases sobrevives a cualquier conversación",
+              "body": "Aunque no entiendas nada más, estas frases te sacan de cualquier apuro: sirven para pedir que repitan, que hablen despacio o para preguntar una palabra que no sabes. Memorízalas hasta que salgan solas. Y una diferencia útil: 'sorry' es para disculparte por algo, 'excuse me' es para llamar la atención de alguien antes de hablarle.",
+              "examples": [
+                { "en": "Sorry, I don't understand.", "es": "Perdón, no entiendo." },
+                { "en": "Can you repeat, please?", "es": "¿Puede repetir, por favor?" },
+                { "en": "How do you say 'mesa' in English?", "es": "¿Cómo se dice 'mesa' en inglés?" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une lo básico",
+              "pairs": [
+                ["yes", "sí"],
+                ["no", "no"],
+                ["please", "por favor"],
+                ["thank you", "gracias"]
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las frases de auxilio",
+              "pairs": [
+                ["I don't understand", "no entiendo"],
+                ["I don't know", "no sé"],
+                ["more slowly, please", "más despacio, por favor"],
+                ["help", "ayuda"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Excuse me",
+              "options": [
+                "Disculpe (para llamar la atención)",
+                "Perdón (me he equivocado)",
+                "Con permiso, me voy",
+                "Discúlpame la tardanza"
+              ],
+              "answer": "Disculpe (para llamar la atención)"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "No has entendido nada. ¿Qué dices?",
+              "options": [
+                "Sorry, I don't understand",
+                "Sorry, I don't know",
+                "Excuse me, thank you",
+                "Please, no"
+              ],
+              "answer": "Sorry, I don't understand"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Can you repeat, ___?",
+              "answer": "please",
+              "options": ["please", "sorry", "thank you", "yes"],
+              "translation": "¿Puede repetir, por favor?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ do you say 'mesa' in English?",
+              "answer": "How",
+              "options": ["How", "What", "Where", "Who"],
+              "translation": "¿Cómo se dice 'mesa' en inglés?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Sorry, I don't understand",
+              "translation": "Perdón, no entiendo."
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Can you repeat, please?",
+              "translation": "¿Puede repetir, por favor?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "More slowly, please",
+              "translation": "Más despacio, por favor."
+            }
+          ]
+        },
+        {
+          "id": "a1_u0_l4",
+          "title": "El sujeto nunca se calla",
+          "vocab": [
+            { "en": "I", "es": "yo", "ipa": "/aɪ/", "note": "Siempre en mayúscula" },
+            { "en": "you", "es": "tú, usted, vosotros", "ipa": "/juː/" },
+            { "en": "he", "es": "él", "ipa": "/hiː/" },
+            { "en": "she", "es": "ella", "ipa": "/ʃiː/" },
+            { "en": "it", "es": "ello (cosas y animales)", "ipa": "/ɪt/" },
+            { "en": "we", "es": "nosotros", "ipa": "/wiː/" },
+            { "en": "they", "es": "ellos, ellas", "ipa": "/ðeɪ/" },
+            { "en": "I am", "es": "yo soy / estoy" },
+            { "en": "you are", "es": "tú eres / estás" },
+            { "en": "he is", "es": "él es / está" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La regla que lo cambia todo",
+              "body": "En español dices 'soy médico' y se entiende quién. En inglés eso es imposible: la frase SIEMPRE necesita el sujeto delante. 'Am a doctor' no significa nada; hay que decir 'I am a doctor'. Y el orden es fijo: primero quién, luego qué hace, luego el resto. Si interiorizas esto desde el principio, te ahorras años de frases raras.",
+              "examples": [
+                { "en": "I am a doctor.", "es": "Soy médico." },
+                { "en": "She works here.", "es": "Ella trabaja aquí." },
+                { "en": "It is cold.", "es": "Hace frío." }
+              ]
+            },
+            {
+              "type": "tip",
+              "title": "El 'yo' inglés siempre va en mayúscula",
+              "body": "'I' se escribe con mayúscula esté donde esté en la frase: 'My friend and I are here'. Es la única palabra del inglés con ese privilegio. Otra cosa útil: 'you' vale para tú, usted, vosotros y ustedes — el inglés no distingue, así que te ahorras la mitad del problema.",
+              "examples": [
+                { "en": "My friend and I are here.", "es": "Mi amigo y yo estamos aquí." },
+                { "en": "You are my friend.", "es": "Tú eres mi amigo." },
+                { "en": "It is a book.", "es": "Es un libro." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los pronombres",
+              "pairs": [
+                ["I", "yo"],
+                ["you", "tú"],
+                ["he", "él"],
+                ["she", "ella"]
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Y estos otros",
+              "pairs": [
+                ["it", "ello (una cosa)"],
+                ["we", "nosotros"],
+                ["they", "ellos"],
+                ["I am", "yo soy"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo se dice 'Soy médico'?",
+              "options": ["I am a doctor", "Am a doctor", "I doctor", "Is a doctor"],
+              "answer": "I am a doctor",
+              "hint": "El sujeto no se puede omitir"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál está bien escrita?",
+              "options": [
+                "My friend and I are here",
+                "My friend and i are here",
+                "Me and my friend are here",
+                "My friend and I is here"
+              ],
+              "answer": "My friend and I are here"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ is my sister.",
+              "answer": "She",
+              "options": ["She", "He", "It", "They"],
+              "translation": "Ella es mi hermana."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ are students.",
+              "answer": "We",
+              "options": ["We", "I", "He", "She"],
+              "translation": "Nosotros somos estudiantes."
+            },
+            {
+              "type": "word_order",
+              "prompt": "Yo soy profesor",
+              "words": ["I", "am", "a", "teacher"],
+              "answer": "I am a teacher"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I am a student and she is a teacher",
+              "translation": "Yo soy estudiante y ella es profesora."
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "a1_u1",
       "level": "A1",

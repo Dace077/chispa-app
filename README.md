@@ -34,7 +34,7 @@ La app usa el motor de voz que ya trae tu Android. Si no oyes nada:
 ### Camino principal (A1 → C2)
 | Nivel | Contenido |
 |---|---|
-| **A1** | Alfabeto y saludos, presentarse, números, colores, familia, verbo *to be*, artículos y plurales, comida, la casa, presente simple, días y meses |
+| **A1** | **El alfabeto, cómo se lee el inglés, frases de supervivencia, el sujeto obligatorio**, saludos, presentarse, números, colores, familia, verbo *to be*, artículos y plurales, comida, la casa, presente simple, días y meses |
 | **A2** | Pasado simple regular e irregular, preguntas en pasado, futuro con *going to*, comparativos y superlativos, preposiciones, direcciones, compras, clima, *can/must* |
 | **B1** | Presente perfecto, narrar experiencias, *phrasal verbs*, condicionales 0 y 1, voz pasiva, expresar opiniones, trabajo, salud, viajes |
 | **B2** | Condicionales 2 y 3, *wish*, estilo indirecto, registro formal e informal, argumentación, sinónimos con matiz, *phrasal verbs* avanzados, gerundio vs infinitivo, oraciones de relativo, subjuntivo e inversión |
@@ -51,12 +51,25 @@ La app usa el motor de voz que ya trae tu Android. Si no oyes nada:
 - **📖 Historias progresivas** — relatos que crecen contigo y reutilizan lo aprendido
 - **🌍 Notas culturales** — costumbres, cortesía y malentendidos frecuentes
 
-**Total: 28 unidades · 89 lecciones · 883 ejercicios · ~930 palabras y frases.**
+**Total: 29 unidades · 93 lecciones · 922 ejercicios · ~960 palabras y frases.**
+
+### Cómo enseña
+Cada lección sigue una secuencia didáctica fija, de menor a mayor exigencia:
+
+1. **Se te explica** la regla en español, contrastada con cómo funciona en tu idioma
+2. **Se te presentan las palabras** con traducción, transcripción fonética y audio
+3. **Reconoces**: eliges entre opciones que tienes delante
+4. **Produces con ayuda**: ordenas palabras, completas huecos
+5. **Produces solo**: escribes al dictado, traduces de memoria
+6. **Produces hablando**: lo dices en voz alta al micrófono
+
+Ese orden lo impone el código (`LessonPedagogy`), no el autor del contenido: es
+imposible que un ejercicio te pida escribir una palabra que la app no te ha enseñado.
 
 ### Mecánicas
 - **7 tipos de ejercicio**: opción múltiple, traducir, escuchar y escribir, ordenar palabras,
-  hablar y repetir, unir parejas y rellenar huecos. Más tarjetas de gramática,
-  lecturas y notas culturales.
+  hablar y repetir, unir parejas y rellenar huecos. Más tarjetas de vocabulario,
+  gramática, lecturas y notas culturales.
 - **Gamificación**: XP, racha diaria con comodines, corazones que se regeneran,
   meta diaria configurable, 36 logros y 11 rangos.
 - **Repetición espaciada** (Leitner de 6 cajas): cada palabra reaparece justo antes
@@ -161,3 +174,4 @@ visual, textual ni de marca de otras aplicaciones.
 
 **Chispa** es un colibrí dibujado íntegramente con Compose Canvas: no hay un solo
 archivo de imagen de la mascota en el proyecto.
+
