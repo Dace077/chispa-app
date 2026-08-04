@@ -1,0 +1,940 @@
+{
+  "id": "core_c2",
+  "title": "Nivel C2 — Maestría",
+  "category": "core",
+  "icon": "spark",
+  "unlockXp": 0,
+  "description": "Ironía, connotación, registro y todo lo que no cabe en un libro de gramática.",
+  "units": [
+    {
+      "id": "c2_u1",
+      "level": "C2",
+      "title": "El filo del idioma",
+      "subtitle": "Ironía, connotación y lo que se dice callando",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "c2_u1_l1",
+          "title": "Ironía y understatement",
+          "vocab": [
+            { "en": "not bad at all", "es": "buenísimo (understatement)" },
+            { "en": "a bit of a problem", "es": "un problemón" },
+            { "en": "I wouldn't say no", "es": "no me importaría nada" },
+            { "en": "that went well", "es": "menudo desastre (irónico)" },
+            { "en": "rather warm", "es": "un calor insoportable" },
+            { "en": "I'm not entirely convinced", "es": "no me lo creo en absoluto" },
+            { "en": "with all due respect", "es": "con el debido respeto (aviso)" },
+            { "en": "interesting choice", "es": "vaya elección (crítica)" },
+            { "en": "if you say so", "es": "si tú lo dices (escepticismo)" },
+            { "en": "no pressure", "es": "sin presión (irónico)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Decir menos para decir más",
+              "body": "El understatement británico es literatura aplicada a la conversación: cuanto peor es algo, más suave se describe. 'A bit of a problem' puede ser una catástrofe. 'Not bad' dicho por un inglés sobre tu comida es un elogio serio. Y hay señales de alarma: cuando alguien empieza con 'With all due respect' o 'I hear what you're saying', lo que viene detrás es una discrepancia total. Reconocer estas señales importa más que el vocabulario.",
+              "examples": [
+                { "en": "We have a bit of a problem.", "es": "Tenemos un problema serio." },
+                { "en": "That's an interesting choice.", "es": "Vaya elección (no me gusta)." },
+                { "en": "I'm not entirely convinced.", "es": "No me lo creo." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Un británico dice: 'That's an interesting idea.' Normalmente significa…",
+              "options": [
+                "No le convence en absoluto",
+                "Le parece fascinante",
+                "Quiere saber más detalles",
+                "Está de acuerdo del todo"
+              ],
+              "answer": "No le convence en absoluto"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "'With all due respect, I disagree' anuncia…",
+              "options": [
+                "Un desacuerdo firme, pese al tono cortés",
+                "Admiración por el interlocutor",
+                "Una duda menor",
+                "Que va a cambiar de opinión"
+              ],
+              "answer": "Un desacuerdo firme, pese al tono cortés"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Tras un desastre alguien dice: 'Well, that went well.'",
+              "options": [
+                "Es ironía: fue un desastre",
+                "Está satisfecho del resultado",
+                "Quiere repetirlo",
+                "No se enteró de lo que pasó"
+              ],
+              "answer": "Es ironía: fue un desastre"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el eufemismo con lo que significa de verdad",
+              "pairs": [
+                ["a bit of a problem", "un problemón"],
+                ["not bad at all", "buenísimo"],
+                ["rather warm", "un calor insoportable"],
+                ["if you say so", "no te creo"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I wouldn't say ___ to another coffee.",
+              "answer": "no",
+              "options": ["no", "yes", "not", "never"],
+              "translation": "No me importaría nada otro café."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "It's not the worst idea I've heard today",
+              "answer": "No es la peor idea que he oído hoy",
+              "alternatives": ["No está mal pensado"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "No estoy del todo convencido de eso",
+              "words": ["I'm", "not", "entirely", "convinced", "by", "that"],
+              "answer": "I'm not entirely convinced by that"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We seem to have a slight complication",
+              "answer": "We seem to have a slight complication",
+              "translation": "Parece que tenemos una pequeña complicación"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Well, that could have gone better.",
+              "translation": "Bueno, podría haber salido mejor (fue un desastre)."
+            }
+          ]
+        },
+        {
+          "id": "c2_u1_l2",
+          "title": "Connotación exacta",
+          "vocab": [
+            { "en": "thrifty vs stingy", "es": "ahorrador vs tacaño" },
+            { "en": "confident vs arrogant", "es": "seguro vs arrogante" },
+            { "en": "curious vs nosy", "es": "curioso vs cotilla" },
+            { "en": "determined vs stubborn", "es": "decidido vs cabezota" },
+            { "en": "slender vs skinny", "es": "esbelto vs escuálido" },
+            { "en": "childlike vs childish", "es": "inocente vs infantil" },
+            { "en": "famous vs notorious", "es": "famoso vs de mala fama" },
+            { "en": "unique vs peculiar", "es": "único vs raro" },
+            { "en": "assertive vs aggressive", "es": "firme vs agresivo" },
+            { "en": "frugal vs miserly", "es": "frugal vs avaro" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La misma cualidad, distinto juicio",
+              "body": "Muchos pares en inglés describen exactamente el mismo rasgo pero con la valoración opuesta metida dentro. Ahorrar es 'thrifty' si te cae bien la persona y 'stingy' si no. Insistir es 'determined' o 'stubborn' según de qué lado estés. 'Notorious' NO es 'notorio': significa famoso por algo malo. Elegir mal una de estas palabras no es un fallo de gramática, es un fallo de diplomacia.",
+              "examples": [
+                { "en": "She's thrifty. / She's stingy.", "es": "Es ahorradora. / Es tacaña." },
+                { "en": "He's notorious for being late.", "es": "Tiene fama de llegar tarde." },
+                { "en": "childlike wonder / childish behaviour", "es": "asombro inocente / conducta infantil" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "He is notorious in the industry",
+              "options": [
+                "Tiene mala fama en el sector",
+                "Es muy respetado en el sector",
+                "Es muy conocido y admirado",
+                "Es nuevo en el sector"
+              ],
+              "answer": "Tiene mala fama en el sector"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Quieres elogiar a alguien que no gasta de más. ¿Qué palabra usas?",
+              "options": ["thrifty", "stingy", "miserly", "tight-fisted"],
+              "answer": "thrifty"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Quieres criticar a alguien que no cede nunca. ¿Qué palabra usas?",
+              "options": ["stubborn", "determined", "resolute", "steadfast"],
+              "answer": "stubborn"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une cada palabra con su carga",
+              "pairs": [
+                ["thrifty", "positiva"],
+                ["stingy", "negativa"],
+                ["childlike", "positiva"],
+                ["childish", "negativa"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Her ___ curiosity made her a great researcher.",
+              "answer": "insatiable",
+              "options": ["insatiable", "nosy", "prying", "meddling"],
+              "translation": "Su curiosidad insaciable la convirtió en una gran investigadora."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "There is a fine line between assertive and aggressive",
+              "answer": "Hay una línea muy fina entre firme y agresivo"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Yo lo llamaría decidido, no cabezota",
+              "words": ["I'd", "call", "him", "determined,", "not", "stubborn"],
+              "answer": "I'd call him determined, not stubborn"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The word you want is unique, not peculiar",
+              "answer": "The word you want is unique, not peculiar",
+              "translation": "La palabra que buscas es único, no raro"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "He's confident, but never arrogant about it.",
+              "translation": "Es seguro de sí mismo, pero nunca arrogante."
+            }
+          ]
+        },
+        {
+          "id": "c2_u1_l3",
+          "title": "Elipsis y sustitución",
+          "vocab": [
+            { "en": "I think so", "es": "creo que sí" },
+            { "en": "I hope not", "es": "espero que no" },
+            { "en": "she said she would", "es": "dijo que lo haría" },
+            { "en": "if you want to", "es": "si quieres" },
+            { "en": "some do, some don't", "es": "algunos sí, otros no" },
+            { "en": "I'd rather not", "es": "prefiero no hacerlo" },
+            { "en": "neither do I", "es": "yo tampoco" },
+            { "en": "so do I", "es": "yo también" },
+            { "en": "the former / the latter", "es": "el primero / el segundo" },
+            { "en": "do so", "es": "hacerlo (formal)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Lo que el inglés borra",
+              "body": "El inglés odia repetir. En vez de repetir el verbo usa 'do': 'She works harder than I do'. En vez de repetir una oración entera usa 'so' o 'not': '—Is it raining? —I think so / I hope not'. Y corta detrás de un auxiliar o de 'to': 'I would if I could', 'I wanted to but I didn't'. Un hispanohablante que repite el verbo entero suena correcto pero pesado.",
+              "examples": [
+                { "en": "I think so.", "es": "Creo que sí." },
+                { "en": "She said she would.", "es": "Dijo que lo haría." },
+                { "en": "I wanted to, but I couldn't.", "es": "Quería, pero no pude." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "—¿Va a llover? —Espero que no.",
+              "options": ["I hope not", "I hope no", "I don't hope", "I hope it not"],
+              "answer": "I hope not"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "—No me gusta el café. —Yo tampoco.",
+              "options": ["Neither do I", "Me neither do", "I don't neither", "Nor I do"],
+              "answer": "Neither do I"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I asked her to help and she said she ___.",
+              "answer": "would",
+              "options": ["would", "will", "did", "does"],
+              "translation": "Le pedí ayuda y dijo que lo haría."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We considered two options: the ___ was cheaper.",
+              "answer": "former",
+              "options": ["former", "latter", "first one", "before"],
+              "translation": "Consideramos dos opciones: la primera era más barata."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las respuestas cortas",
+              "pairs": [
+                ["I think so", "creo que sí"],
+                ["I'd rather not", "prefiero no"],
+                ["so do I", "yo también"],
+                ["the latter", "el segundo"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Quería ayudar, pero no pude",
+              "answer": "I wanted to, but I couldn't",
+              "alternatives": ["I wanted to help, but I couldn't"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Algunos sí y otros no",
+              "words": ["Some", "do,", "some", "don't"],
+              "answer": "Some do, some don't"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "She works harder than I do",
+              "answer": "She works harder than I do",
+              "translation": "Ella trabaja más que yo"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I would if I could, but I can't, so I won't.",
+              "translation": "Lo haría si pudiera, pero no puedo, así que no lo haré."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2_u2",
+      "level": "C2",
+      "title": "Registro y estilo",
+      "subtitle": "Prensa, academia y los recursos que convencen",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "c2_u2_l1",
+          "title": "Inglés periodístico",
+          "vocab": [
+            { "en": "to spark outrage", "es": "desatar indignación" },
+            { "en": "to unveil", "es": "desvelar, presentar" },
+            { "en": "to slam", "es": "criticar duramente (titulares)" },
+            { "en": "to hail as", "es": "aclamar como" },
+            { "en": "amid growing concern", "es": "en medio de la preocupación" },
+            { "en": "sources close to", "es": "fuentes cercanas a" },
+            { "en": "a landmark ruling", "es": "una sentencia histórica" },
+            { "en": "to step down", "es": "dimitir" },
+            { "en": "in the wake of", "es": "a raíz de" },
+            { "en": "widely condemned", "es": "ampliamente condenado" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los titulares tienen su propia gramática",
+              "body": "En un titular desaparecen los artículos y el verbo 'to be': 'PM slams new tax' o 'Talks held amid tension'. El presente simple se usa para hechos pasados ('Minister resigns' = ya dimitió) y el infinitivo para el futuro ('PM to visit Berlin'). Además hay un vocabulario propio de titular, casi siempre más corto: 'slam' por criticar, 'hail' por elogiar, 'axe' por recortar, 'probe' por investigación.",
+              "examples": [
+                { "en": "Minister resigns amid scandal.", "es": "El ministro dimite en pleno escándalo." },
+                { "en": "PM to visit Berlin next week.", "es": "El primer ministro visitará Berlín." },
+                { "en": "Report slams safety failures.", "es": "Un informe critica los fallos de seguridad." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Titular: 'Minister to step down'",
+              "options": [
+                "El ministro va a dimitir",
+                "El ministro ya dimitió",
+                "Piden al ministro que dimita",
+                "El ministro se niega a dimitir"
+              ],
+              "answer": "El ministro va a dimitir"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Titular: 'Report slams safety record'",
+              "options": [
+                "Un informe critica duramente el historial de seguridad",
+                "Un informe elogia la seguridad",
+                "Un informe cierra el caso de seguridad",
+                "La seguridad mejoró según un informe"
+              ],
+              "answer": "Un informe critica duramente el historial de seguridad"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el lenguaje de prensa",
+              "pairs": [
+                ["to unveil", "presentar"],
+                ["to hail as", "aclamar como"],
+                ["in the wake of", "a raíz de"],
+                ["a landmark ruling", "sentencia histórica"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The decision sparked ___ across the country.",
+              "answer": "outrage",
+              "options": ["outrage", "outrageous", "outraged", "rage out"],
+              "translation": "La decisión desató indignación en todo el país."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Reforms were announced in the ___ of the crisis.",
+              "answer": "wake",
+              "options": ["wake", "wave", "back", "front"],
+              "translation": "Se anunciaron reformas a raíz de la crisis."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Sources close to the negotiations say…",
+              "options": [
+                "Fuentes cercanas a las negociaciones afirman…",
+                "Las fuentes cerraron las negociaciones",
+                "Se cerraron las fuentes de negociación",
+                "Los negociadores están cerca"
+              ],
+              "answer": "Fuentes cercanas a las negociaciones afirman…"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "La medida fue ampliamente condenada",
+              "answer": "The measure was widely condemned"
+            },
+            {
+              "type": "word_order",
+              "prompt": "El acuerdo fue aclamado como un avance histórico",
+              "words": ["The", "deal", "was", "hailed", "as", "a", "historic", "breakthrough"],
+              "answer": "The deal was hailed as a historic breakthrough"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Talks continue amid growing concern",
+              "answer": "Talks continue amid growing concern",
+              "translation": "Las conversaciones siguen en medio de una preocupación creciente"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "The court issued a landmark ruling on Thursday.",
+              "translation": "El tribunal dictó una sentencia histórica el jueves."
+            }
+          ]
+        },
+        {
+          "id": "c2_u2_l2",
+          "title": "Inglés académico y legal",
+          "vocab": [
+            { "en": "hereinafter", "es": "en lo sucesivo" },
+            { "en": "notwithstanding the foregoing", "es": "sin perjuicio de lo anterior" },
+            { "en": "pursuant to", "es": "conforme a" },
+            { "en": "shall be deemed", "es": "se considerará" },
+            { "en": "the aforementioned", "es": "el mencionado" },
+            { "en": "thereby", "es": "por lo cual" },
+            { "en": "to substantiate", "es": "fundamentar" },
+            { "en": "empirical evidence", "es": "evidencia empírica" },
+            { "en": "the findings suggest", "es": "los hallazgos sugieren" },
+            { "en": "beyond the scope of", "es": "fuera del alcance de" },
+            { "en": "a caveat", "es": "una salvedad" },
+            { "en": "to corroborate", "es": "corroborar" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Por qué el inglés legal usa 'shall'",
+              "body": "En contratos, 'shall' no es futuro: es obligación. 'The tenant shall pay' significa que está obligado a pagar. Por eso los redactores modernos prefieren 'must', que no se presta a confusión. En académico la clave es otra: nunca afirmes de más. 'The findings suggest' es correcto; 'the findings prove' es casi siempre una exageración que un revisor te tachará.",
+              "examples": [
+                { "en": "The tenant shall pay monthly.", "es": "El inquilino deberá pagar mensualmente." },
+                { "en": "The findings suggest a correlation.", "es": "Los hallazgos sugieren una correlación." },
+                { "en": "This is beyond the scope of the study.", "es": "Esto queda fuera del alcance del estudio." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "En un contrato, 'The tenant shall pay' significa…",
+              "options": [
+                "El inquilino está obligado a pagar",
+                "El inquilino pagará en el futuro",
+                "El inquilino podría pagar",
+                "El inquilino ya pagó"
+              ],
+              "answer": "El inquilino está obligado a pagar"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es el registro académico correcto?",
+              "options": [
+                "The findings suggest a correlation",
+                "The findings prove everything",
+                "The findings show it for sure",
+                "We totally proved the correlation"
+              ],
+              "answer": "The findings suggest a correlation"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario formal",
+              "pairs": [
+                ["pursuant to", "conforme a"],
+                ["hereinafter", "en lo sucesivo"],
+                ["the aforementioned", "el mencionado"],
+                ["a caveat", "una salvedad"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The evidence does not ___ that conclusion.",
+              "answer": "substantiate",
+              "options": ["substantiate", "substance", "substantial", "sustain"],
+              "translation": "Las pruebas no fundamentan esa conclusión."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "This question lies beyond the ___ of our study.",
+              "answer": "scope",
+              "options": ["scope", "range", "reach", "extent"],
+              "translation": "Esta cuestión queda fuera del alcance de nuestro estudio."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Notwithstanding the foregoing, the clause applies",
+              "options": [
+                "Sin perjuicio de lo anterior, la cláusula se aplica",
+                "Debido a lo anterior, la cláusula se anula",
+                "Antes de lo anterior, la cláusula se aplicaba",
+                "La cláusula sustituye a lo anterior"
+              ],
+              "answer": "Sin perjuicio de lo anterior, la cláusula se aplica"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estudios posteriores corroboraron los hallazgos",
+              "answer": "Subsequent studies corroborated the findings"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Los datos se considerarán confidenciales",
+              "words": ["The", "data", "shall", "be", "deemed", "confidential"],
+              "answer": "The data shall be deemed confidential"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "One caveat: the sample size was relatively small.",
+              "translation": "Una salvedad: el tamaño de la muestra era relativamente pequeño."
+            }
+          ]
+        },
+        {
+          "id": "c2_u2_l3",
+          "title": "Recursos retóricos",
+          "vocab": [
+            { "en": "the rule of three", "es": "la regla de tres (retórica)" },
+            { "en": "a rhetorical question", "es": "una pregunta retórica" },
+            { "en": "an analogy", "es": "una analogía" },
+            { "en": "a metaphor", "es": "una metáfora" },
+            { "en": "hyperbole", "es": "hipérbole" },
+            { "en": "antithesis", "es": "antítesis" },
+            { "en": "to hammer home a point", "es": "machacar una idea" },
+            { "en": "a turn of phrase", "es": "un giro afortunado" },
+            { "en": "to strike a chord", "es": "tocar la fibra" },
+            { "en": "a rallying cry", "es": "un grito de guerra" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Por qué las cosas van de tres en tres",
+              "body": "La retórica inglesa tiene obsesión con el tres: 'blood, sweat and tears', 'government of the people, by the people, for the people'. Dos suena incompleto, cuatro cansa, tres se recuerda. Otro recurso central es la antítesis: dos ideas opuestas en estructura paralela — 'Ask not what your country can do for you; ask what you can do for your country'. Si escribes un discurso o una presentación en inglés, estos dos trucos hacen la mitad del trabajo.",
+              "examples": [
+                { "en": "blood, sweat and tears", "es": "sangre, sudor y lágrimas" },
+                { "en": "Not the end, but the beginning.", "es": "No el final, sino el principio." },
+                { "en": "That really struck a chord.", "es": "Eso tocó la fibra." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "'Ask not what your country can do for you' es un ejemplo de…",
+              "options": ["antítesis", "hipérbole", "analogía", "eufemismo"],
+              "answer": "antítesis"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "His speech really struck a chord",
+              "options": [
+                "Su discurso tocó la fibra",
+                "Su discurso sonó desafinado",
+                "Su discurso fue muy corto",
+                "Su discurso ofendió a todos"
+              ],
+              "answer": "Su discurso tocó la fibra"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los recursos",
+              "pairs": [
+                ["hyperbole", "exageración deliberada"],
+                ["antithesis", "ideas opuestas en paralelo"],
+                ["analogy", "comparación explicativa"],
+                ["rhetorical question", "pregunta sin respuesta esperada"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He kept repeating it to hammer the point ___.",
+              "answer": "home",
+              "options": ["home", "down", "in", "over"],
+              "translation": "Lo repetía para machacar la idea."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It became the ___ cry of a generation.",
+              "answer": "rallying",
+              "options": ["rallying", "calling", "shouting", "raising"],
+              "translation": "Se convirtió en el grito de guerra de una generación."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál usa la regla de tres?",
+              "options": [
+                "Simple, fast and free",
+                "Simple and fast",
+                "Simple, fast, free and cheap and easy",
+                "It is simple"
+              ],
+              "answer": "Simple, fast and free"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Fue un giro de frase muy afortunado",
+              "answer": "It was a very happy turn of phrase"
+            },
+            {
+              "type": "word_order",
+              "prompt": "No es el final, sino el principio",
+              "words": ["This", "is", "not", "the", "end,", "but", "the", "beginning"],
+              "answer": "This is not the end, but the beginning"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Clear, honest and impossible to ignore.",
+              "translation": "Claro, honesto e imposible de ignorar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2_u3",
+      "level": "C2",
+      "title": "Lo que no se enseña",
+      "subtitle": "Condicionales mixtos, modismos opacos y los errores que nunca se van",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "c2_u3_l1",
+          "title": "Condicionales mixtos",
+          "vocab": [
+            { "en": "if I had studied, I would be", "es": "si hubiera estudiado, sería" },
+            { "en": "if I were you, I would have", "es": "si yo fuera tú, habría" },
+            { "en": "had it not been for", "es": "de no haber sido por" },
+            { "en": "were it not for", "es": "si no fuera por" },
+            { "en": "should you need", "es": "si necesitara" },
+            { "en": "but for your help", "es": "de no ser por tu ayuda" },
+            { "en": "otherwise", "es": "de lo contrario" },
+            { "en": "supposing", "es": "suponiendo que" },
+            { "en": "provided that", "es": "siempre que" },
+            { "en": "as long as", "es": "mientras que, siempre que" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Cuando el pasado y el presente se cruzan",
+              "body": "Los condicionales mixtos combinan tiempos: una condición pasada con una consecuencia presente, o al revés. 'If I had studied medicine, I would be a doctor now' — condición en pasado perfecto, resultado en condicional simple. Y en registro culto el 'if' desaparece invirtiendo el verbo: 'Had I known', 'Were it not for', 'Should you need'. Es la forma más elegante de escribir una condición en inglés.",
+              "examples": [
+                { "en": "If I had saved more, I would be free now.", "es": "Si hubiera ahorrado más, ahora sería libre." },
+                { "en": "Had I known, I would have said something.", "es": "De haberlo sabido, habría dicho algo." },
+                { "en": "Were it not for you, we would have failed.", "es": "Si no fuera por ti, habríamos fracasado." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "If I had taken that job, I ___ be living abroad now.",
+              "answer": "would",
+              "options": ["would", "will", "would have", "had"],
+              "translation": "Si hubiera aceptado ese trabajo, ahora estaría viviendo fuera."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ I known earlier, I would have helped.",
+              "answer": "Had",
+              "options": ["Had", "If", "Have", "Would"],
+              "translation": "De haberlo sabido antes, habría ayudado."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Si no fuera por tu ayuda, no lo habríamos logrado",
+              "options": [
+                "But for your help, we wouldn't have made it",
+                "But your help, we wouldn't have made it",
+                "If not your help, we didn't make it",
+                "Unless your help, we wouldn't make it"
+              ],
+              "answer": "But for your help, we wouldn't have made it"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Should you need assistance, please call",
+              "options": [
+                "Si necesitara ayuda, llame por favor",
+                "Debería pedir ayuda por teléfono",
+                "Necesita ayuda, así que llame",
+                "Llamó pidiendo ayuda"
+              ],
+              "answer": "Si necesitara ayuda, llame por favor"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las condicionales formales",
+              "pairs": [
+                ["had it not been for", "de no haber sido por"],
+                ["provided that", "siempre que"],
+                ["supposing", "suponiendo que"],
+                ["otherwise", "de lo contrario"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Si hubiera estudiado más, ahora tendría un trabajo mejor",
+              "answer": "If I had studied more, I would have a better job now"
+            },
+            {
+              "type": "word_order",
+              "prompt": "De no haber sido por la lluvia habríamos ganado",
+              "words": ["Had", "it", "not", "been", "for", "the", "rain,", "we", "would", "have", "won"],
+              "answer": "Had it not been for the rain, we would have won"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Were it not for you, this would never have worked",
+              "answer": "Were it not for you, this would never have worked",
+              "translation": "Si no fuera por ti, esto nunca habría funcionado"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Had we acted sooner, we would be in a very different position.",
+              "translation": "De haber actuado antes, estaríamos en una posición muy distinta."
+            }
+          ]
+        },
+        {
+          "id": "c2_u3_l2",
+          "title": "Modismos opacos",
+          "vocab": [
+            { "en": "to take with a pinch of salt", "es": "coger con pinzas (UK)" },
+            { "en": "a red herring", "es": "una pista falsa" },
+            { "en": "to steal someone's thunder", "es": "robar el protagonismo" },
+            { "en": "to bite off more than you can chew", "es": "abarcar más de lo que se puede" },
+            { "en": "the proof of the pudding", "es": "la prueba está en los hechos" },
+            { "en": "to throw someone under the bus", "es": "sacrificar a alguien" },
+            { "en": "a storm in a teacup", "es": "una tormenta en un vaso de agua" },
+            { "en": "to move the goalposts", "es": "cambiar las reglas a mitad" },
+            { "en": "to be left holding the baby", "es": "quedarse con el muerto" },
+            { "en": "to have a chip on your shoulder", "es": "tener un resentimiento" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Modismos que ni con contexto se adivinan",
+              "body": "Estos no se deducen: hay que conocerlos. 'A red herring' es un dato puesto ahí para despistar, y viene de usar arenques ahumados para desviar a los perros de caza. 'To move the goalposts' es cambiar los criterios cuando el otro ya casi los cumplía — es una acusación seria en un contexto laboral. Y 'a storm in a teacup' es el equivalente exacto de nuestra tormenta en un vaso de agua.",
+              "examples": [
+                { "en": "That detail was a red herring.", "es": "Ese detalle era una pista falsa." },
+                { "en": "They keep moving the goalposts.", "es": "No paran de cambiar las reglas." },
+                { "en": "It's a storm in a teacup.", "es": "Es una tormenta en un vaso de agua." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "That clue turned out to be a red herring",
+              "options": [
+                "Esa pista resultó ser falsa, para despistar",
+                "Esa pista resultó ser decisiva",
+                "Esa pista era sobre un pescado",
+                "Esa pista estaba en rojo"
+              ],
+              "answer": "Esa pista resultó ser falsa, para despistar"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "They keep moving the goalposts",
+              "options": [
+                "No paran de cambiar las condiciones",
+                "Están reorganizando el campo",
+                "Están marcando muchos goles",
+                "Se rinden constantemente"
+              ],
+              "answer": "No paran de cambiar las condiciones"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "He threw his colleague under the bus",
+              "options": [
+                "Sacrificó a su compañero para salvarse",
+                "Ayudó a su compañero a subir al autobús",
+                "Tuvo un accidente con su compañero",
+                "Defendió a su compañero"
+              ],
+              "answer": "Sacrificó a su compañero para salvarse"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los modismos",
+              "pairs": [
+                ["a storm in a teacup", "tormenta en un vaso de agua"],
+                ["a red herring", "pista falsa"],
+                ["to steal the thunder", "robar el protagonismo"],
+                ["left holding the baby", "quedarse con el muerto"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Take that report with a ___ of salt.",
+              "answer": "pinch",
+              "options": ["pinch", "spoon", "bag", "grain of sand"],
+              "translation": "Coge ese informe con pinzas."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He bit off more than he could ___.",
+              "answer": "chew",
+              "options": ["chew", "eat", "swallow", "bite"],
+              "translation": "Abarcó más de lo que podía."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "The proof of the pudding is in the eating",
+              "answer": "La prueba está en los hechos",
+              "alternatives": ["Se demuestra andando"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Todo esto es una tormenta en un vaso de agua",
+              "words": ["All", "of", "this", "is", "a", "storm", "in", "a", "teacup"],
+              "answer": "All of this is a storm in a teacup"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I'd take those figures with a pinch of salt.",
+              "translation": "Yo cogería esas cifras con pinzas."
+            }
+          ]
+        },
+        {
+          "id": "c2_u3_l3",
+          "title": "Errores fosilizados",
+          "vocab": [
+            { "en": "I look forward to hearing", "es": "no 'to hear'" },
+            { "en": "explain it to me", "es": "no 'explain me'" },
+            { "en": "I agree with you", "es": "no 'I am agree'" },
+            { "en": "advice is uncountable", "es": "no 'advices'" },
+            { "en": "information is uncountable", "es": "no 'informations'" },
+            { "en": "people are", "es": "no 'people is'" },
+            { "en": "since 2020 / for 3 years", "es": "since punto, for periodo" },
+            { "en": "I have been here for", "es": "no 'I am here since'" },
+            { "en": "it depends on", "es": "no 'depends of'" },
+            { "en": "married to someone", "es": "no 'married with'" },
+            { "en": "arrive in a city", "es": "no 'arrive to'" },
+            { "en": "in my opinion", "es": "no 'according to me'" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los errores que sobreviven al C1",
+              "body": "Hay fallos que un hispanohablante arrastra hasta niveles altísimos porque nadie se los corrige: ya se le entiende. Los más tercos: 'I am agree' (es 'I agree', agree es verbo), 'explain me' (necesita 'to': explain it to me), 'informations' y 'advices' (incontables, nunca llevan -s), 'people is' (es plural), 'depends of' (es 'on') y 'according to me' (no existe: es 'in my opinion'). Cazarlos es lo que separa un C1 de un C2.",
+              "examples": [
+                { "en": "I agree with you.", "es": "Estoy de acuerdo contigo." },
+                { "en": "Could you explain it to me?", "es": "¿Me lo puedes explicar?" },
+                { "en": "I need some advice.", "es": "Necesito algún consejo." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Estoy de acuerdo contigo",
+              "options": ["I agree with you", "I am agree with you", "I am agreed with you", "I agree to you"],
+              "answer": "I agree with you"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Me lo puedes explicar?",
+              "options": ["Can you explain it to me?", "Can you explain me it?", "Can you me explain?", "Can you explain me?"],
+              "answer": "Can you explain it to me?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Necesito más información",
+              "options": ["I need more information", "I need more informations", "I need mores information", "I need many informations"],
+              "answer": "I need more information"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "La gente es muy amable aquí",
+              "options": ["People are very kind here", "People is very kind here", "The people is very kind here", "Peoples are very kind here"],
+              "answer": "People are very kind here"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It depends ___ the weather.",
+              "answer": "on",
+              "options": ["on", "of", "from", "in"],
+              "translation": "Depende del tiempo."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I have lived here ___ five years.",
+              "answer": "for",
+              "options": ["for", "since", "during", "from"],
+              "translation": "Llevo cinco años viviendo aquí."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Está casada con un arquitecto",
+              "options": ["She is married to an architect", "She is married with an architect", "She married with an architect", "She is marry to an architect"],
+              "answer": "She is married to an architect"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "En mi opinión, no vale la pena",
+              "answer": "In my opinion, it's not worth it",
+              "alternatives": ["In my opinion it is not worth it"]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I look forward to hearing from you soon.",
+              "translation": "Quedo a la espera de tu respuesta."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

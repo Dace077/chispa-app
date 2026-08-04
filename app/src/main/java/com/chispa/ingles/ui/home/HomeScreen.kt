@@ -498,6 +498,8 @@ private fun levelColor(level: CefrLevel): Color {
         CefrLevel.A2 -> colors.levelA2
         CefrLevel.B1 -> colors.levelB1
         CefrLevel.B2 -> colors.levelB2
+        CefrLevel.C1 -> colors.levelC1
+        CefrLevel.C2 -> colors.levelC2
         CefrLevel.EXTRA -> colors.levelExtra
     }
 }

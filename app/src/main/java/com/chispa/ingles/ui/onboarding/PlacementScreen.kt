@@ -103,6 +103,9 @@ class PlacementViewModel(private val locator: ServiceLocator) : ViewModel() {
         if (total == 0) return CefrLevel.A1
         val ratio = correct.toFloat() / total
         return when {
+            // Solo con el pleno se salta hasta B2: por encima quedan C1 y C2,
+            // así que hay recorrido de sobra aunque nos quedemos cortos.
+            correct == total -> CefrLevel.B2
             ratio >= 0.8f -> CefrLevel.B1
             ratio >= 0.5f -> CefrLevel.A2
             else -> CefrLevel.A1

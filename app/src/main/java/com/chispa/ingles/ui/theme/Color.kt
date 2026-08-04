@@ -83,6 +83,8 @@ data class ChispaColors(
     val levelA2: Color,
     val levelB1: Color,
     val levelB2: Color,
+    val levelC1: Color,
+    val levelC2: Color,
     val levelExtra: Color,
 )
 
@@ -108,6 +110,9 @@ val LightChispaColors = ChispaColors(
     levelA2 = Teal500,
     levelB1 = Amber500,
     levelB2 = Coral500,
+    // Los niveles C cierran la escala con los tonos más profundos: se ganan.
+    levelC1 = Color(0xFFD1345B),
+    levelC2 = Color(0xFF6D28D9),
     levelExtra = Color(0xFF9B51E0),
 )
 
@@ -133,5 +138,7 @@ val DarkChispaColors = ChispaColors(
     levelA2 = Teal400,
     levelB1 = Amber400,
     levelB2 = Coral400,
+    levelC1 = Color(0xFFFF7A9C),
+    levelC2 = Color(0xFFA78BFA),
     levelExtra = Color(0xFFBB86FC),
 )

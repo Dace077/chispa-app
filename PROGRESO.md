@@ -14,7 +14,7 @@ APK firmado sin errores.
 |---|---|---|
 | 1. Setup | ✅ | Gradle KTS, catálogo de versiones, Material 3, tema propio |
 | 2. Modelo de datos y Room | ✅ | 5 entidades, 5 DAOs, repositorio único de escritura |
-| 3. Contenido | ✅ | 12 archivos JSON, 71 lecciones, 702 ejercicios |
+| 3. Contenido | ✅ | 14 archivos JSON, 89 lecciones, 883 ejercicios (A1 → C2) |
 | 4. Motor de lecciones | ✅ | 10 tipos de ejercicio, vidas, XP, reintentos |
 | 5. Gamificación | ✅ | Rachas, comodines, metas, 36 logros, 11 rangos |
 | 6. Repetición espaciada | ✅ | Leitner de 6 cajas, pantalla de repaso priorizada |
@@ -100,7 +100,15 @@ ejecutarse. Así la notificación cae siempre a la hora exacta configurada.
 ### Contenido
 - Añadir un módulo de **inglés con canciones** o **inglés para exámenes** (IELTS/TOEFL).
 - Más historias: el módulo tiene 4 y da para muchas más.
-- Un nivel **C1** por encima de B2, si algún día hace falta techo.
+- El camino ya llega a **C2**, que es el techo del marco europeo. Por encima no
+  hay nivel: lo que queda es ampliar en anchura, no en altura.
+
+### Sobre los niveles C
+Se añadieron después del lanzamiento. Detalles a tener en cuenta:
+- `CefrLevel` ahora tiene 7 valores; `EXTRA` pasó a `order = 6` para seguir
+  ordenándose el último. Si añades otro nivel, respeta ese invariante.
+- El test de nivel solo coloca hasta B2, y únicamente con pleno de aciertos.
+  Con 8 preguntas no hay señal suficiente para mandar a nadie directo a C1.
 
 ### Funcionalidad
 - **Exportar/importar progreso** a un archivo JSON, para cambiar de móvil sin

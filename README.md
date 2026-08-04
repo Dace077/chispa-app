@@ -1,6 +1,6 @@
 # ✨ Chispa — Aprende inglés sin excusas
 
-App Android nativa para aprender inglés de cero (A1) a intermedio alto (B2).
+App Android nativa para aprender inglés de cero (A1) hasta maestría (C2).
 **100% gratis, 100% offline, sin anuncios, sin compras y sin recoger un solo dato tuyo.**
 
 > La app ni siquiera declara el permiso `android.permission.INTERNET`: es
@@ -31,13 +31,15 @@ La app usa el motor de voz que ya trae tu Android. Si no oyes nada:
 
 ## 🎯 Qué incluye
 
-### Camino principal (A1 → B2)
+### Camino principal (A1 → C2)
 | Nivel | Contenido |
 |---|---|
 | **A1** | Alfabeto y saludos, presentarse, números, colores, familia, verbo *to be*, artículos y plurales, comida, la casa, presente simple, días y meses |
 | **A2** | Pasado simple regular e irregular, preguntas en pasado, futuro con *going to*, comparativos y superlativos, preposiciones, direcciones, compras, clima, *can/must* |
 | **B1** | Presente perfecto, narrar experiencias, *phrasal verbs*, condicionales 0 y 1, voz pasiva, expresar opiniones, trabajo, salud, viajes |
 | **B2** | Condicionales 2 y 3, *wish*, estilo indirecto, registro formal e informal, argumentación, sinónimos con matiz, *phrasal verbs* avanzados, gerundio vs infinitivo, oraciones de relativo, subjuntivo e inversión |
+| **C1** | Modales de especulación, cláusulas de participio, nominalización y registro académico, conectores de discurso, pasiva impersonal, estructuras hendidas, colocaciones, *phrasal verbs* de registro alto, grados de compromiso |
+| **C2** | Ironía y *understatement*, connotación exacta, elipsis y sustitución, inglés periodístico, inglés académico y legal, recursos retóricos, condicionales mixtos, modismos opacos y los errores fosilizados del hispanohablante avanzado |
 
 ### Módulos extra (el diferenciador)
 - **🎣 Modismos** — más de 60 expresiones idiomáticas con contexto real
@@ -49,7 +51,7 @@ La app usa el motor de voz que ya trae tu Android. Si no oyes nada:
 - **📖 Historias progresivas** — relatos que crecen contigo y reutilizan lo aprendido
 - **🌍 Notas culturales** — costumbres, cortesía y malentendidos frecuentes
 
-**Total: 22 unidades · 71 lecciones · 702 ejercicios · ~740 palabras y frases.**
+**Total: 28 unidades · 89 lecciones · 883 ejercicios · ~930 palabras y frases.**
 
 ### Mecánicas
 - **7 tipos de ejercicio**: opción múltiple, traducir, escuchar y escribir, ordenar palabras,

@@ -1,0 +1,927 @@
+{
+  "id": "core_c1",
+  "title": "Nivel C1 — Avanzado",
+  "category": "core",
+  "icon": "spark",
+  "unlockXp": 0,
+  "description": "Precisión, matiz y cohesión. El inglés que ya no se traduce: se piensa.",
+  "units": [
+    {
+      "id": "c1_u1",
+      "level": "C1",
+      "title": "Precisión y matiz",
+      "subtitle": "Especular con exactitud, comprimir frases y subir de registro",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "c1_u1_l1",
+          "title": "Modales de especulación",
+          "vocab": [
+            { "en": "must have been", "es": "debió de ser (deducción)" },
+            { "en": "can't have been", "es": "no puede haber sido" },
+            { "en": "might have been", "es": "puede que fuera" },
+            { "en": "should have arrived", "es": "ya debería haber llegado" },
+            { "en": "was supposed to", "es": "se suponía que iba a" },
+            { "en": "was to have", "es": "iba a (y no ocurrió)" },
+            { "en": "may well be", "es": "bien podría ser" },
+            { "en": "is bound to", "es": "seguro que va a" },
+            { "en": "is unlikely to", "es": "es poco probable que" },
+            { "en": "I dare say", "es": "diría yo, me atrevería a decir" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Deducir no es lo mismo que dudar",
+              "body": "El inglés distingue con precisión el grado de certeza sobre el pasado. 'Must have been' es una deducción firme: las pruebas lo dicen. 'Can't have been' es la negación firme, y ojo, NO se usa 'mustn't have been' para deducir. 'Might/could have been' es una posibilidad abierta. Y 'should have arrived' significa que esperabas que ya hubiera llegado, no que tuviera la obligación.",
+              "examples": [
+                { "en": "The lights are off — they must have left.", "es": "Las luces están apagadas: se habrán ido." },
+                { "en": "She can't have known; nobody told her.", "es": "No pudo saberlo, nadie se lo dijo." },
+                { "en": "The train should have arrived by now.", "es": "El tren ya debería haber llegado." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He knew every detail — he ___ have read the report.",
+              "answer": "must",
+              "options": ["must", "can't", "might", "should"],
+              "translation": "Sabía cada detalle: tuvo que haber leído el informe."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ have seen us; she was facing the other way.",
+              "answer": "can't",
+              "options": ["can't", "must", "should", "mustn't"],
+              "translation": "No pudo habernos visto, estaba mirando hacia el otro lado."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The meeting was to have started at nine",
+              "options": [
+                "La reunión iba a empezar a las nueve (y no fue así)",
+                "La reunión empezó a las nueve",
+                "La reunión empezará a las nueve",
+                "La reunión debe empezar a las nueve"
+              ],
+              "answer": "La reunión iba a empezar a las nueve (y no fue así)"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Prices are bound to rise",
+              "options": [
+                "Seguro que los precios suben",
+                "Los precios podrían subir",
+                "Los precios están limitados",
+                "Es improbable que suban"
+              ],
+              "answer": "Seguro que los precios suben"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une por grado de certeza",
+              "pairs": [
+                ["must have been", "deducción firme"],
+                ["might have been", "posibilidad abierta"],
+                ["is bound to", "certeza futura"],
+                ["is unlikely to", "poco probable"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Se suponía que iba a llamarme ayer",
+              "answer": "He was supposed to call me yesterday",
+              "alternatives": ["She was supposed to call me yesterday"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Bien podría ser el mejor de todos",
+              "words": ["It", "may", "well", "be", "the", "best", "of", "all"],
+              "answer": "It may well be the best of all"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "They must have known about it all along",
+              "answer": "They must have known about it all along",
+              "translation": "Lo tuvieron que saber desde el principio"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "She can't have forgotten; it was in her calendar.",
+              "translation": "No puede habérsele olvidado, estaba en su calendario."
+            }
+          ]
+        },
+        {
+          "id": "c1_u1_l2",
+          "title": "Cláusulas de participio",
+          "vocab": [
+            { "en": "having finished", "es": "habiendo terminado" },
+            { "en": "walking home", "es": "yendo a casa" },
+            { "en": "given the circumstances", "es": "dadas las circunstancias" },
+            { "en": "faced with", "es": "ante, enfrentado a" },
+            { "en": "based on", "es": "basado en" },
+            { "en": "considering", "es": "teniendo en cuenta" },
+            { "en": "once completed", "es": "una vez terminado" },
+            { "en": "if approved", "es": "si se aprueba" },
+            { "en": "weather permitting", "es": "si el tiempo lo permite" },
+            { "en": "all things considered", "es": "bien mirado todo" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Comprimir dos frases en una",
+              "body": "El inglés culto elimina sujetos y verbos auxiliares cuando el contexto los deja claros. 'Because he had finished early, he left' se convierte en 'Having finished early, he left'. La regla de oro: el sujeto de la cláusula reducida DEBE ser el mismo que el de la principal. Si no, produces frases absurdas — 'Walking home, the rain started' dice que la lluvia iba caminando a casa.",
+              "examples": [
+                { "en": "Having read the report, she called a meeting.", "es": "Tras leer el informe, convocó una reunión." },
+                { "en": "Once completed, the form must be signed.", "es": "Una vez rellenado, el formulario debe firmarse." },
+                { "en": "Faced with the evidence, he confessed.", "es": "Ante las pruebas, confesó." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál está bien construida?",
+              "options": [
+                "Walking home, I saw the accident",
+                "Walking home, the accident was seen by me",
+                "Walking home, the accident happened",
+                "Walking home, it started raining on me"
+              ],
+              "answer": "Walking home, I saw the accident",
+              "hint": "El sujeto debe ser el mismo en las dos partes"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ finished the work, she went home early.",
+              "answer": "Having",
+              "options": ["Having", "Have", "Had", "To have"],
+              "translation": "Habiendo terminado el trabajo, se fue pronto a casa."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ the circumstances, the result was remarkable.",
+              "answer": "Given",
+              "options": ["Given", "Giving", "Give", "To give"],
+              "translation": "Dadas las circunstancias, el resultado fue notable."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Weather permitting, we'll leave at dawn",
+              "options": [
+                "Si el tiempo lo permite, saldremos al amanecer",
+                "El tiempo permite salir al amanecer",
+                "Permitiremos el mal tiempo al amanecer",
+                "Saldremos al amanecer con cualquier tiempo"
+              ],
+              "answer": "Si el tiempo lo permite, saldremos al amanecer"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las cláusulas reducidas",
+              "pairs": [
+                ["once completed", "una vez terminado"],
+                ["faced with", "ante"],
+                ["considering", "teniendo en cuenta"],
+                ["all things considered", "bien mirado todo"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Al no saber la respuesta, guardó silencio",
+              "answer": "Not knowing the answer, he stayed silent",
+              "alternatives": ["Not knowing the answer, she stayed silent"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Si se aprueba, el plan empezará en marzo",
+              "words": ["If", "approved,", "the", "plan", "will", "begin", "in", "March"],
+              "answer": "If approved, the plan will begin in March"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Based on the data, we changed our approach",
+              "answer": "Based on the data, we changed our approach",
+              "translation": "Basándonos en los datos, cambiamos de enfoque"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Having considered every option, we chose the simplest.",
+              "translation": "Tras considerar cada opción, elegimos la más sencilla."
+            }
+          ]
+        },
+        {
+          "id": "c1_u1_l3",
+          "title": "Nominalización y registro",
+          "vocab": [
+            { "en": "the implementation of", "es": "la implantación de" },
+            { "en": "a reduction in", "es": "una reducción de" },
+            { "en": "the failure to comply", "es": "el incumplimiento" },
+            { "en": "growing concern", "es": "preocupación creciente" },
+            { "en": "widespread adoption", "es": "adopción generalizada" },
+            { "en": "significant improvement", "es": "mejora significativa" },
+            { "en": "the extent to which", "es": "la medida en que" },
+            { "en": "with regard to", "es": "con respecto a" },
+            { "en": "in the absence of", "es": "a falta de" },
+            { "en": "subsequent analysis", "es": "análisis posterior" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Convertir verbos en sustantivos sube el registro",
+              "body": "El inglés académico y profesional prefiere sustantivos donde el hablado usa verbos. 'They decided quickly' se vuelve 'The speed of their decision'. 'Prices went up a lot' se vuelve 'A substantial increase in prices'. Es más denso y más impersonal, que es justo lo que se busca en un informe. Cuidado: abusar de esto en conversación te hace sonar a manual de instrucciones.",
+              "examples": [
+                { "en": "The implementation of the policy failed.", "es": "La implantación de la política fracasó." },
+                { "en": "There has been a reduction in costs.", "es": "Ha habido una reducción de costes." },
+                { "en": "Growing concern surrounds the issue.", "es": "Hay una preocupación creciente por el asunto." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es la versión nominalizada de 'They failed to comply'?",
+              "options": [
+                "Their failure to comply",
+                "They are failing to comply",
+                "The complying failure of them",
+                "To fail the compliance"
+              ],
+              "answer": "Their failure to comply"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une verbo con su forma nominal",
+              "pairs": [
+                ["to implement", "implementation"],
+                ["to reduce", "reduction"],
+                ["to improve", "improvement"],
+                ["to adopt", "adoption"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We must assess the ___ to which this affects users.",
+              "answer": "extent",
+              "options": ["extent", "amount", "number", "level"],
+              "translation": "Debemos evaluar la medida en que esto afecta a los usuarios."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "In the ___ of evidence, we cannot proceed.",
+              "answer": "absence",
+              "options": ["absence", "lack", "missing", "want"],
+              "translation": "A falta de pruebas, no podemos continuar."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Widespread adoption remains unlikely",
+              "options": [
+                "Una adopción generalizada sigue siendo poco probable",
+                "La adopción se extendió rápidamente",
+                "Todos lo adoptaron sin problema",
+                "La adopción es imposible"
+              ],
+              "answer": "Una adopción generalizada sigue siendo poco probable"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Ha habido una mejora significativa con respecto al año pasado",
+              "answer": "There has been a significant improvement with regard to last year",
+              "alternatives": ["There has been a significant improvement compared to last year"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "El análisis posterior confirmó los hallazgos",
+              "words": ["Subsequent", "analysis", "confirmed", "the", "findings"],
+              "answer": "Subsequent analysis confirmed the findings"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "There is growing concern about the delay",
+              "answer": "There is growing concern about the delay",
+              "translation": "Hay una preocupación creciente por el retraso"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "The implementation of these measures requires careful planning.",
+              "translation": "La implantación de estas medidas exige una planificación cuidadosa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1_u2",
+      "level": "C1",
+      "title": "Cohesión y argumento",
+      "subtitle": "Encadenar ideas, distanciarte de lo que dices y enfatizar con precisión",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "c1_u2_l1",
+          "title": "Conectores de discurso",
+          "vocab": [
+            { "en": "nonetheless", "es": "no obstante" },
+            { "en": "whereas", "es": "mientras que (contraste)" },
+            { "en": "insofar as", "es": "en la medida en que" },
+            { "en": "conversely", "es": "a la inversa" },
+            { "en": "by the same token", "es": "por la misma razón" },
+            { "en": "notwithstanding", "es": "a pesar de" },
+            { "en": "hence", "es": "de ahí que" },
+            { "en": "albeit", "es": "aunque (formal)" },
+            { "en": "in so doing", "es": "al hacerlo" },
+            { "en": "granted", "es": "cierto es que" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Conceder para después rebatir",
+              "body": "El movimiento retórico más útil del inglés culto es admitir algo antes de contradecirlo: 'Granted, the costs are high. Nonetheless, the benefits outweigh them.' Suena razonable y desarma al interlocutor. Ojo con 'albeit': va seguido de adjetivo o frase corta, nunca de una oración completa — 'a useful, albeit expensive, solution'.",
+              "examples": [
+                { "en": "Granted, it is expensive. Nonetheless, it works.", "es": "Cierto, es caro. Aun así, funciona." },
+                { "en": "A slow, albeit steady, recovery.", "es": "Una recuperación lenta, aunque constante." },
+                { "en": "He agreed, whereas she refused.", "es": "Él aceptó, mientras que ella se negó." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los conectores",
+              "pairs": [
+                ["nonetheless", "no obstante"],
+                ["whereas", "mientras que"],
+                ["conversely", "a la inversa"],
+                ["hence", "de ahí que"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It was a useful, ___ costly, experiment.",
+              "answer": "albeit",
+              "options": ["albeit", "although", "despite", "however"],
+              "translation": "Fue un experimento útil, aunque costoso."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___, the costs are high. Even so, it is worth doing.",
+              "answer": "Granted",
+              "options": ["Granted", "Therefore", "Hence", "Thereby"],
+              "translation": "Cierto es que los costes son altos. Aun así, merece la pena."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Notwithstanding the delays, the project succeeded",
+              "options": [
+                "A pesar de los retrasos, el proyecto salió bien",
+                "Gracias a los retrasos, el proyecto salió bien",
+                "Sin retrasos, el proyecto habría salido bien",
+                "Los retrasos hundieron el proyecto"
+              ],
+              "answer": "A pesar de los retrasos, el proyecto salió bien"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The plan works insofar as funding continues",
+              "options": [
+                "El plan funciona en la medida en que siga la financiación",
+                "El plan funciona aunque falte financiación",
+                "El plan no necesita financiación",
+                "El plan funcionará pronto"
+              ],
+              "answer": "El plan funciona en la medida en que siga la financiación"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Él aceptó, mientras que ella se negó",
+              "answer": "He agreed, whereas she refused"
+            },
+            {
+              "type": "word_order",
+              "prompt": "No obstante, la conclusión sigue en pie",
+              "words": ["Nonetheless,", "the", "conclusion", "still", "stands"],
+              "answer": "Nonetheless, the conclusion still stands"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Conversely, the opposite may also be true",
+              "answer": "Conversely, the opposite may also be true",
+              "translation": "A la inversa, lo contrario también puede ser cierto"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Granted, it is unusual. Nonetheless, it is entirely legal.",
+              "translation": "Cierto, es poco habitual. Aun así, es del todo legal."
+            }
+          ]
+        },
+        {
+          "id": "c1_u2_l2",
+          "title": "Pasiva impersonal",
+          "vocab": [
+            { "en": "it is said that", "es": "se dice que" },
+            { "en": "he is believed to be", "es": "se cree que es" },
+            { "en": "it is widely held", "es": "se sostiene ampliamente" },
+            { "en": "she is thought to have", "es": "se piensa que ha" },
+            { "en": "it has been suggested", "es": "se ha sugerido" },
+            { "en": "is reported to", "es": "según se informa" },
+            { "en": "is alleged to", "es": "presuntamente" },
+            { "en": "is regarded as", "es": "se considera como" },
+            { "en": "it remains to be seen", "es": "está por ver" },
+            { "en": "is estimated at", "es": "se estima en" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Decir algo sin comprometerte",
+              "body": "Periodismo, ciencia y diplomacia viven de esta estructura. Hay dos formas equivalentes: 'It is said that he resigned' y 'He is said to have resigned'. La segunda es más elegante y más frecuente en prensa. 'Alleged' es la palabra clave del periodismo judicial: implica acusación sin condena, y usarla mal puede costar una demanda.",
+              "examples": [
+                { "en": "He is believed to be in Paris.", "es": "Se cree que está en París." },
+                { "en": "The damage is estimated at two million.", "es": "Los daños se estiman en dos millones." },
+                { "en": "She is alleged to have taken the money.", "es": "Presuntamente se llevó el dinero." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Se cree que está en el extranjero",
+              "options": [
+                "He is believed to be abroad",
+                "He is believing to be abroad",
+                "It believes him abroad",
+                "He believes to be abroad"
+              ],
+              "answer": "He is believed to be abroad"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It is widely ___ that the theory is outdated.",
+              "answer": "held",
+              "options": ["held", "hold", "holding", "holds"],
+              "translation": "Se sostiene ampliamente que la teoría está anticuada."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She is thought ___ have left the country.",
+              "answer": "to",
+              "options": ["to", "that", "for", "of"],
+              "translation": "Se piensa que ha salido del país."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The suspect is alleged to have acted alone",
+              "options": [
+                "Se alega que el sospechoso actuó solo",
+                "Se ha probado que actuó solo",
+                "El sospechoso confesó actuar solo",
+                "El sospechoso fue absuelto"
+              ],
+              "answer": "Se alega que el sospechoso actuó solo"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las fórmulas",
+              "pairs": [
+                ["is reported to", "según se informa"],
+                ["is regarded as", "se considera como"],
+                ["is estimated at", "se estima en"],
+                ["remains to be seen", "está por ver"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Se dice que la reunión fue tensa",
+              "answer": "The meeting is said to have been tense",
+              "alternatives": ["It is said that the meeting was tense"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Está por ver si funcionará",
+              "words": ["It", "remains", "to", "be", "seen", "whether", "it", "will", "work"],
+              "answer": "It remains to be seen whether it will work"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The cost is estimated at three million",
+              "answer": "The cost is estimated at three million",
+              "translation": "El coste se estima en tres millones"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "He is widely regarded as the finest in his field.",
+              "translation": "Se le considera en general el mejor de su campo."
+            }
+          ]
+        },
+        {
+          "id": "c1_u2_l3",
+          "title": "Énfasis y estructuras hendidas",
+          "vocab": [
+            { "en": "what matters is", "es": "lo que importa es" },
+            { "en": "it was you who", "es": "fuiste tú quien" },
+            { "en": "the reason why", "es": "la razón por la que" },
+            { "en": "all I want is", "es": "todo lo que quiero es" },
+            { "en": "little did he know", "es": "poco sabía él" },
+            { "en": "only then did", "es": "solo entonces" },
+            { "en": "no sooner had", "es": "apenas había" },
+            { "en": "so great was", "es": "tan grande era" },
+            { "en": "do come in", "es": "pasa, por favor (énfasis)" },
+            { "en": "I did tell you", "es": "sí que te lo dije" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Tres formas de subrayar sin gritar",
+              "body": "Primera, las hendidas: 'What I need is time' o 'It was Ana who called'. Segunda, la inversión tras expresiones negativas: 'No sooner had I sat down than the phone rang'. Tercera, el 'do' enfático en afirmativas: 'I did tell you' significa 'sí que te lo dije' y es la forma exacta de defenderte de una acusación. En español subrayamos con entonación; el inglés lo hace con sintaxis.",
+              "examples": [
+                { "en": "What we need is more time.", "es": "Lo que necesitamos es más tiempo." },
+                { "en": "It was Ana who solved it.", "es": "Fue Ana quien lo resolvió." },
+                { "en": "I did warn you.", "es": "Sí que te avisé." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "No sooner had we arrived ___ it started to rain.",
+              "answer": "than",
+              "options": ["than", "when", "that", "then"],
+              "translation": "Apenas habíamos llegado cuando empezó a llover."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Little ___ he know what awaited him.",
+              "answer": "did",
+              "options": ["did", "does", "was", "had"],
+              "translation": "Poco sabía él lo que le esperaba."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Fue ella quien tomó la decisión",
+              "options": [
+                "It was she who made the decision",
+                "She was who made the decision",
+                "It was her that made decision",
+                "Was she who made the decision"
+              ],
+              "answer": "It was she who made the decision"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "I did send the email",
+              "options": [
+                "Sí que mandé el correo",
+                "Hice que mandaran el correo",
+                "Mandé el correo dos veces",
+                "No mandé el correo"
+              ],
+              "answer": "Sí que mandé el correo"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las estructuras enfáticas",
+              "pairs": [
+                ["what matters is", "lo que importa es"],
+                ["only then did", "solo entonces"],
+                ["so great was", "tan grande era"],
+                ["all I want is", "todo lo que quiero es"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Lo que necesitamos es una respuesta clara",
+              "answer": "What we need is a clear answer"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Solo entonces me di cuenta del error",
+              "words": ["Only", "then", "did", "I", "notice", "the", "mistake"],
+              "answer": "Only then did I notice the mistake"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The reason why it failed is simple",
+              "answer": "The reason why it failed is simple",
+              "translation": "La razón por la que falló es sencilla"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "It was precisely that detail which changed everything.",
+              "translation": "Fue precisamente ese detalle el que lo cambió todo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1_u3",
+      "level": "C1",
+      "title": "Inglés que suena nativo",
+      "subtitle": "Colocaciones, phrasal verbs de registro alto y grados de compromiso",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "c1_u3_l1",
+          "title": "Colocaciones",
+          "vocab": [
+            { "en": "to make a decision", "es": "tomar una decisión" },
+            { "en": "to take responsibility", "es": "asumir la responsabilidad" },
+            { "en": "to draw a conclusion", "es": "sacar una conclusión" },
+            { "en": "to pose a risk", "es": "suponer un riesgo" },
+            { "en": "to meet a deadline", "es": "cumplir un plazo" },
+            { "en": "to raise awareness", "es": "concienciar" },
+            { "en": "to bear in mind", "es": "tener en cuenta" },
+            { "en": "heavy rain", "es": "lluvia intensa" },
+            { "en": "strong coffee", "es": "café cargado" },
+            { "en": "a narrow escape", "es": "salvarse por poco" },
+            { "en": "deeply concerned", "es": "profundamente preocupado" },
+            { "en": "highly unlikely", "es": "muy poco probable" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Las palabras van en pandilla",
+              "body": "Una colocación es la combinación que los nativos usan por costumbre, no por lógica. En inglés la lluvia es 'heavy' y el café es 'strong', nunca al revés, aunque 'fuerte' valga para los dos en español. Se 'hace' una decisión (make a decision), no se toma. Aprender colocaciones es lo que separa un inglés correcto de un inglés que suena natural — y es donde más se nota el calco del español.",
+              "examples": [
+                { "en": "heavy rain / strong coffee", "es": "lluvia intensa / café cargado" },
+                { "en": "make a decision, not take", "es": "tomar una decisión" },
+                { "en": "highly unlikely, not very unlikely", "es": "muy poco probable" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es la colocación correcta?",
+              "options": ["make a decision", "take a decision", "do a decision", "have a decision"],
+              "answer": "make a decision"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo se dice 'lluvia fuerte'?",
+              "options": ["heavy rain", "strong rain", "hard rain", "big rain"],
+              "answer": "heavy rain"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We must ___ in mind the cost.",
+              "answer": "bear",
+              "options": ["bear", "take", "hold", "have"],
+              "translation": "Debemos tener en cuenta el coste."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "That would ___ a serious risk to users.",
+              "answer": "pose",
+              "options": ["pose", "make", "give", "put"],
+              "translation": "Eso supondría un riesgo serio para los usuarios."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une verbo con su sustantivo habitual",
+              "pairs": [
+                ["draw", "a conclusion"],
+                ["meet", "a deadline"],
+                ["raise", "awareness"],
+                ["take", "responsibility"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estamos profundamente preocupados por el retraso",
+              "answer": "We are deeply concerned about the delay"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Es muy poco probable que cambie",
+              "words": ["It", "is", "highly", "unlikely", "to", "change"],
+              "answer": "It is highly unlikely to change"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We managed to meet the deadline",
+              "answer": "We managed to meet the deadline",
+              "translation": "Conseguimos cumplir el plazo"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "That was a narrow escape, all things considered.",
+              "translation": "Nos salvamos por poco, bien mirado."
+            }
+          ]
+        },
+        {
+          "id": "c1_u3_l2",
+          "title": "Phrasal verbs de registro alto",
+          "vocab": [
+            { "en": "to account for", "es": "explicar, representar" },
+            { "en": "to bring about", "es": "provocar, ocasionar" },
+            { "en": "to carry over", "es": "arrastrar, trasladar" },
+            { "en": "to phase out", "es": "eliminar gradualmente" },
+            { "en": "to rule out", "es": "descartar" },
+            { "en": "to stem from", "es": "derivarse de" },
+            { "en": "to hinge on", "es": "depender de" },
+            { "en": "to iron out", "es": "limar, resolver" },
+            { "en": "to gloss over", "es": "pasar por alto" },
+            { "en": "to weigh up", "es": "sopesar" },
+            { "en": "to fall through", "es": "irse al traste" },
+            { "en": "to set out", "es": "exponer, detallar" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Phrasal verbs que sí valen en un informe",
+              "body": "Es mentira que los phrasal verbs sean siempre informales. 'Account for', 'rule out', 'stem from' o 'phase out' aparecen constantemente en textos técnicos y de negocio, y a menudo suenan mejor que su alternativa latina. Lo que cambia es cuáles eliges: 'carry out research' es formal; 'do research' es neutro; 'knock out a report' es de bar.",
+              "examples": [
+                { "en": "Exports account for 40% of revenue.", "es": "Las exportaciones representan el 40% de los ingresos." },
+                { "en": "We cannot rule out that option.", "es": "No podemos descartar esa opción." },
+                { "en": "The problem stems from poor planning.", "es": "El problema se deriva de una mala planificación." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los phrasal verbs",
+              "pairs": [
+                ["account for", "representar"],
+                ["rule out", "descartar"],
+                ["stem from", "derivarse de"],
+                ["phase out", "eliminar gradualmente"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Everything hinges on the funding",
+              "options": [
+                "Todo depende de la financiación",
+                "Todo cuelga de un hilo",
+                "Todo se gastó en financiación",
+                "Nada tiene que ver con la financiación"
+              ],
+              "answer": "Todo depende de la financiación"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The report glosses over the losses",
+              "options": [
+                "El informe pasa por alto las pérdidas",
+                "El informe destaca las pérdidas",
+                "El informe corrige las pérdidas",
+                "El informe brilla pese a las pérdidas"
+              ],
+              "answer": "El informe pasa por alto las pérdidas"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We still need to iron ___ a few details.",
+              "answer": "out",
+              "options": ["out", "over", "up", "through"],
+              "translation": "Aún tenemos que limar algunos detalles."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The deal fell ___ at the last minute.",
+              "answer": "through",
+              "options": ["through", "down", "off", "away"],
+              "translation": "El acuerdo se fue al traste en el último momento."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "No podemos descartar esa posibilidad",
+              "answer": "We cannot rule out that possibility"
+            },
+            {
+              "type": "word_order",
+              "prompt": "El informe expone tres recomendaciones",
+              "words": ["The", "report", "sets", "out", "three", "recommendations"],
+              "answer": "The report sets out three recommendations"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We need to weigh up the risks carefully",
+              "answer": "We need to weigh up the risks carefully",
+              "translation": "Necesitamos sopesar los riesgos con cuidado"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "These changes brought about a complete shift in strategy.",
+              "translation": "Estos cambios provocaron un giro completo de estrategia."
+            }
+          ]
+        },
+        {
+          "id": "c1_u3_l3",
+          "title": "Grados de compromiso",
+          "vocab": [
+            { "en": "arguably", "es": "se podría argumentar que" },
+            { "en": "ostensibly", "es": "en apariencia" },
+            { "en": "presumably", "es": "es de suponer que" },
+            { "en": "admittedly", "es": "hay que reconocer que" },
+            { "en": "conceivably", "es": "cabe imaginar que" },
+            { "en": "to a large extent", "es": "en gran medida" },
+            { "en": "broadly speaking", "es": "en términos generales" },
+            { "en": "if anything", "es": "si acaso" },
+            { "en": "not least because", "es": "sobre todo porque" },
+            { "en": "by no means", "es": "ni mucho menos" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Medir cuánto te mojas",
+              "body": "Estos adverbios son el termostato del compromiso. 'Arguably the best' admite discusión; 'undoubtedly the best' no. 'Ostensibly' es especialmente afilado: significa 'en apariencia', e implica que la realidad es otra — 'ostensibly a peace mission' sugiere que de pacífica tenía poco. Y 'by no means' es una negación enfática elegante: 'by no means certain' es mucho más fuerte que 'not certain'.",
+              "examples": [
+                { "en": "Arguably the finest novel of the decade.", "es": "Podría decirse que la mejor novela de la década." },
+                { "en": "Ostensibly a routine visit.", "es": "En apariencia una visita rutinaria." },
+                { "en": "The outcome is by no means certain.", "es": "El resultado no está ni mucho menos claro." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Ostensibly a routine inspection",
+              "options": [
+                "En apariencia una inspección rutinaria (pero quizá no)",
+                "Sin duda una inspección rutinaria",
+                "Una inspección ostentosa",
+                "Una inspección obligatoria"
+              ],
+              "answer": "En apariencia una inspección rutinaria (pero quizá no)"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The result is by no means guaranteed",
+              "options": [
+                "El resultado no está ni mucho menos garantizado",
+                "El resultado está garantizado sin duda",
+                "El resultado no significa nada",
+                "No hay medios para garantizarlo"
+              ],
+              "answer": "El resultado no está ni mucho menos garantizado"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___, the first version was better.",
+              "answer": "Admittedly",
+              "options": ["Admittedly", "Presumably", "Conceivably", "Ostensibly"],
+              "translation": "Hay que reconocer que la primera versión era mejor."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It succeeded, not ___ because of the timing.",
+              "answer": "least",
+              "options": ["least", "less", "little", "last"],
+              "translation": "Funcionó, sobre todo por el momento elegido."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los matices",
+              "pairs": [
+                ["arguably", "se podría argumentar"],
+                ["presumably", "es de suponer"],
+                ["broadly speaking", "en términos generales"],
+                ["if anything", "si acaso"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "En gran medida, el problema sigue sin resolverse",
+              "answer": "To a large extent, the problem remains unresolved"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Si acaso, la situación ha empeorado",
+              "words": ["If", "anything,", "the", "situation", "has", "worsened"],
+              "answer": "If anything, the situation has worsened"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Broadly speaking, the approach works",
+              "answer": "Broadly speaking, the approach works",
+              "translation": "En términos generales, el enfoque funciona"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Arguably, that is the most important point of all.",
+              "translation": "Se podría argumentar que ese es el punto más importante de todos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

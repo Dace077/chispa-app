@@ -113,7 +113,10 @@ enum class CefrLevel(val label: String, val order: Int) {
     A2("A2", 1),
     B1("B1", 2),
     B2("B2", 3),
-    EXTRA("Extra", 4);
+    C1("C1", 4),
+    C2("C2", 5),
+    // EXTRA va siempre al final: los módulos sueltos no forman parte del camino.
+    EXTRA("Extra", 6);
 
     companion object {
         fun from(raw: String?): CefrLevel =
