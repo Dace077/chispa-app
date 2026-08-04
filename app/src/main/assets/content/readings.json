@@ -156,6 +156,327 @@
         { "en": "Do not settle for that simply because you are already good at it.", "es": "No te conformes con eso solo porque ya se te da bien.", "paragraph": true },
         { "en": "You have more time than you think, and less than you would like.", "es": "Tienes más tiempo del que crees, y menos del que te gustaría." }
       ]
+    },
+    {
+      "id": "r_a1_hermano",
+      "title": "Mi hermano y yo",
+      "level": "A1",
+      "category": "STORY",
+      "summary": "Dos hermanos muy distintos. Presente simple y adjetivos básicos.",
+      "glossary": [
+        { "en": "brother", "es": "hermano" },
+        { "en": "tall", "es": "alto" },
+        { "en": "quiet", "es": "callado" },
+        { "en": "loud", "es": "ruidoso" },
+        { "en": "together", "es": "juntos" },
+        { "en": "different", "es": "diferente" }
+      ],
+      "sentences": [
+        { "en": "I have one brother.", "es": "Tengo un hermano.", "paragraph": true },
+        { "en": "His name is Tom.", "es": "Se llama Tom." },
+        { "en": "He is nineteen and I am twenty-four.", "es": "Él tiene diecinueve y yo veinticuatro." },
+        { "en": "We are very different.", "es": "Somos muy diferentes." },
+        { "en": "Tom is tall and I am short.", "es": "Tom es alto y yo bajo.", "paragraph": true },
+        { "en": "He is loud. I am quiet.", "es": "Él es ruidoso. Yo soy callado." },
+        { "en": "He likes parties. I like books.", "es": "A él le gustan las fiestas. A mí los libros." },
+        { "en": "He wakes up at eleven. I wake up at six.", "es": "Él se levanta a las once. Yo a las seis." },
+        { "en": "But we eat dinner together every Sunday.", "es": "Pero cenamos juntos todos los domingos.", "paragraph": true },
+        { "en": "He cooks. I wash the plates.", "es": "Él cocina. Yo friego los platos." },
+        { "en": "We talk about our week.", "es": "Hablamos de nuestra semana." },
+        { "en": "Sometimes we do not agree.", "es": "A veces no estamos de acuerdo." },
+        { "en": "That is normal.", "es": "Eso es normal.", "paragraph": true },
+        { "en": "He is my brother, and Sunday is our day.", "es": "Es mi hermano, y el domingo es nuestro día." }
+      ]
+    },
+    {
+      "id": "r_a1_autobus",
+      "title": "El autobús de las siete",
+      "level": "A1",
+      "category": "STORY",
+      "summary": "Una rutina de cada mañana. Horas, números y presente simple.",
+      "glossary": [
+        { "en": "bus stop", "es": "parada de autobús" },
+        { "en": "to wait", "es": "esperar" },
+        { "en": "early", "es": "temprano" },
+        { "en": "late", "es": "tarde" },
+        { "en": "driver", "es": "conductor" },
+        { "en": "rain", "es": "lluvia" }
+      ],
+      "sentences": [
+        { "en": "Every morning I take the bus number 42.", "es": "Todas las mañanas cojo el autobús número 42.", "paragraph": true },
+        { "en": "It arrives at seven o'clock.", "es": "Llega a las siete en punto." },
+        { "en": "Sometimes it arrives at ten past seven.", "es": "A veces llega a las siete y diez." },
+        { "en": "The driver is called Marcus.", "es": "El conductor se llama Marcus.", "paragraph": true },
+        { "en": "He always says good morning.", "es": "Siempre dice buenos días." },
+        { "en": "He knows my face now.", "es": "Ya conoce mi cara." },
+        { "en": "There are five people at my bus stop.", "es": "Hay cinco personas en mi parada.", "paragraph": true },
+        { "en": "Nobody talks. It is too early.", "es": "Nadie habla. Es muy temprano." },
+        { "en": "When it rains, we stand very close.", "es": "Cuando llueve, nos ponemos muy juntos." },
+        { "en": "Last Friday the bus did not come.", "es": "El viernes pasado el autobús no vino.", "paragraph": true },
+        { "en": "We waited for thirty minutes.", "es": "Esperamos treinta minutos." },
+        { "en": "And then, finally, we talked.", "es": "Y entonces, por fin, hablamos." }
+      ]
+    },
+    {
+      "id": "r_a2_cocinar",
+      "title": "El día que aprendí a cocinar",
+      "level": "A2",
+      "category": "STORY",
+      "summary": "Un desastre en la cocina. Pasado simple y verbos irregulares.",
+      "glossary": [
+        { "en": "to burn", "es": "quemar" },
+        { "en": "smoke", "es": "humo" },
+        { "en": "pan", "es": "sartén" },
+        { "en": "recipe", "es": "receta" },
+        { "en": "to laugh", "es": "reírse" },
+        { "en": "proud", "es": "orgulloso" }
+      ],
+      "sentences": [
+        { "en": "When I was twenty, I could not cook anything.", "es": "Cuando tenía veinte años, no sabía cocinar nada.", "paragraph": true },
+        { "en": "One day my mother went away for a week.", "es": "Un día mi madre se fue una semana." },
+        { "en": "\"You will be fine,\" she said.", "es": "«Vas a estar bien», dijo." },
+        { "en": "She was wrong.", "es": "Se equivocaba." },
+        { "en": "On Monday I ate bread.", "es": "El lunes comí pan.", "paragraph": true },
+        { "en": "On Tuesday I ate bread again.", "es": "El martes comí pan otra vez." },
+        { "en": "On Wednesday I decided to cook.", "es": "El miércoles decidí cocinar." },
+        { "en": "I found a recipe and bought the ingredients.", "es": "Encontré una receta y compré los ingredientes.", "paragraph": true },
+        { "en": "I put everything in the pan.", "es": "Lo puse todo en la sartén." },
+        { "en": "Then I went to answer the phone.", "es": "Después fui a contestar el teléfono." },
+        { "en": "When I came back, the kitchen was full of smoke.", "es": "Cuando volví, la cocina estaba llena de humo." },
+        { "en": "I opened every window.", "es": "Abrí todas las ventanas.", "paragraph": true },
+        { "en": "I threw the pan in the sink.", "es": "Tiré la sartén al fregadero." },
+        { "en": "And I laughed, because there was nothing else to do.", "es": "Y me reí, porque no había otra cosa que hacer." },
+        { "en": "On Thursday I tried again, and it worked.", "es": "El jueves lo intenté otra vez, y funcionó.", "paragraph": true },
+        { "en": "It was not good food, but I was very proud.", "es": "No era buena comida, pero yo estaba orgullosísimo." }
+      ]
+    },
+    {
+      "id": "r_a2_direcciones",
+      "title": "Instrucciones para perderse",
+      "level": "A2",
+      "category": "DIALOGUE",
+      "summary": "Pedir direcciones en una ciudad desconocida. Imperativos y preposiciones.",
+      "glossary": [
+        { "en": "to turn", "es": "girar" },
+        { "en": "straight", "es": "recto" },
+        { "en": "square", "es": "plaza" },
+        { "en": "bridge", "es": "puente" },
+        { "en": "lost", "es": "perdido" },
+        { "en": "to follow", "es": "seguir" }
+      ],
+      "sentences": [
+        { "en": "\"Excuse me, how do I get to the museum?\"", "es": "«Disculpe, ¿cómo llego al museo?»", "paragraph": true },
+        { "en": "\"The museum? It's easy.\"", "es": "«¿El museo? Es fácil.»" },
+        { "en": "\"Go straight until you see the square.\"", "es": "«Siga recto hasta que vea la plaza.»" },
+        { "en": "\"Then turn left at the church.\"", "es": "«Después gire a la izquierda en la iglesia.»" },
+        { "en": "\"Left at the church. Got it.\"", "es": "«A la izquierda en la iglesia. Entendido.»", "paragraph": true },
+        { "en": "\"After that, cross the bridge.\"", "es": "«Después de eso, cruce el puente.»" },
+        { "en": "\"The museum is on your right, next to a red building.\"", "es": "«El museo está a su derecha, al lado de un edificio rojo.»" },
+        { "en": "\"Is it far?\"", "es": "«¿Está lejos?»", "paragraph": true },
+        { "en": "\"About ten minutes on foot.\"", "es": "«Unos diez minutos a pie.»" },
+        { "en": "Twenty minutes later, I was completely lost.", "es": "Veinte minutos después, estaba completamente perdido.", "paragraph": true },
+        { "en": "There were two churches, not one.", "es": "Había dos iglesias, no una." },
+        { "en": "I asked a second person.", "es": "Pregunté a una segunda persona." },
+        { "en": "She pointed behind me and smiled.", "es": "Señaló detrás de mí y sonrió." },
+        { "en": "The museum was there all the time.", "es": "El museo estuvo allí todo el rato." }
+      ]
+    },
+    {
+      "id": "r_b1_solo",
+      "title": "Lo que aprendí viajando solo",
+      "level": "B1",
+      "category": "ARTICLE",
+      "summary": "Reflexión sobre viajar en solitario. Presente perfecto y phrasal verbs.",
+      "glossary": [
+        { "en": "to figure out", "es": "descifrar, resolver" },
+        { "en": "on purpose", "es": "a propósito" },
+        { "en": "to turn out", "es": "resultar" },
+        { "en": "stranger", "es": "desconocido" },
+        { "en": "to look after", "es": "cuidar de" },
+        { "en": "worth it", "es": "que merece la pena" }
+      ],
+      "sentences": [
+        { "en": "I have travelled alone six times in the last four years.", "es": "He viajado solo seis veces en los últimos cuatro años.", "paragraph": true },
+        { "en": "People always ask me if I get lonely.", "es": "La gente siempre me pregunta si me siento solo." },
+        { "en": "The honest answer is yes, sometimes.", "es": "La respuesta honesta es que sí, a veces." },
+        { "en": "But I have learned three things that made it worth it.", "es": "Pero he aprendido tres cosas que hicieron que mereciera la pena." },
+        { "en": "The first is that you have to figure everything out yourself.", "es": "La primera es que tienes que resolverlo todo tú mismo.", "paragraph": true },
+        { "en": "There is nobody to blame when you miss a train.", "es": "No hay a quién culpar cuando pierdes un tren." },
+        { "en": "That turns out to be strangely relaxing.", "es": "Eso resulta ser extrañamente relajante." },
+        { "en": "The second is that strangers talk to you.", "es": "La segunda es que los desconocidos te hablan.", "paragraph": true },
+        { "en": "When you are with a friend, you are a closed group.", "es": "Cuando vas con un amigo, eres un grupo cerrado." },
+        { "en": "When you are alone, people look after you.", "es": "Cuando vas solo, la gente cuida de ti." },
+        { "en": "I have been invited to dinner by people I met an hour earlier.", "es": "Me han invitado a cenar personas que había conocido una hora antes." },
+        { "en": "The third is the hardest to explain.", "es": "La tercera es la más difícil de explicar.", "paragraph": true },
+        { "en": "You find out who you are when nobody is watching.", "es": "Descubres quién eres cuando nadie te mira." },
+        { "en": "Some people do not like the answer.", "es": "A algunas personas no les gusta la respuesta." },
+        { "en": "I did, and that is why I keep going back.", "es": "A mí sí, y por eso sigo volviendo." }
+      ]
+    },
+    {
+      "id": "r_b1_hospital",
+      "title": "La carta del hospital",
+      "level": "B1",
+      "category": "STORY",
+      "summary": "Una espera de tres semanas. Presente perfecto, salud y narración.",
+      "glossary": [
+        { "en": "envelope", "es": "sobre" },
+        { "en": "results", "es": "resultados" },
+        { "en": "to postpone", "es": "posponer" },
+        { "en": "relief", "es": "alivio" },
+        { "en": "to realise", "es": "darse cuenta" },
+        { "en": "appointment", "es": "cita" }
+      ],
+      "sentences": [
+        { "en": "The envelope had been on the table for three days.", "es": "El sobre llevaba tres días en la mesa.", "paragraph": true },
+        { "en": "I had walked past it every morning.", "es": "Había pasado por delante todas las mañanas." },
+        { "en": "I knew what was inside: the results.", "es": "Sabía lo que había dentro: los resultados." },
+        { "en": "I have never been good at waiting.", "es": "Nunca se me ha dado bien esperar.", "paragraph": true },
+        { "en": "But this time I postponed it on purpose.", "es": "Pero esta vez lo pospuse a propósito." },
+        { "en": "While the envelope was closed, everything was still possible.", "es": "Mientras el sobre estuviera cerrado, todo seguía siendo posible." },
+        { "en": "On Thursday my sister came to the house.", "es": "El jueves mi hermana vino a casa.", "paragraph": true },
+        { "en": "She looked at the table and said nothing.", "es": "Miró la mesa y no dijo nada." },
+        { "en": "She made coffee and sat down next to me.", "es": "Preparó café y se sentó a mi lado." },
+        { "en": "\"Do you want me to open it?\" she asked.", "es": "«¿Quieres que lo abra yo?», preguntó." },
+        { "en": "I opened it myself.", "es": "Lo abrí yo mismo.", "paragraph": true },
+        { "en": "The results were fine.", "es": "Los resultados estaban bien." },
+        { "en": "The relief did not arrive immediately.", "es": "El alivio no llegó de inmediato." },
+        { "en": "It came an hour later, in the kitchen, without warning.", "es": "Llegó una hora después, en la cocina, sin avisar.", "paragraph": true },
+        { "en": "I have realised since then that I waited for a reason.", "es": "Desde entonces me he dado cuenta de que esperé por algo." },
+        { "en": "Three weeks of fear taught me what I actually care about.", "es": "Tres semanas de miedo me enseñaron qué me importa de verdad." }
+      ]
+    },
+    {
+      "id": "r_b2_opinion",
+      "title": "Por qué nos cuesta cambiar de opinión",
+      "level": "B2",
+      "category": "ARTICLE",
+      "summary": "Divulgación sobre sesgos cognitivos. Pasiva, nominalización y argumentación.",
+      "glossary": [
+        { "en": "belief", "es": "creencia" },
+        { "en": "evidence", "es": "pruebas" },
+        { "en": "to challenge", "es": "cuestionar" },
+        { "en": "threat", "es": "amenaza" },
+        { "en": "to dismiss", "es": "descartar" },
+        { "en": "willingness", "es": "disposición" },
+        { "en": "outcome", "es": "resultado" }
+      ],
+      "sentences": [
+        { "en": "Most of us believe that we change our minds when the evidence changes.", "es": "Casi todos creemos que cambiamos de opinión cuando cambian las pruebas.", "paragraph": true },
+        { "en": "The research suggests otherwise.", "es": "La investigación sugiere lo contrario." },
+        { "en": "When a belief is challenged, the brain often treats it as a threat.", "es": "Cuando se cuestiona una creencia, el cerebro suele tratarlo como una amenaza." },
+        { "en": "The same regions activate as when we are physically in danger.", "es": "Se activan las mismas regiones que cuando estamos en peligro físico." },
+        { "en": "This has an uncomfortable consequence.", "es": "Esto tiene una consecuencia incómoda.", "paragraph": true },
+        { "en": "Evidence that supports us is examined quickly and accepted.", "es": "Las pruebas que nos dan la razón se examinan rápido y se aceptan." },
+        { "en": "Evidence that contradicts us is examined slowly and dismissed.", "es": "Las que nos contradicen se examinan despacio y se descartan." },
+        { "en": "We are not lying. We genuinely believe we are being fair.", "es": "No estamos mintiendo. Creemos de verdad que estamos siendo justos." },
+        { "en": "Intelligence, it turns out, does not protect us.", "es": "Resulta que la inteligencia no nos protege.", "paragraph": true },
+        { "en": "Arguably it makes things worse.", "es": "Se podría argumentar que lo empeora." },
+        { "en": "A clever person is simply better at building reasons for what they already think.", "es": "Una persona lista es sencillamente mejor construyendo razones para lo que ya piensa." },
+        { "en": "So what actually works?", "es": "¿Qué funciona entonces?", "paragraph": true },
+        { "en": "The strongest predictor is not intelligence but willingness.", "es": "El mejor predictor no es la inteligencia sino la disposición." },
+        { "en": "People who can say \"I might be wrong\" out loud update faster.", "es": "Quien puede decir «puede que me equivoque» en voz alta cambia más rápido." },
+        { "en": "It is a small sentence with a considerable outcome.", "es": "Es una frase pequeña con un resultado considerable." }
+      ]
+    },
+    {
+      "id": "r_c1_reunion",
+      "title": "La reunión que nadie quería tener",
+      "level": "C1",
+      "category": "DIALOGUE",
+      "summary": "Conflicto de oficina en registro alto. Suavizadores, matices y lo que no se dice.",
+      "glossary": [
+        { "en": "to push back", "es": "poner objeciones" },
+        { "en": "bandwidth", "es": "capacidad, margen" },
+        { "en": "to escalate", "es": "escalar, subir de nivel" },
+        { "en": "on the record", "es": "que conste" },
+        { "en": "to be fair", "es": "todo sea dicho" },
+        { "en": "sustainable", "es": "sostenible" }
+      ],
+      "sentences": [
+        { "en": "\"Thanks for making time. I know everyone's stretched.\"", "es": "«Gracias por sacar tiempo. Sé que vamos todos justos.»", "paragraph": true },
+        { "en": "\"I wanted to talk about the March deadline.\"", "es": "«Quería hablar de la fecha de marzo.»" },
+        { "en": "\"I'll be honest: I don't think it's achievable.\"", "es": "«Voy a ser honesto: no creo que sea alcanzable.»" },
+        { "en": "\"That's a fairly significant thing to raise now.\"", "es": "«Eso es bastante gordo para sacarlo ahora.»", "paragraph": true },
+        { "en": "\"It is. And I should have raised it in January.\"", "es": "«Lo es. Y debería haberlo sacado en enero.»" },
+        { "en": "\"What's changed?\"", "es": "«¿Qué ha cambiado?»", "paragraph": true },
+        { "en": "\"Nothing changed. That's rather the point.\"", "es": "«No ha cambiado nada. Ese es justamente el problema.»" },
+        { "en": "\"We assumed we'd get two more people, and we didn't.\"", "es": "«Dimos por hecho que nos darían dos personas más, y no llegaron.»" },
+        { "en": "\"So we've been working to a plan that stopped being real in February.\"", "es": "«Así que llevamos trabajando con un plan que dejó de ser real en febrero.»" },
+        { "en": "\"To be fair, nobody pushed back at the time.\"", "es": "«Todo sea dicho, nadie puso objeciones entonces.»", "paragraph": true },
+        { "en": "\"No. And I'd like that on the record, because it's on me too.\"", "es": "«No. Y quiero que conste, porque también es cosa mía.»" },
+        { "en": "\"What are you proposing?\"", "es": "«¿Qué propones?»", "paragraph": true },
+        { "en": "\"Either we move the date, or we cut two features.\"", "es": "«O movemos la fecha, o quitamos dos funciones.»" },
+        { "en": "\"I'm not going to pretend there's a third option.\"", "es": "«No voy a fingir que hay una tercera opción.»" },
+        { "en": "\"Let me escalate it. I'd rather have this conversation now than in March.\"", "es": "«Déjame escalarlo. Prefiero esta conversación ahora que en marzo.»", "paragraph": true }
+      ]
+    },
+    {
+      "id": "r_c2_nada",
+      "title": "El arte de no decir nada",
+      "level": "C2",
+      "category": "ARTICLE",
+      "summary": "Sobre el understatement británico y el lenguaje que esconde. Ironía y registro.",
+      "glossary": [
+        { "en": "understatement", "es": "atenuación deliberada" },
+        { "en": "to convey", "es": "transmitir" },
+        { "en": "deniability", "es": "posibilidad de negarlo" },
+        { "en": "blunt", "es": "directo, sin rodeos" },
+        { "en": "to grasp", "es": "captar" },
+        { "en": "unbearable", "es": "insoportable" },
+        { "en": "coded", "es": "en clave" }
+      ],
+      "sentences": [
+        { "en": "There is a particular English sentence that foreigners rarely grasp on first hearing.", "es": "Hay una frase inglesa concreta que los extranjeros rara vez captan a la primera.", "paragraph": true },
+        { "en": "It is: \"I'm sure it's fine.\"", "es": "Es: «Seguro que está bien.»" },
+        { "en": "Depending on the speaker, it means anything from genuine reassurance to open contempt.", "es": "Según quien la diga, significa desde tranquilidad sincera hasta desprecio abierto." },
+        { "en": "This is not politeness, exactly.", "es": "Esto no es cortesía, exactamente.", "paragraph": true },
+        { "en": "Politeness softens a message. Understatement hides one.", "es": "La cortesía suaviza un mensaje. La atenuación esconde uno." },
+        { "en": "The function is deniability.", "es": "La función es poder negarlo." },
+        { "en": "If the criticism is never made explicit, it was never made at all.", "es": "Si la crítica nunca se hace explícita, nunca se hizo." },
+        { "en": "Which is convenient for everybody, until it isn't.", "es": "Lo cual conviene a todos, hasta que deja de convenir." },
+        { "en": "The system works beautifully among people who share the code.", "es": "El sistema funciona de maravilla entre quienes comparten el código.", "paragraph": true },
+        { "en": "\"With the greatest respect\" is understood by all present to mean the opposite.", "es": "«Con el mayor de los respetos» lo entienden todos como lo contrario." },
+        { "en": "\"That's one way of looking at it\" closes a subject rather than opening one.", "es": "«Esa es una forma de verlo» cierra un tema en vez de abrirlo." },
+        { "en": "For someone outside the code, the effect is disorienting.", "es": "Para alguien fuera del código, el efecto es desorientador.", "paragraph": true },
+        { "en": "They leave the meeting believing it went well.", "es": "Salen de la reunión creyendo que fue bien." },
+        { "en": "It did not go well.", "es": "No fue bien." },
+        { "en": "Whether this is charming or unbearable depends largely on which side of it you are standing.", "es": "Que esto resulte encantador o insoportable depende en gran medida de en qué lado estés.", "paragraph": true },
+        { "en": "What it is not, and never was, is an absence of opinion.", "es": "Lo que no es, ni fue nunca, es ausencia de opinión." }
+      ]
+    },
+    {
+      "id": "r_c2_nota",
+      "title": "Nota al pie",
+      "level": "C2",
+      "category": "LETTER",
+      "summary": "Relato breve con giro. Elipsis, condicionales mixtos y lo que se calla.",
+      "glossary": [
+        { "en": "manuscript", "es": "manuscrito" },
+        { "en": "margin", "es": "margen" },
+        { "en": "to acknowledge", "es": "reconocer" },
+        { "en": "estate", "es": "herencia, patrimonio" },
+        { "en": "posthumous", "es": "póstumo" },
+        { "en": "to attribute", "es": "atribuir" },
+        { "en": "handwriting", "es": "letra, caligrafía" }
+      ],
+      "sentences": [
+        { "en": "The manuscript was found in 1974, in a box that had been mislabelled for decades.", "es": "El manuscrito apareció en 1974, en una caja mal etiquetada durante décadas.", "paragraph": true },
+        { "en": "It was published two years later to considerable acclaim.", "es": "Se publicó dos años después con notable aclamación." },
+        { "en": "The estate attributed it, as expected, to him.", "es": "La herencia lo atribuyó, como era de esperar, a él." },
+        { "en": "Had the pages been examined more carefully, someone might have noticed the margins.", "es": "De haberse examinado las páginas con más cuidado, alguien habría notado los márgenes.", "paragraph": true },
+        { "en": "Every correction, on every page, is in a second hand.", "es": "Cada corrección, en cada página, es de una segunda mano." },
+        { "en": "Not suggestions. Rewrites.", "es": "No sugerencias. Reescrituras." },
+        { "en": "Entire paragraphs crossed out and replaced in the margin, and it is the margin version that was printed.", "es": "Párrafos enteros tachados y sustituidos en el margen, y es la versión del margen la que se imprimió." },
+        { "en": "The handwriting is his wife's.", "es": "La letra es la de su mujer.", "paragraph": true },
+        { "en": "She is acknowledged in the book, on page four, as follows:", "es": "A ella se la reconoce en el libro, en la página cuatro, así:" },
+        { "en": "\"To Margaret, who typed it.\"", "es": "«A Margaret, que lo mecanografió.»" },
+        { "en": "She outlived him by thirty-one years and never corrected the record.", "es": "Ella le sobrevivió treinta y un años y nunca corrigió el dato.", "paragraph": true },
+        { "en": "Asked once, at a reading, whether she had contributed, she said she had helped a little.", "es": "Preguntada una vez, en una lectura, si había contribuido, dijo que había ayudado un poco." },
+        { "en": "It is possible she meant it.", "es": "Es posible que lo dijera en serio." },
+        { "en": "It is also possible that by then it would have cost her more to be believed than to be forgotten.", "es": "También es posible que a esas alturas le hubiera costado más que la creyeran que ser olvidada.", "paragraph": true },
+        { "en": "The book remains in print. The attribution has not changed.", "es": "El libro sigue editándose. La atribución no ha cambiado." }
+      ]
     }
   ]
 }

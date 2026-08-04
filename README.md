@@ -53,6 +53,18 @@ La app usa el motor de voz que ya trae tu Android. Si no oyes nada:
 
 **Total: 29 unidades · 93 lecciones · 922 ejercicios · ~960 palabras y frases.**
 
+### 📖 Biblioteca de lectura
+15 textos originales graduados de A1 a C2 —relatos, artículos, diálogos y cartas—
+con la traducción frase a frase y la voz señalando cada palabra mientras suena.
+Tocas una palabra y te dice qué significa; si quieres, se va a tu repaso.
+
+### 📐 Guía de gramática
+25 temas consultables en cualquier momento, de A1 a C2, buscables y filtrables por
+nivel. Cada uno explica la regla en español, muestra cómo se forma, da ejemplos con
+audio y termina con los **errores típicos**: lo que te sale solo si traduces desde
+el español, tachado al lado de la forma correcta. Esa última parte es la que
+distingue esta guía de una lista de reglas.
+
 ### Cómo enseña
 Cada lección sigue una secuencia didáctica fija, de menor a mayor exigencia:
 

@@ -81,6 +81,28 @@ class ContentRepository(private val appContext: Context) {
         }
     }
 
+    @Volatile private var grammarCache: GrammarGuide? = null
+
+    /** Guía de gramática consultable. Igual que la biblioteca: fuera del índice. */
+    suspend fun grammar(): GrammarGuide {
+        grammarCache?.let { return it }
+        return mutex.withLock {
+            grammarCache ?: loadGrammar().also { grammarCache = it }
+        }
+    }
+
+    private suspend fun loadGrammar(): GrammarGuide = withContext(Dispatchers.IO) {
+        runCatching {
+            val raw = appContext.assets.open("$CONTENT_DIR/grammar.json")
+                .bufferedReader().use { it.readText() }
+            val parsed = json.decodeFromString<GrammarGuideJson>(raw)
+            GrammarGuide(parsed.topics.mapNotNull { it.toDomain() })
+        }.getOrElse { error ->
+            Log.e(TAG, "No se pudo leer grammar.json", error)
+            GrammarGuide(emptyList())
+        }
+    }
+
     /** Test de nivel inicial. Vive en su propio archivo para poder ajustarlo aparte. */
     suspend fun placementTest(): List<PlacementQuestion> = withContext(Dispatchers.IO) {
         runCatching {

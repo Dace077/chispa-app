@@ -39,6 +39,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.chispa.ingles.ui.grammar.GrammarScreen
+import com.chispa.ingles.ui.grammar.GrammarTopicScreen
 import com.chispa.ingles.ui.home.HomeScreen
 import com.chispa.ingles.ui.lesson.LessonScreen
 import com.chispa.ingles.ui.lesson.SessionMode
@@ -66,6 +68,10 @@ object Routes {
 
     const val READER = "reader/{readingId}"
     fun reader(readingId: String) = "reader/$readingId"
+
+    const val GRAMMAR = "grammar"
+    const val GRAMMAR_TOPIC = "grammar/{topicId}"
+    fun grammarTopic(topicId: String) = "grammar/$topicId"
 
     const val SETTINGS = "settings"
     const val ACHIEVEMENTS = "achievements"
@@ -198,7 +204,35 @@ private fun MainScaffold(navController: NavHostController) {
 
                 composable(Routes.LIBRARY) {
                     LibraryScreen(
-                        onOpenReading = { navController.navigate(Routes.reader(it)) }
+                        onOpenReading = { navController.navigate(Routes.reader(it)) },
+                        onOpenGrammar = { navController.navigate(Routes.GRAMMAR) }
+                    )
+                }
+
+                composable(
+                    route = Routes.GRAMMAR,
+                    enterTransition = { slideInHorizontally { it } + fadeIn() },
+                    exitTransition = { slideOutHorizontally { it } + fadeOut() }
+                ) {
+                    GrammarScreen(
+                        onOpenTopic = { navController.navigate(Routes.grammarTopic(it)) },
+                        onBack = { navController.popBackStack() }
+                    )
+                }
+
+                composable(
+                    route = Routes.GRAMMAR_TOPIC,
+                    arguments = listOf(navArgument("topicId") { type = NavType.StringType }),
+                    enterTransition = { slideInHorizontally { it } + fadeIn() },
+                    exitTransition = { slideOutHorizontally { it } + fadeOut() }
+                ) { entry ->
+                    val topicId = entry.arguments?.getString("topicId").orEmpty()
+                    GrammarTopicScreen(
+                        topicId = topicId,
+                        // Saltar a un tema relacionado apila, para poder volver
+                        // sobre tus pasos igual que en una enciclopedia.
+                        onOpenTopic = { navController.navigate(Routes.grammarTopic(it)) },
+                        onBack = { navController.popBackStack() }
                     )
                 }
 

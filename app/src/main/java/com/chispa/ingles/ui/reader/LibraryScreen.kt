@@ -33,21 +33,28 @@ import androidx.compose.ui.unit.dp
 import com.chispa.ingles.data.content.CefrLevel
 import com.chispa.ingles.data.content.Reading
 import com.chispa.ingles.ui.chispaViewModel
+import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.EmptyState
 import com.chispa.ingles.ui.components.LevelChip
 import com.chispa.ingles.ui.components.MascotMood
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
 
 @Composable
-fun LibraryScreen(onOpenReading: (String) -> Unit) {
+fun LibraryScreen(
+    onOpenReading: (String) -> Unit,
+    onOpenGrammar: () -> Unit
+) {
     val viewModel: LibraryViewModel = chispaViewModel { LibraryViewModel(it) }
     val state by viewModel.state.collectAsState()
 
     if (state.vacia && !state.loading) {
+        // Aunque fallen las lecturas, la gramática se carga aparte y puede estar
+        // bien: no dejamos al usuario sin salida.
         EmptyState(
             title = "La biblioteca está vacía",
             message = "No se pudieron cargar las lecturas desde los archivos de la app.",
-            mood = MascotMood.THINKING
+            mood = MascotMood.THINKING,
+            action = { ChispaButton(text = "Ver la gramática", onClick = onOpenGrammar) }
         )
         return
     }
@@ -69,7 +76,9 @@ fun LibraryScreen(onOpenReading: (String) -> Unit) {
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            Spacer(Modifier.height(22.dp))
+            Spacer(Modifier.height(18.dp))
+            GrammarEntryCard(onClick = onOpenGrammar)
+            Spacer(Modifier.height(10.dp))
         }
 
         state.porNivel.forEach { (nivel, lecturas) ->
@@ -92,6 +101,42 @@ fun LibraryScreen(onOpenReading: (String) -> Unit) {
                 Spacer(Modifier.height(10.dp))
             }
         }
+    }
+}
+
+/**
+ * Puerta a la guía de gramática. Vive aquí y no en una pestaña propia porque
+ * la barra ya tiene cinco: una sexta convierte la navegación en un menú.
+ */
+@Composable
+private fun GrammarEntryCard(onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(18.dp))
+            .background(MaterialTheme.colorScheme.primaryContainer)
+            .clickable(onClick = onClick)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text("📐", style = MaterialTheme.typography.headlineSmall)
+        Spacer(Modifier.width(14.dp))
+        Column(Modifier.weight(1f)) {
+            Text(
+                "Gramática",
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onPrimaryContainer
+            )
+            Text(
+                "Explicaciones en español y los errores que comete quien traduce.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+            )
+        }
+        Icon(
+            Icons.Filled.ChevronRight, null,
+            tint = MaterialTheme.colorScheme.onPrimaryContainer
+        )
     }
 }
 

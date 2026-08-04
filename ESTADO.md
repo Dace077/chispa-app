@@ -2,7 +2,7 @@
 
 > Archivo de traspaso. Si abres un chat nuevo, **lee esto primero**: contiene
 > el estado real del proyecto, las decisiones ya tomadas y lo que estaba a
-> medias. Última actualización: **4 de agosto de 2026, versión 1.5.0**.
+> medias. Última actualización: **4 de agosto de 2026, versión 1.6.0**.
 
 ---
 
@@ -14,8 +14,8 @@ técnicamente incapaz de conectarse; esa es la garantía de privacidad).
 
 - **Repositorio**: https://github.com/Dace077/chispa-app (público)
 - **Descarga**: https://github.com/Dace077/chispa-app/releases/download/v1.0.0/chispa-1.0.0.apk
-- **Versión publicada**: 1.5.0 (versionCode 9)
-- **Tamaño**: 1,93 MB
+- **Versión publicada**: 1.6.0 (versionCode 10)
+- **Tamaño**: 1,95 MB
 - **Cuenta GitHub del usuario**: `Dace077` (sesión de `gh` ya iniciada en la máquina)
 
 ⚠️ **El archivo del release se sigue llamando `chispa-1.0.0.apk` y la etiqueta
@@ -71,12 +71,18 @@ También existe `PUBLICAR.ps1`, que hace todo esto de golpe.
 Extras: modismos, slang, business, travel, pronunciación, listening, historias
 y notas culturales.
 
-**Biblioteca de lectura (pestaña «Leer»)**: 5 lecturas — A1, A2, B1, B2 y C1.
-Está en `assets/content/readings.json`, separada del currículo.
+**Biblioteca de lectura (pestaña «Leer»)**: 15 lecturas — A1×3, A2×3, B1×3,
+B2×2, C1×2, C2×2. Está en `assets/content/readings.json`.
+
+**Guía de gramática** (se entra desde la tarjeta de arriba de «Leer»): 25 temas —
+A1×5, A2×5, B1×6, B2×4, C1×3, C2×2. Está en `assets/content/grammar.json`.
+Buscable, filtrable por nivel, con audio en los ejemplos y sección de errores
+típicos del hispanohablante. El campo `keywords` existe porque nadie encuentra
+«A, an y the» escribiendo «artículos»: son los sinónimos por los que se busca.
 
 Todo el contenido vive en `app/src/main/assets/content/*.json`. Para ampliar no
-hace falta tocar Kotlin: se crea un archivo y se lista en `index.json`
-(`readings.json` se carga aparte y no va en el índice).
+hace falta tocar Kotlin: se crea un archivo y se lista en `index.json`.
+`readings.json` y `grammar.json` se cargan aparte y **no** van en el índice.
 
 ---
 
@@ -96,12 +102,14 @@ hace falta tocar Kotlin: se crea un archivo y se lista en `index.json`
 
 ## 5. Tests
 
-24 tests unitarios, todos en verde. Correr con `./gradlew testDebugUnitTest`.
+36 tests unitarios, todos en verde. Correr con `./gradlew testDebugUnitTest`.
 
 - `PlacementLadderTest` (8) — la escalera adaptativa del test de nivel, incluida
   una prueba de fuerza bruta sobre las 64 combinaciones posibles de respuestas.
 - `UnlockRulesTest` (7) — qué se desbloquea y **cuál se marca como "siguiente"**.
 - `LessonPedagogyTest` (9) — que no se pueda examinar de algo que no se ha enseñado.
+- `GrammarModelsTest` (12) — qué temas se descartan al cargar y que la búsqueda
+  encuentre pese a tildes, mayúsculas y sinónimos.
 
 Además, en `herramientas/` hay tres utilidades **ya dentro del repo**:
 
@@ -145,7 +153,10 @@ Al terminar la 1.5.0 le pregunté y **no llegó a contestar**:
 > ¿Sigo con las descargas por internet, o prefieres que primero llene la
 > biblioteca con más lecturas de cada nivel?
 
-**Preguntárselo de nuevo antes de ponerse con cualquiera de las dos.**
+En 1.6.0 se hizo la mitad que no necesitaba su permiso (llenar la biblioteca y
+montar la gramática). **Lo de internet sigue sin empezar y sigue necesitando
+que él lo confirme**, porque obliga a añadir un permiso que hoy la app presume
+de no tener.
 
 ### Descargas por internet — decidido pero SIN EMPEZAR
 
@@ -169,8 +180,8 @@ y no se pueden redistribuir**. Lo viable es servir contenido propio.
 | Función | Estado |
 |---|---|
 | Lectura bilingüe con audio sincronizado | ✅ **Hecha** en 1.5.0 |
-| Aprender leyendo contenido real | ⚠️ A medias: hay 5 lecturas graduadas propias. Noticias y podcasts reales siguen descartados por derechos y por tamaño |
-| Explica gramática y conversaciones reales | ⏳ Pendiente. Idea acordada: sección de gramática consultable en cualquier momento + diálogos largos |
+| Aprender leyendo contenido real | ⚠️ A medias: 15 lecturas graduadas propias (1.6.0). Noticias y podcasts reales siguen descartados por derechos y por tamaño |
+| Explica gramática y conversaciones reales | ⚠️ Gramática ✅ **hecha** en 1.6.0 (25 temas consultables). Faltan los **diálogos largos** |
 | Vídeos de personas reales | ❌ **Descartado y explicado**. Un minuto de vídeo pesa 3-5 veces más que toda la app. Alternativa propuesta: módulo de *shadowing* con voz a velocidad natural, contracciones habladas y acentos |
 
 ---
@@ -179,7 +190,12 @@ y no se pueden redistribuir**. Lo viable es servir contenido propio.
 
 - **Repetir el test de nivel** sin reiniciar el progreso (hoy solo sale la
   primera vez). Se le ofreció y no contestó.
-- Más lecturas por nivel: hay 1 de cada, da para muchas más.
+- **Diálogos largos** (la mitad pendiente de la función «gramática y
+  conversaciones reales»). Encajan como una categoría más de `readings.json`:
+  `DIALOGUE` ya existe y el lector los pinta bien.
+- Enlazar cada lección con su tema de gramática: hoy la guía solo se alcanza
+  desde «Leer», y el momento en que hace falta es dentro de una lección.
+- Más lecturas por nivel: hay 2-3 de cada, da para muchas más.
 - Módulo de inglés para exámenes (IELTS/TOEFL) o inglés con canciones.
 - **Migraciones de Room reales.** Hoy está en `fallbackToDestructiveMigration`,
   que borra el progreso. Antes de publicar un cambio de esquema, escribir la

@@ -26,8 +26,8 @@ android {
         applicationId = "com.chispa.ingles"
         minSdk = 24
         targetSdk = 35
-        versionCode = 9
-        versionName = "1.5.0"
+        versionCode = 10
+        versionName = "1.6.0"
         vectorDrawables { useSupportLibrary = true }
     }
 

@@ -1,0 +1,659 @@
+{
+  "id": "grammar",
+  "title": "Gramática",
+  "topics": [
+    {
+      "id": "g_to_be",
+      "title": "El verbo to be",
+      "level": "A1",
+      "area": "Verbos",
+      "question": "¿Cuándo digo am, is o are? ¿Y por qué se usa para la edad?",
+      "explanation": "En español tienes dos verbos, ser y estar. En inglés solo hay uno: to be. Eso es una buena noticia, porque no tienes que elegir.\n\nLo que sí cambia es la forma según quién habla: I am, you are, he/she/it is, we/you/they are.\n\nOjo con una diferencia importante: el inglés usa to be donde el español usa tener. La edad, el frío, el calor, el hambre y el miedo son estados, no cosas que se tienen.",
+      "forms": [
+        { "label": "Afirmativa", "pattern": "I am · he/she/it is · we/you/they are", "example": "She is a doctor." },
+        { "label": "Negativa", "pattern": "sujeto + to be + not", "example": "I am not tired." },
+        { "label": "Pregunta", "pattern": "to be + sujeto", "example": "Are you ready?" },
+        { "label": "Contracciones", "pattern": "I'm · you're · he's · we're · they're", "example": "They're at home." }
+      ],
+      "examples": [
+        { "en": "I am twenty-five years old.", "es": "Tengo veinticinco años.", "note": "No existe \"I have 25 years\"." },
+        { "en": "She is cold.", "es": "Tiene frío." },
+        { "en": "We are hungry.", "es": "Tenemos hambre." },
+        { "en": "Is he your brother?", "es": "¿Es tu hermano?" }
+      ],
+      "mistakes": [
+        { "wrong": "I have 30 years.", "right": "I am 30 years old.", "why": "La edad se expresa con to be, no con have." },
+        { "wrong": "I have hungry.", "right": "I am hungry.", "why": "Hungry es un adjetivo: describe cómo estás." },
+        { "wrong": "She is have a car.", "right": "She has a car.", "why": "To be y otro verbo no se juntan así." }
+      ],
+      "keywords": ["ser", "estar", "am is are", "edad", "tener anos", "verbo to be"],
+      "related": ["g_present_simple", "g_there_is"]
+    },
+    {
+      "id": "g_present_simple",
+      "title": "El presente simple y la -s",
+      "level": "A1",
+      "area": "Verbos",
+      "question": "¿Por qué a veces el verbo lleva una -s al final?",
+      "explanation": "El presente simple sirve para rutinas, hechos y cosas que son verdad en general: I work, you live, they study.\n\nEl verbo no cambia nunca... salvo en la tercera persona del singular (he, she, it), que añade -s. Es el único cambio, y es el error número uno de todo el mundo.\n\nPara negar y preguntar entra do / does. Y aquí viene el detalle que se escapa: cuando aparece does, el verbo principal ya NO lleva -s, porque la -s ya se la ha llevado el does.",
+      "forms": [
+        { "label": "Afirmativa", "pattern": "I/you/we/they + verbo · he/she/it + verbo + s", "example": "He works from home." },
+        { "label": "Negativa", "pattern": "don't / doesn't + verbo sin -s", "example": "She doesn't work on Fridays." },
+        { "label": "Pregunta", "pattern": "Do / Does + sujeto + verbo sin -s", "example": "Does he speak English?" },
+        { "label": "Casos raros", "pattern": "go→goes · do→does · have→has · study→studies", "example": "She has two sisters." }
+      ],
+      "examples": [
+        { "en": "I get up at seven every day.", "es": "Me levanto a las siete todos los días." },
+        { "en": "My sister lives in Madrid.", "es": "Mi hermana vive en Madrid.", "note": "Tercera persona: lives." },
+        { "en": "Water boils at 100 degrees.", "es": "El agua hierve a 100 grados.", "note": "Hechos generales." },
+        { "en": "They don't eat meat.", "es": "No comen carne." }
+      ],
+      "mistakes": [
+        { "wrong": "He work in a bank.", "right": "He works in a bank.", "why": "Falta la -s de tercera persona." },
+        { "wrong": "She doesn't works here.", "right": "She doesn't work here.", "why": "Con doesn't, el verbo va desnudo." },
+        { "wrong": "Do he like coffee?", "right": "Does he like coffee?", "why": "He/she/it piden does." },
+        { "wrong": "I no speak English.", "right": "I don't speak English.", "why": "El inglés necesita do para negar." }
+      ],
+      "keywords": ["presente", "tercera persona", "does", "rutinas", "la s del verbo"],
+      "related": ["g_present_continuous", "g_to_be"]
+    },
+    {
+      "id": "g_articles",
+      "title": "A, an y the",
+      "level": "A1",
+      "area": "Sustantivos",
+      "question": "¿Cuándo pongo the y cuándo no pongo nada?",
+      "explanation": "A / an se usan la primera vez que mencionas algo, cuando es uno cualquiera. The se usa cuando ya sabemos de cuál hablamos.\n\nLa elección entre a y an depende del SONIDO, no de la letra: an hour (la h no suena), a university (suena \"iu\").\n\nLo más difícil para un hispanohablante es lo contrario: en inglés NO se pone the para hablar de algo en general. \"Me gustan los perros\" es I like dogs, sin artículo. Poner the ahí cambia el significado a \"esos perros concretos\".",
+      "forms": [
+        { "label": "Primera mención", "pattern": "a / an + singular contable", "example": "I saw a dog." },
+        { "label": "Ya sabemos cuál", "pattern": "the + singular o plural", "example": "The dog was very big." },
+        { "label": "En general", "pattern": "(nada) + plural o incontable", "example": "Dogs are loyal." },
+        { "label": "Único en el mundo", "pattern": "the", "example": "the sun, the internet" }
+      ],
+      "examples": [
+        { "en": "I want a coffee.", "es": "Quiero un café." },
+        { "en": "Life is short.", "es": "La vida es corta.", "note": "En general: sin the." },
+        { "en": "The life of a nurse is hard.", "es": "La vida de un enfermero es dura.", "note": "Concreta: con the." },
+        { "en": "She plays the piano on Mondays.", "es": "Toca el piano los lunes.", "note": "Instrumentos: siempre the." }
+      ],
+      "mistakes": [
+        { "wrong": "I like the music.", "right": "I like music.", "why": "Hablando en general no se pone the." },
+        { "wrong": "The Spanish people are friendly.", "right": "Spanish people are friendly.", "why": "Nacionalidades en general, sin the." },
+        { "wrong": "I go to the school by bus.", "right": "I go to school by bus.", "why": "School, work, home y bed van sin artículo cuando hablas de la actividad." },
+        { "wrong": "It's a hour.", "right": "It's an hour.", "why": "Manda el sonido: la h de hour es muda." }
+      ],
+      "keywords": ["articulos", "articulo", "determinantes", "a an the", "articulo cero"],
+      "related": ["g_plurals", "g_uncountable"]
+    },
+    {
+      "id": "g_plurals",
+      "title": "Plurales y adjetivos",
+      "level": "A1",
+      "area": "Sustantivos",
+      "question": "¿Los adjetivos también llevan plural?",
+      "explanation": "No. Y este es el error más visible de todos, porque salta en la primera frase.\n\nEn inglés el adjetivo es invariable: no cambia por número ni por género. Two red cars, nunca two reds cars.\n\nAdemás el adjetivo va DELANTE del sustantivo: a red car, no a car red. Si hay varios, el orden habitual es opinión → tamaño → edad → color → origen → material.",
+      "forms": [
+        { "label": "Plural normal", "pattern": "+ s", "example": "book → books" },
+        { "label": "Tras s, x, ch, sh", "pattern": "+ es", "example": "box → boxes" },
+        { "label": "Consonante + y", "pattern": "y → ies", "example": "city → cities" },
+        { "label": "Irregulares", "pattern": "man→men · woman→women · child→children · foot→feet · person→people", "example": "Three children." }
+      ],
+      "examples": [
+        { "en": "Two big black dogs.", "es": "Dos perros negros grandes.", "note": "Orden: tamaño, color, sustantivo." },
+        { "en": "She has beautiful eyes.", "es": "Tiene unos ojos preciosos." },
+        { "en": "These are important questions.", "es": "Estas son preguntas importantes." }
+      ],
+      "mistakes": [
+        { "wrong": "They are goods students.", "right": "They are good students.", "why": "El adjetivo no tiene plural." },
+        { "wrong": "I have a car red.", "right": "I have a red car.", "why": "El adjetivo va delante." },
+        { "wrong": "Three womans.", "right": "Three women.", "why": "Plural irregular." }
+      ],
+      "keywords": ["plural", "plurales", "adjetivos", "orden de los adjetivos", "sustantivos"],
+      "related": ["g_articles", "g_uncountable"]
+    },
+    {
+      "id": "g_there_is",
+      "title": "There is / there are (hay)",
+      "level": "A1",
+      "area": "Estructuras",
+      "question": "¿Cómo se dice «hay»?",
+      "explanation": "«Hay» se dice there is (singular) o there are (plural). El español no distingue; el inglés sí.\n\nY concuerda con lo que viene DESPUÉS: there is a problem, there are two problems.\n\nEn pasado, there was / there were. Cuidado con no confundir there (hay / allí) con their (su, de ellos) ni con they're (they are): suenan igual, se escriben distinto.",
+      "forms": [
+        { "label": "Presente", "pattern": "There is + singular · There are + plural", "example": "There are four chairs." },
+        { "label": "Pasado", "pattern": "There was / There were", "example": "There was a party." },
+        { "label": "Negativa", "pattern": "There isn't / There aren't any", "example": "There aren't any eggs." },
+        { "label": "Pregunta", "pattern": "Is there...? / Are there...?", "example": "Is there a bank near here?" }
+      ],
+      "examples": [
+        { "en": "There is a problem with the door.", "es": "Hay un problema con la puerta." },
+        { "en": "There are many ways to do this.", "es": "Hay muchas formas de hacer esto." },
+        { "en": "There were no taxis at the station.", "es": "No había taxis en la estación." }
+      ],
+      "mistakes": [
+        { "wrong": "There is many people.", "right": "There are many people.", "why": "People es plural en inglés." },
+        { "wrong": "Have a problem.", "right": "There is a problem.", "why": "«Hay» no se traduce con have." },
+        { "wrong": "It has three rooms in the house.", "right": "There are three rooms in the house.", "why": "Existencia = there is / there are." }
+      ],
+      "keywords": ["hay", "habia", "existencia", "there"],
+      "related": ["g_to_be", "g_plurals"]
+    },
+    {
+      "id": "g_present_continuous",
+      "title": "Presente continuo vs presente simple",
+      "level": "A2",
+      "area": "Verbos",
+      "question": "¿Digo I work o I am working?",
+      "explanation": "El presente simple habla de lo habitual: I work in a hospital (ese es mi trabajo, en general).\n\nEl presente continuo habla de lo que pasa AHORA o en esta temporada: I'm working on a new project (estos días, temporalmente).\n\nEl español usa muchísimo el simple donde el inglés pide continuo. Si alguien te llama y te pregunta qué haces, la respuesta no es I eat sino I'm eating.\n\nY hay verbos que casi nunca van en continuo: know, want, like, need, believe, understand, belong. Describen estados, no acciones.",
+      "forms": [
+        { "label": "Continuo", "pattern": "am / is / are + verbo-ing", "example": "They are waiting outside." },
+        { "label": "Negativa", "pattern": "am not / isn't / aren't + -ing", "example": "I'm not sleeping." },
+        { "label": "Ortografía", "pattern": "run→running · write→writing · lie→lying", "example": "He is running." }
+      ],
+      "examples": [
+        { "en": "I usually take the bus, but today I'm walking.", "es": "Normalmente cojo el autobús, pero hoy voy andando.", "note": "Los dos tiempos en una sola frase." },
+        { "en": "What are you doing?", "es": "¿Qué haces?" },
+        { "en": "She's living with her parents this year.", "es": "Este año vive con sus padres.", "note": "Temporal." }
+      ],
+      "mistakes": [
+        { "wrong": "What do you do? (queriendo decir ahora mismo)", "right": "What are you doing?", "why": "What do you do? pregunta por tu profesión." },
+        { "wrong": "I am knowing the answer.", "right": "I know the answer.", "why": "Know es un estado: no admite continuo." },
+        { "wrong": "I am work now.", "right": "I am working now.", "why": "Falta el -ing." }
+      ],
+      "keywords": ["presente continuo", "gerundio", "ing", "ahora mismo", "estar haciendo"],
+      "related": ["g_present_simple", "g_future"]
+    },
+    {
+      "id": "g_past_simple",
+      "title": "El pasado simple",
+      "level": "A2",
+      "area": "Verbos",
+      "question": "¿Cómo hablo de ayer? ¿Y por qué desaparece el pasado al preguntar?",
+      "explanation": "Para acciones terminadas en un momento concreto del pasado: yesterday, last year, in 2019, two days ago.\n\nLos verbos regulares añaden -ed. Los irregulares hay que aprendérselos: go→went, see→saw, buy→bought. No hay atajo, pero son unos 100 y se repiten muchísimo.\n\nEl punto que se escapa: para negar y preguntar se usa did, y entonces el verbo principal vuelve a su forma base. El pasado ya lo marca did, así que marcarlo dos veces sobra.",
+      "forms": [
+        { "label": "Regulares", "pattern": "verbo + ed", "example": "work → worked" },
+        { "label": "Irregulares", "pattern": "forma propia", "example": "go → went · have → had" },
+        { "label": "Negativa", "pattern": "didn't + verbo base", "example": "I didn't go." },
+        { "label": "Pregunta", "pattern": "Did + sujeto + verbo base", "example": "Did you see it?" }
+      ],
+      "examples": [
+        { "en": "We arrived late because the train broke down.", "es": "Llegamos tarde porque el tren se averió." },
+        { "en": "I didn't understand the question.", "es": "No entendí la pregunta." },
+        { "en": "Where did you buy that?", "es": "¿Dónde compraste eso?" }
+      ],
+      "mistakes": [
+        { "wrong": "I didn't went.", "right": "I didn't go.", "why": "Con did, el verbo va en forma base." },
+        { "wrong": "Did you saw him?", "right": "Did you see him?", "why": "Mismo motivo: did ya marca el pasado." },
+        { "wrong": "Yesterday I have seen her.", "right": "Yesterday I saw her.", "why": "Con un momento concreto del pasado, pasado simple." }
+      ],
+      "keywords": ["pasado", "preterito", "ayer", "verbos irregulares", "did", "ed"],
+      "related": ["g_present_perfect", "g_used_to"]
+    },
+    {
+      "id": "g_prepositions_time",
+      "title": "In, on y at (tiempo y lugar)",
+      "level": "A2",
+      "area": "Preposiciones",
+      "question": "¿Es in Monday, on Monday o at Monday?",
+      "explanation": "Hay una lógica y funciona casi siempre: de lo más grande a lo más pequeño.\n\nIN para periodos largos: años, meses, estaciones, siglos y partes del día (in the morning). ON para días y fechas concretas. AT para horas exactas y para tres excepciones que hay que memorizar: at night, at the weekend, at Christmas.\n\nEn lugar es igual de escalonado: in a country or a city, on a surface, at a point.",
+      "forms": [
+        { "label": "IN", "pattern": "año, mes, estación, parte del día", "example": "in July, in 2020, in the evening" },
+        { "label": "ON", "pattern": "día, fecha, día + parte del día", "example": "on Friday, on 3 May, on Monday morning" },
+        { "label": "AT", "pattern": "hora exacta y excepciones", "example": "at 6 o'clock, at night, at the weekend" },
+        { "label": "Lugar", "pattern": "in (dentro) · on (sobre) · at (punto)", "example": "in Spain · on the table · at the door" }
+      ],
+      "examples": [
+        { "en": "The meeting is on Tuesday at ten.", "es": "La reunión es el martes a las diez." },
+        { "en": "I was born in April.", "es": "Nací en abril." },
+        { "en": "See you at the weekend.", "es": "Nos vemos el fin de semana.", "note": "En inglés americano: on the weekend." }
+      ],
+      "mistakes": [
+        { "wrong": "I'll see you in Monday.", "right": "I'll see you on Monday.", "why": "Días de la semana: on." },
+        { "wrong": "In the night I can't sleep.", "right": "At night I can't sleep.", "why": "At night es fijo, aunque sea in the morning." },
+        { "wrong": "I arrive to Madrid tomorrow.", "right": "I arrive in Madrid tomorrow.", "why": "Arrive va con in (ciudades) o at (puntos), nunca con to." }
+      ],
+      "keywords": ["preposiciones", "in on at", "hora", "fecha", "lugar", "dias de la semana"],
+      "related": ["g_articles"]
+    },
+    {
+      "id": "g_comparatives",
+      "title": "Comparativos y superlativos",
+      "level": "A2",
+      "area": "Adjetivos",
+      "question": "¿Cuándo uso -er y cuándo more?",
+      "explanation": "Manda la longitud del adjetivo. Una sílaba: -er / -est. Tres o más: more / most. Las de dos sílabas van con -er si acaban en -y (happy → happier) y con more en la mayoría de los demás casos.\n\nDespués del comparativo va than, no that. Y para decir que dos cosas son iguales se usa as... as.\n\nAtención a los irregulares, que son pocos pero constantes: good→better→best, bad→worse→worst, far→further→furthest.",
+      "forms": [
+        { "label": "Cortos", "pattern": "adj + er / the + adj + est", "example": "fast → faster → the fastest" },
+        { "label": "Largos", "pattern": "more / the most + adj", "example": "expensive → more expensive" },
+        { "label": "Igualdad", "pattern": "as + adj + as", "example": "She is as tall as me." },
+        { "label": "Irregulares", "pattern": "good→better→best · bad→worse→worst", "example": "This is better." }
+      ],
+      "examples": [
+        { "en": "This road is longer than the other one.", "es": "Esta carretera es más larga que la otra." },
+        { "en": "It's the most interesting book I've read.", "es": "Es el libro más interesante que he leído." },
+        { "en": "Today isn't as cold as yesterday.", "es": "Hoy no hace tanto frío como ayer." }
+      ],
+      "mistakes": [
+        { "wrong": "She is more tall than me.", "right": "She is taller than me.", "why": "Tall es corto: pide -er." },
+        { "wrong": "It's more better.", "right": "It's better.", "why": "Better ya es comparativo; no se dobla." },
+        { "wrong": "He is bigger that you.", "right": "He is bigger than you.", "why": "Than, con n." }
+      ],
+      "keywords": ["comparativo", "superlativo", "mas que", "than", "el mas", "tan como"],
+      "related": ["g_plurals"]
+    },
+    {
+      "id": "g_future",
+      "title": "Will o going to",
+      "level": "A2",
+      "area": "Verbos",
+      "question": "¿Cuál de los dos futuros uso?",
+      "explanation": "Depende de cuándo tomaste la decisión.\n\nWILL: lo decides en este mismo momento, o haces una predicción, una promesa o un ofrecimiento. El teléfono suena y dices I'll get it.\n\nGOING TO: ya lo tenías decidido antes de hablar, o hay pruebas delante de ti. I'm going to study medicine (ya está decidido). Look at those clouds — it's going to rain (lo veo venir).\n\nY hay un tercero que se olvida: el presente continuo para planes con fecha y hora, que es lo más natural en conversación. I'm meeting Ana at six.",
+      "forms": [
+        { "label": "Will", "pattern": "will + verbo base", "example": "I'll call you later." },
+        { "label": "Going to", "pattern": "am/is/are going to + verbo base", "example": "She's going to move house." },
+        { "label": "Planes fijados", "pattern": "presente continuo", "example": "We're flying on Sunday." }
+      ],
+      "examples": [
+        { "en": "I think it will be fine.", "es": "Creo que saldrá bien.", "note": "Predicción, opinión." },
+        { "en": "I'm going to tell him tonight.", "es": "Se lo voy a decir esta noche.", "note": "Ya decidido." },
+        { "en": "That bag looks heavy. I'll help you.", "es": "Esa bolsa parece pesada. Te ayudo.", "note": "Decisión del momento." }
+      ],
+      "mistakes": [
+        { "wrong": "I will to call you.", "right": "I will call you.", "why": "Después de will no hay to." },
+        { "wrong": "Tomorrow I go to the dentist.", "right": "Tomorrow I'm going to the dentist.", "why": "El presente simple no sirve para planes personales." },
+        { "wrong": "When I will arrive, I'll call.", "right": "When I arrive, I'll call.", "why": "Tras when, if, until y as soon as no se usa will." }
+      ],
+      "keywords": ["futuro", "will", "going to", "voy a", "planes"],
+      "related": ["g_present_continuous", "g_conditionals"]
+    },
+    {
+      "id": "g_present_perfect",
+      "title": "Present perfect vs pasado simple",
+      "level": "B1",
+      "area": "Verbos",
+      "question": "¿I have seen o I saw?",
+      "explanation": "Este es el mayor tropiezo de los hispanohablantes, porque el español usa «he visto» y «vi» casi indistintamente y el inglés no.\n\nLa regla real es una: si dices CUÁNDO, va pasado simple. Si no lo dices, o el tiempo aún no ha terminado, va present perfect.\n\nI saw her yesterday (hay un cuándo). I have seen her (no importa cuándo; importa el resultado: la he visto, ya lo sé).\n\nPor eso el present perfect acompaña a ever, never, just, already, yet, so far y this week. Y por eso yesterday, last year o in 2010 lo prohíben.",
+      "forms": [
+        { "label": "Afirmativa", "pattern": "have / has + participio", "example": "I have finished." },
+        { "label": "Negativa", "pattern": "haven't / hasn't + participio", "example": "She hasn't called." },
+        { "label": "Pregunta", "pattern": "Have / Has + sujeto + participio", "example": "Have you eaten?" },
+        { "label": "Marcadores", "pattern": "ever, never, just, already, yet, since, for", "example": "I've already done it." }
+      ],
+      "examples": [
+        { "en": "I've lost my keys.", "es": "He perdido las llaves.", "note": "Sigo sin ellas: el resultado importa ahora." },
+        { "en": "I lost my keys on Friday.", "es": "Perdí las llaves el viernes.", "note": "Hay un cuándo: pasado simple." },
+        { "en": "Have you ever been to Japan?", "es": "¿Has estado alguna vez en Japón?" },
+        { "en": "She's worked here for ten years.", "es": "Lleva diez años trabajando aquí.", "note": "Sigue trabajando." }
+      ],
+      "mistakes": [
+        { "wrong": "I have seen him yesterday.", "right": "I saw him yesterday.", "why": "Yesterday es un momento cerrado." },
+        { "wrong": "I am here since Monday.", "right": "I have been here since Monday.", "why": "Algo que empezó antes y sigue: present perfect." },
+        { "wrong": "How long do you know her?", "right": "How long have you known her?", "why": "Duración hasta hoy: present perfect." }
+      ],
+      "keywords": ["presente perfecto", "he hecho", "ever never", "just already yet"],
+      "related": ["g_past_simple", "g_for_since"]
+    },
+    {
+      "id": "g_for_since",
+      "title": "For, since y ago",
+      "level": "B1",
+      "area": "Preposiciones",
+      "question": "¿Cuál es la diferencia entre for two years y since 2022?",
+      "explanation": "FOR mide cuánto ha durado algo: for two hours, for a week, for ages.\n\nSINCE marca desde cuándo: since 2022, since Monday, since I met her.\n\nAGO cuenta hacia atrás desde hoy, y va DETRÁS: two years ago, no ago two years. Y siempre en pasado simple, nunca con present perfect.\n\nUna comprobación rápida: si detrás pones un periodo, es for. Si pones un punto en el calendario, es since.",
+      "forms": [
+        { "label": "For", "pattern": "for + duración", "example": "for three days" },
+        { "label": "Since", "pattern": "since + momento de inicio", "example": "since January" },
+        { "label": "Ago", "pattern": "duración + ago (pasado simple)", "example": "three days ago" }
+      ],
+      "examples": [
+        { "en": "I've lived here for five years.", "es": "Llevo cinco años viviendo aquí." },
+        { "en": "I've lived here since 2021.", "es": "Vivo aquí desde 2021." },
+        { "en": "I moved here five years ago.", "es": "Me mudé aquí hace cinco años." }
+      ],
+      "mistakes": [
+        { "wrong": "I've worked here since three years.", "right": "I've worked here for three years.", "why": "Tres años es una duración." },
+        { "wrong": "I have arrived two hours ago.", "right": "I arrived two hours ago.", "why": "Ago exige pasado simple." },
+        { "wrong": "Ago two days.", "right": "Two days ago.", "why": "Ago va detrás." }
+      ],
+      "keywords": ["desde", "hace", "durante", "cuanto tiempo"],
+      "related": ["g_present_perfect", "g_past_simple"]
+    },
+    {
+      "id": "g_conditionals",
+      "title": "Los condicionales",
+      "level": "B1",
+      "area": "Estructuras",
+      "question": "¿Cuándo digo if I have y cuándo if I had?",
+      "explanation": "Hay cuatro, y se distinguen por lo probable que sea la cosa.\n\nCERO — siempre verdad: If you heat water, it boils.\nPRIMERO — probable en el futuro: If it rains, I'll stay home.\nSEGUNDO — imaginario o improbable: If I had money, I'd travel. Ojo: se usa el pasado, pero no habla del pasado.\nTERCERO — el pasado ya no se puede cambiar: If I had studied, I would have passed.\n\nLa regla de oro: en la parte del if NUNCA va will. Ese es el error casi universal.",
+      "forms": [
+        { "label": "Cero", "pattern": "If + presente, presente", "example": "If you press this, it opens." },
+        { "label": "Primero", "pattern": "If + presente, will + base", "example": "If I see her, I'll tell her." },
+        { "label": "Segundo", "pattern": "If + pasado, would + base", "example": "If I were you, I'd wait." },
+        { "label": "Tercero", "pattern": "If + past perfect, would have + participio", "example": "If I had known, I would have come." }
+      ],
+      "examples": [
+        { "en": "If you don't hurry, we'll miss the train.", "es": "Si no te das prisa, perderemos el tren." },
+        { "en": "If I were taller, I'd play basketball.", "es": "Si fuera más alto, jugaría al baloncesto.", "note": "If I were, no if I was, en registro cuidado." },
+        { "en": "If she had called me, everything would have been different.", "es": "Si me hubiera llamado, todo habría sido distinto." }
+      ],
+      "mistakes": [
+        { "wrong": "If it will rain, I'll stay home.", "right": "If it rains, I'll stay home.", "why": "Detrás de if no va will." },
+        { "wrong": "If I would have money...", "right": "If I had money...", "why": "El would va en la otra mitad de la frase." },
+        { "wrong": "If I would have known...", "right": "If I had known...", "why": "Mismo motivo, en el tercer condicional." }
+      ],
+      "keywords": ["condicional", "condicionales", "si", "would", "hipotesis"],
+      "related": ["g_future", "g_modals_past"]
+    },
+    {
+      "id": "g_phrasal_verbs",
+      "title": "Cómo funcionan los phrasal verbs",
+      "level": "B1",
+      "area": "Verbos",
+      "question": "¿Digo turn it on o turn on it?",
+      "explanation": "Un phrasal verb es un verbo más una partícula que juntos significan otra cosa: give up no es «dar arriba», es rendirse.\n\nLo que casi nadie explica es que se dividen en dos grupos, y de ahí sale la duda del pronombre.\n\nSEPARABLES: el objeto puede ir en medio o al final. Turn on the light o turn the light on. Pero si el objeto es un pronombre (it, them, him), OBLIGATORIAMENTE va en medio: turn it on. Nunca turn on it.\n\nINSEPARABLES: nunca se parten. Look after the baby, look after her. Jamás look her after.\n\nNo hay forma de saber a cuál pertenece cada uno salvo con el uso. Pero la regla del pronombre te salva la mitad de las veces.",
+      "forms": [
+        { "label": "Separable + sustantivo", "pattern": "verbo + partícula + objeto (o al revés)", "example": "Turn off the TV / Turn the TV off." },
+        { "label": "Separable + pronombre", "pattern": "verbo + PRONOMBRE + partícula", "example": "Turn it off." },
+        { "label": "Inseparable", "pattern": "verbo + partícula + objeto (siempre)", "example": "Look after them." }
+      ],
+      "examples": [
+        { "en": "I gave up smoking two years ago.", "es": "Dejé de fumar hace dos años." },
+        { "en": "Can you pick me up at eight?", "es": "¿Me puedes recoger a las ocho?", "note": "Pronombre en medio." },
+        { "en": "We ran out of milk.", "es": "Nos quedamos sin leche.", "note": "Tres piezas: inseparable." }
+      ],
+      "mistakes": [
+        { "wrong": "Turn on it.", "right": "Turn it on.", "why": "Con pronombre, el objeto va en medio." },
+        { "wrong": "I'm looking her for.", "right": "I'm looking for her.", "why": "Look for es inseparable." },
+        { "wrong": "I gave up it.", "right": "I gave it up.", "why": "Give up es separable y el pronombre va dentro." }
+      ],
+      "keywords": ["phrasal", "verbos con particula", "separables", "pronombre"],
+      "related": ["g_gerund_infinitive"]
+    },
+    {
+      "id": "g_gerund_infinitive",
+      "title": "-ing o to + infinitivo",
+      "level": "B1",
+      "area": "Verbos",
+      "question": "¿I want to go o I want going?",
+      "explanation": "Cuando juntas dos verbos, el segundo toma una forma u otra según cuál sea el primero. No hay lógica profunda: son listas.\n\nCon TO: want, need, decide, hope, promise, learn, offer, refuse, agree, plan.\nCon -ING: enjoy, finish, avoid, mind, suggest, keep, practise, imagine, miss.\nDespués de PREPOSICIÓN, siempre -ing: good at cooking, interested in learning, before going.\n\nY algunos admiten los dos cambiando de sentido. El caso clásico: I stopped smoking (lo dejé) frente a I stopped to smoke (paré para fumar). Remember también: I remembered to lock the door (me acordé de hacerlo) frente a I remember locking it (recuerdo haberlo hecho).",
+      "forms": [
+        { "label": "Verbo + to", "pattern": "want / need / decide / hope + to + base", "example": "I decided to leave." },
+        { "label": "Verbo + -ing", "pattern": "enjoy / finish / avoid / mind + -ing", "example": "I enjoy cooking." },
+        { "label": "Preposición + -ing", "pattern": "in / at / of / before / after + -ing", "example": "She's good at drawing." },
+        { "label": "Cambian de sentido", "pattern": "stop, remember, forget, try", "example": "Try calling him." }
+      ],
+      "examples": [
+        { "en": "I'm thinking of changing jobs.", "es": "Estoy pensando en cambiar de trabajo.", "note": "Tras of, siempre -ing." },
+        { "en": "Do you mind waiting a moment?", "es": "¿Te importa esperar un momento?" },
+        { "en": "He forgot to send the email.", "es": "Se le olvidó mandar el correo." }
+      ],
+      "mistakes": [
+        { "wrong": "I enjoy to read.", "right": "I enjoy reading.", "why": "Enjoy pide -ing." },
+        { "wrong": "I'm interested in learn English.", "right": "I'm interested in learning English.", "why": "Tras preposición, -ing." },
+        { "wrong": "I want going home.", "right": "I want to go home.", "why": "Want pide to." }
+      ],
+      "keywords": ["gerundio", "infinitivo", "ing o to", "despues de un verbo", "tras preposicion"],
+      "related": ["g_phrasal_verbs"]
+    },
+    {
+      "id": "g_used_to",
+      "title": "Used to, would y be used to",
+      "level": "B1",
+      "area": "Verbos",
+      "question": "¿Por qué used to y be used to significan cosas distintas?",
+      "explanation": "Se parecen tanto que confunden a todo el mundo, pero no tienen nada que ver.\n\nUSED TO + verbo base: algo que hacías antes y ya no. I used to smoke. Solo existe en pasado.\n\nBE USED TO + -ing: estar acostumbrado a algo. I'm used to getting up early. Aquí to es una preposición, y por eso detrás va -ing y no infinitivo.\n\nGET USED TO + -ing: el proceso de acostumbrarse. I'm getting used to the noise.\n\nWOULD también sirve para hábitos pasados, pero solo para acciones repetidas, no para estados. My father would read to me every night, sí. I would have a car, no: para estados hay que usar used to.",
+      "forms": [
+        { "label": "Hábito pasado", "pattern": "used to + base", "example": "We used to live in Rome." },
+        { "label": "Estar acostumbrado", "pattern": "be used to + -ing / sustantivo", "example": "She's used to the cold." },
+        { "label": "Acostumbrarse", "pattern": "get used to + -ing", "example": "You'll get used to it." },
+        { "label": "Negativa e interrogativa", "pattern": "didn't use to / Did you use to...?", "example": "I didn't use to like it." }
+      ],
+      "examples": [
+        { "en": "I used to hate coffee, but now I love it.", "es": "Antes odiaba el café, pero ahora me encanta." },
+        { "en": "I'm not used to driving on the left.", "es": "No estoy acostumbrado a conducir por la izquierda." },
+        { "en": "He would call every Sunday without fail.", "es": "Llamaba todos los domingos sin falta." }
+      ],
+      "mistakes": [
+        { "wrong": "I'm used to get up early.", "right": "I'm used to getting up early.", "why": "Aquí to es preposición: pide -ing." },
+        { "wrong": "I use to go to the gym every day. (queriendo decir ahora)", "right": "I usually go to the gym every day.", "why": "Used to solo habla del pasado." },
+        { "wrong": "I didn't used to smoke.", "right": "I didn't use to smoke.", "why": "Con did, la forma base: use." }
+      ],
+      "keywords": ["solia", "antes", "acostumbrado", "habitos", "would"],
+      "related": ["g_past_simple", "g_present_simple"]
+    },
+    {
+      "id": "g_passive",
+      "title": "La voz pasiva",
+      "level": "B2",
+      "area": "Estructuras",
+      "question": "¿Cuándo se usa la pasiva y por qué en inglés tanto?",
+      "explanation": "La pasiva pone el foco en lo que pasa, no en quién lo hace. El inglés la usa muchísimo más que el español, sobre todo en textos formales, noticias y trabajo.\n\nSe forma con to be en el tiempo que toque más el participio. The report was written last week.\n\nSi quieres decir quién lo hizo, va con by, pero muchas veces se omite justamente porque no importa o no se sabe.\n\nDetalle que el español no tiene: en inglés puedes hacer pasivo el objeto indirecto. They gave me a prize se convierte en I was given a prize, cosa que en español no se puede calcar.",
+      "forms": [
+        { "label": "Presente", "pattern": "am / is / are + participio", "example": "English is spoken here." },
+        { "label": "Pasado", "pattern": "was / were + participio", "example": "It was built in 1920." },
+        { "label": "Perfecto", "pattern": "has / have been + participio", "example": "It has been cancelled." },
+        { "label": "Con modal", "pattern": "modal + be + participio", "example": "It must be done today." }
+      ],
+      "examples": [
+        { "en": "The decision will be announced tomorrow.", "es": "La decisión se anunciará mañana.", "note": "El español lo resuelve con «se»." },
+        { "en": "I was told to wait here.", "es": "Me dijeron que esperara aquí." },
+        { "en": "Nothing has been decided yet.", "es": "Todavía no se ha decidido nada." }
+      ],
+      "mistakes": [
+        { "wrong": "The house was build in 1920.", "right": "The house was built in 1920.", "why": "Hace falta el participio, no el infinitivo." },
+        { "wrong": "It was happened yesterday.", "right": "It happened yesterday.", "why": "Happen no tiene pasiva: nadie lo hace." },
+        { "wrong": "The letter was wrote by Ana.", "right": "The letter was written by Ana.", "why": "Participio: written, no wrote." }
+      ],
+      "keywords": ["pasiva", "voz pasiva", "se dice", "participio"],
+      "related": ["g_reported_speech"]
+    },
+    {
+      "id": "g_reported_speech",
+      "title": "Estilo indirecto",
+      "level": "B2",
+      "area": "Estructuras",
+      "question": "¿Cómo cuento lo que otra persona dijo?",
+      "explanation": "Al contar lo que alguien dijo, los tiempos retroceden un paso: presente→pasado, pasado→past perfect, will→would, can→could.\n\nTambién cambian los tiempos y lugares: today→that day, tomorrow→the next day, here→there.\n\nSay y tell no son intercambiables: tell necesita a quién (tell me, tell him), say no lo lleva directamente (say to me). She told me that... / She said that...\n\nY en las preguntas indirectas el orden vuelve a ser el de una frase normal, sin do ni inversión. Ese es el fallo más frecuente.",
+      "forms": [
+        { "label": "Afirmaciones", "pattern": "said (that) + frase un tiempo atrás", "example": "He said he was tired." },
+        { "label": "Con destinatario", "pattern": "told + persona + (that)", "example": "She told me she'd call." },
+        { "label": "Preguntas sí/no", "pattern": "asked if / whether + orden normal", "example": "He asked if I was ready." },
+        { "label": "Preguntas abiertas", "pattern": "asked + partícula + orden normal", "example": "She asked where I lived." }
+      ],
+      "examples": [
+        { "en": "\"I'm busy.\" → He said he was busy.", "es": "«Estoy ocupado» → Dijo que estaba ocupado." },
+        { "en": "\"Will you help me?\" → She asked if I would help her.", "es": "«¿Me ayudarás?» → Preguntó si la ayudaría." },
+        { "en": "He told me not to worry.", "es": "Me dijo que no me preocupara.", "note": "Órdenes: tell + to + verbo." }
+      ],
+      "mistakes": [
+        { "wrong": "She asked me where do I live.", "right": "She asked me where I live.", "why": "En pregunta indirecta no hay do ni inversión." },
+        { "wrong": "He said me that he was late.", "right": "He told me that he was late.", "why": "Con destinatario se usa tell." },
+        { "wrong": "She told that she was tired.", "right": "She said that she was tired.", "why": "Tell exige decir a quién." }
+      ],
+      "keywords": ["estilo indirecto", "dijo que", "reported speech", "say tell", "preguntas indirectas"],
+      "related": ["g_passive", "g_conditionals"]
+    },
+    {
+      "id": "g_uncountable",
+      "title": "Incontables y cuantificadores",
+      "level": "B2",
+      "area": "Sustantivos",
+      "question": "¿Por qué information no lleva plural?",
+      "explanation": "Algunos sustantivos ingleses no se pueden contar aunque en español sí: information, advice, furniture, news, luggage, work, money, bread, homework.\n\nNo llevan -s, no llevan a/an y van con verbo en singular. The news is good, aunque acabe en -s.\n\nPara contarlos hace falta un envase: a piece of advice, two pieces of information, an item of furniture.\n\nY los cuantificadores se reparten: much y little con incontables, many y few con contables. Lots of y a lot of valen para los dos y por eso son la salida fácil en conversación.",
+      "forms": [
+        { "label": "Incontables", "pattern": "sin -s, sin a/an, verbo en singular", "example": "The information is useful." },
+        { "label": "Para contarlos", "pattern": "a piece / bit / item of", "example": "a piece of advice" },
+        { "label": "Cantidad", "pattern": "much / little (incontable) · many / few (contable)", "example": "not much time, not many people" },
+        { "label": "Neutro", "pattern": "a lot of / lots of / some / any", "example": "a lot of work" }
+      ],
+      "examples": [
+        { "en": "Can you give me some advice?", "es": "¿Me puedes dar un consejo?", "note": "No existe \"an advice\"." },
+        { "en": "I don't have much money.", "es": "No tengo mucho dinero." },
+        { "en": "The news was worse than expected.", "es": "Las noticias fueron peores de lo esperado." }
+      ],
+      "mistakes": [
+        { "wrong": "I need some informations.", "right": "I need some information.", "why": "Information no tiene plural." },
+        { "wrong": "He gave me a good advice.", "right": "He gave me some good advice.", "why": "Ni a ni plural: incontable." },
+        { "wrong": "I have many works to do.", "right": "I have a lot of work to do.", "why": "Work es incontable cuando significa tarea." }
+      ],
+      "keywords": ["incontables", "contables", "much many", "cuantificadores", "information advice"],
+      "related": ["g_articles", "g_plurals"]
+    },
+    {
+      "id": "g_modals_past",
+      "title": "Must have, should have, might have",
+      "level": "B2",
+      "area": "Verbos",
+      "question": "¿Cómo hablo de lo que debí hacer o de lo que probablemente pasó?",
+      "explanation": "Los modales combinados con have + participio hablan del pasado, y cada uno dice algo muy distinto.\n\nMUST HAVE: estoy casi seguro de que pasó. He must have forgotten.\nCAN'T HAVE: estoy casi seguro de que NO pasó. She can't have known.\nMIGHT / COULD HAVE: era posible. They might have missed the train.\nSHOULD HAVE: era lo correcto y no se hizo. Es el reproche o el arrepentimiento. I should have called you.\nNEEDN'T HAVE: se hizo pero no hacía falta. You needn't have waited.\n\nEn el habla real, have suena como una /v/ pegada: should've, must've. Por eso se oye tantas veces mal escrito como \"should of\".",
+      "forms": [
+        { "label": "Deducción segura", "pattern": "must have + participio", "example": "He must have left." },
+        { "label": "Deducción negativa", "pattern": "can't have + participio", "example": "She can't have seen us." },
+        { "label": "Posibilidad", "pattern": "might / could have + participio", "example": "It could have been worse." },
+        { "label": "Arrepentimiento", "pattern": "should have + participio", "example": "I should have listened." }
+      ],
+      "examples": [
+        { "en": "You should have told me earlier.", "es": "Deberías habérmelo dicho antes." },
+        { "en": "The lights are off — they must have gone to bed.", "es": "Las luces están apagadas: se habrán acostado." },
+        { "en": "I needn't have brought an umbrella.", "es": "No hacía falta que trajera paraguas." }
+      ],
+      "mistakes": [
+        { "wrong": "I should of called.", "right": "I should have called.", "why": "Es have, aunque suene como of." },
+        { "wrong": "He must forgot it.", "right": "He must have forgotten it.", "why": "Para el pasado hace falta have + participio." },
+        { "wrong": "She mustn't have known.", "right": "She can't have known.", "why": "La deducción negativa se hace con can't have." }
+      ],
+      "keywords": ["modales", "deberia haber", "must have", "should have", "arrepentimiento"],
+      "related": ["g_conditionals"]
+    },
+    {
+      "id": "g_inversion",
+      "title": "Inversión enfática",
+      "level": "C1",
+      "area": "Estructuras",
+      "question": "¿Por qué a veces el verbo va antes que el sujeto?",
+      "explanation": "Cuando una frase empieza por una expresión negativa o restrictiva, el inglés invierte el orden como si fuera una pregunta. Sirve para dar énfasis y suena formal o literario.\n\nDispara la inversión: never, rarely, seldom, hardly, no sooner, not only, little, under no circumstances, only then, only after.\n\nNever have I seen anything like it. Fíjate en que se comporta exactamente como una pregunta: si no hay auxiliar, aparece do.\n\nSe usa poco al hablar, pero es constante en discursos, prensa y literatura, y da la impresión de dominio real cuando se coloca bien.",
+      "forms": [
+        { "label": "Con auxiliar", "pattern": "Negativo + auxiliar + sujeto + verbo", "example": "Never had she felt so alone." },
+        { "label": "Sin auxiliar", "pattern": "Negativo + do/does/did + sujeto + base", "example": "Rarely do we see such talent." },
+        { "label": "Correlativas", "pattern": "No sooner... than · Not only... but also", "example": "No sooner had I sat down than the phone rang." },
+        { "label": "Condicional formal", "pattern": "Had / Were / Should + sujeto (sin if)", "example": "Had I known, I would have helped." }
+      ],
+      "examples": [
+        { "en": "Not only did he apologise, but he also paid for the damage.", "es": "No solo se disculpó, sino que además pagó los daños." },
+        { "en": "Under no circumstances should you open that door.", "es": "Bajo ningún concepto debes abrir esa puerta." },
+        { "en": "Little did they know what was coming.", "es": "Poco se imaginaban lo que venía." }
+      ],
+      "mistakes": [
+        { "wrong": "Never I have seen that.", "right": "Never have I seen that.", "why": "La inversión es obligatoria, no opcional." },
+        { "wrong": "Not only he came late, but...", "right": "Not only did he come late, but...", "why": "Sin auxiliar propio, entra did." },
+        { "wrong": "No sooner I arrived when it started.", "right": "No sooner had I arrived than it started.", "why": "No sooner se empareja con than, no con when." }
+      ],
+      "keywords": ["inversion", "enfasis", "never have i", "orden de palabras"],
+      "related": ["g_cleft", "g_conditionals"]
+    },
+    {
+      "id": "g_cleft",
+      "title": "Frases escindidas (What I need is...)",
+      "level": "C1",
+      "area": "Estructuras",
+      "question": "¿Cómo destaco una parte de la frase sin gritar?",
+      "explanation": "El español subraya moviendo palabras o con la entonación. El inglés tiene un orden más rígido, así que usa una estructura para ello.\n\nCon WHAT: What I need is a holiday. Pones delante lo que quieres destacar y lo separas con is.\n\nCon IT: It was Ana who called, no Marta. Sirve para corregir o para señalar culpable.\n\nY existen variantes con all, the thing, the reason: All I want is peace. The reason I called is that...\n\nEs uno de los recursos que más eleva el registro escrito, y casi nadie lo aprende porque no aparece como \"tiempo verbal\".",
+      "forms": [
+        { "label": "Con what", "pattern": "What + sujeto + verbo + is / was...", "example": "What surprised me was the price." },
+        { "label": "Con it", "pattern": "It is / was + elemento + who / that...", "example": "It was John that told me." },
+        { "label": "Con all", "pattern": "All + sujeto + verbo + is...", "example": "All I did was ask." },
+        { "label": "Con the reason", "pattern": "The reason (why)... is that...", "example": "The reason I left is that I was tired." }
+      ],
+      "examples": [
+        { "en": "What I don't understand is why nobody said anything.", "es": "Lo que no entiendo es por qué nadie dijo nada." },
+        { "en": "It wasn't the money that bothered me.", "es": "No era el dinero lo que me molestaba." },
+        { "en": "All she wanted was an apology.", "es": "Lo único que quería era una disculpa." }
+      ],
+      "mistakes": [
+        { "wrong": "The what I need is time.", "right": "What I need is time.", "why": "No lleva artículo delante." },
+        { "wrong": "What I need are a holiday.", "right": "What I need is a holiday.", "why": "El verbo concuerda con lo que va detrás." },
+        { "wrong": "Is the money what bothers me.", "right": "It's the money that bothers me.", "why": "La estructura con it necesita it y that." }
+      ],
+      "keywords": ["enfasis", "what i need is", "destacar", "frases escindidas", "it was"],
+      "related": ["g_inversion"]
+    },
+    {
+      "id": "g_hedging",
+      "title": "Suavizar y matizar",
+      "level": "C1",
+      "area": "Registro",
+      "question": "¿Por qué mi inglés suena brusco aunque sea correcto?",
+      "explanation": "Este no es un tema de gramática, sino la razón por la que mucha gente con buen nivel cae mal sin saberlo.\n\nEl español dice las cosas de frente y no resulta grosero. El inglés, sobre todo el británico y el de trabajo, envuelve casi todo. Un I disagree correcto puede sonar agresivo; I'm not sure I agree dice exactamente lo mismo sin cerrar la puerta.\n\nLas herramientas son pocas y se repiten: un modal (might, could, would), un verbo de opinión (I think, I'd say), un adverbio (perhaps, slightly, a bit) o una pregunta en vez de una afirmación.\n\nY funciona en las dos direcciones: si te dicen that's an interesting approach o with the greatest respect, casi nunca es un elogio.",
+      "forms": [
+        { "label": "Petición", "pattern": "Could you... / Would you mind + -ing", "example": "Would you mind sending it again?" },
+        { "label": "Desacuerdo", "pattern": "I'm not sure I... / I see your point, but...", "example": "I'm not sure that would work." },
+        { "label": "Rebajar", "pattern": "a bit / slightly / a little", "example": "It's a bit late for that." },
+        { "label": "Mala noticia", "pattern": "I'm afraid... / Unfortunately...", "example": "I'm afraid we can't do that." }
+      ],
+      "examples": [
+        { "en": "I wonder if we could look at this again.", "es": "Me pregunto si podríamos revisar esto.", "note": "Es una orden educada." },
+        { "en": "There may be a slight problem with the timing.", "es": "Puede que haya un pequeño problema con los plazos.", "note": "Suele significar un problema grande." },
+        { "en": "It might be worth considering another option.", "es": "Quizá merezca la pena considerar otra opción." }
+      ],
+      "mistakes": [
+        { "wrong": "Give me the report.", "right": "Could you send me the report when you have a moment?", "why": "El imperativo directo suena a orden." },
+        { "wrong": "You are wrong.", "right": "I'm not sure that's quite right.", "why": "Contradecir de frente rompe la conversación." },
+        { "wrong": "I want to speak with the manager.", "right": "I'd like to speak to the manager, please.", "why": "I want suena a exigencia; I'd like es lo normal." }
+      ],
+      "keywords": ["cortesia", "educado", "suavizar", "registro", "sonar brusco", "peticiones"],
+      "related": ["g_modals_past", "g_cleft"]
+    },
+    {
+      "id": "g_subjunctive",
+      "title": "El subjuntivo inglés",
+      "level": "C2",
+      "area": "Verbos",
+      "question": "¿Por qué se dice I suggest that he go y no he goes?",
+      "explanation": "Casi nadie enseña que el inglés tiene subjuntivo, porque es casi invisible: coincide con el infinitivo. Solo se nota en la tercera persona, donde desaparece la -s, y con to be, que se queda en be.\n\nAparece detrás de verbos y adjetivos que expresan voluntad o necesidad: suggest, recommend, insist, demand, propose, request, y it's essential / vital / important that.\n\nEs la norma en registro escrito y formal, sobre todo en inglés americano. El británico suele meter should en su lugar: I suggest that he should go. Las dos son correctas; la primera suena más culta.\n\nY queda un resto fosilizado en el segundo condicional: If I were you. Ese were no es un error: es subjuntivo.",
+      "forms": [
+        { "label": "Tras verbo de voluntad", "pattern": "verbo + that + sujeto + verbo base", "example": "She insisted that he leave." },
+        { "label": "Con to be", "pattern": "that + sujeto + be", "example": "It's vital that everyone be present." },
+        { "label": "Negativo", "pattern": "that + sujeto + not + base", "example": "I recommend that she not sign it." },
+        { "label": "Alternativa británica", "pattern": "that + sujeto + should + base", "example": "I suggest that he should wait." }
+      ],
+      "examples": [
+        { "en": "The board demanded that the report be rewritten.", "es": "El consejo exigió que se reescribiera el informe." },
+        { "en": "It is essential that she understand the risk.", "es": "Es fundamental que entienda el riesgo.", "note": "Sin -s: understand, no understands." },
+        { "en": "If I were in your position, I'd say no.", "es": "Si estuviera en tu lugar, diría que no." },
+        { "en": "Be that as it may, the deadline stands.", "es": "Sea como sea, la fecha se mantiene.", "note": "Fórmula fija de registro alto." }
+      ],
+      "mistakes": [
+        { "wrong": "I suggest that he goes now.", "right": "I suggest that he go now.", "why": "El subjuntivo pierde la -s." },
+        { "wrong": "It's important that she is here.", "right": "It's important that she be here.", "why": "Con to be, el subjuntivo es be." },
+        { "wrong": "They demanded that he doesn't speak.", "right": "They demanded that he not speak.", "why": "La negación va sin do." }
+      ],
+      "keywords": ["subjuntivo", "suggest that", "formal", "were", "registro culto"],
+      "related": ["g_conditionals", "g_hedging"]
+    },
+    {
+      "id": "g_participle_clauses",
+      "title": "Cláusulas de participio",
+      "level": "C2",
+      "area": "Estructuras",
+      "question": "¿Cómo junto dos ideas sin usar and ni because?",
+      "explanation": "Es el recurso que más distingue un texto escrito por un nativo culto de uno traducido. En vez de encadenar frases con and, because y after, se comprime una de las dos en un participio.\n\nCon -ING la acción es simultánea o es la causa: Feeling tired, she went to bed. Con HAVING + participio la acción es anterior: Having finished the report, he left.\n\nCon participio pasado el sentido es pasivo: Written in 1890, the novel still feels modern.\n\nHay una condición que se salta mucha gente: el sujeto de las dos partes tiene que ser el mismo. Si no lo es, la frase se descuelga y produce esas construcciones absurdas que en inglés se llaman dangling participles.",
+      "forms": [
+        { "label": "Simultánea o causa", "pattern": "verbo-ing, sujeto + verbo", "example": "Not knowing what to say, I stayed quiet." },
+        { "label": "Anterior", "pattern": "Having + participio, sujeto + verbo", "example": "Having read it twice, I still disagree." },
+        { "label": "Pasiva", "pattern": "participio, sujeto + verbo", "example": "Built in 1920, the house needs work." },
+        { "label": "Con conector", "pattern": "After / Before / While / Given + -ing", "example": "After leaving, she called me." }
+      ],
+      "examples": [
+        { "en": "Having spent ten years abroad, he found the return difficult.", "es": "Tras pasar diez años fuera, le costó volver." },
+        { "en": "Given the circumstances, nobody blamed her.", "es": "Dadas las circunstancias, nadie la culpó." },
+        { "en": "Faced with the evidence, he changed his story.", "es": "Ante las pruebas, cambió de versión." }
+      ],
+      "mistakes": [
+        { "wrong": "Walking down the street, the building looked enormous.", "right": "Walking down the street, I thought the building looked enormous.", "why": "El edificio no caminaba: los sujetos deben coincidir." },
+        { "wrong": "Having finished, the room was empty.", "right": "Having finished, we found the room empty.", "why": "Mismo fallo: la habitación no terminó nada." },
+        { "wrong": "After to leave the office, I called her.", "right": "After leaving the office, I called her.", "why": "Tras preposición va -ing, no infinitivo." }
+      ],
+      "keywords": ["participio", "having", "dangling", "unir frases", "escritura formal"],
+      "related": ["g_gerund_infinitive", "g_passive"]
+    }
+  ]
+}
