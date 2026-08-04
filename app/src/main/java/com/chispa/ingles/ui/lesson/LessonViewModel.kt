@@ -387,12 +387,51 @@ class LessonViewModel(
         speechRecognizer.start(_state.value.accent)
     }
 
+    /**
+     * El usuario ha terminado de hablar. NO se cancela el reconocimiento: se le
+     * pide que cierre y devuelva lo que haya oído. Cancelarlo aquí (como hacía
+     * la primera versión) tiraba el resultado antes de que llegara.
+     */
     fun stopListening() {
+        speechRecognizer.stopAndEvaluate()
+    }
+
+    /** Cancela del todo, sin evaluar. Para salir de la pantalla. */
+    fun cancelListening() {
         speechRecognizer.stop()
+    }
+
+    /** El sistema denegó el micrófono: que la pantalla lo diga en vez de callarse. */
+    fun reportMicPermissionDenied() {
+        _state.value = _state.value.copy(speech = SpeechState.PermissionNeeded)
+    }
+
+    /**
+     * Salida de emergencia: si el motor de voz del dispositivo no funciona,
+     * el usuario marca que lo dijo bien y sigue. Vale como acierto pero no
+     * alimenta el SRS, porque nadie ha comprobado la pronunciación de verdad.
+     */
+    fun markSpokenManually() {
+        val exercise = _state.value.current as? Exercise.SpeakAndRepeat ?: return
+        speechRecognizer.reset()
+        speakingAnswered += 1
+        finishAnswer(
+            exercise = exercise,
+            correct = true,
+            feedback = Feedback(
+                correct = true,
+                headline = "Anotado",
+                correctAnswer = exercise.phrase,
+                note = "Sin micrófono no puedo evaluarte, así que te creo."
+            ),
+            recordSrs = false
+        )
     }
 
     private fun evaluateSpeech(hypotheses: List<String>) {
         val exercise = _state.value.current as? Exercise.SpeakAndRepeat ?: return
+        // Ya tenemos lo que dijo: soltamos el micrófono antes de puntuar.
+        speechRecognizer.reset()
         val score = AnswerChecker.speechSimilarity(hypotheses, exercise.phrase)
         _state.value = _state.value.copy(speechScore = score)
         submitSpeech(score >= AnswerChecker.SPEECH_PASS_THRESHOLD, score)

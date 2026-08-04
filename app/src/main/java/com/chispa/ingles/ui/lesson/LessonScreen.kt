@@ -71,9 +71,14 @@ fun LessonScreen(
 
     var showQuitDialog by remember { mutableStateOf(false) }
 
+    // Si el usuario ya denegó el permiso dos veces, Android deja de mostrar el
+    // diálogo y `launch` vuelve al instante con `false`. Sin este `else` el
+    // botón del micrófono no daba ninguna señal: parecía roto.
     val micPermission = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
-    ) { granted -> if (granted) viewModel.startListening() }
+    ) { granted ->
+        if (granted) viewModel.startListening() else viewModel.reportMicPermissionDenied()
+    }
 
     BackHandler(enabled = state.phase != SessionPhase.FINISHED) {
         if (state.index == 0 && state.correctCount == 0) onExit() else showQuitDialog = true

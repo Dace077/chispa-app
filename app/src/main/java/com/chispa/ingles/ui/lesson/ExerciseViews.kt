@@ -1,5 +1,8 @@
 package com.chispa.ingles.ui.lesson
 
+import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -46,6 +49,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
@@ -353,12 +357,13 @@ private fun SpeakAndRepeatView(
 
         Text(
             text = when (val speech = state.speech) {
-                is SpeechState.Listening -> speech.partial ?: "Escuchando… habla ahora"
+                is SpeechState.Listening ->
+                    speech.partial ?: "Escuchando… habla ahora y pulsa otra vez al terminar"
                 SpeechState.Processing -> "Analizando lo que dijiste…"
                 SpeechState.NoMatch -> "No te escuché bien. Prueba otra vez"
                 SpeechState.PermissionNeeded -> "Necesito permiso para usar el micrófono"
                 SpeechState.Unavailable ->
-                    "Tu dispositivo no tiene reconocimiento de voz. Puedes saltar este ejercicio."
+                    "Tu dispositivo no trae reconocimiento de voz instalado."
                 is SpeechState.Error -> speech.message
                 is SpeechState.Result -> speech.hypotheses.firstOrNull().orEmpty()
                 SpeechState.Idle -> "Pulsa el micrófono y repite la frase"
@@ -377,6 +382,59 @@ private fun SpeakAndRepeatView(
                 color = if (score >= 0.72f) colors.correct else colors.wrong
             )
         }
+
+        // Si el motor de voz del dispositivo no coopera, el ejercicio no se
+        // queda muerto: se ofrece arreglarlo y, mientras tanto, continuar.
+        val fallo = state.speech is SpeechState.Error ||
+            state.speech == SpeechState.Unavailable ||
+            state.speech == SpeechState.PermissionNeeded
+        if (fallo && state.phase == SessionPhase.ANSWERING) {
+            val context = LocalContext.current
+            Spacer(Modifier.height(20.dp))
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(colors.xp.copy(alpha = 0.12f))
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    "Para que el micrófono funcione necesitas el reconocimiento de voz " +
+                        "en inglés instalado en Android.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = colors.xp,
+                    textAlign = TextAlign.Center
+                )
+                Spacer(Modifier.height(12.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    TextButton(onClick = { abrirAjustesDeVoz(context) }) {
+                        Text("Abrir ajustes de voz")
+                    }
+                    TextButton(onClick = { viewModel.markSpokenManually() }) {
+                        Text("Lo dije bien, seguir")
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Lleva al usuario a los ajustes de entrada de voz de Android. Si el fabricante
+ * no expone esa pantalla, cae a los ajustes de la propia app, que siempre existen.
+ */
+private fun abrirAjustesDeVoz(context: android.content.Context) {
+    val intents = listOf(
+        Intent("com.android.settings.TTS_SETTINGS"),
+        Intent(Settings.ACTION_VOICE_INPUT_SETTINGS),
+        Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+            data = Uri.fromParts("package", context.packageName, null)
+        }
+    )
+    for (intent in intents) {
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        if (runCatching { context.startActivity(intent); true }.getOrDefault(false)) return
     }
 }
 
