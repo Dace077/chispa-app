@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Refresh
@@ -46,6 +47,8 @@ import com.chispa.ingles.ui.onboarding.PlacementScreen
 import com.chispa.ingles.ui.profile.AchievementsScreen
 import com.chispa.ingles.ui.profile.ProfileScreen
 import com.chispa.ingles.ui.profile.VocabularyScreen
+import com.chispa.ingles.ui.reader.LibraryScreen
+import com.chispa.ingles.ui.reader.ReaderScreen
 import com.chispa.ingles.ui.review.ReviewScreen
 import com.chispa.ingles.ui.settings.SettingsScreen
 import com.chispa.ingles.ui.speaking.SpeakingScreen
@@ -56,9 +59,13 @@ object Routes {
     const val PLACEMENT = "placement"
 
     const val HOME = "home"
+    const val LIBRARY = "library"
     const val REVIEW = "review"
     const val SPEAKING = "speaking"
     const val PROFILE = "profile"
+
+    const val READER = "reader/{readingId}"
+    fun reader(readingId: String) = "reader/$readingId"
 
     const val SETTINGS = "settings"
     const val ACHIEVEMENTS = "achievements"
@@ -70,7 +77,7 @@ object Routes {
     const val REVIEW_SESSION = "review_session"
     const val SPEAKING_SESSION = "speaking_session"
 
-    val bottomBarRoutes = setOf(HOME, REVIEW, SPEAKING, PROFILE)
+    val bottomBarRoutes = setOf(HOME, LIBRARY, REVIEW, SPEAKING, PROFILE)
 }
 
 private data class TabItem(
@@ -81,6 +88,7 @@ private data class TabItem(
 
 private val TABS = listOf(
     TabItem(Routes.HOME, "Aprender", Icons.Filled.School),
+    TabItem(Routes.LIBRARY, "Leer", Icons.AutoMirrored.Filled.MenuBook),
     TabItem(Routes.REVIEW, "Repaso", Icons.Filled.Refresh),
     TabItem(Routes.SPEAKING, "Hablar", Icons.Filled.Mic),
     TabItem(Routes.PROFILE, "Perfil", Icons.Filled.Person)
@@ -185,6 +193,24 @@ private fun MainScaffold(navController: NavHostController) {
                         onOpenLesson = { navController.navigate(Routes.lesson(it)) },
                         onOpenReview = { navController.navigate(Routes.REVIEW) },
                         onOpenSettings = { navController.navigate(Routes.SETTINGS) }
+                    )
+                }
+
+                composable(Routes.LIBRARY) {
+                    LibraryScreen(
+                        onOpenReading = { navController.navigate(Routes.reader(it)) }
+                    )
+                }
+
+                composable(
+                    route = Routes.READER,
+                    arguments = listOf(navArgument("readingId") { type = NavType.StringType }),
+                    enterTransition = { slideInHorizontally { it } + fadeIn() },
+                    exitTransition = { slideOutHorizontally { it } + fadeOut() }
+                ) { entry ->
+                    ReaderScreen(
+                        readingId = entry.arguments?.getString("readingId").orEmpty(),
+                        onBack = { navController.popBackStack() }
                     )
                 }
 

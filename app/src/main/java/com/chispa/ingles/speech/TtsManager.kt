@@ -29,6 +29,26 @@ class TtsManager(context: Context) {
     private val _speaking = MutableStateFlow(false)
     val isSpeaking: StateFlow<Boolean> = _speaking.asStateFlow()
 
+    /**
+     * Trozo del texto que la voz está pronunciando ahora mismo.
+     *
+     * Lo alimenta `onRangeStart`, que el motor llama con los índices de
+     * caracteres de la palabra en curso. Es lo que permite ir resaltando el
+     * texto al ritmo real de la voz en vez de con temporizadores inventados.
+     * Existe desde Android 8; en 7.x nunca llega y el lector se queda
+     * resaltando la frase entera, que sigue siendo útil.
+     */
+    private val _spokenRange = MutableStateFlow<SpokenRange?>(null)
+    val spokenRange: StateFlow<SpokenRange?> = _spokenRange.asStateFlow()
+
+    /** Última locución terminada. El lector lo usa para pasar de frase. */
+    private val _finishedUtterance = MutableStateFlow<String?>(null)
+    val finishedUtterance: StateFlow<String?> = _finishedUtterance.asStateFlow()
+
+    /** true si el motor de este móvil informa de la palabra en curso. */
+    private val _supportsWordSync = MutableStateFlow(false)
+    val supportsWordSync: StateFlow<Boolean> = _supportsWordSync.asStateFlow()
+
     /** Idiomas realmente disponibles en este dispositivo, de los que nos interesan. */
     private val availableAccents = mutableSetOf<Accent>()
 
@@ -54,11 +74,38 @@ class TtsManager(context: Context) {
             }
         }.apply {
             setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-                override fun onStart(utteranceId: String?) { _speaking.value = true }
-                override fun onDone(utteranceId: String?) { _speaking.value = false }
+                override fun onStart(utteranceId: String?) {
+                    _speaking.value = true
+                    _spokenRange.value = null
+                }
+
+                override fun onDone(utteranceId: String?) {
+                    _speaking.value = false
+                    _spokenRange.value = null
+                    if (utteranceId != null) _finishedUtterance.value = utteranceId
+                }
+
+                /**
+                 * El motor nos dice qué palabra está diciendo. Android 8+.
+                 */
+                override fun onRangeStart(utteranceId: String?, start: Int, end: Int, frame: Int) {
+                    if (utteranceId == null) return
+                    _supportsWordSync.value = true
+                    _spokenRange.value = SpokenRange(utteranceId, start, end)
+                }
+
                 @Deprecated("Requerido por la clase base")
-                override fun onError(utteranceId: String?) { _speaking.value = false }
-                override fun onError(utteranceId: String?, errorCode: Int) { _speaking.value = false }
+                override fun onError(utteranceId: String?) {
+                    _speaking.value = false
+                    _spokenRange.value = null
+                    if (utteranceId != null) _finishedUtterance.value = utteranceId
+                }
+
+                override fun onError(utteranceId: String?, errorCode: Int) {
+                    _speaking.value = false
+                    _spokenRange.value = null
+                    if (utteranceId != null) _finishedUtterance.value = utteranceId
+                }
             })
         }
     }
@@ -127,9 +174,59 @@ class TtsManager(context: Context) {
         speak(text, accent, rate = (currentRate * 0.6f).coerceAtLeast(0.4f))
     }
 
+    /**
+     * Lee un texto con un identificador propio, para poder seguirlo.
+     *
+     * A diferencia de [speak], quien llama decide el id: así puede saber qué
+     * frase está sonando ([spokenRange]) y cuándo termina ([finishedUtterance]).
+     * Es lo que usa el lector para ir frase a frase resaltando palabras.
+     */
+    fun speakTracked(
+        utteranceId: String,
+        text: String,
+        accent: Accent = currentAccent,
+        rate: Float = currentRate
+    ) {
+        val clean = text.trim()
+        if (clean.isEmpty()) return
+        val tts = engine
+        if (tts == null || _state.value == TtsState.INITIALIZING) {
+            pendingRequest = SpeechRequest(clean, accent, rate)
+            return
+        }
+        if (_state.value == TtsState.UNAVAILABLE) return
+
+        currentAccent = accent
+        currentRate = rate
+        tts.language = if (accent in availableAccents) {
+            Locale(accent.language, accent.country)
+        } else {
+            Locale.ENGLISH
+        }
+        tts.setSpeechRate(rate.coerceIn(0.4f, 1.4f))
+        tts.setPitch(1.0f)
+        _spokenRange.value = null
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            tts.speak(clean, TextToSpeech.QUEUE_FLUSH, null, utteranceId)
+        } else {
+            @Suppress("DEPRECATION")
+            tts.speak(
+                clean, TextToSpeech.QUEUE_FLUSH,
+                hashMapOf(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID to utteranceId)
+            )
+        }
+    }
+
+    /** Limpia el último "terminó" para no reaccionar dos veces al mismo evento. */
+    fun consumeFinished() {
+        _finishedUtterance.value = null
+    }
+
     fun stop() {
         engine?.stop()
         _speaking.value = false
+        _spokenRange.value = null
     }
 
     fun shutdown() {
@@ -142,6 +239,9 @@ class TtsManager(context: Context) {
     }
 
     private data class SpeechRequest(val text: String, val accent: Accent, val rate: Float)
+
+    /** Palabra que se está pronunciando, en índices de carácter del texto. */
+    data class SpokenRange(val utteranceId: String, val start: Int, val end: Int)
 
     companion object {
         private const val TAG = "TtsManager"

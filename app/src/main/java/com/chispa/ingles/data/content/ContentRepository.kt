@@ -59,6 +59,28 @@ class ContentRepository(private val appContext: Context) {
         Curriculum(tracks)
     }
 
+    @Volatile private var libraryCache: ReadingLibrary? = null
+
+    /** Biblioteca de lecturas bilingües. Se cachea igual que el currículo. */
+    suspend fun library(): ReadingLibrary {
+        libraryCache?.let { return it }
+        return mutex.withLock {
+            libraryCache ?: loadLibrary().also { libraryCache = it }
+        }
+    }
+
+    private suspend fun loadLibrary(): ReadingLibrary = withContext(Dispatchers.IO) {
+        runCatching {
+            val raw = appContext.assets.open("$CONTENT_DIR/readings.json")
+                .bufferedReader().use { it.readText() }
+            val parsed = json.decodeFromString<ReadingLibraryJson>(raw)
+            ReadingLibrary(parsed.readings.mapNotNull { it.toDomain() })
+        }.getOrElse { error ->
+            Log.e(TAG, "No se pudo leer readings.json", error)
+            ReadingLibrary(emptyList())
+        }
+    }
+
     /** Test de nivel inicial. Vive en su propio archivo para poder ajustarlo aparte. */
     suspend fun placementTest(): List<PlacementQuestion> = withContext(Dispatchers.IO) {
         runCatching {
@@ -128,6 +150,34 @@ class Curriculum(val tracks: List<Track>) {
 /* ---------------------------------------------------------------------------
  *  Mapeo DTO -> dominio
  * ------------------------------------------------------------------------- */
+
+private fun ReadingJson.toDomain(): Reading? {
+    val frases = sentences
+        .filter { it.en.isNotBlank() }
+        .mapIndexed { index, s ->
+            Sentence(
+                index = index,
+                en = s.en.trim(),
+                es = s.es.trim(),
+                startsParagraph = s.paragraph
+            )
+        }
+    if (frases.isEmpty()) return null
+
+    val palabras = frases.sumOf { it.en.split(" ").size }
+    return Reading(
+        id = id,
+        title = title,
+        level = CefrLevel.from(level),
+        category = ReadingCategory.from(category),
+        summary = summary,
+        // 130 palabras por minuto es un ritmo realista leyendo en un idioma
+        // que no es el tuyo. Mejor pasarse de generoso que asustar.
+        minutes = if (minutes > 0) minutes else ((palabras / 130) + 1),
+        sentences = frases,
+        glossary = glossary.map { VocabItem(it.en.trim(), it.es.trim(), it.ipa, it.note) }
+    )
+}
 
 private fun TrackJson.toDomain(): Track {
     val isExtra = category.equals(TrackJson.CATEGORY_EXTRA, ignoreCase = true)

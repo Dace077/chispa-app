@@ -1,0 +1,161 @@
+{
+  "id": "library",
+  "title": "Biblioteca",
+  "readings": [
+    {
+      "id": "r_a1_cafe",
+      "title": "El café de la esquina",
+      "level": "A1",
+      "category": "STORY",
+      "summary": "Ana entra en una cafetería por primera vez. Frases cortas, presente simple.",
+      "glossary": [
+        { "en": "corner", "es": "esquina" },
+        { "en": "warm", "es": "cálido" },
+        { "en": "smile", "es": "sonrisa" },
+        { "en": "always", "es": "siempre" },
+        { "en": "table", "es": "mesa" }
+      ],
+      "sentences": [
+        { "en": "There is a small café on the corner.", "es": "Hay una cafetería pequeña en la esquina.", "paragraph": true },
+        { "en": "Ana walks there every morning.", "es": "Ana va allí todas las mañanas." },
+        { "en": "The café is warm and quiet.", "es": "La cafetería es cálida y tranquila." },
+        { "en": "The man behind the counter is called Sam.", "es": "El hombre detrás del mostrador se llama Sam." },
+        { "en": "\"Good morning,\" he says.", "es": "«Buenos días», dice él.", "paragraph": true },
+        { "en": "\"Good morning,\" Ana says.", "es": "«Buenos días», dice Ana." },
+        { "en": "\"The usual?\"", "es": "«¿Lo de siempre?»" },
+        { "en": "\"Yes, please. A coffee and a piece of bread.\"", "es": "«Sí, por favor. Un café y un trozo de pan.»" },
+        { "en": "Sam makes the coffee.", "es": "Sam prepara el café.", "paragraph": true },
+        { "en": "Ana sits at a table near the window.", "es": "Ana se sienta en una mesa cerca de la ventana." },
+        { "en": "She reads a book.", "es": "Ella lee un libro." },
+        { "en": "She is happy here.", "es": "Está a gusto aquí." },
+        { "en": "The city is big and new for her.", "es": "La ciudad es grande y nueva para ella.", "paragraph": true },
+        { "en": "But this small café is not new.", "es": "Pero esta cafetería pequeña no es nueva." },
+        { "en": "It is her place now.", "es": "Ahora es su sitio." }
+      ]
+    },
+    {
+      "id": "r_a2_llaves",
+      "title": "Las llaves perdidas",
+      "level": "A2",
+      "category": "STORY",
+      "summary": "Un lunes que empieza mal. Pasado simple y preposiciones de lugar.",
+      "glossary": [
+        { "en": "keys", "es": "llaves" },
+        { "en": "pocket", "es": "bolsillo" },
+        { "en": "upstairs", "es": "arriba" },
+        { "en": "worried", "es": "preocupado" },
+        { "en": "to knock", "es": "llamar a la puerta" },
+        { "en": "neighbour", "es": "vecino" }
+      ],
+      "sentences": [
+        { "en": "Last Monday I lost my keys.", "es": "El lunes pasado perdí mis llaves.", "paragraph": true },
+        { "en": "I looked in my bag.", "es": "Miré en mi bolso." },
+        { "en": "I looked in every pocket.", "es": "Miré en todos los bolsillos." },
+        { "en": "They were not there.", "es": "No estaban allí." },
+        { "en": "I was worried because it was very late.", "es": "Estaba preocupado porque era muy tarde.", "paragraph": true },
+        { "en": "The street was empty and cold.", "es": "La calle estaba vacía y fría." },
+        { "en": "Then I remembered something.", "es": "Entonces recordé algo." },
+        { "en": "My neighbour has a second key.", "es": "Mi vecina tiene una segunda llave." },
+        { "en": "I went upstairs and knocked on her door.", "es": "Subí y llamé a su puerta.", "paragraph": true },
+        { "en": "She opened it after a minute.", "es": "Abrió al cabo de un minuto." },
+        { "en": "\"You lost them again, didn't you?\" she said.", "es": "«Las has perdido otra vez, ¿verdad?», dijo." },
+        { "en": "I said nothing.", "es": "No dije nada." },
+        { "en": "She smiled and gave me the key.", "es": "Sonrió y me dio la llave.", "paragraph": true },
+        { "en": "The next morning I found my keys.", "es": "A la mañana siguiente encontré mis llaves." },
+        { "en": "They were in my coat, of course.", "es": "Estaban en mi abrigo, cómo no." }
+      ]
+    },
+    {
+      "id": "r_b1_entrevista",
+      "title": "La entrevista de trabajo",
+      "level": "B1",
+      "category": "DIALOGUE",
+      "summary": "Diálogo real de una entrevista. Presente perfecto y lenguaje de trabajo.",
+      "glossary": [
+        { "en": "experience", "es": "experiencia" },
+        { "en": "challenge", "es": "reto" },
+        { "en": "to handle", "es": "manejar, llevar" },
+        { "en": "deadline", "es": "fecha límite" },
+        { "en": "strength", "es": "punto fuerte" },
+        { "en": "to look forward to", "es": "tener ganas de" }
+      ],
+      "sentences": [
+        { "en": "\"Thanks for coming. Tell me about yourself.\"", "es": "«Gracias por venir. Hábleme de usted.»", "paragraph": true },
+        { "en": "\"I have worked in design for six years.\"", "es": "«Llevo seis años trabajando en diseño.»" },
+        { "en": "\"Most of that time was at a small studio.\"", "es": "«La mayor parte de ese tiempo en un estudio pequeño.»" },
+        { "en": "\"Why do you want to leave?\"", "es": "«¿Por qué quiere marcharse?»", "paragraph": true },
+        { "en": "\"I have learned a lot there, but I want a bigger challenge.\"", "es": "«He aprendido mucho allí, pero quiero un reto mayor.»" },
+        { "en": "\"How do you handle tight deadlines?\"", "es": "«¿Cómo lleva los plazos ajustados?»", "paragraph": true },
+        { "en": "\"I break the work into small pieces.\"", "es": "«Divido el trabajo en trozos pequeños.»" },
+        { "en": "\"And I tell people early if something is not going to arrive on time.\"", "es": "«Y aviso pronto si algo no va a llegar a tiempo.»" },
+        { "en": "\"That is more useful than promising and failing.\"", "es": "«Eso es más útil que prometer y fallar.»" },
+        { "en": "\"What would you say is your greatest strength?\"", "es": "«¿Cuál diría que es su mayor punto fuerte?»", "paragraph": true },
+        { "en": "\"I ask questions when I don't understand something.\"", "es": "«Pregunto cuando no entiendo algo.»" },
+        { "en": "\"It sounds small, but it saves weeks.\"", "es": "«Suena a poco, pero ahorra semanas.»" },
+        { "en": "\"Good answer. We'll be in touch this week.\"", "es": "«Buena respuesta. Le escribiremos esta semana.»", "paragraph": true },
+        { "en": "\"Thank you. I look forward to hearing from you.\"", "es": "«Gracias. Quedo a la espera de su respuesta.»" }
+      ]
+    },
+    {
+      "id": "r_b2_ciudad",
+      "title": "La ciudad que aprendió a caminar",
+      "level": "B2",
+      "category": "ARTICLE",
+      "summary": "Artículo divulgativo sobre urbanismo. Pasiva, conectores y vocabulario formal.",
+      "glossary": [
+        { "en": "pedestrian", "es": "peatón" },
+        { "en": "traffic", "es": "tráfico" },
+        { "en": "to reclaim", "es": "recuperar" },
+        { "en": "resident", "es": "vecino, residente" },
+        { "en": "measure", "es": "medida" },
+        { "en": "outcome", "es": "resultado" },
+        { "en": "widespread", "es": "generalizado" }
+      ],
+      "sentences": [
+        { "en": "Forty years ago, the old centre of Pontevedra belonged to cars.", "es": "Hace cuarenta años, el casco antiguo de Pontevedra era de los coches.", "paragraph": true },
+        { "en": "Traffic filled every street, and the air was heavy.", "es": "El tráfico llenaba cada calle y el aire era pesado." },
+        { "en": "Then the city made a decision that seemed extreme at the time.", "es": "Entonces la ciudad tomó una decisión que en su momento pareció extrema." },
+        { "en": "Cars were removed from the historic centre almost entirely.", "es": "Se retiraron los coches del centro histórico casi por completo.", "paragraph": true },
+        { "en": "The measure was widely criticised at first.", "es": "La medida fue ampliamente criticada al principio." },
+        { "en": "Shopkeepers were convinced that they would lose their customers.", "es": "Los comerciantes estaban convencidos de que perderían a sus clientes." },
+        { "en": "The opposite happened.", "es": "Ocurrió lo contrario." },
+        { "en": "Streets that had been parking spaces were reclaimed by residents.", "es": "Calles que habían sido aparcamiento fueron recuperadas por los vecinos.", "paragraph": true },
+        { "en": "Children began walking to school on their own again.", "es": "Los niños empezaron a ir solos al colegio otra vez." },
+        { "en": "Road deaths in the centre fell to zero.", "es": "Las muertes por atropello en el centro cayeron a cero." },
+        { "en": "The outcome has since been studied by cities across Europe.", "es": "Desde entonces el resultado ha sido estudiado por ciudades de toda Europa.", "paragraph": true },
+        { "en": "Not all of them have been willing to copy it.", "es": "No todas han estado dispuestas a copiarlo." },
+        { "en": "Removing cars is unpopular until it is done.", "es": "Quitar los coches es impopular hasta que se hace." },
+        { "en": "After that, almost nobody asks for them back.", "es": "Después de eso, casi nadie pide que vuelvan." }
+      ]
+    },
+    {
+      "id": "r_c1_carta",
+      "title": "Carta a quien viene detrás",
+      "level": "C1",
+      "category": "LETTER",
+      "summary": "Carta reflexiva. Registro alto, cláusulas de participio y matices.",
+      "glossary": [
+        { "en": "to assume", "es": "dar por hecho" },
+        { "en": "arguably", "es": "se podría argumentar" },
+        { "en": "in hindsight", "es": "visto en retrospectiva" },
+        { "en": "to overestimate", "es": "sobrestimar" },
+        { "en": "worthwhile", "es": "que merece la pena" },
+        { "en": "to settle for", "es": "conformarse con" }
+      ],
+      "sentences": [
+        { "en": "Having spent twenty years doing this work, I want to tell you three things.", "es": "Tras veinte años dedicado a esto, quiero decirte tres cosas.", "paragraph": true },
+        { "en": "The first is that almost nobody knows what they are doing at the start.", "es": "La primera es que casi nadie sabe lo que hace al principio." },
+        { "en": "You will assume that everyone else understood the rules before you arrived.", "es": "Darás por hecho que todos los demás entendieron las reglas antes de que llegaras." },
+        { "en": "They did not.", "es": "No fue así." },
+        { "en": "The second is that we consistently overestimate what can be done in a year.", "es": "La segunda es que sobrestimamos sistemáticamente lo que se puede hacer en un año.", "paragraph": true },
+        { "en": "And we underestimate, badly, what can be done in ten.", "es": "Y subestimamos, y mucho, lo que se puede hacer en diez." },
+        { "en": "In hindsight, the projects that mattered were never the urgent ones.", "es": "Visto en retrospectiva, los proyectos que importaron nunca fueron los urgentes." },
+        { "en": "The third is arguably the hardest to accept.", "es": "La tercera es posiblemente la más difícil de aceptar.", "paragraph": true },
+        { "en": "Being good at something is not the same as it being worthwhile.", "es": "Ser bueno en algo no es lo mismo que valga la pena." },
+        { "en": "It is entirely possible to spend a career becoming excellent at the wrong thing.", "es": "Es perfectamente posible pasarse una carrera volviéndose excelente en lo que no toca." },
+        { "en": "Do not settle for that simply because you are already good at it.", "es": "No te conformes con eso solo porque ya se te da bien.", "paragraph": true },
+        { "en": "You have more time than you think, and less than you would like.", "es": "Tienes más tiempo del que crees, y menos del que te gustaría." }
+      ]
+    }
+  ]
+}
