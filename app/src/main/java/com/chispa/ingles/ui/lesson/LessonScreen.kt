@@ -80,6 +80,18 @@ fun LessonScreen(
         if (granted) viewModel.startListening() else viewModel.reportMicPermissionDenied()
     }
 
+    // Plan B: el diálogo de voz del propio Android. Es una Activity aparte, no
+    // el servicio enlazado, y funciona en móviles donde el primero falla.
+    val systemDialog = rememberLauncherForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        val dicho = result.data
+            ?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS)
+            ?.filter { it.isNotBlank() }
+            .orEmpty()
+        viewModel.evaluateFromSystemDialog(dicho)
+    }
+
     BackHandler(enabled = state.phase != SessionPhase.FINISHED) {
         if (state.index == 0 && state.correctCount == 0) onExit() else showQuitDialog = true
     }
@@ -158,6 +170,9 @@ fun LessonScreen(
                                 } else {
                                     micPermission.launch(android.Manifest.permission.RECORD_AUDIO)
                                 }
+                            },
+                            onUseSystemDialog = {
+                                runCatching { systemDialog.launch(viewModel.systemDialogIntent()) }
                             }
                         )
                     }

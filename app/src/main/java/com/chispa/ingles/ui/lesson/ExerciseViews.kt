@@ -57,6 +57,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.chispa.ingles.data.content.Exercise
 import com.chispa.ingles.speech.SpeechState
+import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.ChispaMascot
 import com.chispa.ingles.ui.components.MascotMood
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
@@ -66,14 +67,16 @@ fun ExerciseView(
     exercise: Exercise,
     state: LessonUiState,
     viewModel: LessonViewModel,
-    onRequestMic: () -> Unit
+    onRequestMic: () -> Unit,
+    onUseSystemDialog: () -> Unit
 ) {
     when (exercise) {
         is Exercise.MultipleChoice -> MultipleChoiceView(exercise, state, viewModel)
         is Exercise.Translate -> TranslateView(exercise, state, viewModel)
         is Exercise.ListenAndType -> ListenAndTypeView(exercise, state, viewModel)
         is Exercise.WordOrder -> WordOrderView(exercise, state, viewModel)
-        is Exercise.SpeakAndRepeat -> SpeakAndRepeatView(exercise, state, viewModel, onRequestMic)
+        is Exercise.SpeakAndRepeat ->
+            SpeakAndRepeatView(exercise, state, viewModel, onRequestMic, onUseSystemDialog)
         is Exercise.MatchingPairs -> MatchingPairsView(exercise, state, viewModel)
         is Exercise.FillInBlank -> FillInBlankView(exercise, state, viewModel)
         is Exercise.Tip -> TipView(exercise, viewModel)
@@ -294,7 +297,8 @@ private fun SpeakAndRepeatView(
     exercise: Exercise.SpeakAndRepeat,
     state: LessonUiState,
     viewModel: LessonViewModel,
-    onRequestMic: () -> Unit
+    onRequestMic: () -> Unit,
+    onUseSystemDialog: () -> Unit
 ) {
     val colors = ChispaThemeTokens.colors
     val amplitude by viewModel.speechRecognizer.amplitude.collectAsState()
@@ -407,9 +411,26 @@ private fun SpeakAndRepeatView(
                     textAlign = TextAlign.Center
                 )
                 Spacer(Modifier.height(12.dp))
+
+                // Plan B: el asistente de voz del propio Android. Es otra vía
+                // distinta a la que acaba de fallar, y en la mayoría de móviles
+                // funciona aunque el servicio enlazado no.
+                val sugerirAsistente = (state.speech as? SpeechState.Error)?.suggestSystemDialog == true
+                if (sugerirAsistente) {
+                    ChispaButton(
+                        text = "Usar el asistente de voz",
+                        icon = Icons.Filled.Mic,
+                        container = colors.xp,
+                        contentColor = Color.White,
+                        height = 48.dp,
+                        onClick = onUseSystemDialog
+                    )
+                    Spacer(Modifier.height(6.dp))
+                }
+
                 Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     TextButton(onClick = { abrirAjustesDeVoz(context) }) {
-                        Text("Abrir ajustes de voz")
+                        Text("Ajustes de voz")
                     }
                     TextButton(onClick = { viewModel.markSpokenManually() }) {
                         Text("Lo dije bien, seguir")

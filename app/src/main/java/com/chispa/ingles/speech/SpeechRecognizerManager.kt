@@ -54,6 +54,8 @@ class SpeechRecognizerManager(private val context: Context) {
     private var currentAccent: Accent = Accent.US
     /** true si el intento actual pidió modo sin conexión y aún no se ha reintentado. */
     private var triedOffline = false
+    /** Evita reintentar en bucle si el servicio se cae una y otra vez. */
+    private var retriedAfterDisconnect = false
 
     fun isAvailable(): Boolean =
         runCatching { SpeechRecognizer.isRecognitionAvailable(context) }.getOrDefault(false)
@@ -69,6 +71,7 @@ class SpeechRecognizerManager(private val context: Context) {
     fun start(accent: Accent) {
         currentAccent = accent
         triedOffline = false
+        retriedAfterDisconnect = false
         launchRecognition(accent, preferOffline = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S)
     }
 
@@ -82,16 +85,19 @@ class SpeechRecognizerManager(private val context: Context) {
             return
         }
 
-        cancelInternal()
+        clearWatchdog()
+        _amplitude.value = 0f
         triedOffline = preferOffline
 
-        val engine = runCatching { SpeechRecognizer.createSpeechRecognizer(context) }.getOrNull()
+        // Una sola instancia para toda la vida del gestor. Crear y destruir un
+        // SpeechRecognizer en cada intento es lo que provoca el ERROR_SERVER_DISCONNECTED
+        // (código 11) en muchos móviles: el servicio no da abasto a reconectarse.
+        val engine = ensureRecognizer()
         if (engine == null) {
             _state.value = SpeechState.Error("No se pudo iniciar el motor de voz de tu dispositivo")
             return
         }
-        recognizer = engine
-        engine.setRecognitionListener(listener)
+        runCatching { engine.cancel() }
 
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
@@ -186,6 +192,20 @@ class SpeechRecognizerManager(private val context: Context) {
             _amplitude.value = 0f
             clearWatchdog()
 
+            // Código 11: el servicio de voz se cayó. La instancia actual ya no
+            // vale; hay que tirarla y crear otra, pero dándole un respiro al
+            // sistema para relevantar el servicio. Sin esa pausa vuelve a fallar.
+            if (error == ERROR_SERVER_DISCONNECTED && !retriedAfterDisconnect) {
+                Log.i(TAG, "Servicio de voz desconectado; reintento tras una pausa")
+                retriedAfterDisconnect = true
+                releaseEngine()
+                handler.postDelayed(
+                    { launchRecognition(currentAccent, preferOffline = false) },
+                    RECONNECT_DELAY_MS
+                )
+                return
+            }
+
             // Estos errores significan "no tengo ese idioma disponible aquí".
             // Si veníamos de exigir modo sin conexión, reintentamos con el normal.
             val esFaltaDeIdioma = error in LANGUAGE_ERRORS ||
@@ -195,9 +215,6 @@ class SpeechRecognizerManager(private val context: Context) {
 
             if (esFaltaDeIdioma && triedOffline) {
                 Log.i(TAG, "Error $error en modo offline; reintento en modo normal")
-                // El motor ya ha fallado: soltarlo sin `cancel()`. Llamar a cancel
-                // sobre un servicio caído solo genera "not connected" en el log.
-                releaseEngine()
                 launchRecognition(currentAccent, preferOffline = false)
                 return
             }
@@ -207,9 +224,10 @@ class SpeechRecognizerManager(private val context: Context) {
                 SpeechRecognizer.ERROR_NO_MATCH,
                 SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> SpeechState.NoMatch
                 SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> SpeechState.PermissionNeeded
-                SpeechRecognizer.ERROR_RECOGNIZER_BUSY ->
-                    SpeechState.Error("El micrófono lo está usando otra app. Ciérrala e inténtalo otra vez.")
-                else -> SpeechState.Error(describe(error))
+                else -> SpeechState.Error(
+                    message = describe(error),
+                    suggestSystemDialog = error in ACTIVITY_FALLBACK_ERRORS
+                )
             }
         }
 
@@ -220,7 +238,7 @@ class SpeechRecognizerManager(private val context: Context) {
                 ?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
                 ?.filter { it.isNotBlank() }
                 .orEmpty()
-            releaseEngine()
+            // No se destruye el motor: se reutiliza en el siguiente ejercicio.
             _state.value = if (hypotheses.isEmpty()) SpeechState.NoMatch
             else SpeechState.Result(hypotheses)
         }
@@ -271,29 +289,71 @@ class SpeechRecognizerManager(private val context: Context) {
         _state.value = SpeechState.Idle
     }
 
+    /**
+     * Crea el reconocedor la primera vez y lo reutiliza siempre. Solo se
+     * destruye al cerrar la pantalla.
+     */
+    private fun ensureRecognizer(): SpeechRecognizer? {
+        recognizer?.let { return it }
+        val engine = runCatching { SpeechRecognizer.createSpeechRecognizer(context) }.getOrNull()
+            ?: return null
+        engine.setRecognitionListener(listener)
+        recognizer = engine
+        return engine
+    }
+
     private fun cancelInternal() {
+        clearWatchdog()
+        runCatching { recognizer?.cancel() }
+        _amplitude.value = 0f
+    }
+
+    /**
+     * Tira la instancia actual. Solo se usa cuando el servicio ya se ha caído
+     * y hay que empezar de cero, o al destruir la pantalla.
+     */
+    private fun releaseEngine() {
+        runCatching { recognizer?.destroy() }
+        recognizer = null
+    }
+
+    /** Suelta el motor del todo. Llamar al salir de la pantalla. */
+    fun release() {
         clearWatchdog()
         runCatching { recognizer?.cancel() }
         releaseEngine()
         _amplitude.value = 0f
     }
 
-    private fun releaseEngine() {
-        runCatching { recognizer?.destroy() }
-        recognizer = null
-    }
-
+    /**
+     * Mensaje para cada código de error del estándar. Se listan todos a
+     * propósito: un "no se pudo reconocer el audio" genérico no le dice nada
+     * al usuario ni sirve para diagnosticar nada.
+     */
     private fun describe(error: Int): String = when (error) {
-        SpeechRecognizer.ERROR_AUDIO -> "Problema al leer el micrófono"
-        SpeechRecognizer.ERROR_CLIENT -> "El motor de voz se cerró solo"
-        SpeechRecognizer.ERROR_NETWORK,
-        SpeechRecognizer.ERROR_NETWORK_TIMEOUT ->
-            "Tu motor de voz necesita conexión y no la tiene. Descarga el inglés " +
+        SpeechRecognizer.ERROR_NETWORK_TIMEOUT,
+        SpeechRecognizer.ERROR_NETWORK ->
+            "Tu motor de voz quiere conexión y no la tiene. Instala el inglés " +
                 "para uso sin conexión en los ajustes de voz de Android."
-        SpeechRecognizer.ERROR_SERVER -> "El motor de voz del sistema falló"
+        SpeechRecognizer.ERROR_AUDIO ->
+            "No se pudo leer el micrófono. Comprueba que ninguna otra app lo esté usando."
+        SpeechRecognizer.ERROR_SERVER ->
+            "El motor de voz del sistema devolvió un error."
+        SpeechRecognizer.ERROR_CLIENT ->
+            "El motor de voz se cerró solo. Prueba con el asistente de voz del sistema."
+        SpeechRecognizer.ERROR_RECOGNIZER_BUSY ->
+            "El micrófono lo está usando otra app. Ciérrala e inténtalo otra vez."
+        ERROR_TOO_MANY_REQUESTS ->
+            "Demasiados intentos seguidos. Espera unos segundos y vuelve a probar."
+        ERROR_SERVER_DISCONNECTED ->
+            "El servicio de voz de tu móvil se desconectó. Prueba con el asistente del sistema."
         ERROR_LANGUAGE_NOT_SUPPORTED, ERROR_LANGUAGE_UNAVAILABLE ->
-            "Tu dispositivo no tiene el idioma inglés para reconocimiento de voz."
-        else -> "No se pudo reconocer el audio (código $error)"
+            "Tu dispositivo no tiene instalado el inglés para reconocimiento de voz."
+        ERROR_CANNOT_CHECK_SUPPORT ->
+            "Tu móvil no pudo comprobar qué idiomas tiene disponibles."
+        ERROR_CANNOT_LISTEN_TO_DOWNLOAD_EVENTS ->
+            "Tu móvil está descargando el idioma. Espera un momento y reinténtalo."
+        else -> "El motor de voz falló (código $error)"
     }
 
     companion object {
@@ -305,17 +365,45 @@ class SpeechRecognizerManager(private val context: Context) {
         private const val WATCHDOG_SPEAKING_MS = 15_000L
         /** Margen para que devuelva resultados tras dejar de hablar. */
         private const val WATCHDOG_PROCESSING_MS = 10_000L
+        /** Pausa antes de reconectar cuando el servicio se cae (código 11). */
+        private const val RECONNECT_DELAY_MS = 500L
 
-        // Constantes de API 33+ escritas a mano para no romper minSdk 24.
+        // Constantes de API 31/33+ escritas a mano para no romper minSdk 24.
+        private const val ERROR_TOO_MANY_REQUESTS = 10
+        private const val ERROR_SERVER_DISCONNECTED = 11
         private const val ERROR_LANGUAGE_NOT_SUPPORTED = 12
         private const val ERROR_LANGUAGE_UNAVAILABLE = 13
         private const val ERROR_CANNOT_CHECK_SUPPORT = 14
+        private const val ERROR_CANNOT_LISTEN_TO_DOWNLOAD_EVENTS = 15
 
         private val LANGUAGE_ERRORS = setOf(
             ERROR_LANGUAGE_NOT_SUPPORTED,
             ERROR_LANGUAGE_UNAVAILABLE,
+            ERROR_CANNOT_CHECK_SUPPORT,
+            ERROR_CANNOT_LISTEN_TO_DOWNLOAD_EVENTS
+        )
+
+        /**
+         * Errores en los que el servicio enlazado no sirve, pero el asistente
+         * de voz del sistema (una Activity aparte) suele funcionar igualmente.
+         */
+        val ACTIVITY_FALLBACK_ERRORS = setOf(
+            SpeechRecognizer.ERROR_CLIENT,
+            SpeechRecognizer.ERROR_SERVER,
+            ERROR_SERVER_DISCONNECTED,
+            ERROR_LANGUAGE_NOT_SUPPORTED,
+            ERROR_LANGUAGE_UNAVAILABLE,
             ERROR_CANNOT_CHECK_SUPPORT
         )
+
+        /** Intent para abrir el diálogo de voz del sistema, como plan B. */
+        fun systemDialogIntent(accent: Accent, prompt: String): Intent =
+            Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                putExtra(RecognizerIntent.EXTRA_LANGUAGE, "${accent.language}-${accent.country}")
+                putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5)
+                putExtra(RecognizerIntent.EXTRA_PROMPT, prompt)
+            }
     }
 }
 
@@ -327,5 +415,14 @@ sealed interface SpeechState {
     data object NoMatch : SpeechState
     data object PermissionNeeded : SpeechState
     data object Unavailable : SpeechState
-    data class Error(val message: String) : SpeechState
+
+    /**
+     * @param suggestSystemDialog true si merece la pena ofrecer el asistente de
+     *   voz del sistema: el servicio enlazado no sirve en este móvil, pero la
+     *   Activity de reconocimiento casi siempre sí.
+     */
+    data class Error(
+        val message: String,
+        val suggestSystemDialog: Boolean = true
+    ) : SpeechState
 }

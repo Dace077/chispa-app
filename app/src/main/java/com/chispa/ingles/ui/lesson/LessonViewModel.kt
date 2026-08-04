@@ -15,6 +15,7 @@ import com.chispa.ingles.data.repo.SessionOutcome
 import com.chispa.ingles.domain.AnswerChecker
 import com.chispa.ingles.speech.SpeechRecognizerManager
 import com.chispa.ingles.speech.SpeechState
+import android.speech.RecognizerIntent
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -406,6 +407,32 @@ class LessonViewModel(
         _state.value = _state.value.copy(speech = SpeechState.PermissionNeeded)
     }
 
+    /** Intent para abrir el asistente de voz del sistema como plan B. */
+    fun systemDialogIntent(): android.content.Intent =
+        SpeechRecognizerManager.systemDialogIntent(
+            accent = _state.value.accent,
+            prompt = (_state.value.current as? Exercise.SpeakAndRepeat)?.phrase.orEmpty()
+        )
+
+    /**
+     * Resultado del asistente de voz del sistema. Se evalúa igual que el del
+     * reconocedor propio: al usuario le da lo mismo por qué camino llegó.
+     */
+    fun evaluateFromSystemDialog(hypotheses: List<String>) {
+        val exercise = _state.value.current as? Exercise.SpeakAndRepeat ?: return
+        speechRecognizer.reset()
+        if (hypotheses.isEmpty()) {
+            _state.value = _state.value.copy(speech = SpeechState.NoMatch)
+            return
+        }
+        val score = AnswerChecker.speechSimilarity(hypotheses, exercise.phrase)
+        _state.value = _state.value.copy(
+            speech = SpeechState.Result(hypotheses),
+            speechScore = score
+        )
+        submitSpeech(score >= AnswerChecker.SPEECH_PASS_THRESHOLD, score)
+    }
+
     /**
      * Salida de emergencia: si el motor de voz del dispositivo no funciona,
      * el usuario marca que lo dijo bien y sigue. Vale como acierto pero no
@@ -691,7 +718,8 @@ class LessonViewModel(
 
     override fun onCleared() {
         super.onCleared()
-        speechRecognizer.stop()
+        // Aquí sí se destruye el motor de voz: la pantalla se va.
+        speechRecognizer.release()
         locator.tts.stop()
     }
 
