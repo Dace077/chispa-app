@@ -49,6 +49,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -75,6 +76,15 @@ fun ReaderScreen(readingId: String, onBack: () -> Unit) {
         state.hablando?.let { indice ->
             runCatching { listState.animateScrollToItem(indice, scrollOffset = -240) }
         }
+    }
+
+    // Orden estable de aparición: así cada personaje conserva su color aunque
+    // uno de ellos hable mucho más que el otro.
+    val hablantes = androidx.compose.runtime.remember(state.reading) {
+        state.reading?.sentences.orEmpty()
+            .map { it.speaker }
+            .filter { it.isNotEmpty() }
+            .distinct()
     }
 
     val reading = state.reading
@@ -139,11 +149,25 @@ fun ReaderScreen(readingId: String, onBack: () -> Unit) {
         ) {
             itemsIndexed(reading.sentences, key = { _, s -> s.index }) { indice, frase ->
                 if (frase.startsParagraph && indice > 0) Spacer(Modifier.height(18.dp))
+
+                // En un diálogo el nombre solo se repite cuando cambia el turno:
+                // así se lee como un guion y no como una lista de etiquetas.
+                val hablanteAnterior = reading.sentences.getOrNull(indice - 1)?.speaker.orEmpty()
+                if (frase.speaker.isNotEmpty() && frase.speaker != hablanteAnterior) {
+                    if (indice > 0) Spacer(Modifier.height(12.dp))
+                    SpeakerLabel(
+                        nombre = frase.speaker,
+                        color = colorDeHablante(frase.speaker, hablantes)
+                    )
+                }
+
                 SentenceBlock(
                     sentence = frase,
                     sonando = state.hablando == indice,
                     rangoPalabra = if (state.hablando == indice) state.palabra else null,
                     traduccionVisible = state.mostrarTodasLasTraducciones || indice in state.traducidas,
+                    colorHablante = if (frase.speaker.isEmpty()) null
+                    else colorDeHablante(frase.speaker, hablantes),
                     onTapFrase = { viewModel.alternarTraduccion(indice) },
                     onTapAltavoz = { viewModel.leerFrase(indice) },
                     onTapPalabra = viewModel::tocarPalabra
@@ -282,6 +306,7 @@ private fun SentenceBlock(
     sonando: Boolean,
     rangoPalabra: IntRange?,
     traduccionVisible: Boolean,
+    colorHablante: Color?,
     onTapFrase: () -> Unit,
     onTapAltavoz: () -> Unit,
     onTapPalabra: (String) -> Unit
@@ -296,7 +321,20 @@ private fun SentenceBlock(
                 if (sonando) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                 else Color.Transparent
             )
-            .padding(vertical = 6.dp, horizontal = 8.dp)
+            // En los diálogos, una barra del color de quien habla marca el turno
+            // sin robar espacio al texto.
+            .then(
+                if (colorHablante != null) Modifier.drawBehind {
+                    drawRect(
+                        color = colorHablante.copy(alpha = 0.55f),
+                        size = androidx.compose.ui.geometry.Size(3.dp.toPx(), size.height)
+                    )
+                } else Modifier
+            )
+            .padding(
+                start = if (colorHablante != null) 14.dp else 8.dp,
+                end = 8.dp, top = 6.dp, bottom = 6.dp
+            )
     ) {
         Row(verticalAlignment = Alignment.Top) {
             Box(Modifier.weight(1f)) {
@@ -339,14 +377,59 @@ private fun SentenceBlock(
             enter = expandVertically() + fadeIn(),
             exit = shrinkVertically() + fadeOut()
         ) {
-            Text(
-                sentence.es,
-                style = MaterialTheme.typography.bodyMedium,
-                color = colors.correct,
-                modifier = Modifier.padding(top = 4.dp, end = 32.dp)
-            )
+            Column(Modifier.padding(top = 4.dp, end = 32.dp)) {
+                Text(
+                    sentence.es,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = colors.correct
+                )
+                // La nota va junto a la traducción y no siempre visible: se pide
+                // cuando no entiendes algo, que es justo cuando hace falta.
+                if (sentence.note.isNotEmpty()) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        "💡 ${sentence.note}",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
         }
     }
+}
+
+@Composable
+private fun SpeakerLabel(nombre: String, color: Color) {
+    Row(
+        modifier = Modifier.padding(start = 8.dp, bottom = 2.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            Modifier
+                .size(8.dp)
+                .clip(CircleShape)
+                .background(color)
+        )
+        Spacer(Modifier.width(6.dp))
+        Text(
+            nombre.uppercase(),
+            style = MaterialTheme.typography.labelSmall,
+            color = color,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}
+
+/**
+ * Color estable por personaje. Si hay más hablantes que colores, se repiten:
+ * con tres o cuatro turnos alternos ya se distinguen por posición y nombre.
+ */
+@Composable
+private fun colorDeHablante(nombre: String, orden: List<String>): Color {
+    val colors = ChispaThemeTokens.colors
+    val paleta = listOf(colors.levelB1, colors.levelA2, colors.levelC1, colors.levelB2)
+    val posicion = orden.indexOf(nombre).coerceAtLeast(0)
+    return paleta[posicion % paleta.size]
 }
 
 /**

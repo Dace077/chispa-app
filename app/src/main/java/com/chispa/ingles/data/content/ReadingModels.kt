@@ -36,7 +36,15 @@ data class SentenceJson(
     val en: String,
     val es: String,
     /** true para cortar párrafo antes de esta frase. */
-    val paragraph: Boolean = false
+    val paragraph: Boolean = false,
+    /** Quién habla. Solo en diálogos; vacío en relatos y artículos. */
+    val speaker: String = "",
+    /**
+     * Lo que de verdad se está diciendo. En una conversación real la mitad del
+     * significado no está en las palabras: "that's interesting" puede ser un
+     * no. La traducción sola no lo enseña; esta nota sí.
+     */
+    val note: String = ""
 )
 
 /* ---------------------------- Modelo de dominio ------------------------- */
@@ -64,7 +72,9 @@ data class Sentence(
     val index: Int,
     val en: String,
     val es: String,
-    val startsParagraph: Boolean
+    val startsParagraph: Boolean,
+    val speaker: String = "",
+    val note: String = ""
 )
 
 enum class ReadingCategory(val label: String, val emoji: String) {

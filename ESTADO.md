@@ -2,7 +2,7 @@
 
 > Archivo de traspaso. Si abres un chat nuevo, **lee esto primero**: contiene
 > el estado real del proyecto, las decisiones ya tomadas y lo que estaba a
-> medias. Última actualización: **4 de agosto de 2026, versión 1.6.0**.
+> medias. Última actualización: **4 de agosto de 2026, versión 1.7.0**.
 
 ---
 
@@ -14,8 +14,8 @@ técnicamente incapaz de conectarse; esa es la garantía de privacidad).
 
 - **Repositorio**: https://github.com/Dace077/chispa-app (público)
 - **Descarga**: https://github.com/Dace077/chispa-app/releases/download/v1.0.0/chispa-1.0.0.apk
-- **Versión publicada**: 1.6.0 (versionCode 10)
-- **Tamaño**: 1,95 MB
+- **Versión publicada**: 1.7.0 (versionCode 11)
+- **Tamaño**: 1,97 MB
 - **Cuenta GitHub del usuario**: `Dace077` (sesión de `gh` ya iniciada en la máquina)
 
 ⚠️ **El archivo del release se sigue llamando `chispa-1.0.0.apk` y la etiqueta
@@ -71,8 +71,19 @@ También existe `PUBLICAR.ps1`, que hace todo esto de golpe.
 Extras: modismos, slang, business, travel, pronunciación, listening, historias
 y notas culturales.
 
-**Biblioteca de lectura (pestaña «Leer»)**: 15 lecturas — A1×3, A2×3, B1×3,
-B2×2, C1×2, C2×2. Está en `assets/content/readings.json`.
+**Biblioteca de lectura (pestaña «Leer»)**: 21 lecturas — A1×4, A2×5, B1×4,
+B2×3, C1×3, C2×2. Está en `assets/content/readings.json`.
+
+Seis de ellas son **conversaciones largas** con turnos de habla: cada frase
+lleva `speaker` y el lector pinta el nombre y una barra de color cuando cambia
+el turno. Algunas frases llevan además `note`, que explica lo que de verdad se
+está diciendo («a stretch» significa imposible) y aparece junto a la traducción,
+no siempre, porque estorba cuando no hace falta.
+
+⚠️ Al añadirlas se descubrió que las tres conversaciones antiguas metían las
+comillas dentro del campo `en`, así que la primera y la última palabra de cada
+frase se quedaban pegadas a un `"` y **no se podían consultar tocándolas**.
+Están corregidas. No volver a meter comillas en `en`: para eso está `speaker`.
 
 **Guía de gramática** (se entra desde la tarjeta de arriba de «Leer»): 25 temas —
 A1×5, A2×5, B1×6, B2×4, C1×3, C2×2. Está en `assets/content/grammar.json`.
@@ -180,8 +191,8 @@ y no se pueden redistribuir**. Lo viable es servir contenido propio.
 | Función | Estado |
 |---|---|
 | Lectura bilingüe con audio sincronizado | ✅ **Hecha** en 1.5.0 |
-| Aprender leyendo contenido real | ⚠️ A medias: 15 lecturas graduadas propias (1.6.0). Noticias y podcasts reales siguen descartados por derechos y por tamaño |
-| Explica gramática y conversaciones reales | ⚠️ Gramática ✅ **hecha** en 1.6.0 (25 temas consultables). Faltan los **diálogos largos** |
+| Aprender leyendo contenido real | ⚠️ A medias: 21 lecturas graduadas propias (1.7.0). Noticias y podcasts reales siguen descartados por derechos y por tamaño |
+| Explica gramática y conversaciones reales | ✅ **Hecha**. Gramática en 1.6.0 (25 temas consultables) y 6 conversaciones largas con turnos y notas de registro en 1.7.0 |
 | Vídeos de personas reales | ❌ **Descartado y explicado**. Un minuto de vídeo pesa 3-5 veces más que toda la app. Alternativa propuesta: módulo de *shadowing* con voz a velocidad natural, contracciones habladas y acentos |
 
 ---
@@ -190,9 +201,6 @@ y no se pueden redistribuir**. Lo viable es servir contenido propio.
 
 - **Repetir el test de nivel** sin reiniciar el progreso (hoy solo sale la
   primera vez). Se le ofreció y no contestó.
-- **Diálogos largos** (la mitad pendiente de la función «gramática y
-  conversaciones reales»). Encajan como una categoría más de `readings.json`:
-  `DIALOGUE` ya existe y el lector los pinta bien.
 - Enlazar cada lección con su tema de gramática: hoy la guía solo se alcanza
   desde «Leer», y el momento en que hace falta es dentro de una lección.
 - Más lecturas por nivel: hay 2-3 de cada, da para muchas más.

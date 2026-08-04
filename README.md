@@ -54,9 +54,18 @@ La app usa el motor de voz que ya trae tu Android. Si no oyes nada:
 **Total: 29 unidades · 93 lecciones · 922 ejercicios · ~960 palabras y frases.**
 
 ### 📖 Biblioteca de lectura
-15 textos originales graduados de A1 a C2 —relatos, artículos, diálogos y cartas—
+21 textos originales graduados de A1 a C2 —relatos, artículos, diálogos y cartas—
 con la traducción frase a frase y la voz señalando cada palabra mientras suena.
 Tocas una palabra y te dice qué significa; si quieres, se va a tu repaso.
+
+### 💬 Conversaciones reales
+6 conversaciones largas de situaciones que vas a vivir: pedir en una cafetería,
+explicar un dolor en la farmacia, llamar al casero por una avería, reclamar un
+pedido roto, hablar con desconocidos en una fiesta y discrepar con tu jefa.
+
+Cada turno lleva el nombre de quien habla, y las frases donde el inglés dice una
+cosa y significa otra llevan una nota que lo explica. Porque *"that would be a
+stretch"* no significa que sea difícil: significa que no.
 
 ### 📐 Guía de gramática
 25 temas consultables en cualquier momento, de A1 a C2, buscables y filtrables por

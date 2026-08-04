@@ -117,6 +117,14 @@ if (Test-Path $rutaLecturas) {
             $i++
         }
 
+        # Un dialogo puro sin hablantes se pinta como un relato y se pierde quien
+        # dice que. No se exige que TODAS las frases lleven speaker: un relato
+        # con dialogo intercalado es una forma valida y comun.
+        $conHablante = @($r.sentences | Where-Object { $_.speaker }).Count
+        if ($r.category -eq 'DIALOGUE' -and $conHablante -eq 0) {
+            Bad 'readings.json' $id 0 'reading' 'categoria DIALOGUE pero ninguna frase tiene speaker'
+        }
+
         $g = 0
         foreach ($w in $r.glossary) {
             if (-not $w.en -or -not $w.en.Trim()) { Bad 'readings.json' $id $g 'glossary' 'entrada sin ingles' }

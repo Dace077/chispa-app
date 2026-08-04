@@ -181,7 +181,9 @@ private fun ReadingJson.toDomain(): Reading? {
                 index = index,
                 en = s.en.trim(),
                 es = s.es.trim(),
-                startsParagraph = s.paragraph
+                startsParagraph = s.paragraph,
+                speaker = s.speaker.trim(),
+                note = s.note.trim()
             )
         }
     if (frases.isEmpty()) return null
