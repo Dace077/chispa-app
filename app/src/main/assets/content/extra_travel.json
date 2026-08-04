@@ -1,0 +1,413 @@
+{
+  "id": "extra_travel",
+  "title": "Travel English",
+  "category": "extra",
+  "icon": "travel",
+  "unlockXp": 150,
+  "description": "Aeropuerto, hotel, restaurante y emergencias. Lo que necesitas el primer día fuera.",
+  "units": [
+    {
+      "id": "travel_u1",
+      "level": "Extra",
+      "title": "Sobrevivir fuera",
+      "subtitle": "Frases exactas para cada situación de viaje",
+      "icon": "travel",
+      "lessons": [
+        {
+          "id": "travel_l1",
+          "title": "En el aeropuerto",
+          "vocab": [
+            { "en": "check-in desk", "es": "mostrador de facturación" },
+            { "en": "boarding pass", "es": "tarjeta de embarque" },
+            { "en": "carry-on", "es": "equipaje de mano" },
+            { "en": "checked bag", "es": "maleta facturada" },
+            { "en": "security check", "es": "control de seguridad" },
+            { "en": "departure", "es": "salida" },
+            { "en": "arrival", "es": "llegada" },
+            { "en": "connecting flight", "es": "vuelo de conexión" },
+            { "en": "baggage claim", "es": "recogida de equipajes" },
+            { "en": "aisle seat", "es": "asiento de pasillo", "ipa": "/aɪl/", "note": "La 's' es muda" },
+            { "en": "window seat", "es": "asiento de ventanilla" },
+            { "en": "layover", "es": "escala" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Las tres preguntas que te harán siempre",
+              "body": "En cualquier aeropuerto anglosajón te preguntarán casi lo mismo: '¿Window or aisle?' (¿ventanilla o pasillo?), 'Any bags to check?' (¿maletas para facturar?) y 'What's the purpose of your visit?' en inmigración. Respuestas seguras: 'Aisle, please', 'Just this carry-on' y 'Tourism' o 'Business'. Con eso pasas el 90% de los trámites.",
+              "examples": [
+                { "en": "Window or aisle?", "es": "¿Ventanilla o pasillo?" },
+                { "en": "Just one carry-on, thanks.", "es": "Solo equipaje de mano, gracias." },
+                { "en": "I'm here on holiday.", "es": "Estoy aquí de vacaciones." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario de aeropuerto",
+              "pairs": [
+                ["boarding pass", "tarjeta de embarque"],
+                ["carry-on", "equipaje de mano"],
+                ["baggage claim", "recogida de equipajes"],
+                ["layover", "escala"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Window or aisle?",
+              "options": [
+                "¿Ventanilla o pasillo?",
+                "¿Ventana abierta o cerrada?",
+                "¿Vas o vuelves?",
+                "¿Con o sin equipaje?"
+              ],
+              "answer": "¿Ventanilla o pasillo?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "What's the purpose of your visit?",
+              "options": [
+                "¿Cuál es el motivo de su viaje?",
+                "¿A quién visita?",
+                "¿Cuánto tiempo se queda?",
+                "¿Dónde se aloja?"
+              ],
+              "answer": "¿Cuál es el motivo de su viaje?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'd like an ___ seat, please.",
+              "answer": "aisle",
+              "options": ["aisle", "window", "middle", "front"],
+              "translation": "Quisiera un asiento de pasillo, por favor."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "My ___ flight leaves in two hours.",
+              "answer": "connecting",
+              "options": ["connecting", "connected", "connection", "connect"],
+              "translation": "Mi vuelo de conexión sale en dos horas."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Dónde está la puerta de embarque doce?",
+              "answer": "Where is gate twelve?",
+              "alternatives": ["Where is gate 12?"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "He perdido mi vuelo de conexión",
+              "words": ["I", "missed", "my", "connecting", "flight"],
+              "answer": "I missed my connecting flight"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Do you have any bags to check?",
+              "answer": "Do you have any bags to check?",
+              "translation": "¿Tiene maletas para facturar?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Excuse me, where is the baggage claim?",
+              "translation": "Disculpe, ¿dónde está la recogida de equipajes?"
+            }
+          ]
+        },
+        {
+          "id": "travel_l2",
+          "title": "En el hotel",
+          "vocab": [
+            { "en": "I have a reservation", "es": "tengo una reserva" },
+            { "en": "single room", "es": "habitación individual" },
+            { "en": "double room", "es": "habitación doble" },
+            { "en": "check-out time", "es": "hora de salida" },
+            { "en": "is breakfast included?", "es": "¿el desayuno está incluido?" },
+            { "en": "the key card", "es": "la tarjeta llave" },
+            { "en": "the air conditioning", "es": "el aire acondicionado" },
+            { "en": "it doesn't work", "es": "no funciona" },
+            { "en": "extra towels", "es": "toallas extra" },
+            { "en": "wake-up call", "es": "llamada para despertar" },
+            { "en": "luggage storage", "es": "consigna de equipaje" },
+            { "en": "could you recommend", "es": "¿podría recomendarme?" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Quejarse en un hotel sin discutir",
+              "body": "Para reportar un problema, la fórmula amable es: 'Excuse me, there seems to be a problem with…'. Usar 'seems' suaviza mucho. Y para pedir algo: 'Would it be possible to…?'. Evita 'I want', que suena exigente. Si algo no funciona: 'The shower isn't working' es neutro y suficiente.",
+              "examples": [
+                { "en": "There seems to be a problem with the heating.", "es": "Parece que hay un problema con la calefacción." },
+                { "en": "Would it be possible to get extra towels?", "es": "¿Sería posible tener toallas extra?" },
+                { "en": "The wifi isn't working in my room.", "es": "El wifi no funciona en mi habitación." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario de hotel",
+              "pairs": [
+                ["single room", "habitación individual"],
+                ["check-out time", "hora de salida"],
+                ["key card", "tarjeta llave"],
+                ["wake-up call", "llamada para despertar"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Is breakfast included?",
+              "options": [
+                "¿El desayuno está incluido?",
+                "¿A qué hora es el desayuno?",
+                "¿Dónde se desayuna?",
+                "¿Quiere desayunar?"
+              ],
+              "answer": "¿El desayuno está incluido?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I have a ___ under the name García.",
+              "answer": "reservation",
+              "options": ["reservation", "reserve", "reserved", "booking room"],
+              "translation": "Tengo una reserva a nombre de García."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The air conditioning doesn't ___.",
+              "answer": "work",
+              "options": ["work", "works", "working", "worked"],
+              "translation": "El aire acondicionado no funciona."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿A qué hora es la salida?",
+              "answer": "What time is check-out?",
+              "alternatives": ["What time is check out?"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "¿Podría recomendarme un buen restaurante?",
+              "words": ["Could", "you", "recommend", "a", "good", "restaurant?"],
+              "answer": "Could you recommend a good restaurant?"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Can I leave my luggage here until five?",
+              "answer": "Can I leave my luggage here until five?",
+              "translation": "¿Puedo dejar mi equipaje aquí hasta las cinco?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Excuse me, there seems to be a problem with my room.",
+              "translation": "Disculpe, parece que hay un problema con mi habitación."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "Would it be possible to get a late check-out?",
+              "answer": "¿Sería posible salir más tarde?"
+            }
+          ]
+        },
+        {
+          "id": "travel_l3",
+          "title": "En el restaurante",
+          "vocab": [
+            { "en": "a table for two", "es": "una mesa para dos" },
+            { "en": "the menu", "es": "la carta" },
+            { "en": "I'd like to order", "es": "quisiera pedir" },
+            { "en": "starter", "es": "entrante" },
+            { "en": "main course", "es": "plato principal" },
+            { "en": "dessert", "es": "postre" },
+            { "en": "the bill", "es": "la cuenta", "note": "En EE. UU. se dice 'the check'" },
+            { "en": "I'm allergic to", "es": "soy alérgico a" },
+            { "en": "rare / medium / well done", "es": "poco hecho / al punto / muy hecho" },
+            { "en": "still or sparkling?", "es": "¿sin gas o con gas?" },
+            { "en": "to go", "es": "para llevar" },
+            { "en": "that was delicious", "es": "estaba delicioso" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "'Menu' no es menú del día",
+              "body": "En inglés 'the menu' es la carta completa, no el menú del día (eso es 'the set menu' o 'the daily special'). Otro falso amigo peligroso: 'entrée' en Estados Unidos es el plato principal, no el entrante. Y para pedir la cuenta, en Reino Unido se dice 'the bill' y en Estados Unidos 'the check'.",
+              "examples": [
+                { "en": "Could I see the menu, please?", "es": "¿Me trae la carta, por favor?" },
+                { "en": "What's the daily special?", "es": "¿Cuál es el menú del día?" },
+                { "en": "Could we have the bill, please?", "es": "¿Nos trae la cuenta, por favor?" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario de restaurante",
+              "pairs": [
+                ["starter", "entrante"],
+                ["main course", "plato principal"],
+                ["dessert", "postre"],
+                ["the bill", "la cuenta"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "How would you like your steak?",
+              "options": [
+                "¿Cómo quiere el filete de hecho?",
+                "¿Le gusta el filete?",
+                "¿Quiere filete?",
+                "¿De qué es el filete?"
+              ],
+              "answer": "¿Cómo quiere el filete de hecho?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Still or sparkling?",
+              "options": [
+                "¿Agua sin gas o con gas?",
+                "¿Todavía o brillante?",
+                "¿Sigue igual o cambió?",
+                "¿Frío o del tiempo?"
+              ],
+              "answer": "¿Agua sin gas o con gas?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'm ___ to nuts, please check the ingredients.",
+              "answer": "allergic",
+              "options": ["allergic", "allergy", "alergic", "allergical"],
+              "translation": "Soy alérgico a los frutos secos, revise los ingredientes por favor."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Could we have a table ___ two, please?",
+              "answer": "for",
+              "options": ["for", "of", "to", "by"],
+              "translation": "¿Nos da una mesa para dos, por favor?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Nos trae la cuenta, por favor?",
+              "answer": "Could we have the bill, please?",
+              "alternatives": ["Can we have the bill please", "Could we have the check please"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Quisiera pedir el plato principal ahora",
+              "words": ["I'd", "like", "to", "order", "the", "main", "course", "now"],
+              "answer": "I'd like to order the main course now"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Is this dish vegetarian?",
+              "answer": "Is this dish vegetarian?",
+              "translation": "¿Este plato es vegetariano?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "That was delicious, thank you very much.",
+              "translation": "Estaba delicioso, muchas gracias."
+            }
+          ]
+        },
+        {
+          "id": "travel_l4",
+          "title": "Emergencias",
+          "vocab": [
+            { "en": "help!", "es": "¡ayuda!" },
+            { "en": "call an ambulance", "es": "llame a una ambulancia" },
+            { "en": "I need a doctor", "es": "necesito un médico" },
+            { "en": "I've lost my passport", "es": "he perdido mi pasaporte" },
+            { "en": "I've been robbed", "es": "me han robado" },
+            { "en": "police station", "es": "comisaría" },
+            { "en": "embassy", "es": "embajada" },
+            { "en": "I don't feel well", "es": "no me encuentro bien" },
+            { "en": "it's an emergency", "es": "es una emergencia" },
+            { "en": "can you help me?", "es": "¿puede ayudarme?" },
+            { "en": "I don't speak English well", "es": "no hablo bien inglés" },
+            { "en": "could you repeat that?", "es": "¿puede repetirlo?" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Las frases que hay que saber de memoria",
+              "body": "En una emergencia no vas a construir frases complejas. Memoriza estas tal cual: 'It's an emergency', 'I need a doctor', 'Call the police', 'I've lost my passport'. Y una que salva conversaciones: 'Sorry, could you speak more slowly?'. El número de emergencias es 911 en EE. UU. y Canadá, 999 en Reino Unido y 112 en toda la Unión Europea.",
+              "examples": [
+                { "en": "It's an emergency, please help.", "es": "Es una emergencia, por favor ayude." },
+                { "en": "Could you speak more slowly?", "es": "¿Podría hablar más despacio?" },
+                { "en": "Where is the nearest hospital?", "es": "¿Dónde está el hospital más cercano?" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las frases de emergencia",
+              "pairs": [
+                ["call an ambulance", "llame a una ambulancia"],
+                ["I've been robbed", "me han robado"],
+                ["police station", "comisaría"],
+                ["embassy", "embajada"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Where is the nearest hospital?",
+              "options": [
+                "¿Dónde está el hospital más cercano?",
+                "¿Cómo se llama el hospital?",
+                "¿El hospital está lejos?",
+                "¿Hay hospital aquí?"
+              ],
+              "answer": "¿Dónde está el hospital más cercano?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I've ___ my passport.",
+              "answer": "lost",
+              "options": ["lost", "lose", "losed", "loosed"],
+              "translation": "He perdido mi pasaporte."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Could you speak more ___, please?",
+              "answer": "slowly",
+              "options": ["slowly", "slow", "slower", "slowest"],
+              "translation": "¿Podría hablar más despacio, por favor?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Necesito un médico, es una emergencia",
+              "answer": "I need a doctor, it's an emergency"
+            },
+            {
+              "type": "word_order",
+              "prompt": "¿Puede ayudarme, por favor?",
+              "words": ["Can", "you", "help", "me,", "please?"],
+              "answer": "Can you help me, please?"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I don't speak English very well",
+              "answer": "I don't speak English very well",
+              "translation": "No hablo inglés muy bien"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Please call the police, it's an emergency.",
+              "translation": "Por favor llame a la policía, es una emergencia."
+            },
+            {
+              "type": "culture_note",
+              "title": "Los números que salvan",
+              "body": "Emergencias: 911 en Estados Unidos y Canadá, 999 en el Reino Unido (aunque el 112 también funciona), 000 en Australia y 111 en Nueva Zelanda. El 112 funciona en toda la Unión Europea y en muchos países más desde cualquier móvil, incluso sin cobertura de tu operador y sin tarjeta SIM. Apúntatelo antes de viajar."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

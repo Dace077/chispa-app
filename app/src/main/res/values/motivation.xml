@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  BANCO DE MENSAJES MOTIVACIONALES DE CHISPA
+  ==========================================
+  Este archivo está separado a propósito: puedes editar, traducir o ampliar
+  los mensajes sin tocar una sola línea de código Kotlin.
+
+  Convención de argumentos de formato:
+    %1$d  -> número de días de racha actual (o días sin entrar, según el array)
+  Los arrays sin %1$d no reciben argumentos.
+
+  Tono: cercano, cálido, divertido, en español de España/LatAm neutro.
+  Nunca culpabilizar al usuario. Nunca usar mayúsculas gritadas.
+-->
+<resources>
+
+    <!-- ================================================================
+         1. RECORDATORIO DIARIO (se dispara a la hora elegida por el usuario
+            si aún no cumplió su meta del día). 32 variantes.
+         ================================================================ -->
+    <string-array name="reminder_daily">
+        <item>Tu racha de %1$d días te espera 🔥</item>
+        <item>5 minutos hoy = un paso más cerca de hablar inglés</item>
+        <item>Chispa te extraña. ¿Practicamos un ratito? 🐦</item>
+        <item>El inglés no se aprende de golpe, se aprende de a poquito. Hoy toca 💪</item>
+        <item>Una lección. Solo una. Y te dejo en paz 😄</item>
+        <item>¿Sabías que 10 minutos diarios superan a 2 horas el domingo?</item>
+        <item>Tu yo del futuro te va a agradecer estos 5 minutos</item>
+        <item>Chispa ya calentó motores. Falta tu turno ⚡</item>
+        <item>Hoy es un buen día para aprender 3 palabras nuevas</item>
+        <item>Vamos por esa meta diaria, que te queda cerquita 🎯</item>
+        <item>Nadie aprendió inglés esperando el lunes perfecto</item>
+        <item>Abre la app, haz una lección, presume mañana</item>
+        <item>Ese vocabulario no se va a memorizar solo 👀</item>
+        <item>Racha de %1$d días. Sería una lástima romperla hoy…</item>
+        <item>Tu cerebro pidió gimnasia. Chispa trajo las pesas 🧠</item>
+        <item>Momento de inglés. Sin excusas, sin drama, sin prisa</item>
+        <item>Practica hoy y mañana entenderás una frase más de tu serie favorita</item>
+        <item>Chispa está dando vueltas alrededor de tu teléfono 🐦💨</item>
+        <item>El progreso aburrido es el que funciona. Hazlo aburrido hoy</item>
+        <item>¿5 minutos? Los tienes. Los dos sabemos que los tienes 😉</item>
+        <item>Constancia &gt; talento. Siempre. Nos vemos en la lección</item>
+        <item>Hoy toca desbloquear algo nuevo. Ven a ver qué es 🔓</item>
+        <item>Ya llegaste hasta aquí. No aflojes justo hoy</item>
+        <item>Las palabras que aprendiste ayer quieren compañía</item>
+        <item>Un ejercicio ahora vale más que diez planeados para mañana</item>
+        <item>Chispa preparó ejercicios frescos, recién hechos ✨</item>
+        <item>Meta diaria pendiente. Y falta poquísimo, en serio</item>
+        <item>Aprender inglés es un maratón, pero hoy solo hay que dar un paso</item>
+        <item>Tu racha de %1$d días tiene hambre. Aliméntala 🔥</item>
+        <item>Deja el scroll infinito 30 segundos. Chispa te espera</item>
+        <item>Hoy: una lección corta. Mañana: presumir en el trabajo</item>
+        <item>Sí, otra vez el recordatorio. Sí, funciona. Ábrelo 😄</item>
+    </string-array>
+
+    <!-- ================================================================
+         2. RACHA EN RIESGO (últimas horas del día, meta sin cumplir).
+            Tono urgente pero nunca agresivo. 12 variantes.
+         ================================================================ -->
+    <string-array name="reminder_streak_risk">
+        <item>¡Tu racha de %1$d días está a punto de romperse! ⏳</item>
+        <item>Quedan pocas horas y tu racha de %1$d días pende de un hilo</item>
+        <item>%1$d días construyendo esto. No lo tires por hoy 🔥</item>
+        <item>Alerta de Chispa: tu racha muere a medianoche 🚨</item>
+        <item>Una lección de 2 minutos salva %1$d días de esfuerzo</item>
+        <item>Últimas horas. Tu racha de %1$d días te está mirando 👀</item>
+        <item>No dejes que %1$d días se vayan por no abrir la app</item>
+        <item>Chispa está nervioso. Tu racha de %1$d días también 😰</item>
+        <item>Rescate exprés: un ejercicio y tu racha sigue viva</item>
+        <item>%1$d días seguidos. Hoy no es el día de parar</item>
+        <item>Reloj corriendo ⏰ Tu racha de %1$d días necesita 2 minutos</item>
+        <item>Antes de dormir: una lección rápida y racha salvada 🌙</item>
+    </string-array>
+
+    <!-- ================================================================
+         3. REPASO ESPACIADO LISTO (el algoritmo detectó tarjetas vencidas).
+            %1$d = cantidad de palabras/frases pendientes. 10 variantes.
+         ================================================================ -->
+    <string-array name="reminder_review">
+        <item>Tienes %1$d palabras listas para repasar 🔁</item>
+        <item>%1$d palabras están a punto de olvidarse. Rescátalas</item>
+        <item>Repaso pendiente: %1$d tarjetas esperando turno</item>
+        <item>Chispa encontró %1$d palabras oxidadas. Vamos a pulirlas ✨</item>
+        <item>Lo que no se repasa se olvida. %1$d palabras te esperan</item>
+        <item>Tu memoria pide refuerzo: %1$d palabras vencidas</item>
+        <item>%1$d palabras en zona de peligro de olvido 🧠</item>
+        <item>Repaso rápido disponible: %1$d tarjetas, 3 minutos</item>
+        <item>Refresca %1$d palabras antes de que se escapen</item>
+        <item>%1$d palabras dicen: acuérdate de mí 🥺</item>
+    </string-array>
+
+    <!-- ================================================================
+         4. RE-ENGANCHE A LOS 3 DÍAS. Suave, sin culpa. 6 variantes.
+         ================================================================ -->
+    <string-array name="reminder_comeback_3">
+        <item>3 días sin vernos. Chispa preguntó por ti 🐦</item>
+        <item>Todo bien, la vida pasa. ¿Retomamos con algo cortito?</item>
+        <item>Tu inglés te espera justo donde lo dejaste</item>
+        <item>Volver es más fácil de lo que crees. Una lección y ya</item>
+        <item>Sin sermones: solo pasaba a decir que aquí seguimos 😊</item>
+        <item>3 días. Nada grave. Empecemos de nuevo hoy</item>
+    </string-array>
+
+    <!-- ================================================================
+         5. RE-ENGANCHE A LOS 7 DÍAS. Un poco más persuasivo. 6 variantes.
+         ================================================================ -->
+    <string-array name="reminder_comeback_7">
+        <item>Una semana fuera. Tu vocabulario empieza a enfriarse 🧊</item>
+        <item>7 días. Chispa guardó tu progreso completito, tranquilo</item>
+        <item>Lo que aprendiste sigue ahí. Solo hay que sacudirle el polvo</item>
+        <item>Reinicia la racha hoy y en 7 días ya tendrás una nueva 🔥</item>
+        <item>El mejor momento para volver fue ayer. El segundo mejor es ahora</item>
+        <item>Una semana sin inglés. Cinco minutos para arreglarlo</item>
+    </string-array>
+
+    <!-- ================================================================
+         6. RE-ENGANCHE A LOS 14 DÍAS. Último empujón, con cariño. 6 variantes.
+         ================================================================ -->
+    <string-array name="reminder_comeback_14">
+        <item>2 semanas. Chispa sigue aquí, sin reproches 🐦💜</item>
+        <item>Nadie te va a juzgar. Solo abre una lección de 2 minutos</item>
+        <item>Tu progreso intacto, esperando. ¿Le damos otra oportunidad?</item>
+        <item>Aprender inglés no tiene fecha límite. Retomar tampoco</item>
+        <item>Última llamada suave: tu meta sigue siendo posible 💜</item>
+        <item>14 días fuera no borran lo que ya sabes. Vuelve cuando quieras</item>
+    </string-array>
+
+    <!-- ================================================================
+         7. FEEDBACK POSITIVO dentro de la lección (respuesta correcta).
+         ================================================================ -->
+    <string-array name="feedback_correct">
+        <item>¡Exacto! 🎉</item>
+        <item>¡Perfecto!</item>
+        <item>¡Eso es!</item>
+        <item>¡Muy bien! 👏</item>
+        <item>¡Impecable!</item>
+        <item>¡Lo clavaste!</item>
+        <item>¡Correctísimo!</item>
+        <item>¡Así se hace! ⚡</item>
+        <item>¡Excelente!</item>
+        <item>¡Sigue así! 🔥</item>
+        <item>¡Chispa está orgulloso!</item>
+        <item>¡Bien pensado!</item>
+    </string-array>
+
+    <!-- ================================================================
+         8. FEEDBACK ANTE ERROR. Nunca humillar, siempre reencuadrar.
+         ================================================================ -->
+    <string-array name="feedback_wrong">
+        <item>Casi. La respuesta correcta era:</item>
+        <item>No pasa nada, se aprende así. Era:</item>
+        <item>Ups. Lo correcto es:</item>
+        <item>Buen intento. La respuesta es:</item>
+        <item>Esta se te escapó. Correcto:</item>
+        <item>Error útil: ahora lo recordarás mejor. Era:</item>
+        <item>Todavía no. La forma correcta es:</item>
+        <item>Anota esta: la respuesta era</item>
+    </string-array>
+
+    <!-- ================================================================
+         9. MENSAJES DE CIERRE DE LECCIÓN (pantalla de resultado).
+         ================================================================ -->
+    <string-array name="lesson_complete">
+        <item>¡Lección completada!</item>
+        <item>¡Otra que cae! 🎯</item>
+        <item>¡Eso fue rapidísimo!</item>
+        <item>¡Un paso más cerca!</item>
+        <item>¡Chispa aplaude desde aquí! 👏</item>
+        <item>¡Progreso desbloqueado!</item>
+        <item>¡Sigues imparable! 🔥</item>
+        <item>¡Buen trabajo de verdad!</item>
+    </string-array>
+
+</resources>

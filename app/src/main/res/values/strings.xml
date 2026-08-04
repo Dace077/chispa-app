@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chispa</string>
+    <string name="app_tagline">Aprende inglés sin excusas</string>
+    <string name="mascot_name">Chispa</string>
+
+    <!-- Canales de notificación -->
+    <string name="channel_reminder_name">Recordatorio diario</string>
+    <string name="channel_reminder_desc">Tu aviso para practicar cada día</string>
+    <string name="channel_streak_name">Racha en riesgo</string>
+    <string name="channel_streak_desc">Avisos urgentes antes de perder tu racha</string>
+    <string name="channel_review_name">Repaso listo</string>
+    <string name="channel_review_desc">Cuando hay palabras esperando repaso</string>
+    <string name="channel_comeback_name">Te extrañamos</string>
+    <string name="channel_comeback_desc">Mensajes si llevas días sin entrar</string>
+</resources>

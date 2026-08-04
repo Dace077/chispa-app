@@ -1,0 +1,27 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Salidas de build
+app/build/
+app/release/
+
+# --- FIRMA ---
+# La keystore incluida en este proyecto es de ejemplo. Si generas la tuya para
+# distribuir de verdad, NO la subas a ningún repositorio: quien la tenga puede
+# firmar actualizaciones falsas de tu app.
+# Descomenta estas dos líneas cuando uses tu propia keystore:
+# *.jks
+# keystore.properties
+
+# Firma: nunca subir a un repositorio publico
+*.jks
+keystore.properties
+

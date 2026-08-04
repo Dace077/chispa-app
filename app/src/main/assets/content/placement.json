@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "level": "A1",
+      "prompt": "¿Cómo se dice \"Buenos días\" en inglés?",
+      "options": ["Good night", "Good morning", "Good luck", "Goodbye"],
+      "answer": "Good morning"
+    },
+    {
+      "level": "A1",
+      "prompt": "Completa: She ___ a doctor.",
+      "options": ["am", "are", "is", "be"],
+      "answer": "is",
+      "hint": "Verbo to be en presente"
+    },
+    {
+      "level": "A1",
+      "prompt": "¿Qué significa \"They have two children\"?",
+      "options": [
+        "Ellos tienen dos hijos",
+        "Ellos son dos niños",
+        "Tienen dos casas",
+        "Hay dos niños"
+      ],
+      "answer": "Ellos tienen dos hijos"
+    },
+    {
+      "level": "A2",
+      "prompt": "Completa en pasado: Yesterday I ___ to the beach.",
+      "options": ["go", "goed", "went", "gone"],
+      "answer": "went",
+      "hint": "Pasado simple del verbo irregular \"go\""
+    },
+    {
+      "level": "A2",
+      "prompt": "¿Cuál es el comparativo correcto?",
+      "options": [
+        "This book is more good than that one",
+        "This book is better than that one",
+        "This book is gooder than that one",
+        "This book is the better than that one"
+      ],
+      "answer": "This book is better than that one"
+    },
+    {
+      "level": "B1",
+      "prompt": "Elige la forma correcta: I ___ in London since 2019.",
+      "options": ["live", "lived", "have lived", "am living"],
+      "answer": "have lived",
+      "hint": "Presente perfecto con \"since\""
+    },
+    {
+      "level": "B1",
+      "prompt": "¿Qué significa el phrasal verb \"to look after someone\"?",
+      "options": [
+        "Buscar a alguien",
+        "Cuidar de alguien",
+        "Mirar hacia atrás",
+        "Parecerse a alguien"
+      ],
+      "answer": "Cuidar de alguien"
+    },
+    {
+      "level": "B2",
+      "prompt": "Completa el condicional: If I ___ more time, I would travel more.",
+      "options": ["have", "had", "will have", "would have"],
+      "answer": "had",
+      "hint": "Segundo condicional: situación hipotética"
+    }
+  ]
+}

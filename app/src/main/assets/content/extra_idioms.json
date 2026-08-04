@@ -1,0 +1,647 @@
+{
+  "id": "extra_idioms",
+  "title": "Modismos y expresiones",
+  "category": "extra",
+  "icon": "idiom",
+  "unlockXp": 120,
+  "description": "Más de 60 expresiones que los nativos usan a diario y que no puedes traducir palabra por palabra.",
+  "units": [
+    {
+      "id": "idioms_u1",
+      "level": "Extra",
+      "title": "Modismos del día a día",
+      "subtitle": "Las expresiones que oyes en cualquier conversación",
+      "icon": "idiom",
+      "lessons": [
+        {
+          "id": "idioms_l1",
+          "title": "Los imprescindibles",
+          "vocab": [
+            { "en": "piece of cake", "es": "pan comido, muy fácil" },
+            { "en": "break a leg", "es": "mucha suerte" },
+            { "en": "hit the sack", "es": "irse a dormir" },
+            { "en": "under the weather", "es": "sentirse mal, pachucho" },
+            { "en": "once in a blue moon", "es": "muy de vez en cuando" },
+            { "en": "cost an arm and a leg", "es": "costar un riñón" },
+            { "en": "spill the beans", "es": "irse de la lengua" },
+            { "en": "the ball is in your court", "es": "te toca mover a ti" },
+            { "en": "bite the bullet", "es": "hacer de tripas corazón" },
+            { "en": "call it a day", "es": "dejarlo por hoy" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Por qué los modismos no se traducen",
+              "body": "Un modismo es una expresión cuyo significado no se deduce de sus palabras. 'Break a leg' significa 'mucha suerte' y viene del teatro: desear suerte directamente se consideraba gafe. Si traduces literalmente, dices barbaridades. La única forma de aprenderlos es memorizarlos con su contexto y usarlos.",
+              "examples": [
+                { "en": "The exam was a piece of cake.", "es": "El examen fue pan comido." },
+                { "en": "Break a leg tonight!", "es": "¡Mucha suerte esta noche!" },
+                { "en": "I'm feeling under the weather.", "es": "No me encuentro muy bien." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los modismos con su sentido",
+              "pairs": [
+                ["piece of cake", "pan comido"],
+                ["break a leg", "mucha suerte"],
+                ["hit the sack", "irse a dormir"],
+                ["under the weather", "sentirse mal"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "That car cost an arm and a leg",
+              "options": [
+                "Ese coche costó un riñón",
+                "Ese coche le costó un accidente",
+                "Ese coche pesa mucho",
+                "Ese coche vale poco"
+              ],
+              "answer": "Ese coche costó un riñón"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Don't spill the beans!",
+              "options": [
+                "¡No te vayas de la lengua!",
+                "¡No tires la comida!",
+                "¡No cocines eso!",
+                "¡No te caigas!"
+              ],
+              "answer": "¡No te vayas de la lengua!"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I only see them once in a blue ___.",
+              "answer": "moon",
+              "options": ["moon", "sun", "day", "week"],
+              "translation": "Solo los veo muy de vez en cuando."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'm tired. Let's call it a ___.",
+              "answer": "day",
+              "options": ["day", "night", "end", "stop"],
+              "translation": "Estoy cansado. Dejémoslo por hoy."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une más modismos",
+              "pairs": [
+                ["spill the beans", "irse de la lengua"],
+                ["bite the bullet", "hacer de tripas corazón"],
+                ["call it a day", "dejarlo por hoy"],
+                ["cost an arm and a leg", "costar un riñón"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "El examen fue pan comido",
+              "answer": "The exam was a piece of cake"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I'm exhausted, I'm going to hit the sack.",
+              "translation": "Estoy agotado, me voy a dormir."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The ball is in your court now",
+              "options": [
+                "Ahora te toca decidir a ti",
+                "La pelota está en tu jardín",
+                "Es tu turno de jugar tenis",
+                "Perdiste la pelota"
+              ],
+              "answer": "Ahora te toca decidir a ti"
+            }
+          ]
+        },
+        {
+          "id": "idioms_l2",
+          "title": "Con partes del cuerpo",
+          "vocab": [
+            { "en": "keep an eye on", "es": "vigilar, echar un ojo" },
+            { "en": "get cold feet", "es": "echarse atrás por miedo" },
+            { "en": "give someone a hand", "es": "echar una mano" },
+            { "en": "pull someone's leg", "es": "tomar el pelo" },
+            { "en": "off the top of my head", "es": "así de memoria" },
+            { "en": "see eye to eye", "es": "estar de acuerdo" },
+            { "en": "cost a pretty penny", "es": "costar caro" },
+            { "en": "play it by ear", "es": "improvisar sobre la marcha" },
+            { "en": "a pain in the neck", "es": "un incordio" },
+            { "en": "head over heels", "es": "locamente enamorado" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El cuerpo es una mina de modismos",
+              "body": "Muchos modismos ingleses usan partes del cuerpo, y a veces coinciden con el español y a veces no. 'Give a hand' es igual que 'echar una mano', pero 'pull someone's leg' no es tirar de la pierna: es tomar el pelo. Y 'get cold feet' es echarse atrás justo antes de algo importante, típicamente una boda.",
+              "examples": [
+                { "en": "Can you give me a hand?", "es": "¿Me echas una mano?" },
+                { "en": "Are you pulling my leg?", "es": "¿Me estás tomando el pelo?" },
+                { "en": "He got cold feet before the wedding.", "es": "Se echó atrás antes de la boda." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los modismos corporales",
+              "pairs": [
+                ["give a hand", "echar una mano"],
+                ["pull someone's leg", "tomar el pelo"],
+                ["keep an eye on", "vigilar"],
+                ["get cold feet", "echarse atrás"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "We don't see eye to eye on this",
+              "options": [
+                "No estamos de acuerdo en esto",
+                "No nos miramos a los ojos",
+                "No nos vemos nunca",
+                "Estamos totalmente de acuerdo"
+              ],
+              "answer": "No estamos de acuerdo en esto"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Let's play it by ear",
+              "options": [
+                "Vamos improvisando sobre la marcha",
+                "Escuchemos con atención",
+                "Toquemos música de oído",
+                "Hagamos un plan detallado"
+              ],
+              "answer": "Vamos improvisando sobre la marcha"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Off the top of my ___, I'd say around fifty.",
+              "answer": "head",
+              "options": ["head", "mind", "brain", "hair"],
+              "translation": "Así de memoria, diría que unos cincuenta."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "That paperwork is a real pain in the ___.",
+              "answer": "neck",
+              "options": ["neck", "head", "back", "arm"],
+              "translation": "Ese papeleo es un auténtico incordio."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el resto",
+              "pairs": [
+                ["see eye to eye", "estar de acuerdo"],
+                ["play it by ear", "improvisar"],
+                ["a pain in the neck", "un incordio"],
+                ["head over heels", "locamente enamorado"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Me echas una mano?",
+              "answer": "Can you give me a hand?",
+              "alternatives": ["Could you give me a hand?"]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Keep an eye on my bag while I get coffee.",
+              "translation": "Échale un ojo a mi bolsa mientras cojo un café."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "He is head over heels in love with her",
+              "answer": "Está locamente enamorado de ella"
+            }
+          ]
+        },
+        {
+          "id": "idioms_l3",
+          "title": "Sobre tiempo y dinero",
+          "vocab": [
+            { "en": "in the nick of time", "es": "justo a tiempo" },
+            { "en": "beat around the bush", "es": "irse por las ramas" },
+            { "en": "better late than never", "es": "más vale tarde que nunca" },
+            { "en": "time flies", "es": "el tiempo vuela" },
+            { "en": "make ends meet", "es": "llegar a fin de mes" },
+            { "en": "break the bank", "es": "arruinarse" },
+            { "en": "a rip-off", "es": "un timo" },
+            { "en": "save for a rainy day", "es": "ahorrar por si acaso" },
+            { "en": "on a shoestring", "es": "con muy poco presupuesto" },
+            { "en": "worth every penny", "es": "vale cada céntimo" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Modismos que salen en cualquier conversación adulta",
+              "body": "Estas expresiones aparecen constantemente cuando se habla de dinero, prisas o planes. 'Beat around the bush' es lo que hace alguien que no va al grano; si quieres pedir que sea directo, di 'stop beating around the bush, just tell me'. Y 'a rip-off' es la palabra exacta para cuando algo está escandalosamente caro.",
+              "examples": [
+                { "en": "Stop beating around the bush.", "es": "Deja de irte por las ramas." },
+                { "en": "Twenty euros for a coffee? What a rip-off!", "es": "¿Veinte euros por un café? ¡Menudo timo!" },
+                { "en": "We arrived in the nick of time.", "es": "Llegamos justo a tiempo." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los modismos de tiempo",
+              "pairs": [
+                ["in the nick of time", "justo a tiempo"],
+                ["time flies", "el tiempo vuela"],
+                ["better late than never", "más vale tarde que nunca"],
+                ["beat around the bush", "irse por las ramas"]
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los modismos de dinero",
+              "pairs": [
+                ["make ends meet", "llegar a fin de mes"],
+                ["a rip-off", "un timo"],
+                ["on a shoestring", "con poco presupuesto"],
+                ["worth every penny", "vale cada céntimo"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "It won't break the bank",
+              "options": [
+                "No te va a arruinar",
+                "No romperá el banco",
+                "No abrirá la caja fuerte",
+                "No hay dinero en el banco"
+              ],
+              "answer": "No te va a arruinar"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We're saving for a ___ day.",
+              "answer": "rainy",
+              "options": ["rainy", "sunny", "long", "black"],
+              "translation": "Estamos ahorrando por si acaso."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Stop beating around the ___ and tell me.",
+              "answer": "bush",
+              "options": ["bush", "tree", "corner", "point"],
+              "translation": "Deja de irte por las ramas y dímelo."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Cuesta llegar a fin de mes",
+              "answer": "It's hard to make ends meet"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Time flies when you are having fun",
+              "answer": "Time flies when you are having fun",
+              "translation": "El tiempo vuela cuando te diviertes"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "It was expensive, but worth every penny.",
+              "translation": "Fue caro, pero valió cada céntimo."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "They travelled around Europe on a shoestring",
+              "answer": "Viajaron por Europa con muy poco presupuesto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idioms_u2",
+      "level": "Extra",
+      "title": "Modismos avanzados",
+      "subtitle": "Los que separan a quien sabe inglés de quien lo vive",
+      "icon": "idiom",
+      "lessons": [
+        {
+          "id": "idioms_l4",
+          "title": "Situaciones difíciles",
+          "vocab": [
+            { "en": "the elephant in the room", "es": "el tema que nadie menciona" },
+            { "en": "a blessing in disguise", "es": "no hay mal que por bien no venga" },
+            { "en": "to be in hot water", "es": "estar en apuros" },
+            { "en": "burn bridges", "es": "quemar las naves" },
+            { "en": "the last straw", "es": "la gota que colma el vaso" },
+            { "en": "back to square one", "es": "vuelta a empezar" },
+            { "en": "throw in the towel", "es": "tirar la toalla" },
+            { "en": "a wake-up call", "es": "un toque de atención" },
+            { "en": "cut corners", "es": "hacer chapuzas por ahorrar" },
+            { "en": "the tip of the iceberg", "es": "la punta del iceberg" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Modismos que oirás en el trabajo y en las noticias",
+              "body": "Estos son los que aparecen en reuniones, prensa y series. 'The elephant in the room' es ese problema evidente que todos evitan mencionar. 'Cut corners' es ahorrar tiempo o dinero sacrificando calidad — y siempre es una crítica. 'A blessing in disguise' equivale a nuestro 'no hay mal que por bien no venga'.",
+              "examples": [
+                { "en": "Let's address the elephant in the room.", "es": "Hablemos del tema que todos evitamos." },
+                { "en": "Losing that job was a blessing in disguise.", "es": "Perder ese trabajo fue una bendición." },
+                { "en": "We can't cut corners on safety.", "es": "No podemos escatimar en seguridad." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los modismos",
+              "pairs": [
+                ["the last straw", "la gota que colma el vaso"],
+                ["back to square one", "vuelta a empezar"],
+                ["throw in the towel", "tirar la toalla"],
+                ["cut corners", "hacer chapuzas"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "That's just the tip of the iceberg",
+              "options": [
+                "Eso es solo la punta del iceberg",
+                "Eso está muy frío",
+                "Eso es el final del problema",
+                "Eso es muy pequeño"
+              ],
+              "answer": "Eso es solo la punta del iceberg"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "He is in hot water with his boss",
+              "options": [
+                "Está en apuros con su jefe",
+                "Está tomando un baño caliente",
+                "Está de vacaciones con su jefe",
+                "Se lleva bien con su jefe"
+              ],
+              "answer": "Está en apuros con su jefe"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Don't burn your ___ when you leave the company.",
+              "answer": "bridges",
+              "options": ["bridges", "roads", "papers", "boats"],
+              "translation": "No quemes las naves cuando dejes la empresa."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The diagnosis was a real wake-up ___.",
+              "answer": "call",
+              "options": ["call", "alarm", "sound", "bell"],
+              "translation": "El diagnóstico fue un auténtico toque de atención."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el resto",
+              "pairs": [
+                ["the elephant in the room", "el tema que nadie menciona"],
+                ["a blessing in disguise", "no hay mal que por bien no venga"],
+                ["in hot water", "en apuros"],
+                ["the tip of the iceberg", "la punta del iceberg"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "No voy a tirar la toalla",
+              "answer": "I'm not going to throw in the towel"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "That was the last straw, I'm done.",
+              "translation": "Esa fue la gota que colmó el vaso, se acabó."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "We are back to square one",
+              "answer": "Estamos de vuelta al principio"
+            }
+          ]
+        },
+        {
+          "id": "idioms_l5",
+          "title": "Personas y actitudes",
+          "vocab": [
+            { "en": "a couch potato", "es": "un vago que ve mucha tele" },
+            { "en": "a night owl", "es": "una persona nocturna" },
+            { "en": "an early bird", "es": "un madrugador" },
+            { "en": "the black sheep", "es": "la oveja negra" },
+            { "en": "a people person", "es": "alguien sociable" },
+            { "en": "down to earth", "es": "con los pies en la tierra" },
+            { "en": "full of himself", "es": "engreído" },
+            { "en": "a know-it-all", "es": "un sabelotodo" },
+            { "en": "to have a sweet tooth", "es": "ser goloso" },
+            { "en": "a wet blanket", "es": "un aguafiestas" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Describir a alguien sin usar adjetivos",
+              "body": "El inglés tiene un montón de expresiones para describir personalidades, y suenan mucho más naturales que un adjetivo suelto. Decir 'she's very down to earth' es más expresivo que 'she's humble'. Ojo con el registro: 'full of himself' y 'a know-it-all' son críticas claras, no las uses en una entrevista.",
+              "examples": [
+                { "en": "He's a real night owl.", "es": "Es muy de trasnochar." },
+                { "en": "She's so down to earth.", "es": "Tiene los pies muy en la tierra." },
+                { "en": "I have a sweet tooth.", "es": "Soy muy goloso." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los tipos de persona",
+              "pairs": [
+                ["a couch potato", "un vago de sofá"],
+                ["a night owl", "una persona nocturna"],
+                ["an early bird", "un madrugador"],
+                ["the black sheep", "la oveja negra"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Don't be such a wet blanket",
+              "options": [
+                "No seas tan aguafiestas",
+                "No te mojes la manta",
+                "No seas tan frío",
+                "No te tapes tanto"
+              ],
+              "answer": "No seas tan aguafiestas"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "She's a real people person",
+              "options": [
+                "Es muy sociable",
+                "Es muy popular en la tele",
+                "Trabaja con personas",
+                "Es una persona normal"
+              ],
+              "answer": "Es muy sociable"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I have a sweet ___, I love chocolate.",
+              "answer": "tooth",
+              "options": ["tooth", "mouth", "taste", "tongue"],
+              "translation": "Soy muy goloso, me encanta el chocolate."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He's so full of ___ since the promotion.",
+              "answer": "himself",
+              "options": ["himself", "him", "his", "he"],
+              "translation": "Está muy engreído desde el ascenso."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las actitudes",
+              "pairs": [
+                ["down to earth", "con los pies en la tierra"],
+                ["a know-it-all", "un sabelotodo"],
+                ["a wet blanket", "un aguafiestas"],
+                ["a people person", "alguien sociable"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Ella es la oveja negra de la familia",
+              "answer": "She is the black sheep of the family"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I'm an early bird, I get up at five.",
+              "translation": "Soy madrugador, me levanto a las cinco."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "Stop being a couch potato and go outside",
+              "answer": "Deja de estar tirado en el sofá y sal fuera"
+            }
+          ]
+        },
+        {
+          "id": "idioms_l6",
+          "title": "Comunicación y acuerdos",
+          "vocab": [
+            { "en": "get the ball rolling", "es": "poner las cosas en marcha" },
+            { "en": "touch base", "es": "ponerse en contacto brevemente" },
+            { "en": "on the same page", "es": "estar en sintonía" },
+            { "en": "read between the lines", "es": "leer entre líneas" },
+            { "en": "long story short", "es": "para resumir" },
+            { "en": "let the cat out of the bag", "es": "revelar un secreto" },
+            { "en": "hit the nail on the head", "es": "dar en el clavo" },
+            { "en": "take it with a grain of salt", "es": "tomarlo con pinzas" },
+            { "en": "jump to conclusions", "es": "sacar conclusiones precipitadas" },
+            { "en": "clear the air", "es": "aclarar las cosas" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los modismos de oficina que nadie te enseña",
+              "body": "'Touch base' significa ponerse en contacto brevemente y es omnipresente en el trabajo anglosajón: 'let's touch base next week'. 'On the same page' es asegurarse de que todos entienden lo mismo. Y 'take it with a grain of salt' es el equivalente exacto de nuestro 'cogerlo con pinzas'.",
+              "examples": [
+                { "en": "Let's touch base on Monday.", "es": "Hablamos brevemente el lunes." },
+                { "en": "Are we all on the same page?", "es": "¿Estamos todos de acuerdo?" },
+                { "en": "You hit the nail on the head.", "es": "Diste en el clavo." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones",
+              "pairs": [
+                ["get the ball rolling", "poner en marcha"],
+                ["touch base", "ponerse en contacto"],
+                ["on the same page", "estar en sintonía"],
+                ["long story short", "para resumir"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Take that news with a grain of salt",
+              "options": [
+                "Coge esa noticia con pinzas",
+                "Añade sal a esa noticia",
+                "Cree esa noticia",
+                "Esa noticia es sabrosa"
+              ],
+              "answer": "Coge esa noticia con pinzas"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Don't jump to conclusions",
+              "options": [
+                "No saques conclusiones precipitadas",
+                "No saltes al final",
+                "No concluyas la reunión",
+                "No cambies de tema"
+              ],
+              "answer": "No saques conclusiones precipitadas"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She let the ___ out of the bag about the party.",
+              "answer": "cat",
+              "options": ["cat", "dog", "secret", "news"],
+              "translation": "Reveló el secreto de la fiesta."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We need to clear the ___ after that argument.",
+              "answer": "air",
+              "options": ["air", "room", "table", "water"],
+              "translation": "Necesitamos aclarar las cosas después de esa discusión."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el resto",
+              "pairs": [
+                ["read between the lines", "leer entre líneas"],
+                ["hit the nail on the head", "dar en el clavo"],
+                ["jump to conclusions", "sacar conclusiones precipitadas"],
+                ["clear the air", "aclarar las cosas"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Para resumir, no funcionó",
+              "answer": "Long story short, it didn't work"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Let's get the ball rolling on this project.",
+              "translation": "Pongamos en marcha este proyecto."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "You have to read between the lines",
+              "answer": "Tienes que leer entre líneas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

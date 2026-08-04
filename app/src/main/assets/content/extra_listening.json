@@ -1,0 +1,232 @@
+{
+  "id": "extra_listening",
+  "title": "Listening con diálogos reales",
+  "category": "extra",
+  "icon": "listening",
+  "unlockXp": 250,
+  "description": "Conversaciones naturales con acentos americano, británico y australiano.",
+  "units": [
+    {
+      "id": "listen_u1",
+      "level": "Extra",
+      "title": "Conversaciones naturales",
+      "subtitle": "Cómo suena el inglés cuando nadie modera la velocidad",
+      "icon": "listening",
+      "lessons": [
+        {
+          "id": "listen_l1",
+          "title": "En una cafetería (US)",
+          "vocab": [
+            { "en": "for here or to go?", "es": "¿para tomar aquí o para llevar?" },
+            { "en": "what can I get you?", "es": "¿qué le pongo?" },
+            { "en": "a large coffee", "es": "un café grande" },
+            { "en": "anything else?", "es": "¿algo más?" },
+            { "en": "that'll be", "es": "serán (precio)" },
+            { "en": "keep the change", "es": "quédese con el cambio" },
+            { "en": "coming right up", "es": "ahora mismo se lo traigo" },
+            { "en": "have a good one", "es": "que le vaya bien" }
+          ],
+          "exercises": [
+            {
+              "type": "reading",
+              "title": "Diálogo: pidiendo café en Nueva York",
+              "body": "BARISTA: Hi there! What can I get you?\nCUSTOMER: Hi, can I get a large coffee, please?\nBARISTA: Sure thing. For here or to go?\nCUSTOMER: To go, please.\nBARISTA: Anything else?\nCUSTOMER: Actually, yeah. Could I add a blueberry muffin?\nBARISTA: You got it. That'll be six fifty.\nCUSTOMER: Here you go. Keep the change.\nBARISTA: Thanks so much! Coming right up. Have a good one!",
+              "translation": "BARISTA: ¡Hola! ¿Qué le pongo?\nCLIENTE: Hola, ¿me pone un café grande, por favor?\nBARISTA: Claro. ¿Para tomar aquí o para llevar?\nCLIENTE: Para llevar, por favor.\nBARISTA: ¿Algo más?\nCLIENTE: Pues sí. ¿Me añade una magdalena de arándanos?\nBARISTA: Hecho. Son seis cincuenta.\nCLIENTE: Aquí tiene. Quédese con el cambio.\nBARISTA: ¡Muchas gracias! Ahora mismo. ¡Que le vaya bien!"
+            },
+            {
+              "type": "tip",
+              "title": "Marcas del inglés americano informal",
+              "body": "Fíjate en tres cosas del diálogo. 'Can I get…' es la forma americana estándar de pedir (en Reino Unido suena algo brusca; allí se prefiere 'Could I have…'). 'Sure thing' y 'You got it' son confirmaciones muy americanas. Y 'Have a good one' es la despedida de servicio por excelencia en EE. UU.",
+              "examples": [
+                { "en": "Can I get a coffee?", "es": "¿Me pones un café? (US)" },
+                { "en": "Could I have a coffee?", "es": "¿Me pone un café? (UK)" },
+                { "en": "You got it!", "es": "¡Hecho!" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Qué pidió el cliente además del café?",
+              "options": ["Una magdalena de arándanos", "Un té", "Un sándwich", "Nada más"],
+              "answer": "Una magdalena de arándanos"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "For here or to go?",
+              "options": [
+                "¿Para tomar aquí o para llevar?",
+                "¿Viene o se va?",
+                "¿Aquí o allí?",
+                "¿Ahora o después?"
+              ],
+              "answer": "¿Para tomar aquí o para llevar?"
+            },
+            { "type": "listen_and_type", "audioText": "What can I get you today?", "answer": "What can I get you today?", "translation": "¿Qué le pongo hoy?" },
+            { "type": "listen_and_type", "audioText": "That'll be six fifty, please", "answer": "That'll be six fifty, please", "translation": "Serán seis cincuenta, por favor" },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las frases del diálogo",
+              "pairs": [
+                ["coming right up", "ahora mismo se lo traigo"],
+                ["keep the change", "quédese con el cambio"],
+                ["anything else?", "¿algo más?"],
+                ["have a good one", "que le vaya bien"]
+              ]
+            },
+            { "type": "speak_and_repeat", "prompt": "Can I get a large coffee to go, please?", "translation": "¿Me pone un café grande para llevar, por favor?" },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Para llevar, por favor",
+              "answer": "To go, please"
+            }
+          ]
+        },
+        {
+          "id": "listen_l2",
+          "title": "Charla en Londres (UK)",
+          "vocab": [
+            { "en": "you alright?", "es": "¿qué tal? (saludo británico)" },
+            { "en": "cheers", "es": "gracias / salud (UK)" },
+            { "en": "brilliant", "es": "genial (UK)" },
+            { "en": "queue", "es": "cola, fila" },
+            { "en": "the tube", "es": "el metro de Londres" },
+            { "en": "flat", "es": "piso, apartamento" },
+            { "en": "knackered", "es": "hecho polvo (UK)" },
+            { "en": "fancy a pint?", "es": "¿te apetece una cerveza?" },
+            { "en": "reckon", "es": "creer, opinar" },
+            { "en": "mate", "es": "colega, tío" }
+          ],
+          "exercises": [
+            {
+              "type": "reading",
+              "title": "Diálogo: dos amigos tras el trabajo",
+              "body": "SAM: You alright, mate?\nJO: Yeah, not bad. Bit knackered though — the tube was absolutely packed.\nSAM: Tell me about it. I queued twenty minutes for a coffee this morning.\nJO: Brilliant. Anyway, fancy a pint later?\nSAM: I reckon so. Where were you thinking?\nJO: That place near your flat? The one with the garden.\nSAM: Perfect. Half seven?\nJO: Lovely. See you then. Cheers!",
+              "translation": "SAM: ¿Qué tal, colega?\nJO: Bien, no me quejo. Aunque hecho polvo: el metro iba a reventar.\nSAM: Ni me lo digas. Esta mañana hice veinte minutos de cola por un café.\nJO: Genial. En fin, ¿te apetece una cerveza luego?\nSAM: Yo creo que sí. ¿Dónde habías pensado?\nJO: ¿Ese sitio cerca de tu piso? El del jardín.\nSAM: Perfecto. ¿A las siete y media?\nJO: Estupendo. Nos vemos. ¡Gracias!"
+            },
+            {
+              "type": "tip",
+              "title": "Británico vs americano: palabras que cambian",
+              "body": "No es solo el acento. 'Flat' (UK) es 'apartment' (US), 'queue' es 'line', 'the tube' es 'the subway', 'lift' es 'elevator', 'lorry' es 'truck' y 'chips' británicas son las 'fries' americanas — mientras que las 'chips' americanas son las 'crisps' británicas. Y 'cheers' en Reino Unido significa gracias, adiós y salud, según el momento.",
+              "examples": [
+                { "en": "flat (UK) = apartment (US)", "es": "piso" },
+                { "en": "queue (UK) = line (US)", "es": "cola" },
+                { "en": "lift (UK) = elevator (US)", "es": "ascensor" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "I'm absolutely knackered",
+              "options": ["Estoy hecho polvo", "Estoy encantado", "Estoy perdido", "Estoy hambriento"],
+              "answer": "Estoy hecho polvo"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Fancy a pint?",
+              "options": [
+                "¿Te apetece una cerveza?",
+                "¿Te gusta la pintura?",
+                "¿Quieres una pinta de leche?",
+                "¿Es elegante?"
+              ],
+              "answer": "¿Te apetece una cerveza?"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une británico con su equivalente",
+              "pairs": [
+                ["flat", "apartment"],
+                ["queue", "line"],
+                ["the tube", "the subway"],
+                ["lift", "elevator"]
+              ]
+            },
+            { "type": "listen_and_type", "audioText": "The tube was absolutely packed", "answer": "The tube was absolutely packed", "translation": "El metro iba a reventar" },
+            { "type": "listen_and_type", "audioText": "I reckon we should leave now", "answer": "I reckon we should leave now", "translation": "Creo que deberíamos irnos ya" },
+            { "type": "speak_and_repeat", "prompt": "You alright, mate? Fancy a pint later?", "translation": "¿Qué tal, colega? ¿Te apetece una cerveza luego?" },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "Cheers, see you at half seven",
+              "answer": "Gracias, nos vemos a las siete y media"
+            }
+          ]
+        },
+        {
+          "id": "listen_l3",
+          "title": "En Sídney (AUS)",
+          "vocab": [
+            { "en": "g'day", "es": "buenas (saludo australiano)" },
+            { "en": "no worries", "es": "sin problema" },
+            { "en": "arvo", "es": "tarde (afternoon)" },
+            { "en": "brekkie", "es": "desayuno (breakfast)" },
+            { "en": "heaps", "es": "un montón" },
+            { "en": "how ya going?", "es": "¿cómo va todo?" },
+            { "en": "reckon", "es": "creer" },
+            { "en": "she'll be right", "es": "todo saldrá bien" },
+            { "en": "servo", "es": "gasolinera" },
+            { "en": "barbie", "es": "barbacoa" }
+          ],
+          "exercises": [
+            {
+              "type": "reading",
+              "title": "Diálogo: planes para el fin de semana",
+              "body": "KAI: G'day! How ya going?\nMIA: Good, thanks. Heaps busy but good. You?\nKAI: Can't complain. Hey, we're having a barbie on Saturday arvo. You keen?\nMIA: Sounds great. What should I bring?\nKAI: Nah, don't worry about it. Just yourself.\nMIA: I'll bring something anyway. What time?\nKAI: Around one? We'll have brekkie first and then set up.\nMIA: Perfect. See you Saturday!\nKAI: No worries. She'll be right!",
+              "translation": "KAI: ¡Buenas! ¿Cómo va todo?\nMIA: Bien, gracias. Con muchísimo lío, pero bien. ¿Y tú?\nKAI: No me quejo. Oye, hacemos una barbacoa el sábado por la tarde. ¿Te apuntas?\nMIA: Suena genial. ¿Qué llevo?\nKAI: Nada, no te preocupes. Solo ven tú.\nMIA: Llevaré algo igualmente. ¿A qué hora?\nKAI: ¿Sobre la una? Desayunamos primero y luego montamos todo.\nMIA: Perfecto. ¡Nos vemos el sábado!\nKAI: Sin problema. ¡Todo saldrá bien!"
+            },
+            {
+              "type": "tip",
+              "title": "Los australianos abrevian todo",
+              "body": "El inglés australiano acorta palabras y les añade -o o -ie: afternoon → arvo, breakfast → brekkie, service station → servo, barbecue → barbie, sunglasses → sunnies, university → uni. No es slang juvenil: lo dice todo el mundo, incluidos presentadores de televisión. Si viajas allí, reconocerlas te ahorra muchas caras de póker.",
+              "examples": [
+                { "en": "arvo = afternoon", "es": "tarde" },
+                { "en": "brekkie = breakfast", "es": "desayuno" },
+                { "en": "servo = service station", "es": "gasolinera" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une la abreviatura australiana",
+              "pairs": [
+                ["arvo", "afternoon"],
+                ["brekkie", "breakfast"],
+                ["barbie", "barbecue"],
+                ["servo", "gas station"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "She'll be right",
+              "options": [
+                "Todo saldrá bien",
+                "Ella tendrá razón",
+                "Ella estará a la derecha",
+                "Ella vendrá pronto"
+              ],
+              "answer": "Todo saldrá bien"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "I've got heaps of work",
+              "options": ["Tengo un montón de trabajo", "Tengo poco trabajo", "Tengo montones de tiempo", "Trabajo en montones"],
+              "answer": "Tengo un montón de trabajo"
+            },
+            { "type": "listen_and_type", "audioText": "We're having a barbecue on Saturday afternoon", "answer": "We're having a barbecue on Saturday afternoon", "translation": "Hacemos una barbacoa el sábado por la tarde" },
+            { "type": "speak_and_repeat", "prompt": "G'day! How ya going?", "translation": "¡Buenas! ¿Cómo va todo?" },
+            { "type": "speak_and_repeat", "prompt": "No worries, see you Saturday.", "translation": "Sin problema, nos vemos el sábado." },
+            {
+              "type": "culture_note",
+              "title": "Tres acentos, un idioma",
+              "body": "La diferencia principal entre acentos está en las vocales y en la 'r'. El americano pronuncia la 'r' final (car suena 'carrr'); el británico estándar y el australiano la omiten (car suena 'cah'). El australiano además desplaza vocales: 'day' suena casi como 'die'. Ninguno es más correcto: elige uno para imitar, pero entrena el oído con los tres."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

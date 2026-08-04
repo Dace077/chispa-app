@@ -1,0 +1,270 @@
+{
+  "id": "extra_pronunciation",
+  "title": "Pronunciación enfocada",
+  "category": "extra",
+  "icon": "pronunciation",
+  "unlockXp": 80,
+  "description": "Los sonidos que el español no tiene y que delatan el acento. Con micrófono.",
+  "units": [
+    {
+      "id": "pron_u1",
+      "level": "Extra",
+      "title": "Sonidos difíciles",
+      "subtitle": "Entrenamiento específico para hispanohablantes",
+      "icon": "pronunciation",
+      "lessons": [
+        {
+          "id": "pron_l1",
+          "title": "La th: /θ/ y /ð/",
+          "kind": "pronunciation",
+          "vocab": [
+            { "en": "think", "es": "pensar", "ipa": "/θɪŋk/" },
+            { "en": "three", "es": "tres", "ipa": "/θriː/" },
+            { "en": "thank", "es": "agradecer", "ipa": "/θæŋk/" },
+            { "en": "mouth", "es": "boca", "ipa": "/maʊθ/" },
+            { "en": "this", "es": "esto", "ipa": "/ðɪs/" },
+            { "en": "that", "es": "eso", "ipa": "/ðæt/" },
+            { "en": "mother", "es": "madre", "ipa": "/ˈmʌðər/" },
+            { "en": "weather", "es": "clima", "ipa": "/ˈweðər/" },
+            { "en": "birthday", "es": "cumpleaños", "ipa": "/ˈbɜːrθdeɪ/" },
+            { "en": "brother", "es": "hermano", "ipa": "/ˈbrʌðər/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Cómo se hace la 'th'",
+              "body": "Saca la punta de la lengua entre los dientes, sin morderla, y deja pasar el aire. Si no vibra, es /θ/ (think, three). Si vibra la garganta, es /ð/ (this, mother). Errores típicos: convertirla en /s/ ('sink' en vez de 'think'), en /t/ ('tank' en vez de 'thank') o en /d/ ('dis' en vez de 'this'). Truco de práctica: exagera sacando mucho la lengua al principio; ya la irás recogiendo.",
+              "examples": [
+                { "en": "think / sink", "es": "pensar / fregadero", "ipa": "/θɪŋk/ vs /sɪŋk/" },
+                { "en": "thank / tank", "es": "agradecer / tanque", "ipa": "/θæŋk/ vs /tæŋk/" },
+                { "en": "they / day", "es": "ellos / día", "ipa": "/ðeɪ/ vs /deɪ/" }
+              ]
+            },
+            { "type": "speak_and_repeat", "prompt": "I think this is the third time", "translation": "Creo que esta es la tercera vez" },
+            { "type": "speak_and_repeat", "prompt": "Thank you, mother", "translation": "Gracias, madre" },
+            { "type": "speak_and_repeat", "prompt": "The weather is better than yesterday", "translation": "El clima está mejor que ayer" },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cuál de estas lleva la 'th' SONORA (con vibración)?",
+              "options": ["mother", "think", "three", "mouth"],
+              "answer": "mother"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cuál de estas lleva la 'th' SORDA (sin vibración)?",
+              "options": ["birthday", "this", "brother", "weather"],
+              "answer": "birthday"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une la palabra con su significado",
+              "pairs": [
+                ["think", "pensar"],
+                ["mouth", "boca"],
+                ["weather", "clima"],
+                ["brother", "hermano"]
+              ]
+            },
+            { "type": "listen_and_type", "audioText": "Three brothers and their mother", "answer": "Three brothers and their mother", "translation": "Tres hermanos y su madre" },
+            { "type": "speak_and_repeat", "prompt": "That thing over there is thin", "translation": "Esa cosa de allí es delgada" },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Gracias por todo",
+              "answer": "Thank you for everything"
+            }
+          ]
+        },
+        {
+          "id": "pron_l2",
+          "title": "Vocales cortas y largas",
+          "kind": "pronunciation",
+          "vocab": [
+            { "en": "ship", "es": "barco", "ipa": "/ʃɪp/" },
+            { "en": "sheep", "es": "oveja", "ipa": "/ʃiːp/" },
+            { "en": "bit", "es": "trozo", "ipa": "/bɪt/" },
+            { "en": "beat", "es": "latido", "ipa": "/biːt/" },
+            { "en": "live", "es": "vivir", "ipa": "/lɪv/" },
+            { "en": "leave", "es": "irse", "ipa": "/liːv/" },
+            { "en": "full", "es": "lleno", "ipa": "/fʊl/" },
+            { "en": "fool", "es": "tonto", "ipa": "/fuːl/" },
+            { "en": "cat", "es": "gato", "ipa": "/kæt/" },
+            { "en": "cut", "es": "cortar", "ipa": "/kʌt/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El español tiene 5 vocales; el inglés, unas 12",
+              "body": "En español la 'i' es siempre la misma. En inglés hay una 'i' corta y relajada (/ɪ/ en 'ship') y otra larga y tensa (/iː/ en 'sheep'), y cambian el significado. La corta no es simplemente más rápida: la boca está más relajada y el sonido tira ligeramente hacia la 'e'. Practica los pares mínimos hasta que oigas la diferencia; oírla es más difícil que producirla.",
+              "examples": [
+                { "en": "ship / sheep", "es": "barco / oveja" },
+                { "en": "live / leave", "es": "vivir / irse" },
+                { "en": "full / fool", "es": "lleno / tonto" }
+              ]
+            },
+            { "type": "speak_and_repeat", "prompt": "The sheep is on the ship", "translation": "La oveja está en el barco" },
+            { "type": "speak_and_repeat", "prompt": "I live here but I leave tomorrow", "translation": "Vivo aquí pero me voy mañana" },
+            { "type": "speak_and_repeat", "prompt": "The cat cut its paw", "translation": "El gato se cortó la pata" },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une cada palabra con su significado",
+              "pairs": [
+                ["ship", "barco"],
+                ["sheep", "oveja"],
+                ["live", "vivir"],
+                ["leave", "irse"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cuál lleva vocal LARGA /iː/?",
+              "options": ["sheep", "ship", "bit", "sit"],
+              "answer": "sheep"
+            },
+            { "type": "listen_and_type", "audioText": "I need to leave the ship", "answer": "I need to leave the ship", "translation": "Necesito salir del barco" },
+            { "type": "listen_and_type", "audioText": "The glass is full", "answer": "The glass is full", "translation": "El vaso está lleno" },
+            { "type": "speak_and_repeat", "prompt": "Please sit down and eat", "translation": "Por favor siéntate y come" },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Me voy en un minuto",
+              "answer": "I'm leaving in a minute"
+            }
+          ]
+        },
+        {
+          "id": "pron_l3",
+          "title": "El schwa y el ritmo",
+          "kind": "pronunciation",
+          "vocab": [
+            { "en": "about", "es": "sobre", "ipa": "/əˈbaʊt/" },
+            { "en": "problem", "es": "problema", "ipa": "/ˈprɑːbləm/" },
+            { "en": "banana", "es": "plátano", "ipa": "/bəˈnænə/" },
+            { "en": "computer", "es": "ordenador", "ipa": "/kəmˈpjuːtər/" },
+            { "en": "photograph", "es": "fotografía", "ipa": "/ˈfoʊtəɡræf/" },
+            { "en": "photography", "es": "fotografía (arte)", "ipa": "/fəˈtɑːɡrəfi/" },
+            { "en": "comfortable", "es": "cómodo", "ipa": "/ˈkʌmftəbl/" },
+            { "en": "vegetable", "es": "verdura", "ipa": "/ˈvedʒtəbl/" },
+            { "en": "chocolate", "es": "chocolate", "ipa": "/ˈtʃɑːklət/" },
+            { "en": "interesting", "es": "interesante", "ipa": "/ˈɪntrəstɪŋ/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El schwa: el sonido más frecuente del inglés",
+              "body": "El español pronuncia todas las vocales con claridad. El inglés no: las sílabas sin acento se reducen a un sonido neutro y perezoso, el schwa /ə/. Por eso 'banana' no suena 'ba-na-na' sino 'b'NA-n'. Pronunciar todas las vocales fuerte es lo que más marca el acento español. Y ojo: 'comfortable' tiene tres sílabas al hablar (COMF-t'-bl), no cuatro.",
+              "examples": [
+                { "en": "banana", "es": "suena 'b'NA-n'" },
+                { "en": "chocolate", "es": "suena 'CHOC-l't', tres sílabas no cuatro" },
+                { "en": "interesting", "es": "suena 'IN-tres-ting'" }
+              ]
+            },
+            { "type": "speak_and_repeat", "prompt": "It's a comfortable chocolate vegetable", "translation": "Es una verdura de chocolate cómoda (trabalenguas de práctica)" },
+            { "type": "speak_and_repeat", "prompt": "That's an interesting problem", "translation": "Es un problema interesante" },
+            { "type": "speak_and_repeat", "prompt": "I bought a new computer about a week ago", "translation": "Compré un ordenador nuevo hace como una semana" },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cuántas sílabas se pronuncian en 'chocolate'?",
+              "options": ["tres", "cuatro", "dos", "cinco"],
+              "answer": "tres"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Dónde cae el acento en 'photography'?",
+              "options": ["en la segunda sílaba (pho-TO-graphy)", "en la primera (PHO-tography)", "en la tercera", "en la última"],
+              "answer": "en la segunda sílaba (pho-TO-graphy)"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une con su significado",
+              "pairs": [
+                ["comfortable", "cómodo"],
+                ["vegetable", "verdura"],
+                ["interesting", "interesante"],
+                ["computer", "ordenador"]
+              ]
+            },
+            { "type": "listen_and_type", "audioText": "This chair is very comfortable", "answer": "This chair is very comfortable", "translation": "Esta silla es muy cómoda" },
+            { "type": "speak_and_repeat", "prompt": "I eat vegetables every day", "translation": "Como verduras todos los días" },
+            {
+              "type": "culture_note",
+              "title": "El inglés es de ritmo acentual",
+              "body": "El español es de ritmo silábico: cada sílaba dura más o menos lo mismo. El inglés es de ritmo acentual: las sílabas acentuadas marcan el compás y las demás se aplastan entre medias. Por eso 'I would have gone to the store' suena casi como 'ai-w'd'v-GON-t'th'-STOR'. Entrenar el ritmo mejora tu comprensión oral más que aprender vocabulario nuevo."
+            }
+          ]
+        },
+        {
+          "id": "pron_l4",
+          "title": "Consonantes traicioneras",
+          "kind": "pronunciation",
+          "vocab": [
+            { "en": "very", "es": "muy", "ipa": "/ˈveri/", "note": "Labio inferior con dientes superiores" },
+            { "en": "berry", "es": "baya", "ipa": "/ˈberi/" },
+            { "en": "Spain", "es": "España", "ipa": "/speɪn/", "note": "Sin 'e' delante" },
+            { "en": "student", "es": "estudiante", "ipa": "/ˈstuːdənt/" },
+            { "en": "school", "es": "escuela", "ipa": "/skuːl/" },
+            { "en": "yellow", "es": "amarillo", "ipa": "/ˈjeloʊ/" },
+            { "en": "jello", "es": "gelatina", "ipa": "/ˈdʒeloʊ/" },
+            { "en": "hello", "es": "hola", "ipa": "/həˈloʊ/", "note": "La 'h' sí se pronuncia" },
+            { "en": "hospital", "es": "hospital", "ipa": "/ˈhɑːspɪtl/" },
+            { "en": "worked", "es": "trabajó", "ipa": "/wɜːrkt/" },
+            { "en": "played", "es": "jugó", "ipa": "/pleɪd/" },
+            { "en": "wanted", "es": "quiso", "ipa": "/ˈwɑːntɪd/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Tres trampas clásicas del español",
+              "body": "Primera: la 'v' inglesa se hace con los dientes sobre el labio, no como una 'b'. Segunda: las palabras que empiezan por s+consonante NO llevan 'e' delante — es 'Spain', no 'espein'. Tercera: la 'h' inicial sí se pronuncia, con una soplo de aire: 'hello', 'hospital', 'happy'. Estos tres detalles cambian por completo cómo suenas.",
+              "examples": [
+                { "en": "very / berry", "es": "muy / baya" },
+                { "en": "I study at school in Spain.", "es": "Estudio en la escuela en España." },
+                { "en": "Hello, how are you?", "es": "Hola, ¿cómo estás?" }
+              ]
+            },
+            { "type": "speak_and_repeat", "prompt": "Very very special", "translation": "Muy muy especial" },
+            { "type": "speak_and_repeat", "prompt": "The student studies Spanish at school in Spain", "translation": "El estudiante estudia español en la escuela en España" },
+            { "type": "speak_and_repeat", "prompt": "Hello, I'm happy to help", "translation": "Hola, estoy encantado de ayudar" },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cómo suena la terminación -ed en 'worked'?",
+              "options": ["como una /t/", "como una /d/", "como /id/", "no se pronuncia"],
+              "answer": "como una /t/"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cómo suena la terminación -ed en 'wanted'?",
+              "options": ["como /id/, sílaba aparte", "como una /t/", "como una /d/", "no se pronuncia"],
+              "answer": "como /id/, sílaba aparte"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el pasado con su sonido final",
+              "pairs": [
+                ["worked", "suena /t/"],
+                ["played", "suena /d/"],
+                ["wanted", "suena /id/"],
+                ["watched", "suena /t/"]
+              ]
+            },
+            { "type": "listen_and_type", "audioText": "I worked and played all day", "answer": "I worked and played all day", "translation": "Trabajé y jugué todo el día" },
+            { "type": "speak_and_repeat", "prompt": "She wanted to visit the hospital", "translation": "Ella quería visitar el hospital" },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estudio en España",
+              "answer": "I study in Spain"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

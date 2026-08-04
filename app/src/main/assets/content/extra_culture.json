@@ -1,0 +1,227 @@
+{
+  "id": "extra_culture",
+  "title": "Notas culturales",
+  "category": "extra",
+  "icon": "culture",
+  "unlockXp": 60,
+  "description": "Cápsulas breves sobre cómo se comporta la gente que habla inglés. Evita meteduras de pata.",
+  "units": [
+    {
+      "id": "culture_u1",
+      "level": "Extra",
+      "title": "Cómo funciona la gente",
+      "subtitle": "Costumbres, cortesía y malentendidos frecuentes",
+      "icon": "culture",
+      "lessons": [
+        {
+          "id": "culture_l1",
+          "title": "Cortesía y distancia",
+          "kind": "culture",
+          "vocab": [
+            { "en": "small talk", "es": "conversación trivial" },
+            { "en": "polite", "es": "educado" },
+            { "en": "straightforward", "es": "directo" },
+            { "en": "to apologise", "es": "disculparse" },
+            { "en": "personal space", "es": "espacio personal" },
+            { "en": "awkward", "es": "incómodo" }
+          ],
+          "exercises": [
+            {
+              "type": "culture_note",
+              "title": "El 'small talk' no es opcional",
+              "body": "Antes de una reunión, en el ascensor o esperando el café, en el mundo anglosajón se habla del tiempo, del fin de semana o del tráfico. No es hipocresía ni pérdida de tiempo: es el ritual que marca que la relación va bien. Ir directo al asunto sin ese preámbulo se percibe como frío o incluso hostil. Tres frases te bastan: 'How's your week going?', 'Any plans for the weekend?', 'Terrible weather, isn't it?'"
+            },
+            {
+              "type": "culture_note",
+              "title": "Por qué los británicos piden perdón por todo",
+              "body": "En el Reino Unido se dice 'sorry' cuando alguien te pisa a ti. No es sumisión: 'sorry' funciona como lubricante social, no como admisión de culpa. También sirve para pedir que repitan algo ('Sorry?'), para interrumpir ('Sorry, but…') y para pasar entre la gente. Si te disculpas de más, encajarás perfectamente."
+            },
+            {
+              "type": "culture_note",
+              "title": "El espacio personal es más grande",
+              "body": "En España o Latinoamérica hablar cerca y tocar el brazo del interlocutor es normal. En el Reino Unido, Estados Unidos y Australia la distancia cómoda es mayor, y el contacto físico entre desconocidos se limita al apretón de manos. Dos besos de saludo en un contexto profesional anglosajón resulta desconcertante. Espera a ver qué hace la otra persona."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario cultural",
+              "pairs": [
+                ["small talk", "conversación trivial"],
+                ["polite", "educado"],
+                ["awkward", "incómodo"],
+                ["personal space", "espacio personal"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "En Reino Unido, ¿qué dice alguien a quien TÚ acabas de pisar?",
+              "options": ["Sorry", "Watch out", "Excuse you", "No dice nada"],
+              "answer": "Sorry"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es un buen tema de small talk?",
+              "options": ["El tiempo", "Cuánto ganas", "Por quién votas", "Tu religión"],
+              "answer": "El tiempo"
+            },
+            { "type": "speak_and_repeat", "prompt": "Terrible weather today, isn't it?", "translation": "Menudo tiempo horrible hoy, ¿verdad?" },
+            { "type": "speak_and_repeat", "prompt": "How's your week going so far?", "translation": "¿Qué tal te va la semana?" },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Algún plan para el fin de semana?",
+              "answer": "Any plans for the weekend?",
+              "alternatives": ["Any plans for the weekend"]
+            }
+          ]
+        },
+        {
+          "id": "culture_l2",
+          "title": "Trabajo y jerarquía",
+          "kind": "culture",
+          "vocab": [
+            { "en": "work-life balance", "es": "equilibrio vida-trabajo" },
+            { "en": "line manager", "es": "jefe directo" },
+            { "en": "feedback", "es": "comentarios, valoración" },
+            { "en": "punctual", "es": "puntual" },
+            { "en": "deadline", "es": "fecha límite" },
+            { "en": "informal", "es": "informal" }
+          ],
+          "exercises": [
+            {
+              "type": "culture_note",
+              "title": "Al jefe se le llama por su nombre",
+              "body": "En la mayoría de empresas anglosajonas se tutea a todo el mundo, incluido el director general, y se le llama por su nombre de pila. Usar 'Mr.' o 'Sir' con un compañero suena extraño o irónico. Esto NO significa que la jerarquía no exista: existe, pero se expresa en las decisiones, no en el trato."
+            },
+            {
+              "type": "culture_note",
+              "title": "El 'sándwich de feedback'",
+              "body": "Cuando un jefe anglosajón te critica, suele envolverlo entre dos elogios: 'Great work on the report. I think the introduction could be tighter. Overall, really solid.' Traducción real: arregla la introducción. Aprende a detectar el relleno: si oyes 'I wonder if we might consider…', te están pidiendo un cambio, no reflexionando."
+            },
+            {
+              "type": "culture_note",
+              "title": "La puntualidad se toma en serio",
+              "body": "Llegar cinco minutos tarde a una reunión en Alemania, Reino Unido o Estados Unidos sin avisar se nota. En videollamadas, conectarse un minuto antes es lo normal. Y si vas a llegar tarde, se avisa: un mensaje de 'Running 5 min late, sorry!' arregla la situación por completo."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario laboral",
+              "pairs": [
+                ["line manager", "jefe directo"],
+                ["work-life balance", "equilibrio vida-trabajo"],
+                ["punctual", "puntual"],
+                ["deadline", "fecha límite"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Tu jefe dice: \"I wonder if we might consider a different approach\". ¿Qué significa?",
+              "options": [
+                "Cambia el enfoque",
+                "Está pensando en voz alta, no hace falta hacer nada",
+                "Le encanta tu enfoque",
+                "Quiere que le expliques el enfoque"
+              ],
+              "answer": "Cambia el enfoque"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo avisas de que llegas tarde?",
+              "options": [
+                "Running 5 minutes late, sorry!",
+                "I will arrive delayed",
+                "Excuse my delay of arrival",
+                "I have retard"
+              ],
+              "answer": "Running 5 minutes late, sorry!"
+            },
+            { "type": "speak_and_repeat", "prompt": "Running five minutes late, sorry!", "translation": "¡Llego cinco minutos tarde, perdón!" },
+            { "type": "speak_and_repeat", "prompt": "Thanks for the feedback, I'll fix that.", "translation": "Gracias por los comentarios, lo arreglo." },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Gracias por tus comentarios",
+              "answer": "Thank you for your feedback"
+            }
+          ]
+        },
+        {
+          "id": "culture_l3",
+          "title": "Fiestas y tradiciones",
+          "kind": "culture",
+          "vocab": [
+            { "en": "Thanksgiving", "es": "Acción de Gracias" },
+            { "en": "Boxing Day", "es": "26 de diciembre (Reino Unido)" },
+            { "en": "Halloween", "es": "Halloween" },
+            { "en": "Fourth of July", "es": "4 de julio" },
+            { "en": "bank holiday", "es": "día festivo (UK)" },
+            { "en": "to celebrate", "es": "celebrar" }
+          ],
+          "exercises": [
+            {
+              "type": "culture_note",
+              "title": "Thanksgiving importa más que Navidad",
+              "body": "En Estados Unidos, el cuarto jueves de noviembre, medio país se desplaza para cenar pavo en familia. Es el viaje más masivo del año, por delante de Navidad. Si trabajas con estadounidenses, esa semana no esperes respuestas. El viernes siguiente es Black Friday, y el fin de semana entero está muerto laboralmente."
+            },
+            {
+              "type": "culture_note",
+              "title": "Boxing Day no tiene nada que ver con el boxeo",
+              "body": "El 26 de diciembre es festivo en Reino Unido, Irlanda, Australia, Canadá y Nueva Zelanda. El nombre viene de las cajas de regalos que se daban antiguamente al servicio y a los pobres. Hoy es el día de las rebajas y del fútbol. Y ojo: en Reino Unido los festivos se llaman 'bank holidays', porque históricamente cerraban los bancos."
+            },
+            {
+              "type": "culture_note",
+              "title": "Halloween es más que disfraces",
+              "body": "El 31 de octubre los niños salen a pedir caramelos con la fórmula 'trick or treat'. En Estados Unidos las casas se decoran a fondo desde principios de octubre y es la segunda fiesta con más gasto del año, tras Navidad. Su origen es el Samhain celta irlandés, que llegó a América con los emigrantes del siglo XIX y volvió a Europa transformado."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las fiestas",
+              "pairs": [
+                ["Thanksgiving", "Acción de Gracias"],
+                ["Boxing Day", "26 de diciembre"],
+                ["Fourth of July", "4 de julio"],
+                ["bank holiday", "día festivo británico"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Qué se celebra el 4 de julio en Estados Unidos?",
+              "options": [
+                "La independencia",
+                "El día del trabajo",
+                "El fin de la guerra civil",
+                "El día de los caídos"
+              ],
+              "answer": "La independencia"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Trick or treat!",
+              "options": [
+                "¡Truco o trato!",
+                "¡Trato hecho!",
+                "¡Qué truco!",
+                "¡Ven a jugar!"
+              ],
+              "answer": "¡Truco o trato!"
+            },
+            { "type": "speak_and_repeat", "prompt": "Happy Thanksgiving! Enjoy the holiday.", "translation": "¡Feliz Acción de Gracias! Disfruta del festivo." },
+            { "type": "listen_and_type", "audioText": "Monday is a bank holiday", "answer": "Monday is a bank holiday", "translation": "El lunes es festivo" },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Cómo lo celebráis?",
+              "answer": "How do you celebrate it?",
+              "alternatives": ["How do you celebrate it"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

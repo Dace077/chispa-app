@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chispa — Generador de QR</title>
+<style>
+  :root {
+    --indigo-950: #120C33;
+    --indigo-900: #1A1145;
+    --indigo-800: #241862;
+    --violet-500: #5B4BE8;
+    --violet-400: #7C6FF0;
+    --violet-100: #E7E3FE;
+    --coral-500: #FF6B5A;
+    --amber-500: #FFB020;
+    --teal-500: #12B5A0;
+    --paper: #FAF9FF;
+    --ink: #15132A;
+    --ink-500: #6B6885;
+    --stroke: #DDD9EC;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 36px; }
+  .mark { width: 72px; height: 72px; margin: 0 auto 12px; display: block; }
+  h1 { font-size: 30px; letter-spacing: -0.6px; margin: 0 0 6px; }
+  .sub { color: var(--ink-500); margin: 0; font-size: 15px; }
+
+  .card {
+    background: #fff;
+    border: 2px solid var(--stroke);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 17px; margin: 0 0 4px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .step {
+    background: var(--violet-500); color: #fff;
+    width: 26px; height: 26px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; flex: none;
+  }
+  .card p { margin: 0 0 14px; color: var(--ink-500); font-size: 14.5px; }
+  .card p:last-child { margin-bottom: 0; }
+
+  ol.hosts { margin: 10px 0 0; padding-left: 20px; font-size: 14.5px; color: var(--ink-500); }
+  ol.hosts li { margin-bottom: 8px; }
+  ol.hosts strong { color: var(--ink); }
+
+  label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+  input[type=url] {
+    width: 100%; padding: 14px 16px;
+    border: 2px solid var(--stroke); border-radius: 14px;
+    font-size: 15px; font-family: inherit; color: var(--ink);
+    background: var(--paper);
+  }
+  input[type=url]:focus { outline: none; border-color: var(--violet-500); }
+
+  .opts { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; align-items: center; }
+  .opt { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-500); }
+  select {
+    padding: 8px 12px; border: 2px solid var(--stroke); border-radius: 10px;
+    font-family: inherit; font-size: 14px; background: #fff; color: var(--ink);
+  }
+
+  #out { text-align: center; }
+  #qrbox {
+    display: inline-block; padding: 20px; background: #fff;
+    border-radius: 18px; border: 2px solid var(--stroke); margin-bottom: 8px;
+  }
+  #qrbox canvas { display: block; image-rendering: pixelated; }
+  .caption { font-size: 13px; color: var(--ink-500); word-break: break-all; margin: 10px auto 0; max-width: 460px; }
+
+  button {
+    background: var(--violet-500); color: #fff; border: none;
+    padding: 14px 24px; border-radius: 14px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    cursor: pointer; box-shadow: 0 4px 0 #3A2BB5;
+    transition: transform .06s, box-shadow .06s;
+  }
+  button:active { transform: translateY(4px); box-shadow: none; }
+  button:disabled { background: #C9C6D8; box-shadow: 0 4px 0 #ADA9BF; cursor: not-allowed; }
+  .actions { margin-top: 18px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  button.ghost { background: #fff; color: var(--violet-500); border: 2px solid var(--stroke); box-shadow: none; }
+  button.ghost:active { transform: none; }
+
+  .msg {
+    padding: 14px 16px; border-radius: 14px; font-size: 14px;
+    margin-top: 14px; display: none;
+  }
+  .msg.warn { background: #FFF4DC; color: #7A5200; display: block; }
+  .msg.err  { background: #FDE0E1; color: #8A1418; display: block; }
+
+  .note {
+    background: var(--violet-100); border-radius: 14px;
+    padding: 16px; font-size: 14px; color: var(--indigo-800); margin-top: 18px;
+  }
+  code {
+    background: #EFECFB; padding: 2px 6px; border-radius: 6px;
+    font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px;
+  }
+  footer { text-align: center; color: var(--ink-500); font-size: 13px; margin-top: 28px; }
+
+  @media (prefers-color-scheme: dark) {
+    body { background: var(--indigo-950); color: #F4F2FF; }
+    .card { background: var(--indigo-900); border-color: #332E52; }
+    .card p, .sub, .opt, ol.hosts, .caption, footer { color: #C9C2FB; }
+    ol.hosts strong { color: #F4F2FF; }
+    input[type=url], select { background: var(--indigo-800); border-color: #332E52; color: #F4F2FF; }
+    #qrbox { background: #fff; border-color: #332E52; }
+    button.ghost { background: var(--indigo-800); border-color: #332E52; color: var(--violet-400); }
+    .note { background: var(--indigo-800); color: #C9C2FB; }
+    code { background: #2A2450; color: #E7E3FE; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg class="mark" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#3A2BB5"/><stop offset=".55" stop-color="#2A1D6E"/><stop offset="1" stop-color="#1A1145"/>
+        </linearGradient>
+        <linearGradient id="sp" x1="23" y1="22" x2="85" y2="85" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#FFC94D"/><stop offset=".5" stop-color="#FFB020"/><stop offset="1" stop-color="#FF6B5A"/>
+        </linearGradient>
+      </defs>
+      <rect width="108" height="108" rx="26" fill="url(#bg)"/>
+      <path d="M54 22C57.5 41 66.5 50 85 53.5 66.5 57 57.5 66 54 85 50.5 66 41.5 57 23 53.5 41.5 50 50.5 41 54 22Z" fill="url(#sp)"/>
+      <path d="M79 28c1 5 3.5 7.5 8.5 8.5-5 1-7.5 3.5-8.5 8.5-1-5-3.5-7.5-8.5-8.5 5-1 7.5-3.5 8.5-8.5Z" fill="#FF6B5A" opacity=".9"/>
+    </svg>
+    <h1>Generador de QR para Chispa</h1>
+    <p class="sub">Funciona sin conexión. Todo se calcula en tu navegador.</p>
+  </header>
+
+  <div class="card">
+    <h2><span class="step">1</span> Sube el APK a internet</h2>
+    <p>
+      Un código QR solo guarda texto. Para que alguien pueda descargar la app,
+      el QR tiene que apuntar a un <strong>enlace público</strong>, no a una carpeta de tu ordenador.
+      Sube <code>chispa-1.0.0.apk</code> a uno de estos sitios:
+    </p>
+    <ol class="hosts">
+      <li><strong>GitHub Releases</strong> — la mejor opción. Gratis, sin límite de descargas y el enlace es directo y permanente.</li>
+      <li><strong>Google Drive</strong> — la más rápida. Comparte con «cualquier persona con el enlace».</li>
+    </ol>
+    <div class="note">
+      Los pasos detallados de ambas están en <strong>COMO_COMPARTIRLA.md</strong>, en esta misma carpeta.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="step">2</span> Pega aquí el enlace</h2>
+    <p>El QR se genera solo, mientras escribes.</p>
+    <label for="url">Enlace de descarga del APK</label>
+    <input type="url" id="url" placeholder="https://github.com/tu-usuario/chispa/releases/download/v1.0.0/chispa-1.0.0.apk" spellcheck="false" autocomplete="off">
+    <div class="opts">
+      <div class="opt">
+        <label for="size" style="margin:0">Tamaño</label>
+        <select id="size">
+          <option value="6">Pequeño</option>
+          <option value="10" selected>Mediano</option>
+          <option value="16">Grande (para imprimir)</option>
+        </select>
+      </div>
+      <div class="opt">
+        <label for="ecl" style="margin:0">Resistencia a daños</label>
+        <select id="ecl">
+          <option value="L">Baja (QR más simple)</option>
+          <option value="M" selected>Media (recomendada)</option>
+          <option value="Q">Alta</option>
+          <option value="H">Máxima (para pegatinas)</option>
+        </select>
+      </div>
+    </div>
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <div class="card" id="out">
+    <div id="qrbox"><canvas id="qr" width="240" height="240"></canvas></div>
+    <p class="caption" id="cap">Escribe un enlace arriba para generar el código.</p>
+    <div class="actions">
+      <button id="dl" disabled>Descargar PNG</button>
+      <button class="ghost" id="print" disabled>Imprimir</button>
+    </div>
+  </div>
+
+  <footer>Chispa 1.0.0 · generador de QR autónomo, sin librerías externas</footer>
+</div>
+
+<script>
+/* ============================================================================
+   Codificador de QR (modo byte) escrito desde cero.
+   Sin librerías, sin CDN, sin red: este archivo funciona con doble clic
+   aunque no tengas internet, igual que la app.
+   Implementa: selección de versión, Reed-Solomon sobre GF(256), colocación
+   de módulos, las 8 máscaras y la elección de la mejor por penalización.
+   ========================================================================== */
+
+/* --- Aritmética en el campo de Galois GF(256), polinomio 0x11D --- */
+const EXP = new Uint8Array(512), LOG = new Uint8Array(256);
+(function initGF() {
+  let x = 1;
+  for (let i = 0; i < 255; i++) { EXP[i] = x; LOG[x] = i; x <<= 1; if (x & 0x100) x ^= 0x11D; }
+  for (let i = 255; i < 512; i++) EXP[i] = EXP[i - 255];
+})();
+const gmul = (a, b) => (a === 0 || b === 0) ? 0 : EXP[LOG[a] + LOG[b]];
+
+/* Polinomio generador de grado `deg`: producto de (x + a^i) */
+function rsGenerator(deg) {
+  let poly = [1];
+  for (let i = 0; i < deg; i++) {
+    const next = new Array(poly.length + 1).fill(0);
+    for (let j = 0; j < poly.length; j++) {
+      next[j] ^= poly[j];
+      next[j + 1] ^= gmul(poly[j], EXP[i]);
+    }
+    poly = next;
+  }
+  return poly;
+}
+
+/* Resto de la división: son los códigos de corrección de errores */
+function rsEncode(data, ecLen) {
+  const gen = rsGenerator(ecLen);
+  const buf = new Uint8Array(data.length + ecLen);
+  buf.set(data);
+  for (let i = 0; i < data.length; i++) {
+    const coef = buf[i];
+    if (coef !== 0) for (let j = 0; j < gen.length; j++) buf[i + j] ^= gmul(gen[j], coef);
+  }
+  return buf.slice(data.length);
+}
+
+/* --- Tablas del estándar ISO/IEC 18004 (versiones 1 a 20) --- */
+// [códigos EC por bloque, bloques grupo1, datos grupo1, bloques grupo2, datos grupo2]
+const EC_TABLE = {
+  L: [[7,1,19,0,0],[10,1,34,0,0],[15,1,55,0,0],[20,1,80,0,0],[26,1,108,0,0],[18,2,68,0,0],[20,2,78,0,0],[24,2,97,0,0],[30,2,116,0,0],[18,2,68,2,69],[20,4,81,0,0],[24,2,92,2,93],[26,4,107,0,0],[30,3,115,1,116],[22,5,87,1,88],[24,5,98,1,99],[28,1,107,5,108],[30,5,120,1,121],[28,3,113,4,114],[28,3,107,5,108]],
+  M: [[10,1,16,0,0],[16,1,28,0,0],[26,1,44,0,0],[18,2,32,0,0],[24,2,43,0,0],[16,4,27,0,0],[18,4,31,0,0],[22,2,38,2,39],[22,3,36,2,37],[26,4,43,1,44],[30,1,50,4,51],[22,6,36,2,37],[22,8,37,1,38],[24,4,40,5,41],[24,5,41,5,42],[28,7,45,3,46],[28,10,46,1,47],[26,9,43,4,44],[26,3,44,11,45],[26,3,41,13,42]],
+  Q: [[13,1,13,0,0],[22,1,22,0,0],[18,2,17,0,0],[26,2,24,0,0],[18,2,15,2,16],[24,4,19,0,0],[18,2,14,4,15],[22,4,18,2,19],[20,4,16,4,17],[24,6,19,2,20],[28,4,22,4,23],[26,4,20,6,21],[24,8,20,4,21],[20,11,16,5,17],[30,5,24,7,25],[24,15,19,2,20],[28,1,22,15,23],[28,17,22,1,23],[26,17,21,4,22],[30,15,24,5,25]],
+  H: [[17,1,9,0,0],[28,1,16,0,0],[22,2,13,0,0],[16,4,9,0,0],[22,2,11,2,12],[28,4,15,0,0],[26,4,13,1,14],[26,4,14,2,15],[24,4,12,4,13],[28,6,15,2,16],[24,3,12,8,13],[28,7,14,4,15],[22,12,11,4,12],[24,11,12,5,13],[24,11,12,7,13],[30,3,15,13,16],[28,2,14,17,15],[28,2,14,19,15],[26,9,13,16,14],[28,15,15,10,16]]
+};
+
+const ALIGN_POS = [[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90]];
+
+function versionSize(v) { return v * 4 + 17; }
+
+function dataCapacityBytes(v, ecl) {
+  const [ec, b1, d1, b2, d2] = EC_TABLE[ecl][v - 1];
+  return b1 * d1 + b2 * d2;
+}
+
+/* --- Construcción del flujo de bits --- */
+function buildBitStream(bytes, version, ecl) {
+  const bits = [];
+  const push = (val, len) => { for (let i = len - 1; i >= 0; i--) bits.push((val >> i) & 1); };
+
+  push(0b0100, 4);                                   // indicador de modo: byte
+  push(bytes.length, version <= 9 ? 8 : 16);         // contador de caracteres
+  for (const b of bytes) push(b, 8);                 // datos
+
+  const capacityBits = dataCapacityBytes(version, ecl) * 8;
+  // Terminador: hasta 4 ceros
+  for (let i = 0; i < 4 && bits.length < capacityBits; i++) bits.push(0);
+  // Relleno hasta completar el byte
+  while (bits.length % 8 !== 0) bits.push(0);
+
+  const out = [];
+  for (let i = 0; i < bits.length; i += 8) {
+    let byte = 0;
+    for (let j = 0; j < 8; j++) byte = (byte << 1) | bits[i + j];
+    out.push(byte);
+  }
+  // Bytes de relleno alternos hasta llenar la capacidad
+  const pad = [0xEC, 0x11];
+  let k = 0;
+  while (out.length < dataCapacityBytes(version, ecl)) out.push(pad[k++ % 2]);
+  return out;
+}
+
+/* --- Intercalado de bloques de datos y de corrección --- */
+function interleave(dataBytes, version, ecl) {
+  const [ecLen, b1, d1, b2, d2] = EC_TABLE[ecl][version - 1];
+  const blocks = [], ecBlocks = [];
+  let offset = 0;
+  for (let i = 0; i < b1; i++) { blocks.push(dataBytes.slice(offset, offset + d1)); offset += d1; }
+  for (let i = 0; i < b2; i++) { blocks.push(dataBytes.slice(offset, offset + d2)); offset += d2; }
+  for (const blk of blocks) ecBlocks.push(rsEncode(Uint8Array.from(blk), ecLen));
+
+  const result = [];
+  const maxData = Math.max(d1, d2);
+  for (let i = 0; i < maxData; i++)
+    for (const blk of blocks) if (i < blk.length) result.push(blk[i]);
+  for (let i = 0; i < ecLen; i++)
+    for (const blk of ecBlocks) result.push(blk[i]);
+  return result;
+}
+
+/* --- Información de formato y de versión (códigos BCH) --- */
+function formatInfo(ecl, mask) {
+  const eclBits = { L: 1, M: 0, Q: 3, H: 2 }[ecl];
+  const data = (eclBits << 3) | mask;
+  let rem = data;
+  for (let i = 0; i < 10; i++) rem = (rem << 1) ^ (((rem >> 9) & 1) * 0x537);
+  return ((data << 10) | rem) ^ 0x5412;
+}
+function versionInfo(v) {
+  let rem = v;
+  for (let i = 0; i < 12; i++) rem = (rem << 1) ^ (((rem >> 11) & 1) * 0x1F25);
+  return (v << 12) | rem;
+}
+
+/* --- Colocación de módulos en la matriz --- */
+function buildMatrix(version, ecl, codewords) {
+  const size = versionSize(version);
+  const m = Array.from({ length: size }, () => new Array(size).fill(null));
+  const reserved = Array.from({ length: size }, () => new Array(size).fill(false));
+
+  const setFn = (r, c, v) => { if (r >= 0 && r < size && c >= 0 && c < size) { m[r][c] = v; reserved[r][c] = true; } };
+
+  // Patrones localizadores + separadores
+  const finder = (row, col) => {
+    for (let r = -1; r <= 7; r++) for (let c = -1; c <= 7; c++) {
+      const inner = r >= 0 && r <= 6 && c >= 0 && c <= 6 &&
+        (r === 0 || r === 6 || c === 0 || c === 6 || (r >= 2 && r <= 4 && c >= 2 && c <= 4));
+      setFn(row + r, col + c, inner ? 1 : 0);
+    }
+  };
+  finder(0, 0); finder(0, size - 7); finder(size - 7, 0);
+
+  // Patrones de alineación
+  const positions = ALIGN_POS[version - 1];
+  for (const r of positions) for (const c of positions) {
+    if ((r <= 7 && c <= 7) || (r <= 7 && c >= size - 8) || (r >= size - 8 && c <= 7)) continue;
+    for (let dr = -2; dr <= 2; dr++) for (let dc = -2; dc <= 2; dc++)
+      setFn(r + dr, c + dc, (Math.abs(dr) === 2 || Math.abs(dc) === 2 || (dr === 0 && dc === 0)) ? 1 : 0);
+  }
+
+  // Patrones de sincronización
+  for (let i = 8; i < size - 8; i++) { setFn(6, i, i % 2 === 0 ? 1 : 0); setFn(i, 6, i % 2 === 0 ? 1 : 0); }
+
+  // Módulo oscuro fijo
+  setFn(size - 8, 8, 1);
+
+  // Reservar zonas de información de formato
+  for (let i = 0; i < 9; i++) { if (m[8][i] === null) { m[8][i] = 0; reserved[8][i] = true; } if (m[i][8] === null) { m[i][8] = 0; reserved[i][8] = true; } }
+  for (let i = 0; i < 8; i++) { if (m[8][size - 1 - i] === null) { m[8][size - 1 - i] = 0; reserved[8][size - 1 - i] = true; } if (m[size - 1 - i][8] === null) { m[size - 1 - i][8] = 0; reserved[size - 1 - i][8] = true; } }
+
+  // Reservar información de versión (a partir de la versión 7)
+  if (version >= 7) {
+    for (let i = 0; i < 6; i++) for (let j = 0; j < 3; j++) {
+      m[size - 11 + j][i] = 0; reserved[size - 11 + j][i] = true;
+      m[i][size - 11 + j] = 0; reserved[i][size - 11 + j] = true;
+    }
+  }
+
+  // Datos en zigzag desde la esquina inferior derecha
+  let bitIdx = 0, dir = -1, row = size - 1;
+  for (let col = size - 1; col > 0; col -= 2) {
+    if (col === 6) col--;                                   // la columna 6 es de sincronización
+    while (row >= 0 && row < size) {
+      for (let i = 0; i < 2; i++) {
+        const c = col - i;
+        if (!reserved[row][c]) {
+          const byte = codewords[bitIdx >> 3];
+          const bit = byte === undefined ? 0 : (byte >> (7 - (bitIdx & 7))) & 1;
+          m[row][c] = bit;
+          bitIdx++;
+        }
+      }
+      row += dir;
+    }
+    dir = -dir; row += dir;
+  }
+  return { m, reserved, size };
+}
+
+const MASKS = [
+  (r, c) => (r + c) % 2 === 0,
+  (r, c) => r % 2 === 0,
+  (r, c) => c % 3 === 0,
+  (r, c) => (r + c) % 3 === 0,
+  (r, c) => (Math.floor(r / 2) + Math.floor(c / 3)) % 2 === 0,
+  (r, c) => ((r * c) % 2) + ((r * c) % 3) === 0,
+  (r, c) => (((r * c) % 2) + ((r * c) % 3)) % 2 === 0,
+  (r, c) => (((r + c) % 2) + ((r * c) % 3)) % 2 === 0
+];
+
+function applyMaskAndFormat(base, version, ecl, mask) {
+  const { m, reserved, size } = base;
+  const out = m.map(row => row.slice());
+  for (let r = 0; r < size; r++) for (let c = 0; c < size; c++)
+    if (!reserved[r][c] && MASKS[mask](r, c)) out[r][c] ^= 1;
+
+  // Información de formato (dos copias)
+  const fmt = formatInfo(ecl, mask);
+  for (let i = 0; i < 15; i++) {
+    const bit = (fmt >> i) & 1;
+    if (i < 6) out[8][i] = bit;
+    else if (i === 6) out[8][7] = bit;
+    else if (i === 7) out[8][8] = bit;
+    else if (i === 8) out[7][8] = bit;
+    else out[14 - i][8] = bit;
+
+    if (i < 8) out[size - 1 - i][8] = bit;
+    else out[8][size - 15 + i] = bit;
+  }
+  out[size - 8][8] = 1;
+
+  // Información de versión
+  if (version >= 7) {
+    const vi = versionInfo(version);
+    for (let i = 0; i < 18; i++) {
+      const bit = (vi >> i) & 1;
+      const a = Math.floor(i / 3), b = i % 3;
+      out[size - 11 + b][a] = bit;
+      out[a][size - 11 + b] = bit;
+    }
+  }
+  return out;
+}
+
+/* Penalización del estándar: elige la máscara que hace el QR más legible */
+function penalty(m) {
+  const n = m.length;
+  let score = 0;
+
+  const runScore = (line) => {
+    let s = 0, run = 1;
+    for (let i = 1; i < n; i++) {
+      if (line[i] === line[i - 1]) run++;
+      else { if (run >= 5) s += 3 + (run - 5); run = 1; }
+    }
+    if (run >= 5) s += 3 + (run - 5);
+    return s;
+  };
+  for (let r = 0; r < n; r++) score += runScore(m[r]);
+  for (let c = 0; c < n; c++) score += runScore(m.map(row => row[c]));
+
+  // Bloques 2x2 del mismo color
+  for (let r = 0; r < n - 1; r++) for (let c = 0; c < n - 1; c++) {
+    const v = m[r][c];
+    if (v === m[r][c + 1] && v === m[r + 1][c] && v === m[r + 1][c + 1]) score += 3;
+  }
+
+  // Patrones que se confunden con un localizador
+  const pat1 = [1,0,1,1,1,0,1,0,0,0,0], pat2 = [0,0,0,0,1,0,1,1,1,0,1];
+  const match = (arr, i, pat) => pat.every((p, k) => arr[i + k] === p);
+  for (let r = 0; r < n; r++) for (let c = 0; c <= n - 11; c++) {
+    if (match(m[r], c, pat1) || match(m[r], c, pat2)) score += 40;
+  }
+  for (let c = 0; c < n; c++) {
+    const col = m.map(row => row[c]);
+    for (let r = 0; r <= n - 11; r++) if (match(col, r, pat1) || match(col, r, pat2)) score += 40;
+  }
+
+  // Desequilibrio entre módulos claros y oscuros
+  let dark = 0;
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) dark += m[r][c];
+  const pct = (dark * 100) / (n * n);
+  score += Math.floor(Math.abs(pct - 50) / 5) * 10;
+  return score;
+}
+
+/* --- API pública --- */
+function generateQR(text, ecl) {
+  const bytes = new TextEncoder().encode(text);
+  let version = 0;
+  for (let v = 1; v <= 20; v++) {
+    const headerBits = 4 + (v <= 9 ? 8 : 16);
+    if (bytes.length * 8 + headerBits <= dataCapacityBytes(v, ecl) * 8) { version = v; break; }
+  }
+  if (!version) throw new Error('El enlace es demasiado largo para un QR de este tipo. Prueba con una resistencia menor o acorta la URL.');
+
+  const data = buildBitStream(bytes, version, ecl);
+  const codewords = interleave(data, version, ecl);
+  const base = buildMatrix(version, ecl, codewords);
+
+  let best = null, bestScore = Infinity;
+  for (let mask = 0; mask < 8; mask++) {
+    const cand = applyMaskAndFormat(base, version, ecl, mask);
+    const s = penalty(cand);
+    if (s < bestScore) { bestScore = s; best = cand; }
+  }
+  return { matrix: best, version };
+}
+
+/* --- Dibujo en canvas --- */
+function draw(matrix, scale) {
+  const quiet = 4;
+  const n = matrix.length;
+  const px = (n + quiet * 2) * scale;
+  const canvas = document.getElementById('qr');
+  canvas.width = px; canvas.height = px;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fillRect(0, 0, px, px);
+  ctx.fillStyle = '#1A1145';
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++)
+    if (matrix[r][c]) ctx.fillRect((c + quiet) * scale, (r + quiet) * scale, scale, scale);
+  return canvas;
+}
+
+/* --- Interfaz --- */
+const $url = document.getElementById('url');
+const $size = document.getElementById('size');
+const $ecl = document.getElementById('ecl');
+const $msg = document.getElementById('msg');
+const $cap = document.getElementById('cap');
+const $dl = document.getElementById('dl');
+const $print = document.getElementById('print');
+
+function showMsg(text, kind) {
+  $msg.textContent = text;
+  $msg.className = 'msg ' + kind;
+}
+function clearMsg() { $msg.className = 'msg'; $msg.textContent = ''; }
+
+function render() {
+  const url = $url.value.trim();
+  const ctx = document.getElementById('qr').getContext('2d');
+
+  if (!url) {
+    ctx.clearRect(0, 0, 9999, 9999);
+    document.getElementById('qr').width = 240;
+    document.getElementById('qr').height = 240;
+    $cap.textContent = 'Escribe un enlace arriba para generar el código.';
+    $dl.disabled = true; $print.disabled = true;
+    clearMsg();
+    return;
+  }
+
+  try {
+    const { matrix, version } = generateQR(url, $ecl.value);
+    draw(matrix, parseInt($size.value, 10));
+    $cap.textContent = url;
+    $dl.disabled = false; $print.disabled = false;
+
+    if (!/^https?:\/\//i.test(url)) {
+      showMsg('Ojo: el enlace no empieza por http:// o https://. Muchos móviles no lo reconocerán como una dirección web.', 'warn');
+    } else if (/^[a-z]:\\/i.test(url) || url.startsWith('file://')) {
+      showMsg('Eso es una ruta de tu ordenador, no un enlace de internet. Sube antes el APK a Drive o GitHub.', 'err');
+    } else if (/drive\.google\.com\/file\/d\//.test(url)) {
+      showMsg('Enlace de Drive detectado. Para que descargue directo, conviértelo a: https://drive.google.com/uc?export=download&id=TU_ID', 'warn');
+    } else {
+      clearMsg();
+    }
+  } catch (e) {
+    $cap.textContent = '';
+    $dl.disabled = true; $print.disabled = true;
+    showMsg(e.message, 'err');
+  }
+}
+
+$url.addEventListener('input', render);
+$size.addEventListener('change', render);
+$ecl.addEventListener('change', render);
+
+$dl.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = 'chispa-qr.png';
+  link.href = document.getElementById('qr').toDataURL('image/png');
+  link.click();
+});
+
+$print.addEventListener('click', () => window.print());
+
+// Comprobación interna: un QR conocido debe salir con el tamaño correcto.
+try {
+  const test = generateQR('https://example.com', 'M');
+  if (test.matrix.length !== versionSize(test.version)) console.error('QR: tamaño de matriz inesperado');
+} catch (e) { console.error('QR: el autotest falló', e); }
+
+render();
+</script>
+</body>
+</html>

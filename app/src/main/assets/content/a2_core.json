@@ -1,0 +1,940 @@
+{
+  "id": "core_a2",
+  "title": "Nivel A2 — Elemental",
+  "category": "core",
+  "icon": "spark",
+  "unlockXp": 0,
+  "description": "Pasado, futuro, comparar cosas y desenvolverte en situaciones cotidianas.",
+  "units": [
+    {
+      "id": "a2_u1",
+      "level": "A2",
+      "title": "Hablar del pasado",
+      "subtitle": "Pasado simple, regulares e irregulares",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a2_u1_l1",
+          "title": "Pasado simple regular",
+          "vocab": [
+            { "en": "worked", "es": "trabajé/trabajó" },
+            { "en": "played", "es": "jugué/jugó" },
+            { "en": "watched", "es": "vi/vio (ver TV)" },
+            { "en": "visited", "es": "visité/visitó" },
+            { "en": "studied", "es": "estudié/estudió", "note": "study → studied" },
+            { "en": "stopped", "es": "paré/paró", "note": "Se dobla la consonante" },
+            { "en": "yesterday", "es": "ayer" },
+            { "en": "last week", "es": "la semana pasada" },
+            { "en": "two days ago", "es": "hace dos días" },
+            { "en": "last night", "es": "anoche" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "-ed suena de tres maneras",
+              "body": "El pasado regular se escribe siempre '-ed', pero suena distinto según lo que venga antes. Tras sonido sordo (p, k, f, s, sh, ch) suena /t/: 'worked' = 'workt'. Tras sonido sonoro o vocal suena /d/: 'played' = 'playd'. Y solo tras 't' o 'd' se pronuncia la sílaba entera /ɪd/: 'wanted', 'needed'. Decir 'work-ed' con dos sílabas es el error clásico.",
+              "examples": [
+                { "en": "watched", "es": "suena 'watcht'" },
+                { "en": "listened", "es": "suena 'listend'" },
+                { "en": "decided", "es": "suena 'decid-id'" }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ TV last night.",
+              "answer": "watched",
+              "options": ["watched", "watch", "watching", "watchs"],
+              "translation": "Vi la tele anoche."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ English for three years.",
+              "answer": "studied",
+              "options": ["studied", "studyed", "studies", "study"],
+              "translation": "Ella estudió inglés durante tres años."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es el pasado de 'stop'?",
+              "options": ["stopped", "stoped", "stopt", "stopped up"],
+              "answer": "stopped"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Ayer trabajé hasta muy tarde",
+              "answer": "Yesterday I worked very late",
+              "alternatives": ["I worked very late yesterday"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Visitamos a mi abuela la semana pasada",
+              "words": ["We", "visited", "my", "grandmother", "last", "week"],
+              "answer": "We visited my grandmother last week"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "They played football yesterday",
+              "answer": "They played football yesterday",
+              "translation": "Jugaron al fútbol ayer"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une presente y pasado",
+              "pairs": [
+                ["work", "worked"],
+                ["study", "studied"],
+                ["stop", "stopped"],
+                ["visit", "visited"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I watched a movie and I liked it.",
+              "translation": "Vi una película y me gustó."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "We arrived two days ago",
+              "answer": "Llegamos hace dos días"
+            }
+          ]
+        },
+        {
+          "id": "a2_u1_l2",
+          "title": "Verbos irregulares",
+          "vocab": [
+            { "en": "went", "es": "fui/fue (go)" },
+            { "en": "had", "es": "tuve/tuvo (have)" },
+            { "en": "said", "es": "dije/dijo (say)", "ipa": "/sed/" },
+            { "en": "made", "es": "hice/hizo (make)" },
+            { "en": "took", "es": "tomé/tomó (take)" },
+            { "en": "came", "es": "vine/vino (come)" },
+            { "en": "saw", "es": "vi/vio (see)" },
+            { "en": "gave", "es": "di/dio (give)" },
+            { "en": "got", "es": "conseguí/consiguió (get)" },
+            { "en": "knew", "es": "supe/supo (know)" },
+            { "en": "thought", "es": "pensé/pensó (think)" },
+            { "en": "bought", "es": "compré/compró (buy)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los irregulares hay que memorizarlos, pero hay patrones",
+              "body": "No hay reglas, pero sí familias que se repiten. El grupo -ought/-aught: buy→bought, think→thought, teach→taught, catch→caught. El grupo con cambio de vocal: sing→sang, drink→drank, swim→swam. Aprenderlos en grupos es mucho más rápido que uno por uno.",
+              "examples": [
+                { "en": "go → went", "es": "ir → fui" },
+                { "en": "buy → bought", "es": "comprar → compré" },
+                { "en": "drink → drank", "es": "beber → bebí" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une presente e irregular",
+              "pairs": [
+                ["go", "went"],
+                ["see", "saw"],
+                ["take", "took"],
+                ["buy", "bought"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ to Paris last summer.",
+              "answer": "went",
+              "options": ["went", "goed", "go", "gone"],
+              "translation": "Fui a París el verano pasado."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ me a beautiful gift.",
+              "answer": "gave",
+              "options": ["gave", "gived", "give", "given"],
+              "translation": "Ella me dio un regalo precioso."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "thought",
+              "options": ["pensé", "compré", "traje", "enseñé"],
+              "answer": "pensé"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Vi a tu hermano ayer",
+              "answer": "I saw your brother yesterday"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Él hizo la cena anoche",
+              "words": ["He", "made", "dinner", "last", "night"],
+              "answer": "He made dinner last night"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We had a great time",
+              "answer": "We had a great time",
+              "translation": "Lo pasamos genial"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I bought a new phone and I took it home.",
+              "translation": "Compré un teléfono nuevo y me lo llevé a casa."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta en negativo?",
+              "options": [
+                "I didn't go to the party",
+                "I didn't went to the party",
+                "I not went to the party",
+                "I don't went to the party"
+              ],
+              "answer": "I didn't go to the party",
+              "hint": "Tras 'did' el verbo vuelve a su forma base"
+            }
+          ]
+        },
+        {
+          "id": "a2_u1_l3",
+          "title": "Preguntas en pasado",
+          "vocab": [
+            { "en": "did you go?", "es": "¿fuiste?" },
+            { "en": "what did you do?", "es": "¿qué hiciste?" },
+            { "en": "where were you?", "es": "¿dónde estabas?" },
+            { "en": "when did it happen?", "es": "¿cuándo pasó?" },
+            { "en": "why did you leave?", "es": "¿por qué te fuiste?" },
+            { "en": "how was it?", "es": "¿qué tal estuvo?" },
+            { "en": "who called?", "es": "¿quién llamó?" },
+            { "en": "was", "es": "era/estaba (I, he, she, it)" },
+            { "en": "were", "es": "eras/estabas (you, we, they)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "'Did' hace el trabajo sucio",
+              "body": "Para preguntar en pasado se usa 'did' + verbo en INFINITIVO. El pasado ya está marcado en 'did', así que el verbo principal vuelve a su forma base: 'Did you go?', nunca 'Did you went?'. La excepción es 'to be', que no necesita auxiliar: 'Were you tired?'",
+              "examples": [
+                { "en": "Did she call you?", "es": "¿Te llamó?" },
+                { "en": "What did you eat?", "es": "¿Qué comiste?" },
+                { "en": "Was it expensive?", "es": "¿Fue caro?" }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "options": ["Did you see the film?", "Did you saw the film?", "Do you saw the film?", "You did see film?"],
+              "answer": "Did you see the film?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ you at home yesterday?",
+              "answer": "Were",
+              "options": ["Were", "Did", "Was", "Are"],
+              "translation": "¿Estabas en casa ayer?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Where ___ you go last weekend?",
+              "answer": "did",
+              "options": ["did", "was", "were", "do"],
+              "translation": "¿Adónde fuiste el fin de semana pasado?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Qué hiciste ayer?",
+              "answer": "What did you do yesterday?",
+              "alternatives": ["What did you do yesterday"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "¿Por qué no me llamaste?",
+              "words": ["Why", "didn't", "you", "call", "me?"],
+              "answer": "Why didn't you call me?"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "How was your weekend?",
+              "answer": "How was your weekend?",
+              "translation": "¿Qué tal el fin de semana?"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une pregunta y traducción",
+              "pairs": [
+                ["Who called?", "¿Quién llamó?"],
+                ["When did it happen?", "¿Cuándo pasó?"],
+                ["How was it?", "¿Qué tal estuvo?"],
+                ["Where were you?", "¿Dónde estabas?"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Did you have a good time last night?",
+              "translation": "¿Lo pasaste bien anoche?"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "I didn't know that",
+              "answer": "No sabía eso",
+              "alternatives": ["No lo sabía"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u2",
+      "level": "A2",
+      "title": "Planes y comparaciones",
+      "subtitle": "Futuro con going to, comparativos y superlativos",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a2_u2_l1",
+          "title": "Futuro con going to",
+          "vocab": [
+            { "en": "I am going to", "es": "voy a" },
+            { "en": "tomorrow", "es": "mañana" },
+            { "en": "next week", "es": "la semana que viene" },
+            { "en": "next year", "es": "el año que viene" },
+            { "en": "soon", "es": "pronto" },
+            { "en": "tonight", "es": "esta noche" },
+            { "en": "later", "es": "más tarde" },
+            { "en": "plan", "es": "plan" },
+            { "en": "to travel", "es": "viajar" },
+            { "en": "to move", "es": "mudarse" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Going to vs will",
+              "body": "'Going to' es para planes que ya has decidido: 'I'm going to buy a car' (ya lo tengo pensado). 'Will' es para decisiones del momento y predicciones: 'I'll help you' (lo decido ahora). Si dudas y estás hablando de un plan, usa 'going to': acertarás casi siempre.",
+              "examples": [
+                { "en": "We're going to move next month.", "es": "Nos vamos a mudar el mes que viene." },
+                { "en": "It's going to rain.", "es": "Va a llover." },
+                { "en": "I'll call you later.", "es": "Te llamo luego." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ going to visit my family.",
+              "answer": "am",
+              "options": ["am", "is", "are", "will"],
+              "translation": "Voy a visitar a mi familia."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "They are going to ___ to Italy.",
+              "answer": "travel",
+              "options": ["travel", "travels", "traveled", "traveling"],
+              "translation": "Van a viajar a Italia."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Va a llover",
+              "options": ["It's going to rain", "It's going to raining", "It goes to rain", "It will going to rain"],
+              "answer": "It's going to rain"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Qué vas a hacer mañana?",
+              "answer": "What are you going to do tomorrow?",
+              "alternatives": ["What are you going to do tomorrow"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Vamos a comprar una casa",
+              "words": ["We", "are", "going", "to", "buy", "a", "house"],
+              "answer": "We are going to buy a house"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I am going to study tonight",
+              "answer": "I am going to study tonight",
+              "translation": "Voy a estudiar esta noche"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones de tiempo",
+              "pairs": [
+                ["tomorrow", "mañana"],
+                ["next week", "la semana que viene"],
+                ["tonight", "esta noche"],
+                ["soon", "pronto"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Next year I'm going to learn to drive.",
+              "translation": "El año que viene voy a aprender a conducir."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "She isn't going to come",
+              "answer": "Ella no va a venir",
+              "alternatives": ["No va a venir"]
+            }
+          ]
+        },
+        {
+          "id": "a2_u2_l2",
+          "title": "Comparativos",
+          "vocab": [
+            { "en": "bigger", "es": "más grande" },
+            { "en": "smaller", "es": "más pequeño" },
+            { "en": "faster", "es": "más rápido" },
+            { "en": "more expensive", "es": "más caro" },
+            { "en": "more interesting", "es": "más interesante" },
+            { "en": "better", "es": "mejor", "note": "Irregular: good → better" },
+            { "en": "worse", "es": "peor", "note": "Irregular: bad → worse" },
+            { "en": "than", "es": "que (en comparaciones)" },
+            { "en": "as ... as", "es": "tan ... como" },
+            { "en": "cheaper", "es": "más barato" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "-er para las cortas, more para las largas",
+              "body": "Adjetivos de una sílaba: se les añade '-er' (tall → taller, fast → faster). De tres o más sílabas: se pone 'more' delante (more expensive, more beautiful). Las de dos sílabas dependen: si acaban en -y cambian a -ier (happy → happier), el resto suelen llevar 'more'. Y jamás se combinan: 'more bigger' no existe.",
+              "examples": [
+                { "en": "My car is faster than yours.", "es": "Mi coche es más rápido que el tuyo." },
+                { "en": "This book is more interesting.", "es": "Este libro es más interesante." },
+                { "en": "She is happier now.", "es": "Ella está más feliz ahora." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "This phone is ___ than that one.",
+              "answer": "cheaper",
+              "options": ["cheaper", "more cheap", "cheapest", "cheap"],
+              "translation": "Este teléfono es más barato que ese."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Your idea is ___ interesting than mine.",
+              "answer": "more",
+              "options": ["more", "most", "much", "many"],
+              "translation": "Tu idea es más interesante que la mía."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Este restaurante es mejor",
+              "options": ["This restaurant is better", "This restaurant is gooder", "This restaurant is more good", "This restaurant is best"],
+              "answer": "This restaurant is better"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Madrid es más grande que Sevilla",
+              "answer": "Madrid is bigger than Seville",
+              "alternatives": ["Madrid is bigger than Sevilla"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Ella es tan alta como su hermano",
+              "words": ["She", "is", "as", "tall", "as", "her", "brother"],
+              "answer": "She is as tall as her brother"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Today is worse than yesterday",
+              "answer": "Today is worse than yesterday",
+              "translation": "Hoy es peor que ayer"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une adjetivo y comparativo",
+              "pairs": [
+                ["good", "better"],
+                ["bad", "worse"],
+                ["big", "bigger"],
+                ["expensive", "more expensive"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "This one is cheaper but that one is better.",
+              "translation": "Este es más barato pero ese es mejor."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "My house is smaller than yours",
+              "answer": "Mi casa es más pequeña que la tuya"
+            }
+          ]
+        },
+        {
+          "id": "a2_u2_l3",
+          "title": "Superlativos",
+          "vocab": [
+            { "en": "the biggest", "es": "el más grande" },
+            { "en": "the best", "es": "el mejor" },
+            { "en": "the worst", "es": "el peor" },
+            { "en": "the most beautiful", "es": "el más bonito" },
+            { "en": "the oldest", "es": "el más viejo" },
+            { "en": "the youngest", "es": "el más joven" },
+            { "en": "in the world", "es": "del mundo" },
+            { "en": "ever", "es": "jamás, nunca (en superlativos)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El superlativo siempre lleva 'the'",
+              "body": "Misma lógica que el comparativo: '-est' para las cortas y 'the most' para las largas. Pero ojo, en superlativo el artículo 'the' es obligatorio: 'the tallest building', nunca 'tallest building'. Y para decir 'de' se usa 'in' con lugares y 'of' con grupos: 'the best in the world', 'the best of all'.",
+              "examples": [
+                { "en": "She is the youngest in the class.", "es": "Es la más joven de la clase." },
+                { "en": "It's the most expensive hotel.", "es": "Es el hotel más caro." },
+                { "en": "That was the best day ever.", "es": "Fue el mejor día de la historia." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "This is ___ restaurant in the city.",
+              "answer": "the best",
+              "options": ["the best", "the better", "the goodest", "best"],
+              "translation": "Este es el mejor restaurante de la ciudad."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It's the ___ building in the world.",
+              "answer": "tallest",
+              "options": ["tallest", "taller", "most tall", "tall"],
+              "translation": "Es el edificio más alto del mundo."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Es la película más interesante",
+              "options": [
+                "It's the most interesting film",
+                "It's the interestingest film",
+                "It's most interesting film",
+                "It's the more interesting film"
+              ],
+              "answer": "It's the most interesting film"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Es el peor día de mi vida",
+              "answer": "It's the worst day of my life"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Ella es la más joven de la familia",
+              "words": ["She", "is", "the", "youngest", "in", "the", "family"],
+              "answer": "She is the youngest in the family"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "That was the best concert ever",
+              "answer": "That was the best concert ever",
+              "translation": "Fue el mejor concierto de la historia"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une con su superlativo",
+              "pairs": [
+                ["good", "the best"],
+                ["bad", "the worst"],
+                ["old", "the oldest"],
+                ["beautiful", "the most beautiful"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "This is the most beautiful place I know.",
+              "translation": "Este es el lugar más bonito que conozco."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "He is the oldest of the three",
+              "answer": "Él es el mayor de los tres"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_u3",
+      "level": "A2",
+      "title": "Moverte por el mundo",
+      "subtitle": "Preposiciones, direcciones, compras y clima",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a2_u3_l1",
+          "title": "Preposiciones de lugar",
+          "vocab": [
+            { "en": "in", "es": "en (dentro)" },
+            { "en": "on", "es": "sobre, encima" },
+            { "en": "under", "es": "debajo" },
+            { "en": "next to", "es": "al lado de" },
+            { "en": "between", "es": "entre (dos)" },
+            { "en": "behind", "es": "detrás de" },
+            { "en": "in front of", "es": "delante de" },
+            { "en": "near", "es": "cerca de" },
+            { "en": "opposite", "es": "enfrente de" },
+            { "en": "inside", "es": "dentro" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "In, on, at: el trío que todo el mundo confunde",
+              "body": "Piensa en escalas. 'In' para espacios cerrados y áreas grandes: in the box, in Madrid. 'On' para superficies y líneas: on the table, on the bus, on Main Street. 'At' para puntos concretos: at the door, at the bus stop, at home. La misma lógica sirve para el tiempo: in July, on Monday, at 5pm.",
+              "examples": [
+                { "en": "The keys are on the table.", "es": "Las llaves están sobre la mesa." },
+                { "en": "I live in Barcelona.", "es": "Vivo en Barcelona." },
+                { "en": "Meet me at the station.", "es": "Nos vemos en la estación." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The cat is ___ the sofa.",
+              "answer": "under",
+              "options": ["under", "on", "in", "between"],
+              "translation": "El gato está debajo del sofá."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The bank is ___ to the pharmacy.",
+              "answer": "next",
+              "options": ["next", "near", "in", "behind"],
+              "translation": "El banco está al lado de la farmacia."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "between",
+              "options": ["entre (dos)", "detrás", "delante", "cerca"],
+              "answer": "entre (dos)"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "El libro está sobre la mesa",
+              "answer": "The book is on the table"
+            },
+            {
+              "type": "word_order",
+              "prompt": "La tienda está enfrente del hotel",
+              "words": ["The", "shop", "is", "opposite", "the", "hotel"],
+              "answer": "The shop is opposite the hotel"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "My house is near the park",
+              "answer": "My house is near the park",
+              "translation": "Mi casa está cerca del parque"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las preposiciones",
+              "pairs": [
+                ["under", "debajo"],
+                ["behind", "detrás"],
+                ["in front of", "delante de"],
+                ["next to", "al lado de"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "The car is parked behind the building.",
+              "translation": "El coche está aparcado detrás del edificio."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "She is waiting at the door",
+              "answer": "Ella está esperando en la puerta"
+            }
+          ]
+        },
+        {
+          "id": "a2_u3_l2",
+          "title": "Pedir direcciones",
+          "vocab": [
+            { "en": "excuse me", "es": "disculpe" },
+            { "en": "how do I get to...?", "es": "¿cómo llego a...?" },
+            { "en": "turn left", "es": "gire a la izquierda" },
+            { "en": "turn right", "es": "gire a la derecha" },
+            { "en": "go straight", "es": "siga recto" },
+            { "en": "cross the street", "es": "cruce la calle" },
+            { "en": "corner", "es": "esquina" },
+            { "en": "traffic light", "es": "semáforo" },
+            { "en": "roundabout", "es": "rotonda" },
+            { "en": "it's on your left", "es": "está a su izquierda" },
+            { "en": "far", "es": "lejos" },
+            { "en": "block", "es": "manzana, cuadra" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Imperativo: el verbo desnudo",
+              "body": "Para dar instrucciones el inglés usa el verbo en su forma base, sin sujeto: 'Turn left', 'Go straight', 'Cross the street'. Para el negativo se antepone 'don't': 'Don't turn here'. Es más directo que en español, así que se suele suavizar con 'please' o empezando con 'Excuse me'.",
+              "examples": [
+                { "en": "Go straight for two blocks.", "es": "Siga recto dos manzanas." },
+                { "en": "Don't cross here.", "es": "No cruce aquí." },
+                { "en": "Please turn right at the corner.", "es": "Gire a la derecha en la esquina, por favor." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las indicaciones",
+              "pairs": [
+                ["turn left", "gire a la izquierda"],
+                ["go straight", "siga recto"],
+                ["traffic light", "semáforo"],
+                ["corner", "esquina"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "How do I get to the station?",
+              "options": ["¿Cómo llego a la estación?", "¿Dónde está la estación?", "¿Cuándo sale el tren?", "¿Qué estación es?"],
+              "answer": "¿Cómo llego a la estación?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ me, is there a bank near here?",
+              "answer": "Excuse",
+              "options": ["Excuse", "Sorry", "Please", "Pardon"],
+              "translation": "Disculpe, ¿hay un banco cerca de aquí?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Siga recto y gire a la derecha",
+              "answer": "Go straight and turn right"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Está a la izquierda, al lado de la farmacia",
+              "words": ["It's", "on", "the", "left,", "next", "to", "the", "pharmacy"],
+              "answer": "It's on the left, next to the pharmacy"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Turn left at the traffic light",
+              "answer": "Turn left at the traffic light",
+              "translation": "Gire a la izquierda en el semáforo"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Excuse me, how do I get to the museum?",
+              "translation": "Disculpe, ¿cómo llego al museo?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Is it far from here?",
+              "options": ["¿Está lejos de aquí?", "¿Es aquí?", "¿Cuánto cuesta?", "¿Está abierto?"],
+              "answer": "¿Está lejos de aquí?"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "It's about ten minutes on foot",
+              "answer": "Está a unos diez minutos a pie",
+              "alternatives": ["Son unos diez minutos caminando"]
+            }
+          ]
+        },
+        {
+          "id": "a2_u3_l3",
+          "title": "De compras",
+          "vocab": [
+            { "en": "how much is it?", "es": "¿cuánto cuesta?" },
+            { "en": "expensive", "es": "caro" },
+            { "en": "cheap", "es": "barato" },
+            { "en": "size", "es": "talla" },
+            { "en": "can I try it on?", "es": "¿me lo puedo probar?" },
+            { "en": "receipt", "es": "recibo, ticket" },
+            { "en": "cash", "es": "efectivo" },
+            { "en": "credit card", "es": "tarjeta de crédito" },
+            { "en": "discount", "es": "descuento" },
+            { "en": "shirt", "es": "camisa" },
+            { "en": "shoes", "es": "zapatos" },
+            { "en": "jacket", "es": "chaqueta" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Pedir sin sonar borde",
+              "body": "En inglés pedir algo con el verbo pelado suena brusco. 'Give me a coffee' es casi grosero. Usa fórmulas suaves: 'Could I have…?', 'I'd like…', 'Can I get…?'. Añadir 'please' al final es lo mínimo, y responder 'thank you' es prácticamente obligatorio en la cultura anglosajona.",
+              "examples": [
+                { "en": "Could I have a bag, please?", "es": "¿Me da una bolsa, por favor?" },
+                { "en": "I'd like to pay by card.", "es": "Me gustaría pagar con tarjeta." },
+                { "en": "Can I try this on?", "es": "¿Me puedo probar esto?" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las palabras de compras",
+              "pairs": [
+                ["expensive", "caro"],
+                ["cheap", "barato"],
+                ["size", "talla"],
+                ["discount", "descuento"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "How much is it?",
+              "options": ["¿Cuánto cuesta?", "¿Cuántos hay?", "¿Cómo es?", "¿Dónde está?"],
+              "answer": "¿Cuánto cuesta?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Can I pay by ___ card?",
+              "answer": "credit",
+              "options": ["credit", "cash", "money", "coin"],
+              "translation": "¿Puedo pagar con tarjeta de crédito?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Me lo puedo probar?",
+              "answer": "Can I try it on?",
+              "alternatives": ["Can I try it on"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "¿Tienen esto en talla mediana?",
+              "words": ["Do", "you", "have", "this", "in", "medium?"],
+              "answer": "Do you have this in medium?"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "That's too expensive for me",
+              "answer": "That's too expensive for me",
+              "translation": "Eso es demasiado caro para mí"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Excuse me, how much are these shoes?",
+              "translation": "Disculpe, ¿cuánto cuestan estos zapatos?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Me gustaría pagar en efectivo",
+              "options": ["I'd like to pay in cash", "I like pay cash", "I want pay in cash", "I'd like pay cash"],
+              "answer": "I'd like to pay in cash"
+            },
+            {
+              "type": "culture_note",
+              "title": "La propina no es opcional",
+              "body": "En Estados Unidos la propina es parte del sueldo del camarero, no un extra por buen servicio. Lo normal es entre el 15% y el 20% en restaurantes, y también se deja en taxis y peluquerías. En el Reino Unido es más relajado: un 10% en restaurantes está bien y en pubs, si pides en la barra, no se deja nada."
+            }
+          ]
+        },
+        {
+          "id": "a2_u3_l4",
+          "title": "El clima y can/must",
+          "vocab": [
+            { "en": "sunny", "es": "soleado" },
+            { "en": "rainy", "es": "lluvioso" },
+            { "en": "cloudy", "es": "nublado" },
+            { "en": "windy", "es": "ventoso" },
+            { "en": "snow", "es": "nieve" },
+            { "en": "hot", "es": "caluroso" },
+            { "en": "cold", "es": "frío" },
+            { "en": "can", "es": "poder, saber hacer" },
+            { "en": "must", "es": "deber (obligación)" },
+            { "en": "can't", "es": "no poder" },
+            { "en": "should", "es": "debería" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los modales no llevan 'to' ni 's'",
+              "body": "Can, must, should y compañía son verbos modales: van seguidos del infinitivo SIN 'to' y nunca añaden -s en tercera persona. 'She can swim' (no 'She can to swim', ni 'She cans'). Para el negativo basta con añadir 'not': can't, mustn't, shouldn't.",
+              "examples": [
+                { "en": "He can drive.", "es": "Él sabe conducir." },
+                { "en": "You must wear a helmet.", "es": "Debes llevar casco." },
+                { "en": "You should rest.", "es": "Deberías descansar." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ speak three languages.",
+              "answer": "can",
+              "options": ["can", "cans", "can to", "is can"],
+              "translation": "Ella sabe hablar tres idiomas."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It's ___ today, take an umbrella.",
+              "answer": "rainy",
+              "options": ["rainy", "sunny", "windy", "snowy"],
+              "translation": "Hoy está lluvioso, coge un paraguas."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Debes llegar a tiempo",
+              "options": ["You must arrive on time", "You must to arrive on time", "You musts arrive on time", "You have must arrive on time"],
+              "answer": "You must arrive on time"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el tiempo atmosférico",
+              "pairs": [
+                ["sunny", "soleado"],
+                ["cloudy", "nublado"],
+                ["windy", "ventoso"],
+                ["cold", "frío"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Hace mucho calor hoy",
+              "answer": "It's very hot today"
+            },
+            {
+              "type": "word_order",
+              "prompt": "No puedo ir esta noche",
+              "words": ["I", "can't", "go", "tonight"],
+              "answer": "I can't go tonight"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "What's the weather like today?",
+              "answer": "What's the weather like today?",
+              "translation": "¿Qué tiempo hace hoy?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "You should take a jacket, it's cold outside.",
+              "translation": "Deberías coger una chaqueta, hace frío fuera."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "It's going to snow tomorrow",
+              "answer": "Va a nevar mañana"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

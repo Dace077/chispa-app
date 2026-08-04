@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Tema "puente" que usa el sistema antes de que Compose tome el control.
+      Evita el flash blanco al abrir la app.
+    -->
+    <style name="Theme.Chispa.Starting" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/brand_indigo_900</item>
+        <item name="android:statusBarColor">@color/brand_indigo_900</item>
+        <item name="android:navigationBarColor">@color/brand_indigo_900</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

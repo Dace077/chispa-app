@@ -1,0 +1,1064 @@
+{
+  "id": "core_a1",
+  "title": "Nivel A1 — Desde cero",
+  "category": "core",
+  "icon": "spark",
+  "unlockXp": 0,
+  "description": "Lo primero de todo: saludar, presentarte, contar, describir y hablar de tu día.",
+  "units": [
+    {
+      "id": "a1_u1",
+      "level": "A1",
+      "title": "Lo básico",
+      "subtitle": "Saludos, presentaciones y las primeras frases útiles",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a1_u1_l1",
+          "title": "Saludos",
+          "vocab": [
+            { "en": "hello", "es": "hola", "ipa": "/həˈloʊ/" },
+            { "en": "hi", "es": "hola (informal)", "ipa": "/haɪ/" },
+            { "en": "good morning", "es": "buenos días", "ipa": "/ɡʊd ˈmɔːrnɪŋ/" },
+            { "en": "good afternoon", "es": "buenas tardes" },
+            { "en": "good evening", "es": "buenas noches (al llegar)" },
+            { "en": "good night", "es": "buenas noches (al despedirse)" },
+            { "en": "goodbye", "es": "adiós", "ipa": "/ˌɡʊdˈbaɪ/" },
+            { "en": "see you later", "es": "hasta luego" },
+            { "en": "please", "es": "por favor", "ipa": "/pliːz/" },
+            { "en": "thank you", "es": "gracias" },
+            { "en": "you're welcome", "es": "de nada" },
+            { "en": "sorry", "es": "perdón", "ipa": "/ˈsɑːri/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Saludar según la hora",
+              "body": "El inglés cambia el saludo según el momento del día. 'Good morning' hasta el mediodía, 'good afternoon' hasta las seis, y 'good evening' a partir de ahí. Ojo con una trampa clásica: 'good night' NO sirve para saludar, solo para despedirse o irse a dormir.",
+              "examples": [
+                { "en": "Good morning, Anna!", "es": "¡Buenos días, Anna!" },
+                { "en": "Good evening, everyone.", "es": "Buenas noches a todos (al llegar)." },
+                { "en": "Good night, sleep well.", "es": "Buenas noches, que duermas bien." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Good morning",
+              "options": ["Buenos días", "Buenas noches", "Hasta luego", "Gracias"],
+              "answer": "Buenos días"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Thank you",
+              "options": ["Gracias", "Por favor", "Perdón", "De nada"],
+              "answer": "Gracias"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une cada saludo con su traducción",
+              "pairs": [
+                ["hello", "hola"],
+                ["goodbye", "adiós"],
+                ["please", "por favor"],
+                ["sorry", "perdón"]
+              ]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Good afternoon",
+              "answer": "Good afternoon",
+              "translation": "Buenas tardes"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Hasta luego",
+              "answer": "See you later",
+              "alternatives": ["See you"]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ you very much!",
+              "answer": "Thank",
+              "options": ["Thank", "Please", "Sorry", "Hello"],
+              "translation": "¡Muchas gracias!"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Buenos días, ¿cómo estás?",
+              "words": ["Good", "morning,", "how", "are", "you?"],
+              "answer": "Good morning, how are you?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Hello, how are you?",
+              "translation": "Hola, ¿cómo estás?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "You're welcome",
+              "options": ["De nada", "Bienvenido a casa", "Estás invitado", "Por favor"],
+              "answer": "De nada",
+              "hint": "Es lo que respondes cuando alguien te da las gracias"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "Good night",
+              "answer": "Buenas noches",
+              "alternatives": ["buenas noches"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u1_l2",
+          "title": "Presentarte",
+          "vocab": [
+            { "en": "my name is", "es": "me llamo" },
+            { "en": "what is your name?", "es": "¿cómo te llamas?" },
+            { "en": "nice to meet you", "es": "encantado de conocerte" },
+            { "en": "I am from", "es": "soy de" },
+            { "en": "where are you from?", "es": "¿de dónde eres?" },
+            { "en": "how are you?", "es": "¿cómo estás?" },
+            { "en": "I am fine", "es": "estoy bien" },
+            { "en": "and you?", "es": "¿y tú?" },
+            { "en": "friend", "es": "amigo", "ipa": "/frend/" },
+            { "en": "teacher", "es": "profesor", "ipa": "/ˈtiːtʃər/" },
+            { "en": "student", "es": "estudiante", "ipa": "/ˈstuːdənt/" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El verbo 'to be' es tu mejor amigo",
+              "body": "En inglés no dices 'yo llamo Ana', dices 'I am Ana' o 'my name is Ana'. El verbo 'to be' (ser/estar) cambia según la persona: I am, you are, he/she/it is, we are, they are. Y a diferencia del español, el pronombre NUNCA se omite: 'am tired' está mal, tiene que ser 'I am tired'.",
+              "examples": [
+                { "en": "I am María.", "es": "Soy María." },
+                { "en": "She is my friend.", "es": "Ella es mi amiga." },
+                { "en": "They are students.", "es": "Ellos son estudiantes." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "What is your name?",
+              "options": ["¿Cómo te llamas?", "¿De dónde eres?", "¿Cómo estás?", "¿Cuántos años tienes?"],
+              "answer": "¿Cómo te llamas?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "My name ___ Carlos.",
+              "answer": "is",
+              "options": ["is", "am", "are", "be"],
+              "translation": "Me llamo Carlos."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ from Mexico.",
+              "answer": "am",
+              "options": ["am", "is", "are", "be"],
+              "translation": "Soy de México."
+            },
+            {
+              "type": "word_order",
+              "prompt": "Encantado de conocerte",
+              "words": ["Nice", "to", "meet", "you"],
+              "answer": "Nice to meet you"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿De dónde eres?",
+              "answer": "Where are you from?",
+              "alternatives": ["Where are you from"]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I am a student",
+              "answer": "I am a student",
+              "translation": "Soy estudiante"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las profesiones",
+              "pairs": [
+                ["teacher", "profesor"],
+                ["student", "estudiante"],
+                ["friend", "amigo"],
+                ["doctor", "médico"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Nice to meet you. My name is Ana.",
+              "translation": "Encantado de conocerte. Me llamo Ana."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "options": [
+                "She is my teacher",
+                "She are my teacher",
+                "She am my teacher",
+                "She be my teacher"
+              ],
+              "answer": "She is my teacher"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estoy bien, ¿y tú?",
+              "answer": "I am fine, and you?",
+              "alternatives": ["I'm fine, and you?", "I am fine and you"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u1_l3",
+          "title": "Números 1-20",
+          "vocab": [
+            { "en": "one", "es": "uno" },
+            { "en": "two", "es": "dos", "ipa": "/tuː/" },
+            { "en": "three", "es": "tres", "ipa": "/θriː/", "note": "Empieza con el sonido /θ/ de la lengua entre los dientes" },
+            { "en": "four", "es": "cuatro" },
+            { "en": "five", "es": "cinco" },
+            { "en": "six", "es": "seis" },
+            { "en": "seven", "es": "siete" },
+            { "en": "eight", "es": "ocho", "ipa": "/eɪt/" },
+            { "en": "nine", "es": "nueve" },
+            { "en": "ten", "es": "diez" },
+            { "en": "eleven", "es": "once" },
+            { "en": "twelve", "es": "doce" },
+            { "en": "thirteen", "es": "trece" },
+            { "en": "fifteen", "es": "quince" },
+            { "en": "twenty", "es": "veinte" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "De 13 a 19: el truco del -teen",
+              "body": "Del 13 al 19 se forma añadiendo '-teen' al número base: four → fourteen, six → sixteen. Hay tres irregulares que hay que memorizar: thirteen (no 'threeteen'), fifteen (no 'fiveteen') y eighteen. Y cuidado con la pareja fatal: 'fifteen' (15) y 'fifty' (50) suenan casi igual — el acento cambia de sitio.",
+              "examples": [
+                { "en": "fourteen", "es": "catorce" },
+                { "en": "sixteen", "es": "dieciséis" },
+                { "en": "thirteen", "es": "trece (irregular)" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los números",
+              "pairs": [
+                ["three", "tres"],
+                ["seven", "siete"],
+                ["nine", "nueve"],
+                ["twelve", "doce"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "eight",
+              "options": ["ocho", "dieciocho", "ochenta", "seis"],
+              "answer": "ocho"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "fifteen",
+              "answer": "fifteen",
+              "translation": "quince"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "veinte",
+              "answer": "twenty"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I have ___ brothers.",
+              "answer": "two",
+              "options": ["two", "too", "to", "twice"],
+              "translation": "Tengo dos hermanos."
+            },
+            {
+              "type": "word_order",
+              "prompt": "Tengo diez libros",
+              "words": ["I", "have", "ten", "books"],
+              "answer": "I have ten books"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "One, two, three, four, five",
+              "translation": "Uno, dos, tres, cuatro, cinco"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "thirteen",
+              "options": ["trece", "treinta", "tres", "diez"],
+              "answer": "trece",
+              "hint": "Ojo: no confundas con 'thirty'"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "I am twenty years old",
+              "answer": "Tengo veinte años",
+              "alternatives": ["tengo 20 años"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u1_l4",
+          "title": "Colores",
+          "vocab": [
+            { "en": "red", "es": "rojo" },
+            { "en": "blue", "es": "azul" },
+            { "en": "green", "es": "verde" },
+            { "en": "yellow", "es": "amarillo" },
+            { "en": "black", "es": "negro" },
+            { "en": "white", "es": "blanco" },
+            { "en": "orange", "es": "naranja" },
+            { "en": "purple", "es": "morado" },
+            { "en": "pink", "es": "rosa" },
+            { "en": "brown", "es": "marrón" },
+            { "en": "grey", "es": "gris", "note": "En EE. UU. se escribe 'gray'" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El adjetivo va DELANTE",
+              "body": "En español dices 'un coche rojo'. En inglés el color va antes del sustantivo: 'a red car'. Esta regla vale para casi todos los adjetivos y es uno de los errores más frecuentes de los hispanohablantes. Además, los adjetivos en inglés no tienen plural: 'red cars', nunca 'reds cars'.",
+              "examples": [
+                { "en": "a blue house", "es": "una casa azul" },
+                { "en": "three green apples", "es": "tres manzanas verdes" },
+                { "en": "the black cat", "es": "el gato negro" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los colores",
+              "pairs": [
+                ["red", "rojo"],
+                ["blue", "azul"],
+                ["green", "verde"],
+                ["yellow", "amarillo"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "purple",
+              "options": ["morado", "rosa", "marrón", "gris"],
+              "answer": "morado"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Tengo un coche rojo",
+              "words": ["I", "have", "a", "red", "car"],
+              "answer": "I have a red car"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The sky is ___.",
+              "answer": "blue",
+              "options": ["blue", "green", "brown", "black"],
+              "translation": "El cielo es azul."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "una casa blanca",
+              "answer": "a white house"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "My favorite color is green",
+              "answer": "My favorite color is green",
+              "translation": "Mi color favorito es el verde"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "The black cat and the white dog",
+              "translation": "El gato negro y el perro blanco"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál está bien escrito?",
+              "options": ["two yellow bananas", "two yellows bananas", "two bananas yellow", "two banana yellows"],
+              "answer": "two yellow bananas"
+            },
+            {
+              "type": "culture_note",
+              "title": "Color o colour",
+              "body": "Verás 'color' y 'colour' y las dos son correctas: la primera es americana y la segunda británica. Pasa lo mismo con favorite/favourite, center/centre y theater/theatre. Elige una variante y sé coherente; nadie te va a corregir por usar la otra."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u2",
+      "level": "A1",
+      "title": "Tú y los tuyos",
+      "subtitle": "Familia, edad, y hablar de personas",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a1_u2_l1",
+          "title": "La familia",
+          "vocab": [
+            { "en": "mother", "es": "madre", "ipa": "/ˈmʌðər/" },
+            { "en": "father", "es": "padre", "ipa": "/ˈfɑːðər/" },
+            { "en": "sister", "es": "hermana" },
+            { "en": "brother", "es": "hermano" },
+            { "en": "son", "es": "hijo" },
+            { "en": "daughter", "es": "hija", "ipa": "/ˈdɔːtər/", "note": "La 'gh' es muda" },
+            { "en": "grandmother", "es": "abuela" },
+            { "en": "grandfather", "es": "abuelo" },
+            { "en": "wife", "es": "esposa" },
+            { "en": "husband", "es": "esposo" },
+            { "en": "parents", "es": "padres" },
+            { "en": "children", "es": "hijos, niños", "note": "Plural irregular de 'child'" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El posesivo con apóstrofo",
+              "body": "Para decir 'la hermana de Ana' el inglés no usa 'de', usa un apóstrofo + s pegado al dueño: 'Ana's sister'. Se lee al revés que en español: primero el dueño, después la cosa. Si el dueño es plural terminado en -s, solo se pone el apóstrofo: 'my parents' house'.",
+              "examples": [
+                { "en": "María's brother", "es": "el hermano de María" },
+                { "en": "my father's car", "es": "el coche de mi padre" },
+                { "en": "the students' books", "es": "los libros de los estudiantes" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los miembros de la familia",
+              "pairs": [
+                ["mother", "madre"],
+                ["brother", "hermano"],
+                ["daughter", "hija"],
+                ["grandfather", "abuelo"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "children",
+              "options": ["hijos", "hija", "niño", "hermanos"],
+              "answer": "hijos",
+              "hint": "Es un plural irregular"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Tengo dos hermanas",
+              "answer": "I have two sisters"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "This is my ___ car.",
+              "answer": "father's",
+              "options": ["father's", "father", "fathers", "of father"],
+              "translation": "Este es el coche de mi padre."
+            },
+            {
+              "type": "word_order",
+              "prompt": "Mi madre es profesora",
+              "words": ["My", "mother", "is", "a", "teacher"],
+              "answer": "My mother is a teacher"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "My parents live in Spain",
+              "answer": "My parents live in Spain",
+              "translation": "Mis padres viven en España"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "This is my brother and this is my sister.",
+              "translation": "Este es mi hermano y esta es mi hermana."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cómo se dice 'el perro de mi hermana'?",
+              "options": ["my sister's dog", "the dog of my sister", "my sister dog", "dog of sister"],
+              "answer": "my sister's dog"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "My grandmother is eighty years old",
+              "answer": "Mi abuela tiene ochenta años",
+              "alternatives": ["mi abuela tiene 80 años"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u2_l2",
+          "title": "Verbo to be",
+          "vocab": [
+            { "en": "I am", "es": "yo soy / estoy" },
+            { "en": "you are", "es": "tú eres / estás" },
+            { "en": "he is", "es": "él es / está" },
+            { "en": "she is", "es": "ella es / está" },
+            { "en": "it is", "es": "ello es / está" },
+            { "en": "we are", "es": "nosotros somos / estamos" },
+            { "en": "they are", "es": "ellos son / están" },
+            { "en": "tired", "es": "cansado" },
+            { "en": "happy", "es": "feliz" },
+            { "en": "hungry", "es": "hambriento", "note": "Se dice 'I am hungry', no 'I have hunger'" },
+            { "en": "tall", "es": "alto" },
+            { "en": "young", "es": "joven" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Ser y estar son el mismo verbo",
+              "body": "La buena noticia: el inglés no distingue entre 'ser' y 'estar'. Los dos son 'to be'. La mala: usa 'to be' para cosas donde el español usa 'tener'. Se dice 'I am hungry' (literalmente 'estoy hambriento'), 'I am cold', 'I am 25 years old'. Decir 'I have 25 years' es el error más reconocible de un hispanohablante.",
+              "examples": [
+                { "en": "I am thirsty.", "es": "Tengo sed." },
+                { "en": "She is thirty years old.", "es": "Ella tiene treinta años." },
+                { "en": "We are scared.", "es": "Tenemos miedo." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "They ___ my friends.",
+              "answer": "are",
+              "options": ["are", "is", "am", "be"],
+              "translation": "Ellos son mis amigos."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It ___ very cold today.",
+              "answer": "is",
+              "options": ["is", "are", "am", "be"],
+              "translation": "Hoy hace mucho frío."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Tengo hambre",
+              "options": ["I am hungry", "I have hungry", "I have hunger", "Me hungry"],
+              "answer": "I am hungry"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Ella está cansada",
+              "answer": "She is tired",
+              "alternatives": ["She's tired"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Nosotros no somos estudiantes",
+              "words": ["We", "are", "not", "students"],
+              "answer": "We are not students"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "He is very tall",
+              "answer": "He is very tall",
+              "translation": "Él es muy alto"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los adjetivos",
+              "pairs": [
+                ["tired", "cansado"],
+                ["happy", "feliz"],
+                ["tall", "alto"],
+                ["young", "joven"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I am happy and I am not tired.",
+              "translation": "Estoy feliz y no estoy cansado."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Eres profesor?",
+              "answer": "Are you a teacher?",
+              "alternatives": ["Are you a teacher"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u2_l3",
+          "title": "Artículos y plurales",
+          "vocab": [
+            { "en": "a book", "es": "un libro" },
+            { "en": "an apple", "es": "una manzana", "note": "'an' antes de sonido vocálico" },
+            { "en": "the house", "es": "la casa" },
+            { "en": "boxes", "es": "cajas", "note": "Plural de 'box': se añade -es" },
+            { "en": "cities", "es": "ciudades", "note": "city → cities" },
+            { "en": "people", "es": "personas, gente", "note": "Plural irregular de 'person'" },
+            { "en": "men", "es": "hombres" },
+            { "en": "women", "es": "mujeres", "ipa": "/ˈwɪmɪn/" },
+            { "en": "feet", "es": "pies" },
+            { "en": "an hour", "es": "una hora", "note": "La 'h' es muda, por eso lleva 'an'" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "A o an: manda el sonido, no la letra",
+              "body": "Se usa 'an' antes de sonido vocálico y 'a' antes de sonido consonántico. Fíjate: es el SONIDO, no la letra. Por eso se dice 'an hour' (la h es muda) pero 'a university' (suena 'yu-'). Y otra cosa: en inglés las profesiones llevan artículo — 'I am a doctor', nunca 'I am doctor'.",
+              "examples": [
+                { "en": "an orange", "es": "una naranja" },
+                { "en": "a European country", "es": "un país europeo (suena 'yu-')" },
+                { "en": "She is an engineer.", "es": "Ella es ingeniera." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I want ___ apple.",
+              "answer": "an",
+              "options": ["an", "a", "the", "of"],
+              "translation": "Quiero una manzana."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He is ___ doctor.",
+              "answer": "a",
+              "options": ["a", "an", "the", "-"],
+              "translation": "Él es médico."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cuál es el plural correcto de 'city'?",
+              "options": ["cities", "citys", "cityes", "citties"],
+              "answer": "cities"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une singular y plural",
+              "pairs": [
+                ["man", "men"],
+                ["woman", "women"],
+                ["child", "children"],
+                ["foot", "feet"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Hay tres cajas",
+              "answer": "There are three boxes"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Necesito una hora",
+              "words": ["I", "need", "an", "hour"],
+              "answer": "I need an hour"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "There are many people here",
+              "answer": "There are many people here",
+              "translation": "Hay mucha gente aquí"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I have an idea and a plan.",
+              "translation": "Tengo una idea y un plan."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "options": ["She is an architect", "She is architect", "She is a architect", "She is the architect job"],
+              "answer": "She is an architect"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_u3",
+      "level": "A1",
+      "title": "El día a día",
+      "subtitle": "Comida, casa, rutina y presente simple",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "a1_u3_l1",
+          "title": "Comida básica",
+          "vocab": [
+            { "en": "bread", "es": "pan" },
+            { "en": "water", "es": "agua", "ipa": "/ˈwɔːtər/" },
+            { "en": "milk", "es": "leche" },
+            { "en": "coffee", "es": "café" },
+            { "en": "egg", "es": "huevo" },
+            { "en": "rice", "es": "arroz" },
+            { "en": "chicken", "es": "pollo" },
+            { "en": "fish", "es": "pescado", "note": "Igual en singular y plural" },
+            { "en": "apple", "es": "manzana" },
+            { "en": "cheese", "es": "queso" },
+            { "en": "breakfast", "es": "desayuno" },
+            { "en": "dinner", "es": "cena" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Cosas que no se cuentan",
+              "body": "Algunas palabras en inglés no tienen plural porque se ven como una masa, no como unidades: water, milk, bread, rice, cheese. No dices 'two waters' en un supermercado, dices 'two bottles of water'. Para preguntar cantidad usa 'how much' con estas y 'how many' con las contables.",
+              "examples": [
+                { "en": "How much water do you drink?", "es": "¿Cuánta agua bebes?" },
+                { "en": "How many apples do you want?", "es": "¿Cuántas manzanas quieres?" },
+                { "en": "a piece of bread", "es": "un trozo de pan" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los alimentos",
+              "pairs": [
+                ["bread", "pan"],
+                ["cheese", "queso"],
+                ["chicken", "pollo"],
+                ["egg", "huevo"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "breakfast",
+              "options": ["desayuno", "almuerzo", "cena", "merienda"],
+              "answer": "desayuno"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "How ___ milk do you need?",
+              "answer": "much",
+              "options": ["much", "many", "lot", "more"],
+              "translation": "¿Cuánta leche necesitas?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Quiero un café, por favor",
+              "answer": "I want a coffee, please",
+              "alternatives": ["I want a coffee please"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Como pan en el desayuno",
+              "words": ["I", "eat", "bread", "for", "breakfast"],
+              "answer": "I eat bread for breakfast"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I drink water every day",
+              "answer": "I drink water every day",
+              "translation": "Bebo agua todos los días"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Can I have chicken and rice, please?",
+              "translation": "¿Me puede traer pollo con arroz, por favor?"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "options": ["How many eggs?", "How much eggs?", "How many egg?", "How much egg?"],
+              "answer": "How many eggs?"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "We have dinner at eight",
+              "answer": "Cenamos a las ocho",
+              "alternatives": ["Cenamos a las 8"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u3_l2",
+          "title": "La casa",
+          "vocab": [
+            { "en": "house", "es": "casa" },
+            { "en": "kitchen", "es": "cocina" },
+            { "en": "bedroom", "es": "dormitorio" },
+            { "en": "bathroom", "es": "baño" },
+            { "en": "living room", "es": "salón" },
+            { "en": "door", "es": "puerta" },
+            { "en": "window", "es": "ventana" },
+            { "en": "table", "es": "mesa" },
+            { "en": "chair", "es": "silla" },
+            { "en": "bed", "es": "cama" },
+            { "en": "there is", "es": "hay (singular)" },
+            { "en": "there are", "es": "hay (plural)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "'Hay' se dice de dos maneras",
+              "body": "El español usa 'hay' para todo. El inglés distingue: 'there is' para una cosa y 'there are' para varias. There is a table. There are four chairs. En negativo: 'there isn't' / 'there aren't'. Y en preguntas se invierte: 'Is there a bathroom?'",
+              "examples": [
+                { "en": "There is a problem.", "es": "Hay un problema." },
+                { "en": "There are two bedrooms.", "es": "Hay dos dormitorios." },
+                { "en": "Is there a supermarket near here?", "es": "¿Hay un supermercado cerca?" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las habitaciones",
+              "pairs": [
+                ["kitchen", "cocina"],
+                ["bedroom", "dormitorio"],
+                ["bathroom", "baño"],
+                ["living room", "salón"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "There ___ three windows in my room.",
+              "answer": "are",
+              "options": ["are", "is", "have", "has"],
+              "translation": "Hay tres ventanas en mi habitación."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "There ___ a big table in the kitchen.",
+              "answer": "is",
+              "options": ["is", "are", "have", "be"],
+              "translation": "Hay una mesa grande en la cocina."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "window",
+              "options": ["ventana", "puerta", "pared", "ventilador"],
+              "answer": "ventana"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Hay un baño aquí?",
+              "answer": "Is there a bathroom here?",
+              "alternatives": ["Is there a bathroom here"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Mi dormitorio es pequeño",
+              "words": ["My", "bedroom", "is", "small"],
+              "answer": "My bedroom is small"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The chair is next to the table",
+              "answer": "The chair is next to the table",
+              "translation": "La silla está al lado de la mesa"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "There are two bedrooms and one bathroom.",
+              "translation": "Hay dos dormitorios y un baño."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "The door is open",
+              "answer": "La puerta está abierta"
+            }
+          ]
+        },
+        {
+          "id": "a1_u3_l3",
+          "title": "Presente simple",
+          "vocab": [
+            { "en": "to work", "es": "trabajar" },
+            { "en": "to live", "es": "vivir" },
+            { "en": "to eat", "es": "comer" },
+            { "en": "to drink", "es": "beber" },
+            { "en": "to study", "es": "estudiar" },
+            { "en": "to speak", "es": "hablar" },
+            { "en": "to want", "es": "querer" },
+            { "en": "to like", "es": "gustar" },
+            { "en": "every day", "es": "todos los días" },
+            { "en": "always", "es": "siempre" },
+            { "en": "never", "es": "nunca" },
+            { "en": "sometimes", "es": "a veces" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La -s de la tercera persona",
+              "body": "En presente simple todos los sujetos usan el verbo tal cual… menos he, she e it, que le añaden una -s: I work, but she works. Es la regla más olvidada del inglés y la que más delata. Y en negativo o pregunta, la -s se muda al auxiliar: 'She doesn't work' (no 'She doesn't works').",
+              "examples": [
+                { "en": "I live in Madrid.", "es": "Vivo en Madrid." },
+                { "en": "He lives in Lima.", "es": "Él vive en Lima." },
+                { "en": "Does she speak English?", "es": "¿Ella habla inglés?" }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ in a hospital.",
+              "answer": "works",
+              "options": ["works", "work", "working", "is work"],
+              "translation": "Ella trabaja en un hospital."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "They ___ coffee every morning.",
+              "answer": "drink",
+              "options": ["drink", "drinks", "drinking", "are drink"],
+              "translation": "Ellos beben café cada mañana."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "options": [
+                "He doesn't speak Spanish",
+                "He doesn't speaks Spanish",
+                "He don't speak Spanish",
+                "He not speak Spanish"
+              ],
+              "answer": "He doesn't speak Spanish"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estudio inglés todos los días",
+              "answer": "I study English every day"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Ella nunca come carne",
+              "words": ["She", "never", "eats", "meat"],
+              "answer": "She never eats meat"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los verbos",
+              "pairs": [
+                ["to work", "trabajar"],
+                ["to live", "vivir"],
+                ["to want", "querer"],
+                ["to speak", "hablar"]
+              ]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I always drink coffee in the morning",
+              "answer": "I always drink coffee in the morning",
+              "translation": "Siempre bebo café por la mañana"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "She works here and she likes her job.",
+              "translation": "Ella trabaja aquí y le gusta su trabajo."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Dónde vives?",
+              "answer": "Where do you live?",
+              "alternatives": ["Where do you live"]
+            }
+          ]
+        },
+        {
+          "id": "a1_u3_l4",
+          "title": "Días y meses",
+          "vocab": [
+            { "en": "Monday", "es": "lunes", "note": "Siempre con mayúscula" },
+            { "en": "Tuesday", "es": "martes" },
+            { "en": "Wednesday", "es": "miércoles", "ipa": "/ˈwenzdeɪ/", "note": "La primera 'd' no se pronuncia" },
+            { "en": "Thursday", "es": "jueves" },
+            { "en": "Friday", "es": "viernes" },
+            { "en": "Saturday", "es": "sábado" },
+            { "en": "Sunday", "es": "domingo" },
+            { "en": "January", "es": "enero" },
+            { "en": "March", "es": "marzo" },
+            { "en": "July", "es": "julio" },
+            { "en": "December", "es": "diciembre" },
+            { "en": "weekend", "es": "fin de semana" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Mayúsculas y preposiciones de tiempo",
+              "body": "Los días y los meses SIEMPRE van en mayúscula en inglés, aunque estén en medio de la frase. Y cada uno lleva su preposición: 'on Monday' (días), 'in July' (meses y años), 'at 7 o'clock' (horas). Memoriza el trío on/in/at y te ahorras la mitad de los errores.",
+              "examples": [
+                { "en": "I work on Saturday.", "es": "Trabajo el sábado." },
+                { "en": "My birthday is in March.", "es": "Mi cumpleaños es en marzo." },
+                { "en": "The class starts at nine.", "es": "La clase empieza a las nueve." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los días",
+              "pairs": [
+                ["Monday", "lunes"],
+                ["Wednesday", "miércoles"],
+                ["Friday", "viernes"],
+                ["Sunday", "domingo"]
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I have a meeting ___ Tuesday.",
+              "answer": "on",
+              "options": ["on", "in", "at", "of"],
+              "translation": "Tengo una reunión el martes."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We travel ___ December.",
+              "answer": "in",
+              "options": ["in", "on", "at", "to"],
+              "translation": "Viajamos en diciembre."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "weekend",
+              "options": ["fin de semana", "semana", "día libre", "vacaciones"],
+              "answer": "fin de semana"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Mi cumpleaños es en julio",
+              "answer": "My birthday is in July"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Nos vemos el viernes",
+              "words": ["See", "you", "on", "Friday"],
+              "answer": "See you on Friday"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I work from Monday to Friday",
+              "answer": "I work from Monday to Friday",
+              "translation": "Trabajo de lunes a viernes"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "What do you do on the weekend?",
+              "translation": "¿Qué haces el fin de semana?"
+            },
+            {
+              "type": "culture_note",
+              "title": "La semana empieza en domingo",
+              "body": "En los calendarios de EE. UU. la semana empieza en domingo, no en lunes. Por eso 'weekend' incluye el sábado y el domingo pero el domingo aparece a la izquierda. Otro detalle que confunde: la fecha se escribe mes/día/año, así que 03/07/2026 es el 7 de marzo, no el 3 de julio. En el Reino Unido, en cambio, se escribe como en español."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

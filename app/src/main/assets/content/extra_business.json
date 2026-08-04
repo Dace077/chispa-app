@@ -1,0 +1,412 @@
+{
+  "id": "extra_business",
+  "title": "Business English",
+  "category": "extra",
+  "icon": "business",
+  "unlockXp": 300,
+  "description": "Correos, reuniones, presentaciones y negociación. El inglés que se cobra mejor.",
+  "units": [
+    {
+      "id": "business_u1",
+      "level": "Extra",
+      "title": "Inglés de oficina",
+      "subtitle": "Escribir, reunirse y negociar sin sonar raro",
+      "icon": "business",
+      "lessons": [
+        {
+          "id": "business_l1",
+          "title": "Escribir correos",
+          "vocab": [
+            { "en": "Dear Mr. Smith", "es": "Estimado Sr. Smith" },
+            { "en": "I hope this email finds you well", "es": "Espero que se encuentre bien" },
+            { "en": "I am writing to", "es": "Le escribo para" },
+            { "en": "please find attached", "es": "adjunto encontrará" },
+            { "en": "I look forward to hearing from you", "es": "Quedo a la espera de su respuesta" },
+            { "en": "Kind regards", "es": "Saludos cordiales" },
+            { "en": "Best regards", "es": "Un cordial saludo" },
+            { "en": "further to our conversation", "es": "en relación con nuestra conversación" },
+            { "en": "at your earliest convenience", "es": "cuando le sea posible" },
+            { "en": "please let me know", "es": "hágamelo saber" },
+            { "en": "apologies for the delay", "es": "disculpas por el retraso" },
+            { "en": "to follow up", "es": "hacer seguimiento" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La anatomía de un correo profesional",
+              "body": "Cuatro bloques: saludo, motivo, contenido, cierre. Saludo: 'Dear Mr/Ms Apellido' si es formal, 'Hi Nombre' si hay confianza. Motivo en la primera línea: 'I am writing to…'. Cierre: 'Kind regards' (formal) o 'Best' (informal). Nunca 'Dear Sr.' ni 'Dear Mr. Juan' — en inglés se usa el apellido, jamás el nombre de pila con Mr.",
+              "examples": [
+                { "en": "Dear Ms. García,", "es": "Estimada Sra. García," },
+                { "en": "I am writing to confirm our meeting.", "es": "Le escribo para confirmar nuestra reunión." },
+                { "en": "Kind regards, Ana", "es": "Saludos cordiales, Ana" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las fórmulas de correo",
+              "pairs": [
+                ["Kind regards", "Saludos cordiales"],
+                ["please find attached", "adjunto encontrará"],
+                ["I am writing to", "le escribo para"],
+                ["to follow up", "hacer seguimiento"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "I look forward to hearing from you",
+              "options": [
+                "Quedo a la espera de su respuesta",
+                "Miro hacia adelante para oírle",
+                "Espero escucharle pronto por teléfono",
+                "Ya he oído su respuesta"
+              ],
+              "answer": "Quedo a la espera de su respuesta"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es el saludo formal correcto?",
+              "options": ["Dear Mr. Smith,", "Dear Mr. John,", "Dear Sr. Smith,", "Hello Mister,"],
+              "answer": "Dear Mr. Smith,"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Please find ___ the report you requested.",
+              "answer": "attached",
+              "options": ["attached", "attach", "attaching", "attachment"],
+              "translation": "Adjunto encontrará el informe que solicitó."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Apologies for the ___ in responding.",
+              "answer": "delay",
+              "options": ["delay", "late", "delayed", "time"],
+              "translation": "Disculpas por el retraso en responder."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Le escribo para confirmar la reunión del martes",
+              "answer": "I am writing to confirm the meeting on Tuesday"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Por favor hágamelo saber cuando le sea posible",
+              "words": ["Please", "let", "me", "know", "at", "your", "earliest", "convenience"],
+              "answer": "Please let me know at your earliest convenience"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I hope this email finds you well",
+              "answer": "I hope this email finds you well",
+              "translation": "Espero que este correo le encuentre bien"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Thank you for your time. Kind regards.",
+              "translation": "Gracias por su tiempo. Saludos cordiales."
+            }
+          ]
+        },
+        {
+          "id": "business_l2",
+          "title": "Reuniones",
+          "vocab": [
+            { "en": "agenda", "es": "orden del día" },
+            { "en": "to chair a meeting", "es": "presidir una reunión" },
+            { "en": "minutes", "es": "acta de la reunión" },
+            { "en": "action items", "es": "tareas a realizar" },
+            { "en": "let's get started", "es": "empecemos" },
+            { "en": "can I jump in?", "es": "¿puedo intervenir?" },
+            { "en": "let's park that", "es": "dejemos eso para después" },
+            { "en": "to circle back", "es": "volver sobre el tema" },
+            { "en": "any questions?", "es": "¿alguna pregunta?" },
+            { "en": "let's wrap up", "es": "vamos cerrando" },
+            { "en": "sorry, you cut out", "es": "perdona, te cortaste" },
+            { "en": "you're on mute", "es": "tienes el micro silenciado" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Interrumpir sin ser maleducado",
+              "body": "En una reunión en inglés hay fórmulas fijas para meter baza. 'Sorry to interrupt, but…', 'Can I jump in here?', 'If I may add something…'. Interrumpir directamente sin preámbulo se percibe como agresivo. Y en videollamadas, la frase más usada del mundo profesional moderno: 'You're on mute'.",
+              "examples": [
+                { "en": "Sorry to interrupt, but I have a question.", "es": "Perdón por interrumpir, tengo una pregunta." },
+                { "en": "Let's circle back to that later.", "es": "Volvamos a eso más tarde." },
+                { "en": "Can everyone hear me?", "es": "¿Me oís todos?" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario de reunión",
+              "pairs": [
+                ["agenda", "orden del día"],
+                ["minutes", "acta"],
+                ["action items", "tareas a realizar"],
+                ["let's wrap up", "vamos cerrando"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Let's park that for now",
+              "options": [
+                "Dejemos eso para después",
+                "Aparquemos el coche",
+                "Cancelemos eso",
+                "Empecemos por eso"
+              ],
+              "answer": "Dejemos eso para después"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "You're on mute",
+              "options": [
+                "Tienes el micro silenciado",
+                "Estás siendo grosero",
+                "Estás desconectado",
+                "Estás en pausa"
+              ],
+              "answer": "Tienes el micro silenciado"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Sorry to ___, but I have a quick question.",
+              "answer": "interrupt",
+              "options": ["interrupt", "interrupting", "interruption", "stop"],
+              "translation": "Perdón por interrumpir, tengo una pregunta rápida."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Let's circle ___ to that next week.",
+              "answer": "back",
+              "options": ["back", "around", "again", "over"],
+              "translation": "Volvamos a eso la semana que viene."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Podemos empezar? Tenemos poco tiempo",
+              "answer": "Can we get started? We don't have much time"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Perdona, te cortaste, ¿puedes repetirlo?",
+              "words": ["Sorry,", "you", "cut", "out,", "can", "you", "repeat", "that?"],
+              "answer": "Sorry, you cut out, can you repeat that?"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Let's move on to the next item on the agenda",
+              "answer": "Let's move on to the next item on the agenda",
+              "translation": "Pasemos al siguiente punto del orden del día"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Before we wrap up, any questions?",
+              "translation": "Antes de cerrar, ¿alguna pregunta?"
+            }
+          ]
+        },
+        {
+          "id": "business_l3",
+          "title": "Presentaciones",
+          "vocab": [
+            { "en": "today I'll be talking about", "es": "hoy hablaré sobre" },
+            { "en": "as you can see", "es": "como pueden ver" },
+            { "en": "let me walk you through", "es": "déjenme guiarles por" },
+            { "en": "to sum up", "es": "en resumen" },
+            { "en": "the bottom line is", "es": "en definitiva" },
+            { "en": "moving on to", "es": "pasando a" },
+            { "en": "this slide shows", "es": "esta diapositiva muestra" },
+            { "en": "a quick overview", "es": "un vistazo rápido" },
+            { "en": "any thoughts?", "es": "¿qué opinan?" },
+            { "en": "thank you for your attention", "es": "gracias por su atención" },
+            { "en": "key takeaway", "es": "idea principal a recordar" },
+            { "en": "to highlight", "es": "destacar" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La estructura anglosajona: di lo que vas a decir",
+              "body": "Las presentaciones en inglés siguen una regla muy marcada: 'Tell them what you're going to tell them, tell them, then tell them what you told them'. Se anuncia la estructura al principio, se desarrolla y se resume al final. Es mucho más explícito que en español, donde se tolera más el rodeo. Y siempre se cierra con un 'key takeaway' claro.",
+              "examples": [
+                { "en": "Today I'll cover three points.", "es": "Hoy cubriré tres puntos." },
+                { "en": "The key takeaway is simple.", "es": "La idea principal es sencilla." },
+                { "en": "Let me walk you through the data.", "es": "Déjenme guiarles por los datos." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las frases de presentación",
+              "pairs": [
+                ["as you can see", "como pueden ver"],
+                ["moving on to", "pasando a"],
+                ["to sum up", "en resumen"],
+                ["key takeaway", "idea principal"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "The bottom line is we need more budget",
+              "options": [
+                "En definitiva, necesitamos más presupuesto",
+                "La línea de abajo es el presupuesto",
+                "El presupuesto está al final",
+                "No hay presupuesto abajo"
+              ],
+              "answer": "En definitiva, necesitamos más presupuesto"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Let me ___ you through the results.",
+              "answer": "walk",
+              "options": ["walk", "take", "bring", "show"],
+              "translation": "Déjenme guiarles por los resultados."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'd like to ___ three key findings.",
+              "answer": "highlight",
+              "options": ["highlight", "highlights", "highlighting", "high"],
+              "translation": "Me gustaría destacar tres hallazgos clave."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Hoy hablaré sobre nuestros resultados",
+              "answer": "Today I'll be talking about our results"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Como pueden ver, las ventas han crecido",
+              "words": ["As", "you", "can", "see,", "sales", "have", "grown"],
+              "answer": "As you can see, sales have grown"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Thank you for your attention, any questions?",
+              "answer": "Thank you for your attention, any questions?",
+              "translation": "Gracias por su atención, ¿alguna pregunta?"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "To sum up, the key takeaway is clear.",
+              "translation": "En resumen, la idea principal está clara."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "Let me give you a quick overview",
+              "answer": "Déjenme darles un vistazo rápido"
+            }
+          ]
+        },
+        {
+          "id": "business_l4",
+          "title": "Negociar",
+          "vocab": [
+            { "en": "a win-win situation", "es": "una situación en la que todos ganan" },
+            { "en": "to meet halfway", "es": "llegar a un punto medio" },
+            { "en": "that's out of the question", "es": "eso está descartado" },
+            { "en": "we can be flexible", "es": "podemos ser flexibles" },
+            { "en": "what's your best offer?", "es": "¿cuál es tu mejor oferta?" },
+            { "en": "deal breaker", "es": "condición insalvable" },
+            { "en": "let me get back to you", "es": "déjame consultarlo" },
+            { "en": "on second thought", "es": "pensándolo mejor" },
+            { "en": "we have a deal", "es": "tenemos un trato" },
+            { "en": "terms and conditions", "es": "términos y condiciones" },
+            { "en": "to give ground", "es": "ceder terreno" },
+            { "en": "bottom price", "es": "precio mínimo" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Decir 'no' sin cerrar la puerta",
+              "body": "En una negociación en inglés el 'no' rotundo es raro. Se usan fórmulas que dejan margen: 'That could be difficult', 'I'm afraid that doesn't work for us', 'Let me get back to you on that'. Un 'no' directo puede leerse como hostilidad. Y 'let me get back to you' es la forma educada universal de ganar tiempo.",
+              "examples": [
+                { "en": "I'm afraid that's out of the question.", "es": "Me temo que eso está descartado." },
+                { "en": "Could we meet halfway?", "es": "¿Podríamos llegar a un punto medio?" },
+                { "en": "Let me get back to you tomorrow.", "es": "Déjame que te conteste mañana." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el vocabulario de negociación",
+              "pairs": [
+                ["a win-win situation", "todos ganan"],
+                ["to meet halfway", "llegar a un punto medio"],
+                ["deal breaker", "condición insalvable"],
+                ["we have a deal", "tenemos un trato"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "That's a deal breaker for us",
+              "options": [
+                "Eso es una condición insalvable para nosotros",
+                "Eso rompe el contrato firmado",
+                "Eso cierra el trato hoy",
+                "Eso nos parece perfecto"
+              ],
+              "answer": "Eso es una condición insalvable para nosotros"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál suena más diplomático para rechazar?",
+              "options": [
+                "I'm afraid that doesn't work for us",
+                "No, we don't want that",
+                "That is impossible",
+                "Absolutely not"
+              ],
+              "answer": "I'm afraid that doesn't work for us"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Could we meet ___ on the price?",
+              "answer": "halfway",
+              "options": ["halfway", "middle", "half", "between"],
+              "translation": "¿Podríamos llegar a un punto medio en el precio?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "On second ___, let's accept the offer.",
+              "answer": "thought",
+              "options": ["thought", "think", "thinking", "time"],
+              "translation": "Pensándolo mejor, aceptemos la oferta."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Déjame consultarlo y te contesto",
+              "answer": "Let me get back to you"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Creo que es una situación en la que todos ganamos",
+              "words": ["I", "think", "it's", "a", "win-win", "situation"],
+              "answer": "I think it's a win-win situation"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We can be flexible on the delivery date",
+              "answer": "We can be flexible on the delivery date",
+              "translation": "Podemos ser flexibles con la fecha de entrega"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "What's your best offer? We're ready to close today.",
+              "translation": "¿Cuál es tu mejor oferta? Estamos listos para cerrar hoy."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

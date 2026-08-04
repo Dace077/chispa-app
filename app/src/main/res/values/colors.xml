@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta original de Chispa: índigo/violeta + coral + ámbar.
+         Deliberadamente lejos del verde de otras apps de idiomas. -->
+    <color name="brand_indigo_900">#1A1145</color>
+    <color name="brand_indigo_700">#3A2BB5</color>
+    <color name="brand_violet_500">#5B4BE8</color>
+    <color name="brand_coral_500">#FF6B5A</color>
+    <color name="brand_amber_500">#FFB020</color>
+    <color name="brand_teal_500">#12B5A0</color>
+    <color name="ic_launcher_background">#2A1D6E</color>
+</resources>

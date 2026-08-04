@@ -1,0 +1,330 @@
+{
+  "id": "extra_slang",
+  "title": "Slang y conversación real",
+  "category": "extra",
+  "icon": "slang",
+  "unlockXp": 200,
+  "description": "El inglés que se habla de verdad: series, redes sociales y conversación entre amigos.",
+  "units": [
+    {
+      "id": "slang_u1",
+      "level": "Extra",
+      "title": "Cómo se habla de verdad",
+      "subtitle": "Lo que dicen los nativos y no sale en los libros",
+      "icon": "slang",
+      "lessons": [
+        {
+          "id": "slang_l1",
+          "title": "Slang cotidiano",
+          "vocab": [
+            { "en": "hang out", "es": "pasar el rato" },
+            { "en": "chill", "es": "relajarse, tranquilizarse" },
+            { "en": "awesome", "es": "genial, brutal" },
+            { "en": "no worries", "es": "no pasa nada" },
+            { "en": "my bad", "es": "culpa mía" },
+            { "en": "what's up?", "es": "¿qué tal?" },
+            { "en": "sick", "es": "genial (informal)", "note": "Contexto: 'that's sick' = qué guay" },
+            { "en": "gonna", "es": "going to (hablado)" },
+            { "en": "wanna", "es": "want to (hablado)" },
+            { "en": "kinda", "es": "más o menos" },
+            { "en": "hang on", "es": "espera un momento" },
+            { "en": "for real", "es": "en serio" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Gonna, wanna, gotta: cómo suena el inglés hablado",
+              "body": "Los nativos no pronuncian cada palabra por separado, las funden. 'Going to' se convierte en 'gonna', 'want to' en 'wanna', 'got to' en 'gotta', 'kind of' en 'kinda'. Son perfectamente normales al hablar y en mensajes informales, pero NO se escriben en un correo de trabajo ni en un examen. Aprende a reconocerlas al oírlas: es la mitad de la batalla del listening.",
+              "examples": [
+                { "en": "I'm gonna call you later.", "es": "Te llamo luego." },
+                { "en": "Do you wanna come?", "es": "¿Quieres venir?" },
+                { "en": "I gotta go.", "es": "Me tengo que ir." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el slang",
+              "pairs": [
+                ["hang out", "pasar el rato"],
+                ["chill", "relajarse"],
+                ["my bad", "culpa mía"],
+                ["no worries", "no pasa nada"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "That concert was sick!",
+              "options": [
+                "¡Ese concierto fue increíble!",
+                "¡Ese concierto fue horrible!",
+                "¡Ese concierto me puso enfermo!",
+                "¡Ese concierto se canceló!"
+              ],
+              "answer": "¡Ese concierto fue increíble!",
+              "hint": "En slang, 'sick' es un elogio"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Wanna hang out later?",
+              "options": [
+                "¿Quieres quedar luego?",
+                "¿Quieres colgar algo?",
+                "¿Quieres esperar fuera?",
+                "¿Quieres irte ya?"
+              ],
+              "answer": "¿Quieres quedar luego?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'm ___ grab a coffee, want one?",
+              "answer": "gonna",
+              "options": ["gonna", "gotta", "wanna", "kinda"],
+              "translation": "Voy a coger un café, ¿quieres uno?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ on, I'll be right there.",
+              "answer": "Hang",
+              "options": ["Hang", "Chill", "Wait", "Hold"],
+              "translation": "Espera, ahora mismo voy."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las formas habladas",
+              "pairs": [
+                ["gonna", "going to"],
+                ["wanna", "want to"],
+                ["gotta", "got to"],
+                ["kinda", "kind of"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Culpa mía, no pasa nada",
+              "answer": "My bad, no worries"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "What's up? Wanna chill at my place?",
+              "translation": "¿Qué tal? ¿Quieres relajarte en mi casa?"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "For real, that was awesome",
+              "answer": "En serio, eso fue genial"
+            }
+          ]
+        },
+        {
+          "id": "slang_l2",
+          "title": "Redes sociales y mensajes",
+          "vocab": [
+            { "en": "LOL", "es": "jaja (laughing out loud)" },
+            { "en": "BTW", "es": "por cierto (by the way)" },
+            { "en": "IMO", "es": "en mi opinión (in my opinion)" },
+            { "en": "TBH", "es": "sinceramente (to be honest)" },
+            { "en": "ASAP", "es": "cuanto antes (as soon as possible)" },
+            { "en": "DM", "es": "mensaje privado (direct message)" },
+            { "en": "FYI", "es": "para tu información" },
+            { "en": "OMG", "es": "madre mía (oh my god)" },
+            { "en": "IDK", "es": "no sé (I don't know)" },
+            { "en": "NVM", "es": "déjalo (never mind)" },
+            { "en": "ttyl", "es": "hablamos luego (talk to you later)" },
+            { "en": "ICYMI", "es": "por si te lo perdiste" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Las siglas que dominan internet",
+              "body": "Estas abreviaturas están por todas partes: chats, comentarios, incluso correos de trabajo informales. Dos avisos: 'ASAP' y 'FYI' sí se usan en entornos profesionales, pero 'LOL' o 'OMG' no. Y ojo con 'LMK' (let me know), muy común en el trabajo. En textos formales, escríbelo todo completo.",
+              "examples": [
+                { "en": "BTW, the meeting moved to 3pm.", "es": "Por cierto, la reunión pasó a las 3." },
+                { "en": "Send it ASAP, please.", "es": "Mándalo cuanto antes, por favor." },
+                { "en": "TBH, I didn't like it.", "es": "Sinceramente, no me gustó." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las siglas",
+              "pairs": [
+                ["BTW", "por cierto"],
+                ["IMO", "en mi opinión"],
+                ["ASAP", "cuanto antes"],
+                ["TBH", "sinceramente"]
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une más siglas",
+              "pairs": [
+                ["IDK", "no sé"],
+                ["NVM", "déjalo"],
+                ["FYI", "para tu información"],
+                ["DM", "mensaje privado"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "ICYMI, the deadline changed",
+              "options": [
+                "Por si te lo perdiste, cambió la fecha límite",
+                "Increíble, cambió la fecha",
+                "En caso de emergencia, cambia la fecha",
+                "No puedo cambiar la fecha"
+              ],
+              "answer": "Por si te lo perdiste, cambió la fecha límite"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___, I think it's a great idea.",
+              "answer": "IMO",
+              "options": ["IMO", "ASAP", "DM", "NVM"],
+              "translation": "En mi opinión, creo que es una gran idea."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Send me a ___ if you have questions.",
+              "answer": "DM",
+              "options": ["DM", "LOL", "IDK", "OMG"],
+              "translation": "Mándame un privado si tienes dudas."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Hablamos luego",
+              "answer": "Talk to you later",
+              "alternatives": ["ttyl"]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "¿Cuál NO deberías usar en un correo de trabajo?",
+              "options": ["OMG", "ASAP", "FYI", "Kind regards"],
+              "answer": "OMG"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "By the way, I'll send it as soon as possible.",
+              "translation": "Por cierto, lo mando cuanto antes."
+            },
+            {
+              "type": "culture_note",
+              "title": "El emoji del pulgar arriba",
+              "body": "Cuidado con el 👍 en conversaciones anglosajonas jóvenes: en muchos contextos se ha vuelto pasivo-agresivo, algo así como 'recibido, y no quiero seguir hablando'. Entre generaciones mayores sigue siendo simplemente 'vale'. Cuando dudes, responde con palabras: 'Sounds good!' o 'Got it, thanks!'."
+            }
+          ]
+        },
+        {
+          "id": "slang_l3",
+          "title": "Reaccionar y opinar en informal",
+          "vocab": [
+            { "en": "no way!", "es": "¡ni de broma! / ¡no me digas!" },
+            { "en": "you're kidding", "es": "estás de broma" },
+            { "en": "fair enough", "es": "me parece justo" },
+            { "en": "that sucks", "es": "qué mal" },
+            { "en": "big deal", "es": "menuda cosa (irónico)" },
+            { "en": "whatever", "es": "lo que sea, me da igual" },
+            { "en": "I'm down", "es": "me apunto" },
+            { "en": "count me in", "es": "cuenta conmigo" },
+            { "en": "it's on me", "es": "invito yo" },
+            { "en": "never mind", "es": "déjalo" },
+            { "en": "let's grab a bite", "es": "vamos a picar algo" },
+            { "en": "same here", "es": "yo igual" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Reaccionar en inglés: el arte de no quedarse callado",
+              "body": "Lo que más delata a un no nativo no es la gramática, son las reacciones. Los nativos sueltan constantemente 'Really?', 'No way!', 'Fair enough', 'Same here'. Aprender diez reacciones cortas mejora tu conversación más que cien palabras de vocabulario. Y 'I'm down' significa 'me apunto', no que estés deprimido.",
+              "examples": [
+                { "en": "No way! That's amazing.", "es": "¡No me digas! Es increíble." },
+                { "en": "Fair enough, I see your point.", "es": "Me parece justo, entiendo tu punto." },
+                { "en": "I'm down for pizza.", "es": "Me apunto a pizza." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las reacciones",
+              "pairs": [
+                ["no way!", "¡no me digas!"],
+                ["fair enough", "me parece justo"],
+                ["that sucks", "qué mal"],
+                ["same here", "yo igual"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Count me in!",
+              "options": [
+                "¡Cuenta conmigo!",
+                "¡Cuéntame!",
+                "¡Cuenta hasta diez!",
+                "¡No cuentes conmigo!"
+              ],
+              "answer": "¡Cuenta conmigo!"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Dinner's on me tonight",
+              "options": [
+                "Esta noche invito yo a cenar",
+                "La cena está encima de mí",
+                "Cenaré solo esta noche",
+                "Me toca cocinar esta noche"
+              ],
+              "answer": "Esta noche invito yo a cenar"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "You're ___! I can't believe it.",
+              "answer": "kidding",
+              "options": ["kidding", "joking me", "funny", "playing"],
+              "translation": "¡Estás de broma! No me lo puedo creer."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'm ___ for whatever you want to do.",
+              "answer": "down",
+              "options": ["down", "up", "in", "on"],
+              "translation": "Me apunto a lo que quieras hacer."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el resto",
+              "pairs": [
+                ["I'm down", "me apunto"],
+                ["it's on me", "invito yo"],
+                ["never mind", "déjalo"],
+                ["let's grab a bite", "vamos a picar algo"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Qué mal, lo siento mucho",
+              "answer": "That sucks, I'm so sorry"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "No way! Count me in, that sounds awesome.",
+              "translation": "¡No me digas! Cuenta conmigo, suena genial."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "Fair enough, let's do it your way",
+              "answer": "Me parece justo, hagámoslo a tu manera"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

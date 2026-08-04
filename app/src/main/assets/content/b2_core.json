@@ -1,0 +1,1015 @@
+{
+  "id": "core_b2",
+  "title": "Nivel B2 — Intermedio alto",
+  "category": "core",
+  "icon": "spark",
+  "unlockXp": 0,
+  "description": "Condicionales hipotéticos, estilo indirecto, estructuras nativas, matices y argumentación.",
+  "units": [
+    {
+      "id": "b2_u1",
+      "level": "B2",
+      "title": "Hipótesis y arrepentimientos",
+      "subtitle": "Condicionales 2 y 3, wish y estructuras irreales",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "b2_u1_l1",
+          "title": "Segundo condicional",
+          "vocab": [
+            { "en": "if I were", "es": "si yo fuera", "note": "'were' para todas las personas en hipótesis" },
+            { "en": "I would", "es": "yo haría" },
+            { "en": "I wouldn't", "es": "yo no haría" },
+            { "en": "imagine", "es": "imagina" },
+            { "en": "suppose", "es": "supongamos" },
+            { "en": "in your shoes", "es": "en tu lugar" },
+            { "en": "hypothetically", "es": "hipotéticamente" },
+            { "en": "unlikely", "es": "poco probable" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Pasado que no habla del pasado",
+              "body": "El segundo condicional imagina algo irreal o improbable AHORA: 'If I had more money, I would travel'. Usa pasado en la parte del 'if' aunque hable del presente. Detalle culto que impresiona: con el verbo 'to be' se usa 'were' para todas las personas — 'If I were you' es lo correcto, no 'If I was you'.",
+              "examples": [
+                { "en": "If I were you, I would apologize.", "es": "Yo que tú, me disculparía." },
+                { "en": "If she had time, she would help.", "es": "Si tuviera tiempo, ayudaría." },
+                { "en": "What would you do if you won the lottery?", "es": "¿Qué harías si te tocara la lotería?" }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "If I ___ you, I would take the job.",
+              "answer": "were",
+              "options": ["were", "was", "am", "would be"],
+              "translation": "Yo que tú, aceptaría el trabajo."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "If we had more time, we ___ visit the museum.",
+              "answer": "would",
+              "options": ["would", "will", "did", "have"],
+              "translation": "Si tuviéramos más tiempo, visitaríamos el museo."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Qué harías si vivieras en Londres?",
+              "options": [
+                "What would you do if you lived in London?",
+                "What would you do if you would live in London?",
+                "What will you do if you lived in London?",
+                "What you would do if you live in London?"
+              ],
+              "answer": "What would you do if you lived in London?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Si hablara mejor inglés, conseguiría ese trabajo",
+              "answer": "If I spoke better English, I would get that job"
+            },
+            {
+              "type": "word_order",
+              "prompt": "No lo haría si fuera tú",
+              "words": ["I", "wouldn't", "do", "it", "if", "I", "were", "you"],
+              "answer": "I wouldn't do it if I were you"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "If I had a car, I would drive there",
+              "answer": "If I had a car, I would drive there",
+              "translation": "Si tuviera coche, iría conduciendo"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones hipotéticas",
+              "pairs": [
+                ["in your shoes", "en tu lugar"],
+                ["unlikely", "poco probable"],
+                ["suppose", "supongamos"],
+                ["imagine", "imagina"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "If I were rich, I would travel the world.",
+              "translation": "Si fuera rico, viajaría por el mundo."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "She would come if you invited her",
+              "answer": "Ella vendría si la invitaras"
+            }
+          ]
+        },
+        {
+          "id": "b2_u1_l2",
+          "title": "Tercer condicional y wish",
+          "vocab": [
+            { "en": "if I had known", "es": "si hubiera sabido" },
+            { "en": "I would have", "es": "yo habría" },
+            { "en": "I wish", "es": "ojalá" },
+            { "en": "if only", "es": "si tan solo" },
+            { "en": "regret", "es": "arrepentirse" },
+            { "en": "should have", "es": "debería haber" },
+            { "en": "could have", "es": "podría haber" },
+            { "en": "otherwise", "es": "de otro modo" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El tiempo de los arrepentimientos",
+              "body": "El tercer condicional habla de un pasado que ya no se puede cambiar: 'If I had studied, I would have passed'. Estructura: if + past perfect, would have + participio. Se usa para lamentarse o reprochar. Su primo es 'I wish': 'I wish I had known' (ojalá lo hubiera sabido) para el pasado, 'I wish I knew' (ojalá lo supiera) para el presente.",
+              "examples": [
+                { "en": "If I had left earlier, I wouldn't have missed the train.", "es": "Si hubiera salido antes, no habría perdido el tren." },
+                { "en": "I wish I had told her the truth.", "es": "Ojalá le hubiera dicho la verdad." },
+                { "en": "You should have called me.", "es": "Deberías haberme llamado." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "If I had known, I ___ have come.",
+              "answer": "would",
+              "options": ["would", "will", "did", "had"],
+              "translation": "Si lo hubiera sabido, habría venido."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I wish I ___ studied more for the exam.",
+              "answer": "had",
+              "options": ["had", "have", "would", "did"],
+              "translation": "Ojalá hubiera estudiado más para el examen."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Deberías haberme avisado",
+              "options": [
+                "You should have told me",
+                "You should told me",
+                "You should have to tell me",
+                "You must have told me"
+              ],
+              "answer": "You should have told me"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Ojalá tuviera más tiempo",
+              "answer": "I wish I had more time"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Si hubieras venido, lo habrías visto",
+              "words": ["If", "you", "had", "come,", "you", "would", "have", "seen", "it"],
+              "answer": "If you had come, you would have seen it"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I wish I could help you",
+              "answer": "I wish I could help you",
+              "translation": "Ojalá pudiera ayudarte"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las estructuras",
+              "pairs": [
+                ["I wish", "ojalá"],
+                ["if only", "si tan solo"],
+                ["should have", "debería haber"],
+                ["could have", "podría haber"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "If only I had listened to your advice.",
+              "translation": "Si tan solo hubiera escuchado tu consejo."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "We could have won the game",
+              "answer": "Podríamos haber ganado el partido"
+            }
+          ]
+        },
+        {
+          "id": "b2_u1_l3",
+          "title": "Estilo indirecto",
+          "vocab": [
+            { "en": "he said that", "es": "él dijo que" },
+            { "en": "she told me", "es": "ella me dijo" },
+            { "en": "he asked if", "es": "preguntó si" },
+            { "en": "she wanted to know", "es": "quería saber" },
+            { "en": "he admitted", "es": "admitió" },
+            { "en": "she suggested", "es": "sugirió" },
+            { "en": "he complained", "es": "se quejó" },
+            { "en": "she promised", "es": "prometió" },
+            { "en": "he warned", "es": "advirtió" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Todo retrocede un paso",
+              "body": "Al pasar a estilo indirecto los tiempos retroceden: present → past, past → past perfect, will → would, can → could. También cambian los pronombres y el tiempo/lugar: today → that day, here → there. Y ojo con say y tell: 'say' no lleva persona directa ('he said that…'), 'tell' sí la exige ('he told ME that…').",
+              "examples": [
+                { "en": "\"I am tired\" → He said he was tired.", "es": "Dijo que estaba cansado." },
+                { "en": "\"I will call\" → She said she would call.", "es": "Dijo que llamaría." },
+                { "en": "\"Are you ok?\" → He asked if I was ok.", "es": "Preguntó si estaba bien." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She said she ___ tired.",
+              "answer": "was",
+              "options": ["was", "is", "has been", "will be"],
+              "translation": "Dijo que estaba cansada."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He ___ me that he would come.",
+              "answer": "told",
+              "options": ["told", "said", "asked", "spoke"],
+              "translation": "Me dijo que vendría."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Me preguntó si hablaba inglés",
+              "options": [
+                "He asked me if I spoke English",
+                "He asked me if I speak English",
+                "He asked me do I speak English",
+                "He said me if I spoke English"
+              ],
+              "answer": "He asked me if I spoke English"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Dijo que llegaría tarde",
+              "answer": "He said he would be late",
+              "alternatives": ["She said she would be late"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Ella sugirió que fuéramos temprano",
+              "words": ["She", "suggested", "that", "we", "go", "early"],
+              "answer": "She suggested that we go early"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "He admitted that he was wrong",
+              "answer": "He admitted that he was wrong",
+              "translation": "Admitió que estaba equivocado"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los verbos de reporte",
+              "pairs": [
+                ["admitted", "admitió"],
+                ["suggested", "sugirió"],
+                ["warned", "advirtió"],
+                ["promised", "prometió"]
+              ]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "She told me she had already finished the report.",
+              "translation": "Me dijo que ya había terminado el informe."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "They complained that the service was slow",
+              "answer": "Se quejaron de que el servicio era lento"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2_u2",
+      "level": "B2",
+      "title": "Matices y registro",
+      "subtitle": "Sinónimos precisos, formal vs informal y argumentación",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "b2_u2_l1",
+          "title": "Formal e informal",
+          "vocab": [
+            { "en": "I would like to request", "es": "quisiera solicitar (formal)" },
+            { "en": "can I get", "es": "me das (informal)" },
+            { "en": "I regret to inform you", "es": "lamento informarle" },
+            { "en": "sorry, but", "es": "perdona, pero" },
+            { "en": "furthermore", "es": "además (formal)" },
+            { "en": "plus", "es": "además (informal)" },
+            { "en": "purchase", "es": "adquirir (formal)" },
+            { "en": "buy", "es": "comprar" },
+            { "en": "require", "es": "requerir (formal)" },
+            { "en": "need", "es": "necesitar" },
+            { "en": "assist", "es": "asistir, ayudar (formal)" },
+            { "en": "help", "es": "ayudar" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El inglés de raíz latina suena más formal",
+              "body": "El inglés tiene dos capas de vocabulario: la germánica (corta, cotidiana) y la latina o francesa (larga, formal). Por eso 'buy' es de andar por casa y 'purchase' es de contrato; 'help' es normal y 'assist' es de manual. Regla útil para escribir: si la palabra se parece al español, probablemente suene formal en inglés.",
+              "examples": [
+                { "en": "We require your signature.", "es": "Requerimos su firma. (formal)" },
+                { "en": "I need your signature.", "es": "Necesito tu firma. (neutro)" },
+                { "en": "Could you assist me?", "es": "¿Podría asistirme? (formal)" }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une formal con informal",
+              "pairs": [
+                ["purchase", "buy"],
+                ["require", "need"],
+                ["assist", "help"],
+                ["furthermore", "plus"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es la más formal?",
+              "options": [
+                "I regret to inform you that we cannot proceed",
+                "Sorry, we can't do it",
+                "No way, that's impossible",
+                "We won't do that"
+              ],
+              "answer": "I regret to inform you that we cannot proceed"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I would ___ to request a meeting.",
+              "answer": "like",
+              "options": ["like", "want", "need", "wish"],
+              "translation": "Quisiera solicitar una reunión."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Le agradecería su ayuda",
+              "answer": "I would appreciate your help",
+              "alternatives": ["I would appreciate your assistance"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Además, los precios han subido",
+              "words": ["Furthermore,", "prices", "have", "increased"],
+              "answer": "Furthermore, prices have increased"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "Please do not hesitate to contact us",
+              "answer": "Please do not hesitate to contact us",
+              "translation": "No dude en contactarnos"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I am writing to enquire about the position advertised.",
+              "translation": "Le escribo para preguntar por el puesto anunciado."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Kindly find attached the requested documents",
+              "options": [
+                "Adjunto los documentos solicitados",
+                "Encuentra amablemente los documentos",
+                "Busca los documentos que pediste",
+                "Los documentos están perdidos"
+              ],
+              "answer": "Adjunto los documentos solicitados"
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "We regret any inconvenience caused",
+              "answer": "Lamentamos las molestias causadas"
+            }
+          ]
+        },
+        {
+          "id": "b2_u2_l2",
+          "title": "Debatir y argumentar",
+          "vocab": [
+            { "en": "I would argue that", "es": "yo diría que" },
+            { "en": "on the contrary", "es": "al contrario" },
+            { "en": "that said", "es": "dicho esto" },
+            { "en": "to some extent", "es": "hasta cierto punto" },
+            { "en": "the main drawback", "es": "el principal inconveniente" },
+            { "en": "the key advantage", "es": "la ventaja principal" },
+            { "en": "evidence suggests", "es": "las pruebas sugieren" },
+            { "en": "it is worth noting", "es": "cabe destacar" },
+            { "en": "to sum up", "es": "en resumen" },
+            { "en": "arguably", "es": "posiblemente, se podría decir" },
+            { "en": "compelling", "es": "convincente" },
+            { "en": "misleading", "es": "engañoso" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Suavizar es de nivel alto",
+              "body": "En inglés académico y profesional se evita afirmar sin matices. En vez de 'This is wrong' se dice 'This may not be entirely accurate'. Las herramientas son los 'hedges': may, might, tend to, arguably, to some extent, it seems that. Sonar tajante en inglés no proyecta seguridad, proyecta falta de rigor.",
+              "examples": [
+                { "en": "This tends to be the case.", "es": "Suele ser así." },
+                { "en": "Arguably, it's the best option.", "es": "Se podría decir que es la mejor opción." },
+                { "en": "To some extent, I agree.", "es": "Hasta cierto punto, estoy de acuerdo." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones de debate",
+              "pairs": [
+                ["on the contrary", "al contrario"],
+                ["that said", "dicho esto"],
+                ["to sum up", "en resumen"],
+                ["misleading", "engañoso"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "It is worth noting that costs have doubled",
+              "options": [
+                "Cabe destacar que los costes se han duplicado",
+                "Vale la pena notar los costes",
+                "Los costes valen el doble",
+                "Anotamos que hay costes"
+              ],
+              "answer": "Cabe destacar que los costes se han duplicado"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The main ___ of this plan is the cost.",
+              "answer": "drawback",
+              "options": ["drawback", "advantage", "evidence", "extent"],
+              "translation": "El principal inconveniente de este plan es el coste."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ some extent, I agree with you.",
+              "answer": "To",
+              "options": ["To", "In", "At", "By"],
+              "translation": "Hasta cierto punto, estoy de acuerdo contigo."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Yo diría que el argumento es convincente",
+              "answer": "I would argue that the argument is compelling"
+            },
+            {
+              "type": "word_order",
+              "prompt": "En resumen, necesitamos más datos",
+              "words": ["To", "sum", "up,", "we", "need", "more", "data"],
+              "answer": "To sum up, we need more data"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The evidence suggests a different conclusion",
+              "answer": "The evidence suggests a different conclusion",
+              "translation": "Las pruebas sugieren una conclusión distinta"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "That said, the key advantage is clear.",
+              "translation": "Dicho esto, la ventaja principal está clara."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "On the contrary, the data proves the opposite",
+              "answer": "Al contrario, los datos demuestran lo opuesto"
+            }
+          ]
+        },
+        {
+          "id": "b2_u2_l3",
+          "title": "Sinónimos con matiz",
+          "vocab": [
+            { "en": "happy / delighted / content", "es": "feliz / encantado / satisfecho" },
+            { "en": "angry / annoyed / furious", "es": "enfadado / molesto / furioso" },
+            { "en": "big / huge / enormous", "es": "grande / enorme / descomunal" },
+            { "en": "look / glance / stare", "es": "mirar / ojear / clavar la mirada" },
+            { "en": "say / mention / claim", "es": "decir / mencionar / afirmar" },
+            { "en": "tired / exhausted / drained", "es": "cansado / agotado / vacío" },
+            { "en": "good / decent / outstanding", "es": "bueno / decente / sobresaliente" },
+            { "en": "smart / clever / brilliant", "es": "listo / astuto / brillante" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los sinónimos no son intercambiables",
+              "body": "Cada sinónimo lleva su intensidad y su contexto. 'Annoyed' es un enfado leve, 'furious' es perder los papeles. 'Clever' puede ser un halago o insinuar que alguien es demasiado astuto. Y 'claim' no es un simple 'decir': implica que no te lo crees del todo. Usar el sinónimo justo es lo que separa un B2 de un C1.",
+              "examples": [
+                { "en": "He claims he was at home.", "es": "Afirma que estaba en casa (con dudas)." },
+                { "en": "She was delighted with the news.", "es": "Estaba encantada con la noticia." },
+                { "en": "I'm absolutely exhausted.", "es": "Estoy completamente agotado." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "He claims he never received the email",
+              "options": [
+                "Afirma que nunca recibió el correo (y hay dudas)",
+                "Reclama que le manden el correo",
+                "Confirma que recibió el correo",
+                "Pide que le reenvíen el correo"
+              ],
+              "answer": "Afirma que nunca recibió el correo (y hay dudas)"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "After the marathon I was completely ___.",
+              "answer": "exhausted",
+              "options": ["exhausted", "annoyed", "delighted", "content"],
+              "translation": "Después del maratón estaba completamente agotado."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She gave me a quick ___ and walked away.",
+              "answer": "glance",
+              "options": ["glance", "stare", "look after", "sight"],
+              "translation": "Me echó un vistazo rápido y se fue."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une por intensidad",
+              "pairs": [
+                ["annoyed", "molesto"],
+                ["furious", "furioso"],
+                ["enormous", "descomunal"],
+                ["outstanding", "sobresaliente"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estaba encantada con el resultado",
+              "answer": "She was delighted with the result"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Fue una actuación sobresaliente",
+              "words": ["It", "was", "an", "outstanding", "performance"],
+              "answer": "It was an outstanding performance"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "He stared at me without saying a word",
+              "answer": "He stared at me without saying a word",
+              "translation": "Me miró fijamente sin decir una palabra"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I'm not angry, just slightly annoyed.",
+              "translation": "No estoy enfadado, solo algo molesto."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "That was a clever move",
+              "answer": "Fue una jugada astuta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2_u3",
+      "level": "B2",
+      "title": "Estructuras que suenan nativas",
+      "subtitle": "Phrasal verbs avanzados, gerundios, relativas, subjuntivo e inversión",
+      "icon": "spark",
+      "lessons": [
+        {
+          "id": "b2_u3_l1",
+          "title": "Phrasal verbs avanzados",
+          "vocab": [
+            { "en": "to carry out", "es": "llevar a cabo, realizar" },
+            { "en": "to put up with", "es": "aguantar, soportar" },
+            { "en": "to come across", "es": "encontrarse por casualidad" },
+            { "en": "to look into", "es": "investigar" },
+            { "en": "to run into", "es": "toparse con alguien" },
+            { "en": "to get away with", "es": "salirse con la suya" },
+            { "en": "to turn down", "es": "rechazar" },
+            { "en": "to bring up", "es": "sacar un tema; criar" },
+            { "en": "to call off", "es": "cancelar" },
+            { "en": "to figure out", "es": "descifrar, resolver" },
+            { "en": "to take up", "es": "empezar una afición; ocupar espacio" },
+            { "en": "to back down", "es": "echarse atrás en una postura" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Separables e inseparables",
+              "body": "Algunos phrasal verbs admiten el objeto en medio y otros no. 'Turn down' es separable: puedes decir 'turn the offer down' o 'turn down the offer'. Pero si el objeto es un pronombre, es OBLIGATORIO ponerlo en medio: 'turn it down', nunca 'turn down it'. Los de tres palabras (put up with, get away with, look forward to) son siempre inseparables: el objeto va detrás y punto.",
+              "examples": [
+                { "en": "She turned the job down.", "es": "Rechazó el trabajo." },
+                { "en": "She turned it down.", "es": "Lo rechazó. (nunca 'turned down it')" },
+                { "en": "I can't put up with this noise.", "es": "No aguanto este ruido." }
+              ]
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los phrasal verbs",
+              "pairs": [
+                ["carry out", "llevar a cabo"],
+                ["put up with", "aguantar"],
+                ["look into", "investigar"],
+                ["call off", "cancelar"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "He got away with it",
+              "options": [
+                "Se salió con la suya",
+                "Se fue con ello",
+                "Lo consiguió con esfuerzo",
+                "Se escapó corriendo"
+              ],
+              "answer": "Se salió con la suya"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "Rechazó la oferta (usando un pronombre)",
+              "options": [
+                "She turned it down",
+                "She turned down it",
+                "She turned down",
+                "She down turned it"
+              ],
+              "answer": "She turned it down",
+              "hint": "Con pronombre, el objeto va SIEMPRE en medio"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ into an old friend at the airport.",
+              "answer": "ran",
+              "options": ["ran", "came", "looked", "took"],
+              "translation": "Me topé con un viejo amigo en el aeropuerto."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The police are looking ___ the case.",
+              "answer": "into",
+              "options": ["into", "for", "after", "up"],
+              "translation": "La policía está investigando el caso."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "No aguanto más este ruido",
+              "answer": "I can't put up with this noise anymore",
+              "alternatives": ["I cannot put up with this noise anymore"]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Cancelaron la reunión en el último minuto",
+              "words": ["They", "called", "off", "the", "meeting", "at", "the", "last", "minute"],
+              "answer": "They called off the meeting at the last minute"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I came across an interesting article",
+              "answer": "I came across an interesting article",
+              "translation": "Me encontré con un artículo interesante"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "We need to figure out what went wrong.",
+              "translation": "Necesitamos descifrar qué salió mal."
+            }
+          ]
+        },
+        {
+          "id": "b2_u3_l2",
+          "title": "Gerundio o infinitivo",
+          "vocab": [
+            { "en": "stop doing", "es": "dejar de hacer" },
+            { "en": "stop to do", "es": "parar para hacer" },
+            { "en": "remember doing", "es": "recordar haber hecho" },
+            { "en": "remember to do", "es": "acordarse de hacer" },
+            { "en": "try doing", "es": "probar a hacer" },
+            { "en": "try to do", "es": "intentar hacer" },
+            { "en": "to avoid", "es": "evitar (+ gerundio)" },
+            { "en": "to manage", "es": "lograr (+ infinitivo)" },
+            { "en": "to suggest", "es": "sugerir (+ gerundio)" },
+            { "en": "to refuse", "es": "negarse (+ infinitivo)" },
+            { "en": "to mind", "es": "importar (+ gerundio)" },
+            { "en": "to look forward to", "es": "tener ganas de (+ gerundio)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Cuando cambiar de forma cambia el significado",
+              "body": "Hay verbos donde gerundio e infinitivo NO son intercambiables: significan cosas distintas. 'I stopped smoking' es dejé de fumar; 'I stopped to smoke' es paré para fumar. 'I remember locking the door' es recuerdo haberla cerrado; 'I remembered to lock the door' es me acordé de cerrarla. Y una trampa fina: 'look forward to' acaba en preposición, así que va con gerundio — 'I look forward to hearing from you', nunca 'to hear'.",
+              "examples": [
+                { "en": "He stopped talking.", "es": "Dejó de hablar." },
+                { "en": "He stopped to talk.", "es": "Se detuvo para hablar." },
+                { "en": "I look forward to seeing you.", "es": "Tengo ganas de verte." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "She stopped to help him",
+              "options": [
+                "Se detuvo para ayudarle",
+                "Dejó de ayudarle",
+                "Le impidió ayudar",
+                "Empezó a ayudarle"
+              ],
+              "answer": "Se detuvo para ayudarle"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "I remember locking the door",
+              "options": [
+                "Recuerdo haber cerrado la puerta",
+                "Me acordé de cerrar la puerta",
+                "Recuerda cerrar la puerta",
+                "Olvidé cerrar la puerta"
+              ],
+              "answer": "Recuerdo haber cerrado la puerta"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I look forward to ___ from you.",
+              "answer": "hearing",
+              "options": ["hearing", "hear", "to hear", "heard"],
+              "translation": "Quedo a la espera de su respuesta."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She managed ___ the problem on her own.",
+              "answer": "to solve",
+              "options": ["to solve", "solving", "solve", "solved"],
+              "translation": "Logró resolver el problema ella sola."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Would you mind ___ the window?",
+              "answer": "opening",
+              "options": ["opening", "to open", "open", "opened"],
+              "translation": "¿Te importaría abrir la ventana?"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une cada verbo con lo que le sigue",
+              "pairs": [
+                ["avoid", "+ gerundio"],
+                ["refuse", "+ infinitivo"],
+                ["suggest", "+ gerundio"],
+                ["decide", "+ infinitivo"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Deja de quejarte e inténtalo otra vez",
+              "answer": "Stop complaining and try again"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "He refused to answer the question",
+              "answer": "He refused to answer the question",
+              "translation": "Se negó a responder la pregunta"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I avoid making the same mistake twice.",
+              "translation": "Evito cometer el mismo error dos veces."
+            }
+          ]
+        },
+        {
+          "id": "b2_u3_l3",
+          "title": "Oraciones de relativo",
+          "vocab": [
+            { "en": "who", "es": "que, quien (personas)" },
+            { "en": "which", "es": "que, lo cual (cosas)" },
+            { "en": "that", "es": "que (solo especificativas)" },
+            { "en": "whose", "es": "cuyo" },
+            { "en": "where", "es": "donde" },
+            { "en": "when", "es": "cuando" },
+            { "en": "the man I met", "es": "el hombre que conocí" },
+            { "en": "defining clause", "es": "oración especificativa" },
+            { "en": "non-defining clause", "es": "oración explicativa" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La coma lo cambia todo",
+              "body": "Sin comas la relativa es especificativa: identifica de quién hablas y es imprescindible. 'My sister who lives in Paris' implica que tienes más hermanas. Con comas es explicativa: información extra que podrías borrar. 'My sister, who lives in Paris,' implica que solo tienes una. Dos reglas de oro: en las explicativas NUNCA se usa 'that', y el pronombre no se puede omitir. En las especificativas sí puedes omitirlo si es el objeto: 'the film (that) I saw'.",
+              "examples": [
+                { "en": "The book that I bought was cheap.", "es": "El libro que compré era barato." },
+                { "en": "The book I bought was cheap.", "es": "Igual de correcta: el pronombre se puede omitir." },
+                { "en": "My car, which is red, broke down.", "es": "Mi coche, que es rojo, se averió." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "That's the woman ___ son won the prize.",
+              "answer": "whose",
+              "options": ["whose", "who", "which", "who's"],
+              "translation": "Esa es la mujer cuyo hijo ganó el premio."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "This is the café ___ we first met.",
+              "answer": "where",
+              "options": ["where", "which", "that", "when"],
+              "translation": "Este es el café donde nos conocimos."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta con coma (explicativa)?",
+              "options": [
+                "My boss, who is from Ireland, speaks Spanish",
+                "My boss, that is from Ireland, speaks Spanish",
+                "My boss which is from Ireland speaks Spanish",
+                "My boss, whose is from Ireland, speaks Spanish"
+              ],
+              "answer": "My boss, who is from Ireland, speaks Spanish",
+              "hint": "En las explicativas nunca se usa 'that'"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "'I have one sister, who lives in Rome' significa que…",
+              "options": [
+                "Solo tengo una hermana",
+                "Tengo varias hermanas",
+                "No sé cuántas hermanas tengo",
+                "Mi hermana no vive en Roma"
+              ],
+              "answer": "Solo tengo una hermana"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿En cuál se puede OMITIR el pronombre relativo?",
+              "options": [
+                "The film that I watched last night",
+                "The man who called me is my uncle",
+                "My house, which is old, needs repairs",
+                "The student whose bag was stolen"
+              ],
+              "answer": "The film that I watched last night",
+              "hint": "Solo cuando el relativo es el objeto de una especificativa"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une el relativo con su uso",
+              "pairs": [
+                ["who", "personas"],
+                ["which", "cosas"],
+                ["whose", "posesión"],
+                ["where", "lugares"]
+              ]
+            },
+            {
+              "type": "word_order",
+              "prompt": "La casa donde crecí ya no existe",
+              "words": ["The", "house", "where", "I", "grew", "up", "no", "longer", "exists"],
+              "answer": "The house where I grew up no longer exists"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "El hombre con el que hablé era muy amable",
+              "answer": "The man I spoke to was very kind",
+              "alternatives": ["The man who I spoke to was very kind", "The man that I spoke to was very kind"]
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "The person who wrote this really knew the subject.",
+              "translation": "La persona que escribió esto conocía bien el tema."
+            }
+          ]
+        },
+        {
+          "id": "b2_u3_l4",
+          "title": "Subjuntivo, inversión y énfasis",
+          "vocab": [
+            { "en": "I suggest that he be", "es": "sugiero que sea (subjuntivo)" },
+            { "en": "it is essential that", "es": "es esencial que" },
+            { "en": "I recommend that she apply", "es": "recomiendo que solicite" },
+            { "en": "never have I seen", "es": "nunca he visto (inversión)" },
+            { "en": "not only did he", "es": "no solo él" },
+            { "en": "hardly had I", "es": "apenas había yo" },
+            { "en": "what I need is", "es": "lo que necesito es" },
+            { "en": "it was John who", "es": "fue John quien" },
+            { "en": "under no circumstances", "es": "bajo ninguna circunstancia" },
+            { "en": "should you need help", "es": "si necesitara ayuda (formal)" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El subjuntivo inglés existe y es más simple que el español",
+              "body": "Tras verbos como suggest, recommend, insist, demand y tras 'it is essential/vital that', el inglés usa el verbo en su forma BASE, sin conjugar y sin 'to': 'I suggest that he be careful', 'It's essential that she arrive on time' (sin la -s). Suena raro pero es lo correcto en registro formal. En inglés británico se admite añadir 'should': 'I suggest that he should be careful'.",
+              "examples": [
+                { "en": "I recommend that he apply now.", "es": "Recomiendo que solicite ya." },
+                { "en": "It is vital that they be informed.", "es": "Es vital que sean informados." },
+                { "en": "She insisted that he leave.", "es": "Insistió en que se fuera." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It is essential that she ___ on time.",
+              "answer": "arrive",
+              "options": ["arrive", "arrives", "arrived", "arriving"],
+              "translation": "Es esencial que llegue a tiempo."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I suggest that he ___ more careful.",
+              "answer": "be",
+              "options": ["be", "is", "was", "being"],
+              "translation": "Sugiero que sea más cuidadoso."
+            },
+            {
+              "type": "tip",
+              "title": "Inversión: poner el énfasis al principio",
+              "body": "Cuando una frase empieza por una expresión negativa o restrictiva (never, not only, hardly, rarely, under no circumstances), el orden se invierte como en una pregunta: auxiliar antes del sujeto. 'Never have I seen such a mess', no 'Never I have seen'. Es un recurso de registro formal y literario que suena muy competente cuando se usa bien — y muy forzado si se abusa.",
+              "examples": [
+                { "en": "Never have I seen such a thing.", "es": "Nunca he visto algo así." },
+                { "en": "Not only did he lie, he also stole.", "es": "No solo mintió, además robó." },
+                { "en": "Hardly had I arrived when it started.", "es": "Apenas había llegado cuando empezó." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál usa bien la inversión?",
+              "options": [
+                "Never have I seen such a mess",
+                "Never I have seen such a mess",
+                "Never I saw such a mess",
+                "Never has I seen such a mess"
+              ],
+              "answer": "Never have I seen such a mess"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Not only ___ he apologise, he also paid for it.",
+              "answer": "did",
+              "options": ["did", "does", "was", "had"],
+              "translation": "No solo se disculpó, además lo pagó."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Under no circumstances should you sign that",
+              "options": [
+                "Bajo ninguna circunstancia deberías firmar eso",
+                "En algunas circunstancias podrías firmarlo",
+                "Sin circunstancias no firmes",
+                "Deberías firmarlo en cualquier caso"
+              ],
+              "answer": "Bajo ninguna circunstancia deberías firmar eso"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las estructuras enfáticas",
+              "pairs": [
+                ["what I need is", "lo que necesito es"],
+                ["it was John who", "fue John quien"],
+                ["hardly had I", "apenas había yo"],
+                ["under no circumstances", "bajo ninguna circunstancia"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Lo que necesitamos es más tiempo",
+              "answer": "What we need is more time"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Not only was it late, it was also completely wrong.",
+              "translation": "No solo llegó tarde, además estaba completamente mal."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

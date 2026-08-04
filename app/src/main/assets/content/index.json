@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "files": [
+    "a1_core.json",
+    "a2_core.json",
+    "b1_core.json",
+    "b2_core.json",
+    "extra_idioms.json",
+    "extra_slang.json",
+    "extra_business.json",
+    "extra_travel.json",
+    "extra_pronunciation.json",
+    "extra_listening.json",
+    "extra_stories.json",
+    "extra_culture.json"
+  ]
+}
