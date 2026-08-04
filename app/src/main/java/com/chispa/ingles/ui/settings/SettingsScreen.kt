@@ -24,6 +24,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.SystemUpdate
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -43,10 +44,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.chispa.ingles.core.AppInfo
 import com.chispa.ingles.core.ServiceLocator
 import com.chispa.ingles.data.prefs.Accent
 import com.chispa.ingles.data.prefs.Settings
@@ -54,6 +57,7 @@ import com.chispa.ingles.data.prefs.ThemeMode
 import com.chispa.ingles.domain.DailyGoal
 import com.chispa.ingles.notifications.ReminderScheduler
 import com.chispa.ingles.ui.chispaViewModel
+import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.ChispaCard
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -127,6 +131,8 @@ fun SettingsScreen(onBack: () -> Unit) {
 
     var showTimePicker by remember { mutableStateOf(false) }
     var showResetDialog by remember { mutableStateOf(false) }
+    var sinNavegador by remember { mutableStateOf(false) }
+    val contexto = LocalContext.current
 
     // En Android 13+ activar el interruptor no basta: hace falta el permiso del
     // sistema. Se pide justo aquí, que es donde el usuario ha expresado interés.
@@ -375,6 +381,58 @@ fun SettingsScreen(onBack: () -> Unit) {
                 }
             }
 
+            /* ---------------- Actualizaciones ---------------- */
+            SectionTitle("Actualizaciones")
+            ChispaCard {
+                Column(Modifier.padding(16.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Text("Versión instalada", style = MaterialTheme.typography.titleSmall)
+                            Text(
+                                AppInfo.versionName(contexto),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                        Icon(
+                            Icons.Filled.SystemUpdate,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(28.dp)
+                        )
+                    }
+                    Spacer(Modifier.height(12.dp))
+                    Text(
+                        "Chispa no puede conectarse a internet, así que no comprueba " +
+                            "actualizaciones por su cuenta. Este botón abre la página de " +
+                            "descargas en tu navegador: si hay una versión más nueva, la verás ahí.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(Modifier.height(14.dp))
+                    ChispaButton(
+                        text = "Buscar actualizaciones",
+                        icon = Icons.Filled.SystemUpdate,
+                        onClick = { sinNavegador = !AppInfo.openReleasesPage(contexto) }
+                    )
+                    if (sinNavegador) {
+                        Spacer(Modifier.height(10.dp))
+                        Text(
+                            "No encontré ningún navegador en el dispositivo. La dirección es:\n" +
+                                AppInfo.RELEASES_URL,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = colors.wrong
+                        )
+                    }
+                    Spacer(Modifier.height(12.dp))
+                    Text(
+                        "Al instalar encima conservas tu racha, tu XP y todo tu progreso.",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = colors.correct
+                    )
+                }
+            }
+
             /* ---------------- Acerca de ---------------- */
             SectionTitle("Acerca de Chispa")
             Box(
@@ -385,7 +443,7 @@ fun SettingsScreen(onBack: () -> Unit) {
                     .padding(16.dp)
             ) {
                 Text(
-                    "Chispa v1.0.0\n\n" +
+                    "Chispa ${AppInfo.versionName(contexto)}\n\n" +
                         "Funciona 100% sin conexión. No pide permiso de internet, no tiene " +
                         "anuncios, no tiene compras y no recoge ningún dato tuyo.\n\n" +
                         "La voz y el reconocimiento de habla son los que ya trae tu Android.",
