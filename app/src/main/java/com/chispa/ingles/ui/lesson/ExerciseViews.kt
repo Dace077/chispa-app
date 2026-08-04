@@ -79,6 +79,7 @@ fun ExerciseView(
             SpeakAndRepeatView(exercise, state, viewModel, onRequestMic, onUseSystemDialog)
         is Exercise.MatchingPairs -> MatchingPairsView(exercise, state, viewModel)
         is Exercise.FillInBlank -> FillInBlankView(exercise, state, viewModel)
+        is Exercise.VocabIntro -> VocabIntroView(exercise, viewModel)
         is Exercise.Tip -> TipView(exercise, viewModel)
         is Exercise.Reading -> ReadingView(exercise, viewModel)
         is Exercise.CultureNote -> CultureNoteView(exercise)
@@ -629,6 +630,84 @@ private fun FillInBlankView(
 /* =========================================================================
  *  8-10. Tarjetas informativas
  * ========================================================================= */
+
+/**
+ * Presentación del vocabulario antes de examinar de él.
+ *
+ * Cada palabra se puede tocar para oírla. Es la primera vez que el usuario ve
+ * estas palabras, así que aquí no se le pide nada: solo mirar y escuchar.
+ */
+@Composable
+private fun VocabIntroView(exercise: Exercise.VocabIntro, viewModel: LessonViewModel) {
+    val colors = ChispaThemeTokens.colors
+    Column {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            ChispaMascot(size = 64.dp, mood = MascotMood.HAPPY)
+            Spacer(Modifier.width(10.dp))
+            Column {
+                Text("Palabras nuevas", style = MaterialTheme.typography.headlineSmall)
+                Text(
+                    "Tócalas para oírlas. Luego las practicamos.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        Spacer(Modifier.height(16.dp))
+
+        exercise.items.forEach { item ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp)
+                    .clip(RoundedCornerShape(14.dp))
+                    .background(colors.surfaceElevated)
+                    .border(2.dp, colors.cardStroke, RoundedCornerShape(14.dp))
+                    .clickable { viewModel.speak(item.en) }
+                    .padding(14.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(Modifier.weight(1f)) {
+                    Text(item.en, style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        item.es,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    if (item.ipa != null) {
+                        Text(
+                            item.ipa,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    if (item.note != null) {
+                        Spacer(Modifier.height(4.dp))
+                        Text(
+                            item.note,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = colors.xp
+                        )
+                    }
+                }
+                Box(
+                    modifier = Modifier
+                        .size(38.dp)
+                        .clip(CircleShape)
+                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.12f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        Icons.Filled.VolumeUp,
+                        contentDescription = "Escuchar ${item.en}",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun TipView(exercise: Exercise.Tip, viewModel: LessonViewModel) {

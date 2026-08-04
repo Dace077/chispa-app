@@ -506,7 +506,8 @@ class LessonViewModel(
         val exercise = state.current ?: return
 
         when (exercise) {
-            is Exercise.Tip, is Exercise.Reading, is Exercise.CultureNote -> advance()
+            is Exercise.Tip, is Exercise.Reading, is Exercise.CultureNote,
+            is Exercise.VocabIntro -> advance()
 
             is Exercise.MultipleChoice -> {
                 val chosen = state.selectedOption ?: return
@@ -738,6 +739,7 @@ fun Exercise.instruction(): String = when (this) {
     is Exercise.SpeakAndRepeat -> "Di la frase en voz alta"
     is Exercise.MatchingPairs -> prompt
     is Exercise.FillInBlank -> "Completa la frase"
+    is Exercise.VocabIntro -> "Empezamos por aquí"
     is Exercise.Tip -> "Antes de seguir"
     is Exercise.Reading -> "Lectura"
     is Exercise.CultureNote -> "Nota cultural"

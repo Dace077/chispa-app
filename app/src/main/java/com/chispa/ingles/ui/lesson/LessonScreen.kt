@@ -300,6 +300,7 @@ private fun FeedbackFooter(
 
 private fun primaryLabel(state: LessonUiState): String = when {
     state.phase == SessionPhase.FEEDBACK -> "Continuar"
+    state.current is Exercise.VocabIntro -> "Ya me las sé, vamos"
     state.current is Exercise.Tip ||
         state.current is Exercise.Reading ||
         state.current is Exercise.CultureNote -> "Entendido"

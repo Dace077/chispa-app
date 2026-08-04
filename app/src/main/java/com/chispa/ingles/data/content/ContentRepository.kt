@@ -2,6 +2,7 @@ package com.chispa.ingles.data.content
 
 import android.content.Context
 import android.util.Log
+import com.chispa.ingles.domain.LessonPedagogy
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -154,8 +155,22 @@ private fun UnitJson.toDomain(trackId: String): LearningUnit {
     )
 }
 
-private fun LessonJson.toDomain(unitId: String, trackId: String, level: CefrLevel): Lesson =
-    Lesson(
+private fun LessonJson.toDomain(unitId: String, trackId: String, level: CefrLevel): Lesson {
+    val palabras = vocab.map { VocabItem(it.en.trim(), it.es.trim(), it.ipa, it.note) }
+
+    // Aquí es donde una lección se convierte en una secuencia didáctica: se
+    // antepone la presentación del vocabulario y se ordenan los ejercicios de
+    // menor a mayor exigencia. Sin esto la app examina de palabras que nunca
+    // ha enseñado, que es exactamente lo que hacía antes.
+    val preparados = LessonPedagogy.prepare(
+        exercises = exercises.mapNotNull { it.toDomain() },
+        vocab = palabras,
+        lessonId = id,
+        lessonTitle = title,
+        respectAuthorOrder = orderedByAuthor
+    )
+
+    return Lesson(
         id = id,
         unitId = unitId,
         trackId = trackId,
@@ -167,9 +182,11 @@ private fun LessonJson.toDomain(unitId: String, trackId: String, level: CefrLeve
             "pronunciation" -> LessonKind.PRONUNCIATION
             else -> LessonKind.LESSON
         },
-        vocab = vocab.map { VocabItem(it.en.trim(), it.es.trim(), it.ipa, it.note) },
-        exercises = exercises.mapNotNull { it.toDomain() }
+        vocab = palabras,
+        exercises = preparados,
+        orderedByAuthor = orderedByAuthor
     )
+}
 
 private fun ExerciseJson.toDomain(): Exercise? {
     val fallbackKey = (key ?: answer ?: audioText ?: sentence ?: prompt ?: title ?: return null)

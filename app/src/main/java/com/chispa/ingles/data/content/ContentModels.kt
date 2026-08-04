@@ -43,6 +43,13 @@ data class LessonJson(
     val id: String,
     val title: String,
     val kind: String = "lesson",
+    /**
+     * Si es true, los ejercicios se sirven exactamente en el orden escrito.
+     * Por defecto la app los reordena de menor a mayor exigencia (ver
+     * `LessonPedagogy`); esta bandera es la vía de escape para una lección
+     * cuya secuencia sí importa.
+     */
+    val orderedByAuthor: Boolean = false,
     val vocab: List<VocabJson> = emptyList(),
     val exercises: List<ExerciseJson> = emptyList()
 )
@@ -154,7 +161,8 @@ data class Lesson(
     val title: String,
     val kind: LessonKind,
     val vocab: List<VocabItem>,
-    val exercises: List<Exercise>
+    val exercises: List<Exercise>,
+    val orderedByAuthor: Boolean = false
 ) {
     /** Ejercicios que puntúan (los informativos no cuentan para el progreso). */
     val gradedCount: Int get() = exercises.count { it.isGraded }
@@ -255,6 +263,23 @@ sealed interface Exercise {
         val title: String,
         val body: String,
         val examples: List<VocabItem>
+    ) : Exercise {
+        override val isGraded: Boolean get() = false
+    }
+
+    /**
+     * Presentación del vocabulario ANTES de examinar de él.
+     *
+     * No se escribe a mano en el JSON: se genera a partir de la lista `vocab`
+     * que ya tiene cada lección. Hasta que existió esta tarjeta, esas palabras
+     * solo alimentaban la repetición espaciada y el usuario nunca las veía;
+     * la primera vez que se topaba con ellas era en un ejercicio que le pedía
+     * escribirlas. Para quien parte de cero eso no es aprender, es adivinar.
+     */
+    data class VocabIntro(
+        override val srsKey: String,
+        val title: String,
+        val items: List<VocabItem>
     ) : Exercise {
         override val isGraded: Boolean get() = false
     }
