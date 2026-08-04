@@ -24,6 +24,7 @@
       ],
       "answer": "Ellos tienen dos hijos"
     },
+
     {
       "level": "A2",
       "prompt": "Completa en pasado: Yesterday I ___ to the beach.",
@@ -43,6 +44,14 @@
       "answer": "This book is better than that one"
     },
     {
+      "level": "A2",
+      "prompt": "Completa: We ___ going to travel next summer.",
+      "options": ["are", "is", "am", "be"],
+      "answer": "are",
+      "hint": "Futuro con \"going to\""
+    },
+
+    {
       "level": "B1",
       "prompt": "Elige la forma correcta: I ___ in London since 2019.",
       "options": ["live", "lived", "have lived", "am living"],
@@ -53,19 +62,111 @@
       "level": "B1",
       "prompt": "¿Qué significa el phrasal verb \"to look after someone\"?",
       "options": [
-        "Buscar a alguien",
         "Cuidar de alguien",
+        "Buscar a alguien",
         "Mirar hacia atrás",
         "Parecerse a alguien"
       ],
       "answer": "Cuidar de alguien"
     },
     {
+      "level": "B1",
+      "prompt": "Completa: If it ___ tomorrow, we will cancel the trip.",
+      "options": ["rains", "will rain", "rained", "would rain"],
+      "answer": "rains",
+      "hint": "Primer condicional: tras \"if\" nunca va \"will\""
+    },
+
+    {
       "level": "B2",
       "prompt": "Completa el condicional: If I ___ more time, I would travel more.",
       "options": ["have", "had", "will have", "would have"],
       "answer": "had",
       "hint": "Segundo condicional: situación hipotética"
+    },
+    {
+      "level": "B2",
+      "prompt": "Pasa a estilo indirecto: \"I am tired\", she said.",
+      "options": [
+        "She said she was tired",
+        "She said she is tired",
+        "She said I am tired",
+        "She said she has been tired"
+      ],
+      "answer": "She said she was tired"
+    },
+    {
+      "level": "B2",
+      "prompt": "¿Cuál es correcta?",
+      "options": [
+        "I look forward to hearing from you",
+        "I look forward to hear from you",
+        "I look forward hearing from you",
+        "I am looking forward to hear from you"
+      ],
+      "answer": "I look forward to hearing from you",
+      "hint": "\"to\" aquí es preposición, no infinitivo"
+    },
+
+    {
+      "level": "C1",
+      "prompt": "Las luces estaban apagadas. Completa: They ___ have left already.",
+      "options": ["must", "should", "can", "would"],
+      "answer": "must",
+      "hint": "Deducción firme sobre el pasado"
+    },
+    {
+      "level": "C1",
+      "prompt": "¿Cuál es la reducción correcta de \"Because she had finished, she left\"?",
+      "options": [
+        "Having finished, she left",
+        "Have finished, she left",
+        "Finishing, she left",
+        "Had finished, she left"
+      ],
+      "answer": "Having finished, she left"
+    },
+    {
+      "level": "C1",
+      "prompt": "¿Qué significa \"The outcome is by no means certain\"?",
+      "options": [
+        "El resultado no está ni mucho menos claro",
+        "El resultado es totalmente seguro",
+        "El resultado no tiene sentido",
+        "No hay forma de medir el resultado"
+      ],
+      "answer": "El resultado no está ni mucho menos claro"
+    },
+
+    {
+      "level": "C2",
+      "prompt": "Un británico dice \"That's an interesting idea\". Normalmente significa…",
+      "options": [
+        "Que no le convence en absoluto",
+        "Que le parece fascinante",
+        "Que quiere más detalles",
+        "Que está totalmente de acuerdo"
+      ],
+      "answer": "Que no le convence en absoluto",
+      "hint": "Understatement británico"
+    },
+    {
+      "level": "C2",
+      "prompt": "¿Qué implica describir a alguien como \"notorious\"?",
+      "options": [
+        "Que es famoso por algo malo",
+        "Que es muy respetado",
+        "Que es evidente para todos",
+        "Que acaba de hacerse famoso"
+      ],
+      "answer": "Que es famoso por algo malo"
+    },
+    {
+      "level": "C2",
+      "prompt": "Completa la inversión formal: ___ it not been for your help, we would have failed.",
+      "options": ["Had", "If", "Were", "Should"],
+      "answer": "Had",
+      "hint": "Condicional de tercer tipo con inversión"
     }
   ]
 }

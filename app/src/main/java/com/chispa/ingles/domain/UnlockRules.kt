@@ -102,6 +102,11 @@ object UnlockRules {
             val openedByPlacement = !track.isExtra &&
                 unit.level.order < placementLevel.order
 
+            // ...pero abrirlos no significa mandar ahí al usuario. A quien el test
+            // coloca en C2 no se le señala "Saludos" como próxima lección: los
+            // niveles por debajo quedan disponibles para repasar, no destacados.
+            val puedeSerLaActual = track.isExtra || unit.level.order >= placementLevel.order
+
             val lessonNodes = unit.lessons.map { lesson ->
                 val entity = progress[lesson.id]
                 val completed = (entity?.timesCompleted ?: 0) > 0
@@ -112,7 +117,7 @@ object UnlockRules {
                     !unlocked -> LessonState.LOCKED
                     crown >= ProgressCrowns.MAX -> LessonState.MASTERED
                     completed -> LessonState.IN_PROGRESS
-                    !cursor.currentAssigned -> {
+                    !cursor.currentAssigned && puedeSerLaActual -> {
                         cursor.currentAssigned = true
                         LessonState.CURRENT
                     }

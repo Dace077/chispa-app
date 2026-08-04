@@ -1,6 +1,11 @@
 package com.chispa.ingles.ui.onboarding
 
-import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -13,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -25,6 +31,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
@@ -32,10 +39,12 @@ import androidx.lifecycle.viewModelScope
 import com.chispa.ingles.core.ServiceLocator
 import com.chispa.ingles.data.content.CefrLevel
 import com.chispa.ingles.data.content.PlacementQuestion
+import com.chispa.ingles.domain.PlacementLadder
 import com.chispa.ingles.ui.chispaViewModel
 import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.ChispaMascot
 import com.chispa.ingles.ui.components.ChispaProgressBar
+import com.chispa.ingles.ui.components.LevelChip
 import com.chispa.ingles.ui.components.MascotMood
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -45,16 +54,26 @@ import kotlinx.coroutines.launch
 
 data class PlacementUiState(
     val loading: Boolean = true,
-    val questions: List<PlacementQuestion> = emptyList(),
-    val index: Int = 0,
+    val blocks: Map<CefrLevel, List<PlacementQuestion>> = emptyMap(),
+    val level: CefrLevel = PlacementLadder.START,
+    val direction: PlacementLadder.Direction = PlacementLadder.Direction.UP,
+    val indexInBlock: Int = 0,
+    val correctInBlock: Int = 0,
+    val askedTotal: Int = 0,
+    val bestPassed: CefrLevel? = null,
     val selected: String? = null,
-    val correct: Int = 0,
     val finished: Boolean = false,
     val result: CefrLevel = CefrLevel.A1
 ) {
-    val current: PlacementQuestion? get() = questions.getOrNull(index)
+    val current: PlacementQuestion?
+        get() = blocks[level]?.getOrNull(indexInBlock)
+
+    /**
+     * Progreso aproximado. El test es adaptativo, así que la longitud real no
+     * se conoce de antemano: se estima sobre el máximo posible.
+     */
     val progress: Float
-        get() = if (questions.isEmpty()) 0f else index.toFloat() / questions.size
+        get() = (askedTotal.toFloat() / PlacementLadder.MAX_QUESTIONS).coerceIn(0f, 1f)
 }
 
 class PlacementViewModel(private val locator: ServiceLocator) : ViewModel() {
@@ -65,12 +84,18 @@ class PlacementViewModel(private val locator: ServiceLocator) : ViewModel() {
     init {
         viewModelScope.launch {
             val questions = locator.contentRepository.placementTest()
+            val blocks = questions
+                .groupBy { it.level }
+                .mapValues { (_, qs) -> qs.take(PlacementLadder.BLOCK_SIZE) }
+
+            // Si falta el bloque de arranque no hay test posible: se da por
+            // hecho A1 y se deja al usuario continuar en vez de bloquearlo.
+            val usable = blocks[PlacementLadder.START].orEmpty().isNotEmpty()
+
             _state.value = _state.value.copy(
                 loading = false,
-                questions = questions,
-                // Si el test no se pudo cargar, no dejamos al usuario atrapado en
-                // una pantalla en blanco: se le asigna A1 y puede seguir.
-                finished = questions.isEmpty(),
+                blocks = blocks,
+                finished = !usable,
                 result = CefrLevel.A1
             )
         }
@@ -83,32 +108,68 @@ class PlacementViewModel(private val locator: ServiceLocator) : ViewModel() {
     fun next() {
         val state = _state.value
         val question = state.current ?: return
-        val wasCorrect = state.selected == question.answer
-        val correct = state.correct + if (wasCorrect) 1 else 0
-        val nextIndex = state.index + 1
+        val acierto = state.selected == question.answer
 
-        if (nextIndex >= state.questions.size) {
-            val level = levelFor(correct, state.questions.size)
-            _state.value = state.copy(correct = correct, finished = true, result = level, selected = null)
-        } else {
-            _state.value = state.copy(index = nextIndex, correct = correct, selected = null)
+        val correct = state.correctInBlock + if (acierto) 1 else 0
+        val asked = state.askedTotal + 1
+        val nextIndex = state.indexInBlock + 1
+        val blockSize = state.blocks[state.level]?.size ?: PlacementLadder.BLOCK_SIZE
+
+        // Aún quedan preguntas en este bloque.
+        if (nextIndex < blockSize) {
+            _state.value = state.copy(
+                indexInBlock = nextIndex,
+                correctInBlock = correct,
+                askedTotal = asked,
+                selected = null
+            )
+            return
         }
-    }
 
-    /**
-     * Traduce aciertos a nivel de partida. Deliberadamente conservador: es mucho
-     * peor empezar demasiado arriba y frustrarse que repetir contenido fácil.
-     */
-    private fun levelFor(correct: Int, total: Int): CefrLevel {
-        if (total == 0) return CefrLevel.A1
-        val ratio = correct.toFloat() / total
-        return when {
-            // Solo con el pleno se salta hasta B2: por encima quedan C1 y C2,
-            // así que hay recorrido de sobra aunque nos quedemos cortos.
-            correct == total -> CefrLevel.B2
-            ratio >= 0.8f -> CefrLevel.B1
-            ratio >= 0.5f -> CefrLevel.A2
-            else -> CefrLevel.A1
+        // Bloque terminado: decidimos si subir, bajar o parar.
+        val passed = correct >= PlacementLadder.PASS_THRESHOLD
+        val best = if (passed) state.level else state.bestPassed
+
+        when (val step = PlacementLadder.nextStep(
+            level = state.level,
+            passed = passed,
+            direction = state.direction,
+            bestPassed = state.bestPassed
+        )) {
+            is PlacementLadder.Step.Finish -> {
+                _state.value = state.copy(
+                    askedTotal = asked,
+                    correctInBlock = correct,
+                    bestPassed = best,
+                    finished = true,
+                    result = step.level,
+                    selected = null
+                )
+            }
+
+            is PlacementLadder.Step.Continue -> {
+                // Si el nivel siguiente no tiene preguntas, cerramos con lo que hay.
+                val hayBloque = state.blocks[step.level].orEmpty().isNotEmpty()
+                if (!hayBloque) {
+                    _state.value = state.copy(
+                        askedTotal = asked,
+                        bestPassed = best,
+                        finished = true,
+                        result = best ?: CefrLevel.A1,
+                        selected = null
+                    )
+                } else {
+                    _state.value = state.copy(
+                        level = step.level,
+                        direction = step.direction,
+                        indexInBlock = 0,
+                        correctInBlock = 0,
+                        askedTotal = asked,
+                        bestPassed = best,
+                        selected = null
+                    )
+                }
+            }
         }
     }
 
@@ -143,8 +204,7 @@ fun PlacementScreen(onFinished: () -> Unit) {
         if (state.finished) {
             PlacementResult(
                 level = state.result,
-                correct = state.correct,
-                total = state.questions.size,
+                asked = state.askedTotal,
                 onContinue = { viewModel.confirm(onFinished) }
             )
             return@Column
@@ -155,7 +215,6 @@ fun PlacementScreen(onFinished: () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         ) {
             ChispaProgressBar(progress = state.progress, modifier = Modifier.weight(1f))
-            Spacer(Modifier.height(0.dp))
             TextButton(onClick = { viewModel.skip(onFinished) }) {
                 Text("Saltar", style = MaterialTheme.typography.labelMedium)
             }
@@ -176,12 +235,31 @@ fun PlacementScreen(onFinished: () -> Unit) {
                 .weight(1f)
                 .verticalScroll(rememberScrollState())
         ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                LevelChip(
+                    label = "Nivel ${state.level.label}",
+                    color = levelTint(state.level)
+                )
+                Spacer(Modifier.width(10.dp))
+                Text(
+                    "Pregunta ${state.askedTotal + 1}",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            Spacer(Modifier.height(4.dp))
             Text(
-                "Pregunta ${state.index + 1} de ${state.questions.size}",
-                style = MaterialTheme.typography.labelMedium,
+                if (state.direction == PlacementLadder.Direction.UP && state.askedTotal > 0)
+                    "Vas bien: subimos de nivel"
+                else if (state.direction == PlacementLadder.Direction.DOWN)
+                    "Ajustamos un poco hacia abajo"
+                else
+                    "El test se adapta a lo que respondas",
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            Spacer(Modifier.height(8.dp))
+
+            Spacer(Modifier.height(16.dp))
             Text(question.prompt, style = MaterialTheme.typography.headlineSmall)
             if (question.hint != null) {
                 Spacer(Modifier.height(6.dp))
@@ -204,11 +282,25 @@ fun PlacementScreen(onFinished: () -> Unit) {
         }
 
         ChispaButton(
-            text = if (state.index == state.questions.lastIndex) "Ver resultado" else "Siguiente",
+            text = "Siguiente",
             enabled = state.selected != null,
             onClick = viewModel::next
         )
         Spacer(Modifier.height(16.dp))
+    }
+}
+
+@Composable
+private fun levelTint(level: CefrLevel): Color {
+    val colors = ChispaThemeTokens.colors
+    return when (level) {
+        CefrLevel.A1 -> colors.levelA1
+        CefrLevel.A2 -> colors.levelA2
+        CefrLevel.B1 -> colors.levelB1
+        CefrLevel.B2 -> colors.levelB2
+        CefrLevel.C1 -> colors.levelC1
+        CefrLevel.C2 -> colors.levelC2
+        CefrLevel.EXTRA -> colors.levelExtra
     }
 }
 
@@ -238,39 +330,68 @@ private fun OptionRow(text: String, selected: Boolean, onClick: () -> Unit) {
 @Composable
 private fun PlacementResult(
     level: CefrLevel,
-    correct: Int,
-    total: Int,
+    asked: Int,
     onContinue: () -> Unit
 ) {
+    val colors = ChispaThemeTokens.colors
+    val avanzado = level.order >= CefrLevel.C1.order
+
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        ChispaMascot(size = 160.dp, mood = MascotMood.CELEBRATE)
+        ChispaMascot(
+            size = 150.dp,
+            mood = if (avanzado) MascotMood.CELEBRATE else MascotMood.HAPPY
+        )
         Spacer(Modifier.height(24.dp))
         Text("Tu punto de partida", style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(4.dp))
         Text(
             "Nivel ${level.label}",
             style = MaterialTheme.typography.displaySmall,
-            color = MaterialTheme.colorScheme.primary
+            color = levelTint(level)
         )
         Spacer(Modifier.height(12.dp))
         Text(
-            "Acertaste $correct de $total. " + when (level) {
-                CefrLevel.A1 -> "Empezamos desde el principio, con calma y bien hecho."
-                CefrLevel.A2 -> "Ya tienes base. Te abro las unidades de A1 por si quieres repasar."
-                else -> "Buen nivel. Te dejo A1 y A2 desbloqueados para repasar cuando quieras."
-            },
+            PlacementLadder.describe(level),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(horizontal = 12.dp)
         )
-        Spacer(Modifier.height(32.dp))
-        AnimatedVisibility(visible = true) {
-            ChispaButton(text = "Empezar a aprender", onClick = onContinue)
+
+        if (level.order > CefrLevel.A1.order) {
+            Spacer(Modifier.height(20.dp))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(colors.correctContainer)
+                    .padding(16.dp)
+            ) {
+                Text(
+                    "Todos los niveles por debajo quedan desbloqueados. Puedes " +
+                        "repasarlos cuando quieras sin perder tu sitio.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = colors.onCorrectContainer,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
+
+        Spacer(Modifier.height(10.dp))
+        Text(
+            "Test adaptativo · $asked preguntas",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        Spacer(Modifier.height(28.dp))
+        ChispaButton(text = "Empezar a aprender", onClick = onContinue)
+        Spacer(Modifier.height(16.dp))
     }
 }
