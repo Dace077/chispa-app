@@ -146,7 +146,8 @@ fun ProfileScreen(
         NavRow(
             icon = Icons.AutoMirrored.Filled.MenuBook,
             title = "Mi vocabulario",
-            subtitle = "${state.vocabSeen} palabras aprendidas",
+            subtitle = if (state.vocabSeen == 1) "1 palabra aprendida"
+            else "${state.vocabSeen} palabras aprendidas",
             onClick = onOpenVocabulary
         )
         Spacer(Modifier.height(10.dp))

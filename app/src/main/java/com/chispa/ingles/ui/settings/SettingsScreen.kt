@@ -402,24 +402,39 @@ fun SettingsScreen(onBack: () -> Unit) {
                         )
                     }
                     Spacer(Modifier.height(12.dp))
+                    // El texto cambia según de dónde vino esta copia: quien la
+                    // instaló de Play ya se actualiza solo y no hay que mandarlo
+                    // a ninguna otra parte.
+                    val desdePlay = remember { AppInfo.installedFromPlay(contexto) }
                     Text(
-                        "Chispa no puede conectarse a internet, así que no comprueba " +
-                            "actualizaciones por su cuenta. Este botón abre la página de " +
-                            "descargas en tu navegador: si hay una versión más nueva, la verás ahí.",
+                        if (desdePlay) {
+                            "Google Play te actualiza Chispa solo, en segundo plano. No " +
+                                "tienes que hacer nada. Si quieres comprobarlo ahora mismo, " +
+                                "este botón abre su ficha en la tienda."
+                        } else {
+                            "Chispa no puede conectarse a internet, así que no comprueba " +
+                                "actualizaciones por su cuenta. Este botón abre la página de " +
+                                "descargas en tu navegador: si hay una versión más nueva, la " +
+                                "verás ahí. Instálala encima y conservas todo tu progreso."
+                        },
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(Modifier.height(14.dp))
                     ChispaButton(
-                        text = "Buscar actualizaciones",
+                        text = if (desdePlay) "Ver en Google Play" else "Buscar actualizaciones",
                         icon = Icons.Filled.SystemUpdate,
-                        onClick = { sinNavegador = !AppInfo.openReleasesPage(contexto) }
+                        onClick = { sinNavegador = !AppInfo.openUpdatePage(contexto) }
                     )
                     if (sinNavegador) {
                         Spacer(Modifier.height(10.dp))
                         Text(
-                            "No encontré ningún navegador en el dispositivo. La dirección es:\n" +
-                                AppInfo.RELEASES_URL,
+                            if (desdePlay) {
+                                "No pude abrir Google Play en este dispositivo."
+                            } else {
+                                "No encontré ningún navegador en el dispositivo. La dirección es:\n" +
+                                    AppInfo.RELEASES_URL
+                            },
                             style = MaterialTheme.typography.bodySmall,
                             color = colors.wrong
                         )
