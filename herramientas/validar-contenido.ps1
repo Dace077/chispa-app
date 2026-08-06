@@ -24,6 +24,12 @@ Get-ChildItem $dir -Filter *.json | Where-Object { $_.Name -notin @('index.json'
                 $t = $e.type
                 switch ($t) {
                     'multiple_choice' {
+                        # direction "en_es" hace que la app LEA EL ENUNCIADO EN VOZ
+                        # ALTA con voz inglesa. Si el enunciado esta en espanol, se
+                        # oye espanol pronunciado como si fuera ingles.
+                        if ($e.direction -eq 'en_es' -and "$($e.prompt)" -match '[¿¡ñáéíóú]') {
+                            Bad $file $l.id $i $t "en_es con enunciado en espanol: se leeria con voz inglesa"
+                        }
                         $opts = @($e.options | ForEach-Object { $_.Trim() } | Select-Object -Unique)
                         if ($opts.Count -lt 2) { Bad $file $l.id $i $t "menos de 2 opciones" }
                         elseif (-not $e.answer) { Bad $file $l.id $i $t "sin answer" }

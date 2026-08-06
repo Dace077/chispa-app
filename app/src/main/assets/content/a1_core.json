@@ -1044,7 +1044,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cuál es el plural correcto de 'city'?",
               "options": ["cities", "citys", "cityes", "citties"],
               "answer": "cities"

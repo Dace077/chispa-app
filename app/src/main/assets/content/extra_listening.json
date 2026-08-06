@@ -45,7 +45,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Qué pidió el cliente además del café?",
               "options": ["Una magdalena de arándanos", "Un té", "Un sándwich", "Nada más"],
               "answer": "Una magdalena de arándanos"

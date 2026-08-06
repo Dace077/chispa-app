@@ -34,7 +34,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Por qué está nerviosa Marta?",
               "options": [
                 "No conoce a nadie en la ciudad",
@@ -46,7 +46,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Qué trae Julia?",
               "options": ["Un plato de galletas", "Una planta", "Café", "Dos maletas"],
               "answer": "Un plato de galletas"
@@ -115,7 +115,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Por qué el hombre ayudó a Daniel?",
               "options": [
                 "Porque alguien lo había ayudado a él antes",
@@ -199,7 +199,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Qué decide hacer Elena al final?",
               "options": [
                 "Devolver la carta sin abrirla",
@@ -211,7 +211,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "\"The not-sending was probably the whole story\" significa que…",
               "options": [
                 "El hecho de no enviarla era lo importante",
@@ -280,7 +280,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Por qué dejó la candidata el hueco en blanco?",
               "options": [
                 "Porque rellenarlo habría sido mentir sobre esos años",

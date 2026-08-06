@@ -13,6 +13,7 @@ import com.chispa.ingles.data.db.UserProfileEntity
 import com.chispa.ingles.data.prefs.Accent
 import com.chispa.ingles.data.repo.SessionOutcome
 import com.chispa.ingles.domain.AnswerChecker
+import com.chispa.ingles.domain.SrsPairing
 import com.chispa.ingles.speech.SpeechRecognizerManager
 import com.chispa.ingles.speech.SpeechState
 import android.speech.RecognizerIntent
@@ -603,16 +604,20 @@ class LessonViewModel(
         val firstAttempt = exercise.srsKey !in requeued
         if (correct && firstAttempt) answeredCorrectly += exercise.srsKey
 
+        // Solo entra en el repaso lo que de verdad es una pareja de traducción.
+        // Un ejercicio de gramática se corrige y suma, pero no se convierte en
+        // tarjeta de vocabulario.
         if (recordSrs) {
-            val (en, es) = vocabPairFor(exercise)
-            viewModelScope.launch {
-                locator.progressRepository.recordAnswer(
-                    cardKey = exercise.srsKey,
-                    correct = correct,
-                    en = en,
-                    es = es,
-                    lesson = lesson
-                )
+            vocabPairFor(exercise)?.let { (en, es) ->
+                viewModelScope.launch {
+                    locator.progressRepository.recordAnswer(
+                        cardKey = exercise.srsKey,
+                        correct = correct,
+                        en = en,
+                        es = es,
+                        lesson = lesson
+                    )
+                }
             }
         }
 
@@ -639,25 +644,20 @@ class LessonViewModel(
         )
     }
 
-    /** Deduce el par inglés/español del ejercicio para poder crear su tarjeta SRS. */
-    private fun vocabPairFor(exercise: Exercise): Pair<String, String> {
-        vocabLookup[exercise.srsKey]?.let { return it.en to it.es }
-        return when (exercise) {
-            is Exercise.MultipleChoice ->
-                if (exercise.speakPrompt) exercise.prompt to exercise.answer
-                else exercise.answer to exercise.prompt
-            is Exercise.Translate ->
-                if (exercise.toEnglish) exercise.answer to exercise.prompt
-                else exercise.prompt to exercise.answer
-            is Exercise.ListenAndType -> exercise.answer to (exercise.translation ?: "")
-            is Exercise.WordOrder -> exercise.answer to exercise.prompt
-            is Exercise.SpeakAndRepeat -> exercise.phrase to (exercise.translation ?: "")
-            is Exercise.FillInBlank ->
-                exercise.sentence.replace(Exercise.FillInBlank.BLANK, exercise.answer) to
-                    (exercise.translation ?: "")
-            else -> exercise.srsKey to ""
-        }
-    }
+    /**
+     * Deduce el par inglés/español del ejercicio para poder crear su tarjeta SRS.
+     *
+     * Devuelve null cuando el ejercicio **no es** una pareja de traducción. Antes
+     * esta función siempre devolvía algo, y para un ejercicio de gramática como
+     * "¿Cuál está bien escrito?" → "two yellow bananas" guardaba en el repaso una
+     * tarjeta con el inglés y el español cambiados de sitio. Después el repaso la
+     * mostraba como "¿Qué significa? two yellow bananas" con la instrucción de
+     * otro ejercicio de respuesta correcta.
+     *
+     * La regla es no adivinar: si no consta de dónde sale cada lado, no hay tarjeta.
+     */
+    private fun vocabPairFor(exercise: Exercise): Pair<String, String>? =
+        SrsPairing.pairFor(exercise, vocabLookup)
 
     /* ------------------------------------------------------------------ */
     /*  Avance                                                             */

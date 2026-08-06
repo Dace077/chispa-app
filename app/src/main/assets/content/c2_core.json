@@ -41,7 +41,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "Un británico dice: 'That's an interesting idea.' Normalmente significa…",
               "options": [
                 "No le convence en absoluto",
@@ -65,7 +65,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "Tras un desastre alguien dice: 'Well, that went well.'",
               "options": [
                 "Es ironía: fue un desastre",
@@ -452,7 +452,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "En un contrato, 'The tenant shall pay' significa…",
               "options": [
                 "El inquilino está obligado a pagar",

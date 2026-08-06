@@ -61,6 +61,26 @@ interface SrsCardDao {
     @Query("SELECT * FROM srs_card WHERE cardKey IN (:keys)")
     suspend fun getAll(keys: List<String>): List<SrsCardEntity>
 
+    /**
+     * Borra tarjetas por clave. Se usa para sacar del repaso las que se crearon
+     * a partir de ejercicios que no eran parejas de traducción; se hace por
+     * clave exacta y no por heurística de idioma porque hay inglés legítimo con
+     * acentos ("café", "García") que una heurística marcaría por error.
+     */
+    @Query("DELETE FROM srs_card WHERE cardKey IN (:keys)")
+    suspend fun deleteByKeys(keys: List<String>): Int
+
+    /**
+     * Reescribe los dos lados de una tarjeta sin tocar su programación.
+     *
+     * Hace falta porque una clave legítima podía tener guardado un texto
+     * equivocado: "cities" es vocabulario de verdad, pero su lado español había
+     * quedado como "¿Cuál es el plural de city?". Borrarla perdería el progreso;
+     * lo correcto es devolverle el texto que declaró el autor.
+     */
+    @Query("UPDATE srs_card SET en = :en, es = :es WHERE cardKey = :key")
+    suspend fun retext(key: String, en: String, es: String)
+
     /** Vencidas primero: lo más atrasado y más débil encabeza la cola. */
     @Query(
         """

@@ -196,6 +196,12 @@ sealed interface Exercise {
         val subPrompt: String?,
         val options: List<String>,
         val answer: String,
+        /**
+         * Si el enunciado va en inglés y hay que leerlo en voz alta.
+         *
+         * Sale de `direction`, que **no** sirve para nada más: no indica que el
+         * ejercicio sea una traducción. Ver `SrsPairing`.
+         */
         val speakPrompt: Boolean
     ) : Exercise {
         override val speakable: String? get() = if (speakPrompt) prompt else null

@@ -53,7 +53,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "En Reino Unido, ¿qué dice alguien a quien TÚ acabas de pisar?",
               "options": ["Sorry", "Watch out", "Excuse you", "No dice nada"],
               "answer": "Sorry"
@@ -116,7 +116,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "Tu jefe dice: \"I wonder if we might consider a different approach\". ¿Qué significa?",
               "options": [
                 "Cambia el enfoque",
@@ -188,7 +188,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Qué se celebra el 4 de julio en Estados Unidos?",
               "options": [
                 "La independencia",

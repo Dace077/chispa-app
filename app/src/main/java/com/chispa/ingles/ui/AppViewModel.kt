@@ -1,5 +1,6 @@
 package com.chispa.ingles.ui
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.chispa.ingles.core.ServiceLocator
@@ -25,7 +26,16 @@ class AppViewModel(private val locator: ServiceLocator) : ViewModel() {
         refresh()
         // Precalentamos el currículo en segundo plano: al llegar a la home ya
         // está parseado y la pantalla no parpadea.
-        viewModelScope.launch { locator.contentRepository.curriculum() }
+        viewModelScope.launch {
+            val curriculo = locator.contentRepository.curriculum()
+            // Y de paso se saca del repaso lo que nunca debió entrar. Es
+            // idempotente y solo borra por clave exacta, así que no toca el
+            // vocabulario de verdad ni el progreso de nadie.
+            val borradas = locator.progressRepository.purgeNonVocabCards(curriculo)
+            if (borradas > 0) {
+                Log.i("Chispa", "Repaso limpiado: $borradas tarjetas que no eran vocabulario")
+            }
+        }
     }
 
     fun refresh() {

@@ -62,6 +62,61 @@ object AnswerChecker {
     )
 
     /**
+     * Variantes británica y americana de la misma palabra.
+     *
+     * Se unifican al escribir para que ninguna de las dos se marque mal. Sin
+     * esto "centre" contaba como fallo frente a "center" (dos letras de
+     * diferencia, presupuesto de una) y "colour" pasaba pero avisando de una
+     * errata que no existe. Las dos son inglés correcto y la propia app lo
+     * enseña en A1, así que corregirlas era contradecirse.
+     *
+     * Es una lista cerrada y no una regla general a propósito: una regla
+     * "-our → -or" convertiría "four" en "for" y "hour" en "hor".
+     */
+    private val SPELLING_VARIANTS: Map<String, String> = buildMap {
+        // -our / -or
+        listOf(
+            "colour" to "color", "colours" to "colors", "coloured" to "colored",
+            "favour" to "favor", "favours" to "favors", "favourite" to "favorite",
+            "behaviour" to "behavior", "neighbour" to "neighbor",
+            "neighbours" to "neighbors", "neighbourhood" to "neighborhood",
+            "honour" to "honor", "humour" to "humor", "labour" to "labor",
+            "flavour" to "flavor", "flavours" to "flavors", "rumour" to "rumor",
+            "harbour" to "harbor", "odour" to "odor", "savour" to "savor",
+            // -re / -er
+            "centre" to "center", "centres" to "centers", "theatre" to "theater",
+            "metre" to "meter", "metres" to "meters", "litre" to "liter",
+            "litres" to "liters", "fibre" to "fiber", "calibre" to "caliber",
+            // -ise / -ize
+            "realise" to "realize", "realised" to "realized", "realises" to "realizes",
+            "organise" to "organize", "organised" to "organized",
+            "apologise" to "apologize", "apologised" to "apologized",
+            "recognise" to "recognize", "recognised" to "recognized",
+            "analyse" to "analyze", "analysed" to "analyzed",
+            "criticise" to "criticize", "memorise" to "memorize",
+            "specialise" to "specialize", "summarise" to "summarize",
+            "apologising" to "apologizing", "organisation" to "organization",
+            // dobles consonantes
+            "travelling" to "traveling", "travelled" to "traveled",
+            "traveller" to "traveler", "cancelled" to "canceled",
+            "cancelling" to "canceling", "modelling" to "modeling",
+            "labelled" to "labeled",
+            // -ce / -se y sueltas
+            "defence" to "defense", "offence" to "offense", "licence" to "license",
+            "practise" to "practice", "practising" to "practicing",
+            "programme" to "program", "programmes" to "programs",
+            "grey" to "gray", "tyre" to "tire", "cheque" to "check",
+            "plough" to "plow", "aluminium" to "aluminum", "maths" to "math",
+            "storey" to "story", "kerb" to "curb", "pyjamas" to "pajamas",
+            "moustache" to "mustache", "jewellery" to "jewelry",
+            // pasados irregulares que conviven
+            "learnt" to "learned", "spelt" to "spelled", "dreamt" to "dreamed",
+            "burnt" to "burned", "spoilt" to "spoiled", "leapt" to "leaped",
+            "smelt" to "smelled"
+        ).forEach { (br, am) -> put(br, am) }
+    }
+
+    /**
      * Quita tildes, signos, mayúsculas y espacios de más, y unifica contracciones.
      * "¿Cómo estás?" y "como estas" acaban siendo la misma cadena.
      */
@@ -78,7 +133,13 @@ object AnswerChecker {
             text = text.replace(Regex("\\b${Regex.escape(long)}\\b"), short)
         }
         // Tras normalizar, los apóstrofos ya no aportan nada.
-        return text.replace("'", "").replace(Regex("\\s+"), " ").trim()
+        text = text.replace("'", "").replace(Regex("\\s+"), " ").trim()
+
+        // Y por último, británico y americano se unifican palabra a palabra.
+        if (text.isEmpty()) return text
+        return text.split(' ').joinToString(" ") { palabra ->
+            SPELLING_VARIANTS[palabra] ?: palabra
+        }
     }
 
     /**

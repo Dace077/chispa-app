@@ -202,7 +202,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cuál NO deberías usar en un correo de trabajo?",
               "options": ["OMG", "ASAP", "FYI", "Kind regards"],
               "answer": "OMG"

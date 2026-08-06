@@ -2,6 +2,8 @@ package com.chispa.ingles.data.repo
 
 import com.chispa.ingles.core.Time
 import com.chispa.ingles.data.content.CefrLevel
+import com.chispa.ingles.data.content.Curriculum
+import com.chispa.ingles.data.content.Exercise
 import com.chispa.ingles.data.content.Lesson
 import com.chispa.ingles.data.db.AchievementEntity
 import com.chispa.ingles.data.db.ChispaDatabase
@@ -271,6 +273,51 @@ class ProgressRepository(
             dueAt = now
         )
         srsDao.upsert(Srs.review(existing, correct, now))
+    }
+
+    /**
+     * Saca del repaso las tarjetas que nunca debieron entrar.
+     *
+     * Hasta la 1.7.0 cualquier ejercicio de opción múltiple creaba una tarjeta,
+     * incluidos los de gramática. En esos el enunciado es una instrucción
+     * ("¿Cuál está bien escrito?"), no la traducción de la respuesta, así que el
+     * repaso acababa preguntando "¿Qué significa? two yellow bananas" y dando por
+     * buena la instrucción de otro ejercicio.
+     *
+     * Se borran por clave exacta, calculada desde el propio contenido, y se
+     * respeta cualquier clave que además sea vocabulario declarado, que es de
+     * donde salen las tarjetas buenas.
+     *
+     * Es idempotente: correrla dos veces no hace nada la segunda.
+     */
+    suspend fun purgeNonVocabCards(curriculum: Curriculum): Int {
+        val legitimas = curriculum.vocabIndex.keys
+        val sospechosas = curriculum.allLessons
+            .flatMap { it.exercises }
+            .filterIsInstance<Exercise.MultipleChoice>()
+            .map { it.srsKey }
+            .distinct()
+            .filterNot { it in legitimas }
+
+        // SQLite limita los parámetros de una consulta; se va por tandas.
+        val borradas = sospechosas.chunked(400).sumOf { srsDao.deleteByKeys(it) }
+
+        // Y las que sí son vocabulario pero guardaron el texto equivocado se
+        // reparan en vez de borrarse, para no tirar el progreso del usuario.
+        var reparadas = 0
+        curriculum.vocabIndex.keys.chunked(400).forEach { tanda ->
+            srsDao.getAll(tanda).forEach { tarjeta ->
+                val bueno = curriculum.vocabIndex[tarjeta.cardKey] ?: return@forEach
+                if (tarjeta.en != bueno.en || tarjeta.es != bueno.es) {
+                    srsDao.retext(tarjeta.cardKey, bueno.en, bueno.es)
+                    reparadas++
+                }
+            }
+        }
+        if (reparadas > 0) {
+            android.util.Log.i("Chispa", "Repaso reparado: $reparadas tarjetas con el texto cambiado")
+        }
+        return borradas
     }
 
     suspend fun dueCards(limit: Int): List<SrsCardEntity> =

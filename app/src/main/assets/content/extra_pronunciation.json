@@ -45,14 +45,14 @@
             { "type": "speak_and_repeat", "prompt": "The weather is better than yesterday", "translation": "El clima está mejor que ayer" },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cuál de estas lleva la 'th' SONORA (con vibración)?",
               "options": ["mother", "think", "three", "mouth"],
               "answer": "mother"
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cuál de estas lleva la 'th' SORDA (sin vibración)?",
               "options": ["birthday", "this", "brother", "weather"],
               "answer": "birthday"
@@ -119,7 +119,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cuál lleva vocal LARGA /iː/?",
               "options": ["sheep", "ship", "bit", "sit"],
               "answer": "sheep"
@@ -167,14 +167,14 @@
             { "type": "speak_and_repeat", "prompt": "I bought a new computer about a week ago", "translation": "Compré un ordenador nuevo hace como una semana" },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cuántas sílabas se pronuncian en 'chocolate'?",
               "options": ["tres", "cuatro", "dos", "cinco"],
               "answer": "tres"
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Dónde cae el acento en 'photography'?",
               "options": ["en la segunda sílaba (pho-TO-graphy)", "en la primera (PHO-tography)", "en la tercera", "en la última"],
               "answer": "en la segunda sílaba (pho-TO-graphy)"
@@ -232,14 +232,14 @@
             { "type": "speak_and_repeat", "prompt": "Hello, I'm happy to help", "translation": "Hola, estoy encantado de ayudar" },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cómo suena la terminación -ed en 'worked'?",
               "options": ["como una /t/", "como una /d/", "como /id/", "no se pronuncia"],
               "answer": "como una /t/"
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "¿Cómo suena la terminación -ed en 'wanted'?",
               "options": ["como /id/, sílaba aparte", "como una /t/", "como una /d/", "no se pronuncia"],
               "answer": "como /id/, sílaba aparte"

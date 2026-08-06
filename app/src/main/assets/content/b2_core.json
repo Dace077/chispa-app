@@ -852,7 +852,7 @@
             },
             {
               "type": "multiple_choice",
-              "direction": "en_es",
+              "direction": "es_en",
               "prompt": "'I have one sister, who lives in Rome' significa que…",
               "options": [
                 "Solo tengo una hermana",
