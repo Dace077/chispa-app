@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Chispa</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    line-height: 1.65; color: #1a1145; background: #fbfaff;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .fecha { color: #6b6790; font-size: .9rem; margin-top: 0; }
+  .clave {
+    background: #efedff; border-left: 4px solid #3a2bb5;
+    padding: 1rem 1.15rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #ddd9f0; }
+  th { color: #3a2bb5; }
+  code { background: #efedff; padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+  a { color: #3a2bb5; }
+  footer { margin-top: 3rem; font-size: .9rem; color: #6b6790; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #14102b; color: #e8e6f5; }
+    h1, h2 { color: #fff; }
+    .clave { background: #221a4d; border-left-color: #ffb020; }
+    th { color: #ffc94d; } td, th { border-bottom-color: #2e2660; }
+    code { background: #221a4d; } a { color: #ffc94d; } .fecha, footer { color: #a29ec9; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad de Chispa</h1>
+<p class="fecha">Última actualización: 6 de agosto de 2026</p>
+
+<div class="clave">
+  <strong>Chispa no recoge, almacena ni transmite ningún dato personal.</strong>
+  No es una promesa: la aplicación no declara el permiso de Internet
+  (<code>android.permission.INTERNET</code>), así que el sistema operativo Android
+  le impide conectarse a la red aunque quisiera. Cualquiera puede comprobarlo
+  inspeccionando el archivo de la aplicación.
+</div>
+
+<h2>Qué datos se recogen</h2>
+<p>Ninguno. No hay cuentas de usuario, ni registro, ni inicio de sesión. No se
+pide el correo, el teléfono, el nombre ni la edad. No se usan servicios de
+analítica, publicidad, seguimiento ni informes de fallos. No hay compras dentro
+de la aplicación.</p>
+
+<h2>Qué se guarda en tu teléfono</h2>
+<p>Para que la aplicación funcione, tu progreso se guarda <em>únicamente</em> en
+el almacenamiento privado de la aplicación, dentro de tu dispositivo:</p>
+
+<table>
+  <tr><th>Qué</th><th>Para qué</th></tr>
+  <tr><td>Lecciones completadas y puntos</td><td>Saber por dónde vas</td></tr>
+  <tr><td>Vocabulario y fechas de repaso</td><td>Repetición espaciada</td></tr>
+  <tr><td>Racha diaria y logros</td><td>Motivación</td></tr>
+  <tr><td>Preferencias (acento, velocidad de voz, meta diaria)</td><td>Ajustes</td></tr>
+</table>
+
+<p>Esta información no sale del dispositivo. Se borra por completo al
+desinstalar la aplicación.</p>
+
+<h2>Permisos que pide la aplicación, y por qué</h2>
+
+<table>
+  <tr><th>Permiso</th><th>Para qué se usa</th></tr>
+  <tr>
+    <td><strong>Micrófono</strong><br><code>RECORD_AUDIO</code></td>
+    <td>Solo para los ejercicios de pronunciación, y solo mientras mantienes
+    pulsado el botón del micrófono. El reconocimiento lo realiza el propio
+    sistema Android. <strong>El audio no se graba en ningún archivo ni se envía
+    a ningún servidor</strong>: la aplicación no puede enviarlo a ninguna parte.
+    Puedes usar toda la aplicación sin conceder este permiso; solo perderás los
+    ejercicios de hablar.</td>
+  </tr>
+  <tr>
+    <td><strong>Notificaciones</strong><br><code>POST_NOTIFICATIONS</code></td>
+    <td>Recordatorios de estudio que genera tu propio teléfono. Puedes
+    desactivarlos en los ajustes de la aplicación o del sistema.</td>
+  </tr>
+  <tr>
+    <td><strong>Iniciar al encender</strong><br><code>RECEIVE_BOOT_COMPLETED</code></td>
+    <td>Reprogramar esos recordatorios después de reiniciar el teléfono.</td>
+  </tr>
+  <tr>
+    <td><strong>Vibración</strong><br><code>VIBRATE</code></td>
+    <td>Respuesta táctil al acertar o fallar un ejercicio.</td>
+  </tr>
+</table>
+
+<h2>Reconocimiento y síntesis de voz</h2>
+<p>Chispa utiliza los servicios de voz que ya vienen instalados en tu teléfono
+Android (<em>TextToSpeech</em> y <em>SpeechRecognizer</em>) para leer en voz
+alta y para evaluar tu pronunciación. Esos servicios los proporciona el
+fabricante de tu dispositivo o Google, y se rigen por sus propias políticas de
+privacidad. Chispa está configurada para pedir el reconocimiento sin conexión
+siempre que tu teléfono lo permita.</p>
+
+<h2>Menores de edad</h2>
+<p>Chispa es apta para todos los públicos. No recoge datos de nadie, incluidos
+los menores, y no contiene publicidad ni enlaces a contenido externo.</p>
+
+<h2>Copias de seguridad</h2>
+<p>Si tienes activada la copia de seguridad automática de Android, tu progreso
+puede incluirse en la copia de seguridad de tu cuenta de Google, gestionada por
+Google y no por nosotros. Puedes desactivarla en los ajustes de tu teléfono.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si alguna versión futura cambiara algo de lo anterior, esta página se
+actualizará antes de publicarla y se indicará en las notas de la versión.</p>
+
+<h2>Contacto</h2>
+<p>Para cualquier duda sobre privacidad:
+<a href="mailto:jorgeyu07@gmail.com">jorgeyu07@gmail.com</a></p>
+
+<footer>
+  Chispa es software libre. Puedes revisar todo el código fuente en
+  <a href="https://github.com/Dace077/chispa-app">github.com/Dace077/chispa-app</a>.
+</footer>
+
+</body>
+</html>

@@ -241,7 +241,8 @@ private fun DailyGoalCard(state: HomeUiState, onOpenReview: () -> Unit) {
                     Icon(Icons.Filled.Refresh, null, tint = colors.xp, modifier = Modifier.size(20.dp))
                     Spacer(Modifier.width(10.dp))
                     Text(
-                        "${state.dueReviewCount} palabras esperando repaso",
+                        if (state.dueReviewCount == 1) "1 palabra esperando repaso"
+                        else "${state.dueReviewCount} palabras esperando repaso",
                         style = MaterialTheme.typography.bodyMedium,
                         color = colors.xp
                     )

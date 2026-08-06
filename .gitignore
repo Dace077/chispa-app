@@ -25,3 +25,6 @@ app/release/
 *.jks
 keystore.properties
 
+
+# El bundle de Play se regenera con ./gradlew :app:bundleRelease
+*.aab
