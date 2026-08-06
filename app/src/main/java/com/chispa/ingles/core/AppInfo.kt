@@ -16,8 +16,14 @@ import android.os.Build
  */
 object AppInfo {
 
-    /** Página de releases. Cambia esto si mueves el proyecto de sitio. */
-    const val RELEASES_URL = "https://github.com/Dace077/chispa-app/releases/latest"
+    /**
+     * Ficha en Google Play, que es el único canal de distribución.
+     *
+     * Antes se repartía un APK por enlace directo. Ya no: se retiró para que
+     * exista una sola vía de actualización y ningún usuario se quede en una
+     * versión vieja sin enterarse.
+     */
+    const val PLAY_URL = "https://play.google.com/store/apps/details?id=com.chispa.ingles"
 
     fun versionName(context: Context): String =
         runCatching {
@@ -75,34 +81,25 @@ object AppInfo {
     }.getOrDefault(false)
 
     /**
-     * Lleva al usuario a donde le toque actualizarse según de dónde vino:
-     * a su ficha de Play si la instaló de ahí, o a la página de descargas si
-     * se la pasaron por enlace.
+     * Abre la ficha de la app en Google Play.
      *
-     * En ningún caso descarga ni instala nada la propia app: solo lanza un
-     * Intent. Chispa no declara el permiso de INTERNET y no podría hacerlo.
+     * La app no descarga ni instala nada por su cuenta: solo lanza un Intent y
+     * es Play quien se encarga. Chispa no declara el permiso de INTERNET y no
+     * podría hacerlo aunque quisiera.
      *
      * @return false si el dispositivo no tiene nada que atienda el enlace.
      */
     fun openUpdatePage(context: Context): Boolean {
-        if (installedFromPlay(context)) {
-            // market:// abre la app de Play directamente, sin pasar por el navegador.
-            val enPlay = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("market://details?id=${context.packageName}")
-            ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            if (runCatching { context.startActivity(enPlay); true }.getOrDefault(false)) return true
+        // market:// abre la app de Play directamente, sin pasar por el navegador.
+        val enPlay = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("market://details?id=${context.packageName}")
+        ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        if (runCatching { context.startActivity(enPlay); true }.getOrDefault(false)) return true
 
-            // Si la app de Play no está (algunos dispositivos), su web sirve igual.
-            val enWeb = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://play.google.com/store/apps/details?id=${context.packageName}")
-            ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            return runCatching { context.startActivity(enWeb); true }.getOrDefault(false)
-        }
-
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(RELEASES_URL))
+        // Si la app de Play no está instalada, su web sirve igual.
+        val enWeb = Intent(Intent.ACTION_VIEW, Uri.parse(PLAY_URL))
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        return runCatching { context.startActivity(intent); true }.getOrDefault(false)
+        return runCatching { context.startActivity(enWeb); true }.getOrDefault(false)
     }
 }

@@ -28,3 +28,6 @@ keystore.properties
 
 # El bundle de Play se regenera con ./gradlew :app:bundleRelease
 *.aab
+
+# La distribucion es solo por Google Play: no se versiona ningun APK
+*.apk

@@ -5,28 +5,23 @@ son las dos cosas que pueden salir mal de forma difícil de deshacer.
 
 ---
 
-## 🔴 ADVERTENCIA 1 — La firma. Léela antes de crear la app.
+## 🔴 ADVERTENCIA 1 — La clave de firma
 
-Ya has repartido un APK por GitHub firmado con `chispa-release.jks`. Android
-**solo** deja actualizar una app si la nueva versión está firmada con la misma
-clave que la instalada.
+El APK que se repartía por GitHub **ya se ha retirado** (tenía 0 descargas), así
+que no hay nadie a quien dejar aislado. Puedes elegir cualquiera de las dos
+opciones de firma sin romper nada.
 
-Al crear la app en Play Console te pedirá una clave de firma. Tienes dos caminos:
+Aun así, **guarda `chispa-release.jks` y su contraseña en un sitio seguro que no
+sea solo este ordenador**. En cuanto publiques:
 
-| | Qué pasa con quien ya tiene la app de GitHub |
-|---|---|
-| **Subir tu `chispa-release.jks`** como clave de firma | ✅ Puede actualizar desde Play sin hacer nada. Conserva su progreso. |
-| **Dejar que Google genere una clave nueva** (opción por defecto) | ❌ **No puede actualizar.** Tendría que desinstalar y volver a instalar, y **pierde toda su racha, su vocabulario y su progreso.** |
+- Si usas tu propia clave y la pierdes, **no podrás volver a actualizar la app
+  nunca**. Ni Google puede arreglarlo.
+- Si dejas que Google genere la clave de firma (Play App Signing), Google la
+  custodia y tú solo necesitas conservar la **clave de subida**, que sí se puede
+  restablecer. **Para empezar de cero, esta opción es la más segura.**
 
-**Elige subir tu propia clave.** En Play Console:
-`Configuración de la app → Firma de la aplicación → Exportar y subir una clave
-desde un almacén de claves de Java`.
-
-Esta decisión **no se puede cambiar después**. Igual que el nombre del paquete,
-`com.chispa.ingles`, que es permanente para siempre.
-
-> Si has perdido `chispa-release.jks` o su contraseña, dímelo antes de tocar
-> nada: cambia todo el plan.
+El nombre del paquete, `com.chispa.ingles`, **es permanente para siempre** y no
+se puede cambiar después.
 
 ## 🔴 ADVERTENCIA 2 — Los 12 probadores durante 14 días
 
@@ -65,8 +60,12 @@ El `.aab` se regenera con:
 
 Sale en `app/build/outputs/bundle/release/app-release.aab`.
 
-⚠️ **Play no acepta APK para apps nuevas.** El `chispa-1.0.0.apk` sigue siendo
-para la descarga directa por GitHub; a Play va el `.aab`.
+⚠️ **Play no acepta APK para apps nuevas**: se sube el `.aab`.
+
+Google Play es ahora el **único** canal de distribución. El release de GitHub y
+su APK se retiraron, y la app ya no enlaza a ninguna descarga externa: el botón
+de Ajustes abre la ficha de Play. Eso también evita el problema de política que
+tenía antes, porque Play prohíbe que una app suya se actualice por otra vía.
 
 ---
 
@@ -157,8 +156,11 @@ publicidad en el proyecto.
 
 ## Después de publicar
 
-El `versionCode` sube en cada entrega. Están sincronizados a propósito con el
-APK de GitHub para no liarse: la misma versión, el mismo número, los dos sitios.
+Cada versión nueva es **una sola subida**: el `.aab` a Play. Nada más.
 
-Si publicas una versión nueva, sube **las dos**: el `.aab` a Play y el `.apk`
-al release de GitHub. Si no, quien tenga la de GitHub se queda atrás.
+El `versionCode` tiene que subir siempre; Play rechaza cualquier entrega con un
+número igual o menor al anterior. Va por **15**.
+
+Tus usuarios se actualizan **solos**, en segundo plano, sin hacer nada. El
+despliegue es escalonado: puede tardar hasta un día en llegar a todo el mundo,
+así que no te alarmes si publicas y no lo ves al momento en tu propio teléfono.

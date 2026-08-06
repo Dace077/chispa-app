@@ -9,13 +9,16 @@ App Android nativa para aprender inglés de cero (A1) hasta maestría (C2).
 
 ---
 
-## 📦 Descargar e instalar (para usuarios)
+## 📦 Descargar (para usuarios)
 
-1. Descarga el archivo **`chispa-1.0.0.apk`** en tu móvil Android.
-2. Al abrirlo, Android te dirá que no puede instalar apps de origen desconocido.
-   Pulsa **Configuración** y activa **Permitir de esta fuente**.
-3. Vuelve atrás y pulsa **Instalar**.
-4. Listo. Puedes desactivar de nuevo esa opción si quieres.
+Chispa se distribuye **únicamente a través de Google Play**:
+
+**[Consíguela en Google Play](https://play.google.com/store/apps/details?id=com.chispa.ingles)**
+
+Así todo el mundo recibe las correcciones automáticamente, sin tener que
+enterarse de que hay una versión nueva. Si encuentras un APK de Chispa en
+cualquier otro sitio, **no lo hemos publicado nosotros**: no sabemos qué
+contiene ni quién lo ha firmado.
 
 **Requisitos:** Android 7.0 (API 24) o superior. Ocupa menos de 2 MB.
 

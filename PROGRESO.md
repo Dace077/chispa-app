@@ -21,7 +21,7 @@ APK firmado sin errores.
 | 7. TTS y reconocimiento de voz | ✅ | Nativos, con acentos US/UK/AU y velocidad ajustable |
 | 8. Notificaciones | ✅ | 4 workers, 72 mensajes en `motivation.xml` |
 | 9. Pulido UI/UX | ✅ | Animaciones, modo oscuro, mascota en Canvas |
-| 10. Build y distribución | ✅ | APK firmado + `COMO_COMPARTIRLA.md` |
+| 10. Build y distribución | ✅ | Bundle firmado para Google Play (`play/PLAYSTORE.md`) |
 
 ### Verificaciones hechas
 - `./gradlew assembleDebug` → BUILD SUCCESSFUL

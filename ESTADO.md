@@ -13,15 +13,18 @@ Gratis, sin anuncios, sin compras y **sin permiso de INTERNET** (la app es
 técnicamente incapaz de conectarse; esa es la garantía de privacidad).
 
 - **Repositorio**: https://github.com/Dace077/chispa-app (público)
-- **Descarga**: https://github.com/Dace077/chispa-app/releases/download/v1.0.0/chispa-1.0.0.apk
-- **Versión publicada**: 1.7.0 (versionCode 11)
-- **Tamaño**: 1,97 MB
+- **Distribución**: **solo Google Play**. El release de GitHub y su APK se
+  retiraron el 6 de agosto de 2026 (tenían 0 descargas, nadie se quedó tirado).
+- **Versión**: 1.7.4 (versionCode 15) — **todavía sin publicar en Play**
+- **Tamaño**: 1,97 MB de APK · 4,39 MB de bundle
 - **Cuenta GitHub del usuario**: `Dace077` (sesión de `gh` ya iniciada en la máquina)
 
-⚠️ **El archivo del release se sigue llamando `chispa-1.0.0.apk` y la etiqueta
-sigue siendo `v1.0.0` a propósito**: así el enlace y el QR que el usuario ya
-repartió siguen funcionando. Por dentro es la versión que toque. No renombrar
-sin avisarle.
+⚠️ **El repositorio ya NO distribuye la app.** No volver a crear un release con
+un APK: se retiró a propósito para que exista una sola vía de actualización.
+Lo único que Play necesita de GitHub es la **política de privacidad** en
+`docs/privacidad.html`, publicada vía GitHub Pages. Si se borra el repositorio
+o se hace privado, esa URL muere y **la ficha de Play se queda sin política de
+privacidad**, que es motivo de retirada.
 
 ---
 
@@ -42,15 +45,16 @@ $env:JAVA_HOME='C:\Users\skate\.androidtools\jdk\jdk-17.0.20+8'
 $env:ANDROID_HOME='C:\Users\skate\.androidtools\sdk'
 ```
 
-Publicar una versión nueva:
+Publicar una versión nueva (**solo a Google Play**):
 
-1. Subir `versionCode` y `versionName` en `app/build.gradle.kts`
-2. `./gradlew testDebugUnitTest :app:assembleRelease`
-3. `Copy-Item app\build\outputs\apk\release\app-release.apk chispa-1.0.0.apk -Force`
-4. `gh release upload v1.0.0 chispa-1.0.0.apk --repo Dace077/chispa-app --clobber`
-5. Verificar descargando el enlace público y comprobando el `versionName`
+1. Subir `versionCode` y `versionName` en `app/build.gradle.kts`.
+   El `versionCode` tiene que ser **mayor** que el de la última subida o Play
+   la rechaza.
+2. `./gradlew testDebugUnitTest :app:bundleRelease`
+3. Subir `app/build/outputs/bundle/release/app-release.aab` a Play Console
 
-También existe `PUBLICAR.ps1`, que hace todo esto de golpe.
+Play no acepta APK para apps nuevas: se sube el `.aab`. El paso a paso completo,
+con los formularios ya respondidos, está en [play/PLAYSTORE.md](play/PLAYSTORE.md).
 
 ---
 
