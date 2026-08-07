@@ -9,6 +9,16 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <!--
+      WorkManager mete ACCESS_NETWORK_STATE en su propio manifiesto porque
+      soporta tareas con condición de red. Aquí solo se programan recordatorios
+      locales, así que sobra, y dejarlo contradice lo que decimos en la ficha y
+      en la política de privacidad: que la app no toca la red. Se quita.
+    -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+
     <!-- NO se declara INTERNET: la app es 100% offline por diseño. -->
 
     <uses-feature

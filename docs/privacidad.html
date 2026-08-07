@@ -93,7 +93,18 @@ desinstalar la aplicación.</p>
     <td><strong>Vibración</strong><br><code>VIBRATE</code></td>
     <td>Respuesta táctil al acertar o fallar un ejercicio.</td>
   </tr>
+  <tr>
+    <td><strong>Técnicos</strong><br><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td>
+    <td>Los añade la biblioteca de Android que programa los recordatorios
+    (<em>WorkManager</em>), para poder ejecutarlos a su hora. No dan acceso a
+    ningún dato tuyo. Ninguno permite usar la red.</td>
+  </tr>
 </table>
+
+<p><strong>Esta es la lista completa.</strong> Puedes comprobarla tú mismo: el
+archivo de la aplicación declara exactamente estos permisos y ninguno más. En
+particular, no aparece <code>INTERNET</code> ni ningún otro que permita
+conectarse.</p>
 
 <h2>Reconocimiento y síntesis de voz</h2>
 <p>Chispa utiliza los servicios de voz que ya vienen instalados en tu teléfono
