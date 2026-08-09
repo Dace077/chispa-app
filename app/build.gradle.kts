@@ -20,14 +20,14 @@ val hasReleaseKeystore = keystorePropsFile.exists() &&
 
 android {
     namespace = "com.chispa.ingles"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.chispa.ingles"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 16
-        versionName = "1.7.5"
+        targetSdk = 36
+        versionCode = 18
+        versionName = "1.8.0"
         vectorDrawables { useSupportLibrary = true }
     }
 
