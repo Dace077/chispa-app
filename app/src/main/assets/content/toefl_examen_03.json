@@ -1,0 +1,2269 @@
+{
+  "id": "toefl_examen_03",
+  "title": "Simulacro 3",
+  "subtitle": "140 preguntas · 115 minutos",
+  "sections": [
+    {
+      "id": "listening",
+      "parts": [
+        {
+          "id": "l_a",
+          "kind": "short_conversation",
+          "title": "Part A",
+          "instructions": "Escucha la conversación y elige la respuesta que mejor responde a la pregunta. Suena una sola vez.",
+          "questions": [
+            {
+              "id": "l01",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did you get tickets for the concert?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "They sold out before I even opened the page."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She could not get tickets.",
+                "She got the tickets.",
+                "The concert was cancelled.",
+                "She forgot about it."
+              ],
+              "answer": 0,
+              "explanation": "«Sold out» antes de que pudiera intentarlo."
+            },
+            {
+              "id": "l02",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Is the deadline negotiable?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "That is set in stone."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It cannot be changed.",
+                "It can be changed.",
+                "It has not been set.",
+                "It was already extended."
+              ],
+              "answer": 0,
+              "explanation": "«Set in stone» = inamovible."
+            },
+            {
+              "id": "l03",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "How was your first week?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I am still finding my feet."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She injured herself.",
+                "She is leaving.",
+                "She is adjusting.",
+                "She is fully settled."
+              ],
+              "answer": 2,
+              "explanation": "«Find one's feet» = irse adaptando."
+            },
+            {
+              "id": "l04",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Should I mention the error in the meeting?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I would raise it privately first."
+                }
+              ],
+              "stem": "What does the man advise?",
+              "options": [
+                "Ignoring it.",
+                "Speaking about it privately first.",
+                "Mentioning it publicly.",
+                "Writing a report."
+              ],
+              "answer": 1,
+              "explanation": "«Raise it privately» = plantearlo en privado."
+            },
+            {
+              "id": "l05",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "The software update broke everything."
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "You are not the only one."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "He should update again.",
+                "Others have the same problem.",
+                "He is mistaken.",
+                "She fixed it."
+              ],
+              "answer": 1,
+              "explanation": "«You are not the only one» = le pasa a más gente."
+            },
+            {
+              "id": "l06",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Do you want to lead the presentation?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I would rather support than lead this time."
+                }
+              ],
+              "stem": "What will the man do?",
+              "options": [
+                "Skip the presentation.",
+                "Lead the presentation.",
+                "Assist rather than lead.",
+                "Cancel it."
+              ],
+              "answer": 2,
+              "explanation": "«Would rather X than Y» expresa preferencia clara."
+            },
+            {
+              "id": "l07",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Have you decided on a topic?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I have narrowed it down to two."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She has too many options.",
+                "She has two options left.",
+                "She has chosen one.",
+                "She has not started."
+              ],
+              "answer": 1,
+              "explanation": "«Narrow down» = reducir opciones."
+            },
+            {
+              "id": "l08",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Was the trip worth it?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Every penny."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It was completely worth it.",
+                "It was too expensive.",
+                "It was free.",
+                "He did not go."
+              ],
+              "answer": 0,
+              "explanation": "«Every penny» confirma que valió lo que costó."
+            },
+            {
+              "id": "l09",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Can I borrow your notes from Tuesday?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I was not there either."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She also missed the class.",
+                "She will lend them.",
+                "She lost her notes.",
+                "She took no notes."
+              ],
+              "answer": 0,
+              "explanation": "«Either» revela que ella tampoco fue."
+            },
+            {
+              "id": "l10",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "The committee rejected it again."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Third time is the charm, they say."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "He will not try again.",
+                "He agrees with the committee.",
+                "He hopes the next attempt succeeds.",
+                "It was rejected three times."
+              ],
+              "answer": 2,
+              "explanation": "Ironía optimista: a la tercera va la vencida."
+            },
+            {
+              "id": "l11",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Is the fee refundable?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Only up to a week before."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "There is no fee.",
+                "It is refundable if cancelled early enough.",
+                "It is never refundable.",
+                "It is always refundable."
+              ],
+              "answer": 1,
+              "explanation": "Hay plazo: hasta una semana antes."
+            },
+            {
+              "id": "l12",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "You look exhausted."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I have been burning the midnight oil."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He has been working late.",
+                "He has been travelling.",
+                "He has been sleeping well.",
+                "He had an accident."
+              ],
+              "answer": 0,
+              "explanation": "«Burn the midnight oil» = trasnochar trabajando."
+            },
+            {
+              "id": "l13",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Do you agree with her conclusion?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Up to a point."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She disagrees entirely.",
+                "She agrees partly.",
+                "She has not read it.",
+                "She agrees completely."
+              ],
+              "answer": 1,
+              "explanation": "«Up to a point» = hasta cierto punto."
+            },
+            {
+              "id": "l14",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Did the funding come through?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Not yet, and I am not holding my breath."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He does not expect it.",
+                "He expects it soon.",
+                "He is unwell.",
+                "It arrived yesterday."
+              ],
+              "answer": 0,
+              "explanation": "«Not holding my breath» = no espero que pase."
+            },
+            {
+              "id": "l15",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Was the criticism fair?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It stung, but yes."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "It was unfair.",
+                "It was a joke.",
+                "It hurt but was justified.",
+                "She did not hear it."
+              ],
+              "answer": 2,
+              "explanation": "«It stung» = dolió, pero admite que era justa."
+            },
+            {
+              "id": "l16",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Shall I book the small room?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Better make it the large one."
+                }
+              ],
+              "stem": "What does the man suggest?",
+              "options": [
+                "Booking the small room.",
+                "Not booking a room.",
+                "Booking two rooms.",
+                "Booking the large room."
+              ],
+              "answer": 3,
+              "explanation": "«Better make it» propone cambiar a la grande."
+            },
+            {
+              "id": "l17",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "How is the group project going?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Let us just say I am doing most of it."
+                }
+              ],
+              "stem": "What does the woman imply?",
+              "options": [
+                "Everyone contributes equally.",
+                "The project is finished.",
+                "She dropped out.",
+                "She is carrying the work."
+              ],
+              "answer": 3,
+              "explanation": "Queja indirecta: hace la mayor parte."
+            },
+            {
+              "id": "l18",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Do we have enough copies?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Just about."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He did not count them.",
+                "There are far too few.",
+                "There are plenty.",
+                "There are barely enough."
+              ],
+              "answer": 3,
+              "explanation": "«Just about» = justo, por los pelos."
+            },
+            {
+              "id": "l19",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Are you going to challenge the grade?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It is not worth the trouble."
+                }
+              ],
+              "stem": "What will the woman do?",
+              "options": [
+                "Ask for a retake.",
+                "Let it go.",
+                "Challenge the grade.",
+                "Complain to the dean."
+              ],
+              "answer": 1,
+              "explanation": "«Not worth the trouble» = no merece el esfuerzo."
+            },
+            {
+              "id": "l20",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Is the machine reliable?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "It has never let me down."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It has always worked.",
+                "He has not used it.",
+                "It is new.",
+                "It fails often."
+              ],
+              "answer": 0,
+              "explanation": "«Let someone down» = fallar a alguien."
+            },
+            {
+              "id": "l21",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did you understand the last section?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It went right over my head."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She understood it.",
+                "She did not understand it.",
+                "She wrote it.",
+                "She skipped it."
+              ],
+              "answer": 1,
+              "explanation": "«Go over one's head» = no entender nada."
+            },
+            {
+              "id": "l22",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Are you sure about the figures?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I double-checked them twice."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He verified them carefully.",
+                "He has not checked them.",
+                "Someone else checked them.",
+                "He is uncertain."
+              ],
+              "answer": 0,
+              "explanation": "Los comprobó repetidamente."
+            },
+            {
+              "id": "l23",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "The train is delayed forty minutes."
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Of course it is."
+                }
+              ],
+              "stem": "What does the woman's tone suggest?",
+              "options": [
+                "Surprise",
+                "Delight",
+                "Confusion",
+                "Resigned frustration"
+              ],
+              "answer": 3,
+              "explanation": "«Of course it is» dicho así expresa hartazgo, no acuerdo."
+            },
+            {
+              "id": "l24",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Should we include the pilot data?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I would leave it out."
+                }
+              ],
+              "stem": "What does the man advise?",
+              "options": [
+                "Repeating the pilot.",
+                "Publishing it separately.",
+                "Excluding it.",
+                "Including it."
+              ],
+              "answer": 2,
+              "explanation": "«Leave it out» = dejarlo fuera."
+            },
+            {
+              "id": "l25",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Is she coming back to the department?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "That ship has sailed."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She is returning soon.",
+                "Nobody knows.",
+                "The opportunity has passed.",
+                "She is travelling."
+              ],
+              "answer": 2,
+              "explanation": "«That ship has sailed» = ya pasó el momento."
+            },
+            {
+              "id": "l26",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Do you want me to explain it again?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Please, if you do not mind."
+                }
+              ],
+              "stem": "What does the man want?",
+              "options": [
+                "To take a break.",
+                "To explain it himself.",
+                "Another explanation.",
+                "To move on."
+              ],
+              "answer": 2,
+              "explanation": "Acepta cortésmente."
+            },
+            {
+              "id": "l27",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "The results are inconclusive."
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Which is a result in itself."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She disagrees.",
+                "They must start again.",
+                "Inconclusiveness is informative.",
+                "The study failed."
+              ],
+              "answer": 2,
+              "explanation": "Que no concluya también dice algo."
+            },
+            {
+              "id": "l28",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Have you spoken to your advisor about it?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I keep meaning to."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He refuses to.",
+                "He has spoken to her.",
+                "He cannot find her.",
+                "He intends to but has not."
+              ],
+              "answer": 3,
+              "explanation": "«Keep meaning to» = lo pienso hacer y lo voy dejando."
+            },
+            {
+              "id": "l29",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Is this the final version?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Give or take a few commas."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "It is essentially final.",
+                "It needs major revision.",
+                "It is the first draft.",
+                "She has not started."
+              ],
+              "answer": 0,
+              "explanation": "«Give or take» = con pequeñas diferencias."
+            },
+            {
+              "id": "l30",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Did the professor like your proposal?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "She had a lot of questions."
+                }
+              ],
+              "stem": "What can be inferred?",
+              "options": [
+                "She rejected it outright.",
+                "She approved it enthusiastically.",
+                "She did not read it.",
+                "She was not fully convinced."
+              ],
+              "answer": 3,
+              "explanation": "Muchas preguntas sugiere reservas, no entusiasmo."
+            }
+          ]
+        },
+        {
+          "id": "l_b1",
+          "kind": "long_conversation",
+          "title": "Part B · Conversación 1",
+          "instructions": "Escucha la conversación y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Student",
+              "text": "I am trying to book the recording studio for my final project, but everything is taken."
+            },
+            {
+              "speaker": "Technician",
+              "text": "Final projects always land in the same three weeks. How long do you need?"
+            },
+            {
+              "speaker": "Student",
+              "text": "Six hours, ideally in one session."
+            },
+            {
+              "speaker": "Technician",
+              "text": "Six consecutive hours will not happen this month. What I can offer is two three-hour blocks."
+            },
+            {
+              "speaker": "Student",
+              "text": "Would I have to set everything up twice?"
+            },
+            {
+              "speaker": "Technician",
+              "text": "Normally yes, but if both blocks are on the same day I can leave your configuration saved."
+            },
+            {
+              "speaker": "Student",
+              "text": "That would save nearly an hour."
+            },
+            {
+              "speaker": "Technician",
+              "text": "There is a morning and an evening block free on the twelfth. The gap is four hours."
+            },
+            {
+              "speaker": "Student",
+              "text": "I can work on the edit during the gap. Let us take it."
+            },
+            {
+              "speaker": "Technician",
+              "text": "Booked. Bring your own cables; ours have been going missing."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l31",
+              "stem": "What does the student need?",
+              "options": [
+                "To book studio time.",
+                "To repair equipment.",
+                "To borrow cables.",
+                "To cancel a booking."
+              ],
+              "answer": 0,
+              "explanation": "Lo dice al principio."
+            },
+            {
+              "id": "l32",
+              "stem": "Why is the studio so busy?",
+              "options": [
+                "Final projects fall in the same weeks.",
+                "Staff are on holiday.",
+                "Equipment is broken.",
+                "It is being renovated."
+              ],
+              "answer": 0,
+              "explanation": "Explicación del técnico."
+            },
+            {
+              "id": "l33",
+              "stem": "What is the advantage of booking both blocks on the same day?",
+              "options": [
+                "The studio is quieter.",
+                "The configuration can be left saved.",
+                "More equipment is available.",
+                "It costs less."
+              ],
+              "answer": 1,
+              "explanation": "Ahorra montar dos veces."
+            },
+            {
+              "id": "l34",
+              "stem": "What does the technician ask the student to bring?",
+              "options": [
+                "A memory card",
+                "Headphones",
+                "Cables",
+                "Identification"
+              ],
+              "answer": 2,
+              "explanation": "Última intervención."
+            }
+          ]
+        },
+        {
+          "id": "l_b2",
+          "kind": "long_conversation",
+          "title": "Part B · Conversación 2",
+          "instructions": "Escucha la conversación y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Woman",
+              "text": "Your draft argues that the decline began in 1870. The sources you cite say 1890."
+            },
+            {
+              "speaker": "Man",
+              "text": "The 1890 figure is when the decline was first recorded, not when it started."
+            },
+            {
+              "speaker": "Woman",
+              "text": "That is an important distinction, but it is not in the text."
+            },
+            {
+              "speaker": "Man",
+              "text": "I thought it was implied by the paragraph on record-keeping."
+            },
+            {
+              "speaker": "Woman",
+              "text": "Implied is not enough for a claim that carries the whole chapter."
+            },
+            {
+              "speaker": "Man",
+              "text": "So I should state it explicitly and defend it."
+            },
+            {
+              "speaker": "Woman",
+              "text": "State it, defend it, and anticipate the objection that absence of records is not evidence of absence."
+            },
+            {
+              "speaker": "Man",
+              "text": "There is a parish census from 1875 that supports me."
+            },
+            {
+              "speaker": "Woman",
+              "text": "Then that census belongs in the main argument, not in a footnote where you have it now."
+            },
+            {
+              "speaker": "Man",
+              "text": "Understood. It is the strongest thing I have and I buried it."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l35",
+              "stem": "What is the main problem with the draft?",
+              "options": [
+                "A key distinction is not stated explicitly.",
+                "The dates were invented.",
+                "The sources are unreliable.",
+                "It is too long."
+              ],
+              "answer": 0,
+              "explanation": "La distinción entre inicio y registro no aparece en el texto."
+            },
+            {
+              "id": "l36",
+              "stem": "What does 1890 represent, according to the man?",
+              "options": [
+                "When the decline began.",
+                "When the decline was first recorded.",
+                "When the chapter ends.",
+                "When the census was taken."
+              ],
+              "answer": 1,
+              "explanation": "Su respuesta inicial."
+            },
+            {
+              "id": "l37",
+              "stem": "What objection must the man anticipate?",
+              "options": [
+                "That absence of records is not evidence of absence.",
+                "That the census is a forgery.",
+                "That the chapter is too short.",
+                "That the decline never happened."
+              ],
+              "answer": 0,
+              "explanation": "Lo dice la supervisora textualmente."
+            },
+            {
+              "id": "l38",
+              "stem": "What does the woman say about the 1875 census?",
+              "options": [
+                "It cannot be verified.",
+                "It contradicts his thesis.",
+                "It should be removed.",
+                "It should move from the footnote to the main argument."
+              ],
+              "answer": 3,
+              "explanation": "Está enterrado en una nota y es lo más fuerte que tiene."
+            }
+          ]
+        },
+        {
+          "id": "l_c1",
+          "kind": "talk",
+          "title": "Part C · Charla 1",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "Standard time zones did not exist before the railways, and it is worth understanding why they became necessary."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Until the middle of the nineteenth century, each town kept its own time, set by the sun at noon. A town fifteen miles east was a minute ahead, and nobody was inconvenienced."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Railways changed that, not because trains were fast, but because timetables have to be shared."
+            },
+            {
+              "speaker": "Professor",
+              "text": "A single printed timetable covering fifty towns with fifty local times is not a timetable; it is a puzzle."
+            },
+            {
+              "speaker": "Professor",
+              "text": "The companies imposed their own standard first, and governments followed years later. In several countries the legal adoption of standard time came decades after everyone was already using it."
+            },
+            {
+              "speaker": "Professor",
+              "text": "That order matters. The law did not create the standard. It recognised one that commerce had already established."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l39",
+              "stem": "What is the main point of the talk?",
+              "options": [
+                "Local time was more accurate.",
+                "Trains became faster in the nineteenth century.",
+                "Governments invented time zones.",
+                "Shared timetables made standard time necessary."
+              ],
+              "answer": 3,
+              "explanation": "Es el argumento central."
+            },
+            {
+              "id": "l40",
+              "stem": "How was time set before the railways?",
+              "options": [
+                "By the sun at noon in each town.",
+                "By church bells only.",
+                "By national law.",
+                "By the railway companies."
+              ],
+              "answer": 0,
+              "explanation": "Segundo párrafo."
+            },
+            {
+              "id": "l41",
+              "stem": "Why does the professor say trains' speed was not the reason?",
+              "options": [
+                "Trains were actually slow.",
+                "The problem was sharing timetables.",
+                "Passengers did not use timetables.",
+                "Speed varied by region."
+              ],
+              "answer": 1,
+              "explanation": "«not because trains were fast, but because timetables have to be shared»."
+            },
+            {
+              "id": "l42",
+              "stem": "What does the professor emphasise about the legal adoption?",
+              "options": [
+                "It came before general use.",
+                "It was never completed.",
+                "It was decided internationally.",
+                "It followed a standard already in use."
+              ],
+              "answer": 3,
+              "explanation": "Última frase de la charla."
+            }
+          ]
+        },
+        {
+          "id": "l_c2",
+          "kind": "talk",
+          "title": "Part C · Charla 2",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Researcher",
+              "text": "I want to describe an experiment with crows that is often reported inaccurately."
+            },
+            {
+              "speaker": "Researcher",
+              "text": "The birds were shown a tube containing water with food floating out of reach, and stones beside it."
+            },
+            {
+              "speaker": "Researcher",
+              "text": "Several dropped stones into the tube until the water rose enough to reach the food."
+            },
+            {
+              "speaker": "Researcher",
+              "text": "The popular account says this proves the crows understood displacement, and that is a stronger claim than the data supports."
+            },
+            {
+              "speaker": "Researcher",
+              "text": "What the experiment shows is that they solved the problem. Whether they reasoned about volume or simply learned that dropping stones brings food closer is not distinguishable from the results."
+            },
+            {
+              "speaker": "Researcher",
+              "text": "A follow-up used sawdust instead of water. Birds that had learned the trick kept dropping stones into the sawdust, where it does nothing. That is evidence against the deeper understanding."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l43",
+              "stem": "What did the crows do in the original experiment?",
+              "options": [
+                "Used a stick.",
+                "Waited for the food to sink.",
+                "Dropped stones to raise the water.",
+                "Broke the tube."
+              ],
+              "answer": 2,
+              "explanation": "Tercera intervención."
+            },
+            {
+              "id": "l44",
+              "stem": "What claim does the researcher consider too strong?",
+              "options": [
+                "That crows can solve problems.",
+                "That crows use tools.",
+                "That crows learn from each other.",
+                "That crows understood displacement."
+              ],
+              "answer": 3,
+              "explanation": "Lo dice explícitamente."
+            },
+            {
+              "id": "l45",
+              "stem": "What was used in the follow-up experiment?",
+              "options": [
+                "Ice",
+                "Sawdust",
+                "Sand",
+                "Oil"
+              ],
+              "answer": 1,
+              "explanation": "Serrín, donde las piedras no elevan nada."
+            },
+            {
+              "id": "l46",
+              "stem": "What did the follow-up suggest?",
+              "options": [
+                "The crows had learned a routine, not a principle.",
+                "The crows lost interest.",
+                "The first experiment was faked.",
+                "The crows understood volume."
+              ],
+              "answer": 0,
+              "explanation": "Siguieron echando piedras donde no servía."
+            }
+          ]
+        },
+        {
+          "id": "l_c3",
+          "kind": "talk",
+          "title": "Part C · Charla 3",
+          "instructions": "Escucha el anuncio y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Announcer",
+              "text": "A notice for everyone using the main reading room this month."
+            },
+            {
+              "speaker": "Announcer",
+              "text": "The ceiling repairs will begin on the fifteenth and are expected to last three weeks."
+            },
+            {
+              "speaker": "Announcer",
+              "text": "During that period the reading room will close, but the collections remain available through the request desk on the ground floor."
+            },
+            {
+              "speaker": "Announcer",
+              "text": "Requests placed before noon will be ready the same afternoon; those placed later will be ready the next morning."
+            },
+            {
+              "speaker": "Announcer",
+              "text": "Group study rooms on the second floor are unaffected and can still be booked online as usual."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l47",
+              "stem": "Why will the reading room close?",
+              "options": [
+                "For cleaning.",
+                "For an exhibition.",
+                "Because of low use.",
+                "For ceiling repairs."
+              ],
+              "answer": 3,
+              "explanation": "Segunda frase."
+            },
+            {
+              "id": "l48",
+              "stem": "How long are the works expected to last?",
+              "options": [
+                "Three weeks",
+                "Until the fifteenth",
+                "Three months",
+                "Three days"
+              ],
+              "answer": 0,
+              "explanation": "Dato explícito."
+            },
+            {
+              "id": "l49",
+              "stem": "When will a request placed at two in the afternoon be ready?",
+              "options": [
+                "Immediately.",
+                "The next morning.",
+                "In three weeks.",
+                "The same afternoon."
+              ],
+              "answer": 1,
+              "explanation": "Después del mediodía, al día siguiente."
+            },
+            {
+              "id": "l50",
+              "stem": "What remains unaffected?",
+              "options": [
+                "The online catalogue.",
+                "The request desk hours.",
+                "The reading room.",
+                "The group study rooms."
+              ],
+              "answer": 3,
+              "explanation": "Última frase."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "parts": [
+        {
+          "id": "s_a",
+          "kind": "completion",
+          "title": "Structure",
+          "instructions": "Elige la palabra o frase que completa correctamente la oración.",
+          "questions": [
+            {
+              "id": "s01",
+              "stem": "______ the committee approved the budget did the work begin.",
+              "options": [
+                "Just after",
+                "Only when after",
+                "After only",
+                "Only after"
+              ],
+              "answer": 3,
+              "explanation": "«Only after» al principio fuerza la inversión que ya trae la frase («did the work begin»)."
+            },
+            {
+              "id": "s02",
+              "stem": "The species is remarkable for its ability ______ in near-total darkness.",
+              "options": [
+                "for hunting",
+                "hunting",
+                "to hunt",
+                "of hunting"
+              ],
+              "answer": 2,
+              "explanation": "«Ability» va seguido de infinitivo: the ability to do something."
+            },
+            {
+              "id": "s03",
+              "stem": "Were the funding available, the team ______ the study next year.",
+              "options": [
+                "had repeated",
+                "repeats",
+                "would repeat",
+                "will repeat"
+              ],
+              "answer": 2,
+              "explanation": "Condicional invertido irreal («Were the funding available» = If the funding were available) exige «would»."
+            },
+            {
+              "id": "s04",
+              "stem": "The results, ______ surprising, were confirmed by two other laboratories.",
+              "options": [
+                "while",
+                "although being",
+                "however",
+                "despite"
+              ],
+              "answer": 0,
+              "explanation": "«While surprising» = aunque sorprendentes. Es una reducción admitida; las otras no encajan."
+            },
+            {
+              "id": "s05",
+              "stem": "Neither the report nor the appendices ______ the raw data.",
+              "options": [
+                "contain",
+                "has contained",
+                "contains",
+                "is containing"
+              ],
+              "answer": 0,
+              "explanation": "Con «neither... nor» concuerda con el sujeto más cercano: «the appendices», plural."
+            },
+            {
+              "id": "s06",
+              "stem": "It was not until 1958 ______ the theory was widely accepted.",
+              "options": [
+                "which",
+                "then",
+                "when",
+                "that"
+              ],
+              "answer": 3,
+              "explanation": "Construcción enfática «It was not until X that Y»."
+            },
+            {
+              "id": "s07",
+              "stem": "The more carefully the samples are stored, ______.",
+              "options": [
+                "they last longer",
+                "the longer they last",
+                "the longest they last",
+                "longer they last"
+              ],
+              "answer": 1,
+              "explanation": "Doble comparativo: «the more..., the more...». Ambas mitades llevan «the»."
+            },
+            {
+              "id": "s08",
+              "stem": "Scarcely ______ the lecture begun when the fire alarm sounded.",
+              "options": [
+                "has",
+                "had",
+                "the lecture had",
+                "did"
+              ],
+              "answer": 1,
+              "explanation": "«Scarcely... when» con pasado perfecto invertido: «Scarcely had the lecture begun»."
+            },
+            {
+              "id": "s09",
+              "stem": "The museum houses artefacts ______ origins remain disputed.",
+              "options": [
+                "that",
+                "whose",
+                "which",
+                "of which the"
+              ],
+              "answer": 1,
+              "explanation": "«Whose» expresa posesión y sirve también para cosas."
+            },
+            {
+              "id": "s10",
+              "stem": "The regulation applies to all employees, ______ of length of service.",
+              "options": [
+                "regardless",
+                "in spite",
+                "despite",
+                "nevertheless"
+              ],
+              "answer": 0,
+              "explanation": "«Regardless of» = independientemente de."
+            },
+            {
+              "id": "s11",
+              "stem": "Rather than ______ the experiment, the team revised the method.",
+              "options": [
+                "abandoning",
+                "abandoned",
+                "to abandon",
+                "abandon"
+              ],
+              "answer": 3,
+              "explanation": "«Rather than» se empareja con la forma del otro verbo: «revised» → base «abandon»."
+            },
+            {
+              "id": "s12",
+              "stem": "The instrument is sensitive enough ______ changes of one microgram.",
+              "options": [
+                "for detecting",
+                "to detect",
+                "detecting",
+                "that detects"
+              ],
+              "answer": 1,
+              "explanation": "«Enough to + infinitivo»."
+            },
+            {
+              "id": "s13",
+              "stem": "Such ______ the demand that the edition sold out in a week.",
+              "options": [
+                "it was",
+                "did",
+                "was",
+                "has"
+              ],
+              "answer": 2,
+              "explanation": "Inversión tras «such»: «Such was the demand that...»."
+            },
+            {
+              "id": "s14",
+              "stem": "The author, ______ work influenced a generation, died in obscurity.",
+              "options": [
+                "whose",
+                "which",
+                "that",
+                "who"
+              ],
+              "answer": 0,
+              "explanation": "«Whose work» expresa posesión: su obra."
+            },
+            {
+              "id": "s15",
+              "stem": "No sooner had the results appeared ______ they were challenged.",
+              "options": [
+                "then",
+                "than",
+                "when",
+                "that"
+              ],
+              "answer": 1,
+              "explanation": "«No sooner... than». Emparejarlo con «when» es el error clásico."
+            }
+          ]
+        },
+        {
+          "id": "s_b",
+          "kind": "error_id",
+          "title": "Written Expression",
+          "instructions": "Señala el fragmento subrayado que NO es correcto.",
+          "questions": [
+            {
+              "id": "s16",
+              "stem": "(A) The number of species (B) recorded in the survey (C) have increased (D) every year since 2010.",
+              "options": [
+                "The number of species",
+                "recorded in the survey",
+                "have increased",
+                "every year since 2010"
+              ],
+              "answer": 2,
+              "explanation": "«The number of» va en singular: has increased."
+            },
+            {
+              "id": "s17",
+              "stem": "(A) She is accustomed (B) to work (C) under pressure, (D) which helps in this role.",
+              "options": [
+                "She is accustomed",
+                "to work",
+                "under pressure",
+                "which helps in this role"
+              ],
+              "answer": 1,
+              "explanation": "«Accustomed to» va con gerundio: to working."
+            },
+            {
+              "id": "s18",
+              "stem": "(A) The experiment failed (B) because of (C) the temperature was (D) not properly controlled.",
+              "options": [
+                "The experiment failed",
+                "because of",
+                "the temperature was",
+                "not properly controlled"
+              ],
+              "answer": 1,
+              "explanation": "«Because of» va con sustantivo; con oración va «because»."
+            },
+            {
+              "id": "s19",
+              "stem": "(A) Hardly nobody (B) attended the session, (C) which was scheduled (D) during the holiday.",
+              "options": [
+                "Hardly nobody",
+                "attended the session",
+                "which was scheduled",
+                "during the holiday"
+              ],
+              "answer": 0,
+              "explanation": "Doble negación: «hardly anybody», no «hardly nobody»."
+            },
+            {
+              "id": "s20",
+              "stem": "(A) The findings apply (B) to adults, (C) to adolescents and (D) children as well.",
+              "options": [
+                "The findings apply",
+                "to adults",
+                "to adolescents and",
+                "children as well"
+              ],
+              "answer": 3,
+              "explanation": "Paralelismo: debería ser «to children as well»."
+            },
+            {
+              "id": "s21",
+              "stem": "(A) A large amount of (B) participants (C) withdrew before (D) the second session.",
+              "options": [
+                "A large amount of",
+                "participants",
+                "withdrew before",
+                "the second session"
+              ],
+              "answer": 0,
+              "explanation": "Con contables va «number»: a large number of participants."
+            },
+            {
+              "id": "s22",
+              "stem": "(A) The professor made (B) us to repeat (C) the procedure (D) three times.",
+              "options": [
+                "The professor made",
+                "us to repeat",
+                "the procedure",
+                "three times"
+              ],
+              "answer": 1,
+              "explanation": "«Make» va con infinitivo sin «to»: made us repeat."
+            },
+            {
+              "id": "s23",
+              "stem": "(A) This method is (B) superior than (C) the one described (D) in the earlier study.",
+              "options": [
+                "This method is",
+                "superior than",
+                "the one described",
+                "in the earlier study"
+              ],
+              "answer": 1,
+              "explanation": "«Superior to», no «superior than»."
+            },
+            {
+              "id": "s24",
+              "stem": "(A) The data suggests (B) that the effect (C) is more stronger (D) at higher altitudes.",
+              "options": [
+                "The data suggests",
+                "that the effect",
+                "is more stronger",
+                "at higher altitudes"
+              ],
+              "answer": 2,
+              "explanation": "«Stronger» ya es comparativo: sobra «more»."
+            },
+            {
+              "id": "s25",
+              "stem": "(A) Having finished the analysis, (B) the report (C) was written (D) in two days.",
+              "options": [
+                "Having finished the analysis",
+                "the report",
+                "was written",
+                "in two days"
+              ],
+              "answer": 1,
+              "explanation": "Participio colgante: quien terminó el análisis no fue el informe. El sujeto debería ser una persona."
+            },
+            {
+              "id": "s26",
+              "stem": "(A) The technique works well (B) in theory, (C) but in practice it (D) rarely never succeeds.",
+              "options": [
+                "The technique works well",
+                "in theory",
+                "but in practice it",
+                "rarely never succeeds"
+              ],
+              "answer": 3,
+              "explanation": "«Rarely» y «never» juntos son doble negación."
+            },
+            {
+              "id": "s27",
+              "stem": "(A) Each of the three (B) hypotheses (C) have been (D) tested independently.",
+              "options": [
+                "Each of the three",
+                "hypotheses",
+                "have been",
+                "tested independently"
+              ],
+              "answer": 2,
+              "explanation": "«Each of» va en singular: has been."
+            },
+            {
+              "id": "s28",
+              "stem": "(A) The library has (B) fewer books (C) than before, (D) but more informations online.",
+              "options": [
+                "The library has",
+                "fewer books",
+                "than before",
+                "but more informations online"
+              ],
+              "answer": 3,
+              "explanation": "«Information» es incontable: no admite plural."
+            },
+            {
+              "id": "s29",
+              "stem": "(A) He recommended (B) me to apply (C) before the (D) end of the month.",
+              "options": [
+                "He recommended",
+                "me to apply",
+                "before the",
+                "end of the month"
+              ],
+              "answer": 1,
+              "explanation": "«Recommend» no admite «recommend somebody to do»: «recommended that I apply»."
+            },
+            {
+              "id": "s30",
+              "stem": "(A) The two versions (B) of the manuscript (C) differ from (D) very little.",
+              "options": [
+                "The two versions",
+                "of the manuscript",
+                "differ from",
+                "very little"
+              ],
+              "answer": 2,
+              "explanation": "«Differ» aquí no lleva preposición: «differ very little»."
+            },
+            {
+              "id": "s31",
+              "stem": "(A) Not only the cost (B) but also the delay (C) were unacceptable (D) to the client.",
+              "options": [
+                "Not only the cost",
+                "but also the delay",
+                "were unacceptable",
+                "to the client"
+              ],
+              "answer": 2,
+              "explanation": "Con «not only... but also» concuerda con el sujeto más cercano: «the delay», singular."
+            },
+            {
+              "id": "s32",
+              "stem": "(A) The building was (B) design by an architect (C) who never saw (D) it completed.",
+              "options": [
+                "The building was",
+                "design by an architect",
+                "who never saw",
+                "it completed"
+              ],
+              "answer": 1,
+              "explanation": "Pasiva con participio: was designed."
+            },
+            {
+              "id": "s33",
+              "stem": "(A) There has been (B) many attempts (C) to replicate (D) the original result.",
+              "options": [
+                "There has been",
+                "many attempts",
+                "to replicate",
+                "the original result"
+              ],
+              "answer": 0,
+              "explanation": "El sujeto es «many attempts», plural: there have been."
+            },
+            {
+              "id": "s34",
+              "stem": "(A) The results were (B) discussed (C) between the five (D) members of the panel.",
+              "options": [
+                "The results were",
+                "discussed",
+                "between the five",
+                "members of the panel"
+              ],
+              "answer": 2,
+              "explanation": "Con más de dos se usa «among»: among the five members."
+            },
+            {
+              "id": "s35",
+              "stem": "(A) Despite that (B) the sample was small, (C) the conclusions (D) were widely reported.",
+              "options": [
+                "Despite that",
+                "the sample was small",
+                "the conclusions",
+                "were widely reported"
+              ],
+              "answer": 0,
+              "explanation": "«Despite» no introduce oración: debería ser «Although»."
+            },
+            {
+              "id": "s36",
+              "stem": "(A) The team spent (B) three months (C) to collect (D) the field data.",
+              "options": [
+                "The team spent",
+                "three months",
+                "to collect",
+                "the field data"
+              ],
+              "answer": 2,
+              "explanation": "«Spend time doing something»: collecting."
+            },
+            {
+              "id": "s37",
+              "stem": "(A) Neither the author (B) or the editor (C) noticed (D) the inconsistency.",
+              "options": [
+                "Neither the author",
+                "or the editor",
+                "noticed",
+                "the inconsistency"
+              ],
+              "answer": 1,
+              "explanation": "«Neither» se empareja con «nor», no con «or»."
+            },
+            {
+              "id": "s38",
+              "stem": "(A) The lecture was (B) so interesting (C) lecture that (D) nobody left early.",
+              "options": [
+                "The lecture was",
+                "so interesting",
+                "lecture that",
+                "nobody left early"
+              ],
+              "answer": 2,
+              "explanation": "Sobra «lecture»: «so interesting that» o «such an interesting lecture that»."
+            },
+            {
+              "id": "s39",
+              "stem": "(A) Most researchers agree (B) that the model (C) needs revising, (D) but few has proposed alternatives.",
+              "options": [
+                "Most researchers agree",
+                "that the model",
+                "needs revising",
+                "but few has proposed alternatives"
+              ],
+              "answer": 3,
+              "explanation": "«Few» es plural: few have proposed."
+            },
+            {
+              "id": "s40",
+              "stem": "(A) The device consists (B) in three parts, (C) each of which (D) can be replaced separately.",
+              "options": [
+                "The device consists",
+                "in three parts",
+                "each of which",
+                "can be replaced separately"
+              ],
+              "answer": 1,
+              "explanation": "«Consist of», no «consist in» en este sentido."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "parts": [
+        {
+          "id": "r_p1",
+          "kind": "passage",
+          "title": "Texto 1",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The acoustics of ancient Greek theatres have been the subject of a persistent legend: that a whisper on the stage can be heard in the last row. Measurements taken at Epidaurus show that the claim is exaggerated but not baseless.\n\nWhat the seating actually does is filter. The rows of stone form a regular corrugated surface, and such surfaces reflect low frequencies poorly while returning higher ones towards the audience. Since the background noise of an outdoor crowd is concentrated at low frequencies, the effect is to suppress the noise relative to the voice.\n\nThe voice itself is not amplified. A speaker at the centre is not louder in absolute terms at the back; the speech is simply less masked by everything else.\n\nWhether the Greeks understood this is doubtful. The geometry that produces the effect follows from building a steep semicircle in stone, which is what the site and the materials suggested anyway. Later theatres built on the same plan in different materials do not perform as well, which indicates that the acoustic result was a consequence of the design rather than its purpose.",
+          "questions": [
+            {
+              "id": "r01",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                "Greek engineers were expert acousticians.",
+                "Greek theatres amplified the human voice.",
+                "The acoustic effect is real but works by filtering noise.",
+                "The legend about whispers is entirely false."
+              ],
+              "answer": 2,
+              "explanation": "El texto explica que filtra ruido, no que amplifique."
+            },
+            {
+              "id": "r02",
+              "stem": "What does the seating do to low frequencies?",
+              "options": [
+                "Reflects them strongly.",
+                "Converts them to high frequencies.",
+                "Amplifies them.",
+                "Reflects them poorly."
+              ],
+              "answer": 3,
+              "explanation": "Segundo párrafo."
+            },
+            {
+              "id": "r03",
+              "stem": "Why does this help the audience?",
+              "options": [
+                "Stone absorbs all sound.",
+                "The wind is blocked.",
+                "Voices are mostly low frequency.",
+                "Crowd noise is mostly low frequency."
+              ],
+              "answer": 3,
+              "explanation": "El ruido de fondo se concentra en frecuencias bajas."
+            },
+            {
+              "id": "r04",
+              "stem": "The word «masked» in paragraph 3 is closest in meaning to",
+              "options": [
+                "distorted",
+                "recorded",
+                "covered up",
+                "amplified"
+              ],
+              "answer": 2,
+              "explanation": "El habla queda menos tapada por el ruido."
+            },
+            {
+              "id": "r05",
+              "stem": "According to the passage, is the voice amplified?",
+              "options": [
+                "Only in the front rows.",
+                "Only at night.",
+                "No, it is not louder in absolute terms.",
+                "Yes, considerably."
+              ],
+              "answer": 2,
+              "explanation": "Tercer párrafo, explícito."
+            },
+            {
+              "id": "r06",
+              "stem": "What suggests the effect was unintentional?",
+              "options": [
+                "Later theatres in other materials perform worse.",
+                "The Greeks wrote about it.",
+                "The stone was imported.",
+                "The theatres were rebuilt often."
+              ],
+              "answer": 0,
+              "explanation": "Último párrafo."
+            },
+            {
+              "id": "r07",
+              "stem": "The word «corrugated» in paragraph 2 is closest in meaning to",
+              "options": [
+                "curved inward",
+                "painted",
+                "ridged",
+                "smooth"
+              ],
+              "answer": 2,
+              "explanation": "Superficie con surcos regulares, como las filas de asientos."
+            },
+            {
+              "id": "r08",
+              "stem": "It can be inferred that the legend persists because",
+              "options": [
+                "the effect is genuinely noticeable.",
+                "tourists invented it.",
+                "it is completely accurate.",
+                "nobody has measured it."
+              ],
+              "answer": 0,
+              "explanation": "«exaggerated but not baseless»."
+            },
+            {
+              "id": "r09",
+              "stem": "What determined the steep semicircular shape?",
+              "options": [
+                "Acoustic calculations.",
+                "Roman influence.",
+                "Religious requirements.",
+                "The site and available materials."
+              ],
+              "answer": 3,
+              "explanation": "Último párrafo."
+            },
+            {
+              "id": "r10",
+              "stem": "The author's attitude towards the legend is best described as",
+              "options": [
+                "indifference.",
+                "enthusiastic support.",
+                "entirely dismissive.",
+                "qualified acceptance."
+              ],
+              "answer": 3,
+              "explanation": "Lo matiza: exagerado pero con base real."
+            }
+          ]
+        },
+        {
+          "id": "r_p2",
+          "kind": "passage",
+          "title": "Texto 2",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "Antibiotic resistance is often described as bacteria becoming stronger, which misrepresents the process. Resistance is not acquired by individual bacteria during treatment; it is present beforehand in a small fraction of the population, and treatment removes everything else.\n\nThis matters for how the problem should be addressed. If resistance were caused by exposure, then reducing the dose would reduce the risk. Because resistance is selected rather than induced, the opposite is closer to the truth: incomplete treatment leaves precisely the resistant fraction alive and removes its competitors.\n\nThe resistant survivors are not necessarily fitter in other respects. Resistance frequently carries a metabolic cost, which is why resistant strains tend to decline when the antibiotic is withdrawn. In the absence of the drug, they are outcompeted by ordinary bacteria.\n\nThis has led to proposals for cycling antibiotics at the level of an entire hospital, allowing resistant strains to fade before the drug is reintroduced. Results have been mixed. The strategy assumes the cost of resistance is high enough to matter within months, and for several important organisms it is not.",
+          "questions": [
+            {
+              "id": "r11",
+              "stem": "What common description does the author reject?",
+              "options": [
+                "That bacteria become stronger during treatment.",
+                "That antibiotics are overused.",
+                "That bacteria reproduce quickly.",
+                "That resistance is dangerous."
+              ],
+              "answer": 0,
+              "explanation": "Primera frase."
+            },
+            {
+              "id": "r12",
+              "stem": "According to the passage, where does resistance come from?",
+              "options": [
+                "It is caused by high doses.",
+                "It comes from other species.",
+                "It is already present in a small fraction.",
+                "It is induced by the drug."
+              ],
+              "answer": 2,
+              "explanation": "Primer párrafo."
+            },
+            {
+              "id": "r13",
+              "stem": "Why is incomplete treatment dangerous?",
+              "options": [
+                "It increases the dose.",
+                "It leaves the resistant fraction without competitors.",
+                "It makes bacteria reproduce faster.",
+                "It weakens the immune system."
+              ],
+              "answer": 1,
+              "explanation": "Segundo párrafo, explícito."
+            },
+            {
+              "id": "r14",
+              "stem": "The word «selected» in paragraph 2 is closest in meaning to",
+              "options": [
+                "removed",
+                "created",
+                "chosen deliberately",
+                "favoured by circumstances"
+              ],
+              "answer": 3,
+              "explanation": "Selección: sobreviven los que ya eran resistentes."
+            },
+            {
+              "id": "r15",
+              "stem": "Why do resistant strains often decline when the drug is withdrawn?",
+              "options": [
+                "They leave the host.",
+                "They mutate back.",
+                "They die of old age.",
+                "Resistance carries a metabolic cost."
+              ],
+              "answer": 3,
+              "explanation": "Tercer párrafo."
+            },
+            {
+              "id": "r16",
+              "stem": "What is the cycling strategy?",
+              "options": [
+                "Treating only severe cases.",
+                "Combining several antibiotics.",
+                "Alternating antibiotics across a hospital.",
+                "Increasing doses over time."
+              ],
+              "answer": 2,
+              "explanation": "Cuarto párrafo."
+            },
+            {
+              "id": "r17",
+              "stem": "What assumption does that strategy rely on?",
+              "options": [
+                "That patients complete treatment.",
+                "That new antibiotics are available.",
+                "That resistance costs enough to matter within months.",
+                "That bacteria do not spread."
+              ],
+              "answer": 2,
+              "explanation": "Última frase."
+            },
+            {
+              "id": "r18",
+              "stem": "The phrase «results have been mixed» suggests the strategy",
+              "options": [
+                "works only sometimes.",
+                "always works.",
+                "was abandoned.",
+                "has never been tried."
+              ],
+              "answer": 0,
+              "explanation": "Resultados desiguales."
+            },
+            {
+              "id": "r19",
+              "stem": "It can be inferred that reducing the dose would",
+              "options": [
+                "reduce resistance.",
+                "not solve the problem and may worsen it.",
+                "cure patients faster.",
+                "have no effect at all."
+              ],
+              "answer": 1,
+              "explanation": "El texto dice que lo contrario está más cerca de la verdad."
+            },
+            {
+              "id": "r20",
+              "stem": "The word «outcompeted» in paragraph 3 is closest in meaning to",
+              "options": [
+                "defeated in competition",
+                "protected",
+                "multiplied",
+                "infected"
+              ],
+              "answer": 0,
+              "explanation": "Las bacterias normales les ganan."
+            }
+          ]
+        },
+        {
+          "id": "r_p3",
+          "kind": "passage",
+          "title": "Texto 3",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The global trade in second-hand clothing is larger than most people assume and operates on a logic that is frequently misunderstood. Garments donated in wealthy countries are rarely distributed free of charge. They are sorted, graded and sold in bulk to importers, who resell them in local markets.\n\nCritics argue that this trade undermines domestic textile industries in the importing countries, and there is evidence for the claim in several African markets during the 1980s and 1990s. Supporters point out that the same trade employs large numbers of people in sorting, transport and retail, and supplies clothing at prices that local manufacture could not match.\n\nBoth positions are usually stated as though the effect were uniform, which it is not. Where a domestic industry already existed, imports competed with it directly. Where none existed, the trade created a distribution network without displacing anything.\n\nA further complication is that only a fraction of donated clothing is sellable. Estimates vary widely, but a substantial proportion is unusable and becomes waste in the destination country, which now carries a disposal cost that the donor country avoided. That transfer rarely appears in either side of the argument.",
+          "questions": [
+            {
+              "id": "r21",
+              "stem": "What is the main purpose of the passage?",
+              "options": [
+                "To show that its effects are not uniform.",
+                "To promote donation.",
+                "To condemn the second-hand clothing trade.",
+                "To describe sorting techniques."
+              ],
+              "answer": 0,
+              "explanation": "El eje es que el efecto varía según el contexto."
+            },
+            {
+              "id": "r22",
+              "stem": "What happens to most donated clothing?",
+              "options": [
+                "It is sorted and sold in bulk.",
+                "It is recycled into fibre.",
+                "It is destroyed.",
+                "It is given away free."
+              ],
+              "answer": 0,
+              "explanation": "Primer párrafo."
+            },
+            {
+              "id": "r23",
+              "stem": "What do critics argue?",
+              "options": [
+                "The trade is illegal.",
+                "The trade undermines domestic textile industries.",
+                "Donors are not thanked.",
+                "The clothes are of poor quality."
+              ],
+              "answer": 1,
+              "explanation": "Segundo párrafo."
+            },
+            {
+              "id": "r24",
+              "stem": "What do supporters emphasise?",
+              "options": [
+                "Environmental benefits.",
+                "Employment and low prices.",
+                "Improved quality.",
+                "Cultural exchange."
+              ],
+              "answer": 1,
+              "explanation": "Empleo en clasificación, transporte y venta, y precios bajos."
+            },
+            {
+              "id": "r25",
+              "stem": "According to the author, what do both sides get wrong?",
+              "options": [
+                "They exaggerate the volume.",
+                "They ignore the quality of clothing.",
+                "They rely on old data only.",
+                "They assume the effect is the same everywhere."
+              ],
+              "answer": 3,
+              "explanation": "Tercer párrafo."
+            },
+            {
+              "id": "r26",
+              "stem": "What happens where no domestic industry existed?",
+              "options": [
+                "The trade created a distribution network.",
+                "Prices rose sharply.",
+                "The trade displaced local production.",
+                "The trade failed."
+              ],
+              "answer": 0,
+              "explanation": "Tercer párrafo, explícito."
+            },
+            {
+              "id": "r27",
+              "stem": "What further complication does the author raise?",
+              "options": [
+                "Counterfeit garments.",
+                "Transport costs.",
+                "Currency exchange rates.",
+                "Unsellable clothing becomes waste in the destination."
+              ],
+              "answer": 3,
+              "explanation": "Último párrafo."
+            },
+            {
+              "id": "r28",
+              "stem": "The word «displacing» in paragraph 3 is closest in meaning to",
+              "options": [
+                "damaging",
+                "hiding",
+                "transporting",
+                "replacing"
+              ],
+              "answer": 3,
+              "explanation": "Sin desplazar a una industria existente."
+            },
+            {
+              "id": "r29",
+              "stem": "Why does the author call the waste issue a «transfer»?",
+              "options": [
+                "The clothes are transferred by ship.",
+                "The disposal cost moves to the importing country.",
+                "Workers relocate.",
+                "Ownership changes hands."
+              ],
+              "answer": 1,
+              "explanation": "El costo de deshacerse de ello pasa al país receptor."
+            },
+            {
+              "id": "r30",
+              "stem": "It can be inferred that the author considers the debate",
+              "options": [
+                "settled in favour of supporters.",
+                "incomplete on both sides.",
+                "unimportant.",
+                "settled in favour of critics."
+              ],
+              "answer": 1,
+              "explanation": "Señala lo que ninguna de las dos posturas recoge."
+            }
+          ]
+        },
+        {
+          "id": "r_p4",
+          "kind": "passage",
+          "title": "Texto 4",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "Lightning is commonly imagined as a single flash travelling from cloud to ground, but the sequence is more complicated and runs partly in the opposite direction. A faint channel of ionised air, called the stepped leader, descends from the cloud in a series of short jumps, branching as it goes.\n\nWhen the leader approaches the surface, objects below send up shorter channels of their own. The first of these to meet the descending leader completes the circuit, and the visible flash, the return stroke, travels upward along the established path.\n\nThis explains why the branches of a lightning bolt point downward in photographs even though the bright stroke moves up: the branches were made by the invisible leader on its way down, and only the successful path is illuminated.\n\nIt also explains why tall objects are struck more often without being the cause of the strike. The leader does not aim at anything. It descends by a path determined by local conditions, and only in the final tens of metres does the height of a structure decide which upward channel connects first. A lightning rod does not attract lightning from a distance; it simply wins a very short race.",
+          "questions": [
+            {
+              "id": "r31",
+              "stem": "What is the stepped leader?",
+              "options": [
+                "The sound of thunder.",
+                "The bright visible flash.",
+                "A faint ionised channel descending from the cloud.",
+                "A channel rising from the ground."
+              ],
+              "answer": 2,
+              "explanation": "Primer párrafo."
+            },
+            {
+              "id": "r32",
+              "stem": "In which direction does the visible flash travel?",
+              "options": [
+                "Downward",
+                "In both directions equally",
+                "Horizontally",
+                "Upward"
+              ],
+              "answer": 3,
+              "explanation": "El return stroke sube por el canal establecido."
+            },
+            {
+              "id": "r33",
+              "stem": "Why do the branches point downward in photographs?",
+              "options": [
+                "The wind bends them.",
+                "The camera inverts them.",
+                "They were created by the descending leader.",
+                "They are an optical illusion."
+              ],
+              "answer": 2,
+              "explanation": "Tercer párrafo."
+            },
+            {
+              "id": "r34",
+              "stem": "According to the passage, does the leader aim at tall objects?",
+              "options": [
+                "It aims at the ground randomly at all stages.",
+                "No, height matters only in the final tens of metres.",
+                "Yes, from the cloud.",
+                "Yes, but only at metal."
+              ],
+              "answer": 1,
+              "explanation": "Último párrafo."
+            },
+            {
+              "id": "r35",
+              "stem": "What does the author say a lightning rod does?",
+              "options": [
+                "Repels lightning.",
+                "Neutralises the charge.",
+                "Attracts lightning from far away.",
+                "Wins a very short race."
+              ],
+              "answer": 3,
+              "explanation": "Última frase."
+            },
+            {
+              "id": "r36",
+              "stem": "The word «completes» in paragraph 2 is closest in meaning to",
+              "options": [
+                "destroys",
+                "measures",
+                "finishes building",
+                "closes the circuit"
+              ],
+              "answer": 3,
+              "explanation": "Cierra el circuito entre nube y suelo."
+            },
+            {
+              "id": "r37",
+              "stem": "What determines the leader's path?",
+              "options": [
+                "The temperature of the ground.",
+                "The tallest object visible.",
+                "Local conditions.",
+                "The wind direction."
+              ],
+              "answer": 2,
+              "explanation": "«a path determined by local conditions»."
+            },
+            {
+              "id": "r38",
+              "stem": "Which channel completes the circuit?",
+              "options": [
+                "The tallest one.",
+                "The one from the wettest object.",
+                "All of them at once.",
+                "The first upward channel to meet the leader."
+              ],
+              "answer": 3,
+              "explanation": "Segundo párrafo."
+            },
+            {
+              "id": "r39",
+              "stem": "The word «illuminated» in paragraph 3 refers to",
+              "options": [
+                "the ground.",
+                "all the branches.",
+                "the cloud.",
+                "only the successful path."
+              ],
+              "answer": 3,
+              "explanation": "Solo se ilumina el camino que conectó."
+            },
+            {
+              "id": "r40",
+              "stem": "It can be inferred that a lightning rod protects a building by",
+              "options": [
+                "absorbing the cloud's charge.",
+                "preventing strikes entirely.",
+                "creating an upward leader from the cloud.",
+                "controlling where the strike connects."
+              ],
+              "answer": 3,
+              "explanation": "Gana la carrera corta y decide el punto de conexión."
+            }
+          ]
+        },
+        {
+          "id": "r_p5",
+          "kind": "passage",
+          "title": "Texto 5",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The reintroduction of a predator into an ecosystem is often presented as restoring a balance, a phrase that carries assumptions worth examining. Balance implies a single stable state to which the system returns, and ecosystems rarely behave that way.\n\nThe best-documented case is the return of wolves to a large national park in the 1990s. Elk numbers fell, young trees recovered along river valleys, and the rivers themselves changed course less often as the banks stabilised. The account is accurate as far as it goes.\n\nWhat is usually omitted is that other changes occurred at the same time. A prolonged drought ended, hunting regulations outside the park changed, and a bear population was recovering independently. Attributing the vegetation recovery entirely to wolves requires ignoring three simultaneous causes.\n\nEcologists working on the site have been considerably more careful than the popular accounts. Their estimates of the wolf contribution range from substantial to modest, and the disagreement is not a sign of a failing field. It reflects the difficulty of isolating one variable in a system where nothing can be held constant and no control site exists.",
+          "questions": [
+            {
+              "id": "r41",
+              "stem": "What phrase does the author examine critically?",
+              "options": [
+                "«Protected area»",
+                "«Restoring a balance»",
+                "«Food chain»",
+                "«Endangered species»"
+              ],
+              "answer": 1,
+              "explanation": "Primera frase."
+            },
+            {
+              "id": "r42",
+              "stem": "What is the problem with the word «balance»?",
+              "options": [
+                "It has no ecological meaning.",
+                "It is too technical.",
+                "It is used only by journalists.",
+                "It implies a single stable state."
+              ],
+              "answer": 3,
+              "explanation": "Primer párrafo."
+            },
+            {
+              "id": "r43",
+              "stem": "What changes followed the wolves' return?",
+              "options": [
+                "Elk numbers rose.",
+                "Rivers dried up.",
+                "Young trees recovered and banks stabilised.",
+                "Bears disappeared."
+              ],
+              "answer": 2,
+              "explanation": "Segundo párrafo."
+            },
+            {
+              "id": "r44",
+              "stem": "What does the popular account usually omit?",
+              "options": [
+                "That wolves were reintroduced deliberately.",
+                "That elk are protected.",
+                "That other changes occurred simultaneously.",
+                "That the park is large."
+              ],
+              "answer": 2,
+              "explanation": "Tercer párrafo."
+            },
+            {
+              "id": "r45",
+              "stem": "Which of these is NOT mentioned as a simultaneous cause?",
+              "options": [
+                "A new road through the park.",
+                "The end of a drought.",
+                "A recovering bear population.",
+                "Changes in hunting regulations."
+              ],
+              "answer": 0,
+              "explanation": "Se mencionan sequía, caza y osos; la carretera no aparece."
+            },
+            {
+              "id": "r46",
+              "stem": "How does the author describe the ecologists' work?",
+              "options": [
+                "More careful than popular accounts.",
+                "Careless compared with popular accounts.",
+                "Identical to popular accounts.",
+                "Not yet published."
+              ],
+              "answer": 0,
+              "explanation": "Último párrafo, explícito."
+            },
+            {
+              "id": "r47",
+              "stem": "What does the disagreement among ecologists reflect?",
+              "options": [
+                "Poor data collection.",
+                "A failing scientific field.",
+                "The difficulty of isolating one variable.",
+                "Political pressure."
+              ],
+              "answer": 2,
+              "explanation": "Última frase."
+            },
+            {
+              "id": "r48",
+              "stem": "The word «omitted» in paragraph 3 is closest in meaning to",
+              "options": [
+                "translated",
+                "disproved",
+                "left out",
+                "emphasised"
+              ],
+              "answer": 2,
+              "explanation": "Lo que los relatos populares no cuentan."
+            },
+            {
+              "id": "r49",
+              "stem": "Why is no control site available?",
+              "options": [
+                "Nothing in the system can be held constant.",
+                "The park is protected.",
+                "Wolves spread too widely.",
+                "Funding was withdrawn."
+              ],
+              "answer": 0,
+              "explanation": "Última frase del texto."
+            },
+            {
+              "id": "r50",
+              "stem": "The author's overall attitude towards the wolf story is",
+              "options": [
+                "that it is false.",
+                "that it is true but oversimplified.",
+                "that it is irrelevant.",
+                "that it proves ecological balance."
+              ],
+              "answer": 1,
+              "explanation": "«accurate as far as it goes», pero incompleto."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

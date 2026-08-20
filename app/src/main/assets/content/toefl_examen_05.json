@@ -1,0 +1,2277 @@
+{
+  "id": "toefl_examen_05",
+  "title": "Simulacro 5",
+  "subtitle": "140 preguntas · 115 minutos",
+  "sections": [
+    {
+      "id": "listening",
+      "parts": [
+        {
+          "id": "l_a",
+          "kind": "short_conversation",
+          "title": "Part A",
+          "instructions": "Escucha la conversación y elige la respuesta que mejor responde a la pregunta. Suena una sola vez.",
+          "questions": [
+            {
+              "id": "l01",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Are you going to accept the offer?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I am sleeping on it."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He is too tired to work.",
+                "He already accepted.",
+                "He wants to decide tomorrow.",
+                "He rejected the offer."
+              ],
+              "answer": 2,
+              "explanation": "«Sleep on it» = consultarlo con la almohada, decidir mañana."
+            },
+            {
+              "id": "l02",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Was the tutorial useful?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It was hit and miss."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "It was excellent throughout.",
+                "Some parts were good and others were not.",
+                "She did not attend.",
+                "It was cancelled halfway."
+              ],
+              "answer": 1,
+              "explanation": "«Hit and miss» = desigual, irregular."
+            },
+            {
+              "id": "l03",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Did you finish the reading list?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I made a dent in it."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He finished it completely.",
+                "He damaged the books.",
+                "He has not started.",
+                "He made some progress but did not finish."
+              ],
+              "answer": 3,
+              "explanation": "«Make a dent» = avanzar algo, no terminar."
+            },
+            {
+              "id": "l04",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Do you want me to explain the formula again?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "No, the penny finally dropped."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She finally understood it.",
+                "She lost some money.",
+                "She still does not understand.",
+                "She wants a different example."
+              ],
+              "answer": 0,
+              "explanation": "«The penny drops» = por fin lo entiendes."
+            },
+            {
+              "id": "l05",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "How did the group presentation go?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Two of us did the heavy lifting."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "The presentation was cancelled.",
+                "Everyone contributed equally.",
+                "The work was unevenly divided.",
+                "The equipment was very heavy."
+              ],
+              "answer": 2,
+              "explanation": "«Do the heavy lifting» = cargar con el trabajo duro."
+            },
+            {
+              "id": "l06",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Is the department paying for the trip?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Only up to a point."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "The department pays everything.",
+                "The department pays part of the cost.",
+                "The department pays nothing.",
+                "The trip was cancelled."
+              ],
+              "answer": 1,
+              "explanation": "«Up to a point» = hasta cierto punto, parcialmente."
+            },
+            {
+              "id": "l07",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "You did not seem convinced by her argument."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I will reserve judgement for now."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He completely disagrees.",
+                "He fully agrees.",
+                "He did not hear the argument.",
+                "He is not deciding yet."
+              ],
+              "answer": 3,
+              "explanation": "«Reserve judgement» = no pronunciarse todavía."
+            },
+            {
+              "id": "l08",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "The printer is broken again."
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Why am I not surprised?"
+                }
+              ],
+              "stem": "What does the woman imply?",
+              "options": [
+                "The printer breaks often.",
+                "The printer is new.",
+                "She broke the printer.",
+                "She did not know about it."
+              ],
+              "answer": 0,
+              "explanation": "Pregunta retórica: era esperable."
+            },
+            {
+              "id": "l09",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Should I include the appendix?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I would err on the side of including it."
+                }
+              ],
+              "stem": "What does the man advise?",
+              "options": [
+                "Leaving it out.",
+                "Asking the professor.",
+                "Including it, to be safe.",
+                "Rewriting it first."
+              ],
+              "answer": 2,
+              "explanation": "«Err on the side of» = decantarse por la opción prudente."
+            },
+            {
+              "id": "l10",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did she take the criticism well?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "She took it in her stride."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She was very upset.",
+                "She handled it calmly.",
+                "She ignored it completely.",
+                "She argued about it."
+              ],
+              "answer": 1,
+              "explanation": "«Take in one's stride» = encajarlo sin alterarse."
+            },
+            {
+              "id": "l11",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Is the conference worth attending?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "The keynote alone justifies the trip."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "The conference is not worth attending.",
+                "Only the keynote will happen.",
+                "The trip is too expensive.",
+                "The conference is worth it because of the keynote."
+              ],
+              "answer": 3,
+              "explanation": "Dice que solo con la conferencia inaugural ya compensa."
+            },
+            {
+              "id": "l12",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Are you happy with the final version?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It will do."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "It is acceptable but not ideal.",
+                "It is excellent.",
+                "It needs to be rewritten.",
+                "She has not read it."
+              ],
+              "answer": 0,
+              "explanation": "«It will do» = suficiente, sin entusiasmo."
+            },
+            {
+              "id": "l13",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "The deadline moved to Monday."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "That takes the pressure off."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He is more stressed.",
+                "He did not know the deadline.",
+                "He feels less pressure now.",
+                "He finished already."
+              ],
+              "answer": 2,
+              "explanation": "«Take the pressure off» = aliviar la presión."
+            },
+            {
+              "id": "l14",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Why did you choose that university?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "The funding sealed it."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "The funding was refused.",
+                "The funding made her decision final.",
+                "She has not decided.",
+                "She chose it despite the funding."
+              ],
+              "answer": 1,
+              "explanation": "«Sealed it» = fue lo que decidió el asunto."
+            },
+            {
+              "id": "l15",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Have you spoken to your adviser about it?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I have been meaning to for a month."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "He speaks to her monthly.",
+                "He spoke to her a month ago.",
+                "He does not have an adviser.",
+                "He has intended to but has not done it."
+              ],
+              "answer": 3,
+              "explanation": "«Have been meaning to» = tenerlo pendiente sin hacerlo."
+            },
+            {
+              "id": "l16",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "How is the new software?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It is growing on me, slowly."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She likes it more with time.",
+                "She dislikes it more each day.",
+                "She has not used it.",
+                "It takes up too much space."
+              ],
+              "answer": 0,
+              "explanation": "«Grow on someone» = irle gustando poco a poco."
+            },
+            {
+              "id": "l17",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Can we discuss this on Friday?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Friday is no good for me."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "Friday is perfect.",
+                "He wants to cancel entirely.",
+                "Friday does not suit him.",
+                "He is free all week."
+              ],
+              "answer": 2,
+              "explanation": "«No good for me» = no me viene bien."
+            },
+            {
+              "id": "l18",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did you know she is leaving?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I had a feeling."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She is surprised.",
+                "She suspected it already.",
+                "She does not believe it.",
+                "She is leaving too."
+              ],
+              "answer": 1,
+              "explanation": "«Had a feeling» = lo sospechaba."
+            },
+            {
+              "id": "l19",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Do we have to attend the workshop?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "It is not compulsory, but I would go."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "Attendance is required.",
+                "The workshop is useless.",
+                "He will not attend.",
+                "Attending is advisable although optional."
+              ],
+              "answer": 3,
+              "explanation": "Opcional pero recomendable."
+            },
+            {
+              "id": "l20",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Your draft is much clearer now."
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "It should be. I cut a third of it."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "The improvement came from removing text.",
+                "She added a third more text.",
+                "She rewrote it from scratch.",
+                "She does not think it improved."
+              ],
+              "answer": 0,
+              "explanation": "Explica la causa de la mejora: eliminó un tercio."
+            },
+            {
+              "id": "l21",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Did the experiment confirm your hypothesis?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Let us just say the hypothesis has changed."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "The results confirmed it fully.",
+                "The experiment was not carried out.",
+                "The results did not support the original hypothesis.",
+                "He never had a hypothesis."
+              ],
+              "answer": 2,
+              "explanation": "Insinúa que hubo que cambiarla porque no se confirmó."
+            },
+            {
+              "id": "l22",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Are you presenting at the seminar?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I volunteered before I read the guidelines."
+                }
+              ],
+              "stem": "What does the woman imply?",
+              "options": [
+                "She is looking forward to it.",
+                "She regrets volunteering.",
+                "She was asked to present.",
+                "She will not present."
+              ],
+              "answer": 1,
+              "explanation": "El orden de la frase implica arrepentimiento."
+            },
+            {
+              "id": "l23",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "How was the trip back?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Three hours for what should take one."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "The trip was faster than expected.",
+                "He travelled three times.",
+                "He missed his train.",
+                "The trip took much longer than usual."
+              ],
+              "answer": 3,
+              "explanation": "Contrasta lo que tardó con lo normal."
+            },
+            {
+              "id": "l24",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Do you want to split the fieldwork?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "That would be a load off my mind."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She would be relieved.",
+                "She prefers to work alone.",
+                "She is not doing fieldwork.",
+                "She thinks it is a bad idea."
+              ],
+              "answer": 0,
+              "explanation": "«A load off my mind» = un peso menos."
+            },
+            {
+              "id": "l25",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Is the reading essential for the exam?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "You will not fail without it, but you will notice."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "The reading is compulsory.",
+                "The reading is irrelevant.",
+                "The reading helps although it is not strictly required.",
+                "There is no exam."
+              ],
+              "answer": 2,
+              "explanation": "No es obligatoria, pero se nota si no la haces."
+            },
+            {
+              "id": "l26",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Should we run the test again?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "One more time, then we accept the result."
+                }
+              ],
+              "stem": "What does the woman propose?",
+              "options": [
+                "Repeating it indefinitely.",
+                "Repeating the test once and then stopping.",
+                "Abandoning the test now.",
+                "Accepting the result without repeating."
+              ],
+              "answer": 1,
+              "explanation": "Propone una repetición y aceptar el resultado."
+            },
+            {
+              "id": "l27",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "The registration site is down again."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Try after midnight. That always works."
+                }
+              ],
+              "stem": "What does the man suggest?",
+              "options": [
+                "Waiting until the next term.",
+                "Registering in person.",
+                "Giving up on registration.",
+                "Registering late at night when there is less traffic."
+              ],
+              "answer": 3,
+              "explanation": "Sugiere el horario de menos tráfico."
+            },
+            {
+              "id": "l28",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did the committee like your proposal?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "They asked for a second version."
+                }
+              ],
+              "stem": "What does the woman imply?",
+              "options": [
+                "The proposal was not accepted as it was.",
+                "The proposal was approved immediately.",
+                "The committee rejected it permanently.",
+                "She did not submit a proposal."
+              ],
+              "answer": 0,
+              "explanation": "Pedir otra versión implica que la primera no bastó."
+            },
+            {
+              "id": "l29",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "You have read this article before, right?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Twice, and I still find new things."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "The article is confusing.",
+                "He never finished it.",
+                "The article rewards rereading.",
+                "He read it only once."
+              ],
+              "answer": 2,
+              "explanation": "Sigue encontrando cosas: el texto da más en cada lectura."
+            },
+            {
+              "id": "l30",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "The lab closes at six now."
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Since when? I was there until nine last week."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She agrees with the change.",
+                "She is surprised by the change.",
+                "She never uses the lab.",
+                "She proposed the new hours."
+              ],
+              "answer": 1,
+              "explanation": "«Since when?» expresa sorpresa ante algo nuevo."
+            }
+          ]
+        },
+        {
+          "id": "l_b1",
+          "kind": "long_conversation",
+          "title": "Part B · Conversación 1",
+          "instructions": "Escucha la conversación y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Student",
+              "text": "I am trying to transfer credits from my summer course abroad and the system rejected them."
+            },
+            {
+              "speaker": "Registrar",
+              "text": "It usually rejects them the first time. Was the course pre-approved before you left?"
+            },
+            {
+              "speaker": "Student",
+              "text": "I sent the syllabus in April and nobody answered."
+            },
+            {
+              "speaker": "Registrar",
+              "text": "Silence is not approval, unfortunately. But an unanswered request is treated differently from no request at all."
+            },
+            {
+              "speaker": "Student",
+              "text": "Does that help me?"
+            },
+            {
+              "speaker": "Registrar",
+              "text": "It means you can file a late approval instead of an appeal. The late approval goes to your department; the appeal goes to a committee that meets twice a year."
+            },
+            {
+              "speaker": "Student",
+              "text": "So the difference is months."
+            },
+            {
+              "speaker": "Registrar",
+              "text": "Months, and a much lower chance. Do you still have the email you sent in April?"
+            },
+            {
+              "speaker": "Student",
+              "text": "I do, with the syllabus attached."
+            },
+            {
+              "speaker": "Registrar",
+              "text": "Then attach it to the late approval form. That email is the whole case."
+            },
+            {
+              "speaker": "Student",
+              "text": "What if the department says the content does not match?"
+            },
+            {
+              "speaker": "Registrar",
+              "text": "Then it becomes an elective rather than a requirement. You keep the credits either way."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l31",
+              "stem": "What is the student's problem?",
+              "options": [
+                "She missed the registration deadline.",
+                "Her department refused to let her travel.",
+                "She failed a summer course.",
+                "Credits from a course abroad were rejected."
+              ],
+              "answer": 3,
+              "explanation": "El sistema rechazó la convalidación."
+            },
+            {
+              "id": "l32",
+              "stem": "What does the registrar say about the April email?",
+              "options": [
+                "An unanswered request counts differently from no request.",
+                "It counts as an approval.",
+                "It has no value at all.",
+                "It must be sent again."
+              ],
+              "answer": 0,
+              "explanation": "«An unanswered request is treated differently from no request at all»."
+            },
+            {
+              "id": "l33",
+              "stem": "Why is the late approval preferable to an appeal?",
+              "options": [
+                "It costs less money.",
+                "It is decided by the same committee.",
+                "It is faster and more likely to succeed.",
+                "It does not require the syllabus."
+              ],
+              "answer": 2,
+              "explanation": "El comité se reúne dos veces al año y la probabilidad es menor."
+            },
+            {
+              "id": "l34",
+              "stem": "What happens if the department says the content does not match?",
+              "options": [
+                "The credits are lost.",
+                "The credits count as an elective.",
+                "The student must retake the course.",
+                "The case goes to the committee."
+              ],
+              "answer": 1,
+              "explanation": "«You keep the credits either way», como optativa."
+            }
+          ]
+        },
+        {
+          "id": "l_b2",
+          "kind": "long_conversation",
+          "title": "Part B · Conversación 2",
+          "instructions": "Escucha la conversación y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Student",
+              "text": "I signed up to volunteer at the museum, but the schedule they sent clashes with my seminar."
+            },
+            {
+              "speaker": "Coordinator",
+              "text": "Which shift did they give you?"
+            },
+            {
+              "speaker": "Student",
+              "text": "Thursday mornings, all semester."
+            },
+            {
+              "speaker": "Coordinator",
+              "text": "That is the shift nobody wants, which is why it was still open. Can you swap?"
+            },
+            {
+              "speaker": "Student",
+              "text": "With whom? I do not know anyone else in the programme."
+            },
+            {
+              "speaker": "Coordinator",
+              "text": "There is a board where volunteers post swaps. The trouble is that a permanent swap needs both supervisors to sign."
+            },
+            {
+              "speaker": "Student",
+              "text": "And a temporary one?"
+            },
+            {
+              "speaker": "Coordinator",
+              "text": "A temporary swap only needs you to log it. Most people do temporary swaps every week and never formalise anything."
+            },
+            {
+              "speaker": "Student",
+              "text": "Would that count against me at the end?"
+            },
+            {
+              "speaker": "Coordinator",
+              "text": "Only if the hours do not add up. The certificate counts hours, not which morning you worked them."
+            },
+            {
+              "speaker": "Student",
+              "text": "Then I will find someone for the semester and log it weekly."
+            },
+            {
+              "speaker": "Coordinator",
+              "text": "That is what everyone does. Just log it the same day, not at the end of the month."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l35",
+              "stem": "What is the student's difficulty?",
+              "options": [
+                "She was not accepted as a volunteer.",
+                "The museum is too far away.",
+                "She has too few volunteer hours.",
+                "Her volunteer shift conflicts with a seminar."
+              ],
+              "answer": 3,
+              "explanation": "El turno choca con su seminario."
+            },
+            {
+              "id": "l36",
+              "stem": "Why was the Thursday shift still available?",
+              "options": [
+                "It is the least popular shift.",
+                "It was created recently.",
+                "It requires special training.",
+                "It pays less than others."
+              ],
+              "answer": 0,
+              "explanation": "«That is the shift nobody wants»."
+            },
+            {
+              "id": "l37",
+              "stem": "What is the advantage of a temporary swap?",
+              "options": [
+                "It is valid for the whole semester automatically.",
+                "It adds extra hours to the certificate.",
+                "It only needs to be logged, not signed by supervisors.",
+                "It does not need to be recorded."
+              ],
+              "answer": 2,
+              "explanation": "El permanente exige dos firmas; el temporal solo registrarlo."
+            },
+            {
+              "id": "l38",
+              "stem": "What does the certificate record?",
+              "options": [
+                "The specific mornings worked.",
+                "The number of hours worked.",
+                "The supervisor's evaluation.",
+                "The number of swaps made."
+              ],
+              "answer": 1,
+              "explanation": "«The certificate counts hours, not which morning»."
+            }
+          ]
+        },
+        {
+          "id": "l_c1",
+          "kind": "talk",
+          "title": "Part C · Charla 1",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "I want to spend today on a question that sounds trivial: why do we plant trees along city streets, and does it actually do what we think?"
+            },
+            {
+              "speaker": "Professor",
+              "text": "The usual justification is temperature. A mature street tree can lower the air beneath it by two or three degrees on a hot afternoon, partly by shade and partly by transpiration, which is evaporation through the leaves."
+            },
+            {
+              "speaker": "Professor",
+              "text": "But the measured benefit varies enormously, and the variable that predicts it best is not species or age. It is street width. On a narrow street the buildings already provide shade, so the tree adds little. On a wide street it adds a great deal."
+            },
+            {
+              "speaker": "Professor",
+              "text": "There is a second effect that is easier to overlook. Trees slow the wind, and slower air moves heat away from the pavement less efficiently. On a still, humid night a heavily planted street can be warmer than a bare one."
+            },
+            {
+              "speaker": "Professor",
+              "text": "None of this is an argument against planting. It is an argument against planting uniformly, which is what most municipal programmes do, because uniform planting is administratively simple and its failures are invisible."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l39",
+              "stem": "What is the main point of the talk?",
+              "options": [
+                "Street trees should not be planted in cities.",
+                "Tree species is the most important variable.",
+                "Municipal programmes plant too few trees.",
+                "The benefit of street trees depends heavily on context."
+              ],
+              "answer": 3,
+              "explanation": "El argumento es contra la plantación uniforme, no contra plantar."
+            },
+            {
+              "id": "l40",
+              "stem": "How much can a mature street tree cool the air beneath it?",
+              "options": [
+                "Two or three degrees on a hot afternoon.",
+                "Ten degrees at any time.",
+                "Less than one degree.",
+                "The professor does not say."
+              ],
+              "answer": 0,
+              "explanation": "Da la cifra explícitamente."
+            },
+            {
+              "id": "l41",
+              "stem": "Which variable best predicts the benefit?",
+              "options": [
+                "The age of the tree.",
+                "The species of the tree.",
+                "The width of the street.",
+                "The height of the buildings."
+              ],
+              "answer": 2,
+              "explanation": "«It is street width»."
+            },
+            {
+              "id": "l42",
+              "stem": "What unexpected effect does the professor describe?",
+              "options": [
+                "Trees increase humidity to dangerous levels.",
+                "Trees can make a street warmer at night by slowing the wind.",
+                "Trees damage pavement over time.",
+                "Trees block street lighting."
+              ],
+              "answer": 1,
+              "explanation": "Al frenar el viento, el calor se disipa peor de noche."
+            }
+          ]
+        },
+        {
+          "id": "l_c2",
+          "kind": "talk",
+          "title": "Part C · Charla 2",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "Let us look at how the postal service changed what people wrote, because it is a good example of a technology altering a form."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Before the 1840s, in Britain the recipient paid for the letter, and the price depended on distance and on the number of sheets. A single sheet folded and sealed was cheap; an envelope counted as a second sheet."
+            },
+            {
+              "speaker": "Professor",
+              "text": "The consequences are visible in surviving correspondence. Writers crossed their letters, turning the page ninety degrees and writing over their own lines to fit more words on one sheet. They also wrote to the edges, with no margins."
+            },
+            {
+              "speaker": "Professor",
+              "text": "When the uniform penny post arrived in 1840, the sender paid a flat rate regardless of distance. Volume rose roughly fivefold within a decade, but the more interesting change is in the letters themselves. They became shorter, more frequent and far more casual."
+            },
+            {
+              "speaker": "Professor",
+              "text": "A letter had been an event worth filling every inch of paper for. It became a message you could send because you had a small thing to say, which is closer to how we use messaging now than to what came before it."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l43",
+              "stem": "Before 1840, who paid for a letter in Britain?",
+              "options": [
+                "The sender.",
+                "Both equally.",
+                "The government.",
+                "The recipient."
+              ],
+              "answer": 3,
+              "explanation": "«The recipient paid for the letter»."
+            },
+            {
+              "id": "l44",
+              "stem": "Why did writers cross their letters?",
+              "options": [
+                "To fit more words on a single sheet.",
+                "To make the writing harder to read.",
+                "To decorate the page.",
+                "To indicate urgency."
+              ],
+              "answer": 0,
+              "explanation": "Cada hoja extra encarecía el envío."
+            },
+            {
+              "id": "l45",
+              "stem": "What happened to postal volume after 1840?",
+              "options": [
+                "It fell sharply.",
+                "It stayed the same.",
+                "It rose about fivefold within a decade.",
+                "It doubled after fifty years."
+              ],
+              "answer": 2,
+              "explanation": "El profesor da esa cifra."
+            },
+            {
+              "id": "l46",
+              "stem": "What does the professor consider the most interesting change?",
+              "options": [
+                "Letters became longer and more formal.",
+                "Letters became shorter, more frequent and more casual.",
+                "Envelopes disappeared.",
+                "Postal costs rose again."
+              ],
+              "answer": 1,
+              "explanation": "Dice que lo interesante es el cambio en las cartas mismas."
+            }
+          ]
+        },
+        {
+          "id": "l_c3",
+          "kind": "talk",
+          "title": "Part C · Charla 3",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "The topic today is sleep in migratory birds, and the reason it is interesting is that it breaks an assumption we did not know we were making."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Great frigatebirds fly continuously over the ocean for up to two months. They cannot land on water. For a long time the question of when they sleep had two candidate answers: they do not sleep, or they sleep in flight."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Recordings of brain activity from birds carrying small devices settled it. They do sleep in flight, but for about forty-two minutes a day, against more than twelve hours a night on land. Most of that sleep occurs while circling in rising air, and often with one hemisphere awake."
+            },
+            {
+              "speaker": "Professor",
+              "text": "The obvious conclusion would be that these birds need very little sleep. That is exactly what the data do not show. On returning to land they sleep normally again, and the flight period looks like sustained deprivation that they tolerate rather than a lower requirement."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Which raises the question we cannot yet answer: what does sleep do, if an animal can go two months on forty minutes a day and then simply resume?"
+            }
+          ],
+          "questions": [
+            {
+              "id": "l47",
+              "stem": "How long can great frigatebirds remain in continuous flight?",
+              "options": [
+                "About two weeks.",
+                "Up to a year.",
+                "Three days at most.",
+                "Up to two months."
+              ],
+              "answer": 3,
+              "explanation": "«Up to two months»."
+            },
+            {
+              "id": "l48",
+              "stem": "How much do the birds sleep while flying?",
+              "options": [
+                "About forty-two minutes a day.",
+                "About twelve hours a day.",
+                "They do not sleep at all.",
+                "About six hours a day."
+              ],
+              "answer": 0,
+              "explanation": "La cifra de las grabaciones cerebrales."
+            },
+            {
+              "id": "l49",
+              "stem": "What does the professor say about the conclusion that these birds need little sleep?",
+              "options": [
+                "It is confirmed by the recordings.",
+                "It applies only to young birds.",
+                "The data do not support it.",
+                "It was proved in the 1990s."
+              ],
+              "answer": 2,
+              "explanation": "«That is exactly what the data do not show»."
+            },
+            {
+              "id": "l50",
+              "stem": "What question remains unanswered?",
+              "options": [
+                "How the birds navigate at night.",
+                "What function sleep actually serves.",
+                "Why the birds cannot land on water.",
+                "How the recording devices work."
+              ],
+              "answer": 1,
+              "explanation": "La charla cierra con esa pregunta abierta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "parts": [
+        {
+          "id": "s_a",
+          "kind": "completion",
+          "title": "Structure",
+          "instructions": "Elige la opción que completa la frase correctamente.",
+          "questions": [
+            {
+              "id": "s01",
+              "stem": "______ has the technique been applied outside the laboratory.",
+              "options": [
+                "Seldom it",
+                "It seldom",
+                "Seldom that",
+                "Seldom"
+              ],
+              "answer": 3,
+              "explanation": "«Seldom» inicial exige inversión y no admite sujeto delante."
+            },
+            {
+              "id": "s02",
+              "stem": "The archive contains documents ______ date from the fourteenth century.",
+              "options": [
+                "that",
+                "what",
+                "which they",
+                "whose"
+              ],
+              "answer": 0,
+              "explanation": "Relativo sujeto para cosas: that / which."
+            },
+            {
+              "id": "s03",
+              "stem": "______ the results were inconclusive, the trial was extended.",
+              "options": [
+                "Because of",
+                "Due to",
+                "Because",
+                "Owing"
+              ],
+              "answer": 2,
+              "explanation": "Ante oración completa va conjunción: because."
+            },
+            {
+              "id": "s04",
+              "stem": "The new bridge is ______ the old one.",
+              "options": [
+                "three times longer as",
+                "three times as long as",
+                "as three times long as",
+                "longer three times than"
+              ],
+              "answer": 1,
+              "explanation": "Estructura de múltiplo: three times as long as."
+            },
+            {
+              "id": "s05",
+              "stem": "Under no circumstances ______ the sample be removed from the freezer.",
+              "options": [
+                "it should",
+                "should it",
+                "would it",
+                "should"
+              ],
+              "answer": 3,
+              "explanation": "Expresión negativa inicial: inversión sin sujeto extra."
+            },
+            {
+              "id": "s06",
+              "stem": "The director insisted that every application ______ anonymously.",
+              "options": [
+                "be reviewed",
+                "is reviewed",
+                "was reviewed",
+                "would be reviewed"
+              ],
+              "answer": 0,
+              "explanation": "Subjuntivo tras «insist that»."
+            },
+            {
+              "id": "s07",
+              "stem": "______ the two candidates has withdrawn from the process.",
+              "options": [
+                "None of",
+                "Not either",
+                "Neither of",
+                "Neither from"
+              ],
+              "answer": 2,
+              "explanation": "«Neither of» + verbo en singular para dos."
+            },
+            {
+              "id": "s08",
+              "stem": "The species is found ______ in the highlands of two islands.",
+              "options": [
+                "alone",
+                "only",
+                "single",
+                "unique"
+              ],
+              "answer": 1,
+              "explanation": "El adverbio que restringe el lugar es «only»."
+            },
+            {
+              "id": "s09",
+              "stem": "______ for the delay, the launch would have taken place in March.",
+              "options": [
+                "Except",
+                "Unless",
+                "Apart",
+                "But"
+              ],
+              "answer": 3,
+              "explanation": "«But for» = de no ser por."
+            },
+            {
+              "id": "s10",
+              "stem": "She objected to ______ without prior notice.",
+              "options": [
+                "being transferred",
+                "be transferred",
+                "transfer",
+                "have transferred"
+              ],
+              "answer": 0,
+              "explanation": "«Object to» va seguido de gerundio."
+            },
+            {
+              "id": "s11",
+              "stem": "The evidence is far from ______.",
+              "options": [
+                "conclusion",
+                "conclude",
+                "conclusive",
+                "concluding"
+              ],
+              "answer": 2,
+              "explanation": "Tras «far from» va adjetivo."
+            },
+            {
+              "id": "s12",
+              "stem": "No sooner had the funding arrived ______ the team began the fieldwork.",
+              "options": [
+                "when",
+                "than",
+                "then",
+                "that"
+              ],
+              "answer": 1,
+              "explanation": "Correlación fija: no sooner … than."
+            },
+            {
+              "id": "s13",
+              "stem": "The manuscript, ______ for centuries, was rediscovered in 1911.",
+              "options": [
+                "losing",
+                "having lose",
+                "it was lost",
+                "lost"
+              ],
+              "answer": 3,
+              "explanation": "Participio pasado reducido: «(which had been) lost»."
+            },
+            {
+              "id": "s14",
+              "stem": "Little ______ about the composer's early years.",
+              "options": [
+                "is known",
+                "knows",
+                "is knowing",
+                "has known"
+              ],
+              "answer": 0,
+              "explanation": "«Little» inicial con verbo en pasiva: little is known."
+            },
+            {
+              "id": "s15",
+              "stem": "The faster the reaction proceeds, ______ the yield.",
+              "options": [
+                "lower",
+                "the lowest",
+                "the lower",
+                "as low as"
+              ],
+              "answer": 2,
+              "explanation": "Estructura correlativa: the + comparativo, the + comparativo."
+            }
+          ]
+        },
+        {
+          "id": "s_b",
+          "kind": "error_id",
+          "title": "Written Expression",
+          "instructions": "Identifica la parte subrayada que hay que corregir.",
+          "questions": [
+            {
+              "id": "s16",
+              "stem": "(A) Every one of the volunteers were (B) interviewed (C) separately (D) last spring.",
+              "options": [
+                "Every one of the volunteers were",
+                "interviewed",
+                "separately",
+                "last spring"
+              ],
+              "answer": 0,
+              "explanation": "«Every one» es singular: was interviewed."
+            },
+            {
+              "id": "s17",
+              "stem": "(A) The research (B) was carried out (C) in three countries, (D) all of them in Asia.",
+              "options": [
+                "The research",
+                "was carried out",
+                "in three countries,",
+                "all of them in Asia"
+              ],
+              "answer": 3,
+              "explanation": "Con relativo se dice «all of which»; «all of them» crea dos oraciones sin nexo."
+            },
+            {
+              "id": "s18",
+              "stem": "(A) Although it was raining, (B) but the ceremony (C) took place (D) outdoors.",
+              "options": [
+                "Although it was raining,",
+                "but the ceremony",
+                "took place",
+                "outdoors"
+              ],
+              "answer": 1,
+              "explanation": "«Although» y «but» no se combinan: sobra «but»."
+            },
+            {
+              "id": "s19",
+              "stem": "(A) The information provided by the sensors are (B) stored (C) in a database (D) for ten years.",
+              "options": [
+                "The information provided by the sensors are",
+                "stored",
+                "in a database",
+                "for ten years"
+              ],
+              "answer": 0,
+              "explanation": "«Information» es incontable: is stored."
+            },
+            {
+              "id": "s20",
+              "stem": "(A) He is (B) the only one of the engineers (C) who (D) have signed the report.",
+              "options": [
+                "He is",
+                "the only one of the engineers",
+                "who",
+                "have signed the report"
+              ],
+              "answer": 3,
+              "explanation": "«The only one» fuerza singular: who has signed."
+            },
+            {
+              "id": "s21",
+              "stem": "(A) The temperature rose (B) gradually (C) during the night (D) and reach a peak at dawn.",
+              "options": [
+                "The temperature rose",
+                "gradually",
+                "during the night",
+                "and reach a peak at dawn"
+              ],
+              "answer": 3,
+              "explanation": "Coordinación con «rose»: and reached."
+            },
+            {
+              "id": "s22",
+              "stem": "(A) Scarcely the meeting had begun (B) when the fire alarm (C) interrupted (D) the discussion.",
+              "options": [
+                "Scarcely the meeting had begun",
+                "when the fire alarm",
+                "interrupted",
+                "the discussion"
+              ],
+              "answer": 0,
+              "explanation": "«Scarcely» inicial exige inversión: scarcely had the meeting begun."
+            },
+            {
+              "id": "s23",
+              "stem": "(A) The two samples (B) resemble to each other (C) closely (D) in composition.",
+              "options": [
+                "The two samples",
+                "resemble to each other",
+                "closely",
+                "in composition"
+              ],
+              "answer": 1,
+              "explanation": "«Resemble» es transitivo: resemble each other."
+            },
+            {
+              "id": "s24",
+              "stem": "(A) Neither the map (B) nor the compass (C) were (D) of any use in the fog.",
+              "options": [
+                "Neither the map",
+                "nor the compass",
+                "were",
+                "of any use in the fog"
+              ],
+              "answer": 2,
+              "explanation": "El verbo concuerda con «the compass», singular: was."
+            },
+            {
+              "id": "s25",
+              "stem": "(A) The committee (B) has not yet decided (C) whether or not (D) to accepting the proposal.",
+              "options": [
+                "The committee",
+                "has not yet decided",
+                "whether or not",
+                "to accepting the proposal"
+              ],
+              "answer": 3,
+              "explanation": "Tras «to» va infinitivo: to accept."
+            },
+            {
+              "id": "s26",
+              "stem": "(A) A large amount of (B) errors (C) were found (D) in the transcription.",
+              "options": [
+                "A large amount of",
+                "errors",
+                "were found",
+                "in the transcription"
+              ],
+              "answer": 0,
+              "explanation": "«Errors» es contable: a large number of."
+            },
+            {
+              "id": "s27",
+              "stem": "(A) The library (B) is open (C) everyday (D) except on public holidays.",
+              "options": [
+                "The library",
+                "is open",
+                "everyday",
+                "except on public holidays"
+              ],
+              "answer": 2,
+              "explanation": "«Everyday» es adjetivo; el adverbio es «every day»."
+            },
+            {
+              "id": "s28",
+              "stem": "(A) Being that the road was closed, (B) the delivery (C) arrived (D) two days late.",
+              "options": [
+                "Being that the road was closed,",
+                "the delivery",
+                "arrived",
+                "two days late"
+              ],
+              "answer": 0,
+              "explanation": "«Being that» no es estándar: because the road was closed."
+            },
+            {
+              "id": "s29",
+              "stem": "(A) The professor (B) recommended us (C) to read (D) the second chapter first.",
+              "options": [
+                "The professor",
+                "recommended us",
+                "to read",
+                "the second chapter first"
+              ],
+              "answer": 1,
+              "explanation": "«Recommend» no admite objeto + infinitivo: recommended that we read."
+            },
+            {
+              "id": "s30",
+              "stem": "(A) The building was designed (B) by an architect (C) whom (D) had never worked in stone.",
+              "options": [
+                "The building was designed",
+                "by an architect",
+                "whom",
+                "had never worked in stone"
+              ],
+              "answer": 2,
+              "explanation": "Es sujeto de la relativa: who, no whom."
+            },
+            {
+              "id": "s31",
+              "stem": "(A) Their conclusions (B) are similar (C) than those (D) of the previous team.",
+              "options": [
+                "Their conclusions",
+                "are similar",
+                "than those",
+                "of the previous team"
+              ],
+              "answer": 2,
+              "explanation": "«Similar to», no «similar than»."
+            },
+            {
+              "id": "s32",
+              "stem": "(A) The rate at which the ice melts depend (B) heavily (C) on the salinity (D) of the water.",
+              "options": [
+                "The rate at which the ice melts depend",
+                "heavily",
+                "on the salinity",
+                "of the water"
+              ],
+              "answer": 0,
+              "explanation": "El sujeto es «the rate», singular: depends."
+            },
+            {
+              "id": "s33",
+              "stem": "(A) In 1846 the astronomer (B) has published (C) a table (D) that is still consulted.",
+              "options": [
+                "In 1846 the astronomer",
+                "has published",
+                "a table",
+                "that is still consulted"
+              ],
+              "answer": 1,
+              "explanation": "Fecha cerrada en el pasado: published."
+            },
+            {
+              "id": "s34",
+              "stem": "(A) The equipment (B) must be calibrated (C) previous to (D) each measurement.",
+              "options": [
+                "The equipment",
+                "must be calibrated",
+                "previous to",
+                "each measurement"
+              ],
+              "answer": 2,
+              "explanation": "El giro correcto es «prior to»."
+            },
+            {
+              "id": "s35",
+              "stem": "(A) Hardly anyone (B) in the department (C) knew about the change, (D) don't they?",
+              "options": [
+                "Hardly anyone",
+                "in the department",
+                "knew about the change,",
+                "don't they?"
+              ],
+              "answer": 3,
+              "explanation": "La coletilla debe concordar en tiempo y sentido: did they?"
+            },
+            {
+              "id": "s36",
+              "stem": "(A) The novel, (B) that was written in exile, (C) was banned (D) for thirty years.",
+              "options": [
+                "The novel,",
+                "that was written in exile,",
+                "was banned",
+                "for thirty years"
+              ],
+              "answer": 1,
+              "explanation": "Relativa explicativa: which was written."
+            },
+            {
+              "id": "s37",
+              "stem": "(A) There has been (B) considerable progresses (C) since the first (D) trial in 1998.",
+              "options": [
+                "There has been",
+                "considerable progresses",
+                "since the first",
+                "trial in 1998"
+              ],
+              "answer": 1,
+              "explanation": "«Progress» es incontable: no lleva plural."
+            },
+            {
+              "id": "s38",
+              "stem": "(A) The site is (B) accessible only (C) by foot, (D) which limits the number of visitors.",
+              "options": [
+                "The site is",
+                "accessible only",
+                "by foot,",
+                "which limits the number of visitors"
+              ],
+              "answer": 2,
+              "explanation": "La expresión fija es «on foot»."
+            },
+            {
+              "id": "s39",
+              "stem": "(A) Most of the delegates (B) agreed (C) with the proposal, (D) but few of them was willing to fund it.",
+              "options": [
+                "Most of the delegates",
+                "agreed",
+                "with the proposal,",
+                "but few of them was willing to fund it"
+              ],
+              "answer": 3,
+              "explanation": "«Few» es plural: were willing."
+            },
+            {
+              "id": "s40",
+              "stem": "(A) The instrument is (B) more sensitive (C) as any other (D) currently available.",
+              "options": [
+                "The instrument is",
+                "more sensitive",
+                "as any other",
+                "currently available"
+              ],
+              "answer": 2,
+              "explanation": "Comparativo con «than»: than any other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "parts": [
+        {
+          "id": "r_p1",
+          "kind": "passage",
+          "title": "Texto 1",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The domestication of the horse is often dated by bones, but bones are a poor witness. A domesticated horse and a wild one differ so little in the skeleton that archaeologists arguing from remains alone have proposed dates two thousand years apart.\n\nThe evidence that narrowed the range came from teeth. A horse ridden with a bit develops a characteristic wear pattern on the second premolar, where the metal rests. The wear is distinctive because no natural process produces it: horses do not chew anything hard enough in that position. Examining collections from the steppe, researchers found the pattern on specimens from around 3500 BCE, well before the earliest depictions of riding.\n\nA second line of evidence came from pottery. Fragments from the same region retained lipid residues whose isotopic signature matches mare's milk, which is informative because milking requires an animal tolerant of daily handling. Neither line proves domestication by itself. Bit wear could reflect the control of an otherwise wild animal, and residues could come from hunted mares, though milking a hunted mare is a difficult proposition.\n\nTogether the two lines are much stronger than either alone, and this is the general point worth taking from the case. Archaeology rarely produces decisive evidence. What it produces are independent weak signals, and the discipline advances mostly by finding ways to make them converge.",
+          "questions": [
+            {
+              "id": "r01",
+              "stem": "What is the main point of the passage?",
+              "options": [
+                "Bones are the most reliable evidence for domestication.",
+                "Independent lines of weak evidence together date horse domestication.",
+                "Horses were domesticated much later than believed.",
+                "Pottery analysis has replaced skeletal analysis."
+              ],
+              "answer": 1,
+              "explanation": "El cierre generaliza: la arqueología avanza haciendo converger señales débiles."
+            },
+            {
+              "id": "r02",
+              "stem": "Why are bones described as a poor witness?",
+              "options": [
+                "Bones rarely survive on the steppe.",
+                "Bones cannot be dated accurately.",
+                "Few horse bones have been found.",
+                "Wild and domesticated horses have nearly identical skeletons."
+              ],
+              "answer": 3,
+              "explanation": "La diferencia esquelética es mínima."
+            },
+            {
+              "id": "r03",
+              "stem": "What causes the wear pattern on the second premolar?",
+              "options": [
+                "Contact with a metal bit.",
+                "Chewing hard vegetation.",
+                "Natural ageing of the tooth.",
+                "Disease in domesticated herds."
+              ],
+              "answer": 0,
+              "explanation": "Es donde descansa el bocado."
+            },
+            {
+              "id": "r04",
+              "stem": "Why is the wear pattern considered distinctive?",
+              "options": [
+                "It appears only in very old horses.",
+                "It is visible to the naked eye.",
+                "No natural process produces it in that position.",
+                "It occurs in all mammals."
+              ],
+              "answer": 2,
+              "explanation": "El texto lo dice explícitamente."
+            },
+            {
+              "id": "r05",
+              "stem": "What date did the tooth evidence indicate?",
+              "options": [
+                "Around 1500 BCE.",
+                "Around 3500 BCE.",
+                "Around 5500 BCE.",
+                "The passage does not say."
+              ],
+              "answer": 1,
+              "explanation": "La cifra aparece en el segundo párrafo."
+            },
+            {
+              "id": "r06",
+              "stem": "Why is evidence of milking significant?",
+              "options": [
+                "Milk was the main food of the steppe peoples.",
+                "Only domesticated animals produce milk.",
+                "Milk residues are easy to date.",
+                "Milking requires an animal used to daily handling."
+              ],
+              "answer": 3,
+              "explanation": "Implica tolerancia al manejo diario, propia de un animal domesticado."
+            },
+            {
+              "id": "r07",
+              "stem": "What weakness does the author admit about bit wear?",
+              "options": [
+                "It could come from controlling an animal that was still wild.",
+                "It cannot be dated at all.",
+                "It is found only on a few teeth.",
+                "It is produced by natural chewing."
+              ],
+              "answer": 0,
+              "explanation": "El texto concede esa posibilidad."
+            },
+            {
+              "id": "r08",
+              "stem": "Why does the author find the hunted-mare objection weak?",
+              "options": [
+                "Hunted mares produce no milk.",
+                "No hunted mare bones have been found.",
+                "Milking a hunted mare would be very difficult.",
+                "The residues are too old for hunting."
+              ],
+              "answer": 2,
+              "explanation": "«Milking a hunted mare is a difficult proposition»."
+            },
+            {
+              "id": "r09",
+              "stem": "What general claim does the author make about archaeology?",
+              "options": [
+                "It depends mainly on chemical analysis.",
+                "It advances by making independent weak signals converge.",
+                "It rarely reaches useful conclusions.",
+                "It should abandon skeletal evidence."
+              ],
+              "answer": 1,
+              "explanation": "Es la conclusión del último párrafo."
+            },
+            {
+              "id": "r10",
+              "stem": "The word 'converge' in the last paragraph is closest in meaning to",
+              "options": [
+                "contradict one another",
+                "become weaker",
+                "be published together",
+                "point to the same conclusion"
+              ],
+              "answer": 3,
+              "explanation": "Converger: coincidir en un mismo resultado."
+            }
+          ]
+        },
+        {
+          "id": "r_p2",
+          "kind": "passage",
+          "title": "Texto 2",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "Standardised time is a nineteenth-century invention, and the reason it was invented is narrower than most accounts suggest. Before the 1880s, towns kept local solar time, so noon in one city fell several minutes after noon in another. For daily life this was not a problem. Nobody needed to coordinate anything to the minute with a town two hundred kilometres away.\n\nRailways changed that, but not, as is often said, because passengers missed trains. The decisive issue was safety. Much of the early network was single track, and two trains sharing one line were kept apart by a timetable rather than by signals. A conductor whose watch differed from another conductor's by four minutes was not inconvenienced; he was in danger.\n\nThe railways therefore imposed their own time internally, decades before governments adopted it. Stations displayed two clocks, one showing railway time and one showing local time, and this arrangement persisted long enough to appear in novels and photographs.\n\nNational adoption followed the practice rather than creating it. When Britain made Greenwich time legal in 1880, most of the country had already been living by it for thirty years because the railway timetable governed everything that depended on the railway, which by then was almost everything. The law recorded a change that commerce had already made.",
+          "questions": [
+            {
+              "id": "r11",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                "Railway safety, not convenience, drove the adoption of standard time.",
+                "Governments imposed standard time on reluctant railways.",
+                "Local solar time was more accurate than standard time.",
+                "Passengers demanded standardised timetables."
+              ],
+              "answer": 0,
+              "explanation": "El texto insiste en que el motivo decisivo fue la seguridad."
+            },
+            {
+              "id": "r12",
+              "stem": "Why was local solar time not a problem before the railways?",
+              "options": [
+                "Clocks were not accurate enough to show the difference.",
+                "All towns used the same longitude.",
+                "Nobody needed minute-level coordination over long distances.",
+                "Travel between towns was forbidden."
+              ],
+              "answer": 2,
+              "explanation": "No hacía falta coordinarse al minuto con otra ciudad."
+            },
+            {
+              "id": "r13",
+              "stem": "What kept trains apart on single-track lines?",
+              "options": [
+                "Mechanical signals.",
+                "The timetable.",
+                "Telegraph messages.",
+                "Station masters on horseback."
+              ],
+              "answer": 1,
+              "explanation": "«Kept apart by a timetable rather than by signals»."
+            },
+            {
+              "id": "r14",
+              "stem": "Why was a four-minute discrepancy dangerous?",
+              "options": [
+                "Passengers would miss connections.",
+                "The engine could overheat.",
+                "Ticket prices would be miscalculated.",
+                "Two trains could occupy the same single track."
+              ],
+              "answer": 3,
+              "explanation": "En vía única, la separación depende del horario."
+            },
+            {
+              "id": "r15",
+              "stem": "What did stations display?",
+              "options": [
+                "Two clocks, one for railway time and one for local time.",
+                "A single clock showing Greenwich time.",
+                "No clocks at all.",
+                "A clock for each destination."
+              ],
+              "answer": 0,
+              "explanation": "El tercer párrafo lo describe."
+            },
+            {
+              "id": "r16",
+              "stem": "When did the railways impose their own time?",
+              "options": [
+                "At the same time as the government.",
+                "After the 1880 law.",
+                "Decades before governments adopted it.",
+                "Only in the twentieth century."
+              ],
+              "answer": 2,
+              "explanation": "«Decades before governments adopted it»."
+            },
+            {
+              "id": "r17",
+              "stem": "What happened in Britain in 1880?",
+              "options": [
+                "The first railway opened.",
+                "Greenwich time was made legal.",
+                "Local solar time was abolished by protest.",
+                "Two-clock stations were banned."
+              ],
+              "answer": 1,
+              "explanation": "Fue el reconocimiento legal."
+            },
+            {
+              "id": "r18",
+              "stem": "How does the author characterise the 1880 law?",
+              "options": [
+                "As the origin of standard time.",
+                "As a failure that was later reversed.",
+                "As a response to public complaints.",
+                "As recording a change that had already happened."
+              ],
+              "answer": 3,
+              "explanation": "«The law recorded a change that commerce had already made»."
+            },
+            {
+              "id": "r19",
+              "stem": "What does the passage suggest about the phrase 'because passengers missed trains'?",
+              "options": [
+                "It is a common but inaccurate explanation.",
+                "It is the main reason for standardisation.",
+                "It applies only to Britain.",
+                "It explains the two-clock arrangement."
+              ],
+              "answer": 0,
+              "explanation": "«Not, as is often said, because passengers missed trains»."
+            },
+            {
+              "id": "r20",
+              "stem": "The word 'imposed' in the third paragraph is closest in meaning to",
+              "options": [
+                "suggested",
+                "abandoned",
+                "enforced",
+                "delayed"
+              ],
+              "answer": 2,
+              "explanation": "Imponer: establecer por autoridad."
+            }
+          ]
+        },
+        {
+          "id": "r_p3",
+          "kind": "passage",
+          "title": "Texto 3",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "Coral bleaching is commonly described as coral death, which is inaccurate in a way that matters for policy. A bleached coral is alive. What it has lost is the population of algae living inside its tissues, which supply most of its energy and all of its colour.\n\nThe expulsion is a response to stress, usually heat. Above a threshold that varies by species and by local history, the algae begin producing compounds that damage the host, and the host ejects them. Without the algae the coral can feed by capturing plankton, but at a fraction of the rate. It is running on reserves.\n\nRecovery is therefore a race. If temperatures fall within a few weeks, algae recolonise and the coral regains colour with no lasting damage. If the heat persists for two months or more, the reserves are exhausted and mortality rises sharply. The same reef can thus show near-total recovery after one event and near-total loss after another that looked identical from a satellite.\n\nThis is why counting bleaching events is a poor measure of reef health. Duration matters more than frequency, and the interval between events matters as much as either, since a coral that has not rebuilt its reserves enters the next summer already depleted. Reefs that have been recovering for a decade behave very differently from reefs bleached three years running.",
+          "questions": [
+            {
+              "id": "r21",
+              "stem": "What is the main point of the passage?",
+              "options": [
+                "Bleaching always kills the coral.",
+                "Bleaching is a survivable stress whose outcome depends on duration.",
+                "Satellites cannot detect bleaching.",
+                "Corals do not need algae to survive."
+              ],
+              "answer": 1,
+              "explanation": "El texto distingue blanqueo de muerte y subraya la duración."
+            },
+            {
+              "id": "r22",
+              "stem": "What does a coral lose when it bleaches?",
+              "options": [
+                "Its skeleton.",
+                "Its ability to reproduce.",
+                "Its attachment to the reef.",
+                "The algae living in its tissues."
+              ],
+              "answer": 3,
+              "explanation": "Expulsa las algas simbiontes."
+            },
+            {
+              "id": "r23",
+              "stem": "What do the algae provide?",
+              "options": [
+                "Most of the coral's energy and all of its colour.",
+                "Protection from predators.",
+                "Structural support.",
+                "Resistance to disease only."
+              ],
+              "answer": 0,
+              "explanation": "Lo dice el primer párrafo."
+            },
+            {
+              "id": "r24",
+              "stem": "Why does the coral expel the algae?",
+              "options": [
+                "The algae stop producing energy.",
+                "The coral needs more space to grow.",
+                "Under heat stress the algae produce damaging compounds.",
+                "The algae leave voluntarily."
+              ],
+              "answer": 2,
+              "explanation": "Las algas empiezan a producir compuestos que dañan al huésped."
+            },
+            {
+              "id": "r25",
+              "stem": "How does a bleached coral obtain food?",
+              "options": [
+                "It cannot obtain any food.",
+                "By capturing plankton, at a much lower rate.",
+                "By absorbing minerals from the water.",
+                "From neighbouring corals."
+              ],
+              "answer": 1,
+              "explanation": "Puede alimentarse de plancton, pero a una fracción del ritmo."
+            },
+            {
+              "id": "r26",
+              "stem": "What happens if temperatures fall within a few weeks?",
+              "options": [
+                "The coral dies anyway.",
+                "The algae are permanently lost.",
+                "The reef structure collapses.",
+                "The coral recovers with no lasting damage."
+              ],
+              "answer": 3,
+              "explanation": "Las algas recolonizan y recupera el color."
+            },
+            {
+              "id": "r27",
+              "stem": "After roughly how long does mortality rise sharply?",
+              "options": [
+                "Two months or more.",
+                "One week.",
+                "Six months.",
+                "Two years."
+              ],
+              "answer": 0,
+              "explanation": "La cifra aparece en el tercer párrafo."
+            },
+            {
+              "id": "r28",
+              "stem": "Why can two identical-looking events have different outcomes?",
+              "options": [
+                "Satellites measure them differently.",
+                "Different species are involved each time.",
+                "Their duration and the recovery interval differ.",
+                "One is caused by heat and one by disease."
+              ],
+              "answer": 2,
+              "explanation": "El texto atribuye la diferencia a duración e intervalo."
+            },
+            {
+              "id": "r29",
+              "stem": "Why is counting bleaching events a poor measure?",
+              "options": [
+                "Events are impossible to count accurately.",
+                "It ignores duration and the interval between events.",
+                "Events are too rare to be informative.",
+                "It overestimates coral mortality."
+              ],
+              "answer": 1,
+              "explanation": "Duración e intervalo pesan más que la frecuencia."
+            },
+            {
+              "id": "r30",
+              "stem": "The word 'depleted' in the last paragraph is closest in meaning to",
+              "options": [
+                "fully recovered",
+                "newly colonised",
+                "unusually warm",
+                "with reserves used up"
+              ],
+              "answer": 3,
+              "explanation": "Agotado, sin reservas."
+            }
+          ]
+        },
+        {
+          "id": "r_p4",
+          "kind": "passage",
+          "title": "Texto 4",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "When photography arrived in the 1840s, portrait painters were widely expected to disappear. Within twenty years a photographic portrait cost a fraction of a painted one and took minutes rather than weeks. The prediction was reasonable and it was wrong, though not for the reason usually given.\n\nThe number of portrait painters did fall, sharply, at the cheap end of the market. Itinerant painters who had made a living producing modest likenesses in small towns were displaced almost completely. What survived was the expensive end, and it survived by changing what it was selling.\n\nA painted portrait after 1870 was rarely commissioned for the sake of a record. It was commissioned as an interpretation, and painters leaned into precisely the qualities a camera could not supply: idealisation, the compression of many sittings into one image, an atmosphere assembled rather than observed. Critics of the period, who had grown up with the older standard, complained that portraits no longer looked like their subjects. That was the point.\n\nThe pattern recurs whenever a technology automates part of a craft. The part that is automated is the part that was easiest to describe, and what remains is whatever the description left out. Practitioners who define their work by the automated part disappear; those who define it by the remainder often do better than before.",
+          "questions": [
+            {
+              "id": "r31",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                "Portrait painting survived by redefining what it offered.",
+                "Photography failed to replace painting because it was expensive.",
+                "Portrait painters disappeared as predicted.",
+                "Critics rejected photography for decades."
+              ],
+              "answer": 0,
+              "explanation": "El texto describe cómo cambió lo que se vendía."
+            },
+            {
+              "id": "r32",
+              "stem": "Which painters were displaced almost completely?",
+              "options": [
+                "Painters of aristocratic portraits.",
+                "Painters who worked in cities.",
+                "Itinerant painters at the cheap end of the market.",
+                "Painters who adopted photography."
+              ],
+              "answer": 2,
+              "explanation": "Los itinerantes que hacían retratos modestos."
+            },
+            {
+              "id": "r33",
+              "stem": "According to the passage, why was the original prediction reasonable?",
+              "options": [
+                "Painters were already declining in number.",
+                "Photographs were far cheaper and faster.",
+                "Cameras produced better likenesses.",
+                "Patrons disliked painted portraits."
+              ],
+              "answer": 1,
+              "explanation": "Coste y tiempo, según el primer párrafo."
+            },
+            {
+              "id": "r34",
+              "stem": "What were painted portraits after 1870 commissioned for?",
+              "options": [
+                "As cheap alternatives to photographs.",
+                "As documents for legal purposes.",
+                "As studies for photographers.",
+                "As interpretations rather than records."
+              ],
+              "answer": 3,
+              "explanation": "«Commissioned as an interpretation»."
+            },
+            {
+              "id": "r35",
+              "stem": "Which quality is mentioned as something a camera could not supply?",
+              "options": [
+                "The compression of many sittings into one image.",
+                "Accurate reproduction of clothing.",
+                "Speed of production.",
+                "Low cost."
+              ],
+              "answer": 0,
+              "explanation": "Es uno de los tres ejemplos que da el texto."
+            },
+            {
+              "id": "r36",
+              "stem": "How did critics of the period react?",
+              "options": [
+                "They praised the new accuracy.",
+                "They ignored painted portraits entirely.",
+                "They complained that portraits no longer resembled their subjects.",
+                "They demanded lower prices."
+              ],
+              "answer": 2,
+              "explanation": "Se quejaban del parecido."
+            },
+            {
+              "id": "r37",
+              "stem": "What does the author mean by 'That was the point'?",
+              "options": [
+                "The critics had misunderstood the prices.",
+                "The loss of literal likeness was deliberate.",
+                "Painters had lost their technical skill.",
+                "Photography had won the argument."
+              ],
+              "answer": 1,
+              "explanation": "Lo que los críticos veían como fallo era el objetivo."
+            },
+            {
+              "id": "r38",
+              "stem": "According to the final paragraph, what part of a craft gets automated?",
+              "options": [
+                "The part that was most valuable.",
+                "The part that required most training.",
+                "The part customers noticed least.",
+                "The part that was easiest to describe."
+              ],
+              "answer": 3,
+              "explanation": "El texto lo formula así exactamente."
+            },
+            {
+              "id": "r39",
+              "stem": "Who tends to do better after automation?",
+              "options": [
+                "Those who define their work by what was not automated.",
+                "Those who lower their prices.",
+                "Those who adopt the new technology first.",
+                "Those who work in small towns."
+              ],
+              "answer": 0,
+              "explanation": "Los que se definen por el resto, no por la parte automatizada."
+            },
+            {
+              "id": "r40",
+              "stem": "The word 'idealisation' in the third paragraph refers to",
+              "options": [
+                "copying the subject exactly.",
+                "using ideal lighting conditions.",
+                "representing the subject better than in reality.",
+                "painting from photographs."
+              ],
+              "answer": 2,
+              "explanation": "Idealizar: mejorar respecto al natural."
+            }
+          ]
+        },
+        {
+          "id": "r_p5",
+          "kind": "passage",
+          "title": "Texto 5",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The idea that a language can be measured for complexity has an uncomfortable history, and the modern position is often summarised as the claim that all languages are equally complex. That summary is misleading in both directions.\n\nWhat the evidence supports is narrower. Languages differ enormously in the complexity of any individual subsystem. Some have dozens of verb inflections and others none; some require speakers to mark the source of their information in every sentence and others leave it optional. These differences are real and measurable.\n\nWhat has not been demonstrated is that total complexity differs, and the reason is partly technical: there is no agreed way to add up complexity across subsystems. A language with elaborate morphology often has rigid word order, and one with simple morphology often has an intricate system of particles. Whether these trade off exactly is unknown, because the units are not commensurable.\n\nThe claim of equal complexity therefore functions less as a finding than as a default position adopted in the absence of a measurement. That is a respectable role for a claim to play, but it is worth being clear about which one it is playing, particularly when the claim is used to settle arguments that it cannot actually settle.",
+          "questions": [
+            {
+              "id": "r41",
+              "stem": "What is the main point of the passage?",
+              "options": [
+                "All languages have been proved equally complex.",
+                "The equal-complexity claim is a default position, not a demonstrated result.",
+                "Some languages are clearly more complex than others.",
+                "Complexity in language cannot be discussed at all."
+              ],
+              "answer": 1,
+              "explanation": "Distingue entre hallazgo y posición por defecto."
+            },
+            {
+              "id": "r42",
+              "stem": "What does the evidence actually support?",
+              "options": [
+                "Total complexity is identical across languages.",
+                "Complexity decreases over time.",
+                "Morphology is the only measurable subsystem.",
+                "Individual subsystems differ greatly in complexity."
+              ],
+              "answer": 3,
+              "explanation": "Las diferencias por subsistema son reales y medibles."
+            },
+            {
+              "id": "r43",
+              "stem": "Which example of a grammatical requirement is given?",
+              "options": [
+                "Marking the source of one's information in every sentence.",
+                "Using a fixed number of vowels.",
+                "Placing the verb at the end.",
+                "Distinguishing formal and informal address."
+              ],
+              "answer": 0,
+              "explanation": "Es el ejemplo de evidencialidad obligatoria."
+            },
+            {
+              "id": "r44",
+              "stem": "Why has total complexity not been demonstrated?",
+              "options": [
+                "No one has attempted to measure it.",
+                "The data are kept secret.",
+                "There is no agreed way to add complexity across subsystems.",
+                "Languages change too quickly to measure."
+              ],
+              "answer": 2,
+              "explanation": "El problema es técnico: no hay forma acordada de sumar."
+            },
+            {
+              "id": "r45",
+              "stem": "What often accompanies elaborate morphology?",
+              "options": [
+                "An intricate particle system.",
+                "Rigid word order.",
+                "A very large vocabulary.",
+                "Optional evidentiality."
+              ],
+              "answer": 1,
+              "explanation": "El texto lo señala como patrón frecuente."
+            },
+            {
+              "id": "r46",
+              "stem": "What does 'commensurable' mean in this context?",
+              "options": [
+                "Easy to translate.",
+                "Historically related.",
+                "Equally frequent.",
+                "Measurable on a common scale."
+              ],
+              "answer": 3,
+              "explanation": "Conmensurable: comparable con la misma unidad."
+            },
+            {
+              "id": "r47",
+              "stem": "How does the author describe the role of the equal-complexity claim?",
+              "options": [
+                "As a respectable default in the absence of measurement.",
+                "As an error that should be abandoned.",
+                "As a well-established empirical finding.",
+                "As a political slogan without content."
+              ],
+              "answer": 0,
+              "explanation": "«That is a respectable role for a claim to play»."
+            },
+            {
+              "id": "r48",
+              "stem": "What concern does the author raise at the end?",
+              "options": [
+                "The claim is rarely taught to students.",
+                "Linguists disagree about terminology.",
+                "The claim is used to settle arguments it cannot settle.",
+                "The claim has been disproved recently."
+              ],
+              "answer": 2,
+              "explanation": "Es la advertencia final."
+            },
+            {
+              "id": "r49",
+              "stem": "The phrase 'misleading in both directions' suggests that the summary",
+              "options": [
+                "is entirely correct.",
+                "overstates and understates what is known.",
+                "applies only to written languages.",
+                "was invented recently."
+              ],
+              "answer": 1,
+              "explanation": "Falla por exceso y por defecto respecto a lo demostrado."
+            },
+            {
+              "id": "r50",
+              "stem": "The word 'intricate' in the third paragraph is closest in meaning to",
+              "options": [
+                "recent",
+                "optional",
+                "unstable",
+                "complicated"
+              ],
+              "answer": 3,
+              "explanation": "Intrincado: complejo, con muchas partes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
