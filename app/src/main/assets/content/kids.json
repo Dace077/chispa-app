@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "worlds": [
+    {
+      "id": "kids_letters",
+      "titleEs": "Letras",
+      "emoji": "🔤",
+      "color": "#5B3FD1",
+      "items": [
+        {
+          "id": "k_letter_a",
+          "en": "A",
+          "es": "A de apple",
+          "kind": "letter",
+          "art": "A",
+          "say": "A. apple."
+        },
+        {
+          "id": "k_letter_b",
+          "en": "B",
+          "es": "B de ball",
+          "kind": "letter",
+          "art": "B",
+          "say": "B. ball."
+        },
+        {
+          "id": "k_letter_c",
+          "en": "C",
+          "es": "C de cat",
+          "kind": "letter",
+          "art": "C",
+          "say": "C. cat."
+        },
+        {
+          "id": "k_letter_d",
+          "en": "D",
+          "es": "D de dog",
+          "kind": "letter",
+          "art": "D",
+          "say": "D. dog."
+        },
+        {
+          "id": "k_letter_e",
+          "en": "E",
+          "es": "E de elephant",
+          "kind": "letter",
+          "art": "E",
+          "say": "E. elephant."
+        },
+        {
+          "id": "k_letter_f",
+          "en": "F",
+          "es": "F de fish",
+          "kind": "letter",
+          "art": "F",
+          "say": "F. fish."
+        },
+        {
+          "id": "k_letter_g",
+          "en": "G",
+          "es": "G de goat",
+          "kind": "letter",
+          "art": "G",
+          "say": "G. goat."
+        },
+        {
+          "id": "k_letter_h",
+          "en": "H",
+          "es": "H de hat",
+          "kind": "letter",
+          "art": "H",
+          "say": "H. hat."
+        },
+        {
+          "id": "k_letter_i",
+          "en": "I",
+          "es": "I de ice cream",
+          "kind": "letter",
+          "art": "I",
+          "say": "I. ice cream."
+        },
+        {
+          "id": "k_letter_j",
+          "en": "J",
+          "es": "J de juice",
+          "kind": "letter",
+          "art": "J",
+          "say": "J. juice."
+        },
+        {
+          "id": "k_letter_k",
+          "en": "K",
+          "es": "K de kite",
+          "kind": "letter",
+          "art": "K",
+          "say": "K. kite."
+        },
+        {
+          "id": "k_letter_l",
+          "en": "L",
+          "es": "L de lion",
+          "kind": "letter",
+          "art": "L",
+          "say": "L. lion."
+        },
+        {
+          "id": "k_letter_m",
+          "en": "M",
+          "es": "M de moon",
+          "kind": "letter",
+          "art": "M",
+          "say": "M. moon."
+        },
+        {
+          "id": "k_letter_n",
+          "en": "N",
+          "es": "N de nose",
+          "kind": "letter",
+          "art": "N",
+          "say": "N. nose."
+        },
+        {
+          "id": "k_letter_o",
+          "en": "O",
+          "es": "O de orange",
+          "kind": "letter",
+          "art": "O",
+          "say": "O. orange."
+        },
+        {
+          "id": "k_letter_p",
+          "en": "P",
+          "es": "P de pig",
+          "kind": "letter",
+          "art": "P",
+          "say": "P. pig."
+        },
+        {
+          "id": "k_letter_q",
+          "en": "Q",
+          "es": "Q de queen",
+          "kind": "letter",
+          "art": "Q",
+          "say": "Q. queen."
+        },
+        {
+          "id": "k_letter_r",
+          "en": "R",
+          "es": "R de rain",
+          "kind": "letter",
+          "art": "R",
+          "say": "R. rain."
+        },
+        {
+          "id": "k_letter_s",
+          "en": "S",
+          "es": "S de sun",
+          "kind": "letter",
+          "art": "S",
+          "say": "S. sun."
+        },
+        {
+          "id": "k_letter_t",
+          "en": "T",
+          "es": "T de tree",
+          "kind": "letter",
+          "art": "T",
+          "say": "T. tree."
+        },
+        {
+          "id": "k_letter_u",
+          "en": "U",
+          "es": "U de umbrella",
+          "kind": "letter",
+          "art": "U",
+          "say": "U. umbrella."
+        },
+        {
+          "id": "k_letter_v",
+          "en": "V",
+          "es": "V de van",
+          "kind": "letter",
+          "art": "V",
+          "say": "V. van."
+        },
+        {
+          "id": "k_letter_w",
+          "en": "W",
+          "es": "W de water",
+          "kind": "letter",
+          "art": "W",
+          "say": "W. water."
+        },
+        {
+          "id": "k_letter_x",
+          "en": "X",
+          "es": "X de box",
+          "kind": "letter",
+          "art": "X",
+          "say": "X. box."
+        },
+        {
+          "id": "k_letter_y",
+          "en": "Y",
+          "es": "Y de yellow",
+          "kind": "letter",
+          "art": "Y",
+          "say": "Y. yellow."
+        },
+        {
+          "id": "k_letter_z",
+          "en": "Z",
+          "es": "Z de zebra",
+          "kind": "letter",
+          "art": "Z",
+          "say": "Z. zebra."
+        }
+      ]
+    },
+    {
+      "id": "kids_animals",
+      "titleEs": "Animales",
+      "emoji": "🐾",
+      "color": "#7C5CE6",
+      "items": [
+        {
+          "id": "k_cat",
+          "en": "cat",
+          "es": "gato",
+          "kind": "animal",
+          "art": "michi"
+        },
+        {
+          "id": "k_pig",
+          "en": "pig",
+          "es": "cerdito",
+          "kind": "animal",
+          "art": "trufa"
+        },
+        {
+          "id": "k_sheep",
+          "en": "sheep",
+          "es": "borrego",
+          "kind": "animal",
+          "art": "nube"
+        },
+        {
+          "id": "k_llama",
+          "en": "llama",
+          "es": "llama",
+          "kind": "animal",
+          "art": "brasa"
+        },
+        {
+          "id": "k_bird",
+          "en": "bird",
+          "es": "pajarito",
+          "kind": "animal",
+          "art": "chispa"
+        },
+        {
+          "id": "k_hawk",
+          "en": "hawk",
+          "es": "halcón",
+          "kind": "animal",
+          "art": "flecha"
+        },
+        {
+          "id": "k_axolotl",
+          "en": "axolotl",
+          "es": "ajolote",
+          "kind": "animal",
+          "art": "xolotl"
+        },
+        {
+          "id": "k_dog",
+          "en": "dog",
+          "es": "perro",
+          "kind": "critter",
+          "art": "dog"
+        },
+        {
+          "id": "k_cow",
+          "en": "cow",
+          "es": "vaca",
+          "kind": "critter",
+          "art": "cow"
+        },
+        {
+          "id": "k_duck",
+          "en": "duck",
+          "es": "pato",
+          "kind": "critter",
+          "art": "duck"
+        },
+        {
+          "id": "k_horse",
+          "en": "horse",
+          "es": "caballo",
+          "kind": "critter",
+          "art": "horse"
+        },
+        {
+          "id": "k_frog",
+          "en": "frog",
+          "es": "rana",
+          "kind": "critter",
+          "art": "frog"
+        },
+        {
+          "id": "k_fish",
+          "en": "fish",
+          "es": "pez",
+          "kind": "critter",
+          "art": "fish"
+        },
+        {
+          "id": "k_bee",
+          "en": "bee",
+          "es": "abeja",
+          "kind": "critter",
+          "art": "bee"
+        },
+        {
+          "id": "k_elephant",
+          "en": "elephant",
+          "es": "elefante",
+          "kind": "critter",
+          "art": "elephant"
+        }
+      ]
+    },
+    {
+      "id": "kids_colors",
+      "titleEs": "Colores",
+      "emoji": "🎨",
+      "color": "#E8632F",
+      "items": [
+        {
+          "id": "k_red",
+          "en": "red",
+          "es": "rojo",
+          "kind": "color",
+          "art": "#E5322D"
+        },
+        {
+          "id": "k_blue",
+          "en": "blue",
+          "es": "azul",
+          "kind": "color",
+          "art": "#2D6BE5"
+        },
+        {
+          "id": "k_yellow",
+          "en": "yellow",
+          "es": "amarillo",
+          "kind": "color",
+          "art": "#F5C518"
+        },
+        {
+          "id": "k_green",
+          "en": "green",
+          "es": "verde",
+          "kind": "color",
+          "art": "#3AA84C"
+        },
+        {
+          "id": "k_orange",
+          "en": "orange",
+          "es": "naranja",
+          "kind": "color",
+          "art": "#F07C1E"
+        },
+        {
+          "id": "k_purple",
+          "en": "purple",
+          "es": "morado",
+          "kind": "color",
+          "art": "#8B3FD1"
+        },
+        {
+          "id": "k_pink",
+          "en": "pink",
+          "es": "rosa",
+          "kind": "color",
+          "art": "#EE6FA8"
+        },
+        {
+          "id": "k_black",
+          "en": "black",
+          "es": "negro",
+          "kind": "color",
+          "art": "#2B2B33"
+        }
+      ]
+    },
+    {
+      "id": "kids_shapes",
+      "titleEs": "Formas",
+      "emoji": "⭐",
+      "color": "#0E8F76",
+      "items": [
+        {
+          "id": "k_circle",
+          "en": "circle",
+          "es": "círculo",
+          "kind": "shape",
+          "art": "circle"
+        },
+        {
+          "id": "k_square",
+          "en": "square",
+          "es": "cuadrado",
+          "kind": "shape",
+          "art": "square"
+        },
+        {
+          "id": "k_triangle",
+          "en": "triangle",
+          "es": "triángulo",
+          "kind": "shape",
+          "art": "triangle"
+        },
+        {
+          "id": "k_star",
+          "en": "star",
+          "es": "estrella",
+          "kind": "shape",
+          "art": "star"
+        },
+        {
+          "id": "k_heart",
+          "en": "heart",
+          "es": "corazón",
+          "kind": "shape",
+          "art": "heart"
+        }
+      ]
+    },
+    {
+      "id": "kids_numbers",
+      "titleEs": "Números",
+      "emoji": "🔢",
+      "color": "#3B6FD4",
+      "items": [
+        {
+          "id": "k_one",
+          "en": "one",
+          "es": "uno",
+          "kind": "count",
+          "art": "1"
+        },
+        {
+          "id": "k_two",
+          "en": "two",
+          "es": "dos",
+          "kind": "count",
+          "art": "2"
+        },
+        {
+          "id": "k_three",
+          "en": "three",
+          "es": "tres",
+          "kind": "count",
+          "art": "3"
+        },
+        {
+          "id": "k_four",
+          "en": "four",
+          "es": "cuatro",
+          "kind": "count",
+          "art": "4"
+        },
+        {
+          "id": "k_five",
+          "en": "five",
+          "es": "cinco",
+          "kind": "count",
+          "art": "5"
+        }
+      ]
+    }
+  ]
+}
