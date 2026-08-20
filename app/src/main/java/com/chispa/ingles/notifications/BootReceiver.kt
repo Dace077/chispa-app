@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import com.chispa.ingles.core.ServiceLocator
+import com.chispa.ingles.widget.StreakWidget
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,6 +29,9 @@ class BootReceiver : BroadcastReceiver() {
                 val locator = ServiceLocator.from(appContext)
                 locator.notifier.ensureChannels()
                 ReminderScheduler.applyAll(appContext, locator.settingsStore.current())
+                // El widget también hay que repintarlo: al reiniciar puede haber
+                // cambiado el día, y con él la racha viva y la meta de hoy.
+                StreakWidget.refresh(appContext)
             } finally {
                 pendingResult.finish()
             }

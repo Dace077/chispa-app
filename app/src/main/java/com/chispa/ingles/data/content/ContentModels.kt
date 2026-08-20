@@ -50,6 +50,14 @@ data class LessonJson(
      * cuya secuencia sí importa.
      */
     val orderedByAuthor: Boolean = false,
+    /**
+     * Tema de `grammar.json` que explica lo que esta lección practica.
+     *
+     * Sirve para que, en mitad del ejercicio, se pueda abrir la explicación sin
+     * salir a buscarla. Opcional: una lección de vocabulario no tiene por qué
+     * apuntar a ninguna regla.
+     */
+    val grammarTopicId: String? = null,
     val vocab: List<VocabJson> = emptyList(),
     val exercises: List<ExerciseJson> = emptyList()
 )
@@ -162,7 +170,9 @@ data class Lesson(
     val kind: LessonKind,
     val vocab: List<VocabItem>,
     val exercises: List<Exercise>,
-    val orderedByAuthor: Boolean = false
+    val orderedByAuthor: Boolean = false,
+    /** Ficha de gramática que explica esta lección, si la hay. */
+    val grammarTopicId: String? = null
 ) {
     /** Ejercicios que puntúan (los informativos no cuentan para el progreso). */
     val gradedCount: Int get() = exercises.count { it.isGraded }

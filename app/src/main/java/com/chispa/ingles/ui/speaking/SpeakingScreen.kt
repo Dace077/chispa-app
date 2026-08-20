@@ -93,7 +93,7 @@ private val SOUND_DRILLS = listOf(
         title = "El schwa",
         explanation = "El sonido más común del inglés: una vocal relajada y débil en las sílabas sin acento. " +
             "Pronunciar todas las vocales con fuerza es lo que más marca el acento español.",
-        examples = listOf("about" to "sobre", "problem" to "problema", "banana" to "plátano", "computer" to "ordenador")
+        examples = listOf("about" to "sobre", "problem" to "problema", "banana" to "plátano", "computer" to "computadora")
     ),
     SoundDrill(
         symbol = "sp- / st- / sk-",
@@ -179,7 +179,7 @@ fun SpeakingScreen(onStartSession: () -> Unit) {
         Spacer(Modifier.height(6.dp))
         Text(
             "El reconocimiento de voz es el del propio teléfono: no sale nada de aquí " +
-                "y no cuesta un céntimo.",
+                "y no cuesta nada.",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )

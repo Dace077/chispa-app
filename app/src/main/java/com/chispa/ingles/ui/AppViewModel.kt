@@ -11,7 +11,11 @@ import kotlinx.coroutines.launch
 
 enum class AppStage { LOADING, ONBOARDING, PLACEMENT, READY }
 
-data class AppState(val stage: AppStage = AppStage.LOADING)
+data class AppState(
+    val stage: AppStage = AppStage.LOADING,
+    /** Solo para saludar en la puerta de entrada. */
+    val nombre: String = ""
+)
 
 /**
  * Decide en qué punto del embudo está el usuario: bienvenida, test de nivel o
@@ -46,7 +50,8 @@ class AppViewModel(private val locator: ServiceLocator) : ViewModel() {
                     !profile.onboardingDone -> AppStage.ONBOARDING
                     !profile.placementDone -> AppStage.PLACEMENT
                     else -> AppStage.READY
-                }
+                },
+                nombre = profile.studentName.trim()
             )
         }
     }

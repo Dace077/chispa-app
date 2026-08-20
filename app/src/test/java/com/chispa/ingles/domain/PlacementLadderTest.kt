@@ -117,4 +117,46 @@ class PlacementLadderTest {
             assert(level in niveles) { "Nivel resultante fuera de la escala: $level" }
         }
     }
+
+    /* ------------------------------------------------------------------ */
+    /*  Repetición del test                                                */
+    /* ------------------------------------------------------------------ */
+
+    @Test
+    fun `repetir el test puede subir el nivel`() {
+        assertEquals(
+            CefrLevel.C1,
+            PlacementLadder.afterRetake(actual = CefrLevel.B1, nuevo = CefrLevel.C1)
+        )
+    }
+
+    @Test
+    fun `repetir el test nunca baja el nivel`() {
+        // Es el invariante que protege el contenido ya desbloqueado: si bajara,
+        // UnlockRules volvería a cerrar niveles que el usuario ya tenía abiertos.
+        assertEquals(
+            CefrLevel.C1,
+            PlacementLadder.afterRetake(actual = CefrLevel.C1, nuevo = CefrLevel.A1)
+        )
+    }
+
+    @Test
+    fun `repetir y sacar lo mismo lo deja igual`() {
+        PlacementLadder.LEVELS.forEach { nivel ->
+            assertEquals(nivel, PlacementLadder.afterRetake(nivel, nivel))
+        }
+    }
+
+    @Test
+    fun `desde cualquier par, el resultado nunca es menor que el actual`() {
+        val niveles = PlacementLadder.LEVELS
+        niveles.forEach { actual ->
+            niveles.forEach { nuevo ->
+                val salida = PlacementLadder.afterRetake(actual, nuevo)
+                assert(salida.order >= actual.order) {
+                    "Repetir con actual=$actual y nuevo=$nuevo bajó a $salida"
+                }
+            }
+        }
+    }
 }

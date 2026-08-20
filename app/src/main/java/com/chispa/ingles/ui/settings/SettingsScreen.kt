@@ -49,8 +49,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.chispa.ingles.certificates.CertificateSharing
 import com.chispa.ingles.core.AppInfo
 import com.chispa.ingles.core.ServiceLocator
+import com.chispa.ingles.data.backup.BackupFile
+import com.chispa.ingles.data.backup.BackupManager
 import com.chispa.ingles.data.prefs.Accent
 import com.chispa.ingles.data.prefs.Settings
 import com.chispa.ingles.data.prefs.ThemeMode
@@ -59,6 +62,7 @@ import com.chispa.ingles.notifications.ReminderScheduler
 import com.chispa.ingles.ui.chispaViewModel
 import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.ChispaCard
+import com.chispa.ingles.ui.components.ChispaOutlinedButton
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -75,6 +79,54 @@ class SettingsViewModel(private val locator: ServiceLocator) : ViewModel() {
 
     private val _state = MutableStateFlow(SettingsUiState())
     val state: StateFlow<SettingsUiState> = _state.asStateFlow()
+
+    /* ------------------------------------------------------------------ */
+    /*  Respaldo del progreso                                              */
+    /* ------------------------------------------------------------------ */
+
+    /** Respaldo leído y pendiente de que el usuario confirme la restauración. */
+    private val _pendiente = MutableStateFlow<BackupFile?>(null)
+    val pendiente: StateFlow<BackupFile?> = _pendiente.asStateFlow()
+
+    private val _aviso = MutableStateFlow<String?>(null)
+    val aviso: StateFlow<String?> = _aviso.asStateFlow()
+
+    fun exportar(context: android.content.Context) {
+        viewModelScope.launch {
+            runCatching { locator.backupManager.exportToCache() }
+                .onSuccess { archivo ->
+                    CertificateSharing.compartir(
+                        context, archivo,
+                        "Progreso de Chispa · ${archivo.name}"
+                    )
+                }
+                .onFailure { _aviso.value = "No se pudo crear el respaldo: ${it.message}" }
+        }
+    }
+
+    /** Primer paso: leer y comprobar. No toca nada todavía. */
+    fun revisarRespaldo(uri: android.net.Uri) {
+        viewModelScope.launch {
+            locator.backupManager.read(uri)
+                .onSuccess { _pendiente.value = it }
+                .onFailure { _aviso.value = it.message ?: "No se pudo leer el archivo." }
+        }
+    }
+
+    fun cancelarRestauracion() { _pendiente.value = null }
+
+    /** Segundo paso: aplicarlo, ya con el usuario avisado de lo que sustituye. */
+    fun confirmarRestauracion() {
+        val backup = _pendiente.value ?: return
+        viewModelScope.launch {
+            locator.backupManager.restore(backup)
+                .onSuccess { _aviso.value = "Progreso restaurado. Ya está todo en su sitio." }
+                .onFailure { _aviso.value = "No se pudo restaurar: ${it.message}" }
+            _pendiente.value = null
+        }
+    }
+
+    fun descartarAviso() { _aviso.value = null }
 
     init {
         viewModelScope.launch {
@@ -123,7 +175,10 @@ class SettingsViewModel(private val locator: ServiceLocator) : ViewModel() {
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsScreen(onBack: () -> Unit) {
+fun SettingsScreen(
+    onBack: () -> Unit,
+    onRetakePlacement: () -> Unit
+) {
     val viewModel: SettingsViewModel = chispaViewModel { SettingsViewModel(it) }
     val state by viewModel.state.collectAsState()
     val settings = state.settings
@@ -133,6 +188,15 @@ fun SettingsScreen(onBack: () -> Unit) {
     var showResetDialog by remember { mutableStateOf(false) }
     var sinNavegador by remember { mutableStateOf(false) }
     val contexto = LocalContext.current
+
+    val respaldoPendiente by viewModel.pendiente.collectAsState()
+    val aviso by viewModel.aviso.collectAsState()
+
+    // Selector del sistema. Devuelve un Uri con permiso puntual sobre ESE
+    // archivo: la app nunca pide acceso al almacenamiento del teléfono.
+    val abrirRespaldo = rememberLauncherForActivityResult(
+        ActivityResultContracts.OpenDocument()
+    ) { uri -> uri?.let(viewModel::revisarRespaldo) }
 
     // En Android 13+ activar el interruptor no basta: hace falta el permiso del
     // sistema. Se pide justo aquí, que es donde el usuario ha expresado interés.
@@ -362,6 +426,55 @@ fun SettingsScreen(onBack: () -> Unit) {
                 }
             }
 
+            /* ---------------- Tu nivel ---------------- */
+            SectionTitle("Tu nivel")
+            ChispaCard {
+                Column(Modifier.padding(16.dp)) {
+                    Text("Repetir el test de nivel", style = MaterialTheme.typography.titleSmall)
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        "Vuelve a medir por dónde vas. No pierdes nada: se mantienen " +
+                            "tu XP, tu racha y todas las lecciones que llevas hechas. " +
+                            "Tu nivel solo puede subir.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(Modifier.height(12.dp))
+                    TextButton(onClick = onRetakePlacement) {
+                        Text("Hacer el test otra vez")
+                    }
+                }
+            }
+
+            /* ---------------- Respaldo ---------------- */
+            SectionTitle("Cambiar de teléfono")
+            ChispaCard {
+                Column(Modifier.padding(16.dp)) {
+                    Text("Guardar mi progreso", style = MaterialTheme.typography.titleSmall)
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        "Crea un archivo con tu XP, tu racha, tus lecciones y tu " +
+                            "vocabulario. Guárdalo donde quieras y recupéralo en otro " +
+                            "teléfono. Chispa no tiene cuenta ni nube, así que este " +
+                            "archivo es tu única copia de seguridad.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(Modifier.height(12.dp))
+                    ChispaButton(
+                        text = "Guardar en un archivo",
+                        onClick = { viewModel.exportar(contexto) }
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    ChispaOutlinedButton(
+                        text = "Restaurar desde un archivo",
+                        onClick = { abrirRespaldo.launch(arrayOf(BackupManager.MIME, "*/*")) }
+                    )
+                }
+            }
+
+            Spacer(Modifier.height(16.dp))
+
             /* ---------------- Datos ---------------- */
             SectionTitle("Datos")
             ChispaCard(borderColor = colors.wrong.copy(alpha = 0.4f)) {
@@ -499,6 +612,48 @@ fun SettingsScreen(onBack: () -> Unit) {
             },
             dismissButton = {
                 TextButton(onClick = { showResetDialog = false }) { Text("Cancelar") }
+            }
+        )
+    }
+
+    // Confirmación de restauración. Se enseña lo que trae el archivo ANTES de
+    // aplicarlo: restaurar reemplaza el progreso actual, y eso no puede
+    // ocurrirle a nadie por sorpresa.
+    respaldoPendiente?.let { backup ->
+        AlertDialog(
+            onDismissRequest = { viewModel.cancelarRestauracion() },
+            title = { Text("¿Restaurar este progreso?") },
+            text = {
+                Column {
+                    Text("El archivo contiene:", style = MaterialTheme.typography.bodyMedium)
+                    Spacer(Modifier.height(6.dp))
+                    Text(backup.resumen, style = MaterialTheme.typography.titleSmall)
+                    Spacer(Modifier.height(12.dp))
+                    Text(
+                        "Esto sustituye por completo el progreso que tienes ahora en " +
+                            "este teléfono. No se mezclan: se queda lo del archivo.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { viewModel.confirmarRestauracion() }) {
+                    Text("Restaurar")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { viewModel.cancelarRestauracion() }) { Text("Cancelar") }
+            }
+        )
+    }
+
+    aviso?.let { texto ->
+        AlertDialog(
+            onDismissRequest = { viewModel.descartarAviso() },
+            text = { Text(texto) },
+            confirmButton = {
+                TextButton(onClick = { viewModel.descartarAviso() }) { Text("Entendido") }
             }
         )
     }

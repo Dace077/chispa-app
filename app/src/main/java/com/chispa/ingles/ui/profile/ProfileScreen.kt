@@ -19,9 +19,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.EmojiEvents
+import androidx.compose.material.icons.filled.ChildCare
+import androidx.compose.material.icons.filled.Insights
+import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -40,6 +45,7 @@ import com.chispa.ingles.data.db.DailyActivityEntity
 import com.chispa.ingles.domain.Achievements
 import com.chispa.ingles.domain.Ranks
 import com.chispa.ingles.ui.chispaViewModel
+import com.chispa.ingles.ui.components.AvatarView
 import com.chispa.ingles.ui.components.ChispaCard
 import com.chispa.ingles.ui.components.ChispaMascot
 import com.chispa.ingles.ui.components.ChispaProgressBar
@@ -50,7 +56,13 @@ import com.chispa.ingles.ui.theme.ChispaThemeTokens
 fun ProfileScreen(
     onOpenSettings: () -> Unit,
     onOpenAchievements: () -> Unit,
-    onOpenVocabulary: () -> Unit
+    onOpenVocabulary: () -> Unit,
+    onOpenStudentData: () -> Unit,
+    onOpenCertificates: () -> Unit,
+    onOpenAvatar: () -> Unit,
+    onOpenStats: () -> Unit,
+    onOpenToefl: () -> Unit,
+    onOpenKids: () -> Unit
 ) {
     val viewModel: ProfileViewModel = chispaViewModel { ProfileViewModel(it) }
     val state by viewModel.state.collectAsState()
@@ -69,11 +81,20 @@ fun ProfileScreen(
         Spacer(Modifier.height(52.dp))
 
         // -------- Cabecera de rango --------
+        // El avatar es el retrato del usuario, así que preside su perfil y se
+        // toca para cambiarlo. Chispa sigue apareciendo por toda la app, pero
+        // aquí manda quien estudia.
         Row(verticalAlignment = Alignment.CenterVertically) {
-            ChispaMascot(
-                size = 92.dp,
-                mood = if (state.profile.currentStreak > 0) MascotMood.HAPPY else MascotMood.NEUTRAL
-            )
+            Box(
+                modifier = Modifier.clickable(onClick = onOpenAvatar),
+                contentAlignment = Alignment.Center
+            ) {
+                AvatarView(
+                    avatar = state.avatar,
+                    size = 92.dp,
+                    mood = if (state.profile.currentStreak > 0) MascotMood.HAPPY else MascotMood.NEUTRAL
+                )
+            }
             Spacer(Modifier.width(14.dp))
             Column(Modifier.weight(1f)) {
                 Text("${rank.emoji} ${rank.name}", style = MaterialTheme.typography.headlineMedium)
@@ -81,6 +102,12 @@ fun ProfileScreen(
                     "${state.profile.totalXp} XP en total",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(Modifier.height(2.dp))
+                Text(
+                    "${state.avatar.displayName} · toca para cambiar",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
         }
@@ -104,7 +131,7 @@ fun ProfileScreen(
             StatBox("🏅", state.profile.longestStreak.toString(), "Racha récord", Modifier.weight(1f))
             StatBox("❄️", state.profile.streakFreezes.toString(), "Comodines", Modifier.weight(1f))
         }
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(8.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             StatBox("📚", state.lessonsCompleted.toString(), "Lecciones", Modifier.weight(1f))
             StatBox("🔤", state.vocabSeen.toString(), "Palabras", Modifier.weight(1f))
@@ -142,7 +169,7 @@ fun ProfileScreen(
             subtitle = "${state.unlockedAchievements.size} de ${Achievements.ALL.size} desbloqueados",
             onClick = onOpenAchievements
         )
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(8.dp))
         NavRow(
             icon = Icons.AutoMirrored.Filled.MenuBook,
             title = "Mi vocabulario",
@@ -150,7 +177,46 @@ fun ProfileScreen(
             else "${state.vocabSeen} palabras aprendidas",
             onClick = onOpenVocabulary
         )
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(8.dp))
+        NavRow(
+            icon = Icons.Filled.School,
+            title = "Certificación TOEFL",
+            subtitle = "El examen que piden para titularte y para trabajar",
+            onClick = onOpenToefl
+        )
+        Spacer(Modifier.height(8.dp))
+        NavRow(
+            icon = Icons.Filled.ChildCare,
+            title = "Chispa Kids",
+            subtitle = "Para niños de 2 a 5 años que todavía no leen",
+            onClick = onOpenKids
+        )
+        Spacer(Modifier.height(8.dp))
+        NavRow(
+            icon = Icons.Filled.Insights,
+            title = "En qué flojeas",
+            subtitle = "Tu precisión por tipo de ejercicio",
+            onClick = onOpenStats
+        )
+        Spacer(Modifier.height(8.dp))
+        NavRow(
+            icon = Icons.Filled.WorkspacePremium,
+            title = "Certificados",
+            subtitle = "Tu constancia en PDF por cada nivel terminado",
+            onClick = onOpenCertificates
+        )
+        Spacer(Modifier.height(8.dp))
+        NavRow(
+            icon = Icons.Filled.Badge,
+            title = "Tus datos",
+            subtitle = if (state.profile.canReceiveCertificate) {
+                state.profile.fullName
+            } else {
+                "Ponle nombre a tus certificados"
+            },
+            onClick = onOpenStudentData
+        )
+        Spacer(Modifier.height(8.dp))
         NavRow(
             icon = Icons.Filled.Settings,
             title = "Configuración",
@@ -224,9 +290,9 @@ private fun PersonalLeagueCard(thisWeek: Int, lastWeek: Int, best: Int) {
             Spacer(Modifier.height(16.dp))
 
             WeekBar("Esta semana", thisWeek, best, MaterialTheme.colorScheme.primary)
-            Spacer(Modifier.height(10.dp))
+            Spacer(Modifier.height(8.dp))
             WeekBar("Semana pasada", lastWeek, best, colors.locked)
-            Spacer(Modifier.height(10.dp))
+            Spacer(Modifier.height(8.dp))
             WeekBar("Tu récord", best, best, colors.xp)
 
             Spacer(Modifier.height(14.dp))
@@ -347,7 +413,7 @@ private fun NavRow(
             .clip(RoundedCornerShape(16.dp))
             .background(colors.surfaceElevated)
             .clickable(onClick = onClick)
-            .padding(16.dp),
+            .padding(horizontal = 14.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(

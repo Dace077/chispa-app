@@ -51,6 +51,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.unit.dp
 import com.chispa.ingles.data.content.CefrLevel
 import com.chispa.ingles.data.content.LessonKind
@@ -101,8 +102,6 @@ fun HomeScreen(
         ) {
             item { DailyGoalCard(state = state, onOpenReview = onOpenReview) }
 
-            item { Spacer(Modifier.height(8.dp)) }
-
             state.coreTracks.forEach { track ->
                 track.units.forEach { unitNode ->
                     item(key = "unit_${unitNode.unit.id}") {
@@ -119,7 +118,7 @@ fun HomeScreen(
                             onClick = { onOpenLesson(lessonNode.lesson.id) }
                         )
                     }
-                    item { Spacer(Modifier.height(20.dp)) }
+                    item { Spacer(Modifier.height(14.dp)) }
                 }
             }
 
@@ -157,10 +156,21 @@ fun HomeScreen(
 @Composable
 private fun HomeTopBar(state: HomeUiState, onOpenSettings: () -> Unit) {
     val colors = ChispaThemeTokens.colors
+    val bordeBarra = colors.cardStroke
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)
+            // Sin esto, la barra blanca y el fondo lavanda se cortan en seco y
+            // parece que falta algo. Una línea de 1dp cierra el bloque.
+            .drawBehind {
+                drawLine(
+                    color = bordeBarra,
+                    start = androidx.compose.ui.geometry.Offset(0f, size.height),
+                    end = androidx.compose.ui.geometry.Offset(size.width, size.height),
+                    strokeWidth = 1.dp.toPx()
+                )
+            }
             .padding(start = 20.dp, end = 8.dp, top = 48.dp, bottom = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -198,10 +208,10 @@ private fun DailyGoalCard(state: HomeUiState, onOpenReview: () -> Unit) {
         modifier = Modifier.padding(vertical = 8.dp),
         borderColor = if (goalMet) colors.correct else colors.cardStroke
     ) {
-        Column(Modifier.padding(18.dp)) {
+        Column(Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 ChispaMascot(
-                    size = 68.dp,
+                    size = 56.dp,
                     mood = when {
                         goalMet -> MascotMood.CELEBRATE
                         state.today.xp > 0 -> MascotMood.HAPPY
@@ -215,13 +225,15 @@ private fun DailyGoalCard(state: HomeUiState, onOpenReview: () -> Unit) {
                         style = MaterialTheme.typography.titleMedium
                     )
                     Text(
-                        "${state.today.xp} / ${state.profile.dailyGoalXp} XP  ·  ${rank.emoji} ${rank.name}",
+                        // Cumplida la meta, "60 / 20 XP" se lee como un error.
+                        if (goalMet) "${state.today.xp} XP hoy  ·  ${rank.emoji} ${rank.name}"
+                        else "${state.today.xp} / ${state.profile.dailyGoalXp} XP  ·  ${rank.emoji} ${rank.name}",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
-            Spacer(Modifier.height(14.dp))
+            Spacer(Modifier.height(12.dp))
             ChispaProgressBar(
                 progress = state.dailyProgress,
                 color = if (goalMet) colors.correct else MaterialTheme.colorScheme.primary
@@ -271,7 +283,9 @@ private fun UnitHeader(node: UnitNode) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 20.dp, bottom = 12.dp)
+            // 20dp arriba sumaban al margen de la tarjeta anterior y dejaban
+            // un hueco muerto de casi 40dp entre bloques.
+            .padding(top = 10.dp, bottom = 10.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             LevelChip(label = node.unit.level.label, color = color)
@@ -332,7 +346,11 @@ private fun LessonPathNode(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 6.dp),
+            // Antes eran 6dp arriba y abajo. Con nodos de 72dp, título de dos
+            // líneas y corona, cada lección ocupaba ~140dp y solo cabían tres
+            // por pantalla: un nivel de quince lecciones eran cinco pantallas
+            // de scroll para ver por dónde vas.
+            .padding(vertical = 2.dp),
         horizontalArrangement = Arrangement.Center
     ) {
         Column(
@@ -341,7 +359,7 @@ private fun LessonPathNode(
         ) {
             Box(
                 modifier = Modifier
-                    .size(72.dp)
+                    .size(64.dp)
                     .scale(pulse)
                     .clip(CircleShape)
                     .background(nodeBrush)
@@ -357,10 +375,10 @@ private fun LessonPathNode(
                     imageVector = nodeIcon(node),
                     contentDescription = node.lesson.title,
                     tint = if (locked) colors.locked else Color.White,
-                    modifier = Modifier.size(30.dp)
+                    modifier = Modifier.size(28.dp)
                 )
             }
-            Spacer(Modifier.height(6.dp))
+            Spacer(Modifier.height(4.dp))
             Text(
                 node.lesson.title,
                 style = MaterialTheme.typography.labelSmall,
@@ -368,7 +386,9 @@ private fun LessonPathNode(
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.width(120.dp)
+                // Más ancho para que la mayoría de títulos quepan en una línea:
+                // ganar ancho aquí no cuesta nada y ahorra una línea por nodo.
+                modifier = Modifier.width(148.dp)
             )
             if (node.crown > 0) {
                 CrownBadge(crown = node.crown)

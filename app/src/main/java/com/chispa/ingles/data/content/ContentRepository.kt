@@ -103,6 +103,85 @@ class ContentRepository(private val appContext: Context) {
         }
     }
 
+    @Volatile private var kidsCache: List<com.chispa.ingles.domain.KidsWorld>? = null
+
+    /**
+     * Mundos de la etapa infantil. Fuera del índice, como la gramática: no
+     * forman parte del camino A1→C2 ni desbloquean nada.
+     */
+    suspend fun kidsWorlds(): List<com.chispa.ingles.domain.KidsWorld> {
+        kidsCache?.let { return it }
+        return mutex.withLock {
+            kidsCache ?: loadKids().also { kidsCache = it }
+        }
+    }
+
+    private suspend fun loadKids(): List<com.chispa.ingles.domain.KidsWorld> =
+        withContext(Dispatchers.IO) {
+            runCatching {
+                val raw = appContext.assets.open("$CONTENT_DIR/kids.json")
+                    .bufferedReader().use { it.readText() }
+                json.decodeFromString<KidsFileJson>(raw).worlds.mapNotNull { it.toDomain() }
+            }.getOrElse { error ->
+                Log.e(TAG, "No se pudo leer kids.json", error)
+                emptyList()
+            }
+        }
+
+    @Volatile private var toeflCache: ToeflGuide? = null
+
+    /**
+     * Material de apoyo del TOEFL ITP. Fuera del índice, como la gramática y
+     * las lecturas: no forma parte del camino de niveles.
+     */
+    suspend fun toefl(): ToeflGuide {
+        toeflCache?.let { return it }
+        return mutex.withLock {
+            toeflCache ?: loadToefl().also { toeflCache = it }
+        }
+    }
+
+    private suspend fun loadToefl(): ToeflGuide = withContext(Dispatchers.IO) {
+        runCatching {
+            val raw = appContext.assets.open("$CONTENT_DIR/toefl.json")
+                .bufferedReader().use { it.readText() }
+            json.decodeFromString<ToeflGuideJson>(raw).toDomain()
+        }.getOrElse { error ->
+            Log.e(TAG, "No se pudo leer toefl.json", error)
+            ToeflGuide("", "", emptyList(), emptyList(), emptyList())
+        }
+    }
+
+    /**
+     * Simulacros disponibles, por id. Se leen del índice `toefl_examenes.json`
+     * para poder añadir exámenes sin tocar código.
+     */
+    suspend fun toeflExamIds(): List<String> = withContext(Dispatchers.IO) {
+        runCatching {
+            val raw = appContext.assets.open("$CONTENT_DIR/toefl_examenes.json")
+                .bufferedReader().use { it.readText() }
+            json.decodeFromString<ContentIndexJson>(raw).files
+        }.getOrElse { emptyList() }
+    }
+
+    /**
+     * Un simulacro completo. Devuelve null si falta o si está incompleto.
+     *
+     * No se cachean: son archivos grandes y solo se abren de uno en uno, cuando
+     * el usuario empieza ese examen concreto. Mantener diez en memoria para el
+     * que está usando uno sería tirar RAM.
+     */
+    suspend fun toeflExam(examId: String): ToeflExam? = withContext(Dispatchers.IO) {
+        runCatching {
+            val raw = appContext.assets.open("$CONTENT_DIR/$examId.json")
+                .bufferedReader().use { it.readText() }
+            json.decodeFromString<ToeflExamJson>(raw).toDomain()
+        }.getOrElse { error ->
+            Log.e(TAG, "No se pudo leer el simulacro $examId", error)
+            null
+        }
+    }
+
     /** Test de nivel inicial. Vive en su propio archivo para poder ajustarlo aparte. */
     suspend fun placementTest(): List<PlacementQuestion> = withContext(Dispatchers.IO) {
         runCatching {
@@ -258,7 +337,8 @@ private fun LessonJson.toDomain(unitId: String, trackId: String, level: CefrLeve
         },
         vocab = palabras,
         exercises = preparados,
-        orderedByAuthor = orderedByAuthor
+        orderedByAuthor = orderedByAuthor,
+        grammarTopicId = grammarTopicId?.trim()?.takeIf { it.isNotBlank() }
     )
 }
 

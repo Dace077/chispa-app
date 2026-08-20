@@ -13,9 +13,11 @@ import com.chispa.ingles.data.db.UserProfileEntity
 import com.chispa.ingles.data.prefs.Accent
 import com.chispa.ingles.data.repo.SessionOutcome
 import com.chispa.ingles.domain.AnswerChecker
+import com.chispa.ingles.domain.CertificateRules
 import com.chispa.ingles.domain.SrsPairing
 import com.chispa.ingles.speech.SpeechRecognizerManager
 import com.chispa.ingles.speech.SpeechState
+import com.chispa.ingles.widget.StreakWidget
 import android.speech.RecognizerIntent
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -52,6 +54,8 @@ data class LessonUiState(
     val phase: SessionPhase = SessionPhase.LOADING,
     val mode: SessionMode = SessionMode.LESSON,
     val title: String = "",
+    /** Ficha de gramática de esta lección, si la tiene declarada en el JSON. */
+    val grammarTopicId: String? = null,
     val exercises: List<Exercise> = emptyList(),
     val index: Int = 0,
     val totalSteps: Int = 0,
@@ -61,6 +65,8 @@ data class LessonUiState(
     val gradedTotal: Int = 0,
     val feedback: Feedback? = null,
     val outcome: SessionOutcome? = null,
+    /** Nivel que esta lección acaba de cerrar, si ha cerrado alguno. */
+    val levelJustCompleted: CefrLevel? = null,
     val accent: Accent = Accent.US,
     val autoPlay: Boolean = true,
     val speechRate: Float = 0.9f,
@@ -131,6 +137,9 @@ class LessonViewModel(
                     SessionMode.REVIEW -> "Repaso"
                     SessionMode.SPEAKING -> "Pronunciación"
                 },
+                // Solo en una lección: en repaso y pronunciación los ejercicios
+                // vienen de sitios distintos y no hay una regla única que explicar.
+                grammarTopicId = if (mode == SessionMode.LESSON) lesson?.grammarTopicId else null,
                 exercises = queue.toList(),
                 totalSteps = exercises.size,
                 gradedTotal = graded,
@@ -604,6 +613,17 @@ class LessonViewModel(
         val firstAttempt = exercise.srsKey !in requeued
         if (correct && firstAttempt) answeredCorrectly += exercise.srsKey
 
+        // Estadística por tipo de ejercicio.
+        //
+        // Solo cuenta el PRIMER intento: el reintento de un fallo se acierta casi
+        // siempre —acabas de ver la solución— y contarlo maquillaría el dato justo
+        // en los tipos donde el usuario flojea, que son los que queremos detectar.
+        if (firstAttempt && exercise.isGraded) {
+            viewModelScope.launch {
+                locator.progressRepository.recordExerciseStat(exercise.statType(), correct)
+            }
+        }
+
         // Solo entra en el repaso lo que de verdad es una pareja de traducción.
         // Un ejercicio de gramática se corrige y suma, pero no se convierte en
         // tarjeta de vocabulario.
@@ -684,6 +704,11 @@ class LessonViewModel(
     private fun finishSession() {
         val state = _state.value
         viewModelScope.launch {
+            // Qué niveles estaban completos ANTES de guardar esta lección. La
+            // diferencia con los de después es el nivel que se acaba de cerrar,
+            // y ese es el momento en que un certificado significa algo.
+            val nivelesAntes = nivelesCompletos()
+
             val outcome = when (mode) {
                 SessionMode.LESSON -> lesson?.let {
                     locator.progressRepository.completeLesson(
@@ -702,8 +727,31 @@ class LessonViewModel(
                     total = state.gradedTotal
                 )
             }
-            _state.value = _state.value.copy(phase = SessionPhase.FINISHED, outcome = outcome)
+            val nivelCerrado = if (mode == SessionMode.LESSON) {
+                (nivelesCompletos() - nivelesAntes).firstOrNull()
+            } else {
+                null
+            }
+
+            // La racha y la meta de hoy acaban de cambiar: el widget de la
+            // pantalla de inicio tiene que enterarse ahora, no dentro de media
+            // hora. Es el único momento en que hace falta refrescarlo.
+            StreakWidget.refresh(locator.appContext)
+
+            _state.value = _state.value.copy(
+                phase = SessionPhase.FINISHED,
+                outcome = outcome,
+                levelJustCompleted = nivelCerrado
+            )
         }
+    }
+
+    /** Niveles del camino principal terminados del todo, ahora mismo. */
+    private suspend fun nivelesCompletos(): Set<CefrLevel> {
+        if (mode != SessionMode.LESSON) return emptySet()
+        val curriculum = locator.contentRepository.curriculum()
+        val progreso = locator.database.lessonProgressDao().all().associateBy { it.lessonId }
+        return CertificateRules.earnedLevels(curriculum, progreso).map { it.level }.toSet()
     }
 
     /** Repaso exprés desde la pantalla de "sin corazones": los recupera todos. */
@@ -728,6 +776,25 @@ class LessonViewModel(
         const val REVIEW_SIZE = 15
         const val SPEAKING_SIZE = 10
     }
+}
+
+/**
+ * Clave estable con la que se guardan las estadísticas por tipo.
+ *
+ * Es un `when` explícito y no `this::class.simpleName` a propósito: el nombre de
+ * la clase se guarda en la base de datos, y renombrar un `Exercise` en Kotlin no
+ * puede partir en dos el historial de nadie.
+ */
+fun Exercise.statType(): String = when (this) {
+    is Exercise.MultipleChoice -> "multiple_choice"
+    is Exercise.Translate -> if (toEnglish) "translate_to_en" else "translate_to_es"
+    is Exercise.ListenAndType -> "listen_and_type"
+    is Exercise.WordOrder -> "word_order"
+    is Exercise.SpeakAndRepeat -> "speak_and_repeat"
+    is Exercise.MatchingPairs -> "matching_pairs"
+    is Exercise.FillInBlank -> "fill_in_blank"
+    is Exercise.VocabIntro, is Exercise.Tip,
+    is Exercise.Reading, is Exercise.CultureNote -> "info"
 }
 
 /** Etiqueta corta del tipo de ejercicio, para la cabecera de la pantalla. */
