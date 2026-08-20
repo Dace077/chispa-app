@@ -11,9 +11,12 @@ import androidx.room.RoomDatabase
         LessonProgressEntity::class,
         SrsCardEntity::class,
         DailyActivityEntity::class,
-        AchievementEntity::class
+        AchievementEntity::class,
+        CertificateEntity::class,
+        ExerciseStatEntity::class,
+        ExamAttemptEntity::class
     ],
-    version = 1,
+    version = 3,
     exportSchema = true
 )
 abstract class ChispaDatabase : RoomDatabase() {
@@ -23,6 +26,9 @@ abstract class ChispaDatabase : RoomDatabase() {
     abstract fun srsCardDao(): SrsCardDao
     abstract fun dailyActivityDao(): DailyActivityDao
     abstract fun achievementDao(): AchievementDao
+    abstract fun certificateDao(): CertificateDao
+    abstract fun exerciseStatDao(): ExerciseStatDao
+    abstract fun examAttemptDao(): ExamAttemptDao
 
     companion object {
         const val NAME = "chispa.db"
@@ -36,10 +42,15 @@ abstract class ChispaDatabase : RoomDatabase() {
                     ChispaDatabase::class.java,
                     NAME
                 )
-                    // El contenido real vive en assets; la BD solo guarda progreso.
-                    // Si algún día cambia el esquema, preferimos recrear antes que
-                    // dejar al usuario con una app que no abre.
-                    .fallbackToDestructiveMigration()
+                    // Migraciones escritas a mano, sin red de seguridad destructiva.
+                    //
+                    // Antes había un `fallbackToDestructiveMigration()` aquí. Se
+                    // quitó al añadir el nombre del alumno y los certificados: con
+                    // él puesto, publicar esa versión habría borrado el progreso de
+                    // todo el mundo en silencio. Si una migración falla preferimos
+                    // que la app reviente y nos enteremos, antes que vaciarle la
+                    // racha de un año a alguien sin decírselo.
+                    .addMigrations(*ALL_MIGRATIONS)
                     .build()
                     .also { instance = it }
             }

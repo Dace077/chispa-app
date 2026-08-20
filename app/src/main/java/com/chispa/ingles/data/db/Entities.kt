@@ -16,6 +16,24 @@ data class UserProfileEntity(
     /** Motivo elegido en el onboarding (personaliza mensajes, no el contenido). */
     val motive: String = "",
 
+    /*
+     * Datos del alumno. Son los que se imprimen en el certificado, y por eso
+     * existen: sin nombre no hay constancia que valga nada.
+     *
+     * No salen del teléfono nunca. La app no declara INTERNET, así que esto no
+     * es una promesa de intenciones: no hay forma física de enviarlos. Todos
+     * son opcionales salvo el nombre, y solo se piden cuando hacen falta.
+     */
+    @ColumnInfo(defaultValue = "''") val studentName: String = "",
+    @ColumnInfo(defaultValue = "''") val studentSurname: String = "",
+    /** Ciudad y país, solo para la línea de lugar del certificado. */
+    @ColumnInfo(defaultValue = "''") val studentCity: String = "",
+    /** Momento en que rellenó la hoja de datos. 0 = todavía no la ha rellenado. */
+    @ColumnInfo(defaultValue = "0") val studentRegisteredAt: Long = 0L,
+
+    /** Avatar elegido. Se desbloquean avanzando de nivel; ver `Avatars`. */
+    @ColumnInfo(defaultValue = "'chispa'") val avatarId: String = "chispa",
+
     /** Nivel sugerido por el test de nivel: A1 / A2 / B1. */
     val placementLevel: String = "A1",
     val onboardingDone: Boolean = false,
@@ -42,6 +60,15 @@ data class UserProfileEntity(
 
     val createdAt: Long = 0L
 ) {
+    /** Nombre completo tal y como debe aparecer impreso. Vacío si no lo ha dado. */
+    val fullName: String
+        get() = listOf(studentName.trim(), studentSurname.trim())
+            .filter { it.isNotBlank() }
+            .joinToString(" ")
+
+    /** Sin nombre no se puede emitir un certificado a nadie. */
+    val canReceiveCertificate: Boolean get() = fullName.isNotBlank()
+
     companion object {
         const val SINGLETON_ID = 1
         const val MAX_HEARTS = 5
@@ -107,4 +134,80 @@ data class DailyActivityEntity(
 data class AchievementEntity(
     @PrimaryKey val achievementId: String,
     val unlockedAt: Long
+)
+
+/**
+ * Un certificado emitido. Se guarda la fila, no el PDF: el archivo se regenera
+ * a partir de estos datos cuando el usuario lo quiere compartir otra vez.
+ *
+ * `studentName` se guarda como copia del nombre del momento de la emisión, a
+ * propósito: si alguien corrige su nombre después, el certificado que ya
+ * enseñó a alguien no debe cambiar de titular a sus espaldas.
+ */
+@Entity(tableName = "certificate", indices = [Index("level")])
+data class CertificateEntity(
+    @PrimaryKey val folio: String,
+    val level: String,
+    val studentName: String,
+    val issuedAt: Long,
+    val lessonsCompleted: Int,
+    val accuracy: Int,
+    val totalXp: Int
+)
+
+/**
+ * Aciertos y fallos acumulados por tipo de ejercicio.
+ *
+ * Existe para responder a una pregunta que hoy la app no sabe contestar: ¿en
+ * qué falla sistemáticamente este usuario? Alguien que acierta el 90 % salvo en
+ * `listen_and_type` no tiene un problema de inglés, tiene un problema de oído, y
+ * merece que se lo digan y le ofrezcan práctica de eso.
+ */
+@Entity(tableName = "exercise_stat")
+data class ExerciseStatEntity(
+    @PrimaryKey val type: String,
+    val answered: Int = 0,
+    val correct: Int = 0,
+    val lastAnsweredAt: Long = 0L
+) {
+    val accuracy: Int get() = if (answered == 0) 0 else (correct * 100) / answered
+}
+
+/**
+ * Un intento de simulacro de examen de certificación.
+ *
+ * Se guardan las respuestas correctas por sección (crudas) además del puntaje
+ * convertido, porque la conversión a la escala oficial puede afinarse después y
+ * los intentos viejos deben poder recalcularse sin haberse perdido el dato.
+ */
+@Entity(tableName = "exam_attempt", indices = [Index("examId")])
+data class ExamAttemptEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0L,
+    val examId: String,
+    val startedAt: Long,
+    val finishedAt: Long = 0L,
+    val listeningRaw: Int = 0,
+    val structureRaw: Int = 0,
+    val readingRaw: Int = 0,
+    /** Puntaje en la escala del examen simulado. 0 si el intento no se terminó. */
+    val scaledScore: Int = 0,
+    val completed: Boolean = false,
+    /**
+     * Lo que contestó, como `idPregunta:opción` separado por comas.
+     *
+     * Se guarda por dos motivos distintos y los dos importan: sin esto no se
+     * puede revisar el examen después —y revisar los fallos es lo único que
+     * enseña de un simulacro— ni reanudar uno que se quedó a medias.
+     *
+     * Va como texto plano y no como JSON serializado porque son 140 pares de
+     * `id:entero` sin nada que escapar, y así se puede leer con sqlite3 al
+     * depurar.
+     */
+    @ColumnInfo(defaultValue = "''") val answers: String = "",
+    /** Audios ya reproducidos, separados por comas. Suenan una sola vez. */
+    @ColumnInfo(defaultValue = "''") val played: String = "",
+    /* --- Punto exacto donde se quedó, para poder retomarlo --- */
+    @ColumnInfo(defaultValue = "0") val sectionIndex: Int = 0,
+    @ColumnInfo(defaultValue = "0") val questionIndex: Int = 0,
+    @ColumnInfo(defaultValue = "0") val secondsLeft: Int = 0
 )
