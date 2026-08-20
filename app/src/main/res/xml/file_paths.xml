@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Rutas que el FileProvider puede compartir hacia fuera.
+
+  Solo la carpeta de certificados de la caché, y nada más. Un FileProvider con
+  la ruta puesta a la raíz expone toda la zona privada de la app a cualquiera
+  que reciba un Intent; aquí lo que sale es exactamente el PDF que el usuario
+  pidió compartir.
+-->
+<paths>
+    <cache-path name="certificados" path="certificados/" />
+    <cache-path name="respaldos" path="respaldos/" />
+</paths>
