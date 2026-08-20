@@ -31,3 +31,10 @@ keystore.properties
 
 # La distribucion es solo por Google Play: no se versiona ningun APK
 *.apk
+
+# Cache de los scripts de herramientas/
+__pycache__/
+*.pyc
+
+# Cache del compilador de Kotlin
+.kotlin/
