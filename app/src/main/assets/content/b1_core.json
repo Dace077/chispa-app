@@ -16,6 +16,7 @@
         {
           "id": "b1_u1_l1",
           "title": "Presente perfecto",
+          "grammarTopicId": "g_present_perfect",
           "vocab": [
             { "en": "I have been", "es": "he estado" },
             { "en": "I have never", "es": "nunca he" },
@@ -113,6 +114,7 @@
         {
           "id": "b1_u1_l2",
           "title": "Narrar experiencias",
+          "grammarTopicId": "g_for_since",
           "vocab": [
             { "en": "it happened", "es": "ocurrió" },
             { "en": "at first", "es": "al principio" },
@@ -155,6 +157,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "suddenly",
+              "hint": "¿Qué significa?",
               "options": ["de repente", "lentamente", "al final", "después"],
               "answer": "de repente"
             },
@@ -202,6 +205,7 @@
         {
           "id": "b1_u1_l3",
           "title": "Phrasal verbs esenciales",
+          "grammarTopicId": "g_phrasal_verbs",
           "vocab": [
             { "en": "give up", "es": "rendirse, dejar (un hábito)" },
             { "en": "find out", "es": "averiguar" },
@@ -241,6 +245,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "We ran out of milk",
+              "hint": "¿Qué significa?",
               "options": [
                 "Nos quedamos sin leche",
                 "Corrimos por la leche",
@@ -290,8 +295,206 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Estoy buscando mis llaves",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I'm looking for my keys", "I'm looking my keys", "I'm searching for my keys after", "I look my keys for"],
               "answer": "I'm looking for my keys"
+            }
+          ]
+        },
+        {
+          "id": "b1_u1_l4",
+          "title": "Pasado perfecto",
+          "vocab": [
+            { "en": "I had finished", "es": "yo había terminado" },
+            { "en": "she had left", "es": "ella se había ido" },
+            { "en": "before", "es": "antes de" },
+            { "en": "after", "es": "después de" },
+            { "en": "by the time", "es": "para cuando" },
+            { "en": "already", "es": "ya" },
+            { "en": "to realise", "es": "darse cuenta" },
+            { "en": "to forget", "es": "olvidar" },
+            { "en": "to arrive", "es": "llegar" },
+            { "en": "to disappear", "es": "desaparecer" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "El pasado del pasado",
+              "body": "Cuando cuentas algo en pasado y necesitas decir que otra cosa ocurrió ANTES, esa va en pasado perfecto: had + participio. When I arrived, the train had left — primero se fue el tren, después llegué yo. Si usas dos pasados simples, el orden se pierde: 'when I arrived, the train left' suena a que se fue al verme.",
+              "examples": [
+                { "en": "When I arrived, she had already left.", "es": "Cuando llegué, ella ya se había ido." },
+                { "en": "I had never seen the sea before.", "es": "Nunca había visto el mar antes." },
+                { "en": "By the time we got there, it had closed.", "es": "Para cuando llegamos, ya había cerrado." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "When we arrived, the film ___ already started.",
+              "answer": "had",
+              "options": ["had", "has", "was", "did"],
+              "translation": "Cuando llegamos, la película ya había empezado."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál deja claro que perdió las llaves ANTES de llegar?",
+              "hint": "El orden de los hechos importa",
+              "options": [
+                "He realised he had lost his keys",
+                "He realised he lost his keys",
+                "He had realised he lost his keys",
+                "He realises he had lost his keys"
+              ],
+              "answer": "He realised he had lost his keys"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ never been to Canada before that trip.",
+              "answer": "had",
+              "options": ["had", "has", "have", "was"],
+              "translation": "Nunca había estado en Canadá antes de ese viaje."
+            },
+            {
+              "type": "word_order",
+              "prompt": "Para cuando llegué, ya se habían ido",
+              "words": ["By", "the", "time", "I", "arrived,", "they", "had", "gone"],
+              "answer": "By the time I arrived, they had gone"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones",
+              "pairs": [
+                ["by the time", "para cuando"],
+                ["already", "ya"],
+                ["to realise", "darse cuenta"],
+                ["to disappear", "desaparecer"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Ya había comido cuando me llamaste",
+              "answer": "I had already eaten when you called me",
+              "alternatives": ["I had already eaten when you called"]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The train had left before we arrived",
+              "answer": "The train had left before we arrived",
+              "translation": "El tren se había ido antes de que llegáramos"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I had never tried sushi before that night.",
+              "translation": "Nunca había probado sushi antes de esa noche."
+            },
+            {
+              "type": "translate",
+              "direction": "en_es",
+              "prompt": "She had forgotten her password",
+              "answer": "Ella había olvidado su contraseña"
+            }
+          ]
+        },
+        {
+          "id": "b1_u1_l5",
+          "title": "Lo que hacía y ya no hago",
+          "grammarTopicId": "g_used_to",
+          "vocab": [
+            { "en": "I used to smoke", "es": "yo fumaba (antes)" },
+            { "en": "didn't use to", "es": "no solía" },
+            { "en": "to be used to", "es": "estar acostumbrado a" },
+            { "en": "to get used to", "es": "acostumbrarse a" },
+            { "en": "anymore", "es": "ya no" },
+            { "en": "back then", "es": "en aquel entonces" },
+            { "en": "as a child", "es": "de niño" },
+            { "en": "to quit", "es": "dejar (algo)" },
+            { "en": "habit", "es": "costumbre" },
+            { "en": "nowadays", "es": "hoy en día" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Used to y be used to no son lo mismo",
+              "body": "Used to + verbo es algo que hacías y ya no: I used to live in Puebla. Be used to + -ing es estar acostumbrado: I'm used to living alone. Se parecen tanto que se confunden a diario, y dicen cosas distintas. Truco: si puedes añadir «pero ya no», es used to; si puedes añadir «no me cuesta», es be used to.",
+              "examples": [
+                { "en": "I used to play football.", "es": "Antes jugaba futbol." },
+                { "en": "I'm used to the noise.", "es": "Estoy acostumbrado al ruido." },
+                { "en": "She's getting used to her new job.", "es": "Se está acostumbrando a su nuevo trabajo." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ to have long hair.",
+              "answer": "used",
+              "options": ["used", "use", "am used", "was used"],
+              "translation": "Antes tenía el pelo largo."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál significa «estoy acostumbrado a levantarme temprano»?",
+              "hint": "Una habla del pasado y otra de la costumbre",
+              "options": [
+                "I'm used to getting up early",
+                "I used to get up early",
+                "I'm used to get up early",
+                "I use to getting up early"
+              ],
+              "answer": "I'm used to getting up early"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "He didn't ___ to like coffee, but now he loves it.",
+              "answer": "use",
+              "options": ["use", "used", "using", "uses"],
+              "translation": "Antes no le gustaba el café, pero ahora le encanta."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Tras «be used to» va -ing",
+              "options": [
+                "She is used to working nights",
+                "She is used to work nights",
+                "She used to working nights",
+                "She is use to work nights"
+              ],
+              "answer": "She is used to working nights"
+            },
+            {
+              "type": "word_order",
+              "prompt": "De niño vivía en el campo",
+              "words": ["As", "a", "child", "I", "used", "to", "live", "in", "the", "countryside"],
+              "answer": "As a child I used to live in the countryside"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones",
+              "pairs": [
+                ["anymore", "ya no"],
+                ["back then", "en aquel entonces"],
+                ["habit", "costumbre"],
+                ["nowadays", "hoy en día"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Antes fumaba, pero ya no",
+              "answer": "I used to smoke, but not anymore"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We used to walk to school every day",
+              "answer": "We used to walk to school every day",
+              "translation": "Antes íbamos caminando a la escuela todos los días"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I'm still getting used to the new schedule.",
+              "translation": "Todavía me estoy acostumbrando al nuevo horario."
             }
           ]
         }
@@ -307,6 +510,7 @@
         {
           "id": "b1_u2_l1",
           "title": "Condicionales 0 y 1",
+          "grammarTopicId": "g_conditionals",
           "vocab": [
             { "en": "if", "es": "si" },
             { "en": "unless", "es": "a menos que" },
@@ -387,7 +591,7 @@
             {
               "type": "speak_and_repeat",
               "prompt": "If I finish early, I might join you.",
-              "translation": "Si termino pronto, puede que me una a vosotros."
+              "translation": "Si termino pronto, puede que me una a ustedes."
             },
             {
               "type": "translate",
@@ -400,6 +604,7 @@
         {
           "id": "b1_u2_l2",
           "title": "Voz pasiva básica",
+          "grammarTopicId": "g_passive",
           "vocab": [
             { "en": "is made", "es": "está hecho / se hace" },
             { "en": "was built", "es": "fue construido" },
@@ -439,6 +644,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Estos coches se fabrican en Alemania",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "These cars are made in Germany",
                 "These cars make in Germany",
@@ -530,6 +736,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Actually, I don't think so.",
+              "hint": "¿Qué significa?",
               "options": [
                 "En realidad, no lo creo",
                 "Actualmente no lo creo",
@@ -580,6 +787,204 @@
               "direction": "en_es",
               "prompt": "I see your point, but I disagree",
               "answer": "Entiendo tu punto, pero no estoy de acuerdo"
+            }
+          ]
+        },
+        {
+          "id": "b1_u2_l4",
+          "title": "Obligación: must y have to",
+          "vocab": [
+            { "en": "must", "es": "deber, tener que" },
+            { "en": "have to", "es": "tener que" },
+            { "en": "don't have to", "es": "no hace falta" },
+            { "en": "mustn't", "es": "no se debe, está prohibido" },
+            { "en": "to be allowed to", "es": "tener permiso de" },
+            { "en": "rule", "es": "regla" },
+            { "en": "deadline", "es": "fecha límite" },
+            { "en": "on time", "es": "a tiempo" },
+            { "en": "required", "es": "obligatorio" },
+            { "en": "optional", "es": "opcional" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Don't have to y mustn't son opuestos",
+              "body": "Aquí se equivoca casi todo el mundo. You don't have to come significa que no hace falta, eres libre. You mustn't come significa que está prohibido. En español los dos suenan a «no tienes que venir», y por eso el error sobrevive años. Otra diferencia: must suele venir de quien habla; have to, de una regla externa.",
+              "examples": [
+                { "en": "You don't have to pay. It's free.", "es": "No hace falta pagar. Es gratis." },
+                { "en": "You mustn't park here.", "es": "Está prohibido estacionarse aquí." },
+                { "en": "I have to work on Saturday.", "es": "Tengo que trabajar el sábado." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál significa «no hace falta que vengas»?",
+              "hint": "Una prohíbe y otra libera",
+              "options": ["You don't have to come", "You mustn't come", "You can't come", "You shouldn't come"],
+              "answer": "You don't have to come"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "You ___ smoke in here. It's forbidden.",
+              "answer": "mustn't",
+              "options": ["mustn't", "don't have to", "needn't", "shouldn't"],
+              "translation": "No se puede fumar aquí. Está prohibido."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She ___ to work every Saturday.",
+              "answer": "has",
+              "options": ["has", "must", "have", "musts"],
+              "translation": "Tiene que trabajar todos los sábados."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Must nunca lleva to detrás",
+              "options": [
+                "I must finish this today",
+                "I must to finish this today",
+                "I must finishing this today",
+                "I musts finish this today"
+              ],
+              "answer": "I must finish this today"
+            },
+            {
+              "type": "word_order",
+              "prompt": "No hace falta que traigas nada",
+              "words": ["You", "don't", "have", "to", "bring", "anything"],
+              "answer": "You don't have to bring anything"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las palabras",
+              "pairs": [
+                ["deadline", "fecha límite"],
+                ["rule", "regla"],
+                ["required", "obligatorio"],
+                ["optional", "opcional"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Tengo que entregarlo mañana",
+              "answer": "I have to hand it in tomorrow",
+              "alternatives": ["I have to submit it tomorrow"]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We have to be there on time",
+              "answer": "We have to be there on time",
+              "translation": "Tenemos que estar allí a tiempo"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "You don't have to answer if you prefer not to.",
+              "translation": "No hace falta que contestes si prefieres no hacerlo."
+            }
+          ]
+        },
+        {
+          "id": "b1_u2_l5",
+          "title": "Deducir: must be y can't be",
+          "vocab": [
+            { "en": "must be", "es": "debe de ser (seguro)" },
+            { "en": "can't be", "es": "no puede ser" },
+            { "en": "might be", "es": "puede que sea" },
+            { "en": "could be", "es": "podría ser" },
+            { "en": "probably", "es": "probablemente" },
+            { "en": "obviously", "es": "obviamente" },
+            { "en": "to guess", "es": "adivinar, suponer" },
+            { "en": "evidence", "es": "pruebas" },
+            { "en": "It makes sense", "es": "Tiene sentido" },
+            { "en": "No wonder", "es": "Con razón" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Los mismos verbos, otro trabajo",
+              "body": "Must y can't también sirven para deducir, y ahí no hablan de obligación sino de certeza. His car is here, so he must be home: no es que esté obligado a estar, es que es lo único que cuadra. Para lo imposible se usa can't, no mustn't: he can't be at work, it's Sunday.",
+              "examples": [
+                { "en": "You must be tired after that trip.", "es": "Debes de estar cansado tras ese viaje." },
+                { "en": "That can't be right.", "es": "Eso no puede ser correcto." },
+                { "en": "She might be in a meeting.", "es": "Puede que esté en una reunión." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The lights are off. They ___ be asleep.",
+              "answer": "must",
+              "options": ["must", "can't", "have to", "mustn't"],
+              "translation": "Las luces están apagadas. Deben de estar dormidos."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "That ___ be Ana. She's in Japan.",
+              "answer": "can't",
+              "options": ["can't", "mustn't", "doesn't have to", "shouldn't"],
+              "translation": "Esa no puede ser Ana. Está en Japón."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál expresa que algo es imposible?",
+              "hint": "Para deducir lo imposible no se usa mustn't",
+              "options": [
+                "He can't be serious",
+                "He mustn't be serious",
+                "He doesn't have to be serious",
+                "He shouldn't be serious"
+              ],
+              "answer": "He can't be serious"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál deja la puerta abierta a la duda?",
+              "hint": "No es seguro ni imposible",
+              "options": [
+                "She might be at home",
+                "She must be at home",
+                "She can't be at home",
+                "She has to be at home"
+              ],
+              "answer": "She might be at home"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Debes de estar bromeando",
+              "words": ["You", "must", "be", "joking"],
+              "answer": "You must be joking"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones",
+              "pairs": [
+                ["must be", "debe de ser"],
+                ["can't be", "no puede ser"],
+                ["might be", "puede que sea"],
+                ["No wonder", "Con razón"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Debe de estar en el trabajo",
+              "answer": "He must be at work"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "That can't be true",
+              "answer": "That can't be true",
+              "translation": "Eso no puede ser verdad"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "No wonder you're tired, you must be exhausted.",
+              "translation": "Con razón estás cansado, debes de estar agotado."
             }
           ]
         }
@@ -634,6 +1039,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "I applied for the position",
+              "hint": "¿Qué significa?",
               "options": [
                 "Solicité el puesto",
                 "Apliqué la posición",
@@ -676,6 +1082,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Tengo una carrera en ingeniería",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I have a degree in engineering", "I have a career in engineering", "I have a race in engineering", "I have engineering career"],
               "answer": "I have a degree in engineering"
             },
@@ -737,6 +1144,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Tengo dolor de cabeza",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I have a headache", "I have pain in my head", "My head has pain", "I am headache"],
               "answer": "I have a headache"
             },
@@ -767,6 +1175,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "You need a prescription for that",
+              "hint": "¿Qué significa?",
               "options": [
                 "Necesitas una receta para eso",
                 "Necesitas una prescripción de tiempo",
@@ -824,6 +1233,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Our flight has been delayed",
+              "hint": "¿Qué significa?",
               "options": [
                 "Nuestro vuelo se ha retrasado",
                 "Nuestro vuelo ha sido cancelado",
@@ -837,7 +1247,7 @@
               "sentence": "I'd like a ___ trip ticket to Dublin.",
               "answer": "round",
               "options": ["round", "one", "double", "return way"],
-              "translation": "Quisiera un billete de ida y vuelta a Dublín."
+              "translation": "Quisiera un boleto de ida y vuelta a Dublín."
             },
             {
               "type": "translate",
@@ -866,6 +1276,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Me voy de viaje de negocios",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I'm going on a business trip", "I'm going on a business travel", "I'm going a business journey", "I make a business trip"],
               "answer": "I'm going on a business trip"
             },
@@ -874,6 +1285,203 @@
               "direction": "en_es",
               "prompt": "We spent the day sightseeing",
               "answer": "Pasamos el día haciendo turismo"
+            }
+          ]
+        },
+        {
+          "id": "b1_u3_l4",
+          "title": "Unir ideas: although y however",
+          "vocab": [
+            { "en": "although", "es": "aunque" },
+            { "en": "however", "es": "sin embargo" },
+            { "en": "because of", "es": "a causa de" },
+            { "en": "so", "es": "así que" },
+            { "en": "in order to", "es": "para" },
+            { "en": "besides", "es": "además" },
+            { "en": "on the other hand", "es": "por otro lado" },
+            { "en": "even so", "es": "aun así" },
+            { "en": "therefore", "es": "por lo tanto" },
+            { "en": "as a result", "es": "como resultado" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Because lleva frase; because of lleva sustantivo",
+              "body": "Because va seguido de sujeto y verbo: because it was raining. Because of va seguido de un sustantivo: because of the rain. La misma pareja se repite con although (frase) y despite (sustantivo). Y however no es una conjunción: no une dos frases con coma, va con punto o punto y coma delante.",
+              "examples": [
+                { "en": "We stayed home because of the rain.", "es": "Nos quedamos en casa por la lluvia." },
+                { "en": "Although it was late, we went out.", "es": "Aunque era tarde, salimos." },
+                { "en": "It was expensive. However, it was worth it.", "es": "Era caro. Sin embargo, valió la pena." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "___ the traffic, we arrived on time.",
+              "answer": "Despite",
+              "options": ["Despite", "Although", "However", "Because"],
+              "translation": "A pesar del tráfico, llegamos a tiempo."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We cancelled the trip ___ the weather was terrible.",
+              "answer": "because",
+              "options": ["because", "because of", "despite", "however"],
+              "translation": "Cancelamos el viaje porque el clima estaba terrible."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Tras «because of» va un sustantivo",
+              "options": [
+                "We left because of the noise",
+                "We left because of it was noisy",
+                "We left because the noise",
+                "We left despite it was noisy"
+              ],
+              "answer": "We left because of the noise"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál usa «however» bien?",
+              "hint": "No une dos frases con coma",
+              "options": [
+                "It was hard. However, we finished.",
+                "It was hard, however we finished.",
+                "However it was hard, we finished.",
+                "It was hard however, we finished."
+              ],
+              "answer": "It was hard. However, we finished."
+            },
+            {
+              "type": "word_order",
+              "prompt": "Aunque estaba cansado, siguió trabajando",
+              "words": ["Although", "he", "was", "tired,", "he", "kept", "working"],
+              "answer": "Although he was tired, he kept working"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los conectores",
+              "pairs": [
+                ["although", "aunque"],
+                ["however", "sin embargo"],
+                ["therefore", "por lo tanto"],
+                ["besides", "además"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Llegamos tarde por el tráfico",
+              "answer": "We arrived late because of the traffic"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "It was expensive. However, it was worth it",
+              "answer": "It was expensive. However, it was worth it",
+              "translation": "Era caro. Sin embargo, valió la pena"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Although I was nervous, the interview went well.",
+              "translation": "Aunque estaba nervioso, la entrevista salió bien."
+            }
+          ]
+        },
+        {
+          "id": "b1_u3_l5",
+          "title": "Preposiciones pegadas al verbo",
+          "vocab": [
+            { "en": "to depend on", "es": "depender de" },
+            { "en": "to listen to", "es": "escuchar" },
+            { "en": "to look for", "es": "buscar" },
+            { "en": "to wait for", "es": "esperar" },
+            { "en": "to think about", "es": "pensar en" },
+            { "en": "to belong to", "es": "pertenecer a" },
+            { "en": "to apologise for", "es": "disculparse por" },
+            { "en": "to worry about", "es": "preocuparse por" },
+            { "en": "to be interested in", "es": "estar interesado en" },
+            { "en": "to be good at", "es": "ser bueno en" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La preposición no se traduce, se memoriza",
+              "body": "Cada verbo inglés arrastra su preposición y casi nunca coincide con la española. Depend ON, no depend of. Listen TO, no listen (a secas). Y algunos que en español llevan preposición, en inglés no llevan ninguna: wait for pero no 'search for' cuando dices look for. No hay lógica: van con el verbo, como el apellido.",
+              "examples": [
+                { "en": "It depends on the price.", "es": "Depende del precio." },
+                { "en": "I'm looking for my keys.", "es": "Estoy buscando mis llaves." },
+                { "en": "She's good at maths.", "es": "Es buena en matemáticas." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "It depends ___ the weather.",
+              "answer": "on",
+              "options": ["on", "of", "in", "from"],
+              "translation": "Depende del clima."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I'm waiting ___ the bus.",
+              "answer": "for",
+              "options": ["for", "to", "at", "on"],
+              "translation": "Estoy esperando el autobús."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "She's very good ___ drawing.",
+              "answer": "at",
+              "options": ["at", "in", "on", "for"],
+              "translation": "Es muy buena dibujando."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Listen siempre pide su preposición",
+              "options": [
+                "I listen to music every day",
+                "I listen music every day",
+                "I listen at music every day",
+                "I hear to music every day"
+              ],
+              "answer": "I listen to music every day"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une los verbos con su significado",
+              "pairs": [
+                ["to look for", "buscar"],
+                ["to depend on", "depender de"],
+                ["to worry about", "preocuparse por"],
+                ["to belong to", "pertenecer a"]
+              ]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Estoy pensando en cambiar de trabajo",
+              "words": ["I'm", "thinking", "about", "changing", "jobs"],
+              "answer": "I'm thinking about changing jobs"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "No te preocupes por eso",
+              "answer": "Don't worry about that",
+              "alternatives": ["Don't worry about it"]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I'm looking for a new apartment",
+              "answer": "I'm looking for a new apartment",
+              "translation": "Estoy buscando un departamento nuevo"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I'm interested in learning more about it.",
+              "translation": "Me interesa aprender más sobre eso."
             }
           ]
         }

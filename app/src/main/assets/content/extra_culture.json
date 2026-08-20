@@ -29,7 +29,7 @@
             {
               "type": "culture_note",
               "title": "El 'small talk' no es opcional",
-              "body": "Antes de una reunión, en el ascensor o esperando el café, en el mundo anglosajón se habla del tiempo, del fin de semana o del tráfico. No es hipocresía ni pérdida de tiempo: es el ritual que marca que la relación va bien. Ir directo al asunto sin ese preámbulo se percibe como frío o incluso hostil. Tres frases te bastan: 'How's your week going?', 'Any plans for the weekend?', 'Terrible weather, isn't it?'"
+              "body": "Antes de una reunión, en el elevador o esperando el café, en el mundo anglosajón se habla del tiempo, del fin de semana o del tráfico. No es hipocresía ni pérdida de tiempo: es el ritual que marca que la relación va bien. Ir directo al asunto sin ese preámbulo se percibe como frío o incluso hostil. Tres frases te bastan: 'How's your week going?', 'Any plans for the weekend?', 'Terrible weather, isn't it?'"
             },
             {
               "type": "culture_note",
@@ -202,6 +202,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Trick or treat!",
+              "hint": "¿Qué significa?",
               "options": [
                 "¡Truco o trato!",
                 "¡Trato hecho!",

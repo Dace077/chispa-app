@@ -81,7 +81,7 @@
               "sentence": "I'm ___ grab a coffee, want one?",
               "answer": "gonna",
               "options": ["gonna", "gotta", "wanna", "kinda"],
-              "translation": "Voy a coger un café, ¿quieres uno?"
+              "translation": "Voy por un café, ¿quieres uno?"
             },
             {
               "type": "fill_in_blank",
@@ -171,6 +171,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "ICYMI, the deadline changed",
+              "hint": "¿Qué significa?",
               "options": [
                 "Por si te lo perdiste, cambió la fecha límite",
                 "Increíble, cambió la fecha",
@@ -215,7 +216,7 @@
             {
               "type": "culture_note",
               "title": "El emoji del pulgar arriba",
-              "body": "Cuidado con el 👍 en conversaciones anglosajonas jóvenes: en muchos contextos se ha vuelto pasivo-agresivo, algo así como 'recibido, y no quiero seguir hablando'. Entre generaciones mayores sigue siendo simplemente 'vale'. Cuando dudes, responde con palabras: 'Sounds good!' o 'Got it, thanks!'."
+              "body": "Cuidado con el 👍 en conversaciones anglosajonas jóvenes: en muchos contextos se ha vuelto pasivo-agresivo, algo así como 'recibido, y no quiero seguir hablando'. Entre generaciones mayores sigue siendo simplemente 'de acuerdo'. Cuando dudes, responde con palabras: 'Sounds good!' o 'Got it, thanks!'."
             }
           ]
         },
@@ -261,6 +262,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Count me in!",
+              "hint": "¿Qué significa?",
               "options": [
                 "¡Cuenta conmigo!",
                 "¡Cuéntame!",
@@ -273,6 +275,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Dinner's on me tonight",
+              "hint": "¿Qué significa?",
               "options": [
                 "Esta noche invito yo a cenar",
                 "La cena está encima de mí",

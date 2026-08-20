@@ -67,6 +67,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Tras un desastre alguien dice: 'Well, that went well.'",
+              "hint": "¿Qué significa?",
               "options": [
                 "Es ironía: fue un desastre",
                 "Está satisfecho del resultado",
@@ -148,6 +149,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "He is notorious in the industry",
+              "hint": "¿Qué significa?",
               "options": [
                 "Tiene mala fama en el sector",
                 "Es muy respetado en el sector",
@@ -249,6 +251,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "—No me gusta el café. —Yo tampoco.",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["Neither do I", "Me neither do", "I don't neither", "Nor I do"],
               "answer": "Neither do I"
             },
@@ -341,6 +344,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Titular: 'Minister to step down'",
+              "hint": "¿Qué significa?",
               "options": [
                 "El ministro va a dimitir",
                 "El ministro ya dimitió",
@@ -353,6 +357,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Titular: 'Report slams safety record'",
+              "hint": "¿Qué significa?",
               "options": [
                 "Un informe critica duramente el historial de seguridad",
                 "Un informe elogia la seguridad",
@@ -502,6 +507,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Notwithstanding the foregoing, the clause applies",
+              "hint": "¿Qué significa?",
               "options": [
                 "Sin perjuicio de lo anterior, la cláusula se aplica",
                 "Debido a lo anterior, la cláusula se anula",
@@ -566,6 +572,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "His speech really struck a chord",
+              "hint": "¿Qué significa?",
               "options": [
                 "Su discurso tocó la fibra",
                 "Su discurso sonó desafinado",
@@ -641,6 +648,7 @@
         {
           "id": "c2_u3_l1",
           "title": "Condicionales mixtos",
+          "grammarTopicId": "g_conditionals",
           "vocab": [
             { "en": "if I had studied, I would be", "es": "si hubiera estudiado, sería" },
             { "en": "if I were you, I would have", "es": "si yo fuera tú, habría" },
@@ -682,6 +690,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Si no fuera por tu ayuda, no lo habríamos logrado",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "But for your help, we wouldn't have made it",
                 "But your help, we wouldn't have made it",
@@ -694,6 +703,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Should you need assistance, please call",
+              "hint": "¿Qué significa?",
               "options": [
                 "Si necesitara ayuda, llame por favor",
                 "Debería pedir ayuda por teléfono",
@@ -741,7 +751,7 @@
           "id": "c2_u3_l2",
           "title": "Modismos opacos",
           "vocab": [
-            { "en": "to take with a pinch of salt", "es": "coger con pinzas (UK)" },
+            { "en": "to take with a pinch of salt", "es": "tomar con pinzas (UK)" },
             { "en": "a red herring", "es": "una pista falsa" },
             { "en": "to steal someone's thunder", "es": "robar el protagonismo" },
             { "en": "to bite off more than you can chew", "es": "abarcar más de lo que se puede" },
@@ -767,6 +777,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "That clue turned out to be a red herring",
+              "hint": "¿Qué significa?",
               "options": [
                 "Esa pista resultó ser falsa, para despistar",
                 "Esa pista resultó ser decisiva",
@@ -779,6 +790,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "They keep moving the goalposts",
+              "hint": "¿Qué significa?",
               "options": [
                 "No paran de cambiar las condiciones",
                 "Están reorganizando el campo",
@@ -791,6 +803,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "He threw his colleague under the bus",
+              "hint": "¿Qué significa?",
               "options": [
                 "Sacrificó a su compañero para salvarse",
                 "Ayudó a su compañero a subir al autobús",
@@ -814,7 +827,7 @@
               "sentence": "Take that report with a ___ of salt.",
               "answer": "pinch",
               "options": ["pinch", "spoon", "bag", "grain of sand"],
-              "translation": "Coge ese informe con pinzas."
+              "translation": "Toma ese informe con pinzas."
             },
             {
               "type": "fill_in_blank",
@@ -828,7 +841,7 @@
               "direction": "en_es",
               "prompt": "The proof of the pudding is in the eating",
               "answer": "La prueba está en los hechos",
-              "alternatives": ["Se demuestra andando"]
+              "alternatives": ["Se demuestra en la práctica"]
             },
             {
               "type": "word_order",
@@ -839,7 +852,7 @@
             {
               "type": "speak_and_repeat",
               "prompt": "I'd take those figures with a pinch of salt.",
-              "translation": "Yo cogería esas cifras con pinzas."
+              "translation": "Yo tomaría esas cifras con pinzas."
             }
           ]
         },
@@ -875,6 +888,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Estoy de acuerdo contigo",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I agree with you", "I am agree with you", "I am agreed with you", "I agree to you"],
               "answer": "I agree with you"
             },
@@ -889,6 +903,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Necesito más información",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I need more information", "I need more informations", "I need mores information", "I need many informations"],
               "answer": "I need more information"
             },
@@ -896,6 +911,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "La gente es muy amable aquí",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["People are very kind here", "People is very kind here", "The people is very kind here", "Peoples are very kind here"],
               "answer": "People are very kind here"
             },
@@ -917,6 +933,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Está casada con un arquitecto",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["She is married to an architect", "She is married with an architect", "She married with an architect", "She is marry to an architect"],
               "answer": "She is married to an architect"
             },

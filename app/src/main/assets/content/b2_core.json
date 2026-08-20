@@ -16,6 +16,7 @@
         {
           "id": "b2_u1_l1",
           "title": "Segundo condicional",
+          "grammarTopicId": "g_conditionals",
           "vocab": [
             { "en": "if I were", "es": "si yo fuera", "note": "'were' para todas las personas en hipótesis" },
             { "en": "I would", "es": "yo haría" },
@@ -79,7 +80,7 @@
               "type": "listen_and_type",
               "audioText": "If I had a car, I would drive there",
               "answer": "If I had a car, I would drive there",
-              "translation": "Si tuviera coche, iría conduciendo"
+              "translation": "Si tuviera coche, iría manejando"
             },
             {
               "type": "matching_pairs",
@@ -107,6 +108,7 @@
         {
           "id": "b2_u1_l2",
           "title": "Tercer condicional y wish",
+          "grammarTopicId": "g_conditionals",
           "vocab": [
             { "en": "if I had known", "es": "si hubiera sabido" },
             { "en": "I would have", "es": "yo habría" },
@@ -146,6 +148,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Deberías haberme avisado",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "You should have told me",
                 "You should told me",
@@ -198,6 +201,7 @@
         {
           "id": "b2_u1_l3",
           "title": "Estilo indirecto",
+          "grammarTopicId": "g_reported_speech",
           "vocab": [
             { "en": "he said that", "es": "él dijo que" },
             { "en": "she told me", "es": "ella me dijo" },
@@ -238,6 +242,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Me preguntó si hablaba inglés",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "He asked me if I spoke English",
                 "He asked me if I speak English",
@@ -382,6 +387,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Kindly find attached the requested documents",
+              "hint": "¿Qué significa?",
               "options": [
                 "Adjunto los documentos solicitados",
                 "Encuentra amablemente los documentos",
@@ -440,20 +446,21 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "It is worth noting that costs have doubled",
+              "hint": "¿Qué significa?",
               "options": [
-                "Cabe destacar que los costes se han duplicado",
-                "Vale la pena notar los costes",
-                "Los costes valen el doble",
-                "Anotamos que hay costes"
+                "Cabe destacar que los costos se han duplicado",
+                "Vale la pena notar los costos",
+                "Los costos valen el doble",
+                "Anotamos que hay costos"
               ],
-              "answer": "Cabe destacar que los costes se han duplicado"
+              "answer": "Cabe destacar que los costos se han duplicado"
             },
             {
               "type": "fill_in_blank",
               "sentence": "The main ___ of this plan is the cost.",
               "answer": "drawback",
               "options": ["drawback", "advantage", "evidence", "extent"],
-              "translation": "El principal inconveniente de este plan es el coste."
+              "translation": "El principal inconveniente de este plan es el costo."
             },
             {
               "type": "fill_in_blank",
@@ -521,6 +528,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "He claims he never received the email",
+              "hint": "¿Qué significa?",
               "options": [
                 "Afirma que nunca recibió el correo (y hay dudas)",
                 "Reclama que le manden el correo",
@@ -583,6 +591,103 @@
               "answer": "Fue una jugada astuta"
             }
           ]
+        },
+        {
+          "id": "b2_u2_l4",
+          "title": "Incontables y cuantificadores",
+          "grammarTopicId": "g_uncountable",
+          "vocab": [
+            { "en": "advice", "es": "consejo", "note": "Incontable: a piece of advice" },
+            { "en": "information", "es": "información" },
+            { "en": "furniture", "es": "muebles" },
+            { "en": "luggage", "es": "equipaje" },
+            { "en": "research", "es": "investigación" },
+            { "en": "equipment", "es": "equipo, material" },
+            { "en": "a piece of", "es": "una pieza de" },
+            { "en": "plenty of", "es": "de sobra" },
+            { "en": "hardly any", "es": "casi nada" },
+            { "en": "a great deal of", "es": "gran cantidad de" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Palabras que en español se cuentan y en inglés no",
+              "body": "Advice, information, furniture, luggage, research y equipment no llevan plural ni artículo a/an, aunque en español los contemos sin problema. Se dice some advice o a piece of advice, nunca 'an advice' ni 'advices'. Y el verbo va en singular: the news is good, aunque termine en -s.",
+              "examples": [
+                { "en": "She gave me some good advice.", "es": "Me dio buenos consejos." },
+                { "en": "We need more information.", "es": "Necesitamos más información." },
+                { "en": "The furniture is new.", "es": "Los muebles son nuevos." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Advice no se cuenta",
+              "options": [
+                "He gave me a piece of advice",
+                "He gave me an advice",
+                "He gave me some advices",
+                "He gave me one advice"
+              ],
+              "answer": "He gave me a piece of advice"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "The information you sent ___ very useful.",
+              "answer": "was",
+              "options": ["was", "were", "are", "have been"],
+              "translation": "La información que enviaste fue muy útil."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "We have ___ time, so don't rush.",
+              "answer": "plenty of",
+              "options": ["plenty of", "many", "a few", "several"],
+              "translation": "Tenemos tiempo de sobra, así que no corras."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál NO es incontable en inglés?",
+              "hint": "Tres no llevan plural nunca",
+              "options": ["suggestion", "advice", "luggage", "furniture"],
+              "answer": "suggestion"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Apenas queda equipaje",
+              "words": ["There", "is", "hardly", "any", "luggage", "left"],
+              "answer": "There is hardly any luggage left"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une con su equivalente",
+              "pairs": [
+                ["luggage", "equipaje"],
+                ["research", "investigación"],
+                ["equipment", "material"],
+                ["plenty of", "de sobra"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Necesito más información",
+              "answer": "I need more information"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "The equipment was very expensive",
+              "answer": "The equipment was very expensive",
+              "translation": "El material era muy caro"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Let me give you a piece of advice.",
+              "translation": "Déjame darte un consejo."
+            }
+          ]
         }
       ]
     },
@@ -596,6 +701,7 @@
         {
           "id": "b2_u3_l1",
           "title": "Phrasal verbs avanzados",
+          "grammarTopicId": "g_phrasal_verbs",
           "vocab": [
             { "en": "to carry out", "es": "llevar a cabo, realizar" },
             { "en": "to put up with", "es": "aguantar, soportar" },
@@ -635,6 +741,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "He got away with it",
+              "hint": "¿Qué significa?",
               "options": [
                 "Se salió con la suya",
                 "Se fue con ello",
@@ -699,6 +806,7 @@
         {
           "id": "b2_u3_l2",
           "title": "Gerundio o infinitivo",
+          "grammarTopicId": "g_gerund_infinitive",
           "vocab": [
             { "en": "stop doing", "es": "dejar de hacer" },
             { "en": "stop to do", "es": "parar para hacer" },
@@ -728,6 +836,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "She stopped to help him",
+              "hint": "¿Qué significa?",
               "options": [
                 "Se detuvo para ayudarle",
                 "Dejó de ayudarle",
@@ -740,6 +849,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "I remember locking the door",
+              "hint": "¿Qué significa?",
               "options": [
                 "Recuerdo haber cerrado la puerta",
                 "Me acordé de cerrar la puerta",
@@ -908,6 +1018,7 @@
         {
           "id": "b2_u3_l4",
           "title": "Subjuntivo, inversión y énfasis",
+          "grammarTopicId": "g_inversion",
           "vocab": [
             { "en": "I suggest that he be", "es": "sugiero que sea (subjuntivo)" },
             { "en": "it is essential that", "es": "es esencial que" },
@@ -978,6 +1089,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Under no circumstances should you sign that",
+              "hint": "¿Qué significa?",
               "options": [
                 "Bajo ninguna circunstancia deberías firmar eso",
                 "En algunas circunstancias podrías firmarlo",

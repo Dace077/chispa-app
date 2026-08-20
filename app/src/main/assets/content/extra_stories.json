@@ -101,7 +101,7 @@
               "type": "reading",
               "title": "The Lost Umbrella",
               "body": "It was Tuesday and it was raining hard. Daniel forgot his umbrella at home again.\n\nHe ran to the bus stop and waited. His jacket was completely wet. He was cold and angry with himself.\n\nA man arrived at the bus stop. He had a big black umbrella. He looked at Daniel and said nothing for a moment.\n\nThen he moved closer and held the umbrella over both of them.\n\n\"Thank you,\" said Daniel. \"Really.\"\n\n\"No problem,\" said the man. \"I forgot mine yesterday. Somebody did the same for me.\"\n\nThe bus arrived. They did not talk again. But Daniel remembered that morning for years.",
-              "translation": "Era martes y llovía con fuerza. Daniel se olvidó el paraguas en casa otra vez.\n\nCorrió hasta la parada de autobús y esperó. Su chaqueta estaba completamente mojada. Tenía frío y estaba enfadado consigo mismo.\n\nUn hombre llegó a la parada. Llevaba un paraguas negro grande. Miró a Daniel y no dijo nada durante un momento.\n\nEntonces se acercó y sostuvo el paraguas sobre los dos.\n\n«Gracias», dijo Daniel. «De verdad.»\n\n«No hay problema», dijo el hombre. «Yo olvidé el mío ayer. Alguien hizo lo mismo por mí.»\n\nLlegó el autobús. No volvieron a hablar. Pero Daniel recordó aquella mañana durante años."
+              "translation": "Era martes y llovía con fuerza. Daniel se olvidó el paraguas en casa otra vez.\n\nCorrió hasta la parada de autobús y esperó. Su chamarra estaba completamente mojada. Tenía frío y estaba enojado consigo mismo.\n\nUn hombre llegó a la parada. Llevaba un paraguas negro grande. Miró a Daniel y no dijo nada durante un momento.\n\nEntonces se acercó y sostuvo el paraguas sobre los dos.\n\n«Gracias», dijo Daniel. «De verdad.»\n\n«No hay problema», dijo el hombre. «Yo olvidé el mío ayer. Alguien hizo lo mismo por mí.»\n\nLlegó el autobús. No volvieron a hablar. Pero Daniel recordó aquella mañana durante años."
             },
             {
               "type": "tip",
@@ -148,7 +148,7 @@
               "prompt": "Llovía con fuerza",
               "answer": "It was raining hard"
             },
-            { "type": "listen_and_type", "audioText": "His jacket was completely wet", "answer": "His jacket was completely wet", "translation": "Su chaqueta estaba completamente mojada" },
+            { "type": "listen_and_type", "audioText": "His jacket was completely wet", "answer": "His jacket was completely wet", "translation": "Su chamarra estaba completamente mojada" },
             { "type": "speak_and_repeat", "prompt": "Thank you. Really.", "translation": "Gracias. De verdad." },
             {
               "type": "word_order",
@@ -185,7 +185,7 @@
               "type": "reading",
               "title": "The Letter She Never Sent",
               "body": "When Elena was clearing out her mother's flat, she found a wooden box at the back of a drawer. Inside there was a single envelope, sealed, with a stamp that had faded to almost nothing.\n\nThe handwriting was her mother's, but younger — rounder, more careful. The address was in another country. There was no name Elena recognised.\n\nShe sat on the floor for a long time, holding it.\n\nShe knew she could open it. Her mother had died three months earlier and nobody would ever know. But she also knew that her mother had kept that letter for forty years without sending it, and that the not-sending was probably the whole story.\n\nIn the end, Elena put the envelope back in the box and the box back in the drawer. She had spent her life regretting things she had said. She was not going to start regretting things she had read.\n\nSome doors, she decided, are more useful closed.",
-              "translation": "Mientras vaciaba el piso de su madre, Elena encontró una caja de madera al fondo de un cajón. Dentro había un único sobre, cerrado, con un sello descolorido hasta casi desaparecer.\n\nLa letra era de su madre, pero más joven: más redonda, más cuidada. La dirección era de otro país. No había ningún nombre que Elena reconociera.\n\nSe sentó en el suelo un buen rato, sosteniéndolo.\n\nSabía que podía abrirlo. Su madre había muerto tres meses antes y nadie se enteraría nunca. Pero también sabía que su madre había guardado esa carta cuarenta años sin enviarla, y que el no enviarla era probablemente toda la historia.\n\nAl final, Elena devolvió el sobre a la caja y la caja al cajón. Se había pasado la vida arrepintiéndose de cosas que había dicho. No iba a empezar a arrepentirse de cosas que había leído.\n\nAlgunas puertas, decidió, son más útiles cerradas."
+              "translation": "Mientras vaciaba el departamento de su madre, Elena encontró una caja de madera al fondo de un cajón. Dentro había un único sobre, cerrado, con un sello descolorido hasta casi desaparecer.\n\nLa letra era de su madre, pero más joven: más redonda, más cuidada. La dirección era de otro país. No había ningún nombre que Elena reconociera.\n\nSe sentó en el suelo un buen rato, sosteniéndolo.\n\nSabía que podía abrirlo. Su madre había muerto tres meses antes y nadie se enteraría nunca. Pero también sabía que su madre había guardado esa carta cuarenta años sin enviarla, y que el no enviarla era probablemente toda la historia.\n\nAl final, Elena devolvió el sobre a la caja y la caja al cajón. Se había pasado la vida arrepintiéndose de cosas que había dicho. No iba a empezar a arrepentirse de cosas que había leído.\n\nAlgunas puertas, decidió, son más útiles cerradas."
             },
             {
               "type": "tip",
@@ -266,14 +266,14 @@
               "type": "reading",
               "title": "The Interview",
               "body": "The last candidate of the day had the least impressive CV of all of them.\n\nThere was a two-year gap in the middle of it. The other five candidates had filled their gaps with courses, freelance work, anything. This one had left hers blank.\n\n\"Can you tell me about this period?\" I asked, expecting the usual story about consulting projects.\n\nShe hesitated. Then she said: \"I was caring for my father. He was ill. I could have taken small jobs and put them on the CV, but I would have been lying about what those two years were.\"\n\nI had interviewed forty people that month. Every single one of them had told me they were a team player, that they worked well under pressure, that their greatest weakness was caring too much.\n\nShe was the only one who had admitted that two years of her life had been about something other than work.\n\nWe hired her the following Monday. If I am honest, I had already decided before she finished the sentence.",
-              "translation": "La última candidata del día tenía el currículum menos impresionante de todos.\n\nHabía un hueco de dos años en medio. Los otros cinco candidatos habían rellenado sus huecos con cursos, trabajos por libre, lo que fuera. Esta lo había dejado en blanco.\n\n«¿Puede hablarme de este periodo?», pregunté, esperando la historia habitual sobre proyectos de consultoría.\n\nDudó. Después dijo: «Estaba cuidando de mi padre. Estaba enfermo. Podría haber cogido trabajos pequeños y ponerlos en el currículum, pero habría estado mintiendo sobre lo que fueron esos dos años.»\n\nYo había entrevistado a cuarenta personas ese mes. Todas y cada una me habían dicho que trabajaban bien en equipo, que rendían bajo presión, que su mayor defecto era preocuparse demasiado.\n\nElla fue la única que admitió que dos años de su vida habían tratado de algo que no era el trabajo.\n\nLa contratamos el lunes siguiente. Si soy honesto, ya lo había decidido antes de que terminara la frase."
+              "translation": "La última candidata del día tenía el currículum menos impresionante de todos.\n\nHabía un hueco de dos años en medio. Los otros cinco candidatos habían rellenado sus huecos con cursos, trabajos por libre, lo que fuera. Esta lo había dejado en blanco.\n\n«¿Puede hablarme de este periodo?», pregunté, esperando la historia habitual sobre proyectos de consultoría.\n\nDudó. Después dijo: «Estaba cuidando de mi padre. Estaba enfermo. Podría haber tomado trabajos pequeños y ponerlos en el currículum, pero habría estado mintiendo sobre lo que fueron esos dos años.»\n\nYo había entrevistado a cuarenta personas ese mes. Todas y cada una me habían dicho que trabajaban bien en equipo, que rendían bajo presión, que su mayor defecto era preocuparse demasiado.\n\nElla fue la única que admitió que dos años de su vida habían tratado de algo que no era el trabajo.\n\nLa contratamos el lunes siguiente. Si soy honesto, ya lo había decidido antes de que terminara la frase."
             },
             {
               "type": "tip",
               "title": "Condicional perfecto: lo que pudo ser",
               "body": "'I could have taken small jobs' y 'I would have been lying' son condicionales perfectos: hablan de un pasado alternativo que no ocurrió. La estructura es modal + have + participio. Es lo que estudiaste en B2 y aquí lo ves usado con naturalidad, no en un ejercicio.",
               "examples": [
-                { "en": "I could have taken those jobs.", "es": "Podría haber cogido esos trabajos." },
+                { "en": "I could have taken those jobs.", "es": "Podría haber tomado esos trabajos." },
                 { "en": "I would have been lying.", "es": "Habría estado mintiendo." },
                 { "en": "She should have said something.", "es": "Debería haber dicho algo." }
               ]
@@ -317,7 +317,7 @@
               "sentence": "I ___ have taken small jobs.",
               "answer": "could",
               "options": ["could", "can", "would", "will"],
-              "translation": "Podría haber cogido trabajos pequeños."
+              "translation": "Podría haber tomado trabajos pequeños."
             },
             {
               "type": "translate",
