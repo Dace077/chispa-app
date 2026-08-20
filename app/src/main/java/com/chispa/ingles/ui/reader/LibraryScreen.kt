@@ -17,6 +17,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.Icon
@@ -84,21 +85,23 @@ fun LibraryScreen(
         state.porNivel.forEach { (nivel, lecturas) ->
             item(key = "cab_${nivel.name}") {
                 Row(
-                    modifier = Modifier.padding(top = 14.dp, bottom = 10.dp),
+                    modifier = Modifier.padding(top = 12.dp, bottom = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     LevelChip(label = nivel.label, color = tintForLevel(nivel))
                     Spacer(Modifier.width(8.dp))
+                    val leidas = lecturas.count { it.id in state.leidas }
                     Text(
-                        "${lecturas.size} ${if (lecturas.size == 1) "lectura" else "lecturas"}",
+                        if (leidas > 0) "$leidas de ${lecturas.size} leídas"
+                        else "${lecturas.size} ${if (lecturas.size == 1) "lectura" else "lecturas"}",
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
             items(lecturas, key = { it.id }) { lectura ->
-                ReadingCard(lectura) { onOpenReading(lectura.id) }
-                Spacer(Modifier.height(10.dp))
+                ReadingCard(lectura, lectura.id in state.leidas) { onOpenReading(lectura.id) }
+                Spacer(Modifier.height(8.dp))
             }
         }
     }
@@ -141,7 +144,7 @@ private fun GrammarEntryCard(onClick: () -> Unit) {
 }
 
 @Composable
-private fun ReadingCard(reading: Reading, onClick: () -> Unit) {
+private fun ReadingCard(reading: Reading, leida: Boolean, onClick: () -> Unit) {
     val colors = ChispaThemeTokens.colors
     Row(
         modifier = Modifier
@@ -149,21 +152,37 @@ private fun ReadingCard(reading: Reading, onClick: () -> Unit) {
             .clip(RoundedCornerShape(18.dp))
             .background(colors.surfaceElevated)
             .clickable(onClick = onClick)
-            .padding(16.dp),
+            .padding(horizontal = 14.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
             modifier = Modifier
-                .size(46.dp)
+                .size(44.dp)
                 .clip(RoundedCornerShape(14.dp))
-                .background(tintForLevel(reading.level).copy(alpha = 0.16f)),
+                .background(
+                    if (leida) colors.correct.copy(alpha = 0.16f)
+                    else tintForLevel(reading.level).copy(alpha = 0.16f)
+                ),
             contentAlignment = Alignment.Center
         ) {
-            Text(reading.category.emoji, style = MaterialTheme.typography.titleLarge)
+            if (leida) {
+                Icon(
+                    Icons.Filled.Check, contentDescription = "Leída",
+                    tint = colors.correct,
+                    modifier = Modifier.size(24.dp)
+                )
+            } else {
+                Text(reading.category.emoji, style = MaterialTheme.typography.titleLarge)
+            }
         }
-        Spacer(Modifier.width(14.dp))
+        Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
-            Text(reading.title, style = MaterialTheme.typography.titleMedium)
+            Text(
+                reading.title,
+                style = MaterialTheme.typography.titleMedium,
+                color = if (leida) MaterialTheme.colorScheme.onSurfaceVariant
+                else MaterialTheme.colorScheme.onSurface
+            )
             if (reading.summary.isNotBlank()) {
                 Text(
                     reading.summary,
@@ -172,7 +191,7 @@ private fun ReadingCard(reading: Reading, onClick: () -> Unit) {
                     maxLines = 2
                 )
             }
-            Spacer(Modifier.height(6.dp))
+            Spacer(Modifier.height(4.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
