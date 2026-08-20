@@ -2,7 +2,7 @@
 
 > Archivo de traspaso. Si abres un chat nuevo, **lee esto primero**: contiene
 > el estado real del proyecto, las decisiones ya tomadas y lo que estaba a
-> medias. Última actualización: **4 de agosto de 2026, versión 1.7.0**.
+> medias. Última actualización: **17 de agosto de 2026, versión 1.8.0**.
 
 ---
 
@@ -247,3 +247,251 @@ Para eso está `herramientas\pulsar.ps1`.
 
 El emulador no tiene micrófono real: la captura de voz solo se puede validar en
 un móvil de verdad.
+
+---
+
+## 11. Sesión del 17 de agosto de 2026
+
+Versión en `app/build.gradle.kts`: **1.8.0 (versionCode 18)**, sin publicar.
+
+### Lo que se añadió
+
+| Bloque | Dónde |
+|---|---|
+| Room v2 con migración real (`MIGRATION_1_2`) — se quitó `fallbackToDestructiveMigration` | `data/db/Migrations.kt` |
+| Ficha del alumno y certificado PDF por nivel | `ui/profile/StudentDataScreen.kt`, `certificates/` |
+| 7 avatares dibujados en Canvas, uno por nivel | `domain/Avatars.kt`, `ui/components/AvatarArt.kt` |
+| Repetir el test de nivel sin perder progreso (**el nivel solo sube**) | `ProgressRepository.retakePlacement` |
+| Cada lección enlaza con su tema de gramática | `grammarTopicId` en los `*_core.json` |
+| Estadísticas por tipo de ejercicio, exportar/importar progreso, widget de racha | `domain/ExerciseStats.kt`, `data/backup/`, `widget/` |
+| Biblioteca de lecturas: 21 → **42** (7 por nivel) | `readings.json` |
+| Módulo TOEFL ITP: 10 temas de apoyo y **5 simulacros de 140 preguntas** | `toefl.json`, `toefl_examen_0{1..5}.json` |
+| Logo nuevo: colibrí blanco con letrero «Speak English» | `herramientas/generar-iconos.py` |
+
+### Los simulacros TOEFL
+
+Cinco exámenes completos, 700 preguntas **originales** (las de ETS son propiedad
+suya y no se pueden reproducir). Cada uno: 50 Listening + 40 Structure + 50
+Reading, igual que el examen real.
+
+Dos cosas que costaron y conviene no repetir:
+
+- **El reparto de letras.** Al escribir, la opción correcta va siempre la
+  primera; si se deja así, el examen se aprueba marcando siempre A. El primer
+  simulacro salió con el 69% de respuestas en B antes de detectarlo. Se reparte
+  con una rotación determinista y `validar-simulacros.py` lo comprueba.
+- **Las de `error_id` no se pueden rotar**, porque sus opciones son los
+  segmentos (A)(B)(C)(D) de la frase en su orden. Ahí el equilibrio se consigue
+  **re-segmentando la frase** para que el trozo con el error caiga en la letra
+  que toca, no reescribiéndola.
+
+### El español del curso era de España
+
+El contenido estaba escrito en español peninsular y eso, con un alumno mexicano,
+no es un matiz de estilo: «voy a coger un café» y «chaqueta» son vulgares en
+México. Se corrigieron 113 sustituciones (coger→tomar/llevar, chaqueta→chamarra,
+ordenador→computadora, fontanero→plomero, camarero→mesero, ascensor→elevador,
+billete→boleto, céntimo→centavo, conducir→manejar, costes→costos, «vale»→«está
+bien»…). Queda como red permanente: `herramientas/neutralizar-espanolismos.py`,
+idempotente, pásalo tras escribir contenido nuevo.
+
+### Interfaz
+
+Se recorrió pantalla por pantalla **en el emulador**, mirando capturas, no a
+ciegas. Lo que se arregló:
+
+- **Aprender**: cabían dos lecciones donde caben cuatro; «60 / 20 XP» al superar
+  la meta parecía un error y ahora dice «60 XP hoy».
+- **Repaso**: media pantalla en blanco, porque «las que más se te resisten» solo
+  aparece si ya fallaste algo — justo lo que no ha pasado al principio. Ahora cae
+  a `weakestCards()` y el título cambia a «lo que llevas menos asentado».
+- **Leer**: con 42 lecturas no había forma de saber cuáles ya leíste. Hay visto
+  verde y «3 de 7 leídas»; se marca cuando la última frase lleva 1,5 s en
+  pantalla (abrir y salir no cuenta).
+- **Lección**: el contenido cortado a media tarjeta parecía el final de la
+  pantalla. Ahora hay un desvanecido cuando queda algo por debajo.
+
+### El simulacro guarda y se puede revisar (esquema v3)
+
+Dos agujeros que se vieron al repasar el módulo terminado:
+
+- **Las 700 explicaciones no las veía nadie.** El modelo las cargaba y ninguna
+  pantalla las mostraba: al terminar solo salían las puntuaciones. Ahora hay una
+  pantalla de revisión, filtrada por defecto a las falladas, con lo que marcaste,
+  la buena, el porqué y —desplegable— el guion del Listening o el texto del
+  Reading. Se entra al terminar y también desde la portada del simulacro, así que
+  las explicaciones siguen ahí semanas después.
+- **Un examen de 115 minutos se perdía entero** si Android mataba el proceso: la
+  fila solo se escribía al terminar. Ahora se guarda en cada respuesta y cada 15
+  segundos de reloj, y al volver a abrirlo ofrece retomarlo en el punto exacto.
+
+Eso llevó la base a la **v3** (`MIGRATION_2_3`: `answers`, `played`,
+`sectionIndex`, `questionIndex`, `secondsLeft` en `exam_attempt`).
+`verificar-migracion.py` ahora recorre la cadena entera desde la v1, no solo la
+1→2, y fue quien cazó que faltaban los `@ColumnInfo(defaultValue = ...)`.
+
+La serialización vive en `domain/ExamProgress.kt` y no dentro del ViewModel a
+propósito: si al descodificar se pierde una respuesta, el alumno la ve en blanco
+y no hay forma de que lo note. Tiene 9 tests.
+
+### Voces, letra grande e informe del simulacro
+
+- **Dos voces en los diálogos.** El motor de Android trae una sola voz, así que
+  las conversaciones del Listening se leían del tirón con una pausa entre turnos
+  — y media sección pregunta *what does the **woman** mean*. Ahora cada personaje
+  suena con un tono distinto (`domain/DialoguePitch.kt`, 10 tests): «Man» grave,
+  «Woman» agudo, y los roles sin género («Student», «Librarian») se reparten los
+  tonos libres por orden de aparición. Ojo con el orden de las comprobaciones:
+  «woman» contiene «man», así que al revés toda mujer sonaría grave. Se aplica
+  también al lector de lecturas, que tiene diálogos.
+
+- **La app aguanta la letra del sistema al 200%.** Lo que estaba roto y ya no:
+  «Aprender» se partía en dos líneas y se salía de la barra inferior (ahora el
+  escalado se limita **solo en la barra**, que es alto fijo; el contenido sigue
+  creciendo entero); «Ver todo» se partía en cuatro líneas de una letra; la
+  tabla de secciones del simulacro cortaba «Comprensi/ón» y ahora se apila; y la
+  letra de las opciones del examen tenía ancho fijo en dp, así que a tamaño
+  grande se cortaba por la mitad.
+
+- **Informe del simulacro en PDF.** Vertical, sobrio, con el puntaje, el detalle
+  por sección y un bloque final titulado «qué es y qué no es este documento».
+  **Es un informe, no un certificado, y no se llama así en ninguna parte**: un
+  simulacro no acredita nada y el puntaje es nuestra estimación, no la de ETS.
+  Por eso se ve deliberadamente distinto de la constancia de nivel — sin sello
+  ni firma — y el aviso va dentro del propio PDF, que es lo que acaba reenviado
+  por WhatsApp sin contexto alrededor.
+
+De paso, un fallo que solo se vio al mirar el PDF impreso: `ToeflItp.resumen`
+hacía `lowercase()` a toda la descripción del umbral y se llevaba por delante la
+mayúscula de después del punto («intermedio. muchas licenciaturas»). Corregido
+con test de regresión.
+
+### Doce lecciones nuevas en A1 y A2
+
+El curso tenía 62 lecciones para cubrir A1→C2 y los huecos estaban en la base,
+que es justo donde está casi todo el mundo. Faltaban cosas que no son un extra:
+
+| Nivel | Lo que no se enseñaba |
+|---|---|
+| A1 | Números por encima de 20, posesivos (my/his/her), **there is / there are**, presente continuo, la hora y las preguntas con WH |
+| A2 | Futuro con **will** (solo estaba «going to»), pasado continuo, adverbios de frecuencia, some/any/much/many, dar consejos con «should» y el restaurante entero |
+
+Un caso llamativo: `g_there_is` ya existía en la guía de gramática, con su
+explicación escrita, y **ninguna lección lo enseñaba**. Lo mismo con los
+posesivos, que aparecían en las frases de ejemplo desde A1 sin haberse
+presentado nunca.
+
+Después se hizo lo mismo con **B1**, que se había quedado en nueve lecciones y
+sin media narración: faltaban el pasado perfecto (sin él no se puede decir que
+algo pasó antes que otra cosa), «used to», los modales de obligación
+(don't have to y mustn't son opuestos y en español suenan igual), los de
+deducción, los conectores y las preposiciones que van pegadas al verbo. Y una
+de B2 para cerrar `g_uncountable`.
+
+| Nivel | Antes | Ahora |
+|---|---|---|
+| A1 | 15 | **21** |
+| A2 | 10 | **16** |
+| B1 | 9 | **15** |
+| B2 | 10 | **11** |
+
+El curso pasa de 922 a **1112 ejercicios**. Todo se insertó con
+`herramientas/formato_contenido.py`, que escribe solo el bloque nuevo y deja
+intacto lo demás: en A1 el diff fueron 588 líneas añadidas y 2 tocadas (las
+comas de empalme).
+
+**Un bug que se coló y ahora se caza solo.** Al etiquetar dos temas de gramática
+se escribió un segundo `grammarTopicId` en lecciones que ya tenían uno. `json`
+se queda con el último y no dice nada: ni el parseo ni el validador fallaban, y
+la etiqueta simplemente no existía. Se revirtió, y `auditar-ejercicios.py`
+detecta ahora las **claves repetidas** y las marca como GRAVE. Comprobado
+inyectando un duplicado a propósito: lo encuentra.
+
+### El test de nivel estaba roto (y no se notaba)
+
+Se probó por primera vez el arranque desde cero, como usuario nuevo, y salieron
+tres cosas:
+
+1. **Pulsando siempre la primera opción, el test colocaba en C2.** La respuesta
+   correcta estaba en la posición A en 12 de las 18 preguntas y en la D en
+   ninguna; en B2, C1 y C2 estaban todas en la primera salvo una. Comprobado en
+   el emulador: se llegaba a «Nivel C2» sin saber nada. Y no tiene arreglo desde
+   dentro, porque `retakePlacement` solo deja **subir** de nivel a propósito, así
+   que quien queda mal colocado arriba se queda ahí. Ahora el reparto es
+   5/4/5/4 y las dos comprobaciones dan lo que deben: siempre-A → A1,
+   todo bien → C2.
+
+2. **Diez preguntas llevaban una pista que decía la respuesta.** «Elige la forma
+   correcta: I ___ in London since 2019» con la pista *Presente perfecto con
+   "since"*. Un test mide; enseñar es cosa de las lecciones. Quitadas.
+
+3. **El permiso de notificaciones saltaba encima de la primera pregunta**, porque
+   se pedía en el mismo momento de navegar al test. Ahora se pide al salir del
+   test, ya en la pantalla principal.
+
+`auditar-ejercicios.py` vigila desde ahora el reparto de respuestas del test y
+marca como GRAVE que una posición doble a la media o que alguna no salga nunca.
+Comprobado devolviendo el archivo viejo: lo caza.
+
+### Chispa Kids (2 a 5 años)
+
+Etapa nueva para prelectores. Se investigaron las apps que funcionan a esa edad
+(Studycat, Lingokids, Duolingo ABC, Papumba) y todas coinciden en lo mismo:
+audio primero, dibujo como enunciado, un toque grande, y **nada de cronómetros**
+— Studycat los quitó de sus juegos a propósito.
+
+Cinco mundos y **59 palabras**: Letras (26), Animales (15), Colores (8),
+Formas (5), Números (5).
+Dos modos por mundo: **Oír** (tocas y suena, sin acierto ni error) y **Jugar**
+(suena una palabra, tocas el dibujo; 6 rondas y a celebrar).
+
+Decisiones que conviene no deshacer:
+
+- **Ni una instrucción escrita.** Los textos que se ven son para el adulto que
+  acompaña. Si se borraran todos, la pantalla seguiría siendo jugable.
+- **Sin corazones, sin reloj y sin restar.** Fallar sacude el dibujo y repite la
+  palabra, nada más.
+- **No toca el progreso del curso.** Ni racha, ni XP, ni tarjetas de repaso.
+- **Cero dibujos nuevos en disco**: los animales son los avatares que ya
+  existían y el resto es Canvas. La etapa entera no añade ni un kilobyte de
+  imagen al APK.
+- La voz va más lenta que en el curso de adultos (rate 0.75): es la primera vez
+  que el niño oye ese sonido y lo va a imitar.
+- **El abecedario no dice solo la letra.** «B» a secas hace que el motor de voz
+  suelte «bi» y punto; lo que enseña el sonido es la palabra detrás. Por eso el
+  modelo tiene un campo `say` aparte de `en`: la tarjeta muestra **B** y la voz
+  dice «B. Ball.». Las letras van en mayúscula porque es la que se aprende
+  primero: la de los cubos y la del nombre propio.
+
+Dos animales hubo que rehacerlos después de verlos en pantalla, que es la única
+forma de saberlo: la **vaca** tenía las manchas justo donde van los ojos y
+parecía tener cuatro, y la **abeja** era un bloque de rayas sin cara, con las
+alas blancas invisibles sobre fondo blanco.
+
+Se probó en el emulador: los cuatro mundos, los dibujos de las cinco formas, los
+puntos de contar, y el juego con su acierto en verde. La rejilla del juego se
+centró en pantalla porque al principio quedaba pegada arriba, fuera del alcance
+del pulgar de un niño.
+
+### Puerta de entrada: Chispa o Chispa Kids
+
+Al abrir la app ya no se entra directo al curso: sale una pantalla que pregunta
+quién va a practicar, con dos puertas. La del adulto es una fila normal con la
+mascota; la del niño ocupa el doble, lleva tres animales y un botón «Jugar»
+enorme — si el niño llega solo a esa pantalla tiene que poder reconocer la suya
+sin leer.
+
+**No recuerda la última elección, y es deliberado.** Si recordara, el niño se
+encontraría el curso de adultos al abrir y el adulto tendría que salir del modo
+infantil cada mañana. Un toque de más al abrir vale menos que equivocarse de
+persona.
+
+La X de Chispa Kids devuelve a esa puerta y no al curso: si el niño la toca sin
+querer, no acaba en el examen TOEFL de su papá. El atajo del Perfil se
+mantiene para cambiar de modo sin cerrar la app, y ese sí vuelve al Perfil.
+
+### Lo que sigue pendiente
+
+- Publicar la 1.8.0 en Play (subir `versionCode`, `bundleRelease`).
+- Los avatares solo se han visto en emulador; la voz sigue sin validarse en un
+  móvil real.
