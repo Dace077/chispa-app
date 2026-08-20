@@ -3,42 +3,34 @@
     {
       "level": "A1",
       "prompt": "¿Cómo se dice \"Buenos días\" en inglés?",
-      "options": ["Good night", "Good morning", "Good luck", "Goodbye"],
+      "options": ["Good morning", "Good night", "Good luck", "Goodbye"],
       "answer": "Good morning"
     },
     {
       "level": "A1",
       "prompt": "Completa: She ___ a doctor.",
       "options": ["am", "are", "is", "be"],
-      "answer": "is",
-      "hint": "Verbo to be en presente"
+      "answer": "is"
     },
     {
       "level": "A1",
       "prompt": "¿Qué significa \"They have two children\"?",
-      "options": [
-        "Ellos tienen dos hijos",
-        "Ellos son dos niños",
-        "Tienen dos casas",
-        "Hay dos niños"
-      ],
+      "options": ["Ellos son dos niños", "Ellos tienen dos hijos", "Tienen dos casas", "Hay dos niños"],
       "answer": "Ellos tienen dos hijos"
     },
-
     {
       "level": "A2",
       "prompt": "Completa en pasado: Yesterday I ___ to the beach.",
-      "options": ["go", "goed", "went", "gone"],
-      "answer": "went",
-      "hint": "Pasado simple del verbo irregular \"go\""
+      "options": ["go", "goed", "gone", "went"],
+      "answer": "went"
     },
     {
       "level": "A2",
       "prompt": "¿Cuál es el comparativo correcto?",
       "options": [
         "This book is more good than that one",
-        "This book is better than that one",
         "This book is gooder than that one",
+        "This book is better than that one",
         "This book is the better than that one"
       ],
       "answer": "This book is better than that one"
@@ -47,49 +39,38 @@
       "level": "A2",
       "prompt": "Completa: We ___ going to travel next summer.",
       "options": ["are", "is", "am", "be"],
-      "answer": "are",
-      "hint": "Futuro con \"going to\""
+      "answer": "are"
     },
-
     {
       "level": "B1",
       "prompt": "Elige la forma correcta: I ___ in London since 2019.",
-      "options": ["live", "lived", "have lived", "am living"],
-      "answer": "have lived",
-      "hint": "Presente perfecto con \"since\""
+      "options": ["live", "lived", "am living", "have lived"],
+      "answer": "have lived"
     },
     {
       "level": "B1",
       "prompt": "¿Qué significa el phrasal verb \"to look after someone\"?",
-      "options": [
-        "Cuidar de alguien",
-        "Buscar a alguien",
-        "Mirar hacia atrás",
-        "Parecerse a alguien"
-      ],
+      "options": ["Buscar a alguien", "Cuidar de alguien", "Mirar hacia atrás", "Parecerse a alguien"],
       "answer": "Cuidar de alguien"
     },
     {
       "level": "B1",
       "prompt": "Completa: If it ___ tomorrow, we will cancel the trip.",
       "options": ["rains", "will rain", "rained", "would rain"],
-      "answer": "rains",
-      "hint": "Primer condicional: tras \"if\" nunca va \"will\""
+      "answer": "rains"
     },
-
     {
       "level": "B2",
       "prompt": "Completa el condicional: If I ___ more time, I would travel more.",
-      "options": ["have", "had", "will have", "would have"],
-      "answer": "had",
-      "hint": "Segundo condicional: situación hipotética"
+      "options": ["have", "will have", "had", "would have"],
+      "answer": "had"
     },
     {
       "level": "B2",
       "prompt": "Pasa a estilo indirecto: \"I am tired\", she said.",
       "options": [
-        "She said she was tired",
         "She said she is tired",
+        "She said she was tired",
         "She said I am tired",
         "She said she has been tired"
       ],
@@ -99,21 +80,18 @@
       "level": "B2",
       "prompt": "¿Cuál es correcta?",
       "options": [
-        "I look forward to hearing from you",
         "I look forward to hear from you",
         "I look forward hearing from you",
-        "I am looking forward to hear from you"
+        "I am looking forward to hear from you",
+        "I look forward to hearing from you"
       ],
-      "answer": "I look forward to hearing from you",
-      "hint": "\"to\" aquí es preposición, no infinitivo"
+      "answer": "I look forward to hearing from you"
     },
-
     {
       "level": "C1",
       "prompt": "Las luces estaban apagadas. Completa: They ___ have left already.",
-      "options": ["must", "should", "can", "would"],
-      "answer": "must",
-      "hint": "Deducción firme sobre el pasado"
+      "options": ["should", "can", "must", "would"],
+      "answer": "must"
     },
     {
       "level": "C1",
@@ -130,25 +108,23 @@
       "level": "C1",
       "prompt": "¿Qué significa \"The outcome is by no means certain\"?",
       "options": [
-        "El resultado no está ni mucho menos claro",
         "El resultado es totalmente seguro",
         "El resultado no tiene sentido",
-        "No hay forma de medir el resultado"
+        "No hay forma de medir el resultado",
+        "El resultado no está ni mucho menos claro"
       ],
       "answer": "El resultado no está ni mucho menos claro"
     },
-
     {
       "level": "C2",
       "prompt": "Un británico dice \"That's an interesting idea\". Normalmente significa…",
       "options": [
-        "Que no le convence en absoluto",
         "Que le parece fascinante",
+        "Que no le convence en absoluto",
         "Que quiere más detalles",
         "Que está totalmente de acuerdo"
       ],
-      "answer": "Que no le convence en absoluto",
-      "hint": "Understatement británico"
+      "answer": "Que no le convence en absoluto"
     },
     {
       "level": "C2",
@@ -164,9 +140,8 @@
     {
       "level": "C2",
       "prompt": "Completa la inversión formal: ___ it not been for your help, we would have failed.",
-      "options": ["Had", "If", "Were", "Should"],
-      "answer": "Had",
-      "hint": "Condicional de tercer tipo con inversión"
+      "options": ["If", "Were", "Had", "Should"],
+      "answer": "Had"
     }
   ]
 }
