@@ -103,6 +103,27 @@ class ContentRepository(private val appContext: Context) {
         }
     }
 
+    @Volatile private var speakingCache: List<SpeakingCategory>? = null
+
+    /** Frases para practicar en voz alta. Fuera del indice, como la gramatica. */
+    suspend fun speakingPhrases(): List<SpeakingCategory> {
+        speakingCache?.let { return it }
+        return mutex.withLock {
+            speakingCache ?: loadSpeaking().also { speakingCache = it }
+        }
+    }
+
+    private suspend fun loadSpeaking(): List<SpeakingCategory> = withContext(Dispatchers.IO) {
+        runCatching {
+            val raw = appContext.assets.open("$CONTENT_DIR/speaking.json")
+                .bufferedReader().use { it.readText() }
+            json.decodeFromString<SpeakingFileJson>(raw).categories.mapNotNull { it.toDomain() }
+        }.getOrElse { error ->
+            Log.e(TAG, "No se pudo leer speaking.json", error)
+            emptyList()
+        }
+    }
+
     @Volatile private var kidsCache: List<com.chispa.ingles.domain.KidsWorld>? = null
 
     /**

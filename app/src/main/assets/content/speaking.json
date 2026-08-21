@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "sp_1",
+      "title": "Saludos y cortesía",
+      "emoji": "👋",
+      "level": "A1",
+      "phrases": [
+        { "en": "Good morning. How are you?", "es": "Buenos días. ¿Cómo estás?" },
+        { "en": "I'm fine, thank you. And you?", "es": "Bien, gracias. ¿Y tú?" },
+        { "en": "Nice to meet you.", "es": "Mucho gusto." },
+        { "en": "See you tomorrow.", "es": "Nos vemos mañana." },
+        { "en": "Have a good day.", "es": "Que tengas buen día." },
+        { "en": "Excuse me, please.", "es": "Disculpe, por favor.", "note": "Para llamar la atención, no para pedir perdón" },
+        { "en": "I'm sorry, my mistake.", "es": "Perdón, fue mi error." },
+        { "en": "Thank you so much.", "es": "Muchas gracias." },
+        { "en": "You're welcome.", "es": "De nada." },
+        { "en": "No problem at all.", "es": "No hay ningún problema." },
+        { "en": "Take care.", "es": "Cuídate." },
+        { "en": "Have a nice weekend.", "es": "Buen fin de semana." }
+      ]
+    },
+    {
+      "id": "sp_2",
+      "title": "Presentarte",
+      "emoji": "🙋",
+      "level": "A1",
+      "phrases": [
+        { "en": "My name is Ana. What's your name?", "es": "Me llamo Ana. ¿Cómo te llamas?" },
+        { "en": "I'm from Mexico.", "es": "Soy de México." },
+        { "en": "I live in Monterrey.", "es": "Vivo en Monterrey." },
+        { "en": "I'm twenty-eight years old.", "es": "Tengo veintiocho años." },
+        { "en": "I work as a nurse.", "es": "Trabajo como enfermera." },
+        { "en": "I'm studying English.", "es": "Estoy estudiando inglés." },
+        { "en": "I have two brothers.", "es": "Tengo dos hermanos." },
+        { "en": "I like cooking and reading.", "es": "Me gusta cocinar y leer." },
+        { "en": "This is my first time here.", "es": "Es mi primera vez aquí." },
+        { "en": "I've been here for two weeks.", "es": "Llevo dos semanas aquí." },
+        { "en": "Where are you from?", "es": "¿De dónde eres?" },
+        { "en": "What do you do for a living?", "es": "¿A qué te dedicas?" }
+      ]
+    },
+    {
+      "id": "sp_3",
+      "title": "Aeropuerto y avión",
+      "emoji": "✈️",
+      "level": "A2",
+      "phrases": [
+        { "en": "I have a connecting flight to Chicago.", "es": "Tengo un vuelo de conexión a Chicago." },
+        { "en": "Where is gate twenty-two?", "es": "¿Dónde está la puerta veintidós?" },
+        { "en": "Is the flight delayed?", "es": "¿El vuelo está retrasado?" },
+        { "en": "I'd like a window seat, please.", "es": "Quisiera un asiento de ventanilla, por favor." },
+        { "en": "This is my carry-on bag.", "es": "Esta es mi maleta de mano." },
+        { "en": "I'm here on vacation.", "es": "Vengo de vacaciones." },
+        { "en": "I'm staying for ten days.", "es": "Me quedo diez días." },
+        { "en": "My luggage didn't arrive.", "es": "Mi equipaje no llegó." },
+        { "en": "Where can I get a taxi?", "es": "¿Dónde puedo tomar un taxi?" },
+        { "en": "Do I need to check in again?", "es": "¿Tengo que documentar otra vez?" },
+        { "en": "How long is the layover?", "es": "¿De cuánto es la escala?" },
+        { "en": "Excuse me, that's my seat.", "es": "Disculpe, ese es mi asiento." }
+      ]
+    },
+    {
+      "id": "sp_4",
+      "title": "Hotel",
+      "emoji": "🏨",
+      "level": "A2",
+      "phrases": [
+        { "en": "I have a reservation under García.", "es": "Tengo una reservación a nombre de García." },
+        { "en": "Is breakfast included?", "es": "¿El desayuno está incluido?" },
+        { "en": "What time is check-out?", "es": "¿A qué hora es la salida?" },
+        { "en": "Could I have a late check-out?", "es": "¿Podría salir más tarde?" },
+        { "en": "The air conditioning isn't working.", "es": "El aire acondicionado no funciona." },
+        { "en": "There's no hot water.", "es": "No hay agua caliente." },
+        { "en": "Could you call me a taxi?", "es": "¿Me podría pedir un taxi?" },
+        { "en": "Is there Wi-Fi in the room?", "es": "¿Hay wifi en el cuarto?" },
+        { "en": "Can I leave my luggage here?", "es": "¿Puedo dejar mi equipaje aquí?" },
+        { "en": "The room next door is very loud.", "es": "El cuarto de al lado hace mucho ruido." }
+      ]
+    },
+    {
+      "id": "sp_5",
+      "title": "Restaurante y café",
+      "emoji": "🍽️",
+      "level": "A2",
+      "phrases": [
+        { "en": "A table for two, please.", "es": "Una mesa para dos, por favor." },
+        { "en": "Could I see the menu?", "es": "¿Me trae el menú?" },
+        { "en": "I'd like the chicken, please.", "es": "Quisiera el pollo, por favor.", "note": "«I'd like» suena mejor que «I want»" },
+        { "en": "What do you recommend?", "es": "¿Qué me recomienda?" },
+        { "en": "Is this spicy?", "es": "¿Esto es picante?" },
+        { "en": "I'm allergic to peanuts.", "es": "Soy alérgico al cacahuate." },
+        { "en": "Could I have some water, please?", "es": "¿Me trae agua, por favor?" },
+        { "en": "This isn't what I ordered.", "es": "Esto no es lo que ordené." },
+        { "en": "Could we have the bill?", "es": "¿Nos trae la cuenta?", "note": "En EE. UU. se dice «the check»" },
+        { "en": "Can we split the bill?", "es": "¿Podemos dividir la cuenta?" },
+        { "en": "It was delicious, thank you.", "es": "Estuvo delicioso, gracias." },
+        { "en": "To go, please.", "es": "Para llevar, por favor." }
+      ]
+    },
+    {
+      "id": "sp_6",
+      "title": "De compras",
+      "emoji": "🛍️",
+      "level": "A2",
+      "phrases": [
+        { "en": "How much is this?", "es": "¿Cuánto cuesta esto?" },
+        { "en": "Do you have this in a larger size?", "es": "¿Lo tiene en una talla más grande?" },
+        { "en": "Can I try it on?", "es": "¿Me lo puedo probar?" },
+        { "en": "Where are the fitting rooms?", "es": "¿Dónde están los probadores?" },
+        { "en": "Do you take credit cards?", "es": "¿Aceptan tarjeta?" },
+        { "en": "I'm just looking, thanks.", "es": "Solo estoy viendo, gracias." },
+        { "en": "Is this on sale?", "es": "¿Esto está en oferta?" },
+        { "en": "Could I get a receipt?", "es": "¿Me da el recibo?" },
+        { "en": "I'd like to return this.", "es": "Quisiera devolver esto." },
+        { "en": "Do you have it in another color?", "es": "¿Lo tiene en otro color?" }
+      ]
+    },
+    {
+      "id": "sp_7",
+      "title": "Direcciones y transporte",
+      "emoji": "🚕",
+      "level": "A2",
+      "phrases": [
+        { "en": "Excuse me, how do I get to the museum?", "es": "Disculpe, ¿cómo llego al museo?" },
+        { "en": "Is it far from here?", "es": "¿Está lejos de aquí?" },
+        { "en": "Can I walk there?", "es": "¿Puedo ir caminando?" },
+        { "en": "Which bus goes downtown?", "es": "¿Qué camión va al centro?" },
+        { "en": "Where's the nearest subway station?", "es": "¿Dónde está el metro más cercano?" },
+        { "en": "One ticket to Boston, please.", "es": "Un boleto a Boston, por favor." },
+        { "en": "Does this train stop at the airport?", "es": "¿Este tren para en el aeropuerto?" },
+        { "en": "Could you tell me when to get off?", "es": "¿Me avisa cuándo bajarme?" },
+        { "en": "I think I'm lost.", "es": "Creo que estoy perdido." },
+        { "en": "Turn left at the traffic light.", "es": "Da vuelta a la izquierda en el semáforo." },
+        { "en": "It's two blocks from here.", "es": "Está a dos cuadras de aquí." },
+        { "en": "How long does it take?", "es": "¿Cuánto tarda?" }
+      ]
+    },
+    {
+      "id": "sp_8",
+      "title": "Trabajo y entrevista",
+      "emoji": "💼",
+      "level": "B1",
+      "phrases": [
+        { "en": "I have five years of experience in sales.", "es": "Tengo cinco años de experiencia en ventas." },
+        { "en": "I'm looking for a new challenge.", "es": "Estoy buscando un nuevo reto." },
+        { "en": "My biggest strength is organization.", "es": "Mi mayor fortaleza es la organización." },
+        { "en": "I work well under pressure.", "es": "Trabajo bien bajo presión." },
+        { "en": "Could you tell me more about the role?", "es": "¿Me puede contar más sobre el puesto?" },
+        { "en": "When can I expect to hear back?", "es": "¿Cuándo tendría noticias?" },
+        { "en": "I'd like to schedule a meeting.", "es": "Quisiera agendar una reunión." },
+        { "en": "Let me get back to you on that.", "es": "Déjame confirmarte eso después.", "note": "Sirve para ganar tiempo sin decir que no" },
+        { "en": "I'll send you the report by Friday.", "es": "Te mando el reporte para el viernes." },
+        { "en": "Sorry, could you repeat that?", "es": "Perdón, ¿lo puede repetir?" },
+        { "en": "I'm not sure I follow.", "es": "No estoy seguro de entender." },
+        { "en": "That works for me.", "es": "Por mí está bien." }
+      ]
+    },
+    {
+      "id": "sp_9",
+      "title": "Teléfono y videollamada",
+      "emoji": "📞",
+      "level": "B1",
+      "phrases": [
+        { "en": "Hello, this is Ana speaking.", "es": "Hola, habla Ana.", "note": "Al teléfono se dice «this is», no «I am»" },
+        { "en": "Could I speak to Mr. Smith, please?", "es": "¿Podría hablar con el señor Smith?" },
+        { "en": "I'm calling about the appointment.", "es": "Llamo por la cita." },
+        { "en": "Can you hear me?", "es": "¿Me escuchas?" },
+        { "en": "You're breaking up.", "es": "Se está cortando." },
+        { "en": "Sorry, I'm on mute.", "es": "Perdón, estaba en silencio." },
+        { "en": "Could you speak a little slower?", "es": "¿Podría hablar un poco más despacio?" },
+        { "en": "Let me put you on hold.", "es": "Permítame ponerlo en espera." },
+        { "en": "I'll call you right back.", "es": "Te regreso la llamada." },
+        { "en": "Thanks for your time.", "es": "Gracias por tu tiempo." }
+      ]
+    },
+    {
+      "id": "sp_10",
+      "title": "Médico y emergencias",
+      "emoji": "🚑",
+      "level": "B1",
+      "phrases": [
+        { "en": "I don't feel well.", "es": "No me siento bien." },
+        { "en": "I have a headache.", "es": "Me duele la cabeza." },
+        { "en": "It hurts here.", "es": "Me duele aquí." },
+        { "en": "I've had a fever since yesterday.", "es": "Tengo fiebre desde ayer." },
+        { "en": "I'm allergic to penicillin.", "es": "Soy alérgico a la penicilina." },
+        { "en": "I need to see a doctor.", "es": "Necesito ver a un doctor." },
+        { "en": "Could you call an ambulance?", "es": "¿Podría llamar una ambulancia?" },
+        { "en": "Where's the nearest pharmacy?", "es": "¿Dónde está la farmacia más cercana?" },
+        { "en": "I lost my passport.", "es": "Perdí mi pasaporte." },
+        { "en": "Someone stole my wallet.", "es": "Alguien me robó la cartera." }
+      ]
+    },
+    {
+      "id": "sp_11",
+      "title": "Conversación con gente",
+      "emoji": "💬",
+      "level": "B1",
+      "phrases": [
+        { "en": "How's your week going?", "es": "¿Cómo va tu semana?", "note": "El small talk no es hipocresía: es el ritual" },
+        { "en": "Any plans for the weekend?", "es": "¿Tienes planes para el fin?" },
+        { "en": "Terrible weather, isn't it?", "es": "Qué clima tan feo, ¿verdad?" },
+        { "en": "I couldn't agree more.", "es": "No podría estar más de acuerdo." },
+        { "en": "That's a good point.", "es": "Es un buen punto." },
+        { "en": "I see what you mean, but...", "es": "Entiendo lo que dices, pero..." },
+        { "en": "It depends on the situation.", "es": "Depende de la situación." },
+        { "en": "I'd rather not talk about it.", "es": "Prefiero no hablar de eso." },
+        { "en": "That sounds great.", "es": "Suena muy bien." },
+        { "en": "Let's keep in touch.", "es": "Sigamos en contacto." },
+        { "en": "Long time no see!", "es": "¡Cuánto tiempo!" },
+        { "en": "Say hi to your family for me.", "es": "Salúdame a tu familia." }
+      ]
+    },
+    {
+      "id": "sp_12",
+      "title": "Cuando no entiendes",
+      "emoji": "🆘",
+      "level": "A2",
+      "phrases": [
+        { "en": "Sorry, I didn't catch that.", "es": "Perdón, no alcancé a oír.", "note": "Es lo que dice un nativo, no «I didn't understand»" },
+        { "en": "Could you say that again, please?", "es": "¿Lo podría repetir, por favor?" },
+        { "en": "Could you speak more slowly?", "es": "¿Podría hablar más despacio?" },
+        { "en": "How do you spell that?", "es": "¿Cómo se deletrea?" },
+        { "en": "What does that mean?", "es": "¿Qué significa eso?" },
+        { "en": "How do you say this in English?", "es": "¿Cómo se dice esto en inglés?" },
+        { "en": "I'm still learning English.", "es": "Todavía estoy aprendiendo inglés." },
+        { "en": "Do you speak Spanish?", "es": "¿Habla español?" },
+        { "en": "Could you write it down?", "es": "¿Lo podría escribir?" },
+        { "en": "I understand a little.", "es": "Entiendo un poco." }
+      ]
+    }
+  ]
+}
