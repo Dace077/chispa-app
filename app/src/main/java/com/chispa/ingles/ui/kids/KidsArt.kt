@@ -70,6 +70,13 @@ fun KidsArt(item: KidsItem, size: Dp, modifier: Modifier = Modifier) {
             Canvas(Modifier.size(size)) { bicho(item.art) }
         }
 
+        KidsArtKind.EMOJI -> Box(modifier.size(size), Alignment.Center) {
+            Text(
+                text = item.art,
+                fontSize = with(LocalDensity.current) { (size * 0.72f).toSp() }
+            )
+        }
+
         KidsArtKind.UNKNOWN -> Unit
     }
 }

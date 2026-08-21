@@ -41,6 +41,18 @@ enum class KidsArtKind {
     /** Un animal dibujado aquí, de los que no son avatares. */
     CRITTER,
 
+    /**
+     * Una imagen del sistema (emoji), a tamaño grande.
+     *
+     * Los avatares y las figuras se dibujan a mano, pero una etapa infantil
+     * necesita cientos de objetos —comida, ropa, casa, transporte— y dibujar
+     * cada uno en Canvas costaría meses. El repertorio de Android está hecho
+     * por ilustradores, es coherente entre sí, escala sin pixelarse y el niño
+     * lo reconoce. Se eligen emoji antiguos y comunes, que existen desde
+     * Android 7 (el mínimo de la app).
+     */
+    EMOJI,
+
     /** Desconocido: el elemento se descarta en vez de pintar un hueco. */
     UNKNOWN;
 
@@ -52,6 +64,7 @@ enum class KidsArtKind {
             "count" -> COUNT
             "letter" -> LETTER
             "critter" -> CRITTER
+            "emoji" -> EMOJI
             else -> UNKNOWN
         }
     }

@@ -24,6 +24,9 @@ import json
 import os
 import re
 import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import unicodedata
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -212,6 +215,39 @@ def _claves_duplicadas(ruta):
     return repetidas
 
 
+def _auditar_kids(hallazgos):
+    """
+    Chispa Kids: que no haya dos palabras con el mismo dibujo.
+
+    Paso de verdad: "girl" y "sister" salieron las dos con el mismo emoji. Si
+    la voz dice "sister" y en pantalla hay dos dibujos identicos, el nino no
+    puede acertar salvo por suerte, y como aqui no hay texto que lo aclare, no
+    tiene forma de entender por que falla.
+    """
+    ruta = os.path.join(CONTENIDO, "kids.json")
+    if not os.path.exists(ruta):
+        return
+    datos = json.load(open(ruta, encoding="utf-8"))
+    for mundo in datos.get("worlds", []):
+        vistos = {}
+        for it in mundo.get("items", []):
+            arte = it.get("art", "")
+            if not arte:
+                hallazgos.append(Hallazgo(
+                    "kids.json", mundo.get("id", "?"), 0, it.get("kind", "-"), "GRAVE",
+                    "Elemento sin dibujo",
+                    f"{it.get('id')} no tiene 'art'"
+                ))
+                continue
+            if arte in vistos:
+                hallazgos.append(Hallazgo(
+                    "kids.json", mundo.get("id", "?"), 0, it.get("kind", "-"), "GRAVE",
+                    "Dos palabras con el mismo dibujo: la pregunta no tiene respuesta",
+                    f"'{it.get('en')}' y '{vistos[arte]}' usan {arte}"
+                ))
+            vistos[arte] = it.get("en")
+
+
 def _auditar_placement(hallazgos):
     """
     El test de nivel tiene que medir, no premiar al que pulsa siempre la misma
@@ -259,6 +295,7 @@ def auditar():
     hallazgos = []
 
     _auditar_placement(hallazgos)
+    _auditar_kids(hallazgos)
 
     for archivo in sorted(os.listdir(CONTENIDO)):
         if not archivo.endswith(".json") or archivo in (
