@@ -417,7 +417,9 @@ private fun AnsweringPane(
                 )
                 Spacer(Modifier.width(4.dp))
                 Text(
-                    String.format("%d:%02d", state.minutes, state.seconds),
+                    // Locale explícito: con el del sistema, en árabe o hindi el
+                    // reloj saldría con otros dígitos y el minutero deja de leerse.
+                    String.format(java.util.Locale.US, "%d:%02d", state.minutes, state.seconds),
                     style = MaterialTheme.typography.titleMedium,
                     color = if (state.tiempoBajo) colors.wrong else MaterialTheme.colorScheme.onSurface
                 )

@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/widget_days"
             android:textColor="#C9C2FB"
-            android:textSize="10sp"
+            android:textSize="11sp"
             android:maxLines="1"
             android:ellipsize="end"
             android:includeFontPadding="false" />

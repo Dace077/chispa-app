@@ -440,8 +440,15 @@ Etapa nueva para prelectores. Se investigaron las apps que funcionan a esa edad
 audio primero, dibujo como enunciado, un toque grande, y **nada de cronómetros**
 — Studycat los quitó de sus juegos a propósito.
 
-Cinco mundos y **59 palabras**: Letras (26), Animales (15), Colores (8),
-Formas (5), Números (5).
+Doce mundos y **220 palabras**: Letras (26), Animales (40), Comida (25), Mi
+casa (20), Familia (15), Mi cuerpo (15), Ropa (15), Transporte (15), Afuera
+(15), Colores (14), Formas (10) y Números (10).
+
+Sobre el «mínimo 50 por mundo» que se pidió: en Colores y Formas no se llega, y
+es a propósito. A un niño de tres años se le enseñan los colores que puede
+nombrar, no cincuenta matices; «turquesa» y «cian» no le suman nada y le quitan
+claridad al juego. Donde el volumen sí ayuda —animales, comida, casa— sí se
+subió de verdad.
 Dos modos por mundo: **Oír** (tocas y suena, sin acierto ni error) y **Jugar**
 (suena una palabra, tocas el dibujo; 6 rondas y a celebrar).
 
@@ -489,6 +496,21 @@ persona.
 La X de Chispa Kids devuelve a esa puerta y no al curso: si el niño la toca sin
 querer, no acaba en el examen TOEFL de su papá. El atajo del Perfil se
 mantiene para cambiar de modo sin cerrar la app, y ese sí vuelve al Perfil.
+
+### Hablar: de 29 ejemplos sueltos a 134 frases
+
+La sección tenía nueve sonidos con tres o cuatro ejemplos cada uno. Eso afina la
+boca —la diferencia entre *ship* y *sheep*— pero no enseña a hablar: nadie sale
+a la calle a decir vocales.
+
+Ahora hay **134 frases en 12 categorías** (`speaking.json`): saludos,
+presentarte, aeropuerto, hotel, restaurante, compras, direcciones, trabajo y
+entrevista, teléfono, médico, conversación y qué decir cuando no entiendes.
+Cada una con su traducción y, donde hace falta, el apunte de por qué se dice
+así: «I'd like» en vez de «I want», «this is Ana» al teléfono y no «I am Ana».
+
+Van plegadas y solo una abierta a la vez: 134 frases desplegadas de golpe son
+un muro que nadie recorre.
 
 ### Lo que sigue pendiente
 

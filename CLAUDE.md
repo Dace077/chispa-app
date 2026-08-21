@@ -95,8 +95,9 @@ insertar_lecciones("a1_core.json", "a1_u3", [leccion_nueva])
 Inserta solo el bloque nuevo, con el estilo de la casa, y no toca un byte de lo
 que ya había. No reserialices el archivo entero con `json.dumps`: el estilo está
 escrito a mano y no sigue una regla mecánica, así que convertirías un cambio de
-veinte líneas en un diff de mil. **`readings.json`, `grammar.json` y
-`placement.json` y `kids.json` se cargan aparte y NO van en el índice.**
+veinte líneas en un diff de mil. **`readings.json`, `grammar.json`,
+`placement.json`, `kids.json` y `speaking.json` se cargan aparte y NO van en el
+índice.**
 
 El parseo es deliberadamente tolerante (`ignoreUnknownKeys`, todo opcional salvo lo
 imprescindible): un ejercicio inválido devuelve `null` en `ExerciseJson.toDomain()`
@@ -133,8 +134,15 @@ Lo demás sale de mirar qué hacen Studycat, Lingokids y Duolingo ABC:
 - **No escribe nada en el progreso del curso**: ni racha, ni XP, ni SRS. Si un
   niño juega media hora, el adulto no debe encontrarse su repaso lleno de
   palabras que él nunca vio.
-- **Los dibujos son Canvas**, no PNG. Los animales reutilizan los avatares que
-  ya existen; colores, formas y números se dibujan en `ui/kids/KidsArt.kt`.
+- **Los dibujos son Canvas o emoji**, nunca PNG. Los animales de siempre
+  reutilizan los avatares y las formas se dibujan en `ui/kids/KidsArt.kt`; para
+  el resto (comida, casa, ropa, transporte) se usa `KidsArtKind.EMOJI`, porque
+  dibujar a mano doscientos objetos costaría meses y el repertorio de Android ya
+  está hecho por ilustradores. Se eligen emoji antiguos, que existan en
+  Android 7.
+- **Dos palabras del mismo mundo no pueden compartir dibujo.** Si suena
+  «sister» y hay dos dibujos idénticos, no hay respuesta posible y el niño no
+  tiene texto que se lo aclare. Lo vigila `auditar-ejercicios.py`.
 
 Va a pantalla completa y **sin la barra inferior**, para que un niño no salte
 por accidente a los ajustes o al examen TOEFL.

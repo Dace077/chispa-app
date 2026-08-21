@@ -123,16 +123,28 @@ Resultado esperado: **PEGI 3 / Everyone / Para todos**.
 
 ## Público objetivo
 
-Aquí hay una decisión con consecuencias:
+> ⚠️ **Esto cambió con Chispa Kids y hay que decidirlo antes de publicar.**
+> El consejo anterior era marcar 13+ y salir del paso. Ya no vale: la app
+> tiene una etapa explícita **para niños de 2 a 5 años**, con su propia puerta
+> en la pantalla de inicio. Declarar «13 años o más» mientras la ficha y la app
+> ofrecen una sección infantil es una contradicción que Play puede tratar como
+> declaración incorrecta, y eso se paga con retirada, no con un aviso.
 
-- **13 años o más** → trámite normal. **Recomendado.**
-- **Incluir menores de 13** → entras en el programa *Diseñado para Familias*,
-  con revisión adicional y requisitos extra de cumplimiento.
+Las dos salidas honestas son:
 
-La app es perfectamente apta para niños (no tiene anuncios, ni compras, ni
-datos, ni chat), pero marcar «menores de 13» multiplica el papeleo. Si tu
-objetivo es publicar cuanto antes, marca **13+**. Siempre se puede ampliar
-después.
+1. **Declarar público mixto (niños y adultos).** Es lo que la app es de verdad.
+   Entra en el programa *Diseñado para Familias*: revisión adicional, y hay que
+   confirmar que se cumplen las políticas de familias.
+   Chispa parte en una posición inmejorable para eso —**sin anuncios, sin
+   compras, sin cuentas, sin chat, sin analítica y sin permiso de INTERNET**—
+   pero el trámite es más largo y la revisión más lenta.
+
+2. **Sacar Chispa Kids de esta versión** y publicar 13+ como estaba previsto,
+   dejando la etapa infantil para una actualización posterior, ya con el
+   trámite de familias hecho.
+
+No hay una tercera opción de «publicar rápido y con la sección infantil dentro
+declarando 13+». Es la decisión del dueño de la ficha, no del código.
 
 ---
 
