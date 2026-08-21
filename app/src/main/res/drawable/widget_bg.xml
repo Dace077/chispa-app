@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fondo del widget: el degradado violeta de la marca, con esquinas del radio
+     que Android usa para los widgets del sistema. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="315"
+        android:startColor="#3A2BB5"
+        android:centerColor="#2A1D6E"
+        android:endColor="#1A1145"
+        android:type="linear" />
+    <corners android:radius="24dp" />
+</shape>

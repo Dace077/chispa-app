@@ -59,6 +59,33 @@
             </intent-filter>
         </activity>
 
+        <!--
+          Entrega los PDF de certificado (y los respaldos de progreso) a otras
+          apps sin permisos de almacenamiento. Los archivos viven en la caché
+          privada; el provider concede acceso puntual solo al archivo compartido.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Widget de racha para la pantalla de inicio. -->
+        <receiver
+            android:name=".widget.StreakWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_streak_info" />
+        </receiver>
+
         <receiver
             android:name=".notifications.BootReceiver"
             android:exported="false">

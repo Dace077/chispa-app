@@ -28,6 +28,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
@@ -45,6 +46,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import com.chispa.ingles.data.content.Exercise
@@ -60,7 +62,9 @@ import com.chispa.ingles.ui.theme.ChispaThemeTokens
 fun LessonScreen(
     lessonId: String,
     mode: SessionMode,
-    onExit: () -> Unit
+    onExit: () -> Unit,
+    onOpenGrammar: (String) -> Unit = {},
+    onOpenCertificates: () -> Unit = onExit
 ) {
     val viewModel: LessonViewModel = chispaViewModel(key = "$mode-$lessonId") {
         LessonViewModel(it, lessonId, mode)
@@ -103,7 +107,8 @@ fun LessonScreen(
 
         SessionPhase.FINISHED -> SessionResultScreen(
             state = state,
-            onDone = onExit
+            onDone = onExit,
+            onOpenCertificates = onOpenCertificates
         )
 
         SessionPhase.OUT_OF_HEARTS -> OutOfHeartsPane(
@@ -139,6 +144,20 @@ fun LessonScreen(
                         modifier = Modifier.weight(1f),
                         color = colors.correct
                     )
+                    // Acceso directo a la regla que esta lección practica.
+                    //
+                    // El momento en que hace falta una explicación de gramática
+                    // es justo aquí, equivocándote, no después en otra pestaña.
+                    // Hasta ahora la guía solo se alcanzaba desde «Leer».
+                    if (state.grammarTopicId != null) {
+                        IconButton(onClick = { onOpenGrammar(state.grammarTopicId!!) }) {
+                            Icon(
+                                Icons.AutoMirrored.Filled.MenuBook,
+                                contentDescription = "Ver la explicación de gramática",
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                    }
                     if (state.heartsEnabled) {
                         Spacer(Modifier.width(12.dp))
                         HeartsRow(hearts = state.hearts)
@@ -147,36 +166,56 @@ fun LessonScreen(
 
                 // -------- Ejercicio --------
                 val exercise = state.current
-                Column(
-                    modifier = Modifier
-                        .weight(1f)
-                        .verticalScroll(rememberScrollState())
-                        .padding(horizontal = 20.dp)
-                ) {
-                    Spacer(Modifier.height(8.dp))
-                    if (exercise != null) {
-                        Text(
-                            exercise.instruction(),
-                            style = MaterialTheme.typography.titleLarge
-                        )
-                        Spacer(Modifier.height(20.dp))
-                        ExerciseView(
-                            exercise = exercise,
-                            state = state,
-                            viewModel = viewModel,
-                            onRequestMic = {
-                                if (viewModel.speechRecognizer.hasPermission()) {
-                                    viewModel.startListening()
-                                } else {
-                                    micPermission.launch(android.Manifest.permission.RECORD_AUDIO)
+                val scroll = rememberScrollState()
+                val fondo = MaterialTheme.colorScheme.background
+                Box(Modifier.weight(1f)) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .verticalScroll(scroll)
+                            .padding(horizontal = 20.dp)
+                    ) {
+                        Spacer(Modifier.height(8.dp))
+                        if (exercise != null) {
+                            Text(
+                                exercise.instruction(),
+                                style = MaterialTheme.typography.titleLarge
+                            )
+                            Spacer(Modifier.height(20.dp))
+                            ExerciseView(
+                                exercise = exercise,
+                                state = state,
+                                viewModel = viewModel,
+                                onRequestMic = {
+                                    if (viewModel.speechRecognizer.hasPermission()) {
+                                        viewModel.startListening()
+                                    } else {
+                                        micPermission.launch(android.Manifest.permission.RECORD_AUDIO)
+                                    }
+                                },
+                                onUseSystemDialog = {
+                                    runCatching { systemDialog.launch(viewModel.systemDialogIntent()) }
                                 }
-                            },
-                            onUseSystemDialog = {
-                                runCatching { systemDialog.launch(viewModel.systemDialogIntent()) }
-                            }
+                            )
+                        }
+                        Spacer(Modifier.height(24.dp))
+                    }
+
+                    // Sin esto, un ejercicio cortado a media tarjeta parece el
+                    // final de la pantalla y el alumno no baja a ver el resto.
+                    if (scroll.canScrollForward) {
+                        Box(
+                            Modifier
+                                .align(Alignment.BottomCenter)
+                                .fillMaxWidth()
+                                .height(32.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        listOf(fondo.copy(alpha = 0f), fondo)
+                                    )
+                                )
                         )
                     }
-                    Spacer(Modifier.height(24.dp))
                 }
 
                 // -------- Feedback y acción --------

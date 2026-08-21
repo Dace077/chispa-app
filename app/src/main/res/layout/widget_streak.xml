@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Widget de racha. Todo con RemoteViews: no se puede usar Compose aquí, y
+  meter Glance por una tarjeta de dos líneas no compensa una dependencia nueva.
+
+  DOS FILAS Y NO TRES. La primera versión llevaba una línea de mensaje debajo
+  de la barra ("Te falta poco para hoy") y no aparecía en ninguna captura: en
+  55dp de alto no cabe. Y en el tamaño mínimo el "480 / 500 XP" se partía en
+  dos y quedaba cortado. Lo que no cabe, sobra.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:theme="@style/Theme.Chispa.Widget">
+
+    <!-- Racha -->
+    <TextView
+        android:id="@+id/widget_flame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔥"
+        android:textSize="22sp"
+        android:includeFontPadding="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/widget_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:includeFontPadding="false" />
+
+        <TextView
+            android:id="@+id/widget_streak_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_days"
+            android:textColor="#C9C2FB"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false" />
+    </LinearLayout>
+
+    <!-- Meta de hoy -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/widget_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 / 30 XP"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/widget_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:layout_marginTop="7dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/widget_progress" />
+    </LinearLayout>
+</LinearLayout>

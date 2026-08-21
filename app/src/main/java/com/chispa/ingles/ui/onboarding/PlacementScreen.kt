@@ -173,23 +173,36 @@ class PlacementViewModel(private val locator: ServiceLocator) : ViewModel() {
         }
     }
 
-    fun confirm(onDone: () -> Unit) {
+    /**
+     * @param isRetake si el usuario está repitiendo el test desde Configuración.
+     *   En ese caso el nivel solo puede subir (ver `retakePlacement`).
+     */
+    fun confirm(isRetake: Boolean, onDone: () -> Unit) {
         viewModelScope.launch {
-            locator.progressRepository.completePlacement(_state.value.result)
+            if (isRetake) {
+                locator.progressRepository.retakePlacement(_state.value.result)
+            } else {
+                locator.progressRepository.completePlacement(_state.value.result)
+            }
             onDone()
         }
     }
 
-    fun skip(onDone: () -> Unit) {
+    fun skip(isRetake: Boolean, onDone: () -> Unit) {
         viewModelScope.launch {
-            locator.progressRepository.skipPlacement()
+            // Al repetir, saltarse el test no debe cambiar nada: el usuario ya
+            // tenía un nivel asignado y abandonar a medias no es un resultado.
+            if (!isRetake) locator.progressRepository.skipPlacement()
             onDone()
         }
     }
 }
 
 @Composable
-fun PlacementScreen(onFinished: () -> Unit) {
+fun PlacementScreen(
+    onFinished: () -> Unit,
+    isRetake: Boolean = false
+) {
     val viewModel: PlacementViewModel = chispaViewModel { PlacementViewModel(it) }
     val state by viewModel.state.collectAsState()
 
@@ -205,7 +218,8 @@ fun PlacementScreen(onFinished: () -> Unit) {
             PlacementResult(
                 level = state.result,
                 asked = state.askedTotal,
-                onContinue = { viewModel.confirm(onFinished) }
+                isRetake = isRetake,
+                onContinue = { viewModel.confirm(isRetake, onFinished) }
             )
             return@Column
         }
@@ -215,8 +229,11 @@ fun PlacementScreen(onFinished: () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         ) {
             ChispaProgressBar(progress = state.progress, modifier = Modifier.weight(1f))
-            TextButton(onClick = { viewModel.skip(onFinished) }) {
-                Text("Saltar", style = MaterialTheme.typography.labelMedium)
+            TextButton(onClick = { viewModel.skip(isRetake, onFinished) }) {
+                Text(
+                    if (isRetake) "Cancelar" else "Saltar",
+                    style = MaterialTheme.typography.labelMedium
+                )
             }
         }
 
@@ -331,7 +348,8 @@ private fun OptionRow(text: String, selected: Boolean, onClick: () -> Unit) {
 private fun PlacementResult(
     level: CefrLevel,
     asked: Int,
-    onContinue: () -> Unit
+    onContinue: () -> Unit,
+    isRetake: Boolean = false
 ) {
     val colors = ChispaThemeTokens.colors
     val avanzado = level.order >= CefrLevel.C1.order
@@ -348,7 +366,10 @@ private fun PlacementResult(
             mood = if (avanzado) MascotMood.CELEBRATE else MascotMood.HAPPY
         )
         Spacer(Modifier.height(24.dp))
-        Text("Tu punto de partida", style = MaterialTheme.typography.titleMedium)
+        Text(
+            if (isRetake) "Tu nivel ahora" else "Tu punto de partida",
+            style = MaterialTheme.typography.titleMedium
+        )
         Spacer(Modifier.height(4.dp))
         Text(
             "Nivel ${level.label}",
@@ -363,6 +384,19 @@ private fun PlacementResult(
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(horizontal = 12.dp)
         )
+
+        if (isRetake) {
+            Spacer(Modifier.height(16.dp))
+            Text(
+                "Tu progreso, tu racha y tu XP no se tocan. Y si esta vez sales " +
+                    "por debajo de donde estabas, tu nivel se queda como estaba: " +
+                    "nada de lo que ya tenías abierto se cierra.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(horizontal = 12.dp)
+            )
+        }
 
         if (level.order > CefrLevel.A1.order) {
             Spacer(Modifier.height(20.dp))

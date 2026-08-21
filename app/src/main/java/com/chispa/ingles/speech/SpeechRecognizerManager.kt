@@ -346,13 +346,13 @@ class SpeechRecognizerManager(private val context: Context) {
         ERROR_TOO_MANY_REQUESTS ->
             "Demasiados intentos seguidos. Espera unos segundos y vuelve a probar."
         ERROR_SERVER_DISCONNECTED ->
-            "El servicio de voz de tu móvil se desconectó. Prueba con el asistente del sistema."
+            "El servicio de voz de tu teléfono se desconectó. Prueba con el asistente del sistema."
         ERROR_LANGUAGE_NOT_SUPPORTED, ERROR_LANGUAGE_UNAVAILABLE ->
             "Tu dispositivo no tiene instalado el inglés para reconocimiento de voz."
         ERROR_CANNOT_CHECK_SUPPORT ->
-            "Tu móvil no pudo comprobar qué idiomas tiene disponibles."
+            "Tu teléfono no pudo comprobar qué idiomas tiene disponibles."
         ERROR_CANNOT_LISTEN_TO_DOWNLOAD_EVENTS ->
-            "Tu móvil está descargando el idioma. Espera un momento y reinténtalo."
+            "Tu teléfono está descargando el idioma. Espera un momento y reinténtalo."
         else -> "El motor de voz falló (código $error)"
     }
 

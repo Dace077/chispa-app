@@ -26,6 +26,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -45,6 +46,9 @@ import com.chispa.ingles.ui.chispaViewModel
 import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.ChispaMascot
 import com.chispa.ingles.ui.components.MascotMood
+import com.chispa.ingles.ui.profile.StudentDataFields
+import com.chispa.ingles.ui.profile.StudentDataState
+import com.chispa.ingles.ui.profile.rememberStudentDataState
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
 import kotlinx.coroutines.launch
 
@@ -59,8 +63,22 @@ enum class Motive(val id: String, val label: String, val emoji: String, val blur
 }
 
 class OnboardingViewModel(private val locator: ServiceLocator) : ViewModel() {
-    fun finish(motive: Motive, goal: DailyGoal, onDone: () -> Unit) {
+    fun finish(
+        motive: Motive,
+        goal: DailyGoal,
+        student: StudentDataState,
+        onDone: () -> Unit
+    ) {
         viewModelScope.launch {
+            // Los datos primero: si el usuario los dio, que no se pierdan aunque
+            // algo falle después.
+            if (student.isValid) {
+                locator.progressRepository.saveStudentData(
+                    name = student.name,
+                    surname = student.surname,
+                    city = student.city
+                )
+            }
             locator.progressRepository.completeOnboarding(motive.id, goal.xp)
             onDone()
         }
@@ -70,12 +88,16 @@ class OnboardingViewModel(private val locator: ServiceLocator) : ViewModel() {
 @Composable
 fun OnboardingScreen(
     onFinished: () -> Unit,
-    onRequestNotificationPermission: () -> Unit
 ) {
     val viewModel: OnboardingViewModel = chispaViewModel { OnboardingViewModel(it) }
     var step by remember { mutableIntStateOf(0) }
     var motive by remember { mutableStateOf<Motive?>(null) }
     var goal by remember { mutableStateOf(DailyGoal.REGULAR) }
+    val student = rememberStudentDataState()
+
+    fun terminar() {
+        viewModel.finish(motive ?: Motive.FUN, goal, student, onFinished)
+    }
 
     Column(
         modifier = Modifier
@@ -83,7 +105,7 @@ fun OnboardingScreen(
             .background(MaterialTheme.colorScheme.background)
             .padding(24.dp)
     ) {
-        StepDots(current = step, total = 3, modifier = Modifier.padding(top = 24.dp))
+        StepDots(current = step, total = TOTAL_STEPS, modifier = Modifier.padding(top = 24.dp))
         Spacer(Modifier.height(8.dp))
 
         AnimatedContent(
@@ -96,31 +118,65 @@ fun OnboardingScreen(
             label = "onboarding"
         ) { currentStep ->
             when (currentStep) {
-                0 -> WelcomeStep()
-                1 -> MotiveStep(selected = motive, onSelect = { motive = it })
+                STEP_WELCOME -> WelcomeStep()
+                STEP_NAME -> NameStep(student)
+                STEP_MOTIVE -> MotiveStep(selected = motive, onSelect = { motive = it })
                 else -> GoalStep(selected = goal, onSelect = { goal = it })
             }
         }
 
         ChispaButton(
             text = when (step) {
-                0 -> "Empezar"
-                1 -> "Continuar"
-                else -> "¡Vamos allá!"
+                STEP_WELCOME -> "Empezar"
+                STEP_GOAL -> "¡Vamos allá!"
+                else -> "Continuar"
             },
-            enabled = step != 1 || motive != null,
+            enabled = when (step) {
+                STEP_NAME -> student.isValid
+                STEP_MOTIVE -> motive != null
+                else -> true
+            },
             onClick = {
-                when (step) {
-                    0 -> step = 1
-                    1 -> step = 2
-                    else -> {
-                        onRequestNotificationPermission()
-                        viewModel.finish(motive ?: Motive.FUN, goal, onFinished)
-                    }
-                }
+                if (step == STEP_GOAL) terminar() else step++
             }
         )
+
+        // El nombre solo hace falta para el certificado, y eso queda lejos: quien
+        // no quiera darlo ahora no debe quedarse atascado en la puerta.
+        if (step == STEP_NAME) {
+            Spacer(Modifier.height(4.dp))
+            TextButton(
+                onClick = { step++ },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(
+                    "Prefiero ponerlo después",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+
         Spacer(Modifier.height(16.dp))
+    }
+}
+
+private const val STEP_WELCOME = 0
+private const val STEP_NAME = 1
+private const val STEP_MOTIVE = 2
+private const val STEP_GOAL = 3
+private const val TOTAL_STEPS = 4
+
+@Composable
+private fun NameStep(state: StudentDataState) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+    ) {
+        Spacer(Modifier.height(12.dp))
+        StudentDataFields(state = state)
+        Spacer(Modifier.height(12.dp))
     }
 }
 

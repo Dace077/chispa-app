@@ -1,6 +1,7 @@
 package com.chispa.ingles.notifications
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -115,6 +116,12 @@ class Notifier(private val context: Context) {
             .setContentIntent(openAppIntent(destination))
             .build()
 
+    /**
+     * Se comprueba el permiso en [canPost] y ademas se envuelve el envio, asi
+     * que un SecurityException no puede tumbar la app. Lint marca esto igual
+     * porque no sigue la indireccion a traves de [canPost].
+     */
+    @SuppressLint("MissingPermission")
     private fun post(id: Int, notification: Notification) {
         if (!canPost()) return
         runCatching { manager.notify(id, notification) }

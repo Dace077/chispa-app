@@ -50,6 +50,8 @@ import kotlinx.coroutines.launch
 
 data class ReviewUiState(
     val loading: Boolean = true,
+    /** true cuando la lista no son fallos sino simplemente lo menos asentado. */
+    val soloFlojas: Boolean = false,
     val dueCount: Int = 0,
     val seenCount: Int = 0,
     val masteredCount: Int = 0,
@@ -68,12 +70,16 @@ class ReviewViewModel(private val locator: ServiceLocator) : ViewModel() {
                 locator.progressRepository.vocabMasteredCount
             ) { seen, mastered -> seen to mastered }
                 .collect { (seen, mastered) ->
+                    // Si todavía no ha fallado nada, se enseñan las más flojas:
+                    // la lista nunca queda vacía teniendo vocabulario.
+                    val falladas = locator.progressRepository.hardestCards(8)
                     _state.value = ReviewUiState(
                         loading = false,
                         dueCount = locator.progressRepository.dueCount(),
                         seenCount = seen,
                         masteredCount = mastered,
-                        hardest = locator.progressRepository.hardestCards(8)
+                        hardest = falladas.ifEmpty { locator.progressRepository.weakestCards(8) },
+                        soloFlojas = falladas.isEmpty()
                     )
                 }
         }
@@ -125,8 +131,13 @@ fun ReviewScreen(
                                 style = MaterialTheme.typography.titleLarge
                             )
                             Text(
-                                if (state.dueCount > 0) "Unos ${(state.dueCount / 3).coerceAtLeast(1)} minutos"
-                                else "Vuelve más tarde o repasa lo que más se te resiste",
+                                when {
+                                    state.dueCount > 0 ->
+                                        "Unos ${(state.dueCount / 3).coerceAtLeast(1)} minutos"
+                                    // Sin fallos todavía: no hay "lo difícil" que prometer.
+                                    state.soloFlojas -> "Vuelve más tarde y afianza lo aprendido"
+                                    else -> "Vuelve más tarde o repasa lo que más se te resiste"
+                                },
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -134,7 +145,11 @@ fun ReviewScreen(
                     }
                     Spacer(Modifier.height(18.dp))
                     ChispaButton(
-                        text = if (state.dueCount > 0) "Empezar repaso" else "Repasar lo difícil",
+                        text = when {
+                            state.dueCount > 0 -> "Empezar repaso"
+                            state.soloFlojas -> "Repasar de todos modos"
+                            else -> "Repasar lo difícil"
+                        },
                         enabled = state.seenCount > 0,
                         container = if (state.dueCount > 0) colors.xp else MaterialTheme.colorScheme.primary,
                         contentColor = androidx.compose.ui.graphics.Color.White,
@@ -189,8 +204,18 @@ fun ReviewScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Las que más se te resisten", style = MaterialTheme.typography.titleMedium)
-                    TextButton(onClick = onOpenVocabulary) { Text("Ver todo") }
+                    // El título cede el espacio que haga falta; sin el weight,
+                    // con la letra grande se comía la fila y «Ver todo» acababa
+                    // partido en cuatro líneas de una letra.
+                    Text(
+                        if (state.soloFlojas) "Lo que llevas menos asentado"
+                        else "Las que más se te resisten",
+                        style = MaterialTheme.typography.titleMedium,
+                        modifier = Modifier.weight(1f)
+                    )
+                    TextButton(onClick = onOpenVocabulary) {
+                        Text("Ver todo", maxLines = 1)
+                    }
                 }
                 Spacer(Modifier.height(8.dp))
             }

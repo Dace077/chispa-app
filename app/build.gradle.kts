@@ -26,9 +26,15 @@ android {
         applicationId = "com.chispa.ingles"
         minSdk = 24
         targetSdk = 36
-        versionCode = 18
-        versionName = "1.8.0"
+        versionCode = 19
+        versionName = "1.9.0"
         vectorDrawables { useSupportLibrary = true }
+
+        // Sin esto, `connectedAndroidTest` compila los tests instrumentados y
+        // luego ejecuta cero, sin avisar de nada. Hace falta para poder probar
+        // en un dispositivo lo que la JVM no puede: el dibujado del PDF del
+        // certificado y las migraciones de Room contra SQLite de verdad.
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {

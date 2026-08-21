@@ -92,47 +92,48 @@
             { "en": "brilliant", "es": "genial (UK)" },
             { "en": "queue", "es": "cola, fila" },
             { "en": "the tube", "es": "el metro de Londres" },
-            { "en": "flat", "es": "piso, apartamento" },
-            { "en": "knackered", "es": "hecho polvo (UK)" },
-            { "en": "fancy a pint?", "es": "¿te apetece una cerveza?" },
+            { "en": "flat", "es": "departamento" },
+            { "en": "knackered", "es": "muerto de cansancio (UK)" },
+            { "en": "fancy a pint?", "es": "¿se te antoja una cerveza?" },
             { "en": "reckon", "es": "creer, opinar" },
-            { "en": "mate", "es": "colega, tío" }
+            { "en": "mate", "es": "amigo, carnal" }
           ],
           "exercises": [
             {
               "type": "reading",
               "title": "Diálogo: dos amigos tras el trabajo",
               "body": "SAM: You alright, mate?\nJO: Yeah, not bad. Bit knackered though — the tube was absolutely packed.\nSAM: Tell me about it. I queued twenty minutes for a coffee this morning.\nJO: Brilliant. Anyway, fancy a pint later?\nSAM: I reckon so. Where were you thinking?\nJO: That place near your flat? The one with the garden.\nSAM: Perfect. Half seven?\nJO: Lovely. See you then. Cheers!",
-              "translation": "SAM: ¿Qué tal, colega?\nJO: Bien, no me quejo. Aunque hecho polvo: el metro iba a reventar.\nSAM: Ni me lo digas. Esta mañana hice veinte minutos de cola por un café.\nJO: Genial. En fin, ¿te apetece una cerveza luego?\nSAM: Yo creo que sí. ¿Dónde habías pensado?\nJO: ¿Ese sitio cerca de tu piso? El del jardín.\nSAM: Perfecto. ¿A las siete y media?\nJO: Estupendo. Nos vemos. ¡Gracias!"
+              "translation": "SAM: ¿Qué tal, amigo?\nJO: Bien, no me quejo. Aunque muerto de cansancio: el metro iba a reventar.\nSAM: Ni me lo digas. Esta mañana hice veinte minutos de cola por un café.\nJO: Genial. En fin, ¿se te antoja una cerveza luego?\nSAM: Yo creo que sí. ¿Dónde habías pensado?\nJO: ¿Ese lugar cerca de tu departamento? El del jardín.\nSAM: Perfecto. ¿A las siete y media?\nJO: Excelente. Nos vemos. ¡Gracias!"
             },
             {
               "type": "tip",
               "title": "Británico vs americano: palabras que cambian",
               "body": "No es solo el acento. 'Flat' (UK) es 'apartment' (US), 'queue' es 'line', 'the tube' es 'the subway', 'lift' es 'elevator', 'lorry' es 'truck' y 'chips' británicas son las 'fries' americanas — mientras que las 'chips' americanas son las 'crisps' británicas. Y 'cheers' en Reino Unido significa gracias, adiós y salud, según el momento.",
               "examples": [
-                { "en": "flat (UK) = apartment (US)", "es": "piso" },
+                { "en": "flat (UK) = apartment (US)", "es": "departamento" },
                 { "en": "queue (UK) = line (US)", "es": "cola" },
-                { "en": "lift (UK) = elevator (US)", "es": "ascensor" }
+                { "en": "lift (UK) = elevator (US)", "es": "elevador" }
               ]
             },
             {
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "I'm absolutely knackered",
-              "options": ["Estoy hecho polvo", "Estoy encantado", "Estoy perdido", "Estoy hambriento"],
-              "answer": "Estoy hecho polvo"
+              "hint": "¿Qué significa?",
+              "options": ["Estoy muerto de cansancio", "Estoy encantado", "Estoy perdido", "Estoy hambriento"],
+              "answer": "Estoy muerto de cansancio"
             },
             {
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Fancy a pint?",
               "options": [
-                "¿Te apetece una cerveza?",
+                "¿Se te antoja una cerveza?",
                 "¿Te gusta la pintura?",
                 "¿Quieres una pinta de leche?",
                 "¿Es elegante?"
               ],
-              "answer": "¿Te apetece una cerveza?"
+              "answer": "¿Se te antoja una cerveza?"
             },
             {
               "type": "matching_pairs",
@@ -146,7 +147,7 @@
             },
             { "type": "listen_and_type", "audioText": "The tube was absolutely packed", "answer": "The tube was absolutely packed", "translation": "El metro iba a reventar" },
             { "type": "listen_and_type", "audioText": "I reckon we should leave now", "answer": "I reckon we should leave now", "translation": "Creo que deberíamos irnos ya" },
-            { "type": "speak_and_repeat", "prompt": "You alright, mate? Fancy a pint later?", "translation": "¿Qué tal, colega? ¿Te apetece una cerveza luego?" },
+            { "type": "speak_and_repeat", "prompt": "You alright, mate? Fancy a pint later?", "translation": "¿Qué tal, amigo? ¿Se te antoja una cerveza luego?" },
             {
               "type": "translate",
               "direction": "en_es",
@@ -201,6 +202,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "She'll be right",
+              "hint": "¿Qué significa?",
               "options": [
                 "Todo saldrá bien",
                 "Ella tendrá razón",
@@ -213,6 +215,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "I've got heaps of work",
+              "hint": "¿Qué significa?",
               "options": ["Tengo un montón de trabajo", "Tengo poco trabajo", "Tengo montones de tiempo", "Trabajo en montones"],
               "answer": "Tengo un montón de trabajo"
             },

@@ -46,6 +46,8 @@ data class Settings(
     val reviewSessions: Int = 0,
     val perfectLessons: Int = 0,
     val specialFlags: Set<String> = emptySet(),
+    /** Ids de las lecturas terminadas: la biblioteca las marca con un visto. */
+    val readingsRead: Set<String> = emptySet(),
     val lastOpenedDay: Long = 0L
 )
 
@@ -68,6 +70,7 @@ class SettingsStore(private val context: Context) {
         val REVIEW_SESSIONS = intPreferencesKey("review_sessions")
         val PERFECT_LESSONS = intPreferencesKey("perfect_lessons")
         val SPECIAL_FLAGS = stringPreferencesKey("special_flags")
+        val READINGS_READ = stringPreferencesKey("readings_read")
         val LAST_OPENED_DAY = longPreferencesKey("last_opened_day")
     }
 
@@ -96,6 +99,8 @@ class SettingsStore(private val context: Context) {
                 reviewSessions = prefs[Keys.REVIEW_SESSIONS] ?: 0,
                 perfectLessons = prefs[Keys.PERFECT_LESSONS] ?: 0,
                 specialFlags = (prefs[Keys.SPECIAL_FLAGS] ?: "")
+                    .split(',').filter { it.isNotBlank() }.toSet(),
+                readingsRead = (prefs[Keys.READINGS_READ] ?: "")
                     .split(',').filter { it.isNotBlank() }.toSet(),
                 lastOpenedDay = prefs[Keys.LAST_OPENED_DAY] ?: 0L
             )
@@ -137,12 +142,19 @@ class SettingsStore(private val context: Context) {
         prefs[Keys.SPECIAL_FLAGS] = flags.joinToString(",")
     }
 
+    suspend fun markReadingRead(id: String) = edit { prefs ->
+        val leidas = (prefs[Keys.READINGS_READ] ?: "").split(',')
+            .filter { it.isNotBlank() }.toMutableSet()
+        if (leidas.add(id)) prefs[Keys.READINGS_READ] = leidas.joinToString(",")
+    }
+
     /** Borra estadísticas derivadas; las preferencias de la app se conservan. */
     suspend fun resetStats() = edit { prefs ->
         prefs[Keys.SPEAKING_COUNT] = 0
         prefs[Keys.REVIEW_SESSIONS] = 0
         prefs[Keys.PERFECT_LESSONS] = 0
         prefs[Keys.SPECIAL_FLAGS] = ""
+        prefs[Keys.READINGS_READ] = ""
     }
 
     private suspend fun edit(block: (androidx.datastore.preferences.core.MutablePreferences) -> Unit) {

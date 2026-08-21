@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Widget de racha.
+
+  minWidth 200dp x minHeight 68dp. Se subió desde 180x55 tras renderizarlo:
+  a 55dp de alto se cortaba "días seguidos" por abajo y el "480 / 500 XP" se
+  quedaba en "480 /...". Es preferible impedir un tamaño en el que no cabe que
+  dejar que el usuario lo vea roto.
+
+  updatePeriodMillis va a 0 a propósito: Android nunca refresca por debajo de
+  30 minutos y aun así despierta el dispositivo. La racha solo cambia cuando el
+  usuario practica o cuando pasa un día, y de eso ya avisamos nosotros desde la
+  app y desde el trabajo diario de recordatorio.
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="200dp"
+    android:minHeight="68dp"
+    android:targetCellWidth="4"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/widget_streak"
+    android:previewLayout="@layout/widget_streak"
+    android:resizeMode="horizontal"
+    android:description="@string/widget_description"
+    android:widgetCategory="home_screen" />

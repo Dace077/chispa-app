@@ -1,6 +1,7 @@
 package com.chispa.ingles.core
 
 import android.content.Context
+import com.chispa.ingles.data.backup.BackupManager
 import com.chispa.ingles.data.content.ContentRepository
 import com.chispa.ingles.data.db.ChispaDatabase
 import com.chispa.ingles.data.prefs.SettingsStore
@@ -31,6 +32,8 @@ class ServiceLocator private constructor(context: Context) {
     }
 
     val notifier: Notifier by lazy { Notifier(appContext) }
+
+    val backupManager: BackupManager by lazy { BackupManager(appContext, database) }
 
     /** TextToSpeech vive mientras viva el proceso: crearlo es caro. */
     val tts: TtsManager by lazy { TtsManager(appContext) }

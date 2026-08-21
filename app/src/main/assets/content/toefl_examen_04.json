@@ -1,0 +1,2277 @@
+{
+  "id": "toefl_examen_04",
+  "title": "Simulacro 4",
+  "subtitle": "140 preguntas · 115 minutos",
+  "sections": [
+    {
+      "id": "listening",
+      "parts": [
+        {
+          "id": "l_a",
+          "kind": "short_conversation",
+          "title": "Part A",
+          "instructions": "Escucha la conversación y elige la respuesta que mejor responde a la pregunta. Suena una sola vez.",
+          "questions": [
+            {
+              "id": "l01",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Do you want to keep going or stop here?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Let us call it a day."
+                }
+              ],
+              "stem": "What does the woman suggest?",
+              "options": [
+                "Stopping work for today.",
+                "Working one more hour.",
+                "Calling someone on the phone.",
+                "Starting a new task."
+              ],
+              "answer": 0,
+              "explanation": "«Call it a day» = dar por terminada la jornada."
+            },
+            {
+              "id": "l02",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Do you think the grant application has a chance?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Honestly, it is a long shot."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It is almost certain.",
+                "It will take a long time.",
+                "It is unlikely to succeed.",
+                "It is too far away."
+              ],
+              "answer": 2,
+              "explanation": "«A long shot» = con pocas probabilidades."
+            },
+            {
+              "id": "l03",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "What time does the seminar finish?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Off the top of my head, around four."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She is certain about the time.",
+                "She is answering from memory, without checking.",
+                "She did not hear the question.",
+                "The seminar starts at four."
+              ],
+              "answer": 1,
+              "explanation": "«Off the top of my head» = sin comprobarlo, de memoria."
+            },
+            {
+              "id": "l04",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Should we book the restaurant now?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Let us play it by ear."
+                }
+              ],
+              "stem": "What does the man prefer?",
+              "options": [
+                "Booking immediately.",
+                "Cancelling the plan.",
+                "Listening to music first.",
+                "Deciding later, depending on how things go."
+              ],
+              "answer": 3,
+              "explanation": "«Play it by ear» = ir viendo sobre la marcha."
+            },
+            {
+              "id": "l05",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Are you ready for the exam?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I still need to brush up on the second unit."
+                }
+              ],
+              "stem": "What does the woman need to do?",
+              "options": [
+                "Review the second unit.",
+                "Clean her desk.",
+                "Skip the second unit.",
+                "Teach the second unit."
+              ],
+              "answer": 0,
+              "explanation": "«Brush up on» = repasar algo que ya se estudió."
+            },
+            {
+              "id": "l06",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "How is the new job treating you?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I am still learning the ropes."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He works with climbing equipment.",
+                "He is about to quit.",
+                "He is still learning how things work.",
+                "He already knows everything."
+              ],
+              "answer": 2,
+              "explanation": "«Learn the ropes» = aprender el funcionamiento de algo nuevo."
+            },
+            {
+              "id": "l07",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did you understand the last part of the lecture?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I was completely lost."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She arrived late.",
+                "She did not understand it.",
+                "She could not find the room.",
+                "She understood it well."
+              ],
+              "answer": 1,
+              "explanation": "«Lost» aquí es no entender, no perderse físicamente."
+            },
+            {
+              "id": "l08",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Can you finish the report by Thursday?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "It will be cutting it close."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He has plenty of time.",
+                "He refuses to do it.",
+                "He already finished it.",
+                "He will barely have enough time."
+              ],
+              "answer": 3,
+              "explanation": "«Cut it close» = llegar por muy poco."
+            },
+            {
+              "id": "l09",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "So what is the paper about, in short?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "In a nutshell, cities cool themselves badly."
+                }
+              ],
+              "stem": "What is the woman doing?",
+              "options": [
+                "Summarising the paper briefly.",
+                "Refusing to explain.",
+                "Criticising the paper.",
+                "Describing an experiment with nuts."
+              ],
+              "answer": 0,
+              "explanation": "«In a nutshell» = en pocas palabras."
+            },
+            {
+              "id": "l10",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "You look exhausted."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I pulled an all-nighter."
+                }
+              ],
+              "stem": "What did the man do?",
+              "options": [
+                "He slept unusually well.",
+                "He cancelled his plans.",
+                "He stayed up all night.",
+                "He went to a party."
+              ],
+              "answer": 2,
+              "explanation": "«Pull an all-nighter» = pasar la noche en vela, normalmente estudiando."
+            },
+            {
+              "id": "l11",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Are you coming to the department dinner?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I will have to take a rain check."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She will check the weather.",
+                "She cannot come but would like to another time.",
+                "She is definitely coming.",
+                "She is organising the dinner."
+              ],
+              "answer": 1,
+              "explanation": "«Take a rain check» = dejarlo para otra ocasión."
+            },
+            {
+              "id": "l12",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "How is the thesis going?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I am in over my head, to be honest."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He is ahead of schedule.",
+                "He is nearly finished.",
+                "He is swimming regularly.",
+                "The work is beyond what he can handle right now."
+              ],
+              "answer": 3,
+              "explanation": "«In over one's head» = sobrepasado."
+            },
+            {
+              "id": "l13",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did the professor accept your excuse?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Let us say I am on thin ice."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She is in a risky position.",
+                "She was fully forgiven.",
+                "She was expelled.",
+                "She is going skating."
+              ],
+              "answer": 0,
+              "explanation": "«On thin ice» = en situación delicada."
+            },
+            {
+              "id": "l14",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Are you going to keep applying?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "I am not throwing in the towel yet."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He is giving up.",
+                "He needs a towel.",
+                "He has not given up.",
+                "He never applied."
+              ],
+              "answer": 2,
+              "explanation": "«Throw in the towel» = rendirse."
+            },
+            {
+              "id": "l15",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Do you know what happened at the meeting?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Someone will bring me up to speed later."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She was driving too fast.",
+                "Someone will tell her what she missed.",
+                "She was at the meeting.",
+                "The meeting was cancelled."
+              ],
+              "answer": 1,
+              "explanation": "«Bring someone up to speed» = poner al día."
+            },
+            {
+              "id": "l16",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "The scholarship application is complicated."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Still, it is worth a shot."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It is a waste of time.",
+                "It requires a photograph.",
+                "He has already won it.",
+                "It is worth trying."
+              ],
+              "answer": 3,
+              "explanation": "«Worth a shot» = vale la pena intentarlo."
+            },
+            {
+              "id": "l17",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Why did she leave the company?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "The reorganisation was the last straw."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "It was the final problem that made her leave.",
+                "It was the only problem.",
+                "It convinced her to stay.",
+                "It happened after she left."
+              ],
+              "answer": 0,
+              "explanation": "«The last straw» = la gota que colmó el vaso."
+            },
+            {
+              "id": "l18",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Do you two agree on the method?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "We are finally on the same page."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "They are reading the same book.",
+                "They still disagree.",
+                "They now understand it the same way.",
+                "They changed the method."
+              ],
+              "answer": 2,
+              "explanation": "«On the same page» = de acuerdo, con el mismo entendimiento."
+            },
+            {
+              "id": "l19",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did you enjoy the documentary?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I dozed off halfway through."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She watched it twice.",
+                "She fell asleep during it.",
+                "She left the cinema.",
+                "She found it fascinating."
+              ],
+              "answer": 1,
+              "explanation": "«Doze off» = quedarse dormido."
+            },
+            {
+              "id": "l20",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Can I borrow your notes from Tuesday?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "They are yours, no strings attached."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "He wants something in return.",
+                "He refuses to lend them.",
+                "He lost the notes.",
+                "He lends them without conditions."
+              ],
+              "answer": 3,
+              "explanation": "«No strings attached» = sin condiciones."
+            },
+            {
+              "id": "l21",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Are the results in yet?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Beats me. Nobody has said anything."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She does not know.",
+                "The results were bad.",
+                "She already saw them.",
+                "She will find out today."
+              ],
+              "answer": 0,
+              "explanation": "«Beats me» = ni idea."
+            },
+            {
+              "id": "l22",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "I heard you are moving to the coast."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Where did you hear that? It is news to nobody but me."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "He confirms he is moving.",
+                "He moved last year.",
+                "He had not heard about it himself.",
+                "He works in journalism."
+              ],
+              "answer": 2,
+              "explanation": "Ironía: se entera de su propia noticia por otra persona."
+            },
+            {
+              "id": "l23",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Is the library open during the break?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "Only the ground floor, and only mornings."
+                }
+              ],
+              "stem": "What does the woman say about the library?",
+              "options": [
+                "It closes completely.",
+                "It opens partially during the break.",
+                "It opens as usual.",
+                "It moved to another building."
+              ],
+              "answer": 1,
+              "explanation": "Abre, pero limitado: una planta y solo por las mañanas."
+            },
+            {
+              "id": "l24",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "You have been quiet about the results."
+                },
+                {
+                  "speaker": "Man",
+                  "text": "There is not much to celebrate."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "The results were excellent.",
+                "He has not seen them.",
+                "He is planning a party.",
+                "The results were disappointing."
+              ],
+              "answer": 3,
+              "explanation": "Litotes: decir poco para dar a entender que fue mal."
+            },
+            {
+              "id": "l25",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Should I email the professor again?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I would give her a couple of days."
+                }
+              ],
+              "stem": "What does the woman advise?",
+              "options": [
+                "Waiting before emailing again.",
+                "Emailing immediately.",
+                "Calling instead of emailing.",
+                "Forgetting about it."
+              ],
+              "answer": 0,
+              "explanation": "Aconseja esperar, no insistir ahora."
+            },
+            {
+              "id": "l26",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Is the lab equipment reliable?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "It has been acting up all week."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It works perfectly.",
+                "It was replaced recently.",
+                "It has been malfunctioning.",
+                "It is very old but reliable."
+              ],
+              "answer": 2,
+              "explanation": "«Act up» = funcionar mal, dar problemas."
+            },
+            {
+              "id": "l27",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Did you get the internship?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "I am still keeping my fingers crossed."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She was rejected.",
+                "She is waiting and hoping.",
+                "She was accepted.",
+                "She withdrew her application."
+              ],
+              "answer": 1,
+              "explanation": "«Fingers crossed» = a la espera, con esperanza."
+            },
+            {
+              "id": "l28",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "How was the conference food?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Let us focus on the talks."
+                }
+              ],
+              "stem": "What does the man imply?",
+              "options": [
+                "The food was excellent.",
+                "He did not attend the talks.",
+                "He missed the meals.",
+                "The food was not good."
+              ],
+              "answer": 3,
+              "explanation": "Cambia de tema en vez de criticar: implica que no le gustó."
+            },
+            {
+              "id": "l29",
+              "script": [
+                {
+                  "speaker": "Man",
+                  "text": "Do you want to present first or last?"
+                },
+                {
+                  "speaker": "Woman",
+                  "text": "First, before I lose my nerve."
+                }
+              ],
+              "stem": "What does the woman mean?",
+              "options": [
+                "She wants to present early to avoid getting nervous.",
+                "She is not presenting.",
+                "She prefers to go last.",
+                "She has already presented."
+              ],
+              "answer": 0,
+              "explanation": "«Lose one's nerve» = perder el valor."
+            },
+            {
+              "id": "l30",
+              "script": [
+                {
+                  "speaker": "Woman",
+                  "text": "Is the new schedule final?"
+                },
+                {
+                  "speaker": "Man",
+                  "text": "Pencil it in for now."
+                }
+              ],
+              "stem": "What does the man mean?",
+              "options": [
+                "It is completely fixed.",
+                "Do not write it down.",
+                "Note it provisionally; it may change.",
+                "Use a pen instead."
+              ],
+              "answer": 2,
+              "explanation": "«Pencil it in» = anotarlo de forma provisional."
+            }
+          ]
+        },
+        {
+          "id": "l_b1",
+          "kind": "long_conversation",
+          "title": "Part B · Conversación 1",
+          "instructions": "Escucha la conversación y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Student",
+              "text": "I need to change my thesis supervisor and I do not know where to start."
+            },
+            {
+              "speaker": "Adviser",
+              "text": "That is more common than you think. What is the reason?"
+            },
+            {
+              "speaker": "Student",
+              "text": "My topic drifted towards statistics and she works on fieldwork."
+            },
+            {
+              "speaker": "Adviser",
+              "text": "So it is a question of fit, not a conflict."
+            },
+            {
+              "speaker": "Student",
+              "text": "Exactly. We get along fine."
+            },
+            {
+              "speaker": "Adviser",
+              "text": "That makes it much easier. You need a signed form from both professors and a paragraph explaining the change."
+            },
+            {
+              "speaker": "Student",
+              "text": "Does the department have to approve it?"
+            },
+            {
+              "speaker": "Adviser",
+              "text": "The committee sees it, but with both signatures it is a formality."
+            },
+            {
+              "speaker": "Student",
+              "text": "And my defence date?"
+            },
+            {
+              "speaker": "Adviser",
+              "text": "That is the part to watch. A new supervisor can ask for one extra semester, and you cannot appeal that."
+            },
+            {
+              "speaker": "Student",
+              "text": "So I should ask about the timeline before signing anything."
+            },
+            {
+              "speaker": "Adviser",
+              "text": "Ask that first, and in writing."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l31",
+              "stem": "Why does the student want to change supervisor?",
+              "options": [
+                "She had an argument with her supervisor.",
+                "Her topic no longer matches her supervisor's field.",
+                "Her supervisor is leaving the university.",
+                "She wants to change departments."
+              ],
+              "answer": 1,
+              "explanation": "Dice que el tema derivó hacia estadística y la directora trabaja en campo."
+            },
+            {
+              "id": "l32",
+              "stem": "What does the adviser say about the committee?",
+              "options": [
+                "It usually rejects these requests.",
+                "It does not review the change at all.",
+                "It requires an interview.",
+                "With both signatures its approval is routine."
+              ],
+              "answer": 3,
+              "explanation": "«With both signatures it is a formality»."
+            },
+            {
+              "id": "l33",
+              "stem": "What does the adviser warn the student about?",
+              "options": [
+                "The defence could be delayed by a semester.",
+                "The form costs money.",
+                "She may lose her scholarship.",
+                "She cannot keep her current topic."
+              ],
+              "answer": 0,
+              "explanation": "El nuevo director puede pedir un semestre más y no hay apelación."
+            },
+            {
+              "id": "l34",
+              "stem": "What does the adviser recommend doing first?",
+              "options": [
+                "Signing the form immediately.",
+                "Speaking to the committee chair.",
+                "Asking about the timeline in writing.",
+                "Changing the topic back."
+              ],
+              "answer": 2,
+              "explanation": "«Ask that first, and in writing»."
+            }
+          ]
+        },
+        {
+          "id": "l_b2",
+          "kind": "long_conversation",
+          "title": "Part B · Conversación 2",
+          "instructions": "Escucha la conversación y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Student",
+              "text": "I got an email saying my library account is blocked."
+            },
+            {
+              "speaker": "Librarian",
+              "text": "Let me look. Yes, there is an unreturned item from the reserve collection."
+            },
+            {
+              "speaker": "Student",
+              "text": "I returned everything before the break."
+            },
+            {
+              "speaker": "Librarian",
+              "text": "Reserve items go into a different drop box. If it went into the general one, it may still be in transit."
+            },
+            {
+              "speaker": "Student",
+              "text": "It has been three weeks."
+            },
+            {
+              "speaker": "Librarian",
+              "text": "Then it was probably shelved in the wrong section rather than checked in."
+            },
+            {
+              "speaker": "Student",
+              "text": "Can you remove the block while you look for it?"
+            },
+            {
+              "speaker": "Librarian",
+              "text": "I can suspend it for seven days. If the book does not appear, the charge comes back."
+            },
+            {
+              "speaker": "Student",
+              "text": "And if it never appears?"
+            },
+            {
+              "speaker": "Librarian",
+              "text": "You would pay a replacement fee, but you can contest it once with the receipt of your return."
+            },
+            {
+              "speaker": "Student",
+              "text": "I do not keep those receipts."
+            },
+            {
+              "speaker": "Librarian",
+              "text": "Most people do not. From now on, photograph the drop box screen."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l35",
+              "stem": "Why is the student's account blocked?",
+              "options": [
+                "She owes a late fee from last year.",
+                "A reserve item is registered as unreturned.",
+                "She borrowed too many books.",
+                "Her enrolment expired."
+              ],
+              "answer": 1,
+              "explanation": "Hay un ejemplar de la colección de reserva sin devolver."
+            },
+            {
+              "id": "l36",
+              "stem": "What does the librarian suggest happened to the book?",
+              "options": [
+                "It was stolen from the drop box.",
+                "It was never borrowed.",
+                "It was sent to another campus.",
+                "It was shelved in the wrong section instead of checked in."
+              ],
+              "answer": 3,
+              "explanation": "Sugiere que se colocó mal en vez de registrarse la devolución."
+            },
+            {
+              "id": "l37",
+              "stem": "What can the librarian do immediately?",
+              "options": [
+                "Suspend the block for a week.",
+                "Cancel the charge permanently.",
+                "Order a replacement copy.",
+                "Nothing until the book appears."
+              ],
+              "answer": 0,
+              "explanation": "«I can suspend it for seven days»."
+            },
+            {
+              "id": "l38",
+              "stem": "What advice does the librarian give for the future?",
+              "options": [
+                "Return books at the front desk only.",
+                "Avoid reserve items.",
+                "Photograph the drop box screen as proof.",
+                "Keep paper receipts for a year."
+              ],
+              "answer": 2,
+              "explanation": "Le dice que fotografíe la pantalla del buzón."
+            }
+          ]
+        },
+        {
+          "id": "l_c1",
+          "kind": "talk",
+          "title": "Part C · Charla 1",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "Today I want to talk about why the metric system took so long to spread, because the usual answer, that people resist change, explains almost nothing."
+            },
+            {
+              "speaker": "Professor",
+              "text": "France adopted the metre in 1795 and then spent forty years failing to impose it on its own citizens. Markets kept using local units, and in 1812 the government legalised a hybrid system in which old names were attached to metric quantities."
+            },
+            {
+              "speaker": "Professor",
+              "text": "The problem was not arithmetic. It was that old units were tied to the work. A unit of land was often defined as what one person could plough in a day, which encoded soil quality and slope. Replacing it with an abstract area threw that information away."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Metric units won when the state gained reasons to measure the same thing everywhere: taxation, conscription, railways. Where central administration was weak, adoption was slow regardless of how rational the system was."
+            },
+            {
+              "speaker": "Professor",
+              "text": "So the lesson is that a measurement system is not only a language. It is a claim about who has the right to define the quantity, and that is what was really being negotiated."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l39",
+              "stem": "What is the main point of the talk?",
+              "options": [
+                "The metric system is arithmetically superior.",
+                "Metric adoption depended on state power, not on rationality.",
+                "France abandoned the metric system in 1812.",
+                "Local units were more accurate than metric ones."
+              ],
+              "answer": 1,
+              "explanation": "La tesis es que la adopción dependió de la administración central."
+            },
+            {
+              "id": "l40",
+              "stem": "What does the professor say about old units of land?",
+              "options": [
+                "They were identical across regions.",
+                "They were invented by the state.",
+                "They were more precise than metric units.",
+                "They encoded information about the land itself."
+              ],
+              "answer": 3,
+              "explanation": "Codificaban calidad del suelo y pendiente."
+            },
+            {
+              "id": "l41",
+              "stem": "What happened in 1812?",
+              "options": [
+                "A hybrid system with old names was legalised.",
+                "The metre was invented.",
+                "Local units were banned.",
+                "The railways were built."
+              ],
+              "answer": 0,
+              "explanation": "El gobierno legalizó un sistema híbrido."
+            },
+            {
+              "id": "l42",
+              "stem": "According to the professor, what was really being negotiated?",
+              "options": [
+                "The exact length of the metre.",
+                "The price of agricultural land.",
+                "Who had the authority to define quantities.",
+                "The design of measuring instruments."
+              ],
+              "answer": 2,
+              "explanation": "Cierra diciendo que se negociaba el derecho a definir la cantidad."
+            }
+          ]
+        },
+        {
+          "id": "l_c2",
+          "kind": "talk",
+          "title": "Part C · Charla 2",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "The deep-sea floor was assumed to be a desert until the 1970s, and the reasoning behind that assumption was perfectly sound at the time."
+            },
+            {
+              "speaker": "Professor",
+              "text": "No sunlight reaches those depths, so no photosynthesis. Everything eaten down there had to fall from above, and what falls is scarce. A square metre of abyssal plain receives a few grams of organic material a year."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Then a submersible near the Galapagos found dense clusters of clams and tube worms around hot vents, with a biomass comparable to a shallow reef. The food chain there begins with bacteria that oxidise hydrogen sulphide."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Notice what changed and what did not. The energy still comes from outside the organism; it is simply chemical rather than solar. The old reasoning was not wrong about scarcity, only about the sources available."
+            },
+            {
+              "speaker": "Professor",
+              "text": "This is worth remembering when you read that a discovery overturned everything. Usually it does not. It adds one term to an equation that was otherwise correct."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l43",
+              "stem": "Why was the deep-sea floor assumed to be nearly lifeless?",
+              "options": [
+                "The water pressure kills all organisms.",
+                "Without sunlight, food had to sink from above and was scarce.",
+                "The temperature is too low for life.",
+                "No one had ever explored it."
+              ],
+              "answer": 1,
+              "explanation": "Sin luz no hay fotosíntesis y lo que cae es escaso."
+            },
+            {
+              "id": "l44",
+              "stem": "What did the submersible near the Galapagos find?",
+              "options": [
+                "An underwater desert as predicted.",
+                "A new species of fish only.",
+                "Evidence of photosynthesis at depth.",
+                "Dense communities around hot vents."
+              ],
+              "answer": 3,
+              "explanation": "Encontró densas agrupaciones de almejas y gusanos tubícolas."
+            },
+            {
+              "id": "l45",
+              "stem": "What begins the food chain at the vents?",
+              "options": [
+                "Bacteria that oxidise hydrogen sulphide.",
+                "Algae adapted to darkness.",
+                "Material falling from the surface.",
+                "Tube worms."
+              ],
+              "answer": 0,
+              "explanation": "Bacterias que oxidan sulfuro de hidrógeno."
+            },
+            {
+              "id": "l46",
+              "stem": "What broader point does the professor make at the end?",
+              "options": [
+                "Scientific reasoning is rarely reliable.",
+                "The old theory was completely wrong.",
+                "Discoveries usually add to existing reasoning rather than overturn it.",
+                "Deep-sea research is more important than surface research."
+              ],
+              "answer": 2,
+              "explanation": "Suele añadirse un término a una ecuación que ya era correcta."
+            }
+          ]
+        },
+        {
+          "id": "l_c3",
+          "kind": "talk",
+          "title": "Part C · Charla 3",
+          "instructions": "Escucha la charla y responde a las preguntas. Suena una sola vez.",
+          "script": [
+            {
+              "speaker": "Professor",
+              "text": "I want to describe an experiment about how people judge the length of a wait, because the result is more useful than it first appears."
+            },
+            {
+              "speaker": "Professor",
+              "text": "An airport received complaints about baggage delay. The walk from the gate to the carousel took one minute; the bags then took seven. The airport moved the arrival gates further away, so the walk took six minutes and the bags took two."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Total time was unchanged. Complaints fell to almost nothing."
+            },
+            {
+              "speaker": "Professor",
+              "text": "The standard explanation is that occupied time feels shorter than unoccupied time. That is true, but incomplete. Notice that the passengers were also making progress. Walking towards the bags feels like part of getting them; standing at a belt does not."
+            },
+            {
+              "speaker": "Professor",
+              "text": "The practical implication is not to make people walk more. It is that when you cannot make a process faster, you can often make the waiting part of the work rather than an interruption to it."
+            }
+          ],
+          "questions": [
+            {
+              "id": "l47",
+              "stem": "What change did the airport make?",
+              "options": [
+                "It hired more baggage handlers.",
+                "It moved arrival gates further from the carousel.",
+                "It reduced the total waiting time.",
+                "It added seating at the carousel."
+              ],
+              "answer": 1,
+              "explanation": "Alejó las puertas de llegada."
+            },
+            {
+              "id": "l48",
+              "stem": "What happened to the total time?",
+              "options": [
+                "It decreased by five minutes.",
+                "It increased slightly.",
+                "It was never measured.",
+                "It stayed the same."
+              ],
+              "answer": 3,
+              "explanation": "«Total time was unchanged»."
+            },
+            {
+              "id": "l49",
+              "stem": "Why does the professor call the standard explanation incomplete?",
+              "options": [
+                "It ignores the sense of making progress.",
+                "It confuses walking with waiting.",
+                "It was based on a single airport.",
+                "It contradicts the data."
+              ],
+              "answer": 0,
+              "explanation": "Añade que los pasajeros además avanzaban hacia el objetivo."
+            },
+            {
+              "id": "l50",
+              "stem": "What is the practical implication?",
+              "options": [
+                "Always make people walk further.",
+                "Reduce the number of flights.",
+                "Make the waiting feel like part of the process.",
+                "Measure complaints more carefully."
+              ],
+              "answer": 2,
+              "explanation": "Convertir la espera en parte del trabajo, no en una interrupción."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "parts": [
+        {
+          "id": "s_a",
+          "kind": "completion",
+          "title": "Structure",
+          "instructions": "Elige la opción que completa la frase correctamente.",
+          "questions": [
+            {
+              "id": "s01",
+              "stem": "Rarely ______ a species recover once its breeding population falls below a few dozen.",
+              "options": [
+                "it does",
+                "does",
+                "does it",
+                "is"
+              ],
+              "answer": 1,
+              "explanation": "«Rarely» al principio exige inversión: auxiliar + sujeto («does a species recover»)."
+            },
+            {
+              "id": "s02",
+              "stem": "The report, ______ conclusions were disputed, was withdrawn three months later.",
+              "options": [
+                "which",
+                "of which the",
+                "that its",
+                "whose"
+              ],
+              "answer": 3,
+              "explanation": "Posesivo relativo: «whose conclusions»."
+            },
+            {
+              "id": "s03",
+              "stem": "______ the storm damaged the antenna, the station kept broadcasting.",
+              "options": [
+                "Although",
+                "Despite",
+                "In spite",
+                "However"
+              ],
+              "answer": 0,
+              "explanation": "Ante oración completa va conjunción: «although». «Despite» exige sustantivo."
+            },
+            {
+              "id": "s04",
+              "stem": "The technique is useful ______ the sample remains frozen.",
+              "options": [
+                "provided of",
+                "in provision that",
+                "provided that",
+                "providing of"
+              ],
+              "answer": 2,
+              "explanation": "«Provided that» = siempre que, condicional formal."
+            },
+            {
+              "id": "s05",
+              "stem": "Not until the second trial ______ the side effect.",
+              "options": [
+                "researchers noticed",
+                "did researchers notice",
+                "researchers did notice",
+                "noticed researchers"
+              ],
+              "answer": 1,
+              "explanation": "«Not until» al inicio fuerza inversión con auxiliar."
+            },
+            {
+              "id": "s06",
+              "stem": "The committee recommended that the deadline ______ by two weeks.",
+              "options": [
+                "is extended",
+                "was extended",
+                "will be extended",
+                "be extended"
+              ],
+              "answer": 3,
+              "explanation": "Subjuntivo tras «recommend that»: verbo en forma base."
+            },
+            {
+              "id": "s07",
+              "stem": "______ of the two methods produces reliable results with small samples.",
+              "options": [
+                "Neither",
+                "None",
+                "No one",
+                "Not any"
+              ],
+              "answer": 0,
+              "explanation": "«Neither» para dos elementos."
+            },
+            {
+              "id": "s08",
+              "stem": "The glacier has retreated ______ than it did during the previous century.",
+              "options": [
+                "far most rapidly",
+                "by far rapidly",
+                "far more rapidly",
+                "more far rapidly"
+              ],
+              "answer": 2,
+              "explanation": "«Far» intensifica el comparativo: far more rapidly."
+            },
+            {
+              "id": "s09",
+              "stem": "______ enough funding, the project would have finished on schedule.",
+              "options": [
+                "If there was",
+                "Had there been",
+                "Should there be",
+                "Were there"
+              ],
+              "answer": 1,
+              "explanation": "Condicional del tercer tipo invertido: «Had there been»."
+            },
+            {
+              "id": "s10",
+              "stem": "The author spent a decade ______ the manuscript before publishing it.",
+              "options": [
+                "to revise",
+                "revise",
+                "revised",
+                "revising"
+              ],
+              "answer": 3,
+              "explanation": "«Spend time + -ing»."
+            },
+            {
+              "id": "s11",
+              "stem": "The results were consistent ______ those obtained in the pilot study.",
+              "options": [
+                "with",
+                "to",
+                "of",
+                "as"
+              ],
+              "answer": 0,
+              "explanation": "«Consistent with» es la colocación correcta."
+            },
+            {
+              "id": "s12",
+              "stem": "Hardly had the session begun ______ the connection failed.",
+              "options": [
+                "than",
+                "then",
+                "when",
+                "that"
+              ],
+              "answer": 2,
+              "explanation": "Correlación fija: hardly … when."
+            },
+            {
+              "id": "s13",
+              "stem": "The instrument, ______ in 1908, is still in working order.",
+              "options": [
+                "building",
+                "built",
+                "having building",
+                "it was built"
+              ],
+              "answer": 1,
+              "explanation": "Participio pasado reducido: «(which was) built in 1908»."
+            },
+            {
+              "id": "s14",
+              "stem": "Few economists ______ that the estimate was too optimistic.",
+              "options": [
+                "doubts",
+                "was doubting",
+                "has doubted",
+                "doubted"
+              ],
+              "answer": 3,
+              "explanation": "«Few economists» es plural contable: verbo en plural."
+            },
+            {
+              "id": "s15",
+              "stem": "The larger the sample, ______ the margin of error.",
+              "options": [
+                "the smaller",
+                "smaller",
+                "the smallest",
+                "as small as"
+              ],
+              "answer": 0,
+              "explanation": "Estructura correlativa: the + comparativo, the + comparativo."
+            }
+          ]
+        },
+        {
+          "id": "s_b",
+          "kind": "error_id",
+          "title": "Written Expression",
+          "instructions": "Identifica la parte subrayada que hay que corregir.",
+          "questions": [
+            {
+              "id": "s16",
+              "stem": "(A) Each of the samples were (B) analysed (C) twice (D) to reduce error.",
+              "options": [
+                "Each of the samples were",
+                "analysed",
+                "twice",
+                "to reduce error"
+              ],
+              "answer": 0,
+              "explanation": "«Each» es singular: was analysed."
+            },
+            {
+              "id": "s17",
+              "stem": "(A) The criteria was published (B) in advance (C) on the website (D) of the department.",
+              "options": [
+                "The criteria was published",
+                "in advance",
+                "on the website",
+                "of the department"
+              ],
+              "answer": 0,
+              "explanation": "«Criteria» es el plural de «criterion»: were published."
+            },
+            {
+              "id": "s18",
+              "stem": "(A) Despite of (B) the delay, (C) the crew completed (D) the survey.",
+              "options": [
+                "Despite of",
+                "the delay,",
+                "the crew completed",
+                "the survey"
+              ],
+              "answer": 0,
+              "explanation": "«Despite» no lleva «of»: despite the delay."
+            },
+            {
+              "id": "s19",
+              "stem": "(A) The professor asked us to not (B) submit (C) the draft (D) before Friday.",
+              "options": [
+                "The professor asked us to not",
+                "submit",
+                "the draft",
+                "before Friday"
+              ],
+              "answer": 0,
+              "explanation": "El orden es «not to submit»."
+            },
+            {
+              "id": "s20",
+              "stem": "(A) Neither (B) the director nor (C) the assistants (D) was informed of the change.",
+              "options": [
+                "Neither",
+                "the director nor",
+                "the assistants",
+                "was informed of the change"
+              ],
+              "answer": 3,
+              "explanation": "Con «neither…nor» el verbo concuerda con el sujeto más cercano: were informed."
+            },
+            {
+              "id": "s21",
+              "stem": "(A) The amount of (B) students enrolled (C) has risen (D) sharply.",
+              "options": [
+                "The amount of",
+                "students enrolled",
+                "has risen",
+                "sharply"
+              ],
+              "answer": 0,
+              "explanation": "«Students» es contable: the number of."
+            },
+            {
+              "id": "s22",
+              "stem": "(A) She is (B) one of (C) the few researchers (D) who has access to the archive.",
+              "options": [
+                "She is",
+                "one of",
+                "the few researchers",
+                "who has access to the archive"
+              ],
+              "answer": 3,
+              "explanation": "El antecedente de «who» es «researchers»: who have."
+            },
+            {
+              "id": "s23",
+              "stem": "(A) The findings were (B) more significant (C) that those (D) of the earlier study.",
+              "options": [
+                "The findings were",
+                "more significant",
+                "that those",
+                "of the earlier study"
+              ],
+              "answer": 2,
+              "explanation": "Comparativo con «than», no «that»."
+            },
+            {
+              "id": "s24",
+              "stem": "(A) Having finished (B) the experiment, (C) the equipment was (D) cleaned and stored.",
+              "options": [
+                "Having finished",
+                "the experiment,",
+                "the equipment was",
+                "cleaned and stored"
+              ],
+              "answer": 2,
+              "explanation": "Participio colgante: el equipo no terminó el experimento."
+            },
+            {
+              "id": "s25",
+              "stem": "(A) The lecture was (B) so interesting (C) that hardly (D) nobody left before the end.",
+              "options": [
+                "The lecture was",
+                "so interesting",
+                "that hardly",
+                "nobody left before the end"
+              ],
+              "answer": 3,
+              "explanation": "Doble negación: «hardly» ya es negativo, así que va «hardly anybody»."
+            },
+            {
+              "id": "s26",
+              "stem": "(A) A number of participants has (B) withdrawn (C) from the programme (D) since March.",
+              "options": [
+                "A number of participants has",
+                "withdrawn",
+                "from the programme",
+                "since March"
+              ],
+              "answer": 0,
+              "explanation": "«A number of» es plural: participants have withdrawn."
+            },
+            {
+              "id": "s27",
+              "stem": "(A) The theory (B) which he proposed it (C) in 1954 (D) remains influential.",
+              "options": [
+                "The theory",
+                "which he proposed it",
+                "in 1954",
+                "remains influential"
+              ],
+              "answer": 1,
+              "explanation": "Pronombre reasuntivo: sobra «it» dentro de la relativa."
+            },
+            {
+              "id": "s28",
+              "stem": "(A) Scientists have long (B) been interested (C) on how (D) birds navigate.",
+              "options": [
+                "Scientists have long",
+                "been interested",
+                "on how",
+                "birds navigate"
+              ],
+              "answer": 2,
+              "explanation": "«Interested in», no «interested on»."
+            },
+            {
+              "id": "s29",
+              "stem": "(A) If the sensor (B) would fail, (C) the backup (D) takes over automatically.",
+              "options": [
+                "If the sensor",
+                "would fail,",
+                "the backup",
+                "takes over automatically"
+              ],
+              "answer": 1,
+              "explanation": "En la condicional no va «would»: if the sensor fails."
+            },
+            {
+              "id": "s30",
+              "stem": "(A) The museum (B) has recently acquired (C) three paintings (D) which are dated from 1620.",
+              "options": [
+                "The museum",
+                "has recently acquired",
+                "three paintings",
+                "which are dated from 1620"
+              ],
+              "answer": 3,
+              "explanation": "«Date from» no es pasiva: which date from 1620."
+            },
+            {
+              "id": "s31",
+              "stem": "(A) Most of the equipment (B) in the laboratories (C) are new, (D) although the building is not.",
+              "options": [
+                "Most of the equipment",
+                "in the laboratories",
+                "are new,",
+                "although the building is not"
+              ],
+              "answer": 2,
+              "explanation": "«Equipment» es incontable: is new."
+            },
+            {
+              "id": "s32",
+              "stem": "(A) He explained (B) the committee (C) that the deadline (D) could not be moved.",
+              "options": [
+                "He explained",
+                "the committee",
+                "that the deadline",
+                "could not be moved"
+              ],
+              "answer": 1,
+              "explanation": "«Explain» exige preposición: explained to the committee."
+            },
+            {
+              "id": "s33",
+              "stem": "(A) The city has (B) twice as many (C) inhabitants (D) than it had in 1950.",
+              "options": [
+                "The city has",
+                "twice as many",
+                "inhabitants",
+                "than it had in 1950"
+              ],
+              "answer": 3,
+              "explanation": "Con «as many as» va «as»: as it had in 1950."
+            },
+            {
+              "id": "s34",
+              "stem": "(A) Between 1890 and 1910, (B) the population (C) has grown (D) by a third.",
+              "options": [
+                "Between 1890 and 1910,",
+                "the population",
+                "has grown",
+                "by a third"
+              ],
+              "answer": 2,
+              "explanation": "Periodo cerrado en el pasado: grew, no has grown."
+            },
+            {
+              "id": "s35",
+              "stem": "(A) The results, (B) that were published (C) last month, (D) confirm the hypothesis.",
+              "options": [
+                "The results,",
+                "that were published",
+                "last month,",
+                "confirm the hypothesis"
+              ],
+              "answer": 1,
+              "explanation": "En relativa explicativa se usa «which», no «that»."
+            },
+            {
+              "id": "s36",
+              "stem": "(A) Only after the deadline (B) the department (C) announced (D) the new criteria.",
+              "options": [
+                "Only after the deadline",
+                "the department",
+                "announced",
+                "the new criteria"
+              ],
+              "answer": 1,
+              "explanation": "«Only after» exige inversión: did the department announce."
+            },
+            {
+              "id": "s37",
+              "stem": "(A) There is (B) considerable evidences (C) that the practice (D) began much earlier.",
+              "options": [
+                "There is",
+                "considerable evidences",
+                "that the practice",
+                "began much earlier"
+              ],
+              "answer": 1,
+              "explanation": "«Evidence» es incontable: no lleva plural."
+            },
+            {
+              "id": "s38",
+              "stem": "(A) Everyone agreed (B) with what (C) the technician (D) suggested to do about the calibration.",
+              "options": [
+                "Everyone agreed",
+                "with what",
+                "the technician",
+                "suggested to do about the calibration"
+              ],
+              "answer": 3,
+              "explanation": "«Suggest» no rige infinitivo: suggested doing."
+            },
+            {
+              "id": "s39",
+              "stem": "(A) Although (B) the survey was thorough, (C) but the sample (D) was too small.",
+              "options": [
+                "Although",
+                "the survey was thorough,",
+                "but the sample",
+                "was too small"
+              ],
+              "answer": 2,
+              "explanation": "«Although» y «but» no se combinan: sobra «but»."
+            },
+            {
+              "id": "s40",
+              "stem": "(A) The two theories (B) differ (C) each other (D) in one crucial respect.",
+              "options": [
+                "The two theories",
+                "differ",
+                "each other",
+                "in one crucial respect"
+              ],
+              "answer": 2,
+              "explanation": "«Differ from each other»: falta la preposición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "parts": [
+        {
+          "id": "r_p1",
+          "kind": "passage",
+          "title": "Texto 1",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "For most of the twentieth century, the standard account of how children learn vocabulary was that they hear a word, are shown its referent, and store the pair. The account is not wrong, but it cannot be the whole story, because the arithmetic does not work. A six-year-old knows roughly ten thousand words. Explicit teaching of that many pairs, at the rate parents actually manage, would take decades.\n\nThe gap is closed by a mechanism usually called fast mapping. Presented with a novel word in a context containing one unfamiliar object among several familiar ones, children as young as two assign the word to the unfamiliar object after a single exposure, and retain the assignment for weeks. They are not learning the meaning so much as reserving a slot for it.\n\nWhat makes this efficient is that the initial assignment is provisional. A child who first hears 'dog' applied to a neighbour's spaniel will happily extend it to other four-legged animals, then narrow the category as corrections arrive. Errors of over-extension are therefore not failures of the system; they are the system working, since a guess that is too broad is cheap to correct while a guess that is too narrow may never be tested.\n\nThe mechanism has limits that are easy to overlook. It works well for concrete nouns and poorly for verbs, whose referents are events rather than things and cannot be pointed at. It also depends on the child already knowing the other objects in the scene, which is why vocabulary growth accelerates rather than proceeding at a constant rate.",
+          "questions": [
+            {
+              "id": "r01",
+              "stem": "What is the main purpose of the passage?",
+              "options": [
+                "To criticise parents for teaching too few words.",
+                "To compare vocabulary learning in children and adults.",
+                "To explain a mechanism that accounts for rapid vocabulary growth.",
+                "To argue that children learn words one pair at a time."
+              ],
+              "answer": 2,
+              "explanation": "Presenta el fast mapping como explicación del ritmo de aprendizaje."
+            },
+            {
+              "id": "r02",
+              "stem": "Why does the author say the traditional account 'cannot be the whole story'?",
+              "options": [
+                "Children rarely look at what adults point to.",
+                "The number of words known exceeds what explicit teaching could supply.",
+                "Parents do not teach vocabulary at all.",
+                "The account was disproved in the twentieth century."
+              ],
+              "answer": 1,
+              "explanation": "«The arithmetic does not work»: diez mil palabras no caben en la enseñanza explícita."
+            },
+            {
+              "id": "r03",
+              "stem": "According to the passage, what do children do when they hear a novel word?",
+              "options": [
+                "They ask an adult for a definition.",
+                "They ignore it until they hear it again.",
+                "They assign it to the most familiar object.",
+                "They assign it to the unfamiliar object present."
+              ],
+              "answer": 3,
+              "explanation": "Lo asignan al objeto desconocido de la escena."
+            },
+            {
+              "id": "r04",
+              "stem": "The phrase 'reserving a slot for it' suggests that the child",
+              "options": [
+                "creates a placeholder to be refined later.",
+                "memorises the exact meaning at once.",
+                "forgets the word quickly.",
+                "refuses to use the word."
+              ],
+              "answer": 0,
+              "explanation": "El significado queda pendiente de afinarse: es un hueco reservado."
+            },
+            {
+              "id": "r05",
+              "stem": "How long do children retain a fast-mapped assignment?",
+              "options": [
+                "For a few minutes.",
+                "For a single day.",
+                "For weeks.",
+                "Permanently."
+              ],
+              "answer": 2,
+              "explanation": "El texto dice «retain the assignment for weeks»."
+            },
+            {
+              "id": "r06",
+              "stem": "How does the author interpret over-extension errors?",
+              "options": [
+                "As a sign of delayed development.",
+                "As evidence that the mechanism is working.",
+                "As proof that fast mapping fails.",
+                "As a result of poor parental correction."
+              ],
+              "answer": 1,
+              "explanation": "«They are the system working»."
+            },
+            {
+              "id": "r07",
+              "stem": "Why is a guess that is too narrow described as worse?",
+              "options": [
+                "It requires more corrections from adults.",
+                "It leads to over-extension later.",
+                "It is harder for children to remember.",
+                "It may never be tested and therefore never corrected."
+              ],
+              "answer": 3,
+              "explanation": "Una categoría estrecha no se pone a prueba, así que no se corrige."
+            },
+            {
+              "id": "r08",
+              "stem": "Why does fast mapping work poorly for verbs?",
+              "options": [
+                "Their referents are events and cannot be pointed at.",
+                "Verbs are heard less often than nouns.",
+                "Verbs have irregular forms.",
+                "Children learn verbs before nouns."
+              ],
+              "answer": 0,
+              "explanation": "Los referentes son eventos, no cosas señalables."
+            },
+            {
+              "id": "r09",
+              "stem": "What does the passage say explains the acceleration of vocabulary growth?",
+              "options": [
+                "Children are taught more words as they age.",
+                "Memory capacity doubles each year.",
+                "Fast mapping depends on already knowing the other objects present.",
+                "Adults speak more slowly to older children."
+              ],
+              "answer": 2,
+              "explanation": "Cuantas más palabras se saben, mejor funciona el mecanismo."
+            },
+            {
+              "id": "r10",
+              "stem": "The word 'provisional' in the third paragraph is closest in meaning to",
+              "options": [
+                "precise",
+                "temporary",
+                "official",
+                "permanent"
+              ],
+              "answer": 1,
+              "explanation": "«Provisional» = provisional, sujeto a revisión."
+            }
+          ]
+        },
+        {
+          "id": "r_p2",
+          "kind": "passage",
+          "title": "Texto 2",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The commercial ice trade of the nineteenth century is a useful case study in how an industry can be destroyed by success rather than by failure. Between 1830 and 1880, blocks cut from New England ponds were shipped to Calcutta, Havana and Rio de Janeiro, insulated with sawdust in the holds of returning cargo ships. Losses in transit ran near thirty per cent, which was acceptable because the raw material cost nothing beyond the labour of cutting it.\n\nThe trade created its own market. Households that had never used ice acquired iceboxes, and by 1870 the domestic demand of American cities dwarfed the exotic export routes that had made the industry famous. Breweries, meatpackers and hospitals became dependent on a supply that arrived by cart on a fixed schedule.\n\nThat dependence is what killed the harvesters. A customer who merely wants ice can wait for winter; a customer whose business stops without it cannot. When mechanical refrigeration became reliable in the 1880s, it was more expensive per unit than pond ice, and the harvesters said so, correctly. What they missed was that their large customers were no longer buying ice. They were buying certainty, and a warm winter or a polluted pond could interrupt the natural supply in a way that a machine could not.\n\nThe industry did not vanish at once. It contracted from the top, losing the industrial accounts first and surviving in rural households into the 1920s. By then the skills, the tools and the insurance markets that had supported large-scale harvesting were gone, and the recovery that some owners waited for was no longer physically possible.",
+          "questions": [
+            {
+              "id": "r11",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                "Mechanical refrigeration was cheaper than harvested ice.",
+                "The ice trade failed because of poor transport methods.",
+                "Exports to tropical ports were never profitable.",
+                "The ice trade was undone by the dependence its own growth created."
+              ],
+              "answer": 3,
+              "explanation": "La tesis: el éxito generó una dependencia que el hielo natural no podía garantizar."
+            },
+            {
+              "id": "r12",
+              "stem": "Why were transit losses of thirty per cent acceptable?",
+              "options": [
+                "The raw material itself cost nothing.",
+                "Customers paid for the lost ice.",
+                "Insurance covered the losses.",
+                "The losses were later reduced to zero."
+              ],
+              "answer": 0,
+              "explanation": "El costo era solo la mano de obra del corte."
+            },
+            {
+              "id": "r13",
+              "stem": "By 1870, what was the largest source of demand?",
+              "options": [
+                "Tropical export markets.",
+                "European capitals.",
+                "Households and businesses in American cities.",
+                "Shipping companies."
+              ],
+              "answer": 2,
+              "explanation": "La demanda doméstica superaba con mucho a la exportación."
+            },
+            {
+              "id": "r14",
+              "stem": "What distinction does the author draw between types of customer?",
+              "options": [
+                "Those who pay in advance and those who pay later.",
+                "Those who can wait for ice and those whose business stops without it.",
+                "Urban customers and rural customers.",
+                "Customers in cold climates and warm climates."
+              ],
+              "answer": 1,
+              "explanation": "Es la distinción central del tercer párrafo."
+            },
+            {
+              "id": "r15",
+              "stem": "The harvesters' claim about the cost of refrigeration is described as",
+              "options": [
+                "false and self-serving.",
+                "impossible to verify.",
+                "the reason for their survival.",
+                "correct but beside the point."
+              ],
+              "answer": 3,
+              "explanation": "«The harvesters said so, correctly», pero se equivocaban de asunto."
+            },
+            {
+              "id": "r16",
+              "stem": "According to the passage, what were large customers actually buying?",
+              "options": [
+                "Certainty of supply.",
+                "The lowest possible price.",
+                "Locally produced goods.",
+                "Ice of higher purity."
+              ],
+              "answer": 0,
+              "explanation": "«They were buying certainty»."
+            },
+            {
+              "id": "r17",
+              "stem": "What could interrupt the natural supply?",
+              "options": [
+                "A shortage of sawdust.",
+                "Competition from imports.",
+                "A warm winter or a polluted pond.",
+                "A rise in labour costs."
+              ],
+              "answer": 2,
+              "explanation": "Son los dos ejemplos que da el texto."
+            },
+            {
+              "id": "r18",
+              "stem": "How did the industry decline?",
+              "options": [
+                "It collapsed suddenly in the 1880s.",
+                "It lost industrial customers first and rural ones last.",
+                "It lost rural customers first.",
+                "It was banned by regulation."
+              ],
+              "answer": 1,
+              "explanation": "«It contracted from the top»."
+            },
+            {
+              "id": "r19",
+              "stem": "Why was recovery impossible by the 1920s?",
+              "options": [
+                "The ponds had all been drained.",
+                "The government prohibited harvesting.",
+                "Consumers preferred the taste of machine ice.",
+                "The supporting skills, tools and insurance markets had disappeared."
+              ],
+              "answer": 3,
+              "explanation": "Lo dice el último párrafo."
+            },
+            {
+              "id": "r20",
+              "stem": "The word 'dwarfed' in the second paragraph is closest in meaning to",
+              "options": [
+                "greatly exceeded",
+                "slightly resembled",
+                "gradually replaced",
+                "barely matched"
+              ],
+              "answer": 0,
+              "explanation": "«Dwarf» = empequeñecer por comparación, superar con mucho."
+            }
+          ]
+        },
+        {
+          "id": "r_p3",
+          "kind": "passage",
+          "title": "Texto 3",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "Desert plants are often described as storing water, and some do, but the more common strategy is subtler: they manage the timing of loss. Every plant faces the same trade-off, since the pores that admit carbon dioxide for photosynthesis also release water vapour. In a temperate climate the exchange is cheap. In a desert it can be fatal.\n\nOne solution is to invert the schedule. Plants using crassulacean acid metabolism open their pores at night, when the air is cool and humid, fix carbon dioxide into an organic acid, and store the acid until morning. During the day the pores stay shut and photosynthesis proceeds on the stored supply. Water loss falls by up to ninety per cent compared with the ordinary pathway.\n\nThe cost is speed. The acid store is finite, so carbon fixation stops when it is exhausted, usually by early afternoon. These plants grow slowly and cannot exploit a wet season quickly. Where rainfall is unpredictable but occasionally generous, they are outcompeted by annuals that germinate, flower and die within a few weeks, leaving seeds to wait out the drought.\n\nThis is why the vegetation of a desert is rarely uniform. The two strategies succeed under different rainfall patterns, and most deserts contain patches of each. A survey that samples only after a wet season will find annuals and conclude the desert is productive; one that samples in a dry year will find succulents and conclude the opposite. Both are describing the same place.",
+          "questions": [
+            {
+              "id": "r21",
+              "stem": "What is the main point of the passage?",
+              "options": [
+                "All desert plants store water in their tissues.",
+                "Photosynthesis is impossible in deserts.",
+                "Desert plants use different strategies suited to different rainfall patterns.",
+                "Annual plants are superior to succulents."
+              ],
+              "answer": 2,
+              "explanation": "El texto contrasta dos estrategias y explica cuándo gana cada una."
+            },
+            {
+              "id": "r22",
+              "stem": "What trade-off does every plant face?",
+              "options": [
+                "Growing tall means producing fewer seeds.",
+                "Admitting carbon dioxide also means losing water vapour.",
+                "Storing water means storing less sugar.",
+                "Opening pores at night means colder tissues."
+              ],
+              "answer": 1,
+              "explanation": "Los mismos poros que admiten CO2 dejan salir vapor de agua."
+            },
+            {
+              "id": "r23",
+              "stem": "When do plants using crassulacean acid metabolism open their pores?",
+              "options": [
+                "At midday.",
+                "Only after rain.",
+                "Continuously.",
+                "At night."
+              ],
+              "answer": 3,
+              "explanation": "De noche, cuando el aire está fresco y húmedo."
+            },
+            {
+              "id": "r24",
+              "stem": "What is stored until morning?",
+              "options": [
+                "An organic acid containing fixed carbon dioxide.",
+                "Liquid water in the roots.",
+                "Sugar produced during the night.",
+                "Oxygen from photosynthesis."
+              ],
+              "answer": 0,
+              "explanation": "Fijan el CO2 en un ácido orgánico y lo guardan."
+            },
+            {
+              "id": "r25",
+              "stem": "By how much can this strategy reduce water loss?",
+              "options": [
+                "By about thirty per cent.",
+                "By half.",
+                "By up to ninety per cent.",
+                "The passage does not say."
+              ],
+              "answer": 2,
+              "explanation": "El texto da la cifra explícitamente."
+            },
+            {
+              "id": "r26",
+              "stem": "What is the disadvantage of the strategy?",
+              "options": [
+                "The plants cannot survive cold nights.",
+                "Carbon fixation stops when the acid store runs out.",
+                "The pores are damaged by sunlight.",
+                "It requires more water in total."
+              ],
+              "answer": 1,
+              "explanation": "El almacén es finito y se agota, normalmente a primera hora de la tarde."
+            },
+            {
+              "id": "r27",
+              "stem": "Under what conditions do annuals outcompete these plants?",
+              "options": [
+                "When rainfall is steady all year.",
+                "When temperatures are low.",
+                "When the soil is permanently wet.",
+                "When rainfall is unpredictable but occasionally generous."
+              ],
+              "answer": 3,
+              "explanation": "Es la condición que menciona el tercer párrafo."
+            },
+            {
+              "id": "r28",
+              "stem": "What do annuals leave behind to survive the drought?",
+              "options": [
+                "Seeds.",
+                "Deep roots.",
+                "Water stored in stems.",
+                "Dormant leaves."
+              ],
+              "answer": 0,
+              "explanation": "«Leaving seeds to wait out the drought»."
+            },
+            {
+              "id": "r29",
+              "stem": "What problem with surveys does the author identify?",
+              "options": [
+                "Surveys rarely count annual plants.",
+                "Deserts cannot be sampled reliably at all.",
+                "The timing of sampling can produce opposite conclusions.",
+                "Most surveys use the wrong equipment."
+              ],
+              "answer": 2,
+              "explanation": "Muestrear tras lluvia o en año seco da conclusiones contrarias del mismo sitio."
+            },
+            {
+              "id": "r30",
+              "stem": "The word 'exhausted' in the third paragraph is closest in meaning to",
+              "options": [
+                "made tired",
+                "used up",
+                "expanded",
+                "renewed"
+              ],
+              "answer": 1,
+              "explanation": "Aquí significa agotado en el sentido de consumido."
+            }
+          ]
+        },
+        {
+          "id": "r_p4",
+          "kind": "passage",
+          "title": "Texto 4",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "The invention of the index is usually treated as a minor episode in the history of the book, which underestimates how much it changed reading. Before the thirteenth century, a European scholar who wanted a passage had essentially two options: remember where it was, or read until it appeared. Manuscripts were continuous, unpaginated and often unpunctuated.\n\nThe alphabetical index emerged from an institutional need rather than a scholarly one. Preaching orders required friars to compose sermons on assigned topics at short notice, drawing on authorities they could not possibly have memorised. Concordances listing every occurrence of a word were compiled for this purpose, one of them requiring the coordinated labour of some five hundred friars.\n\nAlphabetical order was not the obvious choice it now seems. Contemporaries objected that it was arbitrary, scattering related ideas across the list and placing trivial entries beside important ones. Systematic arrangements by subject were considered more rational, and they were, for a reader who already knew the structure of the field. The advantage of alphabetical order is precisely that it requires no such knowledge, which is why it won.\n\nThe consequence was a new way of using books. A text could now be entered at any point and consulted rather than read, and authors began writing with that in mind, adding headings and summaries. The book stopped being something one went through and became something one went into.",
+          "questions": [
+            {
+              "id": "r31",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                "Medieval manuscripts were poorly made.",
+                "Alphabetical order is the most rational arrangement.",
+                "Preaching orders invented the modern book.",
+                "The index changed how books were written and used."
+              ],
+              "answer": 3,
+              "explanation": "El cierre lo resume: cambió la forma de usar y escribir libros."
+            },
+            {
+              "id": "r32",
+              "stem": "Before the thirteenth century, how did a scholar locate a passage?",
+              "options": [
+                "By memory or by reading until reaching it.",
+                "By consulting a subject index.",
+                "By asking a librarian.",
+                "By using page numbers."
+              ],
+              "answer": 0,
+              "explanation": "El texto da exactamente esas dos opciones."
+            },
+            {
+              "id": "r33",
+              "stem": "What prompted the creation of alphabetical concordances?",
+              "options": [
+                "A royal decree on book production.",
+                "The invention of printing.",
+                "The need to compose sermons on assigned topics quickly.",
+                "Scholarly curiosity about word frequency."
+              ],
+              "answer": 2,
+              "explanation": "Fue una necesidad institucional de las órdenes predicadoras."
+            },
+            {
+              "id": "r34",
+              "stem": "What does the passage say about the scale of the work?",
+              "options": [
+                "It was done by a single scholar over a lifetime.",
+                "One concordance required about five hundred friars.",
+                "It took two years and cost a fortune.",
+                "The passage does not mention scale."
+              ],
+              "answer": 1,
+              "explanation": "Cita la cifra de unos quinientos frailes."
+            },
+            {
+              "id": "r35",
+              "stem": "What objection was raised against alphabetical order?",
+              "options": [
+                "It was too difficult to compile.",
+                "It required knowledge of Latin.",
+                "It made books more expensive.",
+                "It separated related ideas and levelled important and trivial entries."
+              ],
+              "answer": 3,
+              "explanation": "Se le reprochaba ser arbitrario."
+            },
+            {
+              "id": "r36",
+              "stem": "For which reader were systematic arrangements genuinely better?",
+              "options": [
+                "One who already knew the structure of the field.",
+                "One who was learning to read.",
+                "One in a hurry.",
+                "One without access to a library."
+              ],
+              "answer": 0,
+              "explanation": "El texto concede que eran más racionales para ese lector."
+            },
+            {
+              "id": "r37",
+              "stem": "Why did alphabetical order prevail?",
+              "options": [
+                "It was cheaper to print.",
+                "It was ordered by the church.",
+                "It requires no prior knowledge of the subject.",
+                "It preserved the structure of the field."
+              ],
+              "answer": 2,
+              "explanation": "«It requires no such knowledge, which is why it won»."
+            },
+            {
+              "id": "r38",
+              "stem": "How did authors respond to the new way of reading?",
+              "options": [
+                "They wrote shorter books.",
+                "They added headings and summaries.",
+                "They abandoned alphabetical order.",
+                "They stopped writing for scholars."
+              ],
+              "answer": 1,
+              "explanation": "Empezaron a escribir pensando en la consulta."
+            },
+            {
+              "id": "r39",
+              "stem": "The final sentence contrasts",
+              "options": [
+                "manuscripts with printed books.",
+                "religious texts with secular texts.",
+                "reading aloud with reading silently.",
+                "reading a book through with consulting parts of it."
+              ],
+              "answer": 3,
+              "explanation": "«Went through» frente a «went into»."
+            },
+            {
+              "id": "r40",
+              "stem": "The word 'arbitrary' in the third paragraph is closest in meaning to",
+              "options": [
+                "based on no underlying principle",
+                "extremely detailed",
+                "widely accepted",
+                "difficult to learn"
+              ],
+              "answer": 0,
+              "explanation": "Arbitrario: sin criterio de fondo."
+            }
+          ]
+        },
+        {
+          "id": "r_p5",
+          "kind": "passage",
+          "title": "Texto 5",
+          "instructions": "Lee el texto y responde a las preguntas.",
+          "passage": "Volcanic eruptions can cool the planet, but only under conditions narrow enough that most eruptions do nothing at all. The cooling agent is not ash, which falls out within weeks, but sulphur dioxide, which converts in the atmosphere into droplets that reflect sunlight. For that to matter, the gas must reach the stratosphere, above the weather that would otherwise wash it out.\n\nThis sets a threshold. An eruption may eject enormous volumes of rock and still have no measurable climatic effect if its plume stays low or its magma is poor in sulphur. Conversely, a moderate eruption rich in sulphur and vigorous enough to punch through the tropopause can lower global temperatures by several tenths of a degree for two or three years.\n\nLatitude matters as much as size. Stratospheric circulation carries material from the tropics towards both poles, so a tropical eruption spreads its droplets over the whole planet. The same eruption at high latitude stays largely within one hemisphere, and its effect on global average temperature is correspondingly smaller, though regional effects can be severe.\n\nBecause of this, the historical record is easy to misread. Chronicles describing a terrible year following a distant eruption may be recording a coincidence, while eruptions that did alter the climate sometimes left no local impression at all, having occurred in places where nobody was writing anything down.",
+          "questions": [
+            {
+              "id": "r41",
+              "stem": "What is the main point of the passage?",
+              "options": [
+                "All large eruptions cool the planet.",
+                "Volcanic ash is the main cause of cooling.",
+                "Only eruptions meeting specific conditions affect global climate.",
+                "Historical chronicles are the best record of eruptions."
+              ],
+              "answer": 2,
+              "explanation": "El texto insiste en las condiciones estrechas que hacen falta."
+            },
+            {
+              "id": "r42",
+              "stem": "Why is ash not the cooling agent?",
+              "options": [
+                "It absorbs rather than reflects sunlight.",
+                "It falls out of the atmosphere within weeks.",
+                "It never reaches the stratosphere.",
+                "It is produced in very small amounts."
+              ],
+              "answer": 1,
+              "explanation": "Precipita en semanas."
+            },
+            {
+              "id": "r43",
+              "stem": "What does sulphur dioxide form in the atmosphere?",
+              "options": [
+                "Ice crystals that trap heat.",
+                "Ash particles.",
+                "Clouds that produce rain.",
+                "Droplets that reflect sunlight."
+              ],
+              "answer": 3,
+              "explanation": "Se convierte en gotitas reflectantes."
+            },
+            {
+              "id": "r44",
+              "stem": "Why must the gas reach the stratosphere?",
+              "options": [
+                "Below it, weather would wash the gas out.",
+                "The stratosphere is colder.",
+                "Sunlight is stronger there.",
+                "The gas cannot form droplets lower down."
+              ],
+              "answer": 0,
+              "explanation": "Por debajo, la meteorología lo elimina."
+            },
+            {
+              "id": "r45",
+              "stem": "What can prevent a very large eruption from affecting climate?",
+              "options": [
+                "Heavy rainfall in the region.",
+                "A short duration.",
+                "A low plume or magma poor in sulphur.",
+                "Occurring in winter."
+              ],
+              "answer": 2,
+              "explanation": "Son las dos condiciones que menciona el texto."
+            },
+            {
+              "id": "r46",
+              "stem": "How much can a suitable moderate eruption cool the planet?",
+              "options": [
+                "By several degrees for a decade.",
+                "By several tenths of a degree for two or three years.",
+                "By one degree permanently.",
+                "The passage does not specify."
+              ],
+              "answer": 1,
+              "explanation": "La cifra aparece en el segundo párrafo."
+            },
+            {
+              "id": "r47",
+              "stem": "Why does a tropical eruption have a wider effect?",
+              "options": [
+                "Tropical volcanoes are larger.",
+                "Tropical magma contains more sulphur.",
+                "The tropopause is lower in the tropics.",
+                "Stratospheric circulation carries material towards both poles."
+              ],
+              "answer": 3,
+              "explanation": "La circulación estratosférica reparte el material hacia ambos hemisferios."
+            },
+            {
+              "id": "r48",
+              "stem": "What is true of high-latitude eruptions?",
+              "options": [
+                "Their global effect is smaller but regional effects can be severe.",
+                "They have no effect of any kind.",
+                "They cool the planet more than tropical ones.",
+                "They produce no sulphur dioxide."
+              ],
+              "answer": 0,
+              "explanation": "El texto lo dice explícitamente."
+            },
+            {
+              "id": "r49",
+              "stem": "Why is the historical record easy to misread?",
+              "options": [
+                "Chronicles were usually written centuries later.",
+                "Eruptions were never recorded.",
+                "Bad years may coincide with eruptions that did not cause them.",
+                "Temperatures were not measured until 1900."
+              ],
+              "answer": 2,
+              "explanation": "Advierte tanto de coincidencias como de erupciones sin testigos."
+            },
+            {
+              "id": "r50",
+              "stem": "The word 'threshold' in the second paragraph is closest in meaning to",
+              "options": [
+                "upper limit",
+                "minimum level required for an effect",
+                "average value",
+                "measuring instrument"
+              ],
+              "answer": 1,
+              "explanation": "Umbral: el mínimo a partir del cual algo ocurre."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

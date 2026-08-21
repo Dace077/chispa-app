@@ -42,6 +42,13 @@ interface LessonProgressDao {
     @Query("SELECT COUNT(*) FROM lesson_progress WHERE timesCompleted > 0")
     suspend fun completedCount(): Int
 
+    /** Volcado completo, para el respaldo. */
+    @Query("SELECT * FROM lesson_progress")
+    suspend fun all(): List<LessonProgressEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(rows: List<LessonProgressEntity>)
+
     @Query("DELETE FROM lesson_progress")
     suspend fun clear()
 }
@@ -109,6 +116,23 @@ interface SrsCardDao {
     )
     suspend fun hardestCards(limit: Int): List<SrsCardEntity>
 
+    /**
+     * Las tarjetas menos consolidadas, se hayan fallado o no.
+     *
+     * `hardestCards` solo devuelve las que tienen fallos, así que al principio
+     * está vacía y la pantalla de repaso se quedaba con medio hueco en blanco
+     * justo cuando el usuario más necesita ver que está avanzando.
+     */
+    @Query(
+        """
+        SELECT * FROM srs_card
+        WHERE reps > 0
+        ORDER BY strength ASC, dueAt ASC
+        LIMIT :limit
+        """
+    )
+    suspend fun weakestCards(limit: Int): List<SrsCardEntity>
+
     @Query("SELECT COUNT(*) FROM srs_card WHERE reps > 0")
     fun observeSeenCount(): Flow<Int>
 
@@ -120,6 +144,13 @@ interface SrsCardDao {
 
     @Query("SELECT * FROM srs_card ORDER BY strength DESC, en ASC LIMIT :limit")
     fun observeAll(limit: Int): Flow<List<SrsCardEntity>>
+
+    /** Volcado completo, para el respaldo. */
+    @Query("SELECT * FROM srs_card")
+    suspend fun all(): List<SrsCardEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(cards: List<SrsCardEntity>)
 
     @Query("DELETE FROM srs_card")
     suspend fun clear()
@@ -146,6 +177,12 @@ interface DailyActivityDao {
     @Query("SELECT COALESCE(SUM(xp), 0) FROM daily_activity WHERE epochDay BETWEEN :from AND :to")
     suspend fun xpBetween(from: Long, to: Long): Int
 
+    @Query("SELECT * FROM daily_activity")
+    suspend fun all(): List<DailyActivityEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(rows: List<DailyActivityEntity>)
+
     @Query("DELETE FROM daily_activity")
     suspend fun clear()
 }
@@ -167,6 +204,125 @@ interface AchievementDao {
         achievements.forEach { unlock(it) }
     }
 
+    @Query("SELECT * FROM achievement")
+    suspend fun all(): List<AchievementEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(rows: List<AchievementEntity>)
+
     @Query("DELETE FROM achievement")
+    suspend fun clear()
+}
+
+@Dao
+interface CertificateDao {
+
+    @Query("SELECT * FROM certificate ORDER BY issuedAt DESC")
+    fun observeAll(): Flow<List<CertificateEntity>>
+
+    @Query("SELECT * FROM certificate WHERE level = :level")
+    suspend fun forLevel(level: String): CertificateEntity?
+
+    @Query("SELECT * FROM certificate WHERE folio = :folio")
+    suspend fun get(folio: String): CertificateEntity?
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun issue(certificate: CertificateEntity)
+
+    @Query("SELECT * FROM certificate")
+    suspend fun all(): List<CertificateEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(rows: List<CertificateEntity>)
+
+    @Query("DELETE FROM certificate")
+    suspend fun clear()
+}
+
+@Dao
+interface ExerciseStatDao {
+
+    @Query("SELECT * FROM exercise_stat ORDER BY answered DESC")
+    fun observeAll(): Flow<List<ExerciseStatEntity>>
+
+    @Query("SELECT * FROM exercise_stat")
+    suspend fun all(): List<ExerciseStatEntity>
+
+    @Query("SELECT * FROM exercise_stat WHERE type = :type")
+    suspend fun get(type: String): ExerciseStatEntity?
+
+    @Upsert
+    suspend fun upsert(stat: ExerciseStatEntity)
+
+    @Query("INSERT OR IGNORE INTO exercise_stat (type, answered, correct, lastAnsweredAt) VALUES (:type, 0, 0, 0)")
+    suspend fun ensure(type: String)
+
+    @Query(
+        """
+        UPDATE exercise_stat
+        SET answered = answered + 1,
+            correct = correct + :correct,
+            lastAnsweredAt = :now
+        WHERE type = :type
+        """
+    )
+    suspend fun bump(type: String, correct: Int, now: Long)
+
+    /**
+     * Suma una respuesta al contador de su tipo.
+     *
+     * Son dos sentencias y no un `INSERT ... ON CONFLICT DO UPDATE` porque el
+     * upsert de SQLite necesita 3.24, que no llegó a Android hasta la 11. Con
+     * minSdk 24 hay que servir a teléfonos con SQLite 3.9.
+     */
+    @Transaction
+    suspend fun record(type: String, correct: Boolean, now: Long) {
+        ensure(type)
+        bump(type, if (correct) 1 else 0, now)
+    }
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(rows: List<ExerciseStatEntity>)
+
+    @Query("DELETE FROM exercise_stat")
+    suspend fun clear()
+}
+
+@Dao
+interface ExamAttemptDao {
+
+    @Query("SELECT * FROM exam_attempt WHERE completed = 1 ORDER BY finishedAt DESC")
+    fun observeCompleted(): Flow<List<ExamAttemptEntity>>
+
+    @Query("SELECT * FROM exam_attempt WHERE examId = :examId AND completed = 1 ORDER BY scaledScore DESC LIMIT 1")
+    suspend fun bestFor(examId: String): ExamAttemptEntity?
+
+    @Query("SELECT MAX(scaledScore) FROM exam_attempt WHERE completed = 1")
+    suspend fun bestScore(): Int?
+
+    /** El intento a medias de este examen, si lo hay. Solo puede haber uno. */
+    @Query("SELECT * FROM exam_attempt WHERE examId = :examId AND completed = 0 ORDER BY startedAt DESC LIMIT 1")
+    suspend fun unfinished(examId: String): ExamAttemptEntity?
+
+    /** El último intento terminado, que es el que se puede revisar. */
+    @Query("SELECT * FROM exam_attempt WHERE examId = :examId AND completed = 1 ORDER BY finishedAt DESC LIMIT 1")
+    suspend fun lastCompleted(examId: String): ExamAttemptEntity?
+
+    @Query("DELETE FROM exam_attempt WHERE examId = :examId AND completed = 0")
+    suspend fun clearUnfinished(examId: String)
+
+    @Query("SELECT COUNT(*) FROM exam_attempt WHERE completed = 1")
+    fun observeCompletedCount(): Flow<Int>
+
+    @Upsert
+    suspend fun upsert(attempt: ExamAttemptEntity): Long
+
+    @Query("SELECT * FROM exam_attempt")
+    suspend fun all(): List<ExamAttemptEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(rows: List<ExamAttemptEntity>)
+
+    @Query("DELETE FROM exam_attempt")
     suspend fun clear()
 }

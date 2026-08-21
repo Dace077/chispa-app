@@ -7,6 +7,9 @@ import com.chispa.ingles.data.db.AchievementEntity
 import com.chispa.ingles.data.db.DailyActivityEntity
 import com.chispa.ingles.data.db.SrsCardEntity
 import com.chispa.ingles.data.db.UserProfileEntity
+import com.chispa.ingles.domain.Avatar
+import com.chispa.ingles.domain.AvatarRules
+import com.chispa.ingles.domain.CertificateRules
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -16,6 +19,8 @@ import kotlinx.coroutines.launch
 data class ProfileUiState(
     val loading: Boolean = true,
     val profile: UserProfileEntity = UserProfileEntity(),
+    /** Ya resuelto contra los niveles terminados, nunca uno sin desbloquear. */
+    val avatar: Avatar = Avatar.DEFAULT,
     val activity: List<DailyActivityEntity> = emptyList(),
     val unlockedAchievements: Set<String> = emptySet(),
     val vocabSeen: Int = 0,
@@ -36,7 +41,9 @@ class ProfileViewModel(private val locator: ServiceLocator) : ViewModel() {
 
     init {
         viewModelScope.launch {
-            combine(
+            val curriculum = locator.contentRepository.curriculum()
+
+            val base = combine(
                 locator.progressRepository.profile,
                 locator.progressRepository.activitySince(historyStartDay),
                 locator.progressRepository.achievements,
@@ -51,6 +58,16 @@ class ProfileViewModel(private val locator: ServiceLocator) : ViewModel() {
                     vocabSeen = seen,
                     vocabMastered = mastered
                 )
+            }
+
+            // El avatar se resuelve aparte porque necesita el progreso por
+            // lección: son los niveles COMPLETOS los que lo desbloquean, la
+            // misma fuente que emite los certificados.
+            combine(base, locator.progressRepository.lessonProgress) { estado, progress ->
+                val completos = CertificateRules.earnedLevels(curriculum, progress)
+                    .map { it.level }
+                    .toSet()
+                estado.copy(avatar = AvatarRules.resolve(estado.profile.avatarId, completos))
             }.collect { base ->
                 val thisWeek = locator.progressRepository.weeklyXp(0)
                 val lastWeek = locator.progressRepository.weeklyXp(1)

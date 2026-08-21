@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Icono de notificación: silueta blanca sobre transparente, como exige Android. -->
+<!--
+  GENERADO POR herramientas/generar-iconos.py — no editar a mano.
+
+  Silueta del colibri, sin el letrero del icono de launcher: a 24dp el texto
+  no se leeria. Las coordenadas salen de los mismos paths que el icono grande,
+  reencuadradas para llenar el lienzo de 24.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24"
     android:tint="#FFFFFFFF">
+
+    <!-- Ala -->
     <path
         android:fillColor="#FFFFFFFF"
-        android:pathData="M12,2 C12.9,7.1 14.9,9.1 20,10 C14.9,10.9 12.9,12.9 12,18 C11.1,12.9 9.1,10.9 4,10 C9.1,9.1 11.1,7.1 12,2 Z" />
+        android:pathData="M10.80,13.89 C8.39,10.45 5.63,7.01 2.88,5.29 C2.19,9.76 4.25,13.89 8.39,16.30 Z" />
+
+    <!-- Cuerpo con el ojo perforado (evenOdd deja el hueco) -->
     <path
         android:fillColor="#FFFFFFFF"
-        android:pathData="M18.5,15 C18.8,16.6 19.4,17.2 21,17.5 C19.4,17.8 18.8,18.4 18.5,20 C18.2,18.4 17.6,17.8 16,17.5 C17.6,17.2 18.2,16.6 18.5,15 Z" />
+        android:fillType="evenOdd"
+        android:pathData="M1.50,12.86 C1.50,8.73 4.94,5.63 9.42,5.63 C13.55,5.63 16.30,8.04 16.30,11.14 C16.30,15.61 12.17,18.71 7.70,18.71 C3.91,18.71 1.50,16.30 1.50,12.86 Z M11.83,8.04 C13.20,8.04 14.58,9.42 14.58,10.97 C14.58,12.52 13.20,13.89 11.83,13.89 C10.11,13.89 9.07,12.52 9.07,10.97 C9.07,9.42 10.11,8.04 11.83,8.04 Z" />
+
+    <!-- Pico de aguja -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M15.27,8.73 L22.50,11.48 L15.27,10.97 Z" />
+
 </vector>

@@ -16,6 +16,7 @@
         {
           "id": "a2_u1_l1",
           "title": "Pasado simple regular",
+          "grammarTopicId": "g_past_simple",
           "vocab": [
             { "en": "worked", "es": "trabajé/trabajó" },
             { "en": "played", "es": "jugué/jugó" },
@@ -105,6 +106,7 @@
         {
           "id": "a2_u1_l2",
           "title": "Verbos irregulares",
+          "grammarTopicId": "g_past_simple",
           "vocab": [
             { "en": "went", "es": "fui/fue (go)" },
             { "en": "had", "es": "tuve/tuvo (have)" },
@@ -158,6 +160,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "thought",
+              "hint": "¿Qué significa?",
               "options": ["pensé", "compré", "traje", "enseñé"],
               "answer": "pensé"
             },
@@ -202,6 +205,7 @@
         {
           "id": "a2_u1_l3",
           "title": "Preguntas en pasado",
+          "grammarTopicId": "g_past_simple",
           "vocab": [
             { "en": "did you go?", "es": "¿fuiste?" },
             { "en": "what did you do?", "es": "¿qué hiciste?" },
@@ -287,6 +291,103 @@
               "alternatives": ["No lo sabía"]
             }
           ]
+        },
+        {
+          "id": "a2_u1_l4",
+          "title": "Pasado continuo",
+          "grammarTopicId": "g_past_simple",
+          "vocab": [
+            { "en": "I was working", "es": "estaba trabajando" },
+            { "en": "they were sleeping", "es": "estaban durmiendo" },
+            { "en": "while", "es": "mientras" },
+            { "en": "when", "es": "cuando" },
+            { "en": "suddenly", "es": "de repente" },
+            { "en": "to rain", "es": "llover" },
+            { "en": "to happen", "es": "pasar, ocurrir" },
+            { "en": "to call", "es": "llamar" },
+            { "en": "at that moment", "es": "en ese momento" },
+            { "en": "last night", "es": "anoche" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "La escena y el suceso",
+              "body": "El pasado continuo pinta el fondo y el pasado simple cuenta lo que ocurrió encima: I was cooking when the phone rang. La acción larga va con was/were + -ing; la corta que la interrumpe va en pasado simple. Cambiarlos de sitio cambia la película entera.",
+              "examples": [
+                { "en": "I was cooking when she arrived.", "es": "Estaba cocinando cuando ella llegó." },
+                { "en": "It was raining all night.", "es": "Estuvo lloviendo toda la noche." },
+                { "en": "What were you doing at eight?", "es": "¿Qué estabas haciendo a las ocho?" }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ watching TV when you called.",
+              "answer": "was",
+              "options": ["was", "were", "am", "did"],
+              "translation": "Estaba viendo la tele cuando llamaste."
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "They ___ working when the lights went out.",
+              "answer": "were",
+              "options": ["were", "was", "are", "did"],
+              "translation": "Estaban trabajando cuando se fue la luz."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál cuenta bien «estaba lloviendo cuando salí»?",
+              "hint": "La acción larga va en continuo",
+              "options": [
+                "It was raining when I left",
+                "It rained when I was leaving",
+                "It was rain when I left",
+                "It is raining when I left"
+              ],
+              "answer": "It was raining when I left"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Ella estaba estudiando anoche",
+              "words": ["She", "was", "studying", "last", "night"],
+              "answer": "She was studying last night"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las palabras",
+              "pairs": [
+                ["while", "mientras"],
+                ["suddenly", "de repente"],
+                ["to happen", "pasar"],
+                ["last night", "anoche"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Qué estabas haciendo?",
+              "answer": "What were you doing?",
+              "alternatives": ["What were you doing"]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We were waiting outside",
+              "answer": "We were waiting outside",
+              "translation": "Estábamos esperando afuera"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I was sleeping when the alarm rang.",
+              "translation": "Estaba durmiendo cuando sonó la alarma."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Estaba lloviendo de repente",
+              "answer": "It was raining suddenly",
+              "alternatives": ["Suddenly it was raining"]
+            }
+          ]
         }
       ]
     },
@@ -300,6 +401,7 @@
         {
           "id": "a2_u2_l1",
           "title": "Futuro con going to",
+          "grammarTopicId": "g_future",
           "vocab": [
             { "en": "I am going to", "es": "voy a" },
             { "en": "tomorrow", "es": "mañana" },
@@ -341,6 +443,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Va a llover",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["It's going to rain", "It's going to raining", "It goes to rain", "It will going to rain"],
               "answer": "It's going to rain"
             },
@@ -376,7 +479,7 @@
             {
               "type": "speak_and_repeat",
               "prompt": "Next year I'm going to learn to drive.",
-              "translation": "El año que viene voy a aprender a conducir."
+              "translation": "El año que viene voy a aprender a manejar."
             },
             {
               "type": "translate",
@@ -390,6 +493,7 @@
         {
           "id": "a2_u2_l2",
           "title": "Comparativos",
+          "grammarTopicId": "g_comparatives",
           "vocab": [
             { "en": "bigger", "es": "más grande" },
             { "en": "smaller", "es": "más pequeño" },
@@ -431,6 +535,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Este restaurante es mejor",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["This restaurant is better", "This restaurant is gooder", "This restaurant is more good", "This restaurant is best"],
               "answer": "This restaurant is better"
             },
@@ -479,6 +584,7 @@
         {
           "id": "a2_u2_l3",
           "title": "Superlativos",
+          "grammarTopicId": "g_comparatives",
           "vocab": [
             { "en": "the biggest", "es": "el más grande" },
             { "en": "the best", "es": "el mejor" },
@@ -518,6 +624,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Es la película más interesante",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "It's the most interesting film",
                 "It's the interestingest film",
@@ -566,6 +673,204 @@
               "answer": "Él es el mayor de los tres"
             }
           ]
+        },
+        {
+          "id": "a2_u2_l4",
+          "title": "Futuro con will",
+          "grammarTopicId": "g_future",
+          "vocab": [
+            { "en": "I will help", "es": "yo ayudaré" },
+            { "en": "won't", "es": "no (futuro)", "note": "Es la contracción de will not" },
+            { "en": "maybe", "es": "quizá" },
+            { "en": "probably", "es": "probablemente" },
+            { "en": "I think", "es": "creo que" },
+            { "en": "to promise", "es": "prometer" },
+            { "en": "to decide", "es": "decidir" },
+            { "en": "tomorrow", "es": "mañana" },
+            { "en": "next week", "es": "la próxima semana" },
+            { "en": "soon", "es": "pronto" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Will es lo que decides ahora mismo",
+              "body": "Going to es para lo que ya estaba planeado: I'm going to visit my aunt (ya lo tenía pensado). Will es para lo que decides en el momento de hablar, para promesas y para predicciones: the bag is heavy — I'll help you. Nadie planea ayudarte antes de ver la bolsa.",
+              "examples": [
+                { "en": "I'll call you tomorrow.", "es": "Te llamo mañana." },
+                { "en": "It will probably rain.", "es": "Probablemente lloverá." },
+                { "en": "I won't tell anyone.", "es": "No se lo diré a nadie." }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "That box looks heavy. I ___ help you.",
+              "answer": "will",
+              "options": ["will", "am going to", "was", "would"],
+              "translation": "Esa caja se ve pesada. Te ayudo."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál usarías para un plan que ya tenías?",
+              "hint": "Lo decidiste hace días",
+              "options": [
+                "I'm going to study medicine",
+                "I will study medicine",
+                "I study medicine tomorrow",
+                "I will studying medicine"
+              ],
+              "answer": "I'm going to study medicine"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Don't worry, I ___ forget.",
+              "answer": "won't",
+              "options": ["won't", "will", "don't", "am not"],
+              "translation": "No te preocupes, no se me olvidará."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Tras will va el verbo desnudo",
+              "options": [
+                "She will come later",
+                "She will comes later",
+                "She will to come later",
+                "She will coming later"
+              ],
+              "answer": "She will come later"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Te llamaré la próxima semana",
+              "words": ["I", "will", "call", "you", "next", "week"],
+              "answer": "I will call you next week"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Creo que lloverá mañana",
+              "answer": "I think it will rain tomorrow"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "We will be there soon",
+              "answer": "We will be there soon",
+              "translation": "Llegaremos pronto"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I promise I won't be late again.",
+              "translation": "Prometo que no volveré a llegar tarde."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones",
+              "pairs": [
+                ["maybe", "quizá"],
+                ["probably", "probablemente"],
+                ["soon", "pronto"],
+                ["tomorrow", "mañana"]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a2_u2_l5",
+          "title": "Dar consejos con should",
+          "vocab": [
+            { "en": "should", "es": "deberías" },
+            { "en": "shouldn't", "es": "no deberías" },
+            { "en": "You should rest", "es": "Deberías descansar" },
+            { "en": "to try", "es": "intentar, probar" },
+            { "en": "to worry", "es": "preocuparse" },
+            { "en": "advice", "es": "consejo", "note": "Incontable: no existe 'advices'" },
+            { "en": "a good idea", "es": "una buena idea" },
+            { "en": "instead", "es": "en vez de eso" },
+            { "en": "What should I do?", "es": "¿Qué debería hacer?" },
+            { "en": "It's up to you", "es": "Tú decides" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Should no lleva to ni cambia nunca",
+              "body": "Should se pega directo al verbo: you should rest, nunca 'you should to rest'. Y no cambia con he o she: she should rest, sin -s. Para la pregunta se pone delante: should I call her? Es más suave que must, que suena a obligación y a orden.",
+              "examples": [
+                { "en": "You should see a doctor.", "es": "Deberías ver a un médico." },
+                { "en": "You shouldn't work so much.", "es": "No deberías trabajar tanto." },
+                { "en": "Should I call her?", "es": "¿Debería llamarla?" }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "You look tired. You ___ rest.",
+              "answer": "should",
+              "options": ["should", "should to", "shoulds", "are should"],
+              "translation": "Te ves cansado. Deberías descansar."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Should nunca lleva -s",
+              "options": [
+                "She should study more",
+                "She shoulds study more",
+                "She should studies more",
+                "She should to study more"
+              ],
+              "answer": "She should study more"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "You ___ drink coffee at night.",
+              "answer": "shouldn't",
+              "options": ["shouldn't", "don't should", "not should", "aren't should"],
+              "translation": "No deberías tomar café en la noche."
+            },
+            {
+              "type": "word_order",
+              "prompt": "¿Qué debería hacer?",
+              "words": ["What", "should", "I", "do"],
+              "answer": "What should I do"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las expresiones",
+              "pairs": [
+                ["advice", "consejo"],
+                ["to worry", "preocuparse"],
+                ["to try", "intentar"],
+                ["instead", "en vez de eso"]
+              ]
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Deberías intentarlo",
+              "answer": "You should try it"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "You should talk to her",
+              "answer": "You should talk to her",
+              "translation": "Deberías hablar con ella"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I think you should take the job.",
+              "translation": "Creo que deberías aceptar el trabajo."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es un consejo y no una orden?",
+              "hint": "Una suena a obligación",
+              "options": ["You should call him", "You must call him", "Call him now", "You have to call him"],
+              "answer": "You should call him"
+            }
+          ]
         }
       ]
     },
@@ -579,6 +884,7 @@
         {
           "id": "a2_u3_l1",
           "title": "Preposiciones de lugar",
+          "grammarTopicId": "g_prepositions_time",
           "vocab": [
             { "en": "in", "es": "en (dentro)" },
             { "en": "on", "es": "sobre, encima" },
@@ -620,6 +926,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "between",
+              "hint": "¿Qué significa?",
               "options": ["entre (dos)", "detrás", "delante", "cerca"],
               "answer": "entre (dos)"
             },
@@ -654,7 +961,7 @@
             {
               "type": "speak_and_repeat",
               "prompt": "The car is parked behind the building.",
-              "translation": "El coche está aparcado detrás del edificio."
+              "translation": "El coche está estacionado detrás del edificio."
             },
             {
               "type": "translate",
@@ -770,7 +1077,7 @@
             { "en": "discount", "es": "descuento" },
             { "en": "shirt", "es": "camisa" },
             { "en": "shoes", "es": "zapatos" },
-            { "en": "jacket", "es": "chaqueta" }
+            { "en": "jacket", "es": "chamarra" }
           ],
           "exercises": [
             {
@@ -835,13 +1142,14 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Me gustaría pagar en efectivo",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["I'd like to pay in cash", "I like pay cash", "I want pay in cash", "I'd like pay cash"],
               "answer": "I'd like to pay in cash"
             },
             {
               "type": "culture_note",
               "title": "La propina no es opcional",
-              "body": "En Estados Unidos la propina es parte del sueldo del camarero, no un extra por buen servicio. Lo normal es entre el 15% y el 20% en restaurantes, y también se deja en taxis y peluquerías. En el Reino Unido es más relajado: un 10% en restaurantes está bien y en pubs, si pides en la barra, no se deja nada."
+              "body": "En Estados Unidos la propina es parte del sueldo del mesero, no un extra por buen servicio. Lo normal es entre el 15% y el 20% en restaurantes, y también se deja en taxis y peluquerías. En el Reino Unido es más relajado: un 10% en restaurantes está bien y en pubs, si pides en la barra, no se deja nada."
             }
           ]
         },
@@ -867,7 +1175,7 @@
               "title": "Los modales no llevan 'to' ni 's'",
               "body": "Can, must, should y compañía son verbos modales: van seguidos del infinitivo SIN 'to' y nunca añaden -s en tercera persona. 'She can swim' (no 'She can to swim', ni 'She cans'). Para el negativo basta con añadir 'not': can't, mustn't, shouldn't.",
               "examples": [
-                { "en": "He can drive.", "es": "Él sabe conducir." },
+                { "en": "He can drive.", "es": "Él sabe manejar." },
                 { "en": "You must wear a helmet.", "es": "Debes llevar casco." },
                 { "en": "You should rest.", "es": "Deberías descansar." }
               ]
@@ -884,12 +1192,13 @@
               "sentence": "It's ___ today, take an umbrella.",
               "answer": "rainy",
               "options": ["rainy", "sunny", "windy", "snowy"],
-              "translation": "Hoy está lluvioso, coge un paraguas."
+              "translation": "Hoy está lluvioso, lleva un paraguas."
             },
             {
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Debes llegar a tiempo",
+              "hint": "¿Cómo se dice en inglés?",
               "options": ["You must arrive on time", "You must to arrive on time", "You musts arrive on time", "You have must arrive on time"],
               "answer": "You must arrive on time"
             },
@@ -924,13 +1233,303 @@
             {
               "type": "speak_and_repeat",
               "prompt": "You should take a jacket, it's cold outside.",
-              "translation": "Deberías coger una chaqueta, hace frío fuera."
+              "translation": "Deberías llevar una chamarra, hace frío afuera."
             },
             {
               "type": "translate",
               "direction": "en_es",
               "prompt": "It's going to snow tomorrow",
               "answer": "Va a nevar mañana"
+            }
+          ]
+        },
+        {
+          "id": "a2_u3_l5",
+          "title": "En el restaurante",
+          "vocab": [
+            { "en": "the menu", "es": "el menú" },
+            { "en": "the bill", "es": "la cuenta", "note": "En EE. UU. se dice 'the check'" },
+            { "en": "a table for two", "es": "una mesa para dos" },
+            { "en": "to order", "es": "ordenar, pedir" },
+            { "en": "starter", "es": "entrada" },
+            { "en": "main course", "es": "plato fuerte" },
+            { "en": "dessert", "es": "postre" },
+            { "en": "I'd like", "es": "quisiera" },
+            { "en": "Anything to drink?", "es": "¿Algo de tomar?" },
+            { "en": "That's all", "es": "Eso es todo" },
+            { "en": "tip", "es": "propina" },
+            { "en": "spicy", "es": "picante" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "I'd like, no I want",
+              "body": "Pedir con I want suena brusco, casi a exigencia. Lo normal es I'd like (contracción de I would like) o Could I have. Al final, cuando quieras pagar, no pidas 'the account': se dice the bill en el Reino Unido y the check en Estados Unidos.",
+              "examples": [
+                { "en": "I'd like the chicken, please.", "es": "Quisiera el pollo, por favor." },
+                { "en": "Could I have the bill?", "es": "¿Me trae la cuenta?" },
+                { "en": "A table for two, please.", "es": "Una mesa para dos, por favor." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál suena mejor al pedir?",
+              "hint": "Una suena a exigencia",
+              "options": [
+                "I'd like a coffee, please",
+                "I want a coffee",
+                "Give me a coffee",
+                "I need coffee now"
+              ],
+              "answer": "I'd like a coffee, please"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "Could we have the ___, please?",
+              "answer": "bill",
+              "options": ["bill", "account", "money", "paper"],
+              "translation": "¿Nos trae la cuenta, por favor?"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las partes de la comida",
+              "pairs": [
+                ["starter", "entrada"],
+                ["main course", "plato fuerte"],
+                ["dessert", "postre"],
+                ["the bill", "la cuenta"]
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "en_es",
+              "prompt": "Anything to drink?",
+              "hint": "Lo pregunta el mesero",
+              "options": ["¿Algo de tomar?", "¿Todo bien?", "¿Algo más de comer?", "¿Pagan juntos?"],
+              "answer": "¿Algo de tomar?"
+            },
+            {
+              "type": "word_order",
+              "prompt": "Una mesa para dos, por favor",
+              "words": ["A", "table", "for", "two,", "please"],
+              "answer": "A table for two, please"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "¿Es picante?",
+              "answer": "Is it spicy?",
+              "alternatives": ["Is it spicy"]
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I'd like the fish, please",
+              "answer": "I'd like the fish, please",
+              "translation": "Quisiera el pescado, por favor"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Excuse me, could I have the menu?",
+              "translation": "Disculpe, ¿me trae el menú?"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Eso es todo, gracias",
+              "answer": "That's all, thank you",
+              "alternatives": ["That's all, thanks"]
+            }
+          ]
+        },
+        {
+          "id": "a2_u3_l6",
+          "title": "Cuánto y cuántos",
+          "vocab": [
+            { "en": "some", "es": "algo de, algunos" },
+            { "en": "any", "es": "algo, nada (en preguntas y negativas)" },
+            { "en": "much", "es": "mucho (incontable)" },
+            { "en": "many", "es": "muchos (contable)" },
+            { "en": "a lot of", "es": "mucho, muchos" },
+            { "en": "a little", "es": "un poco" },
+            { "en": "a few", "es": "unos pocos" },
+            { "en": "money", "es": "dinero", "note": "Incontable: nunca 'moneys'" },
+            { "en": "water", "es": "agua" },
+            { "en": "sugar", "es": "azúcar" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "¿Se puede contar?",
+              "body": "Si puedes contarlo, va many o a few: many friends, a few days. Si no —agua, dinero, tiempo, azúcar—, va much o a little. Y otra pareja: some se usa al afirmar y any en preguntas y negaciones. I have some money / Do you have any money? La excepción amable: some en preguntas cuando ofreces algo (would you like some coffee?).",
+              "examples": [
+                { "en": "I don't have much time.", "es": "No tengo mucho tiempo." },
+                { "en": "There are many people here.", "es": "Hay mucha gente aquí." },
+                { "en": "Do you have any questions?", "es": "¿Tienes alguna pregunta?" }
+              ]
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "How ___ money do you have?",
+              "answer": "much",
+              "options": ["much", "many", "few", "lot"],
+              "translation": "¿Cuánto dinero tienes?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "How ___ brothers do you have?",
+              "answer": "many",
+              "options": ["many", "much", "little", "lot"],
+              "translation": "¿Cuántos hermanos tienes?"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I don't have ___ sugar left.",
+              "answer": "any",
+              "options": ["any", "some", "many", "few"],
+              "translation": "No me queda nada de azúcar."
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál es correcta?",
+              "hint": "Water no se cuenta",
+              "options": ["a little water", "a few water", "many water", "few waters"],
+              "answer": "a little water"
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las cantidades",
+              "pairs": [
+                ["a little", "un poco"],
+                ["a few", "unos pocos"],
+                ["a lot of", "mucho"],
+                ["any", "nada, alguno"]
+              ]
+            },
+            {
+              "type": "word_order",
+              "prompt": "Hay algunas sillas aquí",
+              "words": ["There", "are", "some", "chairs", "here"],
+              "answer": "There are some chairs here"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "No tengo mucho tiempo",
+              "answer": "I don't have much time"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "I need a few days",
+              "answer": "I need a few days",
+              "translation": "Necesito unos pocos días"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "Would you like some coffee?",
+              "translation": "¿Quieres un poco de café?"
+            }
+          ]
+        },
+        {
+          "id": "a2_u3_l7",
+          "title": "Con qué frecuencia",
+          "grammarTopicId": "g_present_simple",
+          "vocab": [
+            { "en": "always", "es": "siempre" },
+            { "en": "usually", "es": "normalmente" },
+            { "en": "often", "es": "a menudo" },
+            { "en": "sometimes", "es": "a veces" },
+            { "en": "hardly ever", "es": "casi nunca" },
+            { "en": "never", "es": "nunca" },
+            { "en": "once a week", "es": "una vez por semana" },
+            { "en": "twice a month", "es": "dos veces al mes" },
+            { "en": "every day", "es": "todos los días" },
+            { "en": "How often...?", "es": "¿Cada cuánto...?" }
+          ],
+          "exercises": [
+            {
+              "type": "tip",
+              "title": "Van antes del verbo, pero después de to be",
+              "body": "Los adverbios de frecuencia tienen sitio fijo: delante del verbo normal (I always drink coffee) y detrás de to be (I am always tired). En español los movemos con libertad; en inglés, ponerlos al final suena mal. Y never ya es negativo: 'I don't never go' es doble negación.",
+              "examples": [
+                { "en": "She usually walks to work.", "es": "Normalmente va caminando al trabajo." },
+                { "en": "He is never late.", "es": "Él nunca llega tarde." },
+                { "en": "I go to the gym twice a week.", "es": "Voy al gimnasio dos veces por semana." }
+              ]
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál está bien colocada?",
+              "hint": "Va antes del verbo",
+              "options": [
+                "I always eat breakfast",
+                "I eat always breakfast",
+                "Always I eat breakfast",
+                "I eat breakfast always"
+              ],
+              "answer": "I always eat breakfast"
+            },
+            {
+              "type": "multiple_choice",
+              "direction": "es_en",
+              "prompt": "¿Cuál está bien con el verbo to be?",
+              "hint": "Con to be el orden se invierte",
+              "options": [
+                "She is always happy",
+                "She always is happy",
+                "Always she is happy",
+                "She is happy always"
+              ],
+              "answer": "She is always happy"
+            },
+            {
+              "type": "fill_in_blank",
+              "sentence": "I ___ eat meat. I'm vegetarian.",
+              "answer": "never",
+              "options": ["never", "always", "usually", "often"],
+              "translation": "Nunca como carne. Soy vegetariano."
+            },
+            {
+              "type": "matching_pairs",
+              "prompt": "Une las frecuencias",
+              "pairs": [
+                ["always", "siempre"],
+                ["usually", "normalmente"],
+                ["sometimes", "a veces"],
+                ["never", "nunca"]
+              ]
+            },
+            {
+              "type": "word_order",
+              "prompt": "¿Cada cuánto vas al cine?",
+              "words": ["How", "often", "do", "you", "go", "to", "the", "movies"],
+              "answer": "How often do you go to the movies"
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Casi nunca veo la tele",
+              "answer": "I hardly ever watch TV"
+            },
+            {
+              "type": "listen_and_type",
+              "audioText": "She usually works from home",
+              "answer": "She usually works from home",
+              "translation": "Normalmente trabaja desde casa"
+            },
+            {
+              "type": "speak_and_repeat",
+              "prompt": "I go to the gym twice a week.",
+              "translation": "Voy al gimnasio dos veces por semana."
+            },
+            {
+              "type": "translate",
+              "direction": "es_en",
+              "prompt": "Él nunca llega tarde",
+              "answer": "He is never late"
             }
           ]
         }

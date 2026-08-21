@@ -143,7 +143,7 @@
             { "en": "about", "es": "sobre", "ipa": "/əˈbaʊt/" },
             { "en": "problem", "es": "problema", "ipa": "/ˈprɑːbləm/" },
             { "en": "banana", "es": "plátano", "ipa": "/bəˈnænə/" },
-            { "en": "computer", "es": "ordenador", "ipa": "/kəmˈpjuːtər/" },
+            { "en": "computer", "es": "computadora", "ipa": "/kəmˈpjuːtər/" },
             { "en": "photograph", "es": "fotografía", "ipa": "/ˈfoʊtəɡræf/" },
             { "en": "photography", "es": "fotografía (arte)", "ipa": "/fəˈtɑːɡrəfi/" },
             { "en": "comfortable", "es": "cómodo", "ipa": "/ˈkʌmftəbl/" },
@@ -164,7 +164,7 @@
             },
             { "type": "speak_and_repeat", "prompt": "It's a comfortable chocolate vegetable", "translation": "Es una verdura de chocolate cómoda (trabalenguas de práctica)" },
             { "type": "speak_and_repeat", "prompt": "That's an interesting problem", "translation": "Es un problema interesante" },
-            { "type": "speak_and_repeat", "prompt": "I bought a new computer about a week ago", "translation": "Compré un ordenador nuevo hace como una semana" },
+            { "type": "speak_and_repeat", "prompt": "I bought a new computer about a week ago", "translation": "Compré un computadora nuevo hace como una semana" },
             {
               "type": "multiple_choice",
               "direction": "es_en",
@@ -186,7 +186,7 @@
                 ["comfortable", "cómodo"],
                 ["vegetable", "verdura"],
                 ["interesting", "interesante"],
-                ["computer", "ordenador"]
+                ["computer", "computadora"]
               ]
             },
             { "type": "listen_and_type", "audioText": "This chair is very comfortable", "answer": "This chair is very comfortable", "translation": "Esta silla es muy cómoda" },

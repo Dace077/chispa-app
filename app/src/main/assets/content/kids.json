@@ -1,0 +1,1667 @@
+{
+  "version": 1,
+  "worlds": [
+    {
+      "id": "kids_letters",
+      "titleEs": "Letras",
+      "emoji": "🔤",
+      "color": "#5B3FD1",
+      "items": [
+        {
+          "id": "k_letter_a",
+          "en": "A",
+          "es": "A de apple",
+          "kind": "letter",
+          "art": "A",
+          "say": "A. apple."
+        },
+        {
+          "id": "k_letter_b",
+          "en": "B",
+          "es": "B de ball",
+          "kind": "letter",
+          "art": "B",
+          "say": "B. ball."
+        },
+        {
+          "id": "k_letter_c",
+          "en": "C",
+          "es": "C de cat",
+          "kind": "letter",
+          "art": "C",
+          "say": "C. cat."
+        },
+        {
+          "id": "k_letter_d",
+          "en": "D",
+          "es": "D de dog",
+          "kind": "letter",
+          "art": "D",
+          "say": "D. dog."
+        },
+        {
+          "id": "k_letter_e",
+          "en": "E",
+          "es": "E de elephant",
+          "kind": "letter",
+          "art": "E",
+          "say": "E. elephant."
+        },
+        {
+          "id": "k_letter_f",
+          "en": "F",
+          "es": "F de fish",
+          "kind": "letter",
+          "art": "F",
+          "say": "F. fish."
+        },
+        {
+          "id": "k_letter_g",
+          "en": "G",
+          "es": "G de goat",
+          "kind": "letter",
+          "art": "G",
+          "say": "G. goat."
+        },
+        {
+          "id": "k_letter_h",
+          "en": "H",
+          "es": "H de hat",
+          "kind": "letter",
+          "art": "H",
+          "say": "H. hat."
+        },
+        {
+          "id": "k_letter_i",
+          "en": "I",
+          "es": "I de ice cream",
+          "kind": "letter",
+          "art": "I",
+          "say": "I. ice cream."
+        },
+        {
+          "id": "k_letter_j",
+          "en": "J",
+          "es": "J de juice",
+          "kind": "letter",
+          "art": "J",
+          "say": "J. juice."
+        },
+        {
+          "id": "k_letter_k",
+          "en": "K",
+          "es": "K de kite",
+          "kind": "letter",
+          "art": "K",
+          "say": "K. kite."
+        },
+        {
+          "id": "k_letter_l",
+          "en": "L",
+          "es": "L de lion",
+          "kind": "letter",
+          "art": "L",
+          "say": "L. lion."
+        },
+        {
+          "id": "k_letter_m",
+          "en": "M",
+          "es": "M de moon",
+          "kind": "letter",
+          "art": "M",
+          "say": "M. moon."
+        },
+        {
+          "id": "k_letter_n",
+          "en": "N",
+          "es": "N de nose",
+          "kind": "letter",
+          "art": "N",
+          "say": "N. nose."
+        },
+        {
+          "id": "k_letter_o",
+          "en": "O",
+          "es": "O de orange",
+          "kind": "letter",
+          "art": "O",
+          "say": "O. orange."
+        },
+        {
+          "id": "k_letter_p",
+          "en": "P",
+          "es": "P de pig",
+          "kind": "letter",
+          "art": "P",
+          "say": "P. pig."
+        },
+        {
+          "id": "k_letter_q",
+          "en": "Q",
+          "es": "Q de queen",
+          "kind": "letter",
+          "art": "Q",
+          "say": "Q. queen."
+        },
+        {
+          "id": "k_letter_r",
+          "en": "R",
+          "es": "R de rain",
+          "kind": "letter",
+          "art": "R",
+          "say": "R. rain."
+        },
+        {
+          "id": "k_letter_s",
+          "en": "S",
+          "es": "S de sun",
+          "kind": "letter",
+          "art": "S",
+          "say": "S. sun."
+        },
+        {
+          "id": "k_letter_t",
+          "en": "T",
+          "es": "T de tree",
+          "kind": "letter",
+          "art": "T",
+          "say": "T. tree."
+        },
+        {
+          "id": "k_letter_u",
+          "en": "U",
+          "es": "U de umbrella",
+          "kind": "letter",
+          "art": "U",
+          "say": "U. umbrella."
+        },
+        {
+          "id": "k_letter_v",
+          "en": "V",
+          "es": "V de van",
+          "kind": "letter",
+          "art": "V",
+          "say": "V. van."
+        },
+        {
+          "id": "k_letter_w",
+          "en": "W",
+          "es": "W de water",
+          "kind": "letter",
+          "art": "W",
+          "say": "W. water."
+        },
+        {
+          "id": "k_letter_x",
+          "en": "X",
+          "es": "X de box",
+          "kind": "letter",
+          "art": "X",
+          "say": "X. box."
+        },
+        {
+          "id": "k_letter_y",
+          "en": "Y",
+          "es": "Y de yellow",
+          "kind": "letter",
+          "art": "Y",
+          "say": "Y. yellow."
+        },
+        {
+          "id": "k_letter_z",
+          "en": "Z",
+          "es": "Z de zebra",
+          "kind": "letter",
+          "art": "Z",
+          "say": "Z. zebra."
+        }
+      ]
+    },
+    {
+      "id": "kids_animals",
+      "titleEs": "Animales",
+      "emoji": "🐾",
+      "color": "#7C5CE6",
+      "items": [
+        {
+          "id": "k_cat",
+          "en": "cat",
+          "es": "gato",
+          "kind": "animal",
+          "art": "michi"
+        },
+        {
+          "id": "k_pig",
+          "en": "pig",
+          "es": "cerdito",
+          "kind": "animal",
+          "art": "trufa"
+        },
+        {
+          "id": "k_sheep",
+          "en": "sheep",
+          "es": "borrego",
+          "kind": "animal",
+          "art": "nube"
+        },
+        {
+          "id": "k_llama",
+          "en": "llama",
+          "es": "llama",
+          "kind": "animal",
+          "art": "brasa"
+        },
+        {
+          "id": "k_bird",
+          "en": "bird",
+          "es": "pajarito",
+          "kind": "animal",
+          "art": "chispa"
+        },
+        {
+          "id": "k_hawk",
+          "en": "hawk",
+          "es": "halcón",
+          "kind": "animal",
+          "art": "flecha"
+        },
+        {
+          "id": "k_axolotl",
+          "en": "axolotl",
+          "es": "ajolote",
+          "kind": "animal",
+          "art": "xolotl"
+        },
+        {
+          "id": "k_dog",
+          "en": "dog",
+          "es": "perro",
+          "kind": "critter",
+          "art": "dog"
+        },
+        {
+          "id": "k_cow",
+          "en": "cow",
+          "es": "vaca",
+          "kind": "critter",
+          "art": "cow"
+        },
+        {
+          "id": "k_duck",
+          "en": "duck",
+          "es": "pato",
+          "kind": "critter",
+          "art": "duck"
+        },
+        {
+          "id": "k_horse",
+          "en": "horse",
+          "es": "caballo",
+          "kind": "critter",
+          "art": "horse"
+        },
+        {
+          "id": "k_frog",
+          "en": "frog",
+          "es": "rana",
+          "kind": "critter",
+          "art": "frog"
+        },
+        {
+          "id": "k_fish",
+          "en": "fish",
+          "es": "pez",
+          "kind": "critter",
+          "art": "fish"
+        },
+        {
+          "id": "k_bee",
+          "en": "bee",
+          "es": "abeja",
+          "kind": "critter",
+          "art": "bee"
+        },
+        {
+          "id": "k_elephant",
+          "en": "elephant",
+          "es": "elefante",
+          "kind": "critter",
+          "art": "elephant"
+        },
+        {
+          "id": "k_lion",
+          "en": "lion",
+          "es": "león",
+          "kind": "emoji",
+          "art": "🦁"
+        },
+        {
+          "id": "k_tiger",
+          "en": "tiger",
+          "es": "tigre",
+          "kind": "emoji",
+          "art": "🐯"
+        },
+        {
+          "id": "k_bear",
+          "en": "bear",
+          "es": "oso",
+          "kind": "emoji",
+          "art": "🐻"
+        },
+        {
+          "id": "k_monkey",
+          "en": "monkey",
+          "es": "changuito",
+          "kind": "emoji",
+          "art": "🐵"
+        },
+        {
+          "id": "k_rabbit",
+          "en": "rabbit",
+          "es": "conejo",
+          "kind": "emoji",
+          "art": "🐰"
+        },
+        {
+          "id": "k_mouse",
+          "en": "mouse",
+          "es": "ratón",
+          "kind": "emoji",
+          "art": "🐭"
+        },
+        {
+          "id": "k_chicken",
+          "en": "chicken",
+          "es": "gallina",
+          "kind": "emoji",
+          "art": "🐔"
+        },
+        {
+          "id": "k_penguin",
+          "en": "penguin",
+          "es": "pingüino",
+          "kind": "emoji",
+          "art": "🐧"
+        },
+        {
+          "id": "k_owl",
+          "en": "owl",
+          "es": "búho",
+          "kind": "emoji",
+          "art": "🦉"
+        },
+        {
+          "id": "k_turtle",
+          "en": "turtle",
+          "es": "tortuga",
+          "kind": "emoji",
+          "art": "🐢"
+        },
+        {
+          "id": "k_snake",
+          "en": "snake",
+          "es": "víbora",
+          "kind": "emoji",
+          "art": "🐍"
+        },
+        {
+          "id": "k_whale",
+          "en": "whale",
+          "es": "ballena",
+          "kind": "emoji",
+          "art": "🐳"
+        },
+        {
+          "id": "k_dolphin",
+          "en": "dolphin",
+          "es": "delfín",
+          "kind": "emoji",
+          "art": "🐬"
+        },
+        {
+          "id": "k_octopus",
+          "en": "octopus",
+          "es": "pulpo",
+          "kind": "emoji",
+          "art": "🐙"
+        },
+        {
+          "id": "k_crab",
+          "en": "crab",
+          "es": "cangrejo",
+          "kind": "emoji",
+          "art": "🦀"
+        },
+        {
+          "id": "k_butterfly",
+          "en": "butterfly",
+          "es": "mariposa",
+          "kind": "emoji",
+          "art": "🦋"
+        },
+        {
+          "id": "k_spider",
+          "en": "spider",
+          "es": "araña",
+          "kind": "emoji",
+          "art": "🕷️"
+        },
+        {
+          "id": "k_ant",
+          "en": "ant",
+          "es": "hormiga",
+          "kind": "emoji",
+          "art": "🐜"
+        },
+        {
+          "id": "k_camel",
+          "en": "camel",
+          "es": "camello",
+          "kind": "emoji",
+          "art": "🐫"
+        },
+        {
+          "id": "k_giraffe",
+          "en": "giraffe",
+          "es": "jirafa",
+          "kind": "emoji",
+          "art": "🦒"
+        },
+        {
+          "id": "k_zebra",
+          "en": "zebra",
+          "es": "cebra",
+          "kind": "emoji",
+          "art": "🦓"
+        },
+        {
+          "id": "k_deer",
+          "en": "deer",
+          "es": "venado",
+          "kind": "emoji",
+          "art": "🦌"
+        },
+        {
+          "id": "k_wolf",
+          "en": "wolf",
+          "es": "lobo",
+          "kind": "emoji",
+          "art": "🐺"
+        },
+        {
+          "id": "k_frog2",
+          "en": "frog",
+          "es": "sapo",
+          "kind": "emoji",
+          "art": "🐸"
+        },
+        {
+          "id": "k_goat",
+          "en": "goat",
+          "es": "chivo",
+          "kind": "emoji",
+          "art": "🐐"
+        }
+      ]
+    },
+    {
+      "id": "kids_colors",
+      "titleEs": "Colores",
+      "emoji": "🎨",
+      "color": "#E8632F",
+      "items": [
+        {
+          "id": "k_red",
+          "en": "red",
+          "es": "rojo",
+          "kind": "color",
+          "art": "#E5322D"
+        },
+        {
+          "id": "k_blue",
+          "en": "blue",
+          "es": "azul",
+          "kind": "color",
+          "art": "#2D6BE5"
+        },
+        {
+          "id": "k_yellow",
+          "en": "yellow",
+          "es": "amarillo",
+          "kind": "color",
+          "art": "#F5C518"
+        },
+        {
+          "id": "k_green",
+          "en": "green",
+          "es": "verde",
+          "kind": "color",
+          "art": "#3AA84C"
+        },
+        {
+          "id": "k_orange",
+          "en": "orange",
+          "es": "naranja",
+          "kind": "color",
+          "art": "#F07C1E"
+        },
+        {
+          "id": "k_purple",
+          "en": "purple",
+          "es": "morado",
+          "kind": "color",
+          "art": "#8B3FD1"
+        },
+        {
+          "id": "k_pink",
+          "en": "pink",
+          "es": "rosa",
+          "kind": "color",
+          "art": "#EE6FA8"
+        },
+        {
+          "id": "k_black",
+          "en": "black",
+          "es": "negro",
+          "kind": "color",
+          "art": "#2B2B33"
+        },
+        {
+          "id": "k_brown",
+          "en": "brown",
+          "es": "café",
+          "kind": "color",
+          "art": "#8B5A2B"
+        },
+        {
+          "id": "k_white",
+          "en": "white",
+          "es": "blanco",
+          "kind": "color",
+          "art": "#F5F5F0"
+        },
+        {
+          "id": "k_gray",
+          "en": "gray",
+          "es": "gris",
+          "kind": "color",
+          "art": "#9AA0A6"
+        },
+        {
+          "id": "k_lightblue",
+          "en": "light blue",
+          "es": "azul claro",
+          "kind": "color",
+          "art": "#7FC4F5"
+        },
+        {
+          "id": "k_darkgreen",
+          "en": "dark green",
+          "es": "verde oscuro",
+          "kind": "color",
+          "art": "#1E6B36"
+        },
+        {
+          "id": "k_gold",
+          "en": "gold",
+          "es": "dorado",
+          "kind": "color",
+          "art": "#D4A62A"
+        }
+      ]
+    },
+    {
+      "id": "kids_shapes",
+      "titleEs": "Formas",
+      "emoji": "⭐",
+      "color": "#0E8F76",
+      "items": [
+        {
+          "id": "k_circle",
+          "en": "circle",
+          "es": "círculo",
+          "kind": "shape",
+          "art": "circle"
+        },
+        {
+          "id": "k_square",
+          "en": "square",
+          "es": "cuadrado",
+          "kind": "shape",
+          "art": "square"
+        },
+        {
+          "id": "k_triangle",
+          "en": "triangle",
+          "es": "triángulo",
+          "kind": "shape",
+          "art": "triangle"
+        },
+        {
+          "id": "k_star",
+          "en": "star",
+          "es": "estrella",
+          "kind": "shape",
+          "art": "star"
+        },
+        {
+          "id": "k_heart",
+          "en": "heart",
+          "es": "corazón",
+          "kind": "shape",
+          "art": "heart"
+        },
+        {
+          "id": "k_rectangle",
+          "en": "rectangle",
+          "es": "rectángulo",
+          "kind": "emoji",
+          "art": "🟪"
+        },
+        {
+          "id": "k_diamond",
+          "en": "diamond",
+          "es": "rombo",
+          "kind": "emoji",
+          "art": "🔷"
+        },
+        {
+          "id": "k_moon_shape",
+          "en": "crescent",
+          "es": "media luna",
+          "kind": "emoji",
+          "art": "🌙"
+        },
+        {
+          "id": "k_cloud_shape",
+          "en": "cloud",
+          "es": "nube",
+          "kind": "emoji",
+          "art": "☁️"
+        },
+        {
+          "id": "k_arrow",
+          "en": "arrow",
+          "es": "flecha",
+          "kind": "emoji",
+          "art": "➡️"
+        }
+      ]
+    },
+    {
+      "id": "kids_numbers",
+      "titleEs": "Números",
+      "emoji": "🔢",
+      "color": "#3B6FD4",
+      "items": [
+        {
+          "id": "k_one",
+          "en": "one",
+          "es": "uno",
+          "kind": "count",
+          "art": "1"
+        },
+        {
+          "id": "k_two",
+          "en": "two",
+          "es": "dos",
+          "kind": "count",
+          "art": "2"
+        },
+        {
+          "id": "k_three",
+          "en": "three",
+          "es": "tres",
+          "kind": "count",
+          "art": "3"
+        },
+        {
+          "id": "k_four",
+          "en": "four",
+          "es": "cuatro",
+          "kind": "count",
+          "art": "4"
+        },
+        {
+          "id": "k_five",
+          "en": "five",
+          "es": "cinco",
+          "kind": "count",
+          "art": "5"
+        },
+        {
+          "id": "k_num_6",
+          "en": "six",
+          "es": "seis",
+          "kind": "emoji",
+          "art": "6️⃣"
+        },
+        {
+          "id": "k_num_7",
+          "en": "seven",
+          "es": "siete",
+          "kind": "emoji",
+          "art": "7️⃣"
+        },
+        {
+          "id": "k_num_8",
+          "en": "eight",
+          "es": "ocho",
+          "kind": "emoji",
+          "art": "8️⃣"
+        },
+        {
+          "id": "k_num_9",
+          "en": "nine",
+          "es": "nueve",
+          "kind": "emoji",
+          "art": "9️⃣"
+        },
+        {
+          "id": "k_num_10",
+          "en": "ten",
+          "es": "diez",
+          "kind": "emoji",
+          "art": "🔟"
+        }
+      ]
+    },
+    {
+      "id": "kids_family",
+      "titleEs": "Familia",
+      "emoji": "👨‍👩‍👧",
+      "color": "#E0567A",
+      "items": [
+        {
+          "id": "k_mom",
+          "en": "mom",
+          "es": "mamá",
+          "kind": "emoji",
+          "art": "👩"
+        },
+        {
+          "id": "k_dad",
+          "en": "dad",
+          "es": "papá",
+          "kind": "emoji",
+          "art": "👨"
+        },
+        {
+          "id": "k_baby",
+          "en": "baby",
+          "es": "bebé",
+          "kind": "emoji",
+          "art": "👶"
+        },
+        {
+          "id": "k_brother",
+          "en": "brother",
+          "es": "hermano",
+          "kind": "emoji",
+          "art": "👦"
+        },
+        {
+          "id": "k_sister",
+          "en": "sister",
+          "es": "hermana",
+          "kind": "emoji",
+          "art": "👧"
+        },
+        {
+          "id": "k_grandma",
+          "en": "grandma",
+          "es": "abuela",
+          "kind": "emoji",
+          "art": "👵"
+        },
+        {
+          "id": "k_grandpa",
+          "en": "grandpa",
+          "es": "abuelo",
+          "kind": "emoji",
+          "art": "👴"
+        },
+        {
+          "id": "k_family",
+          "en": "family",
+          "es": "familia",
+          "kind": "emoji",
+          "art": "👨‍👩‍👧"
+        },
+        {
+          "id": "k_boy",
+          "en": "boy",
+          "es": "niño",
+          "kind": "emoji",
+          "art": "🧒"
+        },
+        {
+          "id": "k_friend",
+          "en": "friend",
+          "es": "amigo",
+          "kind": "emoji",
+          "art": "🧑"
+        },
+        {
+          "id": "k_teacher",
+          "en": "teacher",
+          "es": "maestra",
+          "kind": "emoji",
+          "art": "👩‍🏫"
+        },
+        {
+          "id": "k_doctor",
+          "en": "doctor",
+          "es": "doctor",
+          "kind": "emoji",
+          "art": "👨‍⚕️"
+        },
+        {
+          "id": "k_dog_pet",
+          "en": "pet",
+          "es": "mascota",
+          "kind": "emoji",
+          "art": "🐕"
+        },
+        {
+          "id": "k_house_family",
+          "en": "home",
+          "es": "casa",
+          "kind": "emoji",
+          "art": "🏠"
+        },
+        {
+          "id": "k_friends",
+          "en": "friends",
+          "es": "amigos",
+          "kind": "emoji",
+          "art": "👫"
+        }
+      ]
+    },
+    {
+      "id": "kids_food",
+      "titleEs": "Comida",
+      "emoji": "🍎",
+      "color": "#E8632F",
+      "items": [
+        {
+          "id": "k_apple",
+          "en": "apple",
+          "es": "manzana",
+          "kind": "emoji",
+          "art": "🍎"
+        },
+        {
+          "id": "k_banana",
+          "en": "banana",
+          "es": "plátano",
+          "kind": "emoji",
+          "art": "🍌"
+        },
+        {
+          "id": "k_orange_f",
+          "en": "orange",
+          "es": "naranja",
+          "kind": "emoji",
+          "art": "🍊"
+        },
+        {
+          "id": "k_grapes",
+          "en": "grapes",
+          "es": "uvas",
+          "kind": "emoji",
+          "art": "🍇"
+        },
+        {
+          "id": "k_strawberry",
+          "en": "strawberry",
+          "es": "fresa",
+          "kind": "emoji",
+          "art": "🍓"
+        },
+        {
+          "id": "k_watermelon",
+          "en": "watermelon",
+          "es": "sandía",
+          "kind": "emoji",
+          "art": "🍉"
+        },
+        {
+          "id": "k_bread",
+          "en": "bread",
+          "es": "pan",
+          "kind": "emoji",
+          "art": "🍞"
+        },
+        {
+          "id": "k_cheese",
+          "en": "cheese",
+          "es": "queso",
+          "kind": "emoji",
+          "art": "🧀"
+        },
+        {
+          "id": "k_egg",
+          "en": "egg",
+          "es": "huevo",
+          "kind": "emoji",
+          "art": "🥚"
+        },
+        {
+          "id": "k_milk",
+          "en": "milk",
+          "es": "leche",
+          "kind": "emoji",
+          "art": "🥛"
+        },
+        {
+          "id": "k_water_f",
+          "en": "water",
+          "es": "agua",
+          "kind": "emoji",
+          "art": "💧"
+        },
+        {
+          "id": "k_juice",
+          "en": "juice",
+          "es": "jugo",
+          "kind": "emoji",
+          "art": "🧃"
+        },
+        {
+          "id": "k_rice",
+          "en": "rice",
+          "es": "arroz",
+          "kind": "emoji",
+          "art": "🍚"
+        },
+        {
+          "id": "k_soup",
+          "en": "soup",
+          "es": "sopa",
+          "kind": "emoji",
+          "art": "🍲"
+        },
+        {
+          "id": "k_taco",
+          "en": "taco",
+          "es": "taco",
+          "kind": "emoji",
+          "art": "🌮"
+        },
+        {
+          "id": "k_pizza",
+          "en": "pizza",
+          "es": "pizza",
+          "kind": "emoji",
+          "art": "🍕"
+        },
+        {
+          "id": "k_cookie",
+          "en": "cookie",
+          "es": "galleta",
+          "kind": "emoji",
+          "art": "🍪"
+        },
+        {
+          "id": "k_cake",
+          "en": "cake",
+          "es": "pastel",
+          "kind": "emoji",
+          "art": "🎂"
+        },
+        {
+          "id": "k_ice_cream",
+          "en": "ice cream",
+          "es": "helado",
+          "kind": "emoji",
+          "art": "🍦"
+        },
+        {
+          "id": "k_candy",
+          "en": "candy",
+          "es": "dulce",
+          "kind": "emoji",
+          "art": "🍬"
+        },
+        {
+          "id": "k_carrot",
+          "en": "carrot",
+          "es": "zanahoria",
+          "kind": "emoji",
+          "art": "🥕"
+        },
+        {
+          "id": "k_corn",
+          "en": "corn",
+          "es": "elote",
+          "kind": "emoji",
+          "art": "🌽"
+        },
+        {
+          "id": "k_tomato",
+          "en": "tomato",
+          "es": "jitomate",
+          "kind": "emoji",
+          "art": "🍅"
+        },
+        {
+          "id": "k_avocado",
+          "en": "avocado",
+          "es": "aguacate",
+          "kind": "emoji",
+          "art": "🥑"
+        },
+        {
+          "id": "k_chicken_food",
+          "en": "chicken",
+          "es": "pollo",
+          "kind": "emoji",
+          "art": "🍗"
+        }
+      ]
+    },
+    {
+      "id": "kids_body",
+      "titleEs": "Mi cuerpo",
+      "emoji": "🖐️",
+      "color": "#0E8F76",
+      "items": [
+        {
+          "id": "k_eye",
+          "en": "eye",
+          "es": "ojo",
+          "kind": "emoji",
+          "art": "👁️"
+        },
+        {
+          "id": "k_ear",
+          "en": "ear",
+          "es": "oreja",
+          "kind": "emoji",
+          "art": "👂"
+        },
+        {
+          "id": "k_nose",
+          "en": "nose",
+          "es": "nariz",
+          "kind": "emoji",
+          "art": "👃"
+        },
+        {
+          "id": "k_mouth",
+          "en": "mouth",
+          "es": "boca",
+          "kind": "emoji",
+          "art": "👄"
+        },
+        {
+          "id": "k_tooth",
+          "en": "tooth",
+          "es": "diente",
+          "kind": "emoji",
+          "art": "🦷"
+        },
+        {
+          "id": "k_hand",
+          "en": "hand",
+          "es": "mano",
+          "kind": "emoji",
+          "art": "✋"
+        },
+        {
+          "id": "k_foot",
+          "en": "foot",
+          "es": "pie",
+          "kind": "emoji",
+          "art": "🦶"
+        },
+        {
+          "id": "k_leg",
+          "en": "leg",
+          "es": "pierna",
+          "kind": "emoji",
+          "art": "🦵"
+        },
+        {
+          "id": "k_arm",
+          "en": "arm",
+          "es": "brazo",
+          "kind": "emoji",
+          "art": "💪"
+        },
+        {
+          "id": "k_hair",
+          "en": "hair",
+          "es": "pelo",
+          "kind": "emoji",
+          "art": "💇"
+        },
+        {
+          "id": "k_face",
+          "en": "face",
+          "es": "cara",
+          "kind": "emoji",
+          "art": "😊"
+        },
+        {
+          "id": "k_tongue",
+          "en": "tongue",
+          "es": "lengua",
+          "kind": "emoji",
+          "art": "👅"
+        },
+        {
+          "id": "k_brain",
+          "en": "brain",
+          "es": "cerebro",
+          "kind": "emoji",
+          "art": "🧠"
+        },
+        {
+          "id": "k_heart_body",
+          "en": "heart",
+          "es": "corazón",
+          "kind": "emoji",
+          "art": "❤️"
+        },
+        {
+          "id": "k_bone",
+          "en": "bone",
+          "es": "hueso",
+          "kind": "emoji",
+          "art": "🦴"
+        }
+      ]
+    },
+    {
+      "id": "kids_home",
+      "titleEs": "Mi casa",
+      "emoji": "🏠",
+      "color": "#3B6FD4",
+      "items": [
+        {
+          "id": "k_house",
+          "en": "house",
+          "es": "casa",
+          "kind": "emoji",
+          "art": "🏠"
+        },
+        {
+          "id": "k_door",
+          "en": "door",
+          "es": "puerta",
+          "kind": "emoji",
+          "art": "🚪"
+        },
+        {
+          "id": "k_window_h",
+          "en": "window",
+          "es": "ventana",
+          "kind": "emoji",
+          "art": "🪟"
+        },
+        {
+          "id": "k_bed",
+          "en": "bed",
+          "es": "cama",
+          "kind": "emoji",
+          "art": "🛏️"
+        },
+        {
+          "id": "k_chair_h",
+          "en": "chair",
+          "es": "silla",
+          "kind": "emoji",
+          "art": "🪑"
+        },
+        {
+          "id": "k_lamp",
+          "en": "lamp",
+          "es": "lámpara",
+          "kind": "emoji",
+          "art": "💡"
+        },
+        {
+          "id": "k_clock",
+          "en": "clock",
+          "es": "reloj",
+          "kind": "emoji",
+          "art": "🕐"
+        },
+        {
+          "id": "k_book",
+          "en": "book",
+          "es": "libro",
+          "kind": "emoji",
+          "art": "📕"
+        },
+        {
+          "id": "k_ball",
+          "en": "ball",
+          "es": "pelota",
+          "kind": "emoji",
+          "art": "⚽"
+        },
+        {
+          "id": "k_toy",
+          "en": "teddy bear",
+          "es": "osito",
+          "kind": "emoji",
+          "art": "🧸"
+        },
+        {
+          "id": "k_key",
+          "en": "key",
+          "es": "llave",
+          "kind": "emoji",
+          "art": "🔑"
+        },
+        {
+          "id": "k_phone_h",
+          "en": "phone",
+          "es": "teléfono",
+          "kind": "emoji",
+          "art": "📱"
+        },
+        {
+          "id": "k_spoon",
+          "en": "spoon",
+          "es": "cuchara",
+          "kind": "emoji",
+          "art": "🥄"
+        },
+        {
+          "id": "k_cup",
+          "en": "cup",
+          "es": "taza",
+          "kind": "emoji",
+          "art": "☕"
+        },
+        {
+          "id": "k_plate",
+          "en": "plate",
+          "es": "plato",
+          "kind": "emoji",
+          "art": "🍽️"
+        },
+        {
+          "id": "k_soap",
+          "en": "soap",
+          "es": "jabón",
+          "kind": "emoji",
+          "art": "🧼"
+        },
+        {
+          "id": "k_towel",
+          "en": "towel",
+          "es": "toalla",
+          "kind": "emoji",
+          "art": "🧺"
+        },
+        {
+          "id": "k_brush",
+          "en": "toothbrush",
+          "es": "cepillo",
+          "kind": "emoji",
+          "art": "🪥"
+        },
+        {
+          "id": "k_tv",
+          "en": "TV",
+          "es": "tele",
+          "kind": "emoji",
+          "art": "📺"
+        },
+        {
+          "id": "k_plant",
+          "en": "plant",
+          "es": "planta",
+          "kind": "emoji",
+          "art": "🪴"
+        }
+      ]
+    },
+    {
+      "id": "kids_clothes",
+      "titleEs": "Ropa",
+      "emoji": "👕",
+      "color": "#8B3FD1",
+      "items": [
+        {
+          "id": "k_shirt",
+          "en": "shirt",
+          "es": "playera",
+          "kind": "emoji",
+          "art": "👕"
+        },
+        {
+          "id": "k_pants",
+          "en": "pants",
+          "es": "pantalón",
+          "kind": "emoji",
+          "art": "👖"
+        },
+        {
+          "id": "k_dress",
+          "en": "dress",
+          "es": "vestido",
+          "kind": "emoji",
+          "art": "👗"
+        },
+        {
+          "id": "k_shoes",
+          "en": "shoes",
+          "es": "zapatos",
+          "kind": "emoji",
+          "art": "👟"
+        },
+        {
+          "id": "k_socks",
+          "en": "socks",
+          "es": "calcetines",
+          "kind": "emoji",
+          "art": "🧦"
+        },
+        {
+          "id": "k_hat",
+          "en": "hat",
+          "es": "gorra",
+          "kind": "emoji",
+          "art": "🧢"
+        },
+        {
+          "id": "k_coat",
+          "en": "coat",
+          "es": "abrigo",
+          "kind": "emoji",
+          "art": "🧥"
+        },
+        {
+          "id": "k_gloves",
+          "en": "gloves",
+          "es": "guantes",
+          "kind": "emoji",
+          "art": "🧤"
+        },
+        {
+          "id": "k_scarf",
+          "en": "scarf",
+          "es": "bufanda",
+          "kind": "emoji",
+          "art": "🧣"
+        },
+        {
+          "id": "k_boots",
+          "en": "boots",
+          "es": "botas",
+          "kind": "emoji",
+          "art": "🥾"
+        },
+        {
+          "id": "k_glasses",
+          "en": "glasses",
+          "es": "lentes",
+          "kind": "emoji",
+          "art": "👓"
+        },
+        {
+          "id": "k_backpack",
+          "en": "backpack",
+          "es": "mochila",
+          "kind": "emoji",
+          "art": "🎒"
+        },
+        {
+          "id": "k_umbrella_c",
+          "en": "umbrella",
+          "es": "paraguas",
+          "kind": "emoji",
+          "art": "☂️"
+        },
+        {
+          "id": "k_ring",
+          "en": "ring",
+          "es": "anillo",
+          "kind": "emoji",
+          "art": "💍"
+        },
+        {
+          "id": "k_crown",
+          "en": "crown",
+          "es": "corona",
+          "kind": "emoji",
+          "art": "👑"
+        }
+      ]
+    },
+    {
+      "id": "kids_transport",
+      "titleEs": "Transporte",
+      "emoji": "🚗",
+      "color": "#E5A02D",
+      "items": [
+        {
+          "id": "k_car",
+          "en": "car",
+          "es": "carro",
+          "kind": "emoji",
+          "art": "🚗"
+        },
+        {
+          "id": "k_bus",
+          "en": "bus",
+          "es": "camión",
+          "kind": "emoji",
+          "art": "🚌"
+        },
+        {
+          "id": "k_bike",
+          "en": "bike",
+          "es": "bicicleta",
+          "kind": "emoji",
+          "art": "🚲"
+        },
+        {
+          "id": "k_train",
+          "en": "train",
+          "es": "tren",
+          "kind": "emoji",
+          "art": "🚂"
+        },
+        {
+          "id": "k_plane",
+          "en": "plane",
+          "es": "avión",
+          "kind": "emoji",
+          "art": "✈️"
+        },
+        {
+          "id": "k_boat",
+          "en": "boat",
+          "es": "barco",
+          "kind": "emoji",
+          "art": "⛵"
+        },
+        {
+          "id": "k_truck",
+          "en": "truck",
+          "es": "camioneta",
+          "kind": "emoji",
+          "art": "🚚"
+        },
+        {
+          "id": "k_taxi",
+          "en": "taxi",
+          "es": "taxi",
+          "kind": "emoji",
+          "art": "🚕"
+        },
+        {
+          "id": "k_helicopter",
+          "en": "helicopter",
+          "es": "helicóptero",
+          "kind": "emoji",
+          "art": "🚁"
+        },
+        {
+          "id": "k_rocket",
+          "en": "rocket",
+          "es": "cohete",
+          "kind": "emoji",
+          "art": "🚀"
+        },
+        {
+          "id": "k_ambulance",
+          "en": "ambulance",
+          "es": "ambulancia",
+          "kind": "emoji",
+          "art": "🚑"
+        },
+        {
+          "id": "k_fire_truck",
+          "en": "fire truck",
+          "es": "bomberos",
+          "kind": "emoji",
+          "art": "🚒"
+        },
+        {
+          "id": "k_police_car",
+          "en": "police car",
+          "es": "patrulla",
+          "kind": "emoji",
+          "art": "🚓"
+        },
+        {
+          "id": "k_scooter",
+          "en": "scooter",
+          "es": "patín",
+          "kind": "emoji",
+          "art": "🛴"
+        },
+        {
+          "id": "k_tractor",
+          "en": "tractor",
+          "es": "tractor",
+          "kind": "emoji",
+          "art": "🚜"
+        }
+      ]
+    },
+    {
+      "id": "kids_nature",
+      "titleEs": "Afuera",
+      "emoji": "🌳",
+      "color": "#3AA84C",
+      "items": [
+        {
+          "id": "k_sun",
+          "en": "sun",
+          "es": "sol",
+          "kind": "emoji",
+          "art": "☀️"
+        },
+        {
+          "id": "k_moon",
+          "en": "moon",
+          "es": "luna",
+          "kind": "emoji",
+          "art": "🌙"
+        },
+        {
+          "id": "k_star_n",
+          "en": "star",
+          "es": "estrella",
+          "kind": "emoji",
+          "art": "⭐"
+        },
+        {
+          "id": "k_cloud",
+          "en": "cloud",
+          "es": "nube",
+          "kind": "emoji",
+          "art": "☁️"
+        },
+        {
+          "id": "k_rain",
+          "en": "rain",
+          "es": "lluvia",
+          "kind": "emoji",
+          "art": "🌧️"
+        },
+        {
+          "id": "k_snow",
+          "en": "snow",
+          "es": "nieve",
+          "kind": "emoji",
+          "art": "❄️"
+        },
+        {
+          "id": "k_rainbow",
+          "en": "rainbow",
+          "es": "arcoíris",
+          "kind": "emoji",
+          "art": "🌈"
+        },
+        {
+          "id": "k_tree",
+          "en": "tree",
+          "es": "árbol",
+          "kind": "emoji",
+          "art": "🌳"
+        },
+        {
+          "id": "k_flower",
+          "en": "flower",
+          "es": "flor",
+          "kind": "emoji",
+          "art": "🌻"
+        },
+        {
+          "id": "k_leaf",
+          "en": "leaf",
+          "es": "hoja",
+          "kind": "emoji",
+          "art": "🍃"
+        },
+        {
+          "id": "k_mountain",
+          "en": "mountain",
+          "es": "montaña",
+          "kind": "emoji",
+          "art": "⛰️"
+        },
+        {
+          "id": "k_beach",
+          "en": "beach",
+          "es": "playa",
+          "kind": "emoji",
+          "art": "🏖️"
+        },
+        {
+          "id": "k_fire",
+          "en": "fire",
+          "es": "fuego",
+          "kind": "emoji",
+          "art": "🔥"
+        },
+        {
+          "id": "k_wind",
+          "en": "wind",
+          "es": "viento",
+          "kind": "emoji",
+          "art": "🌬️"
+        },
+        {
+          "id": "k_earth",
+          "en": "earth",
+          "es": "la Tierra",
+          "kind": "emoji",
+          "art": "🌎"
+        }
+      ]
+    }
+  ]
+}

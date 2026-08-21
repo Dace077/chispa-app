@@ -10,4 +10,9 @@
         <item name="android:navigationBarColor">@color/brand_indigo_900</item>
         <item name="android:windowLightStatusBar">false</item>
     </style>
+
+    <!-- Tema mínimo para el widget: RemoteViews no hereda el tema de la app. -->
+    <style name="Theme.Chispa.Widget" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:colorBackground">@color/brand_indigo_900</item>
+    </style>
 </resources>

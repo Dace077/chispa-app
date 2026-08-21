@@ -61,6 +61,8 @@ import com.chispa.ingles.ui.chispaViewModel
 import com.chispa.ingles.ui.components.ChispaMascot
 import com.chispa.ingles.ui.components.MascotMood
 import com.chispa.ingles.ui.theme.ChispaThemeTokens
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
 
 @Composable
 fun ReaderScreen(readingId: String, onBack: () -> Unit) {
@@ -75,6 +77,21 @@ fun ReaderScreen(readingId: String, onBack: () -> Unit) {
     LaunchedEffect(state.hablando) {
         state.hablando?.let { indice ->
             runCatching { listState.animateScrollToItem(indice, scrollOffset = -240) }
+        }
+    }
+
+    // Se da por leída cuando la última frase llega a la pantalla.
+    val ultima = state.reading?.sentences?.lastOrNull()?.index
+    LaunchedEffect(ultima, listState) {
+        if (ultima == null) return@LaunchedEffect
+        androidx.compose.runtime.snapshotFlow {
+            listState.layoutInfo.visibleItemsInfo.any { it.key == ultima }
+        }.collectLatest { visible ->
+            // Un segundo y medio a la vista: abrir y salir de inmediato no cuenta.
+            if (visible) {
+                delay(1_500)
+                viewModel.marcarLeida()
+            }
         }
     }
 

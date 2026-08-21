@@ -25,12 +25,18 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.Density
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -42,17 +48,25 @@ import androidx.navigation.navArgument
 import com.chispa.ingles.ui.grammar.GrammarScreen
 import com.chispa.ingles.ui.grammar.GrammarTopicScreen
 import com.chispa.ingles.ui.home.HomeScreen
+import com.chispa.ingles.ui.kids.KidsScreen
 import com.chispa.ingles.ui.lesson.LessonScreen
 import com.chispa.ingles.ui.lesson.SessionMode
 import com.chispa.ingles.ui.onboarding.OnboardingScreen
 import com.chispa.ingles.ui.onboarding.PlacementScreen
 import com.chispa.ingles.ui.profile.AchievementsScreen
+import com.chispa.ingles.ui.profile.AvatarPickerScreen
+import com.chispa.ingles.ui.profile.CertificatesScreen
 import com.chispa.ingles.ui.profile.ProfileScreen
+import com.chispa.ingles.ui.profile.StatsScreen
+import com.chispa.ingles.ui.profile.StudentDataScreen
 import com.chispa.ingles.ui.profile.VocabularyScreen
 import com.chispa.ingles.ui.reader.LibraryScreen
 import com.chispa.ingles.ui.reader.ReaderScreen
 import com.chispa.ingles.ui.review.ReviewScreen
 import com.chispa.ingles.ui.settings.SettingsScreen
+import com.chispa.ingles.ui.toefl.ExamScreen
+import com.chispa.ingles.ui.toefl.ToeflModuleScreen
+import com.chispa.ingles.ui.toefl.ToeflScreen
 import com.chispa.ingles.ui.speaking.SpeakingScreen
 
 object Routes {
@@ -76,6 +90,18 @@ object Routes {
     const val SETTINGS = "settings"
     const val ACHIEVEMENTS = "achievements"
     const val VOCABULARY = "vocabulary"
+    const val STUDENT_DATA = "student_data"
+    const val CERTIFICATES = "certificates"
+    const val AVATAR = "avatar"
+    const val STATS = "stats"
+
+    const val KIDS = "kids"
+
+    const val TOEFL = "toefl"
+    const val TOEFL_MODULE = "toefl/{moduleId}"
+    fun toeflModule(moduleId: String) = "toefl/$moduleId"
+    const val TOEFL_EXAM = "toefl_exam/{examId}"
+    fun toeflExam(examId: String) = "toefl_exam/$examId"
 
     const val LESSON = "lesson/{lessonId}"
     fun lesson(lessonId: String) = "lesson/$lessonId"
@@ -99,6 +125,9 @@ private val TABS = listOf(
     TabItem(Routes.SPEAKING, "Hablar", Icons.Filled.Mic),
     TabItem(Routes.PROFILE, "Perfil", Icons.Filled.Person)
 )
+
+/** Quién está usando la app en este momento. */
+private enum class ModoChispa { SIN_ELEGIR, ADULTO, NINO }
 
 @Composable
 fun ChispaAppRoot(
@@ -126,17 +155,50 @@ fun ChispaAppRoot(
 
     when (state.stage) {
         AppStage.LOADING -> SplashScreen()
-        AppStage.ONBOARDING -> OnboardingScreen(
-            onFinished = { appViewModel.refresh() },
-            onRequestNotificationPermission = onRequestNotificationPermission
+        AppStage.ONBOARDING -> OnboardingScreen(onFinished = { appViewModel.refresh() })
+        // El permiso de notificaciones se pide aquí y no al cerrar el
+        // onboarding: allí el diálogo del sistema caía justo encima de la
+        // primera pregunta del test de nivel, tapándola. Al salir del test el
+        // usuario ya está en la pantalla principal y ya ha visto para qué
+        // sirve la app, que es cuando la pregunta tiene sentido.
+        AppStage.PLACEMENT -> PlacementScreen(
+            onFinished = {
+                onRequestNotificationPermission()
+                appViewModel.refresh()
+            }
         )
-        AppStage.PLACEMENT -> PlacementScreen(onFinished = { appViewModel.refresh() })
-        AppStage.READY -> MainScaffold(navController = navController)
+        AppStage.READY -> {
+            // Qué modo se está usando ahora. Vive en memoria y no en disco a
+            // propósito: al abrir la app siempre se vuelve a preguntar, porque
+            // el teléfono es del adulto pero quien lo agarra a veces es el niño.
+            var modo by rememberSaveable { mutableStateOf(ModoChispa.SIN_ELEGIR) }
+
+            when (modo) {
+                ModoChispa.SIN_ELEGIR -> ModePickerScreen(
+                    nombre = state.nombre,
+                    onNormal = { modo = ModoChispa.ADULTO },
+                    onKids = { modo = ModoChispa.NINO }
+                )
+
+                ModoChispa.ADULTO -> MainScaffold(
+                    navController = navController,
+                    onSwitchMode = { modo = ModoChispa.SIN_ELEGIR }
+                )
+
+                // La X de Chispa Kids devuelve a la puerta, no al curso de
+                // adultos: si el niño la toca sin querer, no acaba en el examen
+                // TOEFL de su papá.
+                ModoChispa.NINO -> KidsScreen(onExit = { modo = ModoChispa.SIN_ELEGIR })
+            }
+        }
     }
 }
 
 @Composable
-private fun MainScaffold(navController: NavHostController) {
+private fun MainScaffold(
+    navController: NavHostController,
+    onSwitchMode: () -> Unit
+) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
     val showBottomBar = currentRoute in Routes.bottomBarRoutes
@@ -149,6 +211,18 @@ private fun MainScaffold(navController: NavHostController) {
                 enter = slideInVertically { it } + fadeIn(),
                 exit = slideOutVertically { it } + fadeOut()
             ) {
+                // La barra es una altura fija con cinco huecos: no puede crecer.
+                // Con la fuente del sistema al 150% «Aprender» se partía en dos
+                // líneas y se salía por abajo. Aquí, y SOLO aquí, se limita el
+                // escalado; el contenido de las pantallas sigue creciendo entero,
+                // que es lo que de verdad necesita quien agranda la letra.
+                val densidad = LocalDensity.current
+                CompositionLocalProvider(
+                    LocalDensity provides Density(
+                        density = densidad.density,
+                        fontScale = densidad.fontScale.coerceAtMost(1.15f)
+                    )
+                ) {
                 NavigationBar(
                     containerColor = MaterialTheme.colorScheme.surface,
                     tonalElevation = 0.dp
@@ -169,7 +243,13 @@ private fun MainScaffold(navController: NavHostController) {
                                 }
                             },
                             icon = { Icon(tab.icon, contentDescription = tab.label) },
-                            label = { Text(tab.label, style = MaterialTheme.typography.labelSmall) },
+                            label = {
+                                Text(
+                                    tab.label,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    maxLines = 1
+                                )
+                            },
                             colors = NavigationBarItemDefaults.colors(
                                 selectedIconColor = MaterialTheme.colorScheme.primary,
                                 selectedTextColor = MaterialTheme.colorScheme.primary,
@@ -179,6 +259,7 @@ private fun MainScaffold(navController: NavHostController) {
                             )
                         )
                     }
+                }
                 }
             }
         }
@@ -198,7 +279,8 @@ private fun MainScaffold(navController: NavHostController) {
                     HomeScreen(
                         onOpenLesson = { navController.navigate(Routes.lesson(it)) },
                         onOpenReview = { navController.navigate(Routes.REVIEW) },
-                        onOpenSettings = { navController.navigate(Routes.SETTINGS) }
+                        onOpenSettings = { navController.navigate(Routes.SETTINGS) },
+                        onSwitchMode = onSwitchMode
                     )
                 }
 
@@ -265,12 +347,28 @@ private fun MainScaffold(navController: NavHostController) {
                     ProfileScreen(
                         onOpenSettings = { navController.navigate(Routes.SETTINGS) },
                         onOpenAchievements = { navController.navigate(Routes.ACHIEVEMENTS) },
-                        onOpenVocabulary = { navController.navigate(Routes.VOCABULARY) }
+                        onOpenVocabulary = { navController.navigate(Routes.VOCABULARY) },
+                        onOpenStudentData = { navController.navigate(Routes.STUDENT_DATA) },
+                        onOpenCertificates = { navController.navigate(Routes.CERTIFICATES) },
+                        onOpenAvatar = { navController.navigate(Routes.AVATAR) },
+                        onOpenStats = { navController.navigate(Routes.STATS) },
+                        onOpenToefl = { navController.navigate(Routes.TOEFL) },
+                        onOpenKids = { navController.navigate(Routes.KIDS) }
                     )
                 }
 
+                // Chispa Kids va a pantalla completa, sin la barra de abajo:
+                // un niño de tres años no debe poder saltar por accidente al
+                // curso de adultos ni a los ajustes.
+                composable(Routes.KIDS) {
+                    KidsScreen(onExit = { navController.popBackStack() })
+                }
+
                 composable(Routes.SETTINGS) {
-                    SettingsScreen(onBack = { navController.popBackStack() })
+                    SettingsScreen(
+                        onBack = { navController.popBackStack() },
+                        onRetakePlacement = { navController.navigate(Routes.PLACEMENT) }
+                    )
                 }
 
                 composable(Routes.ACHIEVEMENTS) {
@@ -279,6 +377,67 @@ private fun MainScaffold(navController: NavHostController) {
 
                 composable(Routes.VOCABULARY) {
                     VocabularyScreen(onBack = { navController.popBackStack() })
+                }
+
+                composable(Routes.STUDENT_DATA) {
+                    StudentDataScreen(onBack = { navController.popBackStack() })
+                }
+
+                composable(Routes.CERTIFICATES) {
+                    CertificatesScreen(
+                        onBack = { navController.popBackStack() },
+                        onOpenStudentData = { navController.navigate(Routes.STUDENT_DATA) }
+                    )
+                }
+
+                composable(Routes.AVATAR) {
+                    AvatarPickerScreen(onBack = { navController.popBackStack() })
+                }
+
+                composable(Routes.TOEFL) {
+                    ToeflScreen(
+                        onBack = { navController.popBackStack() },
+                        onOpenModule = { navController.navigate(Routes.toeflModule(it)) },
+                        onStartExam = { navController.navigate(Routes.toeflExam(it)) }
+                    )
+                }
+
+                composable(
+                    route = Routes.TOEFL_EXAM,
+                    arguments = listOf(navArgument("examId") { type = NavType.StringType })
+                ) { entry ->
+                    ExamScreen(
+                        examId = entry.arguments?.getString("examId").orEmpty(),
+                        onExit = { navController.popBackStack() }
+                    )
+                }
+
+                composable(
+                    route = Routes.TOEFL_MODULE,
+                    arguments = listOf(navArgument("moduleId") { type = NavType.StringType })
+                ) { entry ->
+                    ToeflModuleScreen(
+                        moduleId = entry.arguments?.getString("moduleId").orEmpty(),
+                        onBack = { navController.popBackStack() }
+                    )
+                }
+
+                composable(Routes.STATS) {
+                    StatsScreen(
+                        onBack = { navController.popBackStack() },
+                        // El repaso ya prioriza lo que más se resiste, así que
+                        // "repasar mis fallos" es exactamente esa sesión.
+                        onPractice = { navController.navigate(Routes.REVIEW_SESSION) }
+                    )
+                }
+
+                // Repetición del test de nivel. El de la primera vez no pasa por
+                // aquí: ese lo sirve AppStage.PLACEMENT, fuera del NavHost.
+                composable(Routes.PLACEMENT) {
+                    PlacementScreen(
+                        isRetake = true,
+                        onFinished = { navController.popBackStack() }
+                    )
                 }
 
                 composable(
@@ -291,7 +450,15 @@ private fun MainScaffold(navController: NavHostController) {
                     LessonScreen(
                         lessonId = lessonId,
                         mode = SessionMode.LESSON,
-                        onExit = { navController.popBackStack() }
+                        onExit = { navController.popBackStack() },
+                        onOpenGrammar = { navController.navigate(Routes.grammarTopic(it)) },
+                        onOpenCertificates = {
+                            // Se sale de la lección y se entra a certificados:
+                            // volver atrás desde ahí lleva al camino, no a un
+                            // resultado de sesión ya consumido.
+                            navController.popBackStack()
+                            navController.navigate(Routes.CERTIFICATES)
+                        }
                     )
                 }
 

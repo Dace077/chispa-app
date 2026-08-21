@@ -13,4 +13,8 @@
     <string name="channel_review_desc">Cuando hay palabras esperando repaso</string>
     <string name="channel_comeback_name">Te extrañamos</string>
     <string name="channel_comeback_desc">Mensajes si llevas días sin entrar</string>
+
+    <!-- Widget de racha en la pantalla de inicio -->
+    <string name="widget_description">Tu racha y la meta de hoy, de un vistazo</string>
+    <string name="widget_days">días seguidos</string>
 </resources>

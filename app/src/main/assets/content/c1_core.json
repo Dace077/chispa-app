@@ -16,6 +16,7 @@
         {
           "id": "c1_u1_l1",
           "title": "Modales de especulación",
+          "grammarTopicId": "g_modals_past",
           "vocab": [
             { "en": "must have been", "es": "debió de ser (deducción)" },
             { "en": "can't have been", "es": "no puede haber sido" },
@@ -57,6 +58,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The meeting was to have started at nine",
+              "hint": "¿Qué significa?",
               "options": [
                 "La reunión iba a empezar a las nueve (y no fue así)",
                 "La reunión empezó a las nueve",
@@ -69,6 +71,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Prices are bound to rise",
+              "hint": "¿Qué significa?",
               "options": [
                 "Seguro que los precios suben",
                 "Los precios podrían subir",
@@ -116,6 +119,7 @@
         {
           "id": "c1_u1_l2",
           "title": "Cláusulas de participio",
+          "grammarTopicId": "g_participle_clauses",
           "vocab": [
             { "en": "having finished", "es": "habiendo terminado" },
             { "en": "walking home", "es": "yendo a casa" },
@@ -170,6 +174,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Weather permitting, we'll leave at dawn",
+              "hint": "¿Qué significa?",
               "options": [
                 "Si el tiempo lo permite, saldremos al amanecer",
                 "El tiempo permite salir al amanecer",
@@ -236,7 +241,7 @@
               "body": "El inglés académico y profesional prefiere sustantivos donde el hablado usa verbos. 'They decided quickly' se vuelve 'The speed of their decision'. 'Prices went up a lot' se vuelve 'A substantial increase in prices'. Es más denso y más impersonal, que es justo lo que se busca en un informe. Cuidado: abusar de esto en conversación te hace sonar a manual de instrucciones.",
               "examples": [
                 { "en": "The implementation of the policy failed.", "es": "La implantación de la política fracasó." },
-                { "en": "There has been a reduction in costs.", "es": "Ha habido una reducción de costes." },
+                { "en": "There has been a reduction in costs.", "es": "Ha habido una reducción de costos." },
                 { "en": "Growing concern surrounds the issue.", "es": "Hay una preocupación creciente por el asunto." }
               ]
             },
@@ -280,6 +285,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Widespread adoption remains unlikely",
+              "hint": "¿Qué significa?",
               "options": [
                 "Una adopción generalizada sigue siendo poco probable",
                 "La adopción se extendió rápidamente",
@@ -371,12 +377,13 @@
               "sentence": "___, the costs are high. Even so, it is worth doing.",
               "answer": "Granted",
               "options": ["Granted", "Therefore", "Hence", "Thereby"],
-              "translation": "Cierto es que los costes son altos. Aun así, merece la pena."
+              "translation": "Cierto es que los costos son altos. Aun así, vale la pena."
             },
             {
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Notwithstanding the delays, the project succeeded",
+              "hint": "¿Qué significa?",
               "options": [
                 "A pesar de los retrasos, el proyecto salió bien",
                 "Gracias a los retrasos, el proyecto salió bien",
@@ -389,6 +396,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The plan works insofar as funding continues",
+              "hint": "¿Qué significa?",
               "options": [
                 "El plan funciona en la medida en que siga la financiación",
                 "El plan funciona aunque falte financiación",
@@ -425,6 +433,7 @@
         {
           "id": "c1_u2_l2",
           "title": "Pasiva impersonal",
+          "grammarTopicId": "g_passive",
           "vocab": [
             { "en": "it is said that", "es": "se dice que" },
             { "en": "he is believed to be", "es": "se cree que es" },
@@ -452,6 +461,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Se cree que está en el extranjero",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "He is believed to be abroad",
                 "He is believing to be abroad",
@@ -478,6 +488,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The suspect is alleged to have acted alone",
+              "hint": "¿Qué significa?",
               "options": [
                 "Se alega que el sospechoso actuó solo",
                 "Se ha probado que actuó solo",
@@ -513,7 +524,7 @@
               "type": "listen_and_type",
               "audioText": "The cost is estimated at three million",
               "answer": "The cost is estimated at three million",
-              "translation": "El coste se estima en tres millones"
+              "translation": "El costo se estima en tres millones"
             },
             {
               "type": "speak_and_repeat",
@@ -525,6 +536,7 @@
         {
           "id": "c1_u2_l3",
           "title": "Énfasis y estructuras hendidas",
+          "grammarTopicId": "g_cleft",
           "vocab": [
             { "en": "what matters is", "es": "lo que importa es" },
             { "en": "it was you who", "es": "fuiste tú quien" },
@@ -566,6 +578,7 @@
               "type": "multiple_choice",
               "direction": "es_en",
               "prompt": "Fue ella quien tomó la decisión",
+              "hint": "¿Cómo se dice en inglés?",
               "options": [
                 "It was she who made the decision",
                 "She was who made the decision",
@@ -578,6 +591,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "I did send the email",
+              "hint": "¿Qué significa?",
               "options": [
                 "Sí que mandé el correo",
                 "Hice que mandaran el correo",
@@ -677,7 +691,7 @@
               "sentence": "We must ___ in mind the cost.",
               "answer": "bear",
               "options": ["bear", "take", "hold", "have"],
-              "translation": "Debemos tener en cuenta el coste."
+              "translation": "Debemos tener en cuenta el costo."
             },
             {
               "type": "fill_in_blank",
@@ -724,6 +738,7 @@
         {
           "id": "c1_u3_l2",
           "title": "Phrasal verbs de registro alto",
+          "grammarTopicId": "g_phrasal_verbs",
           "vocab": [
             { "en": "to account for", "es": "explicar, representar" },
             { "en": "to bring about", "es": "provocar, ocasionar" },
@@ -763,6 +778,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Everything hinges on the funding",
+              "hint": "¿Qué significa?",
               "options": [
                 "Todo depende de la financiación",
                 "Todo cuelga de un hilo",
@@ -775,6 +791,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The report glosses over the losses",
+              "hint": "¿Qué significa?",
               "options": [
                 "El informe pasa por alto las pérdidas",
                 "El informe destaca las pérdidas",
@@ -825,6 +842,7 @@
         {
           "id": "c1_u3_l3",
           "title": "Grados de compromiso",
+          "grammarTopicId": "g_hedging",
           "vocab": [
             { "en": "arguably", "es": "se podría argumentar que" },
             { "en": "ostensibly", "es": "en apariencia" },
@@ -852,6 +870,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Ostensibly a routine inspection",
+              "hint": "¿Qué significa?",
               "options": [
                 "En apariencia una inspección rutinaria (pero quizá no)",
                 "Sin duda una inspección rutinaria",
@@ -864,6 +883,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The result is by no means guaranteed",
+              "hint": "¿Qué significa?",
               "options": [
                 "El resultado no está ni mucho menos garantizado",
                 "El resultado está garantizado sin duda",

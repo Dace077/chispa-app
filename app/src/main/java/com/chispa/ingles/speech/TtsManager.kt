@@ -6,6 +6,7 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
 import com.chispa.ingles.data.prefs.Accent
+import com.chispa.ingles.domain.DialoguePitch
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -185,7 +186,9 @@ class TtsManager(context: Context) {
         utteranceId: String,
         text: String,
         accent: Accent = currentAccent,
-        rate: Float = currentRate
+        rate: Float = currentRate,
+        /** Tono, para distinguir personajes en una lectura con diálogo. */
+        pitch: Float = DialoguePitch.NEUTRO
     ) {
         val clean = text.trim()
         if (clean.isEmpty()) return
@@ -204,7 +207,7 @@ class TtsManager(context: Context) {
             Locale.ENGLISH
         }
         tts.setSpeechRate(rate.coerceIn(0.4f, 1.4f))
-        tts.setPitch(1.0f)
+        tts.setPitch(pitch)
         _spokenRange.value = null
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -216,6 +219,65 @@ class TtsManager(context: Context) {
                 hashMapOf(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID to utteranceId)
             )
         }
+    }
+
+    /**
+     * Lee un diálogo dando a cada personaje un tono distinto.
+     *
+     * Los turnos se encolan uno tras otro (`QUEUE_ADD`) y el tono se fija antes
+     * de cada uno, porque el motor lo aplica al encolar y no al reproducir. La
+     * alternativa era juntar el guion en una sola locución separada por pausas,
+     * que es lo que se hacía y obligaba al alumno a deducir quién hablaba.
+     *
+     * @param lines pares de (personaje, texto) en el orden del guion.
+     */
+    fun speakDialogue(
+        lines: List<Pair<String, String>>,
+        accent: Accent = currentAccent,
+        rate: Float = currentRate
+    ) {
+        val turnos = lines
+            .map { (quien, texto) -> quien.trim() to texto.trim() }
+            .filter { it.second.isNotEmpty() }
+        if (turnos.isEmpty()) return
+
+        val tts = engine
+        if (tts == null || _state.value == TtsState.INITIALIZING) {
+            // Sin motor todavía no se puede encolar: se guarda el diálogo
+            // entero como una petición normal para no perder el audio.
+            pendingRequest = SpeechRequest(turnos.joinToString("  ...  ") { it.second }, accent, rate)
+            return
+        }
+        if (_state.value == TtsState.UNAVAILABLE) return
+
+        currentAccent = accent
+        currentRate = rate
+        tts.language = if (accent in availableAccents) {
+            Locale(accent.language, accent.country)
+        } else {
+            Locale.ENGLISH
+        }
+        tts.setSpeechRate(rate.coerceIn(0.4f, 1.4f))
+
+        val tonos = DialoguePitch.forSpeakers(turnos.map { it.first })
+        val base = "chispa-${utteranceCounter.incrementAndGet()}"
+
+        turnos.forEachIndexed { i, (quien, texto) ->
+            tts.setPitch(tonos[quien] ?: DialoguePitch.NEUTRO)
+            val modo = if (i == 0) TextToSpeech.QUEUE_FLUSH else TextToSpeech.QUEUE_ADD
+            val id = "$base-$i"
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                tts.speak(texto, modo, null, id)
+            } else {
+                @Suppress("DEPRECATION")
+                tts.speak(
+                    texto, modo,
+                    hashMapOf(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID to id)
+                )
+            }
+        }
+        // Se deja el tono neutro para lo siguiente que hable la app.
+        tts.setPitch(DialoguePitch.NEUTRO)
     }
 
     /** Limpia el último "terminó" para no reaccionar dos veces al mismo evento. */

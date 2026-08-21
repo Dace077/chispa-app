@@ -38,6 +38,19 @@ object PlacementLadder {
     enum class Direction { UP, DOWN }
 
     /**
+     * Nivel resultante de **repetir** el test: nunca baja.
+     *
+     * `UnlockRules` abre los niveles por debajo del asignado, así que bajar el
+     * nivel cerraría contenido que el usuario ya tenía abierto, y a lo mejor
+     * llevaba semanas usando. Quien repite el test quiere comprobar si ha
+     * mejorado, no arriesgarse a perder terreno por un mal día.
+     *
+     * No afecta al test de la primera vez, donde no hay nada que proteger.
+     */
+    fun afterRetake(actual: CefrLevel, nuevo: CefrLevel): CefrLevel =
+        if (nuevo.order > actual.order) nuevo else actual
+
+    /**
      * Qué hacer cuando termina un bloque.
      *
      * @param level nivel del bloque recién terminado

@@ -53,6 +53,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "That car cost an arm and a leg",
+              "hint": "¿Qué significa?",
               "options": [
                 "Ese coche costó un riñón",
                 "Ese coche le costó un accidente",
@@ -65,6 +66,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Don't spill the beans!",
+              "hint": "¿Qué significa?",
               "options": [
                 "¡No te vayas de la lengua!",
                 "¡No tires la comida!",
@@ -112,6 +114,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The ball is in your court now",
+              "hint": "¿Qué significa?",
               "options": [
                 "Ahora te toca decidir a ti",
                 "La pelota está en tu jardín",
@@ -162,6 +165,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "We don't see eye to eye on this",
+              "hint": "¿Qué significa?",
               "options": [
                 "No estamos de acuerdo en esto",
                 "No nos miramos a los ojos",
@@ -174,6 +178,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Let's play it by ear",
+              "hint": "¿Qué significa?",
               "options": [
                 "Vamos improvisando sobre la marcha",
                 "Escuchemos con atención",
@@ -216,7 +221,7 @@
             {
               "type": "speak_and_repeat",
               "prompt": "Keep an eye on my bag while I get coffee.",
-              "translation": "Échale un ojo a mi bolsa mientras cojo un café."
+              "translation": "Échale un ojo a mi bolsa mientras voy por un café."
             },
             {
               "type": "translate",
@@ -239,7 +244,7 @@
             { "en": "a rip-off", "es": "un timo" },
             { "en": "save for a rainy day", "es": "ahorrar por si acaso" },
             { "en": "on a shoestring", "es": "con muy poco presupuesto" },
-            { "en": "worth every penny", "es": "vale cada céntimo" }
+            { "en": "worth every penny", "es": "vale cada centavo" }
           ],
           "exercises": [
             {
@@ -269,13 +274,14 @@
                 ["make ends meet", "llegar a fin de mes"],
                 ["a rip-off", "un timo"],
                 ["on a shoestring", "con poco presupuesto"],
-                ["worth every penny", "vale cada céntimo"]
+                ["worth every penny", "vale cada centavo"]
               ]
             },
             {
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "It won't break the bank",
+              "hint": "¿Qué significa?",
               "options": [
                 "No te va a arruinar",
                 "No romperá el banco",
@@ -313,7 +319,7 @@
             {
               "type": "speak_and_repeat",
               "prompt": "It was expensive, but worth every penny.",
-              "translation": "Fue caro, pero valió cada céntimo."
+              "translation": "Fue caro, pero valió cada centavo."
             },
             {
               "type": "translate",
@@ -372,6 +378,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "That's just the tip of the iceberg",
+              "hint": "¿Qué significa?",
               "options": [
                 "Eso es solo la punta del iceberg",
                 "Eso está muy frío",
@@ -384,6 +391,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "He is in hot water with his boss",
+              "hint": "¿Qué significa?",
               "options": [
                 "Está en apuros con su jefe",
                 "Está tomando un baño caliente",
@@ -475,6 +483,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Don't be such a wet blanket",
+              "hint": "¿Qué significa?",
               "options": [
                 "No seas tan aguafiestas",
                 "No te mojes la manta",
@@ -487,6 +496,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "She's a real people person",
+              "hint": "¿Qué significa?",
               "options": [
                 "Es muy sociable",
                 "Es muy popular en la tele",
@@ -557,7 +567,7 @@
             {
               "type": "tip",
               "title": "Los modismos de oficina que nadie te enseña",
-              "body": "'Touch base' significa ponerse en contacto brevemente y es omnipresente en el trabajo anglosajón: 'let's touch base next week'. 'On the same page' es asegurarse de que todos entienden lo mismo. Y 'take it with a grain of salt' es el equivalente exacto de nuestro 'cogerlo con pinzas'.",
+              "body": "'Touch base' significa ponerse en contacto brevemente y es omnipresente en el trabajo anglosajón: 'let's touch base next week'. 'On the same page' es asegurarse de que todos entienden lo mismo. Y 'take it with a grain of salt' es el equivalente exacto de nuestro 'tomarlo con pinzas'.",
               "examples": [
                 { "en": "Let's touch base on Monday.", "es": "Hablamos brevemente el lunes." },
                 { "en": "Are we all on the same page?", "es": "¿Estamos todos de acuerdo?" },
@@ -578,18 +588,20 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Take that news with a grain of salt",
+              "hint": "¿Qué significa?",
               "options": [
-                "Coge esa noticia con pinzas",
+                "Toma esa noticia con pinzas",
                 "Añade sal a esa noticia",
                 "Cree esa noticia",
                 "Esa noticia es sabrosa"
               ],
-              "answer": "Coge esa noticia con pinzas"
+              "answer": "Toma esa noticia con pinzas"
             },
             {
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Don't jump to conclusions",
+              "hint": "¿Qué significa?",
               "options": [
                 "No saques conclusiones precipitadas",
                 "No saltes al final",

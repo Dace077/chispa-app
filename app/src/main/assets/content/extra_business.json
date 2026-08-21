@@ -55,6 +55,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "I look forward to hearing from you",
+              "hint": "¿Qué significa?",
               "options": [
                 "Quedo a la espera de su respuesta",
                 "Miro hacia adelante para oírle",
@@ -151,9 +152,10 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "Let's park that for now",
+              "hint": "¿Qué significa?",
               "options": [
                 "Dejemos eso para después",
-                "Aparquemos el coche",
+                "Estacionemos el coche",
                 "Cancelemos eso",
                 "Empecemos por eso"
               ],
@@ -163,6 +165,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "You're on mute",
+              "hint": "¿Qué significa?",
               "options": [
                 "Tienes el micro silenciado",
                 "Estás siendo grosero",
@@ -252,6 +255,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "The bottom line is we need more budget",
+              "hint": "¿Qué significa?",
               "options": [
                 "En definitiva, necesitamos más presupuesto",
                 "La línea de abajo es el presupuesto",
@@ -347,6 +351,7 @@
               "type": "multiple_choice",
               "direction": "en_es",
               "prompt": "That's a deal breaker for us",
+              "hint": "¿Qué significa?",
               "options": [
                 "Eso es una condición insalvable para nosotros",
                 "Eso rompe el contrato firmado",

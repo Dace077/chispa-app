@@ -6,14 +6,19 @@ import com.chispa.ingles.data.content.Curriculum
 import com.chispa.ingles.data.content.Exercise
 import com.chispa.ingles.data.content.Lesson
 import com.chispa.ingles.data.db.AchievementEntity
+import com.chispa.ingles.data.db.CertificateEntity
 import com.chispa.ingles.data.db.ChispaDatabase
 import com.chispa.ingles.data.db.DailyActivityEntity
+import com.chispa.ingles.data.db.ExerciseStatEntity
 import com.chispa.ingles.data.db.LessonProgressEntity
 import com.chispa.ingles.data.db.SrsCardEntity
 import com.chispa.ingles.data.db.UserProfileEntity
 import com.chispa.ingles.data.prefs.SettingsStore
 import com.chispa.ingles.domain.Achievement
 import com.chispa.ingles.domain.Achievements
+import com.chispa.ingles.domain.CertificateRules
+import com.chispa.ingles.domain.LevelCompletion
+import com.chispa.ingles.domain.PlacementLadder
 import com.chispa.ingles.domain.PlayerStats
 import com.chispa.ingles.domain.Rank
 import com.chispa.ingles.domain.Ranks
@@ -41,6 +46,8 @@ class ProgressRepository(
     private val srsDao = db.srsCardDao()
     private val activityDao = db.dailyActivityDao()
     private val achievementDao = db.achievementDao()
+    private val certificateDao = db.certificateDao()
+    private val exerciseStatDao = db.exerciseStatDao()
 
     private val writeLock = Mutex()
 
@@ -66,6 +73,9 @@ class ProgressRepository(
     fun todayActivity(): Flow<DailyActivityEntity> =
         activityDao.observe(Time.todayEpochDay())
             .map { it ?: DailyActivityEntity(epochDay = Time.todayEpochDay()) }
+
+    /** XP conseguida hoy. Lectura puntual, para el widget y las notificaciones. */
+    suspend fun xpToday(): Int = activityDao.get(Time.todayEpochDay())?.xp ?: 0
 
     /* ------------------------------------------------------------------ */
     /*  Ciclo de vida                                                      */
@@ -158,9 +168,124 @@ class ProgressRepository(
         profileDao.upsert(profile.copy(placementDone = true))
     }
 
+    /**
+     * Repite el test de nivel sin tocar el progreso.
+     *
+     * **El nivel solo puede subir.** No es un capricho: `UnlockRules` abre los
+     * niveles por debajo del asignado, así que bajar el nivel volvería a cerrar
+     * contenido que el usuario ya tenía abierto —y que a lo mejor llevaba
+     * semanas usando— sin avisarle de nada. Quien repite el test quiere saber
+     * si ha mejorado, no perder terreno.
+     *
+     * XP, racha, lecciones, tarjetas y logros se quedan exactamente como están:
+     * esto solo mueve la marca de por dónde seguir.
+     *
+     * @return el nivel que queda finalmente asignado.
+     */
+    suspend fun retakePlacement(level: CefrLevel): CefrLevel = writeLock.withLock {
+        val profile = ensureProfileLocked()
+        val actual = CefrLevel.from(profile.placementLevel)
+        val definitivo = PlacementLadder.afterRetake(actual, level)
+
+        if (definitivo != actual) {
+            profileDao.upsert(profile.copy(placementLevel = definitivo.label))
+        }
+        definitivo
+    }
+
     suspend fun setDailyGoal(xp: Int) = writeLock.withLock {
         val profile = ensureProfileLocked()
         profileDao.upsert(profile.copy(dailyGoalXp = xp))
+    }
+
+    /**
+     * Guarda los datos del alumno: los que se imprimirán en el certificado.
+     *
+     * `studentRegisteredAt` solo se sella la primera vez. Es la fecha de
+     * inscripción que aparece en la constancia, y corregir una falta de
+     * ortografía en el apellido tres meses después no debería reescribir el día
+     * en que la persona empezó el curso.
+     */
+    suspend fun saveStudentData(
+        name: String,
+        surname: String,
+        city: String
+    ) = writeLock.withLock {
+        val profile = ensureProfileLocked()
+        profileDao.upsert(
+            profile.copy(
+                studentName = name.trim(),
+                studentSurname = surname.trim(),
+                studentCity = city.trim(),
+                studentRegisteredAt = if (profile.studentRegisteredAt == 0L) {
+                    Time.nowMillis()
+                } else {
+                    profile.studentRegisteredAt
+                }
+            )
+        )
+    }
+
+    suspend fun setAvatar(avatarId: String) = writeLock.withLock {
+        val profile = ensureProfileLocked()
+        profileDao.upsert(profile.copy(avatarId = avatarId))
+    }
+
+    /* ------------------------------------------------------------------ */
+    /*  Certificados                                                       */
+    /* ------------------------------------------------------------------ */
+
+    val certificates: Flow<List<CertificateEntity>> = certificateDao.observeAll()
+
+    suspend fun certificateFor(level: CefrLevel): CertificateEntity? =
+        certificateDao.forLevel(level.label)
+
+    /**
+     * Emite el certificado de un nivel, o devuelve el que ya existía.
+     *
+     * Es idempotente a propósito: entrar dos veces en la pantalla no debe
+     * generar dos folios distintos para el mismo logro. El primero que se emitió
+     * es el bueno, con su fecha y su nombre de aquel momento.
+     */
+    suspend fun issueCertificate(
+        level: CefrLevel,
+        completion: LevelCompletion
+    ): CertificateEntity? = writeLock.withLock {
+        certificateDao.forLevel(level.label)?.let { return@withLock it }
+
+        val profile = ensureProfileLocked()
+        if (!profile.canReceiveCertificate) return@withLock null
+
+        val ahora = Time.nowMillis()
+        val certificado = CertificateEntity(
+            folio = CertificateRules.folio(level, profile.fullName, Time.todayEpochDay()),
+            level = level.label,
+            studentName = profile.fullName,
+            issuedAt = ahora,
+            lessonsCompleted = completion.completedLessons,
+            accuracy = completion.accuracy,
+            totalXp = completion.xpEarned
+        )
+        certificateDao.issue(certificado)
+        certificateDao.forLevel(level.label) ?: certificado
+    }
+
+    /* ------------------------------------------------------------------ */
+    /*  Estadísticas por tipo de ejercicio                                 */
+    /* ------------------------------------------------------------------ */
+
+    val exerciseStats: Flow<List<ExerciseStatEntity>> = exerciseStatDao.observeAll()
+
+    /**
+     * Suma una respuesta al contador de su tipo.
+     *
+     * No pasa por el mutex de escritura: es un contador independiente, no toca
+     * la fila de perfil y el DAO ya lo resuelve en una transacción. Meterlo en
+     * la cola general solo añadiría espera en mitad de un ejercicio.
+     */
+    suspend fun recordExerciseStat(type: String, correct: Boolean) {
+        if (type == "info") return
+        exerciseStatDao.record(type, correct, Time.nowMillis())
     }
 
     /* ------------------------------------------------------------------ */
@@ -326,6 +451,9 @@ class ProgressRepository(
     suspend fun dueCount(): Int = srsDao.dueCount(Time.nowMillis())
 
     suspend fun hardestCards(limit: Int): List<SrsCardEntity> = srsDao.hardestCards(limit)
+
+    /** Las menos consolidadas, aunque todavía no se haya fallado ninguna. */
+    suspend fun weakestCards(limit: Int): List<SrsCardEntity> = srsDao.weakestCards(limit)
 
     fun observeVocabulary(limit: Int = 500): Flow<List<SrsCardEntity>> = srsDao.observeAll(limit)
 

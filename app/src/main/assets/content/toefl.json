@@ -1,0 +1,613 @@
+{
+  "id": "toefl_itp",
+  "title": "Preparación TOEFL ITP",
+  "subtitle": "El examen de inglés que más piden en México",
+  "intro": [
+    "El TOEFL ITP es el examen de inglés que piden la mayoría de universidades mexicanas para titularse, para entrar a un posgrado nacional y para varias becas. También lo aceptan bastantes empresas como prueba de nivel.",
+    "Aquí tienes todo lo que necesitas saber para presentarlo: cómo es, qué te van a preguntar exactamente, dónde te van a hacer caer y cómo se puntúa.",
+    "Nada de esto sustituye al examen oficial, que se paga y se presenta en un centro autorizado. Esto es la preparación."
+  ],
+  "facts": [
+    {
+      "label": "Duración",
+      "value": "1 h 55 min de examen"
+    },
+    {
+      "label": "Preguntas",
+      "value": "140, todas de opción múltiple"
+    },
+    {
+      "label": "Secciones",
+      "value": "3: Listening, Structure y Reading"
+    },
+    {
+      "label": "Escala",
+      "value": "310 a 677 puntos"
+    },
+    {
+      "label": "Umbral más pedido",
+      "value": "500 puntos"
+    },
+    {
+      "label": "Vigencia",
+      "value": "2 años"
+    }
+  ],
+  "modules": [
+    {
+      "id": "t_que_es",
+      "title": "Qué es y por qué este examen",
+      "subtitle": "Antes de estudiar, entender qué estás preparando",
+      "section": "general",
+      "body": [
+        "El TOEFL ITP (Institutional Testing Program) es una versión del TOEFL que las instituciones administran por su cuenta. Es más barato que el TOEFL iBT y se hace en papel o en computadora, en el propio centro.",
+        "La diferencia clave con el iBT: el ITP no tiene sección de writing ni de speaking. Son 140 preguntas de opción múltiple y nada más. No escribes ni una frase, no hablas en ningún momento.",
+        "Eso lo hace más fácil de preparar, pero también significa que mide otra cosa. El ITP mide cuánto inglés RECONOCES: si entiendes lo que oyes, si detectas un error gramatical y si comprendes un texto académico. No mide si sabes producir el idioma.",
+        "Por eso en México se usa sobre todo como requisito de titulación y de posgrado, y el iBT se usa para irte a estudiar al extranjero. Si lo que necesitas es el papel para titularte o para un puesto aquí, el que quieres es este."
+      ],
+      "keys": [
+        {
+          "title": "Nadie reprueba el TOEFL",
+          "text": "No hay aprobado ni suspenso. Sacas un número entre 310 y 677, y cada institución decide qué número te pide. Lo que puede pasar es que no llegues al que te piden a ti."
+        },
+        {
+          "title": "No se penaliza fallar",
+          "text": "Una respuesta en blanco y una respuesta mal valen exactamente lo mismo: cero. Así que nunca, jamás, dejes una pregunta sin contestar. Si no sabes, adivina."
+        },
+        {
+          "title": "El orden está fijado",
+          "text": "Siempre es Listening, luego Structure, luego Reading. No puedes volver a una sección anterior cuando se acaba su tiempo, ni adelantarte a la siguiente."
+        },
+        {
+          "title": "Vale dos años",
+          "text": "Después caduca. No lo presentes con demasiada antelación: si te titulas dentro de tres años, el papel ya no valdrá."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Dejar preguntas en blanco por honestidad",
+          "right": "Contestar todas, aunque sea al azar",
+          "why": "No hay penalización por error. Dejar diez en blanco es regalar diez oportunidades. Con cuatro opciones, adivinar al azar te da estadísticamente 2 o 3 aciertos de cada 10."
+        },
+        {
+          "wrong": "Preparar el ITP con material del iBT",
+          "right": "Preparar con material del ITP",
+          "why": "Son exámenes distintos. El iBT tiene tareas integradas, redacción y grabación de voz; el ITP no tiene nada de eso. Estudiar writing para el ITP es tiempo perdido."
+        }
+      ]
+    },
+    {
+      "id": "t_puntaje",
+      "title": "Cómo se puntúa",
+      "subtitle": "De aciertos a puntos, y qué puntaje necesitas",
+      "section": "general",
+      "body": [
+        "Cada sección se puntúa por separado en una escala propia. Listening va de 31 a 68, Structure de 31 a 68 y Reading de 31 a 67.",
+        "El total sale de una fórmula pública: se suman los tres puntajes de sección, se multiplica por 10 y se divide entre 3. Por eso el mínimo posible es 310 y el máximo 677.",
+        "Lo que NO es público es la tabla que convierte tus aciertos en el puntaje de cada sección. Esa tabla es de ETS y además cambia ligeramente entre versiones del examen, para compensar que unas sean algo más difíciles que otras.",
+        "Chispa usa una estimación para que puedas medir tu progreso entre simulacros. Te dirá siempre que es una estimación, porque prometerte un número exacto sería mentirte."
+      ],
+      "keys": [
+        {
+          "title": "500 es el número mágico",
+          "text": "Es el umbral que más se pide en México para titulación y posgrado. Si tienes que apuntar a algo sin saber tu requisito exacto, apunta a 500."
+        },
+        {
+          "title": "Las tres secciones pesan igual",
+          "text": "Aunque Structure tenga 40 preguntas y las otras 50, cada sección aporta lo mismo al total. O sea: cada pregunta de Structure vale más que una de Listening. Si andas justo de tiempo para estudiar, Structure te da más por hora invertida."
+        },
+        {
+          "title": "Subir de 550 cuesta el doble",
+          "text": "En cualquier examen de este tipo, los últimos puntos son los caros. Pasar de 420 a 480 se consigue con vocabulario y gramática básica; pasar de 550 a 600 exige precisión fina."
+        }
+      ],
+      "examples": [
+        {
+          "en": "Listening 54 + Structure 52 + Reading 51 = 157",
+          "es": "157 × 10 ÷ 3 = 523 puntos",
+          "note": "Con este puntaje cubres el umbral de 500 que piden la mayoría de universidades."
+        },
+        {
+          "en": "Listening 47 + Structure 45 + Reading 46 = 138",
+          "es": "138 × 10 ÷ 3 = 460 puntos",
+          "note": "Suficiente para varios requisitos de licenciatura, corto para posgrado."
+        }
+      ]
+    },
+    {
+      "id": "t_listening_formato",
+      "title": "Listening: cómo es la sección",
+      "subtitle": "50 preguntas · 35 minutos · tres partes",
+      "section": "listening",
+      "body": [
+        "Es la primera sección y la más traicionera, porque el audio se reproduce UNA sola vez y no puedes volver atrás. Son 35 minutos y 50 preguntas repartidas en tres partes.",
+        "Parte A: 30 conversaciones cortas. Dos personas dicen una frase cada una y una tercera voz hace una pregunta. Cuatro opciones escritas. Es la parte más larga y donde más puntos se ganan o se pierden.",
+        "Parte B: 2 conversaciones largas, de unos dos minutos cada una, con 3 o 4 preguntas cada una. Suelen ser dos estudiantes, o un estudiante y un profesor.",
+        "Parte C: 3 charlas cortas tipo clase o anuncio, con 4 o 5 preguntas cada una. Un solo hablante explicando algo.",
+        "En la Parte A las opciones están impresas, así que puedes leerlas ANTES de que suene el audio. En las partes B y C también. Eso es lo más importante que vas a leer en esta guía."
+      ],
+      "keys": [
+        {
+          "title": "Lee las opciones antes del audio",
+          "text": "Siempre. Saber qué cuatro cosas te van a preguntar convierte la escucha en una búsqueda dirigida en vez de un intento de entenderlo todo. Es la diferencia entre 30 y 42 aciertos."
+        },
+        {
+          "title": "La respuesta casi nunca repite las palabras",
+          "text": "Si oyes «I could not agree more» y una opción dice «he agrees completely», esa es. Las opciones que repiten literalmente lo que oíste suelen ser la trampa."
+        },
+        {
+          "title": "Escucha a la SEGUNDA persona",
+          "text": "En la Parte A, la pregunta casi siempre va sobre lo que dice el segundo hablante. El primero monta la situación; el segundo trae el significado."
+        },
+        {
+          "title": "Si te pierdes, suelta y salta",
+          "text": "Perder una pregunta cuesta un punto. Quedarte pensando en ella mientras suena la siguiente cuesta dos o tres. Marca cualquier opción y pasa."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Oír «bank» y elegir la opción que dice «bank»",
+          "right": "Buscar la opción que dice lo mismo con otras palabras",
+          "why": "El examen mete a propósito opciones con las palabras exactas del audio en un sentido equivocado. Se llaman distractores léxicos y son la trampa número uno de la Parte A."
+        },
+        {
+          "wrong": "Traducir mentalmente lo que oyes",
+          "right": "Escuchar en inglés y contestar en inglés",
+          "why": "Traducir tarda más de lo que dura el audio. Cuando terminas de traducir la primera frase, ya va por la pregunta. Hay que entrenar a no traducir, y eso solo se consigue escuchando mucho."
+        },
+        {
+          "wrong": "Confiar en que entenderás por contexto",
+          "right": "Aprender las expresiones de conversación que caen siempre",
+          "why": "Las conversaciones cortas viven de expresiones idiomáticas: «I wish I could», «you can say that again», «not that I know of», «it slipped my mind». Si no las conoces, no hay contexto que te salve."
+        }
+      ],
+      "examples": [
+        {
+          "en": "— Are you going to the conference?  — I wish I could.",
+          "es": "— ¿Vas a ir al congreso?  — Ojalá pudiera.",
+          "note": "«I wish I could» significa NO. Es la respuesta correcta a «What does the man mean? He is not going»."
+        },
+        {
+          "en": "— How did the exam go?  — Let us just say I will be taking it again.",
+          "es": "— ¿Qué tal el examen?  — Digamos que lo voy a repetir.",
+          "note": "Le fue mal. El examen adora estas respuestas indirectas: nunca dicen «I failed»."
+        },
+        {
+          "en": "— Did you finish the report?  — It slipped my mind completely.",
+          "es": "— ¿Terminaste el informe?  — Se me olvidó por completo.",
+          "note": "«Slip one's mind» = olvidarse. Si no conoces la expresión, no hay forma de deducirla."
+        }
+      ]
+    },
+    {
+      "id": "t_structure_formato",
+      "title": "Structure: cómo es la sección",
+      "subtitle": "40 preguntas · 25 minutos · dos tipos",
+      "section": "structure",
+      "body": [
+        "Esta es la sección más rentable de todo el examen. Son 40 preguntas en 25 minutos, y a diferencia de Listening, aquí el texto no se va: puedes leerlo las veces que quieras dentro de tu tiempo.",
+        "Tipo 1, Structure (15 preguntas): una frase con un hueco y cuatro opciones para rellenarlo. Solo una es gramaticalmente correcta.",
+        "Tipo 2, Written Expression (25 preguntas): una frase completa con cuatro fragmentos subrayados. Tienes que señalar cuál está MAL. Ojo: no tienes que corregirlo, solo detectarlo.",
+        "Son 37 segundos por pregunta de media. Suena poco, pero la mayoría se resuelven en diez segundos si sabes qué buscar, y eso te deja margen para las tres o cuatro que sí son difíciles."
+      ],
+      "keys": [
+        {
+          "title": "El error casi siempre está en la gramática, no en el sentido",
+          "text": "Una frase puede sonar rara y estar bien. Y puede sonar natural y estar mal. No te fíes del oído: busca la regla."
+        },
+        {
+          "title": "En Written Expression, empieza por el verbo",
+          "text": "La mayoría de errores están en concordancia sujeto-verbo, tiempo verbal o forma de palabra. Mira primero los subrayados que son verbos."
+        },
+        {
+          "title": "Toda oración necesita sujeto y verbo conjugado",
+          "text": "Si una opción de Structure no deja una oración con sujeto y verbo principal, es incorrecta aunque suene bien. Es el filtro más rápido que existe."
+        },
+        {
+          "title": "Si te sobran diez minutos, revisa",
+          "text": "Al contrario que en Listening, aquí revisar sí sirve. Los errores de concordancia se ven mejor en segunda lectura."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Elegir la opción más larga o más complicada",
+          "right": "Elegir la que deja la oración con estructura completa",
+          "why": "El examen mete opciones largas y rebuscadas que están mal a propósito, sabiendo que quien duda tiende a elegir lo que suena más sofisticado."
+        },
+        {
+          "wrong": "Corregir mentalmente la frase en Written Expression",
+          "right": "Solo identificar cuál de los cuatro subrayados falla",
+          "why": "Corregir tarda el triple y no da ningún punto extra. Detecta y pasa."
+        }
+      ]
+    },
+    {
+      "id": "t_gramatica_examen",
+      "title": "La gramática que más cae",
+      "subtitle": "Ocho reglas que cubren la mayoría de las preguntas de Structure",
+      "section": "structure",
+      "body": [
+        "El examen no pregunta gramática al azar. Repite un puñado de estructuras una y otra vez, porque son las que distinguen a quien domina el inglés académico de quien no.",
+        "Estas ocho concentran la mayor parte de los puntos de la sección. Si las dominas, Structure deja de dar miedo."
+      ],
+      "keys": [
+        {
+          "title": "1. Concordancia sujeto-verbo a distancia",
+          "text": "El examen separa el sujeto del verbo con frases largas para que te confundas. «The list of items IS on the desk», no «are»: el sujeto es list, no items."
+        },
+        {
+          "title": "2. Estructura paralela",
+          "text": "Lo que va en una lista tiene que tener la misma forma. «She likes reading, writing and to travel» está mal: los tres tienen que ir en -ing."
+        },
+        {
+          "title": "3. Forma de la palabra",
+          "text": "Confundir sustantivo, adjetivo y adverbio. «He drives careless» está mal; es «carelessly». Un verbo se modifica con adverbio, no con adjetivo."
+        },
+        {
+          "title": "4. Artículos",
+          "text": "Los contables en singular necesitan artículo: «She is teacher» está mal, es «a teacher». Y los incontables no llevan «a»: «an information» está mal."
+        },
+        {
+          "title": "5. Comparativos y superlativos",
+          "text": "«More better» no existe. Con dos elementos, comparativo («the taller of the two»); con tres o más, superlativo («the tallest of the three»)."
+        },
+        {
+          "title": "6. Condicionales e irreales",
+          "text": "«If I was you» está mal en registro de examen: es «If I were you». Con situaciones irreales se usa «were» para todas las personas."
+        },
+        {
+          "title": "7. Subjuntivo con verbos de exigencia",
+          "text": "Detrás de suggest, recommend, insist, demand y require va el verbo en forma base, sin -s: «She suggested that he GO», no «goes»."
+        },
+        {
+          "title": "8. Inversión tras negativos al principio",
+          "text": "Si la frase empieza por never, rarely, seldom, not only o hardly, el orden se invierte: «Never HAVE I seen», no «Never I have seen»."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "The number of students are increasing.",
+          "right": "The number of students is increasing.",
+          "why": "«The number of» va en singular. «A number of» va en plural. Cae constantemente porque en español los dos suenan igual."
+        },
+        {
+          "wrong": "She is one of the students who is late.",
+          "right": "She is one of the students who are late.",
+          "why": "El verbo concuerda con «students», no con «one». Es una de las preguntas favoritas del examen."
+        },
+        {
+          "wrong": "Neither of the answers are correct.",
+          "right": "Neither of the answers is correct.",
+          "why": "«Neither» y «either» van en singular, aunque el sustantivo que sigue esté en plural."
+        },
+        {
+          "wrong": "The professor recommended that she studies harder.",
+          "right": "The professor recommended that she study harder.",
+          "why": "Subjuntivo tras «recommend»: forma base sin -s. Suena mal a un hispanohablante y está bien."
+        },
+        {
+          "wrong": "He has been working here since three years.",
+          "right": "He has been working here for three years.",
+          "why": "«Since» va con un punto en el tiempo (since 2019); «for» con una duración (for three years)."
+        },
+        {
+          "wrong": "Despite of the rain, the game continued.",
+          "right": "Despite the rain, the game continued.",
+          "why": "«Despite» nunca lleva «of». Es «in spite of» o «despite», y mezclarlos es el error más repetido."
+        }
+      ],
+      "examples": [
+        {
+          "en": "Not only did she finish first, but she also broke the record.",
+          "es": "No solo terminó primera, sino que además batió el récord.",
+          "note": "Fíjate en el «did»: al empezar por «not only», el auxiliar se adelanta al sujeto."
+        },
+        {
+          "en": "The committee, along with its advisors, has approved the plan.",
+          "es": "El comité, junto con sus asesores, ha aprobado el plan.",
+          "note": "«Along with» no cambia el sujeto. Sigue siendo «the committee», singular. Trampa clásica."
+        },
+        {
+          "en": "Rarely is a decision made without consulting the department.",
+          "es": "Rara vez se toma una decisión sin consultar al departamento.",
+          "note": "Inversión tras «rarely». Sin ella, la frase estaría mal en el examen."
+        }
+      ]
+    },
+    {
+      "id": "t_reading_formato",
+      "title": "Reading: cómo es la sección",
+      "subtitle": "50 preguntas · 55 minutos · cinco textos",
+      "section": "reading",
+      "body": [
+        "La última sección y la más larga: 55 minutos para cinco o seis textos académicos con unas 10 preguntas cada uno.",
+        "Los textos son de temas universitarios: historia, biología, geología, arte, sociología. No hace falta que sepas del tema. Todo lo que necesitas está en el texto, y confiar en lo que crees saber es una forma rápida de fallar.",
+        "Cada texto ronda las 300 palabras. Son once minutos por texto, incluidas sus preguntas.",
+        "Las preguntas siguen el orden del texto salvo la primera (idea principal) y a veces la última (conclusión o inferencia general)."
+      ],
+      "keys": [
+        {
+          "title": "Cinco tipos de pregunta y ya",
+          "text": "Idea principal, detalle, vocabulario en contexto, referencia («the word IT refers to») e inferencia. Reconocer el tipo te dice dónde buscar."
+        },
+        {
+          "title": "Vocabulario en contexto: no busques el significado que sabes",
+          "text": "Preguntan qué significa esa palabra AHÍ. Tapa la palabra, lee la frase y piensa qué encajaría. Luego mira las opciones."
+        },
+        {
+          "title": "Las de detalle se buscan, no se recuerdan",
+          "text": "Localiza la palabra clave de la pregunta en el texto y lee esa frase y la siguiente. No intentes acordarte de lo que leíste hace tres párrafos."
+        },
+        {
+          "title": "La inferencia se apoya en el texto, no en tu opinión",
+          "text": "«Se puede inferir que...» significa que la respuesta se deduce de algo escrito. Si tienes que añadir información tuya, es la opción equivocada."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Leer el texto entero con calma antes de mirar las preguntas",
+          "right": "Leer rápido para captar la estructura, luego ir pregunta a pregunta",
+          "why": "En 11 minutos por texto no da tiempo a leer despacio y contestar. Una lectura rápida de dos minutos para saber de qué va cada párrafo, y a partir de ahí buscar."
+        },
+        {
+          "wrong": "Elegir la opción que repite palabras del texto",
+          "right": "Elegir la que dice lo mismo con otras palabras",
+          "why": "Igual que en Listening: las opciones con las palabras exactas suelen ser trampa. La correcta parafrasea."
+        },
+        {
+          "wrong": "Contestar con lo que sabes del tema",
+          "right": "Contestar solo con lo que dice el texto",
+          "why": "Si el texto dice que los dinosaurios se extinguieron por una causa que tú sabes discutida, da igual: en el examen la respuesta es la del texto."
+        },
+        {
+          "wrong": "Dejar el último texto sin contestar por falta de tiempo",
+          "right": "Reservar los últimos dos minutos para rellenar todo lo que quede",
+          "why": "Diez preguntas en blanco son diez ceros seguros. Diez marcadas al azar son dos o tres aciertos gratis."
+        }
+      ],
+      "examples": [
+        {
+          "en": "The word «arid» in line 12 is closest in meaning to:",
+          "es": "La palabra «arid» de la línea 12 se acerca más en significado a:",
+          "note": "Vocabulario en contexto. Ve a la línea 12, tapa la palabra y decide qué encaja antes de mirar opciones."
+        },
+        {
+          "en": "The word «they» in line 8 refers to:",
+          "es": "La palabra «they» de la línea 8 se refiere a:",
+          "note": "Referencia. La respuesta casi siempre está en la misma frase o en la anterior, y suele ser el último sustantivo plural."
+        },
+        {
+          "en": "It can be inferred from paragraph 3 that:",
+          "es": "Del párrafo 3 se puede inferir que:",
+          "note": "Inferencia. Lee solo el párrafo 3. Si la opción necesita datos que no están ahí, descártala."
+        }
+      ]
+    },
+    {
+      "id": "t_tiempo",
+      "title": "El reloj",
+      "subtitle": "Cómo repartir los minutos sin quedarte sin tiempo",
+      "section": "general",
+      "body": [
+        "Mucha gente que sabe inglés de sobra saca menos de lo que podría por una sola razón: el reloj. Vale la pena tratarlo como una habilidad aparte y entrenarlo.",
+        "Listening no se administra: el audio manda y tú vas detrás. Lo único que controlas es no quedarte atascado en una pregunta perdida.",
+        "Structure sí lo controlas: 25 minutos para 40 preguntas, 37 segundos de media. La mayoría se resuelven en diez o quince segundos; guarda el resto para las difíciles.",
+        "Reading es donde más gente naufraga: 55 minutos, cinco o seis textos, y el último se queda sin contestar. Ponte un tope por texto y respétalo aunque duela."
+      ],
+      "keys": [
+        {
+          "title": "Regla de los dos minutos",
+          "text": "Si una pregunta de Structure o Reading te lleva más de dos minutos, márcala, contesta lo que te parezca y sigue. Volver luego con tiempo es mejor que perderlo ahí."
+        },
+        {
+          "title": "Once minutos por texto en Reading",
+          "text": "Dos de lectura rápida y nueve de preguntas. Si vas por el tercer texto y llevas más de 35 minutos, acelera y no leas los siguientes con tanto detalle."
+        },
+        {
+          "title": "Los dos últimos minutos son para rellenar",
+          "text": "Antes de que se acabe cada sección, asegúrate de que no queda ni un hueco en blanco. Es el consejo que más puntos regala."
+        },
+        {
+          "title": "Entrena con reloj desde el primer simulacro",
+          "text": "Hacer un simulacro sin cronómetro no prepara para nada. Los diez simulacros de Chispa llevan el tiempo real de cada sección."
+        }
+      ]
+    },
+    {
+      "id": "t_vocabulario",
+      "title": "El vocabulario que se repite",
+      "subtitle": "Palabras académicas que salen en casi todos los exámenes",
+      "section": "reading",
+      "body": [
+        "Los textos del ITP son académicos y usan un vocabulario reconocible. No son palabras raras: son palabras normales de registro formal que un hispanohablante no encuentra en series ni en canciones.",
+        "Estas se repiten examen tras examen. Aprenderlas no es aprender vocabulario al azar: es aprender exactamente lo que te van a preguntar."
+      ],
+      "examples": [
+        {
+          "en": "to account for",
+          "es": "explicar; representar (una proporción)",
+          "note": "«Rainfall accounts for 60% of the water supply.»"
+        },
+        {
+          "en": "to attribute to",
+          "es": "atribuir a",
+          "note": "«The decline is attributed to overfishing.»"
+        },
+        {
+          "en": "abundant",
+          "es": "abundante",
+          "note": "Muy frecuente en textos de biología y geología."
+        },
+        {
+          "en": "adjacent",
+          "es": "contiguo, adyacente",
+          "note": "«The adjacent region» = la región de al lado."
+        },
+        {
+          "en": "to alter",
+          "es": "modificar",
+          "note": "No es «alterar» en el sentido de poner nervioso."
+        },
+        {
+          "en": "to comprise",
+          "es": "estar compuesto por",
+          "note": "«The team comprises five members.» Sin «of» en registro cuidado."
+        },
+        {
+          "en": "conversely",
+          "es": "por el contrario",
+          "note": "Conector de contraste típico de párrafo académico."
+        },
+        {
+          "en": "to derive from",
+          "es": "proceder de",
+          "note": "«The word derives from Latin.»"
+        },
+        {
+          "en": "to emerge",
+          "es": "surgir, aparecer",
+          "note": "«A new pattern emerged.»"
+        },
+        {
+          "en": "to hinder",
+          "es": "dificultar, obstaculizar",
+          "note": "Lo contrario de «facilitate», que también cae."
+        },
+        {
+          "en": "notably",
+          "es": "en particular, señaladamente",
+          "note": "Introduce el ejemplo más importante."
+        },
+        {
+          "en": "to preclude",
+          "es": "impedir, excluir",
+          "note": "Palabra de registro alto; suele ser respuesta de vocabulario en contexto."
+        },
+        {
+          "en": "prevalent",
+          "es": "predominante, extendido",
+          "note": "«The practice was prevalent in the region.»"
+        },
+        {
+          "en": "to undergo",
+          "es": "experimentar, someterse a",
+          "note": "«The material undergoes a change.» Irregular: undergo, underwent, undergone."
+        },
+        {
+          "en": "subsequently",
+          "es": "posteriormente",
+          "note": "Marca secuencia temporal. Muy frecuente."
+        },
+        {
+          "en": "thereby",
+          "es": "de ese modo",
+          "note": "Conector de consecuencia en registro formal."
+        },
+        {
+          "en": "to yield",
+          "es": "producir, dar como resultado",
+          "note": "«The experiment yielded unexpected results.»"
+        },
+        {
+          "en": "widespread",
+          "es": "generalizado",
+          "note": "Casi siempre aparece con «belief», «use» o «practice»."
+        }
+      ],
+      "keys": [
+        {
+          "title": "Apréndelas en contexto, no en lista",
+          "text": "Estas palabras casi siempre aparecen con las mismas compañeras: «widespread belief», «to account for a proportion», «to undergo a change». Aprender la pareja completa vale el doble."
+        },
+        {
+          "title": "Los prefijos te salvan una pregunta",
+          "text": "Si no conoces la palabra, mira el prefijo: «pre-» antes, «post-» después, «sub-» debajo, «inter-» entre, «un-» e «in-» negación. No siempre acierta, pero es mejor que adivinar a ciegas."
+        }
+      ]
+    },
+    {
+      "id": "t_plan",
+      "title": "Cómo prepararlo de verdad",
+      "subtitle": "Un plan realista según el tiempo que tengas",
+      "section": "general",
+      "body": [
+        "Hay diez simulacros completos en este módulo. Diez no son para hacerlos seguidos: son para medirte, estudiar lo que falles y volver a medirte.",
+        "Hacer diez simulacros sin revisar los errores no sirve absolutamente de nada. Revisar cada fallo es donde se aprende; el simulacro solo te dice dónde mirar.",
+        "El plan de abajo funciona. Adáptalo a tus semanas, pero no te saltes la parte de revisar."
+      ],
+      "keys": [
+        {
+          "title": "Semana 1 — Dónde estás",
+          "text": "Haz el simulacro 1 completo, con reloj y sin pausas. No estudies nada antes. El objetivo no es sacar buena nota: es saber tu punto de partida y qué sección te hunde."
+        },
+        {
+          "title": "Semanas 2 y 3 — La sección más floja",
+          "text": "Lee el material de la sección donde peor saliste y trabájala sola. Si fue Structure, repasa las ocho reglas hasta que las detectes en diez segundos. Simulacros 2 y 3 al final."
+        },
+        {
+          "title": "Semanas 4 y 5 — La segunda más floja",
+          "text": "Lo mismo con la siguiente. Simulacros 4 y 5. A estas alturas deberías ver una subida clara respecto al primero."
+        },
+        {
+          "title": "Semanas 6 y 7 — Ritmo",
+          "text": "Simulacros 6, 7 y 8 completos y cronometrados, uno cada dos o tres días. Aquí ya no se trata de aprender inglés sino de aguantar 115 minutos concentrado."
+        },
+        {
+          "title": "Semana 8 — Afinar",
+          "text": "Simulacros 9 y 10. Revisa solo los tipos de pregunta que sigas fallando. Deja el último a tres o cuatro días del examen real, no la víspera."
+        },
+        {
+          "title": "La víspera — Nada",
+          "text": "No estudies el día antes. Duerme. Un examen de 115 minutos de concentración se gana con cabeza descansada, no con un repaso de última hora."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Hacer los diez simulacros en dos semanas",
+          "right": "Espaciarlos y revisar entre uno y otro",
+          "why": "Sin tiempo para corregir lo que fallas, el segundo simulacro repite los errores del primero. Los diez acabarían dándote el mismo puntaje."
+        },
+        {
+          "wrong": "Revisar solo las que fallaste",
+          "right": "Revisar también las que acertaste dudando",
+          "why": "Un acierto por suerte es un fallo que todavía no ha ocurrido. Márcalas mientras haces el simulacro y revísalas igual."
+        },
+        {
+          "wrong": "Estudiar vocabulario suelto en listas de 200 palabras",
+          "right": "Estudiar las palabras que fallaste, en su frase",
+          "why": "Las listas se olvidan en una semana. La palabra que te costó un punto en un simulacro, en su contexto, se queda."
+        }
+      ]
+    },
+    {
+      "id": "t_dia_examen",
+      "title": "El día del examen",
+      "subtitle": "Lo práctico, que también cuenta",
+      "section": "general",
+      "body": [
+        "Ya sabes inglés. El día del examen lo que puede quitarte puntos es todo lo demás: los nervios, el cansancio y no saber cómo funciona la sala.",
+        "El examen dura 1 h 55 min sin pausas entre secciones. Come antes. No bebas litros de café: te van a temblar las manos en Listening, que es lo primero.",
+        "Llega con tiempo. Lleva identificación oficial: sin ella no te dejan entrar y pierdes la cuota.",
+        "En Listening el audio suena por altavoz para toda la sala. Si no oyes bien desde tu sitio, dilo ANTES de que empiece. Después ya no se puede."
+      ],
+      "keys": [
+        {
+          "title": "No puedes volver atrás",
+          "text": "Cuando se acaba el tiempo de una sección, se acabó. Si te sobran cinco minutos en Structure no puedes usarlos en Reading. Úsalos revisando Structure."
+        },
+        {
+          "title": "Contesta todas antes de que te avisen",
+          "text": "El aviso de «dos minutos» llega cuando ya vas justo. Ten el hábito de rellenar los huecos en cuanto oigas el aviso, y luego sigue pensando si queda tiempo."
+        },
+        {
+          "title": "Si te bloqueas, respira y sigue",
+          "text": "Perder una pregunta no te baja el puntaje de forma apreciable. Perder tres minutos de concentración por frustrarte, sí."
+        },
+        {
+          "title": "Los resultados tardan",
+          "text": "Suelen entregarse en unos días a través de la institución. Pregunta el plazo el mismo día, sobre todo si tienes una fecha límite de titulación."
+        }
+      ]
+    }
+  ]
+}

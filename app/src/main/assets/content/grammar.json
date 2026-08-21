@@ -150,7 +150,7 @@
         { "label": "Ortografía", "pattern": "run→running · write→writing · lie→lying", "example": "He is running." }
       ],
       "examples": [
-        { "en": "I usually take the bus, but today I'm walking.", "es": "Normalmente cojo el autobús, pero hoy voy andando.", "note": "Los dos tiempos en una sola frase." },
+        { "en": "I usually take the bus, but today I'm walking.", "es": "Normalmente tomo el autobús, pero hoy voy caminando.", "note": "Los dos tiempos en una sola frase." },
         { "en": "What are you doing?", "es": "¿Qué haces?" },
         { "en": "She's living with her parents this year.", "es": "Este año vive con sus padres.", "note": "Temporal." }
       ],
@@ -409,7 +409,7 @@
       ],
       "examples": [
         { "en": "I used to hate coffee, but now I love it.", "es": "Antes odiaba el café, pero ahora me encanta." },
-        { "en": "I'm not used to driving on the left.", "es": "No estoy acostumbrado a conducir por la izquierda." },
+        { "en": "I'm not used to driving on the left.", "es": "No estoy acostumbrado a manejar por la izquierda." },
         { "en": "He would call every Sunday without fail.", "es": "Llamaba todos los domingos sin falta." }
       ],
       "mistakes": [

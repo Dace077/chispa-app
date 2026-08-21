@@ -7,6 +7,7 @@ import com.chispa.ingles.data.content.CefrLevel
 import com.chispa.ingles.data.content.Reading
 import com.chispa.ingles.data.content.ReadingLibrary
 import com.chispa.ingles.data.prefs.Accent
+import com.chispa.ingles.domain.DialoguePitch
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -19,6 +20,8 @@ import kotlinx.coroutines.launch
 data class LibraryUiState(
     val loading: Boolean = true,
     val porNivel: Map<CefrLevel, List<Reading>> = emptyMap(),
+    /** Ids ya terminados, para no releer sin querer lo mismo. */
+    val leidas: Set<String> = emptySet(),
     val vacia: Boolean = false
 )
 
@@ -30,11 +33,16 @@ class LibraryViewModel(locator: ServiceLocator) : ViewModel() {
     init {
         viewModelScope.launch {
             val biblioteca: ReadingLibrary = locator.contentRepository.library()
-            _state.value = LibraryUiState(
+            _state.value = _state.value.copy(
                 loading = false,
                 porNivel = biblioteca.byLevel().toSortedMap(compareBy { it.order }),
                 vacia = biblioteca.isEmpty
             )
+        }
+        viewModelScope.launch {
+            locator.settingsStore.settings.collect { ajustes ->
+                _state.value = _state.value.copy(leidas = ajustes.readingsRead)
+            }
         }
     }
 }
@@ -81,6 +89,13 @@ class ReaderViewModel(
     /** Diccionario para resolver el significado de una palabra al tocarla. */
     private var indiceVocabulario: Map<String, String> = emptyMap()
 
+    /**
+     * Un tono por personaje. En las lecturas con diálogo —pedir en un café,
+     * hablar con el casero— oír dos voces distintas es la mitad de la
+     * comprensión; con una sola hay que reconstruir quién habla leyendo.
+     */
+    private var tonos: Map<String, Float> = emptyMap()
+
     init {
         viewModelScope.launch {
             val ajustes = locator.settingsStore.current()
@@ -93,6 +108,10 @@ class ReaderViewModel(
                 curriculo.vocabIndex.forEach { (clave, item) -> put(clave, item.es) }
                 lectura?.glossary?.forEach { put(it.srsKey, it.es) }
             }
+
+            tonos = DialoguePitch.forSpeakers(
+                lectura?.sentences.orEmpty().map { it.speaker }
+            )
 
             _state.value = _state.value.copy(
                 loading = false,
@@ -142,6 +161,18 @@ class ReaderViewModel(
         }
     }
 
+    /**
+     * La da por leída. Lo llama la pantalla cuando la última frase entra en
+     * pantalla: abrirla y salir a los dos segundos no cuenta como haberla leído.
+     */
+    fun marcarLeida() {
+        if (leidaYa) return
+        leidaYa = true
+        viewModelScope.launch { locator.settingsStore.markReadingRead(readingId) }
+    }
+
+    private var leidaYa = false
+
     /* ------------------------------------------------------------------ */
     /*  Reproducción                                                       */
     /* ------------------------------------------------------------------ */
@@ -153,7 +184,8 @@ class ReaderViewModel(
             utteranceId = "$PREFIJO$indice",
             text = frase.en,
             accent = _state.value.accent,
-            rate = _state.value.velocidad
+            rate = _state.value.velocidad,
+            pitch = tonos[frase.speaker.trim()] ?: DialoguePitch.NEUTRO
         )
     }
 

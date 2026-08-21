@@ -17,6 +17,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.VolumeUp
@@ -32,6 +34,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.chispa.ingles.data.content.SpeakingCategory
 import com.chispa.ingles.core.ServiceLocator
 import com.chispa.ingles.data.prefs.Accent
 import com.chispa.ingles.speech.SpeechRecognizerManager
@@ -93,7 +96,7 @@ private val SOUND_DRILLS = listOf(
         title = "El schwa",
         explanation = "El sonido más común del inglés: una vocal relajada y débil en las sílabas sin acento. " +
             "Pronunciar todas las vocales con fuerza es lo que más marca el acento español.",
-        examples = listOf("about" to "sobre", "problem" to "problema", "banana" to "plátano", "computer" to "ordenador")
+        examples = listOf("about" to "sobre", "problem" to "problema", "banana" to "plátano", "computer" to "computadora")
     ),
     SoundDrill(
         symbol = "sp- / st- / sk-",
@@ -123,7 +126,10 @@ data class SpeakingUiState(
     val ttsState: TtsState = TtsState.INITIALIZING,
     val accent: Accent = Accent.US,
     val practicedCount: Int = 0,
-    val hasMaterial: Boolean = false
+    val hasMaterial: Boolean = false,
+    val categorias: List<SpeakingCategory> = emptyList(),
+    /** Categoria abierta. Solo una a la vez: 134 frases de golpe no se leen. */
+    val abierta: String? = null
 )
 
 class SpeakingViewModel(private val locator: ServiceLocator) : ViewModel() {
@@ -141,7 +147,8 @@ class SpeakingViewModel(private val locator: ServiceLocator) : ViewModel() {
                 accent = settings.accent,
                 practicedCount = settings.speakingExercises,
                 hasMaterial = locator.progressRepository.dueCount() > 0 ||
-                    locator.progressRepository.hardestCards(1).isNotEmpty()
+                    locator.progressRepository.hardestCards(1).isNotEmpty(),
+                categorias = locator.contentRepository.speakingPhrases()
             )
         }
         viewModelScope.launch {
@@ -153,6 +160,13 @@ class SpeakingViewModel(private val locator: ServiceLocator) : ViewModel() {
 
     fun speak(text: String) {
         locator.tts.speak(text, _state.value.accent)
+    }
+
+    /** Abre una categoria y cierra la que estuviera abierta. */
+    fun alternar(id: String) {
+        _state.value = _state.value.copy(
+            abierta = if (_state.value.abierta == id) null else id
+        )
     }
 
     override fun onCleared() {
@@ -179,7 +193,7 @@ fun SpeakingScreen(onStartSession: () -> Unit) {
         Spacer(Modifier.height(6.dp))
         Text(
             "El reconocimiento de voz es el del propio teléfono: no sale nada de aquí " +
-                "y no cuesta un céntimo.",
+                "y no cuesta nada.",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -232,6 +246,30 @@ fun SpeakingScreen(onStartSession: () -> Unit) {
         }
 
         Spacer(Modifier.height(28.dp))
+        val totalFrases = state.categorias.sumOf { it.phrases.size }
+        if (totalFrases > 0) {
+            Text("Frases para decir en voz alta", style = MaterialTheme.typography.headlineSmall)
+            Spacer(Modifier.height(4.dp))
+            Text(
+                "$totalFrases frases de situaciones reales. Toca una para oírla y repítela.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(Modifier.height(14.dp))
+
+            state.categorias.forEach { categoria ->
+                CategoriaFrases(
+                    categoria = categoria,
+                    abierta = state.abierta == categoria.id,
+                    onAlternar = { viewModel.alternar(categoria.id) },
+                    onSpeak = viewModel::speak
+                )
+                Spacer(Modifier.height(10.dp))
+            }
+
+            Spacer(Modifier.height(28.dp))
+        }
+
         Text("Sonidos que cuestan en español", style = MaterialTheme.typography.headlineSmall)
         Spacer(Modifier.height(4.dp))
         Text(
@@ -247,6 +285,84 @@ fun SpeakingScreen(onStartSession: () -> Unit) {
         }
 
         Spacer(Modifier.height(32.dp))
+    }
+}
+
+/**
+ * Una categoría de frases, plegable.
+ *
+ * Plegada de inicio y solo una abierta a la vez: 134 frases desplegadas de
+ * golpe son un muro de texto que nadie recorre. Así se elige el momento
+ * («voy al aeropuerto») y se practica solo eso.
+ */
+@Composable
+private fun CategoriaFrases(
+    categoria: SpeakingCategory,
+    abierta: Boolean,
+    onAlternar: () -> Unit,
+    onSpeak: (String) -> Unit
+) {
+    val colors = ChispaThemeTokens.colors
+    ChispaCard {
+        Column(Modifier.fillMaxWidth()) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onAlternar)
+                    .padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(categoria.emoji, style = MaterialTheme.typography.headlineSmall)
+                Spacer(Modifier.width(12.dp))
+                Column(Modifier.weight(1f)) {
+                    Text(categoria.title, style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        "${categoria.phrases.size} frases  ·  ${categoria.level}",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Icon(
+                    if (abierta) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+                    contentDescription = if (abierta) "Cerrar" else "Abrir",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
+            if (abierta) {
+                categoria.phrases.forEach { frase ->
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { onSpeak(frase.en) }
+                            .padding(horizontal = 16.dp, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(Modifier.weight(1f)) {
+                            Text(frase.en, style = MaterialTheme.typography.bodyLarge)
+                            Text(
+                                frase.es,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            if (frase.note.isNotBlank()) {
+                                Text(
+                                    frase.note,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = colors.xp
+                                )
+                            }
+                        }
+                        Icon(
+                            Icons.Filled.VolumeUp,
+                            contentDescription = "Escuchar",
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+            }
+        }
     }
 }
 

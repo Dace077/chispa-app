@@ -25,6 +25,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.Percent
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -44,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import com.chispa.ingles.domain.Achievement
 import com.chispa.ingles.ui.components.ChispaButton
 import com.chispa.ingles.ui.components.ChispaCard
+import com.chispa.ingles.ui.components.ChispaOutlinedButton
 import com.chispa.ingles.ui.components.ChispaMascot
 import com.chispa.ingles.ui.components.ChispaProgressBar
 import com.chispa.ingles.ui.components.MascotMood
@@ -53,7 +55,8 @@ import kotlinx.coroutines.delay
 @Composable
 fun SessionResultScreen(
     state: LessonUiState,
-    onDone: () -> Unit
+    onDone: () -> Unit,
+    onOpenCertificates: () -> Unit = onDone
 ) {
     val colors = ChispaThemeTokens.colors
     val outcome = state.outcome
@@ -189,6 +192,44 @@ fun SessionResultScreen(
                 }
             }
 
+            // -------- Nivel terminado --------
+            //
+            // Este es el momento en que un certificado significa algo. Antes
+            // había que ir a buscarlo a Perfil → Certificados, y nadie va a
+            // buscar un diploma que no sabe que existe.
+            state.levelJustCompleted?.let { nivel ->
+                Spacer(Modifier.height(24.dp))
+                ChispaCard(borderColor = colors.streak) {
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(20.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Icon(
+                            Icons.Filled.WorkspacePremium,
+                            contentDescription = null,
+                            tint = colors.streak,
+                            modifier = Modifier.size(40.dp)
+                        )
+                        Spacer(Modifier.height(8.dp))
+                        Text(
+                            "¡Has terminado el nivel ${nivel.label}!",
+                            style = MaterialTheme.typography.titleLarge,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            "Todas las lecciones de ${nivel.label}, completas. " +
+                                "Tienes un certificado esperándote con tu nombre.",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center
+                        )
+                    }
+                }
+            }
+
             Spacer(Modifier.height(32.dp))
         }
 
@@ -198,7 +239,13 @@ fun SessionResultScreen(
                 .navigationBarsPadding()
                 .padding(horizontal = 24.dp, vertical = 16.dp)
         ) {
-            ChispaButton(text = "Continuar", onClick = onDone)
+            if (state.levelJustCompleted != null) {
+                ChispaButton(text = "Ver mi certificado", onClick = onOpenCertificates)
+                Spacer(Modifier.height(8.dp))
+                ChispaOutlinedButton(text = "Ahora no", onClick = onDone)
+            } else {
+                ChispaButton(text = "Continuar", onClick = onDone)
+            }
         }
     }
 }
@@ -207,7 +254,7 @@ private fun headline(state: LessonUiState): String = when {
     state.accuracy == 100 -> "¡Perfecto!"
     state.accuracy >= 80 -> "¡Muy bien!"
     state.accuracy >= 50 -> "¡Sesión completada!"
-    else -> "Hecho. Y eso ya vale"
+    else -> "Hecho. Y eso ya cuenta"
 }
 
 private fun subtitle(state: LessonUiState): String = when (state.mode) {
