@@ -172,6 +172,34 @@ sistema.
 
 ---
 
+## El aviso de «símbolos de depuración»
+
+Al subir el `.aab`, Play Console avisa:
+
+> Este App Bundle contiene código nativo, pero no has subido símbolos de
+> depuración.
+
+**Es informativo y se puede publicar igual.** Conviene saber por qué aparece,
+para no perder tiempo intentando arreglarlo otra vez:
+
+- El proyecto **no tiene NDK ni código nativo propio**. Las dos librerías que
+  detecta Play vienen de dependencias de AndroidX:
+  `libandroidx.graphics.path.so` (la usa Compose por dentro) y
+  `libdatastore_shared_counter.so` (de DataStore).
+- La solución habitual —`ndk { debugSymbolLevel = "FULL" }` en el buildType de
+  release— **aquí no hace nada**. Se probó: el `.aab` sale idéntico, sin ninguna
+  entrada de símbolos. Esa opción solo empaqueta símbolos de librerías que
+  compila el propio proyecto, y las `.so` de AndroidX llegan ya *stripped*
+  dentro de sus AAR: no hay símbolos que subir.
+- La única forma de tenerlos sería compilar esas dependencias desde su código
+  fuente, que no compensa por un aviso.
+
+Consecuencia práctica: si algún día un fallo ocurre **dentro** de esas dos
+librerías, el informe de Play llegará sin nombres de función. Como no es código
+nuestro, tampoco habría mucho que hacer con él.
+
+---
+
 ## Anuncios
 
 **¿Contiene anuncios? → No.** Y es verificable: no hay ninguna librería de

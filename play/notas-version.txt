@@ -1,0 +1,41 @@
+=======================================================================
+ NOTAS DE LA VERSIÓN — 1.9.0 (versionCode 19)
+=======================================================================
+
+Google Play limita este campo a 500 caracteres. Los dos textos de abajo
+caben; si los editas, vuelve a contarlos.
+
+
+-----------------------------------------------------------------------
+ A) PARA LA PRUEBA (interna o cerrada)  ← usa este ahora
+-----------------------------------------------------------------------
+
+Novedades para probar:
+
+• Chispa Kids: etapa nueva para niños de 2 a 5 años que todavía no leen. 12 mundos y 220 palabras, solo dibujos y voz.
+• Al abrir la app eliges quién practica: el curso o Kids.
+• Hablar: 134 frases de situaciones reales.
+• TOEFL: ya puedes revisar tus respuestas al terminar y retomar un simulacro a medias.
+• 190 ejercicios nuevos de A1 a B2.
+
+Prueben sobre todo el micrófono en Hablar: es lo único que no se puede
+validar sin un teléfono real.
+
+
+-----------------------------------------------------------------------
+ B) PARA PRODUCCIÓN, cuando salga de pruebas
+-----------------------------------------------------------------------
+
+Como nunca se ha publicado en producción, ahí no hay "novedades": nadie
+tiene una versión anterior. El texto presenta la app.
+
+Primera versión de Chispa.
+
+Curso completo de inglés de A1 a C2: 112 lecciones, más de 1.100 ejercicios y 42 lecturas con audio y traducción.
+
+Incluye Chispa Kids, una etapa aparte para niños de 2 a 5 años que todavía no leen: 12 mundos y 220 palabras, solo dibujos y voz.
+
+Y preparación para el TOEFL ITP con 5 simulacros completos.
+
+Todo funciona sin internet y sin cuenta. Gratis: sin anuncios, sin
+suscripciones y sin compras.
