@@ -121,30 +121,54 @@ Resultado esperado: **PEGI 3 / Everyone / Para todos**.
 
 ---
 
-## Público objetivo
+## Público objetivo: **familiar (niños y adultos)**
 
-> ⚠️ **Esto cambió con Chispa Kids y hay que decidirlo antes de publicar.**
-> El consejo anterior era marcar 13+ y salir del paso. Ya no vale: la app
-> tiene una etapa explícita **para niños de 2 a 5 años**, con su propia puerta
-> en la pantalla de inicio. Declarar «13 años o más» mientras la ficha y la app
-> ofrecen una sección infantil es una contradicción que Play puede tratar como
-> declaración incorrecta, y eso se paga con retirada, no con un aviso.
+**Decisión tomada: se declara público mixto y se entra en el programa
+*Diseñado para Familias*.** Es lo que la app es de verdad desde que existe
+Chispa Kids: el curso A1–C2 para adultos y una etapa para niños de 2 a 5 años,
+con su propia puerta en la pantalla de inicio.
 
-Las dos salidas honestas son:
+Declarar «13 años o más» habría sido más rápido, pero sería falso: la ficha y la
+propia app ofrecen una sección infantil. Play trata eso como declaración
+incorrecta, y se paga con retirada, no con un aviso.
 
-1. **Declarar público mixto (niños y adultos).** Es lo que la app es de verdad.
-   Entra en el programa *Diseñado para Familias*: revisión adicional, y hay que
-   confirmar que se cumplen las políticas de familias.
-   Chispa parte en una posición inmejorable para eso —**sin anuncios, sin
-   compras, sin cuentas, sin chat, sin analítica y sin permiso de INTERNET**—
-   pero el trámite es más largo y la revisión más lenta.
+### Qué marcar en Play Console
 
-2. **Sacar Chispa Kids de esta versión** y publicar 13+ como estaba previsto,
-   dejando la etapa infantil para una actualización posterior, ya con el
-   trámite de familias hecho.
+En **Contenido de la app → Público objetivo y contenido**:
 
-No hay una tercera opción de «publicar rápido y con la sección infantil dentro
-declarando 13+». Es la decisión del dueño de la ficha, no del código.
+1. **Grupos de edad**: marcar los tramos infantiles (**5 y menos**, **6-8**,
+   **9-12**) **y** los de adultos (**13-15**, **16-17**, **18 y más**).
+2. Play preguntará si la app está **dirigida a niños**: la respuesta es que va
+   dirigida a niños **y** a adultos (público mixto).
+3. Eso activa el programa **Diseñado para Familias**, que exige confirmar el
+   cumplimiento de sus políticas.
+
+### Por qué Chispa cumple sin tener que cambiar nada
+
+Cada requisito del programa, y por qué ya se cumple:
+
+| Requisito de Familias | Chispa |
+|---|---|
+| Sin anuncios de terceros | No hay ninguna librería de publicidad en el proyecto |
+| Sin compras integradas | No existe ninguna |
+| Sin recogida de datos personales | No se recoge nada, y **no hay permiso de INTERNET**: no habría por dónde enviarlo |
+| Sin cuentas ni inicio de sesión | No hay cuenta |
+| Sin chat ni contenido de otros usuarios | No hay ninguna función social |
+| Sin enlaces externos ni navegador | La app no puede abrir la red |
+| Contenido apropiado para la edad | Curso de idiomas; clasificación esperada PEGI 3 / Everyone |
+| Política de privacidad accesible | `docs/privacidad.html` vía GitHub Pages |
+
+La única función que sale de la app es **compartir el PDF** de la constancia o
+del informe, y la dispara el adulto desde su Perfil, con el selector del propio
+sistema.
+
+### Lo que hay que asumir
+
+- **La revisión tarda más** que una app normal: el programa de Familias añade
+  una revisión de contenido aparte.
+- Si en el futuro se añadiera cualquier cosa que recoja datos, anuncios o
+  enlaces externos, **habría que revisar el cumplimiento antes de publicar**,
+  no después.
 
 ---
 

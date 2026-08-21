@@ -180,7 +180,10 @@ fun ChispaAppRoot(
                     onKids = { modo = ModoChispa.NINO }
                 )
 
-                ModoChispa.ADULTO -> MainScaffold(navController = navController)
+                ModoChispa.ADULTO -> MainScaffold(
+                    navController = navController,
+                    onSwitchMode = { modo = ModoChispa.SIN_ELEGIR }
+                )
 
                 // La X de Chispa Kids devuelve a la puerta, no al curso de
                 // adultos: si el niño la toca sin querer, no acaba en el examen
@@ -192,7 +195,10 @@ fun ChispaAppRoot(
 }
 
 @Composable
-private fun MainScaffold(navController: NavHostController) {
+private fun MainScaffold(
+    navController: NavHostController,
+    onSwitchMode: () -> Unit
+) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
     val showBottomBar = currentRoute in Routes.bottomBarRoutes
@@ -273,7 +279,8 @@ private fun MainScaffold(navController: NavHostController) {
                     HomeScreen(
                         onOpenLesson = { navController.navigate(Routes.lesson(it)) },
                         onOpenReview = { navController.navigate(Routes.REVIEW) },
-                        onOpenSettings = { navController.navigate(Routes.SETTINGS) }
+                        onOpenSettings = { navController.navigate(Routes.SETTINGS) },
+                        onSwitchMode = onSwitchMode
                     )
                 }
 

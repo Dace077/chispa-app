@@ -30,6 +30,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Bolt
+import androidx.compose.material.icons.filled.ChildCare
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
@@ -76,13 +77,18 @@ import com.chispa.ingles.ui.theme.ChispaThemeTokens
 fun HomeScreen(
     onOpenLesson: (String) -> Unit,
     onOpenReview: () -> Unit,
-    onOpenSettings: () -> Unit
+    onOpenSettings: () -> Unit,
+    onSwitchMode: () -> Unit
 ) {
     val viewModel: HomeViewModel = chispaViewModel { HomeViewModel(it) }
     val state by viewModel.state.collectAsState()
 
     Column(Modifier.fillMaxSize()) {
-        HomeTopBar(state = state, onOpenSettings = onOpenSettings)
+        HomeTopBar(
+            state = state,
+            onOpenSettings = onOpenSettings,
+            onSwitchMode = onSwitchMode
+        )
 
         if (state.contentEmpty && !state.loading) {
             com.chispa.ingles.ui.components.EmptyState(
@@ -154,7 +160,11 @@ fun HomeScreen(
  * ========================================================================= */
 
 @Composable
-private fun HomeTopBar(state: HomeUiState, onOpenSettings: () -> Unit) {
+private fun HomeTopBar(
+    state: HomeUiState,
+    onOpenSettings: () -> Unit,
+    onSwitchMode: () -> Unit
+) {
     val colors = ChispaThemeTokens.colors
     val bordeBarra = colors.cardStroke
     Row(
@@ -184,6 +194,16 @@ private fun HomeTopBar(state: HomeUiState, onOpenSettings: () -> Unit) {
         )
         Spacer(Modifier.weight(1f))
         HeartsRow(hearts = state.hearts)
+        // Vuelta a la puerta de entrada. Va aqui arriba y no escondido en el
+        // Perfil porque el momento de usarlo es cuando el nino ya tiene la mano
+        // en el telefono, y ahi nadie se pone a buscar por menus.
+        IconButton(onClick = onSwitchMode) {
+            Icon(
+                Icons.Filled.ChildCare,
+                contentDescription = "Cambiar a Chispa Kids",
+                tint = MaterialTheme.colorScheme.primary
+            )
+        }
         IconButton(onClick = onOpenSettings) {
             Icon(
                 Icons.Filled.Settings,

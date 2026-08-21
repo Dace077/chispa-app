@@ -2,7 +2,7 @@
 
 > Archivo de traspaso. Si abres un chat nuevo, **lee esto primero**: contiene
 > el estado real del proyecto, las decisiones ya tomadas y lo que estaba a
-> medias. Última actualización: **17 de agosto de 2026, versión 1.8.0**.
+> medias. Última actualización: **21 de agosto de 2026, versión 1.9.0**.
 
 ---
 
@@ -252,7 +252,7 @@ un móvil de verdad.
 
 ## 11. Sesión del 17 de agosto de 2026
 
-Versión en `app/build.gradle.kts`: **1.8.0 (versionCode 18)**, sin publicar.
+Versión en `app/build.gradle.kts`: **1.9.0 (versionCode 19)**.
 
 ### Lo que se añadió
 
@@ -511,6 +511,32 @@ así: «I'd like» en vez de «I want», «this is Ana» al teléfono y no «I a
 
 Van plegadas y solo una abierta a la vez: 134 frases desplegadas de golpe son
 un muro que nadie recorre.
+
+### Listo para publicar: 1.9.0 (versionCode 19)
+
+Comprobado antes de dar nada por bueno:
+
+| Qué | Resultado |
+|---|---|
+| Tests unitarios | 134, cero fallos |
+| Contenido | 1112 ejercicios, nada se pierde al cargar |
+| Auditor | 0 graves (4 avisos, los mismos falsos positivos de siempre) |
+| Simulacros | completos y equilibrados |
+| Españolismos | 0 sustituciones pendientes |
+| Migración Room | v1 → v3 sin perder nada |
+| Android Lint | **0 errores**, 67 avisos |
+| Release | AAB 5,17 MB · APK 2,45 MB |
+| Firma | `CN=Chispa App, O=Chispa` — la keystore real, no la de debug |
+| Prueba de humo | release instalado y recorrido: curso, Kids y la puerta |
+
+**Público objetivo: familiar.** Decisión tomada por el dueño de la ficha. Se
+declara público mixto (niños y adultos) y se entra en *Diseñado para Familias*.
+El detalle de qué marcar en Play Console y por qué la app ya cumple cada
+requisito está en [play/PLAYSTORE.md](play/PLAYSTORE.md).
+
+**El paso final lo tiene que dar una persona**: subir el `.aab` a Play Console
+con la cuenta de Google del proyecto. No hay API de publicación configurada en
+este repositorio, así que no se puede automatizar desde aquí.
 
 ### Lo que sigue pendiente
 
